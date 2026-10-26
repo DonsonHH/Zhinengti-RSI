@@ -1,0 +1,49 @@
+{
+  "metrics": {
+    "initial": {
+      "mean_normalized_weighted_idleness": 0.4819468573712382,
+      "target_coverage": 0.96875,
+      "max_unobserved_steps": 84.75,
+      "reconstruction_mse": 0.0013093543942280423,
+      "total_movement_distance": 458.14422766478384,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0
+    },
+    "fixed_improver": {
+      "mean_normalized_weighted_idleness": 0.45405699723697684,
+      "target_coverage": 0.9479166666666666,
+      "max_unobserved_steps": 88.08333333333333,
+      "reconstruction_mse": 0.0011321312122163363,
+      "total_movement_distance": 464.46098449097354,
+      "estimator_calls": 24.0,
+      "prior_samples": 96.0
+    },
+    "updated_improver": {
+      "mean_normalized_weighted_idleness": 0.45405699723697684,
+      "target_coverage": 0.9479166666666666,
+      "max_unobserved_steps": 88.08333333333333,
+      "reconstruction_mse": 0.0011321312122163363,
+      "total_movement_distance": 464.46098449097354,
+      "estimator_calls": 24.0,
+      "prior_samples": 96.0
+    }
+  },
+  "actual_model_costs": {
+    "fixed_improver": {
+      "input_tokens": 10599,
+      "output_tokens": 462,
+      "generation_seconds": 30.85796465817839
+    },
+    "updated_improver": {
+      "input_tokens": 10714,
+      "output_tokens": 505,
+      "generation_seconds": 33.25782055500895
+    }
+  },
+  "relative_idleness_reduction": 0.05786916069208459,
+  "coverage_change_percentage_points": -2.083333333333337,
+  "both_groups_retained_same_task_configuration": true,
+  "accepted_records": 2,
+  "unique_retained_task_configurations": 1,
+  "not_rsi_effectiveness_proof": true
+}

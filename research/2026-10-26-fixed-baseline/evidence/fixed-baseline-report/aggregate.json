@@ -1,0 +1,202 @@
+{
+  "training_seeds": 3,
+  "test_cases_per_seed": 12,
+  "variability": "sample SD across three training-seed means; not 36 independent training runs",
+  "table": {
+    "learned": {
+      "mean_normalized_weighted_idleness": {
+        "per_training_seed": [
+          0.5371426308508187,
+          0.5867598390420122,
+          0.422296443271787
+        ],
+        "mean": 0.5153996377215394,
+        "sample_sd": 0.08436006430612386
+      },
+      "target_coverage": {
+        "per_training_seed": [
+          0.9479166666666666,
+          0.90625,
+          0.9270833333333334
+        ],
+        "mean": 0.9270833333333334,
+        "sample_sd": 0.020833333333333315
+      },
+      "max_unobserved_steps": {
+        "per_training_seed": [
+          89.41666666666667,
+          84.75,
+          80.75
+        ],
+        "mean": 84.97222222222223,
+        "sample_sd": 4.33760473243181
+      },
+      "reconstruction_mse": {
+        "per_training_seed": [
+          0.002579667190730106,
+          0.0011942861310672015,
+          0.004736757614106561
+        ],
+        "mean": 0.00283690364530129,
+        "sample_sd": 0.0017851901851643243
+      },
+      "total_movement_distance": {
+        "per_training_seed": [
+          463.106414991312,
+          450.50149681814156,
+          458.68221467501036
+        ],
+        "mean": 457.43004216148796,
+        "sample_sd": 6.395071738518377
+      }
+    },
+    "route_greedy": {
+      "mean_normalized_weighted_idleness": {
+        "per_training_seed": [
+          0.3187997593680241,
+          0.3187997593680241,
+          0.3187997593680241
+        ],
+        "mean": 0.3187997593680241,
+        "sample_sd": 0.0
+      },
+      "target_coverage": {
+        "per_training_seed": [
+          0.9583333333333334,
+          0.9583333333333334,
+          0.9583333333333334
+        ],
+        "mean": 0.9583333333333334,
+        "sample_sd": 0.0
+      },
+      "max_unobserved_steps": {
+        "per_training_seed": [
+          68.91666666666667,
+          68.91666666666667,
+          68.91666666666667
+        ],
+        "mean": 68.91666666666667,
+        "sample_sd": 0.0
+      },
+      "reconstruction_mse": {
+        "per_training_seed": [
+          0.002814134602279713,
+          0.002814134602279713,
+          0.002814134602279713
+        ],
+        "mean": 0.002814134602279713,
+        "sample_sd": 0.0
+      },
+      "total_movement_distance": {
+        "per_training_seed": [
+          472.5036311603848,
+          472.5036311603848,
+          472.5036311603848
+        ],
+        "mean": 472.5036311603848,
+        "sample_sd": 0.0
+      }
+    },
+    "local_greedy": {
+      "mean_normalized_weighted_idleness": {
+        "per_training_seed": [
+          0.7098093958080023,
+          0.7098093958080023,
+          0.7098093958080023
+        ],
+        "mean": 0.7098093958080023,
+        "sample_sd": 0.0
+      },
+      "target_coverage": {
+        "per_training_seed": [
+          0.19791666666666666,
+          0.19791666666666666,
+          0.19791666666666666
+        ],
+        "mean": 0.19791666666666666,
+        "sample_sd": 0.0
+      },
+      "max_unobserved_steps": {
+        "per_training_seed": [
+          96.0,
+          96.0,
+          96.0
+        ],
+        "mean": 96.0,
+        "sample_sd": 0.0
+      },
+      "reconstruction_mse": {
+        "per_training_seed": [
+          0.04169611198206743,
+          0.04169611198206743,
+          0.04169611198206743
+        ],
+        "mean": 0.04169611198206743,
+        "sample_sd": 0.0
+      },
+      "total_movement_distance": {
+        "per_training_seed": [
+          384.8294432338145,
+          384.8294432338145,
+          384.8294432338145
+        ],
+        "mean": 384.8294432338145,
+        "sample_sd": 0.0
+      }
+    },
+    "random": {
+      "mean_normalized_weighted_idleness": {
+        "per_training_seed": [
+          0.7291758507134444,
+          0.7291758507134444,
+          0.7291758507134444
+        ],
+        "mean": 0.7291758507134444,
+        "sample_sd": 0.0
+      },
+      "target_coverage": {
+        "per_training_seed": [
+          0.625,
+          0.625,
+          0.625
+        ],
+        "mean": 0.625,
+        "sample_sd": 0.0
+      },
+      "max_unobserved_steps": {
+        "per_training_seed": [
+          96.0,
+          96.0,
+          96.0
+        ],
+        "mean": 96.0,
+        "sample_sd": 0.0
+      },
+      "reconstruction_mse": {
+        "per_training_seed": [
+          0.016399633624435712,
+          0.016399633624435712,
+          0.016399633624435712
+        ],
+        "mean": 0.016399633624435712,
+        "sample_sd": 0.0
+      },
+      "total_movement_distance": {
+        "per_training_seed": [
+          458.4203700396997,
+          458.4203700396997,
+          458.4203700396997
+        ],
+        "mean": 458.4203700396997,
+        "sample_sd": 0.0
+      }
+    }
+  },
+  "selected_episodes": [
+    700,
+    1000,
+    1200
+  ],
+  "paper_reproduction": false,
+  "rsi_enabled": false
+}

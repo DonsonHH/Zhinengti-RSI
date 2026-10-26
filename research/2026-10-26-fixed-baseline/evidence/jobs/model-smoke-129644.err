@@ -1,0 +1,15 @@
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:07,  1.88s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.89s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.87s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.73s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.31s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.54s/it]
+/share/home/renly/renly-patrol-rsi/runs/20261026-m1/model-env/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/share/home/renly/renly-patrol-rsi/runs/20261026-m1/model-env/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/share/home/renly/renly-patrol-rsi/runs/20261026-m1/model-env/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261026-m1/code-28b9baf9/scripts/smoke_open_model.py", line 23, in <module>
+    candidate,_=parse_proposal(answer,AgentVersion(),True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261026-m1/code-28b9baf9/src/patrol_rsi/improve.py", line 24, in parse_proposal
+    if set(patch)-allowed:raise ValueError('Model attempted to change protected fields')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Model attempted to change protected fields

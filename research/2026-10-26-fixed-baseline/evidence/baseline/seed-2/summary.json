@@ -1,0 +1,49 @@
+{
+  "training_seed": 2,
+  "episodes": 1200,
+  "horizon": 96,
+  "ddqn_updates": 28785,
+  "selected_episode": 1200,
+  "best_validation_score": 0.3886775615731798,
+  "split_hash": "3634f5531137d9f0807d74ba18875cc5e2e9ae5385c529cc0a747d32dcbb877d",
+  "estimator_sha256": "fe70299e4a6006520c719c9b55b2194241a042534eb3ab348ef1134b91b4b881",
+  "test": {
+    "learned": {
+      "mean_normalized_weighted_idleness": 0.422296443271787,
+      "target_coverage": 0.9270833333333334,
+      "max_unobserved_steps": 80.75,
+      "reconstruction_mse": 0.004736757614106561,
+      "total_movement_distance": 458.68221467501036,
+      "estimator_calls": 96.0
+    },
+    "route_greedy": {
+      "mean_normalized_weighted_idleness": 0.3187997593680241,
+      "target_coverage": 0.9583333333333334,
+      "max_unobserved_steps": 68.91666666666667,
+      "reconstruction_mse": 0.002814134602279713,
+      "total_movement_distance": 472.5036311603848,
+      "estimator_calls": 96.0
+    },
+    "local_greedy": {
+      "mean_normalized_weighted_idleness": 0.7098093958080023,
+      "target_coverage": 0.19791666666666666,
+      "max_unobserved_steps": 96.0,
+      "reconstruction_mse": 0.04169611198206743,
+      "total_movement_distance": 384.8294432338145,
+      "estimator_calls": 96.0
+    },
+    "random": {
+      "mean_normalized_weighted_idleness": 0.7291758507134444,
+      "target_coverage": 0.625,
+      "max_unobserved_steps": 96.0,
+      "reconstruction_mse": 0.016399633624435712,
+      "total_movement_distance": 458.4203700396997,
+      "estimator_calls": 96.0
+    }
+  },
+  "job_id": "129640",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "rsi_enabled": false,
+  "paper_reproduction": false,
+  "seconds": 762.0615560924634
+}

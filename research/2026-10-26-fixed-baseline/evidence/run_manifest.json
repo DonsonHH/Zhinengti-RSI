@@ -1,0 +1,158 @@
+{
+  "phase": "M1_fixed_baseline_and_bounded_open_LM_pilot",
+  "paper_reproduction": false,
+  "rsi_effectiveness_proven": false,
+  "required_jobs_verified": [
+    "129639",
+    "129640_0",
+    "129640_1",
+    "129640_2",
+    "129643",
+    "129645",
+    "129646",
+    "129647",
+    "129651",
+    "129653",
+    "129654",
+    "129656"
+  ],
+  "jobs": {
+    "129636": {
+      "JobName": "renly-patrol-m1",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:27"
+    },
+    "129637": {
+      "JobName": "renly-patrol-m1",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Elapsed": "00:00:45"
+    },
+    "129638": {
+      "JobName": "renly-vae-diagnose",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:17"
+    },
+    "129639": {
+      "JobName": "renly-patrol-m1",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:59"
+    },
+    "129640_0": {
+      "JobName": "renly-patrol-m1",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:12:51"
+    },
+    "129640_1": {
+      "JobName": "renly-patrol-m1",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:12:55"
+    },
+    "129640_2": {
+      "JobName": "renly-patrol-m1",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:12:46"
+    },
+    "129643": {
+      "JobName": "renly-m1-validation",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:12"
+    },
+    "129644": {
+      "JobName": "renly-open-model-smoke",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Elapsed": "00:00:37"
+    },
+    "129645": {
+      "JobName": "renly-open-model-smoke",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:19"
+    },
+    "129646": {
+      "JobName": "renly-rsi-pilot",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:02:01"
+    },
+    "129647": {
+      "JobName": "renly-m1-report",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:03"
+    },
+    "129648": {
+      "JobName": "renly-rsi-report",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:01"
+    },
+    "129651": {
+      "JobName": "renly-rsi-report",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:01"
+    },
+    "129653": {
+      "JobName": "renly-rsi-pilot",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:02:00"
+    },
+    "129654": {
+      "JobName": "renly-final-tests",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:06"
+    },
+    "129656": {
+      "JobName": "renly-rsi-report-final",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:01"
+    }
+  },
+  "remote_root": "/share/home/renly/renly-patrol-rsi/runs/20261026-m1",
+  "training_source_archive": "8d2fa44c43d5abcb942a16b1c63c6c763a10611a764a885234d8100689f4b280",
+  "baseline_report_source_archive": "d9ab76933802fda83e944efc34d43c03161b7a65bd852fb424c6df8f9f470d11",
+  "improver_report_script_sha256": "3ec892fd9b62b60453ab6182c44424abcf8fddbad628e425e8a061396b724fec",
+  "checkpoint_sha256": {
+    "code-8d2fa44c/results/seed-0/best-policy.pt": "fe0262ebc6a71ff99576c818a6e576f8a67dfc3527b77051b1f6c7ae0bb9065d",
+    "code-8d2fa44c/results/seed-1/best-policy.pt": "09ab9339451d8da85c85613731a5343e61550f1bd2a915436830c828935c5569",
+    "code-8d2fa44c/results/seed-2/best-policy.pt": "4d5c94245388be4c4d13e1ceab2665ae4e88423a775b6868e6de2093c81d0dbf",
+    "code-8d2fa44c/results/vae/best-vae.pt": "fe70299e4a6006520c719c9b55b2194241a042534eb3ab348ef1134b91b4b881"
+  },
+  "transfer_sha256": {
+    "corrected-pilot-final.tar.gz": "75ce13e8165e68dc66ecf5ba1c15a5601acc095aade8b44d632520f3585338ce",
+    "evidence-rsi-final.tar.gz": "e5a274b49eab2f250c8092754e896082e1e8da02c9705d4d64e0e972bfdd3e0c",
+    "evidence-transfer-1.tar.gz": "b13e1906b9a8565dc5ec53567d053ba2e50ec5619184d8c7e57dcd43a11f6599",
+    "report-and-ledger.tar.gz": "8b9fb2c31317b8c75abcbf652b079149033fe0aaf4babb265b00ef8f7c81b339"
+  },
+  "intentional_failures_and_invalid_runs": {
+    "129636": "Process completed but estimator collapsed; not used",
+    "129637": "Stopped by validation quality gate",
+    "129644": "Generated JSON rejected by schema; raw answer was not retained in that initial smoke; corrected in later script"
+  },
+  "canonical_pilot_job": 129653,
+  "final_full_test_job": 129654,
+  "full_tests_passed": 20,
+  "original_pilot_source_archive": "28b9baf9fcdfbdd2edc6842806642179c37f32d3be1d4618f6ab93bbe11cd77c",
+  "pilot_source_archive": "55338d82fb9a90ca1032c33df382d2e549a415948319a998669dcf543e91b309",
+  "prompt_logging_correction": {
+    "superseded_original_job": 129646,
+    "corrected_job": 129653,
+    "changes": "Deep-copy history before generation and persist rendered prompt",
+    "all_six_outputs_and_evaluations_identical": true,
+    "not_an_independent_experiment_replicate": true
+  },
+  "all_training_and_model_inference_in_slurm": true,
+  "generated_svg_postprocessing": "Trailing XML path whitespace normalized; equivalent parsed graphics verified; PNGs unmodified"
+}

@@ -6,12 +6,14 @@
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前新代码是缩小的原理参考实现。它验证学习和执行接口，尚未复现论文表格或验证RSI优势。源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现，已完成三种子基线训练和真实开源模型提案试运行，尚未复现论文表格或证明RSI优势。源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
 - [方向校准](research/2026-10-26-paper-rsi/方向校准与实施记录.md)
 - [运行记录](research/2026-10-26-paper-rsi/运行结果.md)
+- [固定基线与语言模型试运行设计](research/2026-10-26-fixed-baseline/实验设计.md)
+- [本轮运行与结果：改善、退化和证据](research/2026-10-26-fixed-baseline/运行与结果.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -40,6 +42,30 @@ sbatch --output="$PWD/slurm-%j.out" --error="$PWD/slurm-%j.err" cluster/patrol_s
 - models.py：条件prior/posterior VAE-UNet、共享Dueling Q、Double Q更新与优先回放。
 - versions.py：有界修改提案与不可覆盖的版本记录。人工接口样例标为human_fixture，与真实语言模型输出分别记录。
 - smoke.py：受限规模的工程执行，检查参数确实更新并保存证据。
+- experiment.py / train.py：冻结数据划分、VAE预训练、3个种子的共享DDQN训练及4种固定控制器比较。
+- improve.py：本地开源语言模型读取开发日志，生成有界配置及诊断指令，评价后决定保留。
 - tests/：未检更新、重复测量、真值隔离、运动冲突、prior部署、学习更新与提案边界。
 
-正式实验需另行核对原文的网络宽度、完整损失、数据、训练预算和多随机种子，并完成开源语言模型接入及独立场景评价。当前没有将仿真重要度解释成真实故障概率。
+正式论文实验仍需核对原文的网络宽度、数据与训练预算，并扩展等预算搜索、多语言模型种子和新任务评价。当前没有将仿真重要度解释成真实故障概率。
+
+## 分阶段训练与外层试运行
+
+固定基线首先在Slurm上训练VAE，再提交策略数组；每一步都检查终态、日志和产物。VGG感知损失所需官方权重须提前下载到`assets/vgg16_bn-6c64b313.pth`。计算节点不下载资源，结果目录拒绝覆盖。
+
+```bash
+sbatch --output="$PWD/vae-%j.out" --error="$PWD/vae-%j.err" cluster/train_baseline.sbatch "$PWD" vae
+# 确认VAE验证门槛通过并完成后，再提交：
+sbatch --array=0-2%3 --output="$PWD/policy-%A_%a.out" --error="$PWD/policy-%A_%a.err" cluster/train_baseline.sbatch "$PWD" policy
+```
+
+VAE使用GroupNorm和向量潜变量融合，修正缩小工程版本的饱和及逐像素采样问题。训练只从训练划分取样，按验证指标选择检查点；最终测试结果不能用于重新挑选种子或检查点。
+
+语言模型通过`.[neural,open-model]`依赖运行。本轮选择Qwen3-8B固定提交，本地FP16推理；不使用云端API，也不微调语言模型。先校验模型清单并完成GPU生成检查，再使用预先确定的策略种子0接入外层。模型只能修改刷新间隔、采样次数和执行者协调顺序，测试评价与观测边界固定。
+
+```bash
+sbatch --output="$PWD/rsi-%j.out" --error="$PWD/rsi-%j.err" cluster/improve_pilot.sbatch \
+  "$PWD" /absolute/model-venv /absolute/verified-Qwen3-8B \
+  /absolute/best-vae.pt /absolute/seed-0/best-policy.pt
+```
+
+`fixed_improver`保持诊断指令不变，`updated_improver`允许保留生成的诊断指令。每组3次提案只构成外层流程试运行；实际改善、退化或无变化均保留，不等同于已证明递归自改进有效。

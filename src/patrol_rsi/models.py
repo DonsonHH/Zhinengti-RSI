@@ -12,8 +12,10 @@ from torch.nn import functional as F
 
 
 def block(inside: int, outside: int) -> nn.Sequential:
-    return nn.Sequential(nn.Conv2d(inside, outside, 3, padding=1), nn.LeakyReLU(0.1),
-                         nn.Conv2d(outside, outside, 3, padding=1), nn.LeakyReLU(0.1))
+    # Small sparse-input batches otherwise drove unnormalized deep features to
+    # sigmoid saturation. GroupNorm is a declared scaled-reference adaptation.
+    return nn.Sequential(nn.Conv2d(inside, outside, 3, padding=1), nn.GroupNorm(4, outside), nn.LeakyReLU(0.1),
+                         nn.Conv2d(outside, outside, 3, padding=1), nn.GroupNorm(4, outside), nn.LeakyReLU(0.1))
 
 
 class GaussianEncoder(nn.Module):
@@ -40,6 +42,8 @@ class ConditionalVAEUNet(nn.Module):
                                       block(width * 6, width * 2), block(width * 3, width)])
         self.prior = GaussianEncoder(2, width)
         self.posterior = GaussianEncoder(3, width)
+        self.fusion = nn.Sequential(nn.Conv2d(width * 2, width, 1), nn.LeakyReLU(0.1),
+                                    nn.Conv2d(width, width, 1), nn.LeakyReLU(0.1))
         self.output = nn.Conv2d(width, 1, 1)
 
     def _features(self, observation: torch.Tensor) -> torch.Tensor:
@@ -57,10 +61,13 @@ class ConditionalVAEUNet(nn.Module):
                 stochastic: bool) -> torch.Tensor:
         hidden = self._features(observation)
         mu, logvar = distribution
-        latent = mu[:, :, None, None]
+        latent = mu
         if stochastic:
-            latent = latent + torch.randn_like(hidden) * torch.exp(logvar[:, :, None, None] / 2)
-        return torch.sigmoid(self.output(hidden + latent))
+            # One vector per conditional Gaussian, broadcast spatially. Drawing
+            # independent noise at every pixel would not match the KL above.
+            latent = latent + torch.randn_like(mu) * torch.exp(logvar / 2)
+        latent = latent[:, :, None, None].expand_as(hidden)
+        return torch.sigmoid(self.output(self.fusion(torch.cat([hidden, latent], dim=1))))
 
     def forward(self, observation: torch.Tensor, target: torch.Tensor):
         prior = self.prior(observation)
@@ -101,8 +108,8 @@ class SharedDuelingQ(nn.Module):
         self.encoder = nn.Sequential(nn.Conv2d(5, 16, 3, padding=1), nn.ReLU(),
                                      nn.Conv2d(16, 32, 3, stride=2, padding=1), nn.ReLU(),
                                      nn.Conv2d(32, 32, 3, stride=2, padding=1), nn.ReLU(),
-                                     nn.AdaptiveAvgPool2d((3, 3)), nn.Flatten(),
-                                     nn.Linear(288, 128), nn.ReLU(), nn.Linear(128, 64), nn.ReLU())
+                                     nn.AdaptiveAvgPool2d((6, 6)), nn.Flatten(),
+                                     nn.Linear(1152, 256), nn.ReLU(), nn.Linear(256, 64), nn.ReLU())
         self.value = nn.Linear(64, 1)
         self.advantage = nn.Linear(64, 8)
 

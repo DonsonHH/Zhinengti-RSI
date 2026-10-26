@@ -170,7 +170,7 @@ class PatrolEnv:
             for j, q in enumerate(self.positions):
                 if i != j:
                     others[tuple(q)] = 1
-            observations.append(np.stack([self.scenario.navigation, self.estimate,
+            observations.append(np.stack([self.scenario.navigation, self.estimate * self.scenario.targets,
                                            self.idleness, own, others]).astype(np.float32))
         return np.stack(observations)
 
@@ -244,6 +244,7 @@ class PatrolEnv:
         targets = self.scenario.targets
         weights = self.scenario.background_importance + self._truth
         return {"terminal_weighted_idleness_sum": float((self.idleness * weights * targets).sum()),
+                "normalized_weighted_idleness": float((self.idleness * weights * targets).sum() / weights[targets].sum()),
                 "target_coverage": float(self.ever_measured[targets].mean()),
                 "max_unobserved_steps": int(self.raw_age[targets].max()),
                 "reconstruction_mse": float(((self.estimate[targets] - self._truth[targets]) ** 2).mean()),

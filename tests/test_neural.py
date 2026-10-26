@@ -35,6 +35,24 @@ class NeuralTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             vae_loss(predicted, target, prior, posterior, perceptual_weight=0.1)
 
+    def test_vae_can_learn_spatial_reconstruction_instead_of_constant_output(self):
+        # A small, fixed learnable pattern catches saturation that a finite loss
+        # and one nonzero gradient cannot detect. No pretrained resources needed.
+        model=ConditionalVAEUNet()
+        y=torch.zeros(4,1,24,24);y[:,:,6:18,6:18]=.8
+        mask=torch.zeros_like(y);mask[:,:,::3,::3]=1
+        x=torch.cat([y*mask,mask],dim=1)
+        optimizer=torch.optim.Adam(model.parameters(),lr=1e-3)
+        for _ in range(80):
+            out,prior,posterior=model(x,y)
+            loss,_=vae_loss(out,y,prior,posterior)
+            optimizer.zero_grad();loss.backward();optimizer.step()
+        model.eval()
+        with torch.no_grad():
+            estimate=model.predict(x,4)
+        self.assertLess(float((estimate-y).square().mean()),float((y-y.mean()).square().mean()))
+        self.assertGreater(float(estimate[:,:,8:16,8:16].mean()-estimate[:,:,:4,:4].mean()),.15)
+
     def test_replay_drives_shared_dueling_double_q_parameter_update(self):
         online, target = SharedDuelingQ(), SharedDuelingQ()
         target.load_state_dict(online.state_dict())
