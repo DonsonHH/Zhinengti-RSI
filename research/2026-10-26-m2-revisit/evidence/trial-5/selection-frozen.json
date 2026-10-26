@@ -1,0 +1,74 @@
+{
+  "random_search": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 16
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.006076388888888889,
+      "mean_normalized_weighted_idleness": 0.34826104336469954,
+      "peak_unobserved_steps": 25.833333333333332,
+      "max_unobserved_steps": 17.166666666666668,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.2816840277777778,
+      "total_movement_distance": 464.150324319194
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "fixed_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0015190972222222222,
+      "mean_normalized_weighted_idleness": 0.2973617754566173,
+      "peak_unobserved_steps": 22.5,
+      "max_unobserved_steps": 16.0,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.39192708333333326,
+      "total_movement_distance": 468.4995667241114
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "updated_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0015190972222222222,
+      "mean_normalized_weighted_idleness": 0.2973617754566173,
+      "peak_unobserved_steps": 22.5,
+      "max_unobserved_steps": 16.0,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.39192708333333326,
+      "total_movement_distance": 468.4995667241114
+    },
+    "final_diagnostic_plan": {
+      "tool": "revisit",
+      "instruction": "Monitor the mean_overdue_fraction and peak_unobserved_steps after adjusting the revisit_trigger to 14 to assess the trade-off between recovery timing and overdue targets."
+    }
+  }
+}

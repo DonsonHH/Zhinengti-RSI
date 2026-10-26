@@ -6,7 +6,7 @@
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前代码是缩小的原理参考实现，已完成三种子基线训练和真实开源模型提案试运行，尚未复现论文表格或证明RSI优势。源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现，已完成三种子基线训练、真实开源模型提案试运行，以及补查技能与多种子外层比较。补查明显减少长期漏检，递归改进优势仍未得到稳定证据。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
@@ -14,6 +14,9 @@
 - [运行记录](research/2026-10-26-paper-rsi/运行结果.md)
 - [固定基线与语言模型试运行设计](research/2026-10-26-fixed-baseline/实验设计.md)
 - [本轮运行与结果：改善、退化和证据](research/2026-10-26-fixed-baseline/运行与结果.md)
+- [M1复核与下一阶段修正](research/2026-10-26-m2-revisit/M1复核与修正.md)
+- [M2补查技能与多种子比较设计](research/2026-10-26-m2-revisit/实验设计.md)
+- [M2运行与结果：补查收益及改进器对照](research/2026-10-26-m2-revisit/运行与结果.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -69,3 +72,17 @@ sbatch --output="$PWD/rsi-%j.out" --error="$PWD/rsi-%j.err" cluster/improve_pilo
 ```
 
 `fixed_improver`保持诊断指令不变，`updated_improver`允许保留生成的诊断指令。每组3次提案只构成外层流程试运行；实际改善、退化或无变化均保留，不等同于已证明递归自改进有效。
+
+## M2：长期漏检与等候选预算比较
+
+M2继续使用冻结的VAE和3组共享DDQN权重。`revisit.py`提供人工编写的锁定目标补查技能，`m2.py`比较人工默认工具、等候选槽随机搜索、固定诊断工具改进器和可更新诊断工具改进器。工具收益与改进器收益分别报告，不能将人工规划带来的改善归为RSI。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m2_compare.sbatch \
+  "$PWD" /absolute/model-venv /absolute/verified-Qwen3-8B /absolute/M1-results smoke
+# 试运行只读取开发集，通过后提交3策略种子×3提案种子：
+sbatch --array=0-8%3 --output="$PWD/compare-%A_%a.out" --error="$PWD/compare-%A_%a.err" cluster/m2_compare.sbatch \
+  "$PWD" /absolute/model-venv /absolute/verified-Qwen3-8B /absolute/M1-results
+```
+
+每个优化方法6候选槽，非法和重复提案消耗槽位。选择时优先覆盖，再看固定24步逾期率和原加权未检程度。新测试集在全部选择结束后才使用，包含24种新布局。误差按3个策略种子分层汇总，9组配对不当作9次独立训练；等候选槽不代表相同总计算成本。

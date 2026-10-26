@@ -1,0 +1,74 @@
+{
+  "random_search": {
+    "skill": {
+      "estimator_samples": 2,
+      "estimator_refresh_interval": 8,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "mean_normalized_weighted_idleness": 0.22919679219679287,
+      "peak_unobserved_steps": 19.5,
+      "max_unobserved_steps": 12.166666666666666,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 12.0,
+      "prior_samples": 24.0,
+      "skill_executor_fraction": 0.2677951388888889,
+      "total_movement_distance": 470.7777413171634
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "fixed_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 4,
+      "coordination_order": "cyclic",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "mean_normalized_weighted_idleness": 0.2384602455292932,
+      "peak_unobserved_steps": 20.5,
+      "max_unobserved_steps": 13.5,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 24.0,
+      "prior_samples": 24.0,
+      "skill_executor_fraction": 0.2912326388888889,
+      "total_movement_distance": 469.46606503631534
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "updated_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "mean_normalized_weighted_idleness": 0.244716510655255,
+      "peak_unobserved_steps": 19.666666666666668,
+      "max_unobserved_steps": 13.5,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.3055555555555556,
+      "total_movement_distance": 472.43459556665584
+    },
+    "final_diagnostic_plan": {
+      "tool": "revisit",
+      "instruction": "Compare the peak_unobserved_steps and mean_normalized_weighted_idleness after reverting to the original revisit_trigger value to assess the impact on recovery efficiency."
+    }
+  }
+}

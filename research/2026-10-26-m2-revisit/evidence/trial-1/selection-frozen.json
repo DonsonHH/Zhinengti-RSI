@@ -1,0 +1,74 @@
+{
+  "random_search": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 8,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0006510416666666666,
+      "mean_normalized_weighted_idleness": 0.2702001015616891,
+      "peak_unobserved_steps": 22.666666666666668,
+      "max_unobserved_steps": 15.0,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 12.0,
+      "prior_samples": 12.0,
+      "skill_executor_fraction": 0.33246527777777785,
+      "total_movement_distance": 467.0498192558055
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "fixed_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.00043402777777777775,
+      "mean_normalized_weighted_idleness": 0.3018240057345894,
+      "peak_unobserved_steps": 22.5,
+      "max_unobserved_steps": 17.5,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.4045138888888889,
+      "total_movement_distance": 467.2569260369922
+    },
+    "final_diagnostic_plan": {
+      "tool": "coverage",
+      "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+    }
+  },
+  "updated_improver": {
+    "skill": {
+      "estimator_samples": 1,
+      "estimator_refresh_interval": 1,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 16
+    },
+    "development": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.007378472222222223,
+      "mean_normalized_weighted_idleness": 0.35478814245046425,
+      "peak_unobserved_steps": 25.666666666666668,
+      "max_unobserved_steps": 19.333333333333332,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 96.0,
+      "prior_samples": 96.0,
+      "skill_executor_fraction": 0.2947048611111111,
+      "total_movement_distance": 457.73001410241113
+    },
+    "final_diagnostic_plan": {
+      "tool": "revisit",
+      "instruction": "Monitor the largest raw ages before choosing the next patch."
+    }
+  }
+}
