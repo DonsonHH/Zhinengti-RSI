@@ -1,0 +1,159 @@
+{
+  "purpose": "engineering_smoke_not_paper_reproduction",
+  "seed": 7,
+  "split": "development",
+  "device": "cuda:0",
+  "cuda_device": "Tesla V100S-PCIE-32GB",
+  "gpu_memory_bytes": 34072559616,
+  "python": "3.11.11",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.3",
+  "slurm_job_id": "129635",
+  "neural_updates": {
+    "vae": 12,
+    "ddqn": 23
+  },
+  "estimator_calls": 98,
+  "estimator_prior_samples": 98,
+  "vae_losses": [
+    {
+      "reconstruction": 0.2334585189819336,
+      "kl": 0.02942880615592003,
+      "perceptual": 0.0,
+      "total": 0.2337528020143509
+    },
+    {
+      "reconstruction": 0.23177582025527954,
+      "kl": 0.026825355365872383,
+      "perceptual": 0.0,
+      "total": 0.2320440709590912
+    },
+    {
+      "reconstruction": 0.2313564121723175,
+      "kl": 0.024607986211776733,
+      "perceptual": 0.0,
+      "total": 0.2316024899482727
+    },
+    {
+      "reconstruction": 0.25264814496040344,
+      "kl": 0.022295743227005005,
+      "perceptual": 0.0,
+      "total": 0.2528710961341858
+    },
+    {
+      "reconstruction": 0.24314726889133453,
+      "kl": 0.020373400300741196,
+      "perceptual": 0.0,
+      "total": 0.24335099756717682
+    },
+    {
+      "reconstruction": 0.2088378667831421,
+      "kl": 0.01936289295554161,
+      "perceptual": 0.0,
+      "total": 0.20903149247169495
+    },
+    {
+      "reconstruction": 0.23961009085178375,
+      "kl": 0.017499595880508423,
+      "perceptual": 0.0,
+      "total": 0.2397850900888443
+    },
+    {
+      "reconstruction": 0.2259431630373001,
+      "kl": 0.01595780998468399,
+      "perceptual": 0.0,
+      "total": 0.22610273957252502
+    },
+    {
+      "reconstruction": 0.196933314204216,
+      "kl": 0.014457844197750092,
+      "perceptual": 0.0,
+      "total": 0.1970778852701187
+    },
+    {
+      "reconstruction": 0.20164932310581207,
+      "kl": 0.012963920831680298,
+      "perceptual": 0.0,
+      "total": 0.20177896320819855
+    },
+    {
+      "reconstruction": 0.19210323691368103,
+      "kl": 0.012136686593294144,
+      "perceptual": 0.0,
+      "total": 0.19222460687160492
+    },
+    {
+      "reconstruction": 0.15137134492397308,
+      "kl": 0.010584162548184395,
+      "perceptual": 0.0,
+      "total": 0.15147718787193298
+    }
+  ],
+  "ddqn_losses": [
+    0.012423921376466751,
+    0.07185781747102737,
+    0.08590319007635117,
+    0.13077408075332642,
+    0.0916544497013092,
+    0.15381185710430145,
+    0.20293551683425903,
+    0.1374599039554596,
+    0.0872390866279602,
+    0.2739925980567932,
+    0.33989793062210083,
+    0.09224169701337814,
+    0.15801942348480225,
+    0.1141674816608429,
+    0.27902621030807495,
+    0.4242857098579407,
+    0.18146830797195435,
+    0.29429611563682556,
+    0.28426843881607056,
+    0.288716197013855,
+    0.4272408187389374,
+    0.44428694248199463,
+    0.2702268362045288
+  ],
+  "scenario_metrics": {
+    "paper_grid": {
+      "terminal_weighted_idleness_sum": 100.76543426513672,
+      "target_coverage": 0.582089552238806,
+      "max_unobserved_steps": 48,
+      "reconstruction_mse": 0.03127304092049599,
+      "total_movement_distance": 220.99494936611663,
+      "steps": 48,
+      "time_mean_weighted_idleness_sum": 77.06902678807576
+    },
+    "supercomputer": {
+      "terminal_weighted_idleness_sum": 1.5762808322906494,
+      "target_coverage": 0.375,
+      "max_unobserved_steps": 48,
+      "reconstruction_mse": 0.07516632974147797,
+      "total_movement_distance": 246.67619023324843,
+      "steps": 48,
+      "time_mean_weighted_idleness_sum": 1.3412076784297824
+    }
+  },
+  "checkpoint_sha256": "eb7f919d0eb5b4f1761f4d98f0f422b50ce0cab2ce069a7b32a65e71e5fc6aec",
+  "agent_version": {
+    "estimator_samples": 1,
+    "estimator_refresh_interval": 1,
+    "coordination_order": "q_priority",
+    "diagnostic_instruction": "Use development logs to identify a reusable patrolling failure."
+  },
+  "llm_improvement_executed": false,
+  "changes_from_paper": [
+    "small_network_width_and_depth_in_latent_encoder",
+    "perceptual_loss_disabled_for_offline_smoke",
+    "synthetic_indoor_data",
+    "conservative_no_follow_collision_mask",
+    "short_training_not_converged",
+    "KL_posterior_to_prior_as_candidate_code"
+  ],
+  "claims": [
+    "VAE_and_shared_DDQN_forward_backward_and_parameter_updates_executed",
+    "not_an_algorithm_performance_comparison",
+    "not_a_paper_table_reproduction",
+    "not_RSI_effectiveness_evidence"
+  ]
+}

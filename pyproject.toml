@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "renly-patrol-rsi"
+version = "0.1.0"
+description = "Paper-derived persistent patrolling reference and RSI experiment interfaces"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+neural = ["torch>=2.6,<2.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
