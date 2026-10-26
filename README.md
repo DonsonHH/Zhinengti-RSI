@@ -6,7 +6,7 @@
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前代码是缩小的原理参考实现，已完成基线训练、流程迁移、配置枚举，以及可执行工作流与验证式改进器更新。M4机制真实运行，但模型元更新未超过随机工作流搜索，调度流程仍主导动作，不支持通用RSI优势。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现，已完成外层工作流实验及M5内层重新训练归因。时限感知DDQN在当前预算下仍落后于纯规划，VAE等模块的任务收益不稳定；现有结果不支持继续堆叠RSI作为主要贡献。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
@@ -23,6 +23,9 @@
 - [M3复核与M4可执行工作流策划](research/2026-10-26-m4-workflow/M3复核与阶段策划.md)
 - [M4冻结设计：工作流和改进器两层评价](research/2026-10-26-m4-workflow/实验设计.md)
 - [M4运行与结果：程序执行、元更新与搜索对照](research/2026-10-26-m4-workflow/运行与结果.md)
+- [M4复核与M5内层归因规划](research/2026-10-26-m5-attribution/复核与阶段规划.md)
+- [M5冻结设计：时限感知学习与模块消融](research/2026-10-26-m5-attribution/实验设计.md)
+- [M5运行与结果：内层贡献、配对消融与规划对照](research/2026-10-26-m5-attribution/运行与结果.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -123,3 +126,17 @@ sbatch --array=0-8%3 --output="$PWD/workflow-%A_%a.out" --error="$PWD/workflow-%
 ```
 
 本阶段加入公开的异质重访时限，VAE及共享DDQN仍冻结。工作流接管比例和随机后备动作对照用于检查神经策略的实际作用；它是受限语言中的流程合成，不代表开放式代码进化或已证明通用RSI。
+
+## M5：重新训练并验证内层贡献
+
+`deadline.py`提供公开时限输入、共同任务奖励和显式距离势函数；`m5.py`从头训练8通道共享DDQN，以同预算比较完整VAE组、无VAE、隐藏时限和无距离引导。主结果不使用规划接管，另列补查和人工流程组合。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m5_attribution.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt smoke
+# 完整测试、CUDA参数更新与新读检查点重放通过后：
+sbatch --array=0-11%6 --output="$PWD/train-%A_%a.out" --error="$PWD/train-%A_%a.err" cluster/m5_attribution.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt
+```
+
+12任务分别4组×3训练种子，各2,400回合；按独立验证集选择，最后测试配对同布局的时限与噪声条件。无VAE训练组是主要模块消融，部署时关闭VAE另列为敏感性检查。距离势函数是人工奖励引导，单独消融，不把它当作学习自主发现。M5不增加语言模型或RSI调用。
