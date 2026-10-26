@@ -6,7 +6,7 @@
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前代码是缩小的原理参考实现，已完成三种子基线训练、开源模型外层比较，以及流程迁移和110配置枚举。补查明显减少长期漏检，但已有诊断流程迁移未超过人工固定重访诊断，不支持现有RSI优势。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现，已完成基线训练、流程迁移、配置枚举，以及可执行工作流与验证式改进器更新。M4机制真实运行，但模型元更新未超过随机工作流搜索，调度流程仍主导动作，不支持通用RSI优势。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
@@ -20,6 +20,9 @@
 - [M2再次复核与后续研究安排](research/2026-10-26-m3-transfer/复核与后续方向.md)
 - [M3流程迁移和完整配置空间实验设计](research/2026-10-26-m3-transfer/实验设计.md)
 - [M3运行与结果：迁移无收益，后续方向调整](research/2026-10-26-m3-transfer/运行与结果.md)
+- [M3复核与M4可执行工作流策划](research/2026-10-26-m4-workflow/M3复核与阶段策划.md)
+- [M4冻结设计：工作流和改进器两层评价](research/2026-10-26-m4-workflow/实验设计.md)
+- [M4运行与结果：程序执行、元更新与搜索对照](research/2026-10-26-m4-workflow/运行与结果.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -104,3 +107,19 @@ sbatch --array=0-8%3 --output="$PWD/transfer-%A_%a.out" --error="$PWD/transfer-%
 ```
 
 比较的是现有有界诊断流程在新布局上是否更会提出任务修改，不是开放式代码自修改。后续是否扩大技能与工作流空间，以固定正确工具和枚举对照的结果为依据。
+
+## M4：可执行工作流和验证式改进器更新
+
+`workflow.py`解释最多3个有条件的分配规则，支持目标排序、跨执行者分配、保持到观测完成、卡住释放和DDQN后备。模型生成的JSON经固定语法检查后真实执行，不把分析文字当作程序。
+
+`m4.py`首先比较旧/候选改进器各2次内层工作流提案，候选严格更好才保留。冻结后的诊断/记忆流程用于另一批任务开发场景，任务程序和历史均重新开始。任务层另有随机工作流搜索、无记忆、仅记忆及人工规则对照；元训练的额外离线成本单列。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m4_workflow.sbatch \
+  "$PWD" /absolute/model-venv /absolute/Qwen3-8B /absolute/M1-results smoke
+# 只用开发集的试运行及完整测试通过后：
+sbatch --array=0-8%3 --output="$PWD/workflow-%A_%a.out" --error="$PWD/workflow-%A_%a.err" cluster/m4_workflow.sbatch \
+  "$PWD" /absolute/model-venv /absolute/Qwen3-8B /absolute/M1-results
+```
+
+本阶段加入公开的异质重访时限，VAE及共享DDQN仍冻结。工作流接管比例和随机后备动作对照用于检查神经策略的实际作用；它是受限语言中的流程合成，不代表开放式代码进化或已证明通用RSI。

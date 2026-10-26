@@ -1,0 +1,57 @@
+AUDIT VERIFIED 270 real model calls; 135 task slots; 1944 test records; 712 distinct traces
+{
+  "plain_ddqn": {
+    "target_coverage": 0.9097222222222223,
+    "mean_deadline_violation": 0.34982638888888884,
+    "weighted_idleness": 0.5151832632006886,
+    "ddqn_command_fraction": 1.0
+  },
+  "fixed_trigger12": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.044596354166666664,
+    "weighted_idleness": 0.30144630376674253,
+    "ddqn_command_fraction": 0.6426142939814814
+  },
+  "human_workflow": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.04799623842592593,
+    "weighted_idleness": 0.379443017974457,
+    "ddqn_command_fraction": 0.10673466435185186
+  },
+  "human_workflow_random_fallback": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.047092013888888895,
+    "weighted_idleness": 0.3908042817428294,
+    "ddqn_command_fraction": 0.0
+  },
+  "random_workflow": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.026566116898148143,
+    "weighted_idleness": 0.2662055718591782,
+    "ddqn_command_fraction": 0.1259886188271605
+  },
+  "lm_no_memory": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.04421657986111111,
+    "weighted_idleness": 0.36183754256498896,
+    "ddqn_command_fraction": 0.17473234953703706
+  },
+  "lm_memory": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.0423900462962963,
+    "weighted_idleness": 0.35925747891312226,
+    "ddqn_command_fraction": 0.15416425540123455
+  },
+  "validated_random_meta": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.034016927083333336,
+    "weighted_idleness": 0.34804619731050795,
+    "ddqn_command_fraction": 0.1751663773148148
+  },
+  "validated_model_meta": {
+    "target_coverage": 1.0,
+    "mean_deadline_violation": 0.03765793788580247,
+    "weighted_idleness": 0.357672141652366,
+    "ddqn_command_fraction": 0.1512104552469136
+  }
+}
