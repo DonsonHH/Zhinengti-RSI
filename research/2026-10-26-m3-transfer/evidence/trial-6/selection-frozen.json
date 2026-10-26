@@ -1,0 +1,243 @@
+{
+  "optimizer_selections": {
+    "random_search": {
+      "skill": {
+        "estimator_samples": 1,
+        "estimator_refresh_interval": 1,
+        "coordination_order": "q_priority",
+        "revisit_trigger": 12
+      },
+      "development": {
+        "target_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_normalized_weighted_idleness": 0.29141314786910594,
+        "peak_unobserved_steps": 21.666666666666668,
+        "max_unobserved_steps": 14.666666666666666,
+        "never_observed_targets": 0.0,
+        "estimator_calls": 96.0,
+        "prior_samples": 96.0,
+        "skill_executor_fraction": 0.3068576388888889,
+        "total_movement_distance": 471.1229192858077
+      },
+      "plan": {
+        "tool": "coverage",
+        "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+      }
+    },
+    "fixed_coverage": {
+      "skill": {
+        "estimator_samples": 1,
+        "estimator_refresh_interval": 2,
+        "coordination_order": "q_priority",
+        "revisit_trigger": 16
+      },
+      "development": {
+        "target_coverage": 1.0,
+        "mean_overdue_fraction": 0.0008680555555555555,
+        "mean_normalized_weighted_idleness": 0.3103524701825032,
+        "peak_unobserved_steps": 23.833333333333332,
+        "max_unobserved_steps": 18.166666666666668,
+        "never_observed_targets": 0.0,
+        "estimator_calls": 48.0,
+        "prior_samples": 48.0,
+        "skill_executor_fraction": 0.19921875,
+        "total_movement_distance": 465.53103619377094
+      },
+      "plan": {
+        "tool": "coverage",
+        "instruction": "Diagnose missed targets; propose one testable tool-policy change."
+      }
+    },
+    "fixed_revisit": {
+      "skill": {
+        "estimator_samples": 4,
+        "estimator_refresh_interval": 2,
+        "coordination_order": "q_priority",
+        "revisit_trigger": 12
+      },
+      "development": {
+        "target_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_normalized_weighted_idleness": 0.27853072347999036,
+        "peak_unobserved_steps": 19.666666666666668,
+        "max_unobserved_steps": 15.833333333333334,
+        "never_observed_targets": 0.0,
+        "estimator_calls": 48.0,
+        "prior_samples": 192.0,
+        "skill_executor_fraction": 0.28515625,
+        "total_movement_distance": 471.7442396293674
+      },
+      "plan": {
+        "tool": "revisit",
+        "instruction": "Use raw-age diagnostics to propose one testable configuration change."
+      }
+    },
+    "transferred_protocol": {
+      "skill": {
+        "estimator_samples": 1,
+        "estimator_refresh_interval": 1,
+        "coordination_order": "q_priority",
+        "revisit_trigger": 12
+      },
+      "development": {
+        "target_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_normalized_weighted_idleness": 0.29141314786910594,
+        "peak_unobserved_steps": 21.666666666666668,
+        "max_unobserved_steps": 14.666666666666666,
+        "never_observed_targets": 0.0,
+        "estimator_calls": 96.0,
+        "prior_samples": 96.0,
+        "skill_executor_fraction": 0.3068576388888889,
+        "total_movement_distance": 471.1229192858077
+      },
+      "plan": {
+        "tool": "revisit",
+        "instruction": "Compare the peak_unobserved_steps and mean_normalized_weighted_idleness after reverting to the original revisit_trigger value to assess the impact on recovery efficiency."
+      }
+    }
+  },
+  "enumeration_selected": {
+    "index": 61,
+    "skill": {
+      "estimator_samples": 2,
+      "estimator_refresh_interval": 4,
+      "coordination_order": "q_priority",
+      "revisit_trigger": 12
+    },
+    "metrics": {
+      "target_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "mean_normalized_weighted_idleness": 0.26412860059645027,
+      "peak_unobserved_steps": 19.166666666666668,
+      "max_unobserved_steps": 15.166666666666666,
+      "never_observed_targets": 0.0,
+      "estimator_calls": 24.0,
+      "prior_samples": 48.0,
+      "skill_executor_fraction": 0.2690972222222222,
+      "total_movement_distance": 468.15438875546715
+    },
+    "cases": [
+      {
+        "terminal_weighted_idleness_sum": 0.6041896343231201,
+        "normalized_weighted_idleness": 0.15695138275623322,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 14,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 451.1025971044416,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8000,
+        "field_seed": 900000,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.24696141430952898,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 20,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.1953125
+      },
+      {
+        "terminal_weighted_idleness_sum": 1.0849003791809082,
+        "normalized_weighted_idleness": 0.29025518894195557,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 15,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 482.58282784479655,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8001,
+        "field_seed": 900001,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.3506494554070135,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 21,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.4739583333333333
+      },
+      {
+        "terminal_weighted_idleness_sum": 0.48246702551841736,
+        "normalized_weighted_idleness": 0.3552067279815674,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 17,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 457.73001410241085,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8002,
+        "field_seed": 900002,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.23796698070752123,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 19,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.1953125
+      },
+      {
+        "terminal_weighted_idleness_sum": 1.1646006107330322,
+        "normalized_weighted_idleness": 0.4085824191570282,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 16,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 474.2985565973347,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8003,
+        "field_seed": 900003,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.2316326255289217,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 18,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.2421875
+      },
+      {
+        "terminal_weighted_idleness_sum": 0.4628278613090515,
+        "normalized_weighted_idleness": 0.22297558188438416,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 15,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 476.78383797157323,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8004,
+        "field_seed": 900004,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.2704333472453679,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 18,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.2864583333333333
+      },
+      {
+        "terminal_weighted_idleness_sum": 0.6375080347061157,
+        "normalized_weighted_idleness": 0.28186818957328796,
+        "target_coverage": 1.0,
+        "max_unobserved_steps": 14,
+        "reconstruction_mse": 0.0,
+        "total_movement_distance": 466.42849891224614,
+        "steps": 96,
+        "split": "m3_development",
+        "layout_seed": 8005,
+        "field_seed": 900005,
+        "noise": 0.0,
+        "mean_normalized_weighted_idleness": 0.24712778038034836,
+        "mean_overdue_fraction": 0.0,
+        "peak_unobserved_steps": 19,
+        "never_observed_targets": 0,
+        "estimator_calls": 24,
+        "prior_samples": 48,
+        "skill_executor_fraction": 0.22135416666666666
+      }
+    ]
+  }
+}

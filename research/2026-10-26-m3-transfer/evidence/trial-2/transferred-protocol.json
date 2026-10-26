@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "tool": "revisit",
+    "instruction": "Compare the effect of estimator_refresh_interval=2 on mean_normalized_weighted_idleness and mean_overdue_fraction to determine if further reducing refresh frequency improves efficiency without compromising coverage."
+  },
+  "source_trial": 2,
+  "source_summary_sha256": "70ab7f0973303c03c2e1e009849c3d63674c0e72d8eb149cb4e63d9e91a2221d",
+  "transferred_fields": [
+    "tool",
+    "instruction"
+  ],
+  "task_config_reset": {
+    "estimator_samples": 1,
+    "estimator_refresh_interval": 1,
+    "coordination_order": "q_priority",
+    "revisit_trigger": 16
+  },
+  "history_reset": []
+}

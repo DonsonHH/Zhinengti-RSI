@@ -6,7 +6,7 @@
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前代码是缩小的原理参考实现，已完成三种子基线训练、真实开源模型提案试运行，以及补查技能与多种子外层比较。补查明显减少长期漏检，递归改进优势仍未得到稳定证据。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现，已完成三种子基线训练、开源模型外层比较，以及流程迁移和110配置枚举。补查明显减少长期漏检，但已有诊断流程迁移未超过人工固定重访诊断，不支持现有RSI优势。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
@@ -17,6 +17,9 @@
 - [M1复核与下一阶段修正](research/2026-10-26-m2-revisit/M1复核与修正.md)
 - [M2补查技能与多种子比较设计](research/2026-10-26-m2-revisit/实验设计.md)
 - [M2运行与结果：补查收益及改进器对照](research/2026-10-26-m2-revisit/运行与结果.md)
+- [M2再次复核与后续研究安排](research/2026-10-26-m3-transfer/复核与后续方向.md)
+- [M3流程迁移和完整配置空间实验设计](research/2026-10-26-m3-transfer/实验设计.md)
+- [M3运行与结果：迁移无收益，后续方向调整](research/2026-10-26-m3-transfer/运行与结果.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -86,3 +89,18 @@ sbatch --array=0-8%3 --output="$PWD/compare-%A_%a.out" --error="$PWD/compare-%A_
 ```
 
 每个优化方法6候选槽，非法和重复提案消耗槽位。选择时优先覆盖，再看固定24步逾期率和原加权未检程度。新测试集在全部选择结束后才使用，包含24种新布局。误差按3个策略种子分层汇总，9组配对不当作9次独立训练；等候选槽不代表相同总计算成本。
+
+## M3：流程迁移检验
+
+M3重新开始任务配置和历史，只从M2继承冻结诊断方案，比较人工固定覆盖、人工固定重访、迁移方案及随机搜索。提示词不含填好参数的答案示例，并对110种配置建立开发枚举锚点。枚举使用更多候选，不作为等预算方法；所有配置仍只在开发集选择。
+
+```bash
+# 先smoke；通过后，枚举3个策略种子：
+sbatch --array=0-2%3 --output="$PWD/enumerate-%A_%a.out" --error="$PWD/enumerate-%A_%a.err" cluster/m3_transfer.sbatch \
+  "$PWD" /absolute/model-venv /absolute/Qwen3-8B /absolute/M1-results /absolute/M2-results enumerate "$PWD/results/enumeration"
+# 等枚举完成，再提交9组迁移比较；建议使用Slurm afterok依赖：
+sbatch --array=0-8%3 --output="$PWD/transfer-%A_%a.out" --error="$PWD/transfer-%A_%a.err" cluster/m3_transfer.sbatch \
+  "$PWD" /absolute/model-venv /absolute/Qwen3-8B /absolute/M1-results /absolute/M2-results transfer "$PWD/results/enumeration"
+```
+
+比较的是现有有界诊断流程在新布局上是否更会提出任务修改，不是开放式代码自修改。后续是否扩大技能与工作流空间，以固定正确工具和枚举对照的结果为依据。

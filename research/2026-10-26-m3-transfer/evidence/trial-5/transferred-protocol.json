@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "tool": "revisit",
+    "instruction": "Monitor the mean_overdue_fraction and peak_unobserved_steps after adjusting the revisit_trigger to 14 to assess the trade-off between recovery timing and overdue targets."
+  },
+  "source_trial": 5,
+  "source_summary_sha256": "c8e487a2f65938aa8403d6fabfece9a15f31dbd5cb4946b1216e6260923f0f1a",
+  "transferred_fields": [
+    "tool",
+    "instruction"
+  ],
+  "task_config_reset": {
+    "estimator_samples": 1,
+    "estimator_refresh_interval": 1,
+    "coordination_order": "q_priority",
+    "revisit_trigger": 16
+  },
+  "history_reset": []
+}

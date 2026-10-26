@@ -1,0 +1,123 @@
+{
+  "first_plan_matches_example": 9,
+  "review_cannot_infer_causality_from_exact_copy_alone": true,
+  "records": [
+    {
+      "trial": 0,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Evaluate the effect of increasing the revisit_trigger on the mean_overdue_fraction and peak_unobserved_steps to determine if the change improves target coverage and reduces overdue targets."
+      },
+      "source_summary_sha256": "4460bf2b18800a2b786a7cc4462d0596d91b019d75c2011757e198216036ddb1"
+    },
+    {
+      "trial": 1,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Monitor the largest raw ages before choosing the next patch."
+      },
+      "source_summary_sha256": "d521c6a08f0d4f9111a320083fec08022df43d8047cfcb2ef922ae34456366b1"
+    },
+    {
+      "trial": 2,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Compare the effect of estimator_refresh_interval=2 on mean_normalized_weighted_idleness and mean_overdue_fraction to determine if further reducing refresh frequency improves efficiency without compromising coverage."
+      },
+      "source_summary_sha256": "70ab7f0973303c03c2e1e009849c3d63674c0e72d8eb149cb4e63d9e91a2221d"
+    },
+    {
+      "trial": 3,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Monitor the peak_unobserved_steps for the target positions [15, 4] and [17, 8] to determine if the increased revisit_trigger of 16 is effective in reducing their peak ages."
+      },
+      "source_summary_sha256": "3b7a06f2202317eec58da99cb340df07f9b26cc5b0faebcd4da603bf2c20cffa"
+    },
+    {
+      "trial": 4,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "source_summary_sha256": "bc45153bf1b0d9c41a559b972532e239442c2c432f1feac19add87f959cf9e1c"
+    },
+    {
+      "trial": 5,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Monitor the mean_overdue_fraction and peak_unobserved_steps after adjusting the revisit_trigger to 14 to assess the trade-off between recovery timing and overdue targets."
+      },
+      "source_summary_sha256": "c8e487a2f65938aa8403d6fabfece9a15f31dbd5cb4946b1216e6260923f0f1a"
+    },
+    {
+      "trial": 6,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Compare the peak_unobserved_steps and mean_normalized_weighted_idleness after reverting to the original revisit_trigger value to assess the impact on recovery efficiency."
+      },
+      "source_summary_sha256": "053eed9b9fae75f5f46750a112f63b32352980b681d83fa83e4c4ff542556893"
+    },
+    {
+      "trial": 7,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages after decreasing the revisit_trigger to assess if recovery actions are being delayed excessively."
+      },
+      "source_summary_sha256": "5b8a49dac16385ef947e7b0aaf3ac4568080d7f290d3bc48e2f7ffcb404136f5"
+    },
+    {
+      "trial": 8,
+      "first_generated_plan_equals_prompt_example": true,
+      "generated_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages before choosing the next patch."
+      },
+      "final_plan": {
+        "tool": "revisit",
+        "instruction": "Inspect the largest raw ages after increasing the revisit trigger to assess if the longest unobserved targets are being addressed more effectively."
+      },
+      "source_summary_sha256": "7aea51be6f3cceb6d8c78e93cbc3360a5b1c1a49e59aa3e043666e9756c33056"
+    }
+  ]
+}

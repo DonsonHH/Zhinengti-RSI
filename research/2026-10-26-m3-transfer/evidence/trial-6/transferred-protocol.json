@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "tool": "revisit",
+    "instruction": "Compare the peak_unobserved_steps and mean_normalized_weighted_idleness after reverting to the original revisit_trigger value to assess the impact on recovery efficiency."
+  },
+  "source_trial": 6,
+  "source_summary_sha256": "053eed9b9fae75f5f46750a112f63b32352980b681d83fa83e4c4ff542556893",
+  "transferred_fields": [
+    "tool",
+    "instruction"
+  ],
+  "task_config_reset": {
+    "estimator_samples": 1,
+    "estimator_refresh_interval": 1,
+    "coordination_order": "q_priority",
+    "revisit_trigger": 16
+  },
+  "history_reset": []
+}

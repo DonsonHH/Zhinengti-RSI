@@ -1,0 +1,210 @@
+{
+  "development": [
+    {
+      "split": "m3_development",
+      "layout_seed": 8000,
+      "field_seed": 900000,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_development",
+      "layout_seed": 8001,
+      "field_seed": 900001,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_development",
+      "layout_seed": 8002,
+      "field_seed": 900002,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_development",
+      "layout_seed": 8003,
+      "field_seed": 900003,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_development",
+      "layout_seed": 8004,
+      "field_seed": 900004,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_development",
+      "layout_seed": 8005,
+      "field_seed": 900005,
+      "noise": 0.0
+    }
+  ],
+  "test": [
+    {
+      "split": "m3_test",
+      "layout_seed": 9000,
+      "field_seed": 10000000,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9001,
+      "field_seed": 10000001,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9002,
+      "field_seed": 10000002,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9003,
+      "field_seed": 10000003,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9004,
+      "field_seed": 10000004,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9005,
+      "field_seed": 10000005,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9006,
+      "field_seed": 10000006,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9007,
+      "field_seed": 10000007,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9008,
+      "field_seed": 10000008,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9009,
+      "field_seed": 10000009,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9010,
+      "field_seed": 10000010,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9011,
+      "field_seed": 10000011,
+      "noise": 0.0
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9000,
+      "field_seed": 10000000,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9001,
+      "field_seed": 10000001,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9002,
+      "field_seed": 10000002,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9003,
+      "field_seed": 10000003,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9004,
+      "field_seed": 10000004,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9005,
+      "field_seed": 10000005,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9006,
+      "field_seed": 10000006,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9007,
+      "field_seed": 10000007,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9008,
+      "field_seed": 10000008,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9009,
+      "field_seed": 10000009,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9010,
+      "field_seed": 10000010,
+      "noise": 0.03
+    },
+    {
+      "split": "m3_test",
+      "layout_seed": 9011,
+      "field_seed": 10000011,
+      "noise": 0.03
+    }
+  ],
+  "policy_seeds": [
+    0,
+    1,
+    2
+  ],
+  "proposal_seeds": [
+    389,
+    467,
+    557
+  ],
+  "methods": [
+    "random_search",
+    "fixed_coverage",
+    "fixed_revisit",
+    "transferred_protocol"
+  ],
+  "candidate_slots": 6,
+  "configuration_count": 110,
+  "input_token_cap": 4096,
+  "output_token_cap": 512,
+  "source_protocol_rule": "M2 final updated_improver diagnostic plan from corresponding trial index; all nine, no selection by test",
+  "reset_rule": "Each method starts at PatrolSkill() with empty history; transfer diagnostic plan only; no task patch or source score transfer",
+  "test_rule": "Enumeration and all optimizer selections frozen before test access",
+  "enumeration_budget": "110 configurations x 6 development cases per policy, extra-compute anchor; not equal-slot comparison"
+}
