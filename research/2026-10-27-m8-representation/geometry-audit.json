@@ -1,0 +1,695 @@
+{
+  "old_unique_public_maps": 349,
+  "old_contracts_read": [
+    "research/2026-10-26-paper-rsi/experiment_contract.json",
+    "research/2026-10-26-fixed-baseline/evidence/baseline/seed-0/splits.json",
+    "research/2026-10-26-fixed-baseline/evidence/baseline/seed-1/splits.json",
+    "research/2026-10-26-fixed-baseline/evidence/baseline/seed-2/splits.json",
+    "research/2026-10-26-fixed-baseline/evidence/baseline/vae/splits.json",
+    "research/2026-10-26-fixed-baseline/evidence/failed-vae/code-6e60faf8/splits.json",
+    "research/2026-10-26-fixed-baseline/evidence/failed-vae/code-f17ba894/splits.json",
+    "research/2026-10-26-m2-revisit/evidence/smoke-129672/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/smoke-129674/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-0/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-1/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-2/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-3/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-4/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-5/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-6/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-7/contract.json",
+    "research/2026-10-26-m2-revisit/evidence/trial-8/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/smoke-129699/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-0/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-1/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-2/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-3/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-4/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-5/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-6/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-7/contract.json",
+    "research/2026-10-26-m3-transfer/evidence/trial-8/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/smoke-129723/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/smoke-129725/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-0/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-1/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-2/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-3/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-4/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-5/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-6/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-7/contract.json",
+    "research/2026-10-26-m4-workflow/evidence/trial-8/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/deadline_vae-seed-0/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/deadline_vae-seed-1/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/deadline_vae-seed-2/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_deadline-seed-0/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_deadline-seed-1/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_deadline-seed-2/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_shaping-seed-0/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_shaping-seed-1/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_shaping-seed-2/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_vae-seed-0/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_vae-seed-1/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/no_vae-seed-2/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/smoke-129747/contract.json",
+    "research/2026-10-26-m5-attribution/evidence/smoke-129748/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/independent_targets-seed-0/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/independent_targets-seed-1/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/independent_targets-seed-2/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/joint_vae-seed-0/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/joint_vae-seed-1/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/joint_vae-seed-2/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/no_vae-seed-0/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/no_vae-seed-1/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/no_vae-seed-2/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/preflight-129812/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/smoke-129811/contract.json",
+    "research/2026-10-27-m6-dispatch/evidence/smoke-129837/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_mask_on-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_mask_on-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_mask_on-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_targets-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_targets-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/independent_targets-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_mask_off-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_mask_off-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_mask_off-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_tool_off-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_tool_off-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/joint_vae_tool_off-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/matching_hold-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/matching_vae-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae_tool_on-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae_tool_on-seed-1/contract.json",
+    "research/2026-10-27-m7-stress/evidence/no_vae_tool_on-seed-2/contract.json",
+    "research/2026-10-27-m7-stress/evidence/pair_cycle-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/risk_hold-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/risk_vae-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/slack-seed-0/contract.json",
+    "research/2026-10-27-m7-stress/evidence/smoke-129855/contract.json"
+  ],
+  "M8_unique_public_maps": 117,
+  "counts": {
+    "train": 96,
+    "validation": 4,
+    "test": 16,
+    "preflight": 1
+  },
+  "no_duplicate_with_old_or_between_M8_splits": true,
+  "connected_all": true,
+  "scope": "Public geometry only; final state fields and performance not read",
+  "geometries": {
+    "6109296b5666bddf449894876739ff4fec418cd270d35689cb29f1f90e6f8610": [
+      "train",
+      "baffle",
+      41000
+    ],
+    "b55fe8d14b81fba722e1f38a559eb67a06b78245e81d98c26348cbbf2847588f": [
+      "train",
+      "baffle",
+      41001
+    ],
+    "0c5a17108134d3575733b1cc0eddab3da343940f271127e4c86d9625c712eb38": [
+      "train",
+      "baffle",
+      41002
+    ],
+    "c5291afac4333764e0628ed24fdb9140c2b3c2a2bf9de9037f568425cec74271": [
+      "train",
+      "baffle",
+      41003
+    ],
+    "4474ea50c42346b4c5e8b43e273cc3c140ad45ce176de9bdf0bf19a7ff707446": [
+      "train",
+      "baffle",
+      41004
+    ],
+    "2796c419ba20e7bdcddc9275960e6df19a82a1b740b14da6b505ce0c2d7a9423": [
+      "train",
+      "baffle",
+      41005
+    ],
+    "bf9f1ade66cb27280abecb2812ef8fd248c8163fc05d6ad688eff3a027a544cd": [
+      "train",
+      "baffle",
+      41006
+    ],
+    "4ba47f5846bccc7b9096c69e702137efb868e858998d7f2c4174db7c831cfbf1": [
+      "train",
+      "baffle",
+      41007
+    ],
+    "03d48354aca5dfd962590f2affc8347d1471892e6ae023e5ea8568c17825bf6f": [
+      "train",
+      "baffle",
+      41008
+    ],
+    "99ff8b4ba1c893cabf6f21875ae41fa4224abbdc634363f9feeb50fb399a2a92": [
+      "train",
+      "baffle",
+      41009
+    ],
+    "5d6c6ab00c90e807f69362027ae49f8b1dfbfa0ec7c2f4facdf4cabf19a3759f": [
+      "train",
+      "baffle",
+      41010
+    ],
+    "e0d6a24066e85afa6643769e72aa3085c3f57b2a602d3a1a2d72d76ec7ee6a31": [
+      "train",
+      "baffle",
+      41011
+    ],
+    "4c5c7ebf526294edd22cae3406a7f6a4e5a9aca84a53d7e57e29558f526aa3b1": [
+      "train",
+      "baffle",
+      41012
+    ],
+    "10a92d7e371160829df0f897671bfdf39f82483f5dbcc6d2c478929ad2b40d6a": [
+      "train",
+      "baffle",
+      41013
+    ],
+    "d1c223811c30f782f8e193d973f390289fc45ef24cd7c59f8e9a03495abf3919": [
+      "train",
+      "baffle",
+      41014
+    ],
+    "ba97d2c5cf9f70428d4b71d00431044f34130cad3bd50c05d47539ec3bbe5b82": [
+      "train",
+      "baffle",
+      41015
+    ],
+    "3f5da04ff4db6e88610016a59d33dbe288bdeb0709d89c29eee39671e941079a": [
+      "train",
+      "baffle",
+      41016
+    ],
+    "6ad1be3b53673cd1d9c4ce0009efa2f4bfb57d6ed538a35eeb823b88e23b3e4c": [
+      "train",
+      "baffle",
+      41017
+    ],
+    "34f3e913858ca44821bb3d9bbb96de4f69d735d540eeeae91134d86d8d66aec3": [
+      "train",
+      "baffle",
+      41018
+    ],
+    "c6c53474b9a0f3a5b7837360302b8cd93dbaa89ce51d506389328b4814dfd857": [
+      "train",
+      "baffle",
+      41019
+    ],
+    "d4c441567db2ab791bdd9d1da611daada8b0e12cc41661d47de63a467172cae7": [
+      "train",
+      "baffle",
+      41020
+    ],
+    "866312c235e64afcb746be81c0f4885b254f8ac64dbc01f37896400dcfbd4249": [
+      "train",
+      "baffle",
+      41021
+    ],
+    "be6b0519d3ccab923b133278bb1466952a08f806dfe77fa3175f68690cbac091": [
+      "train",
+      "baffle",
+      41022
+    ],
+    "db0be79efc4f5d8d8d6d00af76a1a2ca03651cd836162a50467a3dc6a05e8965": [
+      "train",
+      "baffle",
+      41023
+    ],
+    "1cf0c16cdf25954b72806260b7af30d5efb75fe2559ac32d94d1fda4b477ab23": [
+      "train",
+      "baffle",
+      41024
+    ],
+    "9966d11b46141703a57e1ee58498cd8084a614d3acaa97e8faf5b104a4f4e16c": [
+      "train",
+      "baffle",
+      41025
+    ],
+    "abf25e7c2063b75565fbf8ed0e2b861981796267b3d7863e0b7a06325d81cf86": [
+      "train",
+      "baffle",
+      41026
+    ],
+    "77fac1ca87c3f26d21a2173c5bfd5e02818055b77ea897008e47551d3cda8601": [
+      "train",
+      "baffle",
+      41027
+    ],
+    "32526e227fdbdf711395ef291fe8c429fb2a34600f7b08080b69b711f17926bc": [
+      "train",
+      "baffle",
+      41028
+    ],
+    "31aaa7003c294368539e1fd7f62641da34bb3553b1c749444c5be2c1d5dd1627": [
+      "train",
+      "baffle",
+      41029
+    ],
+    "45120a3421bdb99309aab7bab29f3d8ccfbf6dc9bb5e298c0e2d242b1452b18e": [
+      "train",
+      "baffle",
+      41030
+    ],
+    "7c7786b56af413eb12938d0c2098450687ec419a5365fdc227a07e69b8b18ac6": [
+      "train",
+      "baffle",
+      41031
+    ],
+    "a47cb0dd2960f0d1d7563894c70869dd4eb20c293c9bb25c16c9f4fea5d35370": [
+      "train",
+      "rack",
+      40000
+    ],
+    "a5d0bf2be7d7b892a9e64b416e7ca738c2d1cf600287b6d7bc6b71d0bdf752ab": [
+      "train",
+      "rack",
+      40001
+    ],
+    "3c342985344a22c24b8af1831d3099b0ad658e6a242ad0dd1e219078e1c509f9": [
+      "train",
+      "rack",
+      40002
+    ],
+    "47965fd14032d1f8f7250eb7cd40c60adb33d338e506cc30715e65e1825250bd": [
+      "train",
+      "rack",
+      40003
+    ],
+    "39505cf395d8e4f252d4340cff8efbccc61bfa83e3feb64fb62121544cfeae66": [
+      "train",
+      "rack",
+      40004
+    ],
+    "523e3b6e2656a1c41260931b9f2bf61a822dc5837a44a1565969eca5a5a66b7b": [
+      "train",
+      "rack",
+      40005
+    ],
+    "e1c1bf74a87eb26336564580da807563fc10aab1419b376a424c90f86bbdda5f": [
+      "train",
+      "rack",
+      40006
+    ],
+    "602465bf0afca4ac655508ca7d4e061d5bce75acd83ade5f773e79df5deaa43b": [
+      "train",
+      "rack",
+      40007
+    ],
+    "05046c91e5c03ca0cbed42af60bc46bc57e7dad35fd30de6edbe9b2d13027eea": [
+      "train",
+      "rack",
+      40008
+    ],
+    "665d47f3a6fcbf25ce2bcbd92c5a51bcff6edd6029fa5a70c918aefafa4711ed": [
+      "train",
+      "rack",
+      40009
+    ],
+    "d6116b23a6c9531a2f8dbf58ab2329b15acae1519f4b109e1c1921273f7d6527": [
+      "train",
+      "rack",
+      40010
+    ],
+    "17b2c46ebe1688131aa9b24439db48feb3159eebf2e623ccd1b2e5007fbc7808": [
+      "train",
+      "rack",
+      40011
+    ],
+    "cb8b09e3c33480eab1a04fc06d74be7ffcdd439306c6aee5450be3a5bf4ce91c": [
+      "train",
+      "rack",
+      40012
+    ],
+    "d40f07616ffe3a5698c9006fcfed77dc4f37f9d2413a0a1b3578a83b1da85834": [
+      "train",
+      "rack",
+      40013
+    ],
+    "de89b1ae5bc18c82a65153abc6717e3a3d2f478233a37fa4b4cd4dd0516f9a03": [
+      "train",
+      "rack",
+      40014
+    ],
+    "29f22755cc71db70af212a61ea84651a0f57d2631b3950829498433ee87bfb37": [
+      "train",
+      "rack",
+      40015
+    ],
+    "87ea29975dbb873a8da3d20306e9ec1027f1744226d4b278ec680fcf8bddb382": [
+      "train",
+      "rack",
+      40016
+    ],
+    "563bae5c1899faefe6f822585f0fac003a7e174a574ddae762c6c67d883e9319": [
+      "train",
+      "rack",
+      40017
+    ],
+    "c83733f6dfca4c643826922fe2c1881813b31fc0e315cfbe47af06321ab97ec7": [
+      "train",
+      "rack",
+      40018
+    ],
+    "dc55bb6e7591c6e10cdb1be024543721b741ad634eebbdc611d23b9a88ec6cbf": [
+      "train",
+      "rack",
+      40019
+    ],
+    "3e5d34c76539fafd18289aa197a3ed78c9104f796e036332808cddc029fbdbb5": [
+      "train",
+      "rack",
+      40020
+    ],
+    "a6f76c2195e74ea15d9cef009251878e288be0db56833f276d670fd9eaa7641f": [
+      "train",
+      "rack",
+      40021
+    ],
+    "f4bb8242b23e7934b4dc45fb9aa2c7c25c72133c38979f087b71a53a545a9b1c": [
+      "train",
+      "rack",
+      40022
+    ],
+    "1bfab3f84e0a03a2c364e3fc33f946f6b206a945471d902de009a9ea25df7e27": [
+      "train",
+      "rack",
+      40023
+    ],
+    "6375182fd2bffe49f3df131e4d0d1231e39ecc12326153911a5de80a69765984": [
+      "train",
+      "rack",
+      40024
+    ],
+    "7577e4c5e5d95d50da2ee246202b41c367546852bd3b1acd676751a84cc3767d": [
+      "train",
+      "rack",
+      40025
+    ],
+    "0b561dddaf02fbf7e3ad95b25c23c5964bd169f331fc1754bab4b56c025a266b": [
+      "train",
+      "rack",
+      40026
+    ],
+    "75fe956df5f3874f7d6fc8b76bd4d43d4c091c17efe928e7d0280f58114d2043": [
+      "train",
+      "rack",
+      40027
+    ],
+    "1e2b32be506deb0a5db812616ba3e4b025ce2076bbb4bd84fc56f43c6f8d25d5": [
+      "train",
+      "rack",
+      40028
+    ],
+    "13b0c9e411898d7b024fdd9fb6b53e29e0565e5bb867858e09ef11e5a9ef966d": [
+      "train",
+      "rack",
+      40029
+    ],
+    "cad83ca917c95b914586d2e4ef3408bde1d7bdfd8c9625f502935317614d15ce": [
+      "train",
+      "rack",
+      40030
+    ],
+    "8a5f30e2acfdf21d65dfa2e9bb3664b73b16c8bb4df88f7b24b25782b265926c": [
+      "train",
+      "rack",
+      40031
+    ],
+    "9d9bc1d6839649a50d4ad483e3ee13074d988597858bd9ab7cd72ef694838bfd": [
+      "train",
+      "rack",
+      40032
+    ],
+    "c81c61fa9a2abc041778d802a2c0897257f170cd961ab247dfb5734be5106459": [
+      "train",
+      "rack",
+      40033
+    ],
+    "5ccc7eb5f566e440ba454b169969c4d1b18d5b7db161fd30b38b3119caa68589": [
+      "train",
+      "rack",
+      40034
+    ],
+    "f1201237429aee81f67045fd1b5f5a03e820a1825e9b5ac84584e2974ee1d0d8": [
+      "train",
+      "rack",
+      40035
+    ],
+    "e5ef6aeff31e3ad4d953c273b8e8303040feadc1bd8fd745118f71cc11408bab": [
+      "train",
+      "rack",
+      40036
+    ],
+    "8efe38bab5a13a6f82d0d8282a6fbb711be93022d7bf82df5dbc15e10311586b": [
+      "train",
+      "rack",
+      40037
+    ],
+    "c87254a78e9fc92848d734c57342e6b4510f6a1f0df71bf359b27006e5c16e70": [
+      "train",
+      "rack",
+      40038
+    ],
+    "aa07cb40e04c6dd39831655e90f927f4eeabaa114419e745c911365e2226e185": [
+      "train",
+      "rack",
+      40039
+    ],
+    "ca645862697a6fd9ebe6885da559ec7a6267ce707c7ab39a25469fedacefe966": [
+      "train",
+      "rack",
+      40040
+    ],
+    "0c178e698a7938291e7a9d64c4f4be9454b1e0ff534c6157b0de6a16a4ad00b2": [
+      "train",
+      "rack",
+      40041
+    ],
+    "113aac5e77a0127a21f55bbba348d90671e4855de94581e6f96d861ee6873572": [
+      "train",
+      "rack",
+      40042
+    ],
+    "9574141d31dc176492d0650b3c9cfeaad54dcc6de31f95ec915fe08aff11c0e2": [
+      "train",
+      "rack",
+      40043
+    ],
+    "804a70c97c759bb43f02757db1a25d6f83df1aa592a352c3e2feb1e8e0652cb4": [
+      "train",
+      "rack",
+      40044
+    ],
+    "dd977bcb67cb95daacfbdff042ff9c79f7bf5da4b6d92e54fb1b42037e04b166": [
+      "train",
+      "rack",
+      40045
+    ],
+    "dcdaeee80c4ce5bc80e4880a5d755f71b1b3668006dfeec83bc8a8b84455f132": [
+      "train",
+      "rack",
+      40046
+    ],
+    "ac808faf50f7b7440cadcfc7b0ceab74c35e115c30295e8e2cb0d43b9c8d0b74": [
+      "train",
+      "rack",
+      40047
+    ],
+    "b05064dbf8bd575f49cf9511bc25f3c5d1b932e8fc6c6e87432c59a9f51364a3": [
+      "train",
+      "rack",
+      40048
+    ],
+    "ff8252923b024716520ba5c962600a9a2d82df85db617a9463562504e66787ba": [
+      "train",
+      "rack",
+      40049
+    ],
+    "d8dda011883b4d4aad62eceb749d5ef7e9ec17a7cdd3c1a3df524f100562f706": [
+      "train",
+      "rack",
+      40050
+    ],
+    "808e5555094f1574b49f5a38914cc512b4c462c2819e4b62ecc6655dfb80989c": [
+      "train",
+      "rack",
+      40051
+    ],
+    "e33f0cfc6fceba6f795ed96a185ec90e7a252dd8cfc9311b18bb68082b0f8df9": [
+      "train",
+      "rack",
+      40052
+    ],
+    "71edcf8577e346040a8fcefdf7a584056776bc20463a787903dd7810bf9dd60f": [
+      "train",
+      "rack",
+      40053
+    ],
+    "16b1003c62a97c250575745aa6f840aede85ade62055563c176d706aef8d06b9": [
+      "train",
+      "rack",
+      40054
+    ],
+    "5669c92068bbbfc1fb3522af95a9a4622aca379e21ad1a553ce18a283da8498f": [
+      "train",
+      "rack",
+      40055
+    ],
+    "0957705dc4493a4301fd1dc0be394a6f5dfeba622622da47b258713bb04b5a4d": [
+      "train",
+      "rack",
+      40056
+    ],
+    "f00ae0f14c205a06d5e0c017fd19aa2ba6e497dd30b6bc88dc9af2d185216aea": [
+      "train",
+      "rack",
+      40057
+    ],
+    "4daf9aa15fb346d59aa5348e4c28578538a90a12d0aa29fbaa5586a139f09f99": [
+      "train",
+      "rack",
+      40058
+    ],
+    "1242a87d5805358bf145b02a1d9050856e9cb37277cdb2170cd8bfa48a19953d": [
+      "train",
+      "rack",
+      40059
+    ],
+    "b68db7c137ca4246fc8fd42929990a396cff049ec19ce843f171015995985419": [
+      "train",
+      "rack",
+      40060
+    ],
+    "56ad6b6f0c619a859d975322100c978cc39bae6e4fe6b61e6638de23ed718b2d": [
+      "train",
+      "rack",
+      40061
+    ],
+    "240c48152fb2f1b6155e83287ac30681664e16a82c230a3b80576155f7578d39": [
+      "train",
+      "rack",
+      40062
+    ],
+    "c5a4ccccdecf92d70a089dff31ba4434a80751a7d90ba90957b7d6c027c4b70b": [
+      "train",
+      "rack",
+      40063
+    ],
+    "4544073a0571f895ed3e0f9eba36162c26cd8f67a9756d5d608b72b81ee029fb": [
+      "validation",
+      "baffle",
+      43100
+    ],
+    "2b6b4f3e016c033a5c791ff3c79779397b12ad7aed4c4406a90c909b9e168fdc": [
+      "validation",
+      "baffle",
+      43101
+    ],
+    "eae85d9d09dd22a3cb87428a53b5be0888db8442c365d12e026907dce4cecdaa": [
+      "validation",
+      "rack",
+      43000
+    ],
+    "6803ccff1d82ddfb6bcf06bdf598fe57c079df8a5b2c9e9e716a227f6cc3a624": [
+      "validation",
+      "rack",
+      43001
+    ],
+    "9de69a82d84aecf7a46c0c262a17bf5467b55b4e16a191dc642c612887c17053": [
+      "test",
+      "baffle",
+      44100
+    ],
+    "6409253240c03c5397df8343c53359b2dfbab2a9c52f460dc69598c4ccc857ce": [
+      "test",
+      "baffle",
+      44101
+    ],
+    "f5d09f10ee8d69eef47b3c55ce5d4b49c80a1c02ee515e59ca62c54b8a6aed85": [
+      "test",
+      "baffle",
+      44102
+    ],
+    "6c91984eef34ab050b1eda46729b8b0ed9713c0be73c497fc2db65275ec5f4bf": [
+      "test",
+      "baffle",
+      44103
+    ],
+    "848c1bd72efde08c7e76e1c36414dc1b729f19465d831824185027d434d5e0dc": [
+      "test",
+      "baffle",
+      44104
+    ],
+    "503f5be4014175dd116fee1400418da48b1624263b71a66531a6e6a2284bf2fd": [
+      "test",
+      "baffle",
+      44105
+    ],
+    "58628582ac42f7f6b9ced5a55a658aa848d44026911ad0283cdbab094348bc2d": [
+      "test",
+      "baffle",
+      44106
+    ],
+    "59e6bfefb6ffa0800ff5b5fa434468e9f662cbc93f988f43735accaca2c1e038": [
+      "test",
+      "baffle",
+      44107
+    ],
+    "02e3911dd89de2a107dedf8412225750dd9c010ad66fcea59d4126982973d2dc": [
+      "test",
+      "rack",
+      44000
+    ],
+    "80b129451d1826eda1397c59c80cf2d0d0028a15880457ffba77b934ee27af20": [
+      "test",
+      "rack",
+      44001
+    ],
+    "2ec226facb2b93478245ea5ab18c52b7fb68b478ec5001f83fbd524ab4bf37df": [
+      "test",
+      "rack",
+      44002
+    ],
+    "25065929daa31960770cb50217d5ea636d35b049cd850f69693d39731293a362": [
+      "test",
+      "rack",
+      44003
+    ],
+    "61beac98c264870ad3864442665691c55ec1d12c5127eed0fbde6a9a466641c8": [
+      "test",
+      "rack",
+      44004
+    ],
+    "30f0ea02400aeda46d80fc7657e7fede67b12c82e73d5bb893c2e66e428181d3": [
+      "test",
+      "rack",
+      44005
+    ],
+    "177f57a22ae94cab473844f54af54405d2ae279892a75275aa6cc2cc229c8202": [
+      "test",
+      "rack",
+      44006
+    ],
+    "b447a0a394bfb15cef369b3c02ca2a9905d7de6812a78aa74d24204208317d5d": [
+      "test",
+      "rack",
+      44007
+    ],
+    "4d21b7ebff6bd7bb11a2b0baa30cc94d600988a2512076041632da1e84e10ac5": [
+      "preflight",
+      "baffle",
+      39000
+    ]
+  }
+}

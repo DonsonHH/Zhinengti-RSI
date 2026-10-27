@@ -1,0 +1,112 @@
+{
+  "from_scratch_training_tasks": 12,
+  "paired_training_seeds_per_group": 3,
+  "common_planner_task": 1,
+  "method_condition_records_replayed": 2880,
+  "distinct_case_choices_and_estimates": 1693,
+  "parameters_each": 22594,
+  "team_training_microsteps": 1382400,
+  "gradient_minibatches": 43200,
+  "paired_initializations_and_index_field_profile_schedules": true,
+  "validation_only_selection": true,
+  "actual_weights_checked_separately": true,
+  "tasks": [
+    {
+      "variant": "rack_local",
+      "seed": 0,
+      "selected_episode": 900,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "rack_local",
+      "seed": 1,
+      "selected_episode": 600,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "rack_local",
+      "seed": 2,
+      "selected_episode": 900,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "rack_relation",
+      "seed": 0,
+      "selected_episode": 1100,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "rack_relation",
+      "seed": 1,
+      "selected_episode": 1100,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "rack_relation",
+      "seed": 2,
+      "selected_episode": 800,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_local",
+      "seed": 0,
+      "selected_episode": 1200,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_local",
+      "seed": 1,
+      "selected_episode": 1100,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_local",
+      "seed": 2,
+      "selected_episode": 1000,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_relation",
+      "seed": 0,
+      "selected_episode": 1200,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_relation",
+      "seed": 1,
+      "selected_episode": 1200,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    },
+    {
+      "variant": "mixed_relation",
+      "seed": 2,
+      "selected_episode": 1000,
+      "validation_selection": true,
+      "paired_initial_and_schedule": true,
+      "records": 192
+    }
+  ],
+  "scope": "Complete physical/public reward/metric and planner replay; unmeasured VAE predictions accepted as recorded; actual-policy first-case replay checked separately"
+}

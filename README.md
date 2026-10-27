@@ -10,6 +10,8 @@
 
 最新M7已完成74项测试及27个冻结权重部署／规划任务：新压力条件下，完整学习组逾期4.875%、成对巡回4.324%。学习在相近机柜布局上更好，在交错通道布局上落后；VAE与排重的独立任务收益仍未证实。后续优先做新布局训练和表示对照。
 
+M8现已完成82项测试和12项等预算从头训练。混合训练中，关系信息使三个配对种子的逾期均下降，均值由4.357%降至3.719%；但baffle仍落后成对巡回，且出现92步未重访。下一步优先研究长期漏检与重访约束，结果范围是同布局族的新巡检实例，未证明任意新墙体拓扑泛化。
+
 ## 研究说明
 
 - [方向校准](research/2026-10-26-paper-rsi/方向校准与实施记录.md)
@@ -38,6 +40,12 @@
 - [M7代码与方法复核](research/2026-10-27-m7-stress/代码与方法复核.md)
 - [M7运行与结果：布局迁移、规划和部署交叉](research/2026-10-27-m7-stress/运行与结果.md)
 - [M7阶段验收](research/2026-10-27-m7-stress/阶段验收.md)
+- [M7复核与M8安排](research/2026-10-27-m8-representation/M7复核与M8规划.md)
+- [M8冻结设计：布局训练与演员关系信息](research/2026-10-27-m8-representation/实验设计.md)
+- [M8代码与方法复核](research/2026-10-27-m8-representation/代码与方法复核.md)
+- [M8文献依据与使用边界](research/2026-10-27-m8-representation/文献依据.md)
+- [M8运行与结果：关系输入、布局训练和长期漏检](research/2026-10-27-m8-representation/运行与结果.md)
+- [M8阶段验收](research/2026-10-27-m8-representation/阶段验收.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -199,3 +207,34 @@ sbatch --array=0-26%6 --output="$PWD/eval-%A_%a.out" --error="$PWD/eval-%A_%a.er
 部署交叉是冻结权重的敏感性检验，不能当成重新训练消融；全队匹配仅对一次加性代理目标穷举最优，不是最优持续巡检。启动逾期下界与完整任务可行性分别报告。
 
 M7全部2,592条记录已通过物理／规划重放，本地复算全部分层均值、样本标准差和工具／掩码交叉结果。四张结果图、原始压缩轨迹和Slurm终态见M7报告。没有增加新的语言模型或RSI调用。
+
+## M8：从头训练与演员关系输入
+
+M8以2种训练布局×2种演员输入，区分M7的分布迁移与表示限制。`relations.py`从公开地图与任务承诺构造点间及团队关系；`relation_model.py`使用共享MLP和集合均值。四组同为22,594参数、相同完整公开状态价值网络，local演员将两项关系上下文置零；不使用注意力名称。
+
+每组3种子、1,200回合，VAE、PPO、公开奖励、任务承诺与人工低层固定。两种演员都先通过完整测试、CUDA更新和固定baffle场景种子0的可学性门槛，再提交12任务及独立规划评价。新划分与M7最终布局分离，不做检查点预训练迁移。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m8_representation.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt smoke
+sbatch --array=0-1%2 --output="$PWD/preflight-%A_%a.out" --error="$PWD/preflight-%A_%a.err" cluster/m8_representation.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt preflight
+# 确认两项可学性门槛和新读权重重放均通过后：
+sbatch --array=0-11%6 --output="$PWD/train-%A_%a.out" --error="$PWD/train-%A_%a.err" cluster/m8_representation.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt
+sbatch --output="$PWD/planners-%j.out" --error="$PWD/planners-%j.err" cluster/m8_representation.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt planners
+```
+
+共同验证包含baffle，rack-only组也按其选检查点，因此不称完全未见baffle评价信息的零样本研究。主因子比较以M8相同最终条件为依据；M8与M6的网络仍不同，不跨阶段作单因素归因。
+
+M8全部2,880条记录、12份实际选中权重和CPU首场景选择已通过独立检查，本地复算全部分层／配对因子／交互统计。完整轨迹保存在gzip中，模型权重留在集群及本地私有目录。复核已取回的证据无需重新训练：
+
+```bash
+python scripts/audit_m8.py --results research/2026-10-27-m8-representation/evidence --output /new/path/m8-audit.json
+python scripts/report_m8.py --results research/2026-10-27-m8-representation/evidence --output /new/path/m8-report
+python scripts/summarize_m8_diagnostics.py --results research/2026-10-27-m8-representation/evidence --output /new/path/m8-diagnostics.json
+python scripts/diagnose_m8_tail.py --results research/2026-10-27-m8-representation/evidence --output /new/path/m8-tail.json
+```
+
+前两项需要项目NumPy及绘图环境，诊断汇总仅用Python标准库；尾部诊断另需NumPy，不需要PyTorch。`scripts/check_m8_checkpoints.py`须读取实际私有权重，并在PyTorch环境中执行。

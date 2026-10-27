@@ -1,0 +1,23 @@
+{
+  "public_geometry_only": true,
+  "joint_navigation_and_target_fingerprints_disjoint": true,
+  "scope": "Disjoint joint patrol instances do not imply disjoint wall navigation masks; baffle generator has a small family of wall patterns; no arbitrary-topology generalization claim",
+  "families": {
+    "rack": {
+      "union_training_joint_instances": 64,
+      "training_distinct_navigation_masks": 64,
+      "validation_instances": 2,
+      "test_instances": 8,
+      "test_distinct_navigation_masks": 8,
+      "test_instances_sharing_navigation_with_any_M8_training_map": 0
+    },
+    "baffle": {
+      "union_training_joint_instances": 32,
+      "training_distinct_navigation_masks": 9,
+      "validation_instances": 2,
+      "test_instances": 8,
+      "test_distinct_navigation_masks": 5,
+      "test_instances_sharing_navigation_with_any_M8_training_map": 8
+    }
+  }
+}
