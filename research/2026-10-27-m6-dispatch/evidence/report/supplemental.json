@@ -1,0 +1,1755 @@
+{
+  "descriptive_only": true,
+  "independent_training_seeds_per_variant": 3,
+  "held_out_conditions_per_seed": 48,
+  "groups": {
+    "joint_vae": {
+      "learned": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0013020833333333333,
+            0.00016276041666666666,
+            0.0033094618055555555
+          ],
+          "mean": 0.001591435185185185,
+          "sample_sd_across_training_seeds": 0.0015931810249737433
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.12370758801989723,
+            0.08848295228866239,
+            0.09939501611451204
+          ],
+          "mean": 0.10386185214102389,
+          "sample_sd_across_training_seeds": 0.018032143762330498
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.03673491342162581,
+            0.023564245706586884,
+            0.03074088886000768
+          ],
+          "mean": 0.030346682662740126,
+          "sample_sd_across_training_seeds": 0.006594177045656667
+        },
+        "peak_age": {
+          "per_training_seed": [
+            14.083333333333334,
+            9.958333333333334,
+            11.875
+          ],
+          "mean": 11.972222222222223,
+          "sample_sd_across_training_seeds": 2.0642178592315226
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            489.2533920888465,
+            494.8021279348027,
+            493.92192411475986
+          ],
+          "mean": 492.65914804613635,
+          "sample_sd_across_training_seeds": 2.9821250680791254
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.004231874305664481,
+            0.004121481518648946,
+            0.004117626513436711
+          ],
+          "mean": 0.004156994112583379,
+          "sample_sd_across_training_seeds": 6.487678901728949e-05
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            164.79166666666666,
+            187.66666666666666,
+            185.375
+          ],
+          "mean": 179.27777777777777,
+          "sample_sd_across_training_seeds": 12.59755910366649
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 31,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.015791816322904297,
+            0.015321675575933114,
+            0.015315960924780825
+          ],
+          "mean": 0.015476484274539412,
+          "sample_sd_across_training_seeds": 0.00027310051236485055
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "slack": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0769314236111111,
+            0.0769314236111111,
+            0.0769314236111111
+          ],
+          "mean": 0.0769314236111111,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.422796594596649,
+            0.422796594596649,
+            0.422796594596649
+          ],
+          "mean": 0.422796594596649,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.22309909244480272,
+            0.22309909244480272,
+            0.22309909244480272
+          ],
+          "mean": 0.22309909244480272,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            31.916666666666668,
+            31.916666666666668,
+            31.916666666666668
+          ],
+          "mean": 31.916666666666668,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            477.37064051826866,
+            477.37064051826866,
+            477.37064051826866
+          ],
+          "mean": 477.37064051826866,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.009559290572828635,
+            0.009559290572828635,
+            0.009559290572828635
+          ],
+          "mean": 0.009559290572828635,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            41.333333333333336,
+            41.333333333333336,
+            41.333333333333336
+          ],
+          "mean": 41.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 36,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.0353075292292336,
+            0.0353075292292336,
+            0.0353075292292336
+          ],
+          "mean": 0.0353075292292336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "risk_age_distance": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.03518337673611111,
+            0.03518337673611111,
+            0.03518337673611111
+          ],
+          "mean": 0.03518337673611111,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.1903839010067006,
+            0.1903839010067006,
+            0.1903839010067006
+          ],
+          "mean": 0.1903839010067006,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.10026164151466353,
+            0.10026164151466353,
+            0.10026164151466353
+          ],
+          "mean": 0.10026164151466353,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            25.375,
+            25.375,
+            25.375
+          ],
+          "mean": 25.375,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            485.0163325237386,
+            485.0163325237386,
+            485.0163325237386
+          ],
+          "mean": 485.0163325237386,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.004173206842139621,
+            0.004173206842139621,
+            0.004173206842139621
+          ],
+          "mean": 0.004173206842139621,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            112.5625,
+            112.5625,
+            112.5625
+          ],
+          "mean": 112.5625,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 61,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.015481924658401012,
+            0.015481924658401012,
+            0.015481924658401012
+          ],
+          "mean": 0.015481924658401012,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            -0.01047092013888889,
+            -0.01047092013888889,
+            -0.01047092013888889
+          ],
+          "mean": -0.01047092013888889,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "random_targets": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.9895833333333334,
+            0.9895833333333334,
+            0.9895833333333334
+          ],
+          "mean": 0.9895833333333334,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.15684678819444445,
+            0.15684678819444445,
+            0.15684678819444445
+          ],
+          "mean": 0.15684678819444445,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.4260937958962232,
+            0.4260937958962232,
+            0.4260937958962232
+          ],
+          "mean": 0.4260937958962232,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.3154774494498809,
+            0.3154774494498809,
+            0.3154774494498809
+          ],
+          "mean": 0.3154774494498809,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            46.583333333333336,
+            46.583333333333336,
+            46.583333333333336
+          ],
+          "mean": 46.583333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            470.9503303014858,
+            470.9503303014858,
+            470.9503303014858
+          ],
+          "mean": 470.9503303014858,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.00977101819679383,
+            0.00977101819679383,
+            0.00977101819679383
+          ],
+          "mean": 0.00977101819679383,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            46.333333333333336,
+            46.333333333333336,
+            46.333333333333336
+          ],
+          "mean": 46.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.03373271786917079,
+            0.03373271786917079,
+            0.03373271786917079
+          ],
+          "mean": 0.03373271786917079,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "untrained_network": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.8020833333333334,
+            0.7057291666666666,
+            1.0
+          ],
+          "mean": 0.8359375,
+          "sample_sd_across_training_seeds": 0.15002802834202164
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.2853732638888889,
+            0.2967936197916667,
+            0.2212456597222222
+          ],
+          "mean": 0.26780418113425924,
+          "sample_sd_across_training_seeds": 0.040723188348812556
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.5294508214089243,
+            0.4018478868011799,
+            0.5294702731739057
+          ],
+          "mean": 0.48692299379466997,
+          "sample_sd_across_training_seeds": 0.07367720452798225
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.520978873371388,
+            0.5240029772337746,
+            0.4205354695019735
+          ],
+          "mean": 0.4885057733690454,
+          "sample_sd_across_training_seeds": 0.05888342684388529
+        },
+        "peak_age": {
+          "per_training_seed": [
+            95.79166666666667,
+            96,
+            65.8125
+          ],
+          "mean": 85.86805555555556,
+          "sample_sd_across_training_seeds": 17.368932960200116
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            480.0285108768292,
+            485.7843535039719,
+            476.36962440920036
+          ],
+          "mean": 480.7274962633338,
+          "sample_sd_across_training_seeds": 4.746126463748583
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.013552141920313723,
+            0.01767167945250334,
+            0.01106932848180474
+          ],
+          "mean": 0.014097716618207268,
+          "sample_sd_across_training_seeds": 0.003334816096624731
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            90.47916666666667,
+            83.25,
+            51.229166666666664
+          ],
+          "mean": 74.98611111111111,
+          "sample_sd_across_training_seeds": 20.88922017874114
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.024256730301496634,
+            0.03729800212350812,
+            0.03628072951069485
+          ],
+          "mean": 0.0326118206452332,
+          "sample_sd_across_training_seeds": 0.007253575799644959
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            -0.0015190972222222248,
+            0.005154079861111115,
+            0.005642361111111107
+          ],
+          "mean": 0.0030924479166666657,
+          "sample_sd_across_training_seeds": 0.004001170587563433
+        }
+      },
+      "costs": [
+        {
+          "seed": 0,
+          "selected_episode": 300,
+          "training_plus_validation_seconds": 1366.3613250283524,
+          "post_selection_evaluation_seconds": 164.60793573129922
+        },
+        {
+          "seed": 1,
+          "selected_episode": 900,
+          "training_plus_validation_seconds": 1357.4795412905514,
+          "post_selection_evaluation_seconds": 166.90269779693335
+        },
+        {
+          "seed": 2,
+          "selected_episode": 700,
+          "training_plus_validation_seconds": 1314.0536407632753,
+          "post_selection_evaluation_seconds": 160.75009072199464
+        }
+      ],
+      "mean_training_plus_validation_seconds": 1345.9648356940597,
+      "mean_post_selection_evaluation_seconds": 164.08690808340907
+    },
+    "no_vae": {
+      "learned": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0030110677083333335,
+            0.0016818576388888888,
+            0.0008138020833333334
+          ],
+          "mean": 0.0018355758101851853,
+          "sample_sd_across_training_seeds": 0.001106668881753557
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.132671684048546,
+            0.09778727038226659,
+            0.0890761286395395
+          ],
+          "mean": 0.10651169435678404,
+          "sample_sd_across_training_seeds": 0.023070106049177374
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.042320950998678365,
+            0.02815585832105609,
+            0.02443941342461147
+          ],
+          "mean": 0.03163874091478198,
+          "sample_sd_across_training_seeds": 0.009435846537245643
+        },
+        "peak_age": {
+          "per_training_seed": [
+            15.833333333333334,
+            11.666666666666666,
+            10.416666666666666
+          ],
+          "mean": 12.63888888888889,
+          "sample_sd_across_training_seeds": 2.836191368980853
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            489.59857005749075,
+            494.09451309908195,
+            494.49146776302285
+          ],
+          "mean": 492.72818363986516,
+          "sample_sd_across_training_seeds": 2.7175824058421902
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.010040149899069206,
+            0.00903675168067745,
+            0.009002365567842693
+          ],
+          "mean": 0.009359755715863116,
+          "sample_sd_across_training_seeds": 0.0005894894270421506
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            160.33333333333334,
+            187.29166666666666,
+            187.91666666666666
+          ],
+          "mean": 178.51388888888889,
+          "sample_sd_across_training_seeds": 15.747923878450807
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 31,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.03905538028188479,
+            0.03499087598455238,
+            0.034862868972444026
+          ],
+          "mean": 0.03630304174629373,
+          "sample_sd_across_training_seeds": 0.002384454237275663
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.00016276041666666666,
+            0.0,
+            0.0
+          ],
+          "mean": 5.425347222222222e-05,
+          "sample_sd_across_training_seeds": 9.396977037591564e-05
+        }
+      },
+      "slack": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0769314236111111,
+            0.0769314236111111,
+            0.0769314236111111
+          ],
+          "mean": 0.0769314236111111,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.422796594596649,
+            0.422796594596649,
+            0.422796594596649
+          ],
+          "mean": 0.422796594596649,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.22309909244480272,
+            0.22309909244480272,
+            0.22309909244480272
+          ],
+          "mean": 0.22309909244480272,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            31.916666666666668,
+            31.916666666666668,
+            31.916666666666668
+          ],
+          "mean": 31.916666666666668,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            477.37064051826866,
+            477.37064051826866,
+            477.37064051826866
+          ],
+          "mean": 477.37064051826866,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.022732304771210465,
+            0.022732304771210465,
+            0.022732304771210465
+          ],
+          "mean": 0.022732304771210465,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            41.333333333333336,
+            41.333333333333336,
+            41.333333333333336
+          ],
+          "mean": 41.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 36,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.08435471199610826,
+            0.08435471199610826,
+            0.08435471199610826
+          ],
+          "mean": 0.08435471199610826,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "risk_age_distance": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.033013237847222224,
+            0.033013237847222224,
+            0.033013237847222224
+          ],
+          "mean": 0.033013237847222224,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.19133764301538272,
+            0.19133764301538272,
+            0.19133764301538272
+          ],
+          "mean": 0.19133764301538272,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.09811188766734967,
+            0.09811188766734967,
+            0.09811188766734967
+          ],
+          "mean": 0.09811188766734967,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            23.75,
+            23.75,
+            23.75
+          ],
+          "mean": 23.75,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            484.9127791331453,
+            484.9127791331453,
+            484.9127791331453
+          ],
+          "mean": 484.9127791331453,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.009275901672842066,
+            0.009275901672842066,
+            0.009275901672842066
+          ],
+          "mean": 0.009275901672842066,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            110.95833333333333,
+            110.95833333333333,
+            110.95833333333333
+          ],
+          "mean": 110.95833333333333,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 61,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.03590034169869543,
+            0.03590034169869543,
+            0.03590034169869543
+          ],
+          "mean": 0.03590034169869543,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            -0.004177517361111111,
+            -0.004177517361111111,
+            -0.004177517361111111
+          ],
+          "mean": -0.004177517361111111,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "random_targets": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.9895833333333334,
+            0.9895833333333334,
+            0.9895833333333334
+          ],
+          "mean": 0.9895833333333334,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.15684678819444445,
+            0.15684678819444445,
+            0.15684678819444445
+          ],
+          "mean": 0.15684678819444445,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.4260937958962232,
+            0.4260937958962232,
+            0.4260937958962232
+          ],
+          "mean": 0.4260937958962232,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.3154774494498809,
+            0.3154774494498809,
+            0.3154774494498809
+          ],
+          "mean": 0.3154774494498809,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            46.583333333333336,
+            46.583333333333336,
+            46.583333333333336
+          ],
+          "mean": 46.583333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            470.9503303014858,
+            470.9503303014858,
+            470.9503303014858
+          ],
+          "mean": 470.9503303014858,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.02009404996082114,
+            0.02009404996082114,
+            0.02009404996082114
+          ],
+          "mean": 0.02009404996082114,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            46.333333333333336,
+            46.333333333333336,
+            46.333333333333336
+          ],
+          "mean": 46.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.0729480111705622,
+            0.0729480111705622,
+            0.0729480111705622
+          ],
+          "mean": 0.0729480111705622,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "untrained_network": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.7630208333333334,
+            0.7395833333333334,
+            0.9895833333333334
+          ],
+          "mean": 0.8307291666666667,
+          "sample_sd_across_training_seeds": 0.1380699598105371
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.290771484375,
+            0.2903374565972222,
+            0.224609375
+          ],
+          "mean": 0.26857277199074076,
+          "sample_sd_across_training_seeds": 0.03807403710209983
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.5313390864288926,
+            0.41419065444562064,
+            0.5192409851491296
+          ],
+          "mean": 0.48825690867454763,
+          "sample_sd_across_training_seeds": 0.06442785519689356
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.5304715392114303,
+            0.5137524247341423,
+            0.42612448131832126
+          ],
+          "mean": 0.49011614842129797,
+          "sample_sd_across_training_seeds": 0.05604535922973291
+        },
+        "peak_age": {
+          "per_training_seed": [
+            95.3125,
+            96,
+            70.29166666666667
+          ],
+          "mean": 87.20138888888889,
+          "sample_sd_across_training_seeds": 14.648282946715527
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            477.9660725141799,
+            486.06049587888725,
+            476.5335839443064
+          ],
+          "mean": 480.1867174457912,
+          "sample_sd_across_training_seeds": 5.137018657405575
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.03622277189753239,
+            0.050035816289891955,
+            0.02999190713430582
+          ],
+          "mean": 0.03875016510724339,
+          "sample_sd_across_training_seeds": 0.010258185067872258
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            87.5625,
+            84.02083333333333,
+            52
+          ],
+          "mean": 74.52777777777777,
+          "sample_sd_across_training_seeds": 19.589829743980626
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.05870360019163298,
+            0.09084141744016153,
+            0.08357996219163194
+          ],
+          "mean": 0.07770832660780881,
+          "sample_sd_across_training_seeds": 0.016854284401803244
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0010308159722222203,
+            0.0003797743055555571,
+            0.008355034722222225
+          ],
+          "mean": 0.0032552083333333343,
+          "sample_sd_across_training_seeds": 0.0044285591009423884
+        }
+      },
+      "costs": [
+        {
+          "seed": 0,
+          "selected_episode": 300,
+          "training_plus_validation_seconds": 961.4383787699044,
+          "post_selection_evaluation_seconds": 89.75796230509877
+        },
+        {
+          "seed": 1,
+          "selected_episode": 300,
+          "training_plus_validation_seconds": 945.0717775076628,
+          "post_selection_evaluation_seconds": 87.11676402017474
+        },
+        {
+          "seed": 2,
+          "selected_episode": 900,
+          "training_plus_validation_seconds": 941.3785821748897,
+          "post_selection_evaluation_seconds": 86.96389576978981
+        }
+      ],
+      "mean_training_plus_validation_seconds": 949.296246150819,
+      "mean_post_selection_evaluation_seconds": 87.94620736502111
+    },
+    "independent_targets": {
+      "learned": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.09022617258839698,
+            0.08863886337025582,
+            0.08687074930154874
+          ],
+          "mean": 0.08857859508673385,
+          "sample_sd_across_training_seeds": 0.0016785233266117777
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.02402647666609415,
+            0.02349363579284087,
+            0.022890396440669536
+          ],
+          "mean": 0.023470169633201518,
+          "sample_sd_across_training_seeds": 0.0005684035231561951
+        },
+        "peak_age": {
+          "per_training_seed": [
+            10.166666666666666,
+            10.0625,
+            10.416666666666666
+          ],
+          "mean": 10.215277777777777,
+          "sample_sd_across_training_seeds": 0.18201864475112692
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            495.11278810658246,
+            494.8884224269637,
+            495.04375251285364
+          ],
+          "mean": 495.01498768213327,
+          "sample_sd_across_training_seeds": 0.11491540872518172
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.004176911507497512,
+            0.004185681200237607,
+            0.004132341059158446
+          ],
+          "mean": 0.004164977922297855,
+          "sample_sd_across_training_seeds": 2.86024562647041e-05
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            186.79166666666666,
+            188.25,
+            189.54166666666666
+          ],
+          "mean": 188.19444444444443,
+          "sample_sd_across_training_seeds": 1.3758414933468228
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.03676687092190478,
+            0.006023470019465342,
+            0.007947849892179896
+          ],
+          "mean": 0.016912730277850008,
+          "sample_sd_across_training_seeds": 0.017221091283918626
+        },
+        "worst_case_peak_age_steps": 20,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.015537312181259545,
+            0.015555112135820713,
+            0.015369127106396263
+          ],
+          "mean": 0.015487183807825508,
+          "sample_sd_across_training_seeds": 0.00010262674193337802
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "slack": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.0769314236111111,
+            0.0769314236111111,
+            0.0769314236111111
+          ],
+          "mean": 0.0769314236111111,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.422796594596649,
+            0.422796594596649,
+            0.422796594596649
+          ],
+          "mean": 0.422796594596649,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.22309909244480272,
+            0.22309909244480272,
+            0.22309909244480272
+          ],
+          "mean": 0.22309909244480272,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            31.916666666666668,
+            31.916666666666668,
+            31.916666666666668
+          ],
+          "mean": 31.916666666666668,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            477.37064051826866,
+            477.37064051826866,
+            477.37064051826866
+          ],
+          "mean": 477.37064051826866,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.009559290572828635,
+            0.009559290572828635,
+            0.009559290572828635
+          ],
+          "mean": 0.009559290572828635,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            41.333333333333336,
+            41.333333333333336,
+            41.333333333333336
+          ],
+          "mean": 41.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 36,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.0353075292292336,
+            0.0353075292292336,
+            0.0353075292292336
+          ],
+          "mean": 0.0353075292292336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "risk_age_distance": {
+        "target_coverage": {
+          "per_training_seed": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.03518337673611111,
+            0.03518337673611111,
+            0.03518337673611111
+          ],
+          "mean": 0.03518337673611111,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.1903839010067006,
+            0.1903839010067006,
+            0.1903839010067006
+          ],
+          "mean": 0.1903839010067006,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.10026164151466353,
+            0.10026164151466353,
+            0.10026164151466353
+          ],
+          "mean": 0.10026164151466353,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            25.375,
+            25.375,
+            25.375
+          ],
+          "mean": 25.375,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            485.0163325237386,
+            485.0163325237386,
+            485.0163325237386
+          ],
+          "mean": 485.0163325237386,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.004173206842139621,
+            0.004173206842139621,
+            0.004173206842139621
+          ],
+          "mean": 0.004173206842139621,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            112.5625,
+            112.5625,
+            112.5625
+          ],
+          "mean": 112.5625,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 61,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.015481924658401012,
+            0.015481924658401012,
+            0.015481924658401012
+          ],
+          "mean": 0.015481924658401012,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            -0.01047092013888889,
+            -0.01047092013888889,
+            -0.01047092013888889
+          ],
+          "mean": -0.01047092013888889,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "random_targets": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.9895833333333334,
+            0.9895833333333334,
+            0.9895833333333334
+          ],
+          "mean": 0.9895833333333334,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.15684678819444445,
+            0.15684678819444445,
+            0.15684678819444445
+          ],
+          "mean": 0.15684678819444445,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.4260937958962232,
+            0.4260937958962232,
+            0.4260937958962232
+          ],
+          "mean": 0.4260937958962232,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.3154774494498809,
+            0.3154774494498809,
+            0.3154774494498809
+          ],
+          "mean": 0.3154774494498809,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "peak_age": {
+          "per_training_seed": [
+            46.583333333333336,
+            46.583333333333336,
+            46.583333333333336
+          ],
+          "mean": 46.583333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            470.9503303014858,
+            470.9503303014858,
+            470.9503303014858
+          ],
+          "mean": 470.9503303014858,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.00977101819679383,
+            0.00977101819679383,
+            0.00977101819679383
+          ],
+          "mean": 0.00977101819679383,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            46.333333333333336,
+            46.333333333333336,
+            46.333333333333336
+          ],
+          "mean": 46.333333333333336,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.03373271786917079,
+            0.03373271786917079,
+            0.03373271786917079
+          ],
+          "mean": 0.03373271786917079,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_sd_across_training_seeds": 0.0
+        }
+      },
+      "untrained_network": {
+        "target_coverage": {
+          "per_training_seed": [
+            0.7213541666666666,
+            0.6927083333333334,
+            0.9895833333333334
+          ],
+          "mean": 0.8012152777777778,
+          "sample_sd_across_training_seeds": 0.16375908892997643
+        },
+        "deadline_violation": {
+          "per_training_seed": [
+            0.3462727864583333,
+            0.3578016493055556,
+            0.2657606336805556
+          ],
+          "mean": 0.3232783564814815,
+          "sample_sd_across_training_seeds": 0.05014424191061851
+        },
+        "weighted_idleness": {
+          "per_training_seed": [
+            0.5613266766756877,
+            0.4276948452768718,
+            0.5651746999016419
+          ],
+          "mean": 0.5180654072847338,
+          "sample_sd_across_training_seeds": 0.07828684869695227
+        },
+        "public_cost": {
+          "per_training_seed": [
+            0.6028561247288491,
+            0.6062396488970585,
+            0.4847186489492338
+          ],
+          "mean": 0.5646048075250472,
+          "sample_sd_across_training_seeds": 0.06920412421199484
+        },
+        "peak_age": {
+          "per_training_seed": [
+            95.8125,
+            96,
+            70.45833333333333
+          ],
+          "mean": 87.42361111111111,
+          "sample_sd_across_training_seeds": 14.692660637895726
+        },
+        "movement_distance": {
+          "per_training_seed": [
+            477.54828451690565,
+            478.31421164165187,
+            475.22190766345824
+          ],
+          "mean": 477.0281346073386,
+          "sample_sd_across_training_seeds": 1.6104356304133995
+        },
+        "estimator_calls": {
+          "per_training_seed": [
+            96,
+            96,
+            96
+          ],
+          "mean": 96,
+          "sample_sd_across_training_seeds": 0.0
+        },
+        "target_prediction_mse": {
+          "per_training_seed": [
+            0.02072170052795741,
+            0.02057244071623485,
+            0.012373478635025434
+          ],
+          "mean": 0.017889206626405897,
+          "sample_sd_across_training_seeds": 0.004777343516958179
+        },
+        "target_assignments": {
+          "per_training_seed": [
+            145.70833333333334,
+            133.52083333333334,
+            62.541666666666664
+          ],
+          "mean": 113.92361111111111,
+          "sample_sd_across_training_seeds": 44.91338275204265
+        },
+        "duplicate_assignment_fraction": {
+          "per_training_seed": [
+            0.24611153240292485,
+            0.25727932295918154,
+            0.18362372288872558
+          ],
+          "mean": 0.22900485941694398,
+          "sample_sd_across_training_seeds": 0.03969591352925013
+        },
+        "worst_case_peak_age_steps": 96,
+        "first24_prediction_mse": {
+          "per_training_seed": [
+            0.03219816668263636,
+            0.032556830850403964,
+            0.035225512368722574
+          ],
+          "mean": 0.03332683663392096,
+          "sample_sd_across_training_seeds": 0.0016540517391404142
+        },
+        "paired_noise_violation_difference": {
+          "per_training_seed": [
+            0.0026584201388888916,
+            -0.008029513888888886,
+            0.002549913194444444
+          ],
+          "mean": -0.000940393518518517,
+          "sample_sd_across_training_seeds": 0.0061395980453485925
+        }
+      },
+      "costs": [
+        {
+          "seed": 0,
+          "selected_episode": 400,
+          "training_plus_validation_seconds": 1242.4457266367972,
+          "post_selection_evaluation_seconds": 155.5527383070439
+        },
+        {
+          "seed": 1,
+          "selected_episode": 500,
+          "training_plus_validation_seconds": 1395.1025706436485,
+          "post_selection_evaluation_seconds": 158.918391703628
+        },
+        {
+          "seed": 2,
+          "selected_episode": 500,
+          "training_plus_validation_seconds": 1251.6461228076369,
+          "post_selection_evaluation_seconds": 155.87275801971555
+        }
+      ],
+      "mean_training_plus_validation_seconds": 1296.3981400293608,
+      "mean_post_selection_evaluation_seconds": 156.78129601012915
+    }
+  },
+  "paired_joint_vae_minus_no_vae_violation": {
+    "per_training_seed": [
+      -0.0017089843750000002,
+      -0.001519097222222222,
+      0.002495659722222222
+    ],
+    "mean": -0.00024414062500000005,
+    "sample_sd_across_training_seeds": 0.002374635496171311
+  },
+  "vae_better_training_seeds": 2,
+  "vae_worse_training_seeds": 1
+}

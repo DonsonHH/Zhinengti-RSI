@@ -1,0 +1,16 @@
+sacct: error: slurm_persist_conn_open_without_init: failed to open persistent connection to host:localhost:6819: Connection refused
+sacct: error: Sending PersistInit msg: Connection refused
+sacct: error: Problem talking to the database: Connection refused
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261027-m6/package-code/scripts/package_m6_evidence.py", line 81, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261027-m6/package-code/scripts/package_m6_evidence.py", line 29, in main
+    ledger=subprocess.check_output(['sacct','-j',ids,'--format=JobID,JobName%26,State,ExitCode,Elapsed','-P'],text=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['sacct', '-j', '129810,129811,129812,129813,129814,129822,129824', '--format=JobID,JobName%26,State,ExitCode,Elapsed', '-P']' returned non-zero exit status 1.

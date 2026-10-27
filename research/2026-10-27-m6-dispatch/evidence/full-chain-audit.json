@@ -1,0 +1,93 @@
+{
+  "from_scratch_training_tasks": 9,
+  "paired_random_seeds_per_variant": 3,
+  "same_seed_initializations_match": true,
+  "test_method_case_records": 2160,
+  "distinct_case_and_target_choice_sequences_replayed": 786,
+  "team_training_steps": 1036800,
+  "gradient_updates": 32400,
+  "audits": [
+    {
+      "variant": "joint_vae",
+      "seed": 0,
+      "selected_episode": 300,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "joint_vae",
+      "seed": 1,
+      "selected_episode": 900,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "joint_vae",
+      "seed": 2,
+      "selected_episode": 700,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "no_vae",
+      "seed": 0,
+      "selected_episode": 300,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "no_vae",
+      "seed": 1,
+      "selected_episode": 300,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "no_vae",
+      "seed": 2,
+      "selected_episode": 900,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "independent_targets",
+      "seed": 0,
+      "selected_episode": 400,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "independent_targets",
+      "seed": 1,
+      "selected_episode": 500,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    },
+    {
+      "variant": "independent_targets",
+      "seed": 2,
+      "selected_episode": 500,
+      "validation_selection_verified": true,
+      "joint_behavior_likelihood_verified_during_all_updates": true,
+      "choices_commitment_release_and_common_navigation_replayed": true,
+      "fresh_selected_checkpoint_trace_matches": true
+    }
+  ],
+  "common_heuristics_independent_of_policy_weights": true
+}

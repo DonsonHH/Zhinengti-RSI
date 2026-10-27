@@ -2,11 +2,11 @@
 
 超算机房持续巡检：论文基线与智能体RSI。
 
-当前研究以ESWA 2025论文为基础，保留VAE重要度估计、共享多智能体DDQL和持续重访，在超算机房场景外接智能体递归自改进。
+当前研究以ESWA 2025论文为起点，研究VAE重要度估计、多执行者持续重访与智能体自改进。M1–M5使用共享DDQN，M6改为学习高层检查点分配，低层导航由共同控制器完成。
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
 
-当前代码是缩小的原理参考实现，已完成外层工作流实验及M5内层重新训练归因。时限感知DDQN在当前预算下仍落后于纯规划，VAE等模块的任务收益不稳定；现有结果不支持继续堆叠RSI作为主要贡献。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
+当前代码是缩小的原理参考实现。M6已完成3组×3种子的高层分配实验和66项测试：完整组新布局逾期率0.159%，风险年龄/距离启发式3.52%；无VAE组0.184%，允许本轮重复目标的学习对照为0%。结果支持继续研究高层学习，尚不支持VAE稳定增益、显式排重优势或RSI有效的结论。M6同时改变动作、表示和算法，不能与M5作单因素比较。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
 ## 研究说明
 
@@ -26,6 +26,11 @@
 - [M4复核与M5内层归因规划](research/2026-10-26-m5-attribution/复核与阶段规划.md)
 - [M5冻结设计：时限感知学习与模块消融](research/2026-10-26-m5-attribution/实验设计.md)
 - [M5运行与结果：内层贡献、配对消融与规划对照](research/2026-10-26-m5-attribution/运行与结果.md)
+- [M5复核与M6高层分配规划](research/2026-10-27-m6-dispatch/M5复核与下一阶段规划.md)
+- [M6冻结设计：共同导航和联合概率训练](research/2026-10-27-m6-dispatch/实验设计.md)
+- [M6运行与结果：高层学习有效，VAE与排重增益待证](research/2026-10-27-m6-dispatch/运行与结果.md)
+- [M6实现与解释复核](research/2026-10-27-m6-dispatch/代码与方法复核.md)
+- [M6阶段验收与后续安排](research/2026-10-27-m6-dispatch/阶段验收.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -140,3 +145,32 @@ sbatch --array=0-11%6 --output="$PWD/train-%A_%a.out" --error="$PWD/train-%A_%a.
 ```
 
 12任务分别4组×3训练种子，各2,400回合；按独立验证集选择，最后测试配对同布局的时限与噪声条件。无VAE训练组是主要模块消融，部署时关闭VAE另列为敏感性检查。距离势函数是人工奖励引导，单独消融，不把它当作学习自主发现。M5不增加语言模型或RSI调用。
+
+## M6：高层检查点分配和共同低层导航
+
+`dispatch.py`让空闲执行者选择检查点并保持承诺直到被观测；所有方法使用同一公开地图控制器和周期避碰。`dispatch_model.py`使用共享实体策略、集中公开状态价值及联合条件概率的PPO更新，逐次回放实际采样掩码，避免独立Q备份与联合分配不一致。
+
+它改变了M5动作、表示和算法，属于方法重构，不是原文DDQN逐项复现或去中心化部署。比较完整组、无VAE、独立重复目标选择，以及共同控制器下的启发式、随机目标和初始策略。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m6_dispatch.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt smoke
+# 通过测试后，先只用固定小场景检查可学性，不读最终测试：
+sbatch --output="$PWD/preflight-%j.out" --error="$PWD/preflight-%j.err" cluster/m6_dispatch.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt preflight
+# 预检完整结束且验证优于初始模型后再提交主实验：
+sbatch --array=0-8%6 --output="$PWD/train-%A_%a.out" --error="$PWD/train-%A_%a.err" cluster/m6_dispatch.sbatch \
+  "$PWD" /absolute/M1-results/vae/best-vae.pt
+```
+
+低层路径和不重复目标掩码均为明确人工规则，不能把其作用称为神经策略自主发现。每组3个配对训练种子，各1,200回合，验证后才读48个最终条件。
+
+M6已完成，完整证据见上述结果报告。逐场轨迹无损保存在`summary.json.gz`，`scripts/m6_evidence_io.py`支持透明读取；不是删除字段后的摘要。实际权重保留在集群与本地私有目录，仓库提供对应SHA-256及参数审计。复核已保存的结果时无需重新训练：
+
+```bash
+python scripts/audit_m6.py --results research/2026-10-27-m6-dispatch/evidence --output /new/path/m6-audit.json
+python scripts/report_m6.py --results research/2026-10-27-m6-dispatch/evidence --output /new/path/m6-report
+python scripts/summarize_m6_supplement.py --results research/2026-10-27-m6-dispatch/evidence --output /new/path/m6-supplement.json
+```
+
+前两个命令仍需要PyTorch；最后一个只读取数据，使用Python标准库。
