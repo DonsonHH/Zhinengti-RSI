@@ -1,0 +1,62 @@
+{
+  "purpose": "Bounded read-only inspection of pre-existing audited arrays; no new training or simulation",
+  "counterexamples": [
+    {
+      "case": "test--nominal--coldplate_fouling--fixed_commands--301",
+      "method": "nominal_model",
+      "time_s": 1140.0,
+      "rack": 111,
+      "truth_temperature_c": 94.69823085939974,
+      "estimate_temperature_c": 40.96997744575938,
+      "absolute_error_c": 53.72825341364036,
+      "ever_measured_by_this_frame": false,
+      "fresh_measurement": false,
+      "thermal_inspections_in_entire_episode": 0,
+      "data_sha256": "1b6e70cb62941c17ccc04f9bc41ee2d14ab76c1bbe7930c0fd2093644d4bb3b2",
+      "predictions_sha256": "9ba94dd73b1e9057c24942990660a109097b209e933cb5e7eab124be3a44ba2c"
+    },
+    {
+      "case": "test--nominal--coldplate_fouling--fixed_commands--301",
+      "method": "cvae_history--seed-0",
+      "time_s": 780.0,
+      "rack": 111,
+      "truth_temperature_c": 95.00632164952015,
+      "estimate_temperature_c": 41.28754806518555,
+      "absolute_error_c": 53.7187735843346,
+      "ever_measured_by_this_frame": false,
+      "fresh_measurement": false,
+      "thermal_inspections_in_entire_episode": 0,
+      "data_sha256": "1b6e70cb62941c17ccc04f9bc41ee2d14ab76c1bbe7930c0fd2093644d4bb3b2",
+      "predictions_sha256": "9ba94dd73b1e9057c24942990660a109097b209e933cb5e7eab124be3a44ba2c"
+    },
+    {
+      "case": "test--nominal--coldplate_fouling--fixed_commands--302",
+      "method": "nominal_model",
+      "time_s": 1200.0,
+      "rack": 114,
+      "truth_temperature_c": 95.37791550305248,
+      "estimate_temperature_c": 41.72184853784962,
+      "absolute_error_c": 53.65606696520286,
+      "ever_measured_by_this_frame": false,
+      "fresh_measurement": false,
+      "thermal_inspections_in_entire_episode": 0,
+      "data_sha256": "05f40a4111b20f7468029dea3ea6adbeb2b34e24819b68275032c4dc60c08508",
+      "predictions_sha256": "43f8c639088f840e6c2d5093e14d3310716c436fb9bbe9bca7a5c83548ff53b8"
+    },
+    {
+      "case": "test--nominal--coldplate_fouling--fixed_commands--302",
+      "method": "cvae_history--seed-0",
+      "time_s": 810.0,
+      "rack": 114,
+      "truth_temperature_c": 94.63679935177724,
+      "estimate_temperature_c": 40.91561508178711,
+      "absolute_error_c": 53.72118426999013,
+      "ever_measured_by_this_frame": false,
+      "fresh_measurement": false,
+      "thermal_inspections_in_entire_episode": 0,
+      "data_sha256": "05f40a4111b20f7468029dea3ea6adbeb2b34e24819b68275032c4dc60c08508",
+      "predictions_sha256": "43f8c639088f840e6c2d5093e14d3310716c436fb9bbe9bca7a5c83548ff53b8"
+    }
+  ],
+  "scope": "Synthetic latent hot-node error; no real-plant temperature prediction claim"
+}

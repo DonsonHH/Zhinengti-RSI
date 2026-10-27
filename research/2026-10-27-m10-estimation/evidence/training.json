@@ -1,0 +1,473 @@
+{
+  "smoke": false,
+  "device": "Tesla V100S-PCIE-32GB",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.3",
+  "job_id": "129923",
+  "training_records": [
+    {
+      "method": "cvae_current",
+      "seed": 0,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "2c3eb6be3c0643db503009cbb1f07430b3eab93319b60cd9ddd94abf403eb94b",
+      "selected_update": 2000,
+      "best_validation_rmse_c": 1.48500657081604,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.7496925592422485,
+          "loss": 0.006239984184503555,
+          "KL": 0.05410975217819214
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.9027369022369385,
+          "loss": 0.002395675517618656,
+          "KL": 0.10478243231773376
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.8340928554534912,
+          "loss": 0.001991725992411375,
+          "KL": 0.1097562164068222
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.7293798923492432,
+          "loss": 0.0016372126992791891,
+          "KL": 0.09233838319778442
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.6099249124526978,
+          "loss": 0.001519164303317666,
+          "KL": 0.09142226725816727
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.5490131378173828,
+          "loss": 0.0014816595939919353,
+          "KL": 0.08291257917881012
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.5057332515716553,
+          "loss": 0.0013576325727626681,
+          "KL": 0.07716511189937592
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.5054216384887695,
+          "loss": 0.0015627900138497353,
+          "KL": 0.08594395220279694
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.491224765777588,
+          "loss": 0.0012522023171186447,
+          "KL": 0.0767892599105835
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.48500657081604,
+          "loss": 0.001328656217083335,
+          "KL": 0.07716448605060577
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.839548917487264,
+      "checkpoint": "cvae_current--seed-0.pt",
+      "checkpoint_sha256": "5c0fa9213ab68453a89591c24052a29e319613dea105f7188378a04a71fc4629"
+    },
+    {
+      "method": "cvae_current",
+      "seed": 1,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "63f1a5c59e5f3168dcc9b3bcfe5be4030b18a44a4144b36ac12c51f7c35559f6",
+      "selected_update": 2000,
+      "best_validation_rmse_c": 1.581984519958496,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.6559667587280273,
+          "loss": 0.0056222472339868546,
+          "KL": 0.05104340240359306
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.6167957782745361,
+          "loss": 0.002824796363711357,
+          "KL": 0.11644862592220306
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.5986098051071167,
+          "loss": 0.00201744819059968,
+          "KL": 0.0819411426782608
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.7095129489898682,
+          "loss": 0.0015507612843066454,
+          "KL": 0.08329996466636658
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.6807498931884766,
+          "loss": 0.0015199931804090738,
+          "KL": 0.07900122553110123
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.67043936252594,
+          "loss": 0.0014786252286285162,
+          "KL": 0.08561509847640991
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.6436619758605957,
+          "loss": 0.001508429180830717,
+          "KL": 0.08425413072109222
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.626993179321289,
+          "loss": 0.0015319506637752056,
+          "KL": 0.0950300469994545
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.6077711582183838,
+          "loss": 0.0013369917869567871,
+          "KL": 0.07193982601165771
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.581984519958496,
+          "loss": 0.0014868197031319141,
+          "KL": 0.09687246382236481
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.577335119247437,
+      "checkpoint": "cvae_current--seed-1.pt",
+      "checkpoint_sha256": "ebaae9057dd07c6c2faa8ff4df6465f1fafdde72f470605845ce92e22db9eb02"
+    },
+    {
+      "method": "cvae_current",
+      "seed": 2,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "007afdcf496d9e7d0efbaeb89440a68f7340567ae64da7935fd024e5d8de157e",
+      "selected_update": 1800,
+      "best_validation_rmse_c": 1.3948787450790405,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.6500709056854248,
+          "loss": 0.009157024323940277,
+          "KL": 0.020790768787264824
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.5632071495056152,
+          "loss": 0.002133855363354087,
+          "KL": 0.06882898509502411
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.4882667064666748,
+          "loss": 0.0019036890007555485,
+          "KL": 0.09229964762926102
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.4531248807907104,
+          "loss": 0.0016889403341338038,
+          "KL": 0.10013515502214432
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.446266770362854,
+          "loss": 0.0015176553279161453,
+          "KL": 0.08919376879930496
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.4388806819915771,
+          "loss": 0.001372337806969881,
+          "KL": 0.0759560763835907
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.4203096628189087,
+          "loss": 0.0013237184612080455,
+          "KL": 0.07696926593780518
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.4081562757492065,
+          "loss": 0.0018534512491896749,
+          "KL": 0.13115829229354858
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.3948787450790405,
+          "loss": 0.0013598371297121048,
+          "KL": 0.08218535780906677
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.4431378841400146,
+          "loss": 0.0013151390012353659,
+          "KL": 0.07495521008968353
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.589421035721898,
+      "checkpoint": "cvae_current--seed-2.pt",
+      "checkpoint_sha256": "38fca34743d5e03b31139f9fd50fbcdac4d3d6ecc6c93a44a0868a69bc2be05c"
+    },
+    {
+      "method": "cvae_history",
+      "seed": 0,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "2c3eb6be3c0643db503009cbb1f07430b3eab93319b60cd9ddd94abf403eb94b",
+      "selected_update": 1800,
+      "best_validation_rmse_c": 1.28093421459198,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.5497316122055054,
+          "loss": 0.0062637366354465485,
+          "KL": 0.030236488208174706
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.7529516220092773,
+          "loss": 0.001648011151701212,
+          "KL": 0.04329901188611984
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.6755664348602295,
+          "loss": 0.0014721438055858016,
+          "KL": 0.06099129468202591
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.5347871780395508,
+          "loss": 0.0011871252208948135,
+          "KL": 0.04632724076509476
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.4609043598175049,
+          "loss": 0.0010156782809644938,
+          "KL": 0.03537677228450775
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.4100592136383057,
+          "loss": 0.0009073378751054406,
+          "KL": 0.024581724777817726
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.3466131687164307,
+          "loss": 0.0009793421486392617,
+          "KL": 0.026940330862998962
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.328214168548584,
+          "loss": 0.0010487667750567198,
+          "KL": 0.04041784256696701
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.28093421459198,
+          "loss": 0.0007469321135431528,
+          "KL": 0.018040593713521957
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.2951809167861938,
+          "loss": 0.000693975540343672,
+          "KL": 0.020338663831353188
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.539841933175921,
+      "checkpoint": "cvae_history--seed-0.pt",
+      "checkpoint_sha256": "2566de6fa444c60ff24347f6e0b0c300923bfb86761d2dc34b27496735dd273d"
+    },
+    {
+      "method": "cvae_history",
+      "seed": 1,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "63f1a5c59e5f3168dcc9b3bcfe5be4030b18a44a4144b36ac12c51f7c35559f6",
+      "selected_update": 2000,
+      "best_validation_rmse_c": 1.016483187675476,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.3754416704177856,
+          "loss": 0.005092845764011145,
+          "KL": 0.02835237793624401
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.285127878189087,
+          "loss": 0.0016311754006892443,
+          "KL": 0.04995216056704521
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.2318193912506104,
+          "loss": 0.0012406809255480766,
+          "KL": 0.0193440280854702
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.2129515409469604,
+          "loss": 0.000843208224978298,
+          "KL": 0.01641819253563881
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.1720763444900513,
+          "loss": 0.0008202875615097582,
+          "KL": 0.020136741921305656
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.141113519668579,
+          "loss": 0.0010587675496935844,
+          "KL": 0.024951841682195663
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.1077520847320557,
+          "loss": 0.0008365130051970482,
+          "KL": 0.02205498330295086
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.095268726348877,
+          "loss": 0.0008745236555114388,
+          "KL": 0.02783491089940071
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.0611672401428223,
+          "loss": 0.0007261076825670898,
+          "KL": 0.015382695943117142
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.016483187675476,
+          "loss": 0.0008953695651143789,
+          "KL": 0.03881524130702019
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.519116185605526,
+      "checkpoint": "cvae_history--seed-1.pt",
+      "checkpoint_sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa"
+    },
+    {
+      "method": "cvae_history",
+      "seed": 2,
+      "updates": 2000,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "007afdcf496d9e7d0efbaeb89440a68f7340567ae64da7935fd024e5d8de157e",
+      "selected_update": 2000,
+      "best_validation_rmse_c": 1.0418003797531128,
+      "learning": [
+        {
+          "update": 200,
+          "validation_rmse_c": 1.415016531944275,
+          "loss": 0.008655061945319176,
+          "KL": 0.012289322912693024
+        },
+        {
+          "update": 400,
+          "validation_rmse_c": 1.2822728157043457,
+          "loss": 0.0010259717237204313,
+          "KL": 0.016740137711167336
+        },
+        {
+          "update": 600,
+          "validation_rmse_c": 1.2197414636611938,
+          "loss": 0.001104456139728427,
+          "KL": 0.023117640987038612
+        },
+        {
+          "update": 800,
+          "validation_rmse_c": 1.1694610118865967,
+          "loss": 0.001193701522424817,
+          "KL": 0.037692852318286896
+        },
+        {
+          "update": 1000,
+          "validation_rmse_c": 1.145485281944275,
+          "loss": 0.0010646337177604437,
+          "KL": 0.028151966631412506
+        },
+        {
+          "update": 1200,
+          "validation_rmse_c": 1.1276838779449463,
+          "loss": 0.0008952609496191144,
+          "KL": 0.019534116610884666
+        },
+        {
+          "update": 1400,
+          "validation_rmse_c": 1.1030598878860474,
+          "loss": 0.0007596444920636714,
+          "KL": 0.01880715973675251
+        },
+        {
+          "update": 1600,
+          "validation_rmse_c": 1.0784680843353271,
+          "loss": 0.0012043032329529524,
+          "KL": 0.0657922551035881
+        },
+        {
+          "update": 1800,
+          "validation_rmse_c": 1.0721017122268677,
+          "loss": 0.0009629521518945694,
+          "KL": 0.02402256801724434
+        },
+        {
+          "update": 2000,
+          "validation_rmse_c": 1.0418003797531128,
+          "loss": 0.0006719614611938596,
+          "KL": 0.01927018165588379
+        }
+      ],
+      "training_nodes": 1720320,
+      "validation_nodes": 430080,
+      "seconds": 12.490715652704239,
+      "checkpoint": "cvae_history--seed-2.pt",
+      "checkpoint_sha256": "0b8c4fb89c3986fa1a6eed4f7c49c32da0de3c6156d2cb14297b4edafffd9437"
+    }
+  ],
+  "data_index_sha256": "55b0b68f2a69b5fd56a3a312e8000955c09079f8bd20547d3f6313d170fa49cf",
+  "test_data_opened_by_training": false
+}

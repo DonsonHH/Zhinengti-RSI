@@ -1,0 +1,29 @@
+{
+  "target": {"name": "current_rack_temperature", "unit": "degC", "future_forecast": false},
+  "clock": {"physics_step_s": 5, "evaluation_period_s": 30, "history_frames": 4, "fresh_measurement_age_s": 10},
+  "online_permissions": ["whitelisted public telemetry", "completed qualified inspection measurements", "static device layout and declared nominal parameters"],
+  "forbidden_inputs": ["unmeasured process truth", "injected scenario name", "hidden health modifier", "future observation", "test target"],
+  "effective_inspection_event": {
+    "required_fields": ["task_id", "kind", "index", "role", "service_s", "time_s", "measurement", "calibrated", "access"],
+    "roles": ["thermal", "electrical", "cooling", "control"],
+    "access": "external_sensing",
+    "completion_rule": "Travel and declared service duration finished; role eligible; calibrated measurement required",
+    "timestamp_semantics": "5s simulation-grid completion boundary, with up to one grid interval of duration quantization",
+    "inspection_age": "Time since latest qualified completion; uninspected age starts at episode time zero"
+  },
+  "mitigation_semantics": {
+    "inspection": "Information update only; no equipment repair",
+    "plant_controls": "Frozen local pump/fan/throttle rules, independent of estimator outputs",
+    "risk_reduction_claim": false,
+    "future_M11_requirement": "Define task priority, routing and explicit response separately; preserve qualification and access hard constraints"
+  },
+  "GW_semantics": {
+    "facility_supply_design_budget_MW": 1000,
+    "rated_IT_MW": 800,
+    "racks": 3200,
+    "aggregate_parallel_facility": true,
+    "single_10kV_or_380V_circuit_carrying_1GW_claimed": false,
+    "implemented_global_supply_limiter": false,
+    "FLOPS_inferred_from_power": false
+  }
+}

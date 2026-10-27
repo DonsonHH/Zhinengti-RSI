@@ -1,0 +1,51 @@
+{
+  "all_dataset_cases_regenerated": 598,
+  "physical_steps_replayed": 215280,
+  "evaluation_frames": 35880,
+  "selected_checkpoints_read": 6,
+  "all_actual_prior_prediction_values_replayed": 27924480,
+  "independent_method_condition_metrics": 3498,
+  "paired_initializations_verified": true,
+  "validation_only_selection_verified": true,
+  "selected_validation_rechecks": [
+    {
+      "method": "cvae_current",
+      "seed": 0,
+      "CPU_validation_rmse_c": 1.48500657081604
+    },
+    {
+      "method": "cvae_current",
+      "seed": 1,
+      "CPU_validation_rmse_c": 1.5819846391677856
+    },
+    {
+      "method": "cvae_current",
+      "seed": 2,
+      "CPU_validation_rmse_c": 1.3948787450790405
+    },
+    {
+      "method": "cvae_history",
+      "seed": 0,
+      "CPU_validation_rmse_c": 1.28093421459198
+    },
+    {
+      "method": "cvae_history",
+      "seed": 1,
+      "CPU_validation_rmse_c": 1.016483187675476
+    },
+    {
+      "method": "cvae_history",
+      "seed": 2,
+      "CPU_validation_rmse_c": 1.0418003797531128
+    }
+  ],
+  "maximum_energy_residual_kj": 1.7799902707338333e-07,
+  "maximum_electric_residual_kw": 3.4924596548080444e-10,
+  "independent_physical_balances": {
+    "steps": 215280,
+    "max_electric_kw": 3.0377123039215803e-10,
+    "max_energy_kj": 1.7799902707338333e-07
+  },
+  "gw_supply_budget_and_IT_distinction_verified": true,
+  "scope": "Whole synthetic data, selected weights, causal feature and metric implementation audit; not field calibration or model superiority"
+}

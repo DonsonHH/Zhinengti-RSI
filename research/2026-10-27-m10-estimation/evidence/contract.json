@@ -1,0 +1,116 @@
+{
+  "target": "current rack temperature in degC",
+  "physical_step_s": 5,
+  "sample_every_s": 30,
+  "frames_per_case": 60,
+  "history_frames": 4,
+  "features": [
+    "last_temperature",
+    "measurement_age",
+    "ever_measured",
+    "pod_measured_mean",
+    "secondary_supply",
+    "delivered_power",
+    "requested_power",
+    "pump_command",
+    "last_flow",
+    "flow_age",
+    "last_contact",
+    "sensor_verified",
+    "local_x",
+    "local_y"
+  ],
+  "racks": 128,
+  "train_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "validation_seeds": [
+    200,
+    201
+  ],
+  "test_seeds": [
+    300,
+    301,
+    302
+  ],
+  "gw_seeds": [
+    400,
+    401,
+    402
+  ],
+  "train_atoms": [
+    "healthy",
+    "load_surge",
+    "grid_derate",
+    "dc_contact_hotspot",
+    "it_feeder_loss",
+    "aux_feeder_loss",
+    "tower_derate",
+    "primary_pump_derate",
+    "secondary_pump_trip",
+    "cdu_fouling",
+    "valve_restriction",
+    "coldplate_fouling",
+    "sensor_bias",
+    "controller_freeze"
+  ],
+  "unseen_combinations": [
+    "tower_derate+sensor_bias",
+    "grid_derate+coldplate_fouling",
+    "aux_feeder_loss+cdu_fouling"
+  ],
+  "controls": [
+    "feedback",
+    "fixed_commands"
+  ],
+  "train_cases": 224,
+  "validation_cases": 56,
+  "test_cases": 306,
+  "gw_cases": 12,
+  "sensor_conditions": {
+    "nominal": {
+      "stride": 4,
+      "noise_c": 0.2
+    },
+    "noise": {
+      "stride": 4,
+      "noise_c": 1.0
+    },
+    "sparse": {
+      "stride": 8,
+      "noise_c": 0.2
+    }
+  },
+  "inspection_noise_c": 0.1,
+  "gw_racks": 3200,
+  "gw_IT_nameplate_MW": 800,
+  "gw_supply_design_budget_MW": 1000,
+  "gw_budget_semantics": "Observed input checked against design budget; not an implemented global power limiter",
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "updates_each": 2000,
+  "batch_size": 1024,
+  "validation_every": 200,
+  "learning_rate": 0.001,
+  "KL_weight": 0.01,
+  "methods": [
+    "hold",
+    "linear",
+    "nominal_model",
+    "rknn",
+    "gp64",
+    "cvae_current",
+    "cvae_history"
+  ],
+  "scope": "New-domain CVAE and explicit baselines; no RSI, policy optimization, probability calibration or site validation"
+}

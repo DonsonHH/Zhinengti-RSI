@@ -1,0 +1,44 @@
+{
+  "status": "planned_not_submitted",
+  "next_stage": "M11 risk-aware qualified inspection scheduling",
+  "basis": "M9 coupled plant, M10 causal state-estimation interfaces, user-confirmed GW supply scale",
+  "tasks": [
+    {
+      "id": "M11-0",
+      "objective": "Check workload and revisit feasibility before optimizing priorities",
+      "deliverables": ["Service-time lower bounds per profession", "Travel and access overhead", "Fleet size, zoning and per-task revisit targets", "Which calibrated remote sensors can satisfy which tasks"],
+      "synthetic_thermal_examples": {"racks": 3200, "service_seconds_each": 10, "minimum_agents_for_one_pass_in_1800s_without_travel": 18, "minimum_agents_for_illustrative_300s_revisit_without_travel": 107},
+      "gate": "Do not promise full coverage or deadlines under an infeasible resource budget; examples are synthetic lower bounds, not site staffing"
+    },
+    {
+      "id": "M11-A",
+      "objective": "Freeze the task decision, public risk proxy and completion semantics",
+      "deliverables": ["Task catalogue with equipment, profession, access, travel and service duration", "Observable temperature/power/flow consequence components", "Inspection age and model disagreement for active checking", "Separate estimator alerts from qualified confirmed discoveries", "Maximum waiting and revisit requirements"],
+      "gate": "No true severity or injected fault label in actor input; inspection alone does not repair the plant"
+    },
+    {
+      "id": "M11-B",
+      "objective": "Build a representative aisle and asynchronous task environment",
+      "deliverables": ["Passable aisle graph and rack approach points", "Reachability and path distances", "Professional action masks and completion events", "Physical-time accounting shared by all methods"],
+      "gate": "Recheck blocked access, ineligible assignments, travel/service timing and unfinished tasks; synthetic layout clearly identified"
+    },
+    {
+      "id": "M11-C",
+      "objective": "Compare static cycles, revisit urgency, risk greediness, rolling planning and retrained learning policies",
+      "deliverables": ["Common available observations and time budget", "Keep nominal physics and history-CVAE controls; select tools using validation and hotspot recall", "New matched policy training budgets and validation-only selection", "Independent test seeds, combinations and scale tiers", "Report rare local faults separately from whole-facility dilution"],
+      "gate": "M8 weights and percentages are historical controls, not new-domain performance; no arbitrary new topology claim"
+    },
+    {
+      "id": "M11-D",
+      "objective": "Test whether estimation accuracy translates to inspection benefit",
+      "metrics": ["Consequence-weighted confirmed discovery delay", "Missed events", "Revisit overdue rate and maximum waiting", "Unserved IT demand and controller state reported separately", "Travel/service/inference costs", "Ineligible or unsafe accesses"],
+      "gate": "Report tradeoffs and failure cases; do not call information freshness repaired physical risk"
+    }
+  ],
+  "later_M12": {
+    "objective": "Introduce fixed open-model proposals for skills, tool use and collaboration workflows",
+    "comparators": ["Fixed workflow", "Matched-budget search", "Fixed improver proposals", "Separately evaluated improver updates"],
+    "gate": "Freeze plant and holdout evaluator first; distinguish workflow improvement from demonstrated recursive improver improvement"
+  },
+  "not_started": ["M11 policy training", "M12 new-domain RSI experiments", "Site calibration", "B-PID checkpoint integration"]
+}

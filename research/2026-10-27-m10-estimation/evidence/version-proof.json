@@ -1,0 +1,30 @@
+{
+  "cases_compared": 318,
+  "v1_and_v2_common_data_keys_exact": [
+    "criticality",
+    "features",
+    "fresh",
+    "pred_hold",
+    "pred_linear",
+    "pred_nominal_model",
+    "pred_rknn",
+    "temperature_c",
+    "time_s"
+  ],
+  "v1_and_v2_nonGP_predictions_exact": [
+    "cvae_current--seed-0",
+    "cvae_current--seed-1",
+    "cvae_current--seed-2",
+    "cvae_history--seed-0",
+    "cvae_history--seed-1",
+    "cvae_history--seed-2",
+    "hold",
+    "linear",
+    "nominal_model",
+    "rknn"
+  ],
+  "all_six_CVAE_outputs_identical_after_GP_revision": true,
+  "superseded_metrics_remote_path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m10/evaluation-129924/metrics.json",
+  "superseded_metrics_sha256": "bc56db28ea486b375c91f55aed475bebbc2e6fd44da8c52436682764c8aa98de",
+  "reason": "GP sampling and observation-derived mean corrected before formal score inspection; retained v1 proves all other predictions unchanged"
+}

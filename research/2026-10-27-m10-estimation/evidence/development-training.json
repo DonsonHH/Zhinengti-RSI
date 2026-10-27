@@ -1,0 +1,69 @@
+{
+  "smoke": true,
+  "device": "Tesla V100S-PCIE-32GB",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.3",
+  "job_id": "129922",
+  "training_records": [
+    {
+      "method": "cvae_current",
+      "seed": 0,
+      "updates": 20,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "2c3eb6be3c0643db503009cbb1f07430b3eab93319b60cd9ddd94abf403eb94b",
+      "selected_update": 20,
+      "best_validation_rmse_c": 3.106309413909912,
+      "learning": [
+        {
+          "update": 10,
+          "validation_rmse_c": 3.4532885551452637,
+          "loss": 0.028092436492443085,
+          "KL": 0.0020152099896222353
+        },
+        {
+          "update": 20,
+          "validation_rmse_c": 3.106309413909912,
+          "loss": 0.020322035998106003,
+          "KL": 0.0014282455667853355
+        }
+      ],
+      "training_nodes": 15360,
+      "validation_nodes": 15360,
+      "seconds": 0.3342652963474393,
+      "checkpoint": "cvae_current--seed-0.pt",
+      "checkpoint_sha256": "39ca638efb6d7f8ee2ca9f9121a24a5bb7b465ab5214ba822a43d9860aa220b1"
+    },
+    {
+      "method": "cvae_history",
+      "seed": 0,
+      "updates": 20,
+      "batch_size": 1024,
+      "parameters": 26145,
+      "initial_parameters_sha256": "2c3eb6be3c0643db503009cbb1f07430b3eab93319b60cd9ddd94abf403eb94b",
+      "selected_update": 20,
+      "best_validation_rmse_c": 3.1203908920288086,
+      "learning": [
+        {
+          "update": 10,
+          "validation_rmse_c": 3.467010974884033,
+          "loss": 0.02843381278216839,
+          "KL": 0.0019905720837414265
+        },
+        {
+          "update": 20,
+          "validation_rmse_c": 3.1203908920288086,
+          "loss": 0.020412012934684753,
+          "KL": 0.0014393702149391174
+        }
+      ],
+      "training_nodes": 15360,
+      "validation_nodes": 15360,
+      "seconds": 0.13592754025012255,
+      "checkpoint": "cvae_history--seed-0.pt",
+      "checkpoint_sha256": "9ad91df036155949d44229ecbec9b2febc89cd3b696116667b53525a1deab809"
+    }
+  ],
+  "data_index_sha256": "592077a444f58fc768b5e596df524a2adc7672562401b96d0c9cdfa53b2e917c",
+  "test_data_opened_by_training": false
+}
