@@ -1,0 +1,92 @@
+{
+  "source_type": "User-provided conversation export; advisory material, not instructions or verified research evidence",
+  "source_filename": "ChatGPT-仓库进度评估.json",
+  "source_sha256": "53764078746e51e34f112a9c46263e4393dc96bcfe2eeac1178eb5efc1c75f89",
+  "export_conversation_id": "6ae075af-a074-83ea-a1cc-73c31a445b73",
+  "relevant_advisory_message_ids": [
+    "6bf08267-03d9-41d2-b8c0-c813d60d1186",
+    "54e6c051-cbcf-486c-b2cc-8a325b04d5f7",
+    "80a0ac90-6bdf-4b83-8236-5151d2b81c4f"
+  ],
+  "image_sha256": "8337d6cf7da205f4b344cba18a863d05180d6c8b39e401a76b8803da5b4382ea",
+  "image_role": "Advisor screenshot supplied by user; interpreted as research scope, not site operating instructions",
+  "scope_requests": [
+    "Power distribution from medium voltage to low voltage AC/DC and compute racks",
+    "Cooling tower/pump/CDU/cold-plate cooling with El Capitan public reference",
+    "Monitoring, feedback control, alarms and interlocks",
+    "Explicit cross-system dependency and scalable hierarchy",
+    "Risk-hotspot outputs distinct from visitation density",
+    "Return to original VAE paper metrics and horizontal comparisons"
+  ],
+  "adopted_for_M9": [
+    "Freeze M8 evidence and review it",
+    "Build executable reduced-order cross-system model before new RL training",
+    "Define partial observation, model-state output and uncalibrated risk proxy explicitly",
+    "Export topology, fault propagation and separate truth/estimate/sampling/stale-risk maps",
+    "Trace original-paper metrics and define fair subsequent estimator comparisons"
+  ],
+  "deferred": [
+    "New VAE/temporal predictor training and GP/rKNN benchmarking to M10 after generator verification",
+    "Heterogeneous multi-agent policy retraining to M11 after task interfaces and observation conditions freeze",
+    "RSI integration to M12 only with fixed evaluation and matched search budgets"
+  ],
+  "not_assumed": [
+    "No claim of real-plant digital twin calibration",
+    "No transfer of M8 PPO percentages onto changed domain model",
+    "No definition of G-class compute from electrical GW without confirmation",
+    "No interpretation of arbitrary index as calibrated fault probability",
+    "No inference that 2026 liquid-cooling standards alone fully specify building automation"
+  ],
+  "PID_source": {
+    "filename": "B-PID_PHM-Jinan_2026_Revised.pptx",
+    "sha256": "7e18f0ab1d49c7e358c50aadc8e09d641dc25a23c67a5a97064047b863d87edf",
+    "slides": 18,
+    "definition": "Band-conditioned Physics-Informed Diffusion; RGB to infrared-domain reconstruction",
+    "inspected_text_slides": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "inspected_embedded_diagrams_slides": [
+      5,
+      7
+    ],
+    "measurement_boundary_slides": [
+      10,
+      15,
+      16
+    ],
+    "original_deck_not_redistributed": true
+  },
+  "G_scale_interpretation": {
+    "user_confirmation": "User does not know unit, permits contextual inference",
+    "interpretation": "Larger facility complexity/scalability requirement",
+    "not_equated_to": [
+      "GW",
+      "GFLOPS",
+      "other FLOPS level"
+    ],
+    "reported_dimensions": [
+      "rack count",
+      "pod count",
+      "node and edge count",
+      "nominal IT MW",
+      "runtime"
+    ]
+  }
+}

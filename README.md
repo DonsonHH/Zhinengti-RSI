@@ -12,6 +12,8 @@
 
 M8现已完成82项测试和12项等预算从头训练。混合训练中，关系信息使三个配对种子的逾期均下降，均值由4.357%降至3.719%；但baffle仍落后成对巡回，且出现92步未重访。下一步优先研究长期漏检与重访约束，结果范围是同布局族的新巡检实例，未证明任意新墙体拓扑泛化。
 
+M9按新的导师截图和用户JSON参考补充了供电—液冷—自控降阶模型：94项测试、150条机制轨迹、15次规模试验及完整数值重放通过。已生成风险与观测热点图。这里是合成模型内部验证，尚无现场标定或新的学习算法结论；B-PID保留为未校准的辅助观测接口。
+
 ## 研究说明
 
 - [方向校准](research/2026-10-26-paper-rsi/方向校准与实施记录.md)
@@ -46,6 +48,11 @@ M8现已完成82项测试和12项等预算从头训练。混合训练中，关�
 - [M8文献依据与使用边界](research/2026-10-27-m8-representation/文献依据.md)
 - [M8运行与结果：关系输入、布局训练和长期漏检](research/2026-10-27-m8-representation/运行与结果.md)
 - [M8阶段验收](research/2026-10-27-m8-representation/阶段验收.md)
+- [M8复核与M9参考建议取舍](research/2026-10-27-m9-coupled/M8复核与建议取舍.md)
+- [M9冻结设计：供电—液冷—自控](research/2026-10-27-m9-coupled/实验设计.md)
+- [M9运行与结果：多系统故障传播和风险热点](research/2026-10-27-m9-coupled/运行与结果.md)
+- [M9资料、国标及原VAE论文指标核对](research/2026-10-27-m9-coupled/资料与标准核对.md)
+- [M9实现复核与验收](research/2026-10-27-m9-coupled/阶段验收.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -238,3 +245,17 @@ python scripts/diagnose_m8_tail.py --results research/2026-10-27-m8-representati
 ```
 
 前两项需要项目NumPy及绘图环境，诊断汇总仅用Python标准库；尾部诊断另需NumPy，不需要PyTorch。`scripts/check_m8_checkpoints.py`须读取实际私有权重，并在PyTorch环境中执行。
+
+## M9：多系统领域模型和观测基础
+
+`facility.py`实现供电容量／损耗、并联泵管路、冷板/CDU/两回路热量交换与反馈规则；`facility_observation.py`区分过程真值、对外遥测、专业资格和检查完成。`m9.py`冻结150条情景和稀疏规模试验，没有新神经网络训练。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m9_coupled.sbatch "$PWD" smoke
+# 94项测试及开发场景门槛成功结束后：
+sbatch --output="$PWD/suite-%j.out" --error="$PWD/suite-%j.err" cluster/m9_coupled.sbatch "$PWD"
+```
+
+全部54,000步和150个完整数值NPZ已独立重放并核对电／热收支。标量轨迹、演示完整数组和四张静态图在研究目录，约290.8MB完整数值数组留在集群索引路径。查看[离线热点页面](research/2026-10-27-m9-coupled/evidence/report/risk_hotspots.html)可切换时间和机柜；脚本逻辑通过，浏览器外观因策略限制未完成预览。
+
+严重度代理不是故障概率；检查更新信息不等于修复故障。M10再进行同观测、同预算的学习型估计比较，M11接入异质风险调度，M12单独验证RSI增量。具体任务见M9报告。

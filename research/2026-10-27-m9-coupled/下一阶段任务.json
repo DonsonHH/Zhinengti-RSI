@@ -1,0 +1,36 @@
+{
+  "status": "planned_not_submitted",
+  "basis": "M9 completed domain-model verification; user screenshot, inspected JSON advice and PID report",
+  "next_stage": "M10 dynamic state estimation",
+  "tasks": [
+    {
+      "id": "M10-A",
+      "objective": "Freeze physical target, units, observation history and new data splits",
+      "deliverables": ["node and channel target schema", "timestamp and observation-mask interface", "new simulation seeds and fault-combination splits", "separate current estimation from future forecasting"],
+      "gate": "No true state, hidden fault label, future observation or test-case selection leaked into model input"
+    },
+    {
+      "id": "M10-B",
+      "objective": "Implement horizontal estimator controls before tuning the learned estimator",
+      "methods": ["measurement hold", "simple temporal extrapolation", "nominal physical observer", "radial or graph-distance kNN", "bounded-budget GP", "VAE with new-domain training"],
+      "gate": "Identical observation sequence and target domain; disclose model priors, training and inference costs; old static VAE is a transfer control"
+    },
+    {
+      "id": "M10-C",
+      "objective": "Evaluate accuracy, high-consequence errors, hotspot discovery and runtime",
+      "metrics": ["RMSE in defined physical units", "explicitly defined consequence-weighted RMSE", "current-state R2 where variance permits", "hotspot precision and recall with no-event cases explicit", "inference latency and sample-history scaling", "uncertainty calibration only if probabilistic labels are defined"],
+      "gate": "New independent test cases; training seeds and simulation conditions reported separately; no B-PID pixel-code to temperature conversion"
+    },
+    {
+      "id": "M10-D",
+      "objective": "Prepare qualified observation and action adapters for later task scheduling",
+      "deliverables": ["effective inspection event schema", "professional eligibility and service duration", "explicit response/mitigation semantics", "information age and worst waiting metrics"],
+      "gate": "Inspection alone is not physical repair; safety access conditions remain hard constraints"
+    }
+  ],
+  "later_stages": {
+    "M11": "Risk-aware heterogeneous task assignment with retrained policies and common planning controls, preserving maximum waiting and safety reporting",
+    "M12": "Fixed open-model workflow proposals and separately evaluated improver updates against fixed workflows and matched-budget search"
+  },
+  "not_claimed": ["real-facility calibration", "national-standard compliance", "G-class FLOPS inference", "VAE or B-PID superior risk estimation", "RSI effectiveness"]
+}
