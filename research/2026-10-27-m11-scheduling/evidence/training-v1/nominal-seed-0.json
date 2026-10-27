@@ -1,0 +1,1251 @@
+{
+  "smoke": false,
+  "estimator": "nominal",
+  "seed": 0,
+  "episodes": 48,
+  "decision_steps": 17232,
+  "PPO_epochs": 192,
+  "initial_parameters_sha256": "9a0e86fbe80ea16f8aa4fb9cc5750ee4d03c68e2545f86d24604a44f42f630da",
+  "parameters": 3010,
+  "best_validation_public_return": -15.152099581638314,
+  "selected_episode": 36,
+  "checkpoint_sha256": "dfab31fab5437398f150b14920e60d8c8a0cecd1e18807222d054ac1f41d73c3",
+  "learning": [
+    {
+      "episode": 1,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1000,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.7546236515045166,
+          1.730616807937622,
+          1.706834077835083,
+          1.6832722425460815
+        ],
+        "team_steps": 359,
+        "task_choices": 143,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10357005894184113
+      },
+      "public_return": -37.181651969696965
+    },
+    {
+      "episode": 2,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1001,
+        "resources": "provisioned",
+        "scenario": "dc_contact_hotspot",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.2786335349082947,
+          0.2722468674182892,
+          0.2656305432319641,
+          0.2589087188243866
+        ],
+        "team_steps": 359,
+        "task_choices": 593,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04049522802233696
+      },
+      "public_return": -14.537787063492136
+    },
+    {
+      "episode": 3,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1002,
+        "resources": "scarce",
+        "scenario": "grid_derate",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.7524601221084595,
+          1.731636881828308,
+          1.7105462551116943,
+          1.689285397529602
+        ],
+        "team_steps": 359,
+        "task_choices": 143,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10425781458616257
+      },
+      "public_return": -37.42855783348176
+    },
+    {
+      "episode": 4,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1003,
+        "resources": "provisioned",
+        "scenario": "tower_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.2700364291667938,
+          0.2640678882598877,
+          0.25808873772621155,
+          0.25211870670318604
+        ],
+        "team_steps": 359,
+        "task_choices": 590,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040705446153879166
+      },
+      "public_return": -14.613254382893942
+    },
+    {
+      "episode": 5,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1004,
+        "resources": "scarce",
+        "scenario": "cdu_fouling",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.6862863302230835,
+          1.6652172803878784,
+          1.6440198421478271,
+          1.6227357387542725
+        ],
+        "team_steps": 359,
+        "task_choices": 140,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1033952459692955
+      },
+      "public_return": -37.11889313137618
+    },
+    {
+      "episode": 6,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1005,
+        "resources": "provisioned",
+        "scenario": "cdu_fouling",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.2503736615180969,
+          0.24448655545711517,
+          0.2386236935853958,
+          0.23279264569282532
+        ],
+        "team_steps": 359,
+        "task_choices": 607,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03981301933526993
+      },
+      "public_return": -14.29287242748988
+    },
+    {
+      "episode": 7,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1006,
+        "resources": "scarce",
+        "scenario": "cdu_fouling",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.6324543952941895,
+          1.6114088296890259,
+          1.5902549028396606,
+          1.5690240859985352
+        ],
+        "team_steps": 359,
+        "task_choices": 152,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10242770612239838
+      },
+      "public_return": -36.77154261499723
+    },
+    {
+      "episode": 8,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1007,
+        "resources": "provisioned",
+        "scenario": "it_feeder_loss",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.24254672229290009,
+          0.23649844527244568,
+          0.2304566204547882,
+          0.22443217039108276
+        ],
+        "team_steps": 359,
+        "task_choices": 596,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.0396837554872036
+      },
+      "public_return": -14.246466810088016
+    },
+    {
+      "episode": 9,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1008,
+        "resources": "scarce",
+        "scenario": "valve_restriction",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.6338815689086914,
+          1.6124608516693115,
+          1.5909016132354736,
+          1.569238543510437
+        ],
+        "team_steps": 359,
+        "task_choices": 138,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10368619114160538
+      },
+      "public_return": -37.22334182284622
+    },
+    {
+      "episode": 10,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1009,
+        "resources": "provisioned",
+        "scenario": "tower_derate",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.23192237317562103,
+          0.22603610157966614,
+          0.220117449760437,
+          0.2141915112733841
+        ],
+        "team_steps": 359,
+        "task_choices": 592,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03949160501360893
+      },
+      "public_return": -14.177486048979985
+    },
+    {
+      "episode": 11,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1010,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.5749362707138062,
+          1.553554654121399,
+          1.5320287942886353,
+          1.5103954076766968
+        ],
+        "team_steps": 359,
+        "task_choices": 149,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10247772932052612
+      },
+      "public_return": -36.789502424242414
+    },
+    {
+      "episode": 12,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1011,
+        "resources": "provisioned",
+        "scenario": "valve_restriction",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.2299511879682541,
+          0.2238922417163849,
+          0.21786800026893616,
+          0.21188485622406006
+        ],
+        "team_steps": 359,
+        "task_choices": 593,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04020252451300621
+      },
+      "public_return": -14.43270612861726,
+      "validation_public_return": -17.072395395667087,
+      "per_validation_case": [
+        -17.082776277056272,
+        -17.08032024287572,
+        -16.965613133116886,
+        -17.160871929619464
+      ]
+    },
+    {
+      "episode": 13,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1012,
+        "resources": "scarce",
+        "scenario": "grid_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.6108345985412598,
+          1.5885144472122192,
+          1.566078782081604,
+          1.5435600280761719
+        ],
+        "team_steps": 359,
+        "task_choices": 145,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10452975332736969
+      },
+      "public_return": -37.52618037422826
+    },
+    {
+      "episode": 14,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1013,
+        "resources": "provisioned",
+        "scenario": "aux_feeder_loss",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.2148406207561493,
+          0.2086082249879837,
+          0.20227891206741333,
+          0.19588600099086761
+        ],
+        "team_steps": 359,
+        "task_choices": 605,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.039444468915462494
+      },
+      "public_return": -14.160565563570993
+    },
+    {
+      "episode": 15,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1014,
+        "resources": "scarce",
+        "scenario": "primary_pump_derate",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.6008754968643188,
+          1.5785605907440186,
+          1.55609130859375,
+          1.5335040092468262
+        ],
+        "team_steps": 359,
+        "task_choices": 135,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10527756810188293
+      },
+      "public_return": -37.794647799008
+    },
+    {
+      "episode": 16,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1015,
+        "resources": "provisioned",
+        "scenario": "it_feeder_loss",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.21830067038536072,
+          0.21178311109542847,
+          0.20529751479625702,
+          0.19885313510894775
+        ],
+        "team_steps": 359,
+        "task_choices": 588,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040734805166721344
+      },
+      "public_return": -14.623793669109878
+    },
+    {
+      "episode": 17,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1016,
+        "resources": "scarce",
+        "scenario": "primary_pump_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.5257314443588257,
+          1.5032578706741333,
+          1.4806780815124512,
+          1.4580243825912476
+        ],
+        "team_steps": 359,
+        "task_choices": 144,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.103901706635952
+      },
+      "public_return": -37.300715843642564
+    },
+    {
+      "episode": 18,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1017,
+        "resources": "provisioned",
+        "scenario": "it_feeder_loss",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.2004079669713974,
+          0.193995863199234,
+          0.1876254826784134,
+          0.1813063770532608
+        ],
+        "team_steps": 359,
+        "task_choices": 594,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03998171165585518
+      },
+      "public_return": -14.353434899662663
+    },
+    {
+      "episode": 19,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1018,
+        "resources": "scarce",
+        "scenario": "aux_feeder_loss",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.5205233097076416,
+          1.4966500997543335,
+          1.472726821899414,
+          1.4487813711166382
+        ],
+        "team_steps": 359,
+        "task_choices": 139,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10499388724565506
+      },
+      "public_return": -37.69280377572216
+    },
+    {
+      "episode": 20,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1019,
+        "resources": "provisioned",
+        "scenario": "tower_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.20130334794521332,
+          0.1950812041759491,
+          0.18889717757701874,
+          0.1827615648508072
+        ],
+        "team_steps": 359,
+        "task_choices": 586,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040702346712350845
+      },
+      "public_return": -14.612142343142903
+    },
+    {
+      "episode": 21,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1020,
+        "resources": "scarce",
+        "scenario": "sensor_bias",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.4666420221328735,
+          1.442984938621521,
+          1.4192805290222168,
+          1.39555823802948
+        ],
+        "team_steps": 359,
+        "task_choices": 141,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10407611727714539
+      },
+      "public_return": -37.3633281060606
+    },
+    {
+      "episode": 22,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1021,
+        "resources": "provisioned",
+        "scenario": "dc_contact_hotspot",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.1771407574415207,
+          0.17038848996162415,
+          0.1635720431804657,
+          0.15673917531967163
+        ],
+        "team_steps": 359,
+        "task_choices": 604,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.0394267700612545
+      },
+      "public_return": -14.154209792238387
+    },
+    {
+      "episode": 23,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1022,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.4154303073883057,
+          1.3932089805603027,
+          1.3708157539367676,
+          1.348294734954834
+        ],
+        "team_steps": 359,
+        "task_choices": 144,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10334161669015884
+      },
+      "public_return": -37.09963857575755
+    },
+    {
+      "episode": 24,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1023,
+        "resources": "provisioned",
+        "scenario": "controller_freeze",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.1742956042289734,
+          0.16777844727039337,
+          0.1613265872001648,
+          0.1549520492553711
+        ],
+        "team_steps": 359,
+        "task_choices": 600,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03969612717628479
+      },
+      "public_return": -14.250910317590643,
+      "validation_public_return": -16.894367573204253,
+      "per_validation_case": [
+        -17.040658284632038,
+        -16.819644979853642,
+        -16.80744836038961,
+        -16.90971866794172
+      ]
+    },
+    {
+      "episode": 25,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1024,
+        "resources": "scarce",
+        "scenario": "dc_contact_hotspot",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.3633290529251099,
+          1.339030385017395,
+          1.3147385120391846,
+          1.2904860973358154
+        ],
+        "team_steps": 359,
+        "task_choices": 149,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10242723673582077
+      },
+      "public_return": -36.77137575246848
+    },
+    {
+      "episode": 26,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1025,
+        "resources": "provisioned",
+        "scenario": "coldplate_fouling",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.16416577994823456,
+          0.15832866728305817,
+          0.1525406688451767,
+          0.14681513607501984
+        ],
+        "team_steps": 359,
+        "task_choices": 599,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03924774006009102
+      },
+      "public_return": -14.089938285767309
+    },
+    {
+      "episode": 27,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1026,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.3498603105545044,
+          1.3266655206680298,
+          1.3034350872039795,
+          1.2802023887634277
+        ],
+        "team_steps": 359,
+        "task_choices": 143,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1030966117978096
+      },
+      "public_return": -37.01168431060607
+    },
+    {
+      "episode": 28,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1027,
+        "resources": "provisioned",
+        "scenario": "aux_feeder_loss",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.15793541073799133,
+          0.151876762509346,
+          0.1459077000617981,
+          0.14003805816173553
+        ],
+        "team_steps": 359,
+        "task_choices": 603,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03925783932209015
+      },
+      "public_return": -14.093563044020938
+    },
+    {
+      "episode": 29,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1028,
+        "resources": "scarce",
+        "scenario": "grid_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.3372429609298706,
+          1.3132810592651367,
+          1.2893871068954468,
+          1.2655830383300781
+        ],
+        "team_steps": 359,
+        "task_choices": 141,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.103739894926548
+      },
+      "public_return": -37.24262337553357
+    },
+    {
+      "episode": 30,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1029,
+        "resources": "provisioned",
+        "scenario": "healthy",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.1596352905035019,
+          0.15353286266326904,
+          0.1475275456905365,
+          0.141631081700325
+        ],
+        "team_steps": 359,
+        "task_choices": 603,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040050968527793884
+      },
+      "public_return": -14.378297429653669
+    },
+    {
+      "episode": 31,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1030,
+        "resources": "scarce",
+        "scenario": "valve_restriction",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.3041954040527344,
+          1.2801988124847412,
+          1.2563108205795288,
+          1.2325507402420044
+        ],
+        "team_steps": 359,
+        "task_choices": 144,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10353175550699234
+      },
+      "public_return": -37.16790221117426
+    },
+    {
+      "episode": 32,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1031,
+        "resources": "provisioned",
+        "scenario": "grid_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.1521093249320984,
+          0.14608287811279297,
+          0.14018119871616364,
+          0.13441486656665802
+        ],
+        "team_steps": 359,
+        "task_choices": 593,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040043335407972336
+      },
+      "public_return": -14.375557571594952
+    },
+    {
+      "episode": 33,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1032,
+        "resources": "scarce",
+        "scenario": "grid_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.2864282131195068,
+          1.2621928453445435,
+          1.2381048202514648,
+          1.2141797542572021
+        ],
+        "team_steps": 359,
+        "task_choices": 136,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10443749278783798
+      },
+      "public_return": -37.49305935753407
+    },
+    {
+      "episode": 34,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1033,
+        "resources": "provisioned",
+        "scenario": "load_surge",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.14170560240745544,
+          0.13604985177516937,
+          0.13050279021263123,
+          0.1250777542591095
+        ],
+        "team_steps": 359,
+        "task_choices": 611,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03913654014468193
+      },
+      "public_return": -14.050016590909102
+    },
+    {
+      "episode": 35,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1034,
+        "resources": "scarce",
+        "scenario": "secondary_pump_trip",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.2776678800582886,
+          1.253654956817627,
+          1.2296725511550903,
+          1.205753207206726
+        ],
+        "team_steps": 359,
+        "task_choices": 140,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1052418053150177
+      },
+      "public_return": -37.78180769814922
+    },
+    {
+      "episode": 36,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1035,
+        "resources": "provisioned",
+        "scenario": "grid_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.1449960470199585,
+          0.13914498686790466,
+          0.13344071805477142,
+          0.12789413332939148
+        ],
+        "team_steps": 359,
+        "task_choices": 595,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04078886657953262
+      },
+      "public_return": -14.64320424387064,
+      "validation_public_return": -15.152099581638314,
+      "per_validation_case": [
+        -15.116192083333337,
+        -15.112742578735027,
+        -15.094893252164514,
+        -15.284570412320381
+      ]
+    },
+    {
+      "episode": 37,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1036,
+        "resources": "scarce",
+        "scenario": "it_feeder_loss",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.2318475246429443,
+          1.2077813148498535,
+          1.1839083433151245,
+          1.1602413654327393
+        ],
+        "team_steps": 359,
+        "task_choices": 137,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1049119308590889
+      },
+      "public_return": -37.66338192503701
+    },
+    {
+      "episode": 38,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1037,
+        "resources": "provisioned",
+        "scenario": "it_feeder_loss",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.12738479673862457,
+          0.12189199775457382,
+          0.11655756086111069,
+          0.11139372736215591
+        ],
+        "team_steps": 359,
+        "task_choices": 603,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.03989138454198837
+      },
+      "public_return": -14.32100735906818
+    },
+    {
+      "episode": 39,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1038,
+        "resources": "scarce",
+        "scenario": "primary_pump_derate",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.2175383567810059,
+          1.194126844406128,
+          1.1708966493606567,
+          1.1478620767593384
+        ],
+        "team_steps": 359,
+        "task_choices": 142,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10485799610614777
+      },
+      "public_return": -37.644020201182826
+    },
+    {
+      "episode": 40,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1039,
+        "resources": "provisioned",
+        "scenario": "primary_pump_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.127459317445755,
+          0.12248237431049347,
+          0.1176690012216568,
+          0.11303021758794785
+        ],
+        "team_steps": 359,
+        "task_choices": 603,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.039313677698373795
+      },
+      "public_return": -14.113609679820696
+    },
+    {
+      "episode": 41,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1040,
+        "resources": "scarce",
+        "scenario": "coldplate_fouling",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.1481493711471558,
+          1.1250869035720825,
+          1.1022710800170898,
+          1.0797091722488403
+        ],
+        "team_steps": 359,
+        "task_choices": 143,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10394274443387985
+      },
+      "public_return": -37.31544371192721
+    },
+    {
+      "episode": 42,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1041,
+        "resources": "provisioned",
+        "scenario": "secondary_pump_trip",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.12725235521793365,
+          0.12209098041057587,
+          0.1170123890042305,
+          0.11206915229558945
+        ],
+        "team_steps": 359,
+        "task_choices": 599,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04012661427259445
+      },
+      "public_return": -14.405453832894937
+    },
+    {
+      "episode": 43,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1042,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.130692720413208,
+          1.1089057922363281,
+          1.087241768836975,
+          1.0657228231430054
+        ],
+        "team_steps": 359,
+        "task_choices": 138,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10389983654022217
+      },
+      "public_return": -37.30004215909092
+    },
+    {
+      "episode": 44,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1043,
+        "resources": "provisioned",
+        "scenario": "dc_contact_hotspot",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.1320447474718094,
+          0.1271691918373108,
+          0.12249992042779922,
+          0.11805777996778488
+        ],
+        "team_steps": 359,
+        "task_choices": 584,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04087040200829506
+      },
+      "public_return": -14.672473742601579
+    },
+    {
+      "episode": 45,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1044,
+        "resources": "scarce",
+        "scenario": "tower_derate",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.1142909526824951,
+          1.0925854444503784,
+          1.0710647106170654,
+          1.0497437715530396
+        ],
+        "team_steps": 359,
+        "task_choices": 144,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1041211187839508
+      },
+      "public_return": -37.379478670036725
+    },
+    {
+      "episode": 46,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1045,
+        "resources": "provisioned",
+        "scenario": "dc_contact_hotspot",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.13232526183128357,
+          0.1280670464038849,
+          0.12402737885713577,
+          0.12022127956151962
+        ],
+        "team_steps": 359,
+        "task_choices": 590,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04036244750022888
+      },
+      "public_return": -14.490117213531406
+    },
+    {
+      "episode": 47,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1046,
+        "resources": "scarce",
+        "scenario": "grid_derate",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          1.0510189533233643,
+          1.0297902822494507,
+          1.008811116218567,
+          0.9880896806716919
+        ],
+        "team_steps": 359,
+        "task_choices": 151,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.1028205081820488
+      },
+      "public_return": -36.912563356307366
+    },
+    {
+      "episode": 48,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "nominal",
+        "seed": 1047,
+        "resources": "provisioned",
+        "scenario": "healthy",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          0.1281944066286087,
+          0.12406393140554428,
+          0.12009912729263306,
+          0.116317518055439
+        ],
+        "team_steps": 359,
+        "task_choices": 582,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.04101010411977768
+      },
+      "public_return": -14.722627743506497,
+      "validation_public_return": -15.224135084630081,
+      "per_validation_case": [
+        -15.250453971861464,
+        -15.374032111705601,
+        -15.170218430735936,
+        -15.101835824217323
+      ]
+    }
+  ],
+  "seconds": 70.5208008941263,
+  "device": "CPU",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.3",
+  "job_id": "129938",
+  "array_task": "0",
+  "estimator_checkpoint_sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "reward_scope": "Public observation and qualified completion only; no evaluation true hazards"
+}

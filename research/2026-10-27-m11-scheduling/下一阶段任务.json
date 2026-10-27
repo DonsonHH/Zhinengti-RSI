@@ -1,0 +1,75 @@
+{
+  "status": "planned_not_submitted",
+  "next_stage": "M11.1 coverage-preserving active inspection before M12 workflow improvement",
+  "reason": "Current fixed-budget PPO does not beat the feasible fixed tour; guard effects depend on resources; all main fixed-tour misses are shorter than300s",
+  "tasks": [
+    {
+      "id": "M11.1-A",
+      "objective": "Define which observations can validly complete each task",
+      "deliverables": [
+        "Calibrated telemetry versus professional reference-task capability matrix",
+        "Explicit known-inventory scope; undiscovered equipment or unknown-area exploration requires a separately defined discovery task",
+        "Voltage, current and supply-availability tasks with explicit completion semantics",
+        "Dedicated electrical-contact and feeder-fault validation conditions",
+        "Revisit and staffing assumptions tied to stated synthetic or expert evidence"
+      ],
+      "gate": "Do not require an unnecessary mobile visit for a remotely verifiable task; do not call a service-power gap confirmed just because contact heat was normal"
+    },
+    {
+      "id": "M11.1-B",
+      "objective": "Preserve a verified recurrent coverage schedule while allowing active detours",
+      "deliverables": [
+        "Explicit baseline tour and remaining-slack representation",
+        "Candidate detour acceptance checked against a complete feasible return schedule",
+        "Fallback actions when no justified detour fits",
+        "Exact event-time revisit gaps reported separately from sampled inspection ages",
+        "Tests for initial backlog, access restrictions, simultaneous reservations and service-time quantization"
+      ],
+      "gate": "A heuristic age threshold is not a guarantee; use an independently checked certificate or state the exact empirical scope"
+    },
+    {
+      "id": "M11.1-C",
+      "objective": "Measure active-checking benefit for short and transient anomalies",
+      "deliverables": [
+        "Separate duration-stratified anomaly confirmation metrics",
+        "Engineering meaning of actionable transient anomalies distinguished from harmless threshold crossings; no post-hoc relabeling of current M11 outcomes",
+        "Same resource and calibrated observation permissions for all comparators",
+        "Extra checking driven by measurement age, estimator disagreement and validated alert information",
+        "First discovery, persistent-event recheck and recovery confirmation recorded separately; predeclared reward interventions for repeated confirmations",
+        "New training, validation and untouched test seeds, with sensor-error and duration shifts"
+      ],
+      "gate": "No online access to true anomaly onset or hidden duration; finite visit capacity cannot be presented as guaranteeing detection of every arbitrarily brief event"
+    },
+    {
+      "id": "M11.1-D",
+      "objective": "Separate rule, learning and estimator effects",
+      "comparators": [
+        "Verified fixed tour",
+        "Matched heuristic with the same coverage-preserving gate",
+        "Untrained score network with the same gate",
+        "New policy trained with the gate",
+        "Separate policy trained without the gate",
+        "Nominal physical versus frozen history-estimator controls"
+      ],
+      "gate": "Freeze budgets and validation selection before new tests; current M11 tests become diagnostic material, not a fresh holdout"
+    }
+  ],
+  "later_M12": {
+    "objective": "Use an open language model to improve skills, tool selection and collaboration workflows on a reliable frozen task layer",
+    "prototype": "Bounded declarative workflow proposals; simulation truth and test labels remain evaluator-only",
+    "comparators": [
+      "Fixed workflow",
+      "Matched-budget search",
+      "Fixed improver proposals",
+      "Updated improver evaluated on independent cases"
+    ],
+    "gate": "Distinguish improved task workflows from recursive improvement of the improver itself; do not call the present PPO benchmark RSI"
+  },
+  "not_started": [
+    "M11.1 new policy training",
+    "M12 improver or workflow trials",
+    "Site calibration",
+    "Actual B-PID inference",
+    "Global optimal fleet-size search"
+  ]
+}

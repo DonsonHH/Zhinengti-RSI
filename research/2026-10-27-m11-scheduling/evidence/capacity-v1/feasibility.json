@@ -1,0 +1,3398 @@
+[
+  {
+    "racks": 128,
+    "variant": "open",
+    "level": "scarce",
+    "total_agents": 5,
+    "roles": {
+      "thermal": {
+        "tasks": 128,
+        "agents": 2,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 5,
+        "service_only_utilization": 2.1333333333333333,
+        "service_only_necessary_condition": false,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 64,
+            "closed_distance_m": 407.9999999999997,
+            "closed_quantized_cycle_s": 1215.0
+          },
+          {
+            "agent": 1,
+            "tasks": 64,
+            "closed_distance_m": 383.59999999999974,
+            "closed_quantized_cycle_s": 1195.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 2,
+            "tasks": 16,
+            "closed_distance_m": 228.0,
+            "closed_quantized_cycle_s": 585.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "cooling": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 3,
+            "tasks": 16,
+            "closed_distance_m": 228.0,
+            "closed_quantized_cycle_s": 585.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "control": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.4,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 4,
+            "tasks": 16,
+            "closed_distance_m": 228.0,
+            "closed_quantized_cycle_s": 505.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  },
+  {
+    "racks": 128,
+    "variant": "open",
+    "level": "provisioned",
+    "total_agents": 14,
+    "roles": {
+      "thermal": {
+        "tasks": 128,
+        "agents": 8,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 5,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 1,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 2,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 3,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 4,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 5,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 6,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 7,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 8,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 9,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 310.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "cooling": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 10,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 11,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 310.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "control": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.2,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 12,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 270.0
+          },
+          {
+            "agent": 13,
+            "tasks": 8,
+            "closed_distance_m": 126.0,
+            "closed_quantized_cycle_s": 270.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  },
+  {
+    "racks": 128,
+    "variant": "restricted",
+    "level": "scarce",
+    "total_agents": 5,
+    "roles": {
+      "thermal": {
+        "tasks": 128,
+        "agents": 2,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 5,
+        "service_only_utilization": 2.1333333333333333,
+        "service_only_necessary_condition": false,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 64,
+            "closed_distance_m": 407.9999999999997,
+            "closed_quantized_cycle_s": 1215.0
+          },
+          {
+            "agent": 1,
+            "tasks": 64,
+            "closed_distance_m": 414.3999999999998,
+            "closed_quantized_cycle_s": 1225.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 2,
+            "tasks": 16,
+            "closed_distance_m": 336.0,
+            "closed_quantized_cycle_s": 675.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "cooling": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 3,
+            "tasks": 16,
+            "closed_distance_m": 336.0,
+            "closed_quantized_cycle_s": 675.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "control": {
+        "tasks": 16,
+        "agents": 1,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.4,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 4,
+            "tasks": 16,
+            "closed_distance_m": 336.0,
+            "closed_quantized_cycle_s": 595.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  },
+  {
+    "racks": 128,
+    "variant": "restricted",
+    "level": "provisioned",
+    "total_agents": 14,
+    "roles": {
+      "thermal": {
+        "tasks": 128,
+        "agents": 8,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 5,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 1,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 2,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 3,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 4,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 5,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 6,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 7,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 8,
+            "tasks": 8,
+            "closed_distance_m": 162.0,
+            "closed_quantized_cycle_s": 340.0
+          },
+          {
+            "agent": 9,
+            "tasks": 8,
+            "closed_distance_m": 198.0,
+            "closed_quantized_cycle_s": 370.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "cooling": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 10,
+            "tasks": 8,
+            "closed_distance_m": 162.0,
+            "closed_quantized_cycle_s": 340.0
+          },
+          {
+            "agent": 11,
+            "tasks": 8,
+            "closed_distance_m": 198.0,
+            "closed_quantized_cycle_s": 370.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      },
+      "control": {
+        "tasks": 16,
+        "agents": 2,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 1,
+        "service_only_utilization": 0.2,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 12,
+            "tasks": 8,
+            "closed_distance_m": 162.0,
+            "closed_quantized_cycle_s": 300.0
+          },
+          {
+            "agent": 13,
+            "tasks": 8,
+            "closed_distance_m": 198.0,
+            "closed_quantized_cycle_s": 330.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": true
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  },
+  {
+    "racks": 3200,
+    "variant": "open",
+    "level": "scarce",
+    "total_agents": 125,
+    "roles": {
+      "thermal": {
+        "tasks": 3200,
+        "agents": 50,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 107,
+        "service_only_utilization": 2.1333333333333333,
+        "service_only_necessary_condition": false,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 1,
+            "tasks": 64,
+            "closed_distance_m": 537.5999999999998,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 2,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999994,
+            "closed_quantized_cycle_s": 1470.0
+          },
+          {
+            "agent": 3,
+            "tasks": 64,
+            "closed_distance_m": 671.9999999999993,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 4,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999995,
+            "closed_quantized_cycle_s": 1450.0
+          },
+          {
+            "agent": 5,
+            "tasks": 64,
+            "closed_distance_m": 665.5999999999997,
+            "closed_quantized_cycle_s": 1480.0
+          },
+          {
+            "agent": 6,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999996,
+            "closed_quantized_cycle_s": 1430.0
+          },
+          {
+            "agent": 7,
+            "tasks": 64,
+            "closed_distance_m": 659.1999999999999,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 8,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 9,
+            "tasks": 64,
+            "closed_distance_m": 537.6,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 10,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 11,
+            "tasks": 64,
+            "closed_distance_m": 537.5999999999998,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 12,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999994,
+            "closed_quantized_cycle_s": 1470.0
+          },
+          {
+            "agent": 13,
+            "tasks": 64,
+            "closed_distance_m": 671.9999999999993,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 14,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999995,
+            "closed_quantized_cycle_s": 1450.0
+          },
+          {
+            "agent": 15,
+            "tasks": 64,
+            "closed_distance_m": 665.5999999999997,
+            "closed_quantized_cycle_s": 1480.0
+          },
+          {
+            "agent": 16,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999996,
+            "closed_quantized_cycle_s": 1430.0
+          },
+          {
+            "agent": 17,
+            "tasks": 64,
+            "closed_distance_m": 659.1999999999999,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 18,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 19,
+            "tasks": 64,
+            "closed_distance_m": 537.6,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 20,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 21,
+            "tasks": 64,
+            "closed_distance_m": 537.5999999999998,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 22,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999994,
+            "closed_quantized_cycle_s": 1470.0
+          },
+          {
+            "agent": 23,
+            "tasks": 64,
+            "closed_distance_m": 671.9999999999993,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 24,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999995,
+            "closed_quantized_cycle_s": 1450.0
+          },
+          {
+            "agent": 25,
+            "tasks": 64,
+            "closed_distance_m": 665.5999999999997,
+            "closed_quantized_cycle_s": 1480.0
+          },
+          {
+            "agent": 26,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999996,
+            "closed_quantized_cycle_s": 1430.0
+          },
+          {
+            "agent": 27,
+            "tasks": 64,
+            "closed_distance_m": 659.1999999999999,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 28,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 29,
+            "tasks": 64,
+            "closed_distance_m": 537.6,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 30,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 31,
+            "tasks": 64,
+            "closed_distance_m": 537.5999999999998,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 32,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999994,
+            "closed_quantized_cycle_s": 1470.0
+          },
+          {
+            "agent": 33,
+            "tasks": 64,
+            "closed_distance_m": 671.9999999999993,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 34,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999995,
+            "closed_quantized_cycle_s": 1450.0
+          },
+          {
+            "agent": 35,
+            "tasks": 64,
+            "closed_distance_m": 665.5999999999997,
+            "closed_quantized_cycle_s": 1480.0
+          },
+          {
+            "agent": 36,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999996,
+            "closed_quantized_cycle_s": 1430.0
+          },
+          {
+            "agent": 37,
+            "tasks": 64,
+            "closed_distance_m": 659.1999999999999,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 38,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 39,
+            "tasks": 64,
+            "closed_distance_m": 537.6,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 40,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 41,
+            "tasks": 64,
+            "closed_distance_m": 537.5999999999998,
+            "closed_quantized_cycle_s": 1365.0
+          },
+          {
+            "agent": 42,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999994,
+            "closed_quantized_cycle_s": 1470.0
+          },
+          {
+            "agent": 43,
+            "tasks": 64,
+            "closed_distance_m": 671.9999999999993,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 44,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999995,
+            "closed_quantized_cycle_s": 1450.0
+          },
+          {
+            "agent": 45,
+            "tasks": 64,
+            "closed_distance_m": 665.5999999999997,
+            "closed_quantized_cycle_s": 1480.0
+          },
+          {
+            "agent": 46,
+            "tasks": 64,
+            "closed_distance_m": 644.7999999999996,
+            "closed_quantized_cycle_s": 1430.0
+          },
+          {
+            "agent": 47,
+            "tasks": 64,
+            "closed_distance_m": 659.1999999999999,
+            "closed_quantized_cycle_s": 1485.0
+          },
+          {
+            "agent": 48,
+            "tasks": 64,
+            "closed_distance_m": 529.5999999999995,
+            "closed_quantized_cycle_s": 1295.0
+          },
+          {
+            "agent": 49,
+            "tasks": 64,
+            "closed_distance_m": 537.6,
+            "closed_quantized_cycle_s": 1365.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 400,
+        "agents": 25,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 14,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 50,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 51,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 52,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 53,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 54,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 55,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 56,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 57,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 58,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 59,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 60,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 915.0
+          },
+          {
+            "agent": 61,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 62,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 63,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 64,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 65,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 66,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 67,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 68,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 69,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 70,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 71,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 72,
+            "tasks": 16,
+            "closed_distance_m": 555.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 73,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 74,
+            "tasks": 30,
+            "closed_distance_m": 636.0,
+            "closed_quantized_cycle_s": 1270.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "cooling": {
+        "tasks": 400,
+        "agents": 25,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 14,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 75,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 76,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 77,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 78,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 79,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 80,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 81,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 82,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 83,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 84,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 85,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 915.0
+          },
+          {
+            "agent": 86,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 870.0
+          },
+          {
+            "agent": 87,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 88,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 89,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 90,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 91,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 92,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 93,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 94,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 95,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 900.0
+          },
+          {
+            "agent": 96,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 97,
+            "tasks": 16,
+            "closed_distance_m": 555.0,
+            "closed_quantized_cycle_s": 920.0
+          },
+          {
+            "agent": 98,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 875.0
+          },
+          {
+            "agent": 99,
+            "tasks": 30,
+            "closed_distance_m": 636.0,
+            "closed_quantized_cycle_s": 1270.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "control": {
+        "tasks": 400,
+        "agents": 25,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 10,
+        "service_only_utilization": 0.4,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 100,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 101,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 102,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 840.0
+          },
+          {
+            "agent": 103,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 795.0
+          },
+          {
+            "agent": 104,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 840.0
+          },
+          {
+            "agent": 105,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 106,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 107,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 795.0
+          },
+          {
+            "agent": 108,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 109,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 110,
+            "tasks": 16,
+            "closed_distance_m": 552.0,
+            "closed_quantized_cycle_s": 835.0
+          },
+          {
+            "agent": 111,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 795.0
+          },
+          {
+            "agent": 112,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 113,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 114,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 115,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 116,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 117,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 118,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 119,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 120,
+            "tasks": 16,
+            "closed_distance_m": 534.0,
+            "closed_quantized_cycle_s": 820.0
+          },
+          {
+            "agent": 121,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 122,
+            "tasks": 16,
+            "closed_distance_m": 555.0,
+            "closed_quantized_cycle_s": 840.0
+          },
+          {
+            "agent": 123,
+            "tasks": 15,
+            "closed_distance_m": 531.0,
+            "closed_quantized_cycle_s": 800.0
+          },
+          {
+            "agent": 124,
+            "tasks": 30,
+            "closed_distance_m": 636.0,
+            "closed_quantized_cycle_s": 1120.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  },
+  {
+    "racks": 3200,
+    "variant": "open",
+    "level": "provisioned",
+    "total_agents": 350,
+    "roles": {
+      "thermal": {
+        "tasks": 3200,
+        "agents": 200,
+        "reference_revisit_s": 300.0,
+        "service_only_minimum_agents": 107,
+        "service_only_utilization": 0.5333333333333333,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 0,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 1,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 2,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 3,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 4,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 5,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 6,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 7,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 8,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 9,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 10,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 11,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 12,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 13,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 14,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 15,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 16,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 17,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 18,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 19,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 20,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 21,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 22,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 23,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 24,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 25,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 26,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 27,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 28,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 29,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 30,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 31,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 32,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 33,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 34,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 35,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 36,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 37,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 38,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 39,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 40,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 41,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 42,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 43,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 44,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 45,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 46,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 47,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 48,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 49,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 50,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 51,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 52,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 53,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 54,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 55,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 56,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 57,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 58,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 59,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 60,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 61,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 62,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 63,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 64,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 65,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 66,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 67,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 68,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 69,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 70,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 71,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 72,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 73,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 74,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 75,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 76,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 77,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 78,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 79,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 80,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 81,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 82,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 83,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 84,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 85,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 86,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 87,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 88,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 89,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 90,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 91,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 92,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 93,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 94,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 95,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 96,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 97,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 98,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 99,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 100,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 101,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 102,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 103,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 104,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 105,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 106,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 107,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 108,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 109,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 110,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 111,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 112,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 113,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 114,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 115,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 116,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 117,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 118,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 119,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 120,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 121,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 122,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 123,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 124,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 125,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 126,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 127,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 128,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 129,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 130,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 131,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 132,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 133,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 134,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 135,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 136,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 137,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 138,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 139,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 140,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 141,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 142,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 143,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 144,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 145,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 146,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 147,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 148,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 149,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 150,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 151,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 152,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 153,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 154,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 155,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 156,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 157,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 158,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 159,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 160,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 161,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 162,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 163,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 164,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 165,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 166,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 167,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 168,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 169,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 170,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 171,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 172,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 173,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 174,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 175,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 176,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 177,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 178,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 179,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 180,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 181,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 182,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 183,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 184,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 185,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 186,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 187,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 188,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 189,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 190,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 191,
+            "tasks": 16,
+            "closed_distance_m": 116.4,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 192,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000003,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 193,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 194,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 195,
+            "tasks": 16,
+            "closed_distance_m": 116.39999999999998,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 196,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 197,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          },
+          {
+            "agent": 198,
+            "tasks": 16,
+            "closed_distance_m": 118.00000000000006,
+            "closed_quantized_cycle_s": 310.0
+          },
+          {
+            "agent": 199,
+            "tasks": 16,
+            "closed_distance_m": 116.40000000000009,
+            "closed_quantized_cycle_s": 325.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "electrical": {
+        "tasks": 400,
+        "agents": 50,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 14,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 200,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 201,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 202,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 203,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 204,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 205,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 206,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 207,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 208,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 209,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 210,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 211,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 212,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 213,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 214,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 215,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 216,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 217,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 218,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 219,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 220,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 221,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 222,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 223,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 224,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 225,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 226,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 227,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 228,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 229,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 230,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 231,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 232,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 233,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 234,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 235,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 236,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 237,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 238,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 239,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 240,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 241,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 242,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 243,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 244,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 245,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 246,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 247,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 248,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 249,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "cooling": {
+        "tasks": 400,
+        "agents": 50,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 14,
+        "service_only_utilization": 0.26666666666666666,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 250,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 251,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 252,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 253,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 254,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 255,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 256,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 257,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 258,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 259,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 260,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 261,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 262,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 263,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 264,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 265,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 266,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 267,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 268,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 269,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 270,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 271,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 272,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 273,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 274,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 275,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 276,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 277,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 278,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 279,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 280,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 281,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 282,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 283,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 284,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 285,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 286,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 287,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 288,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 289,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 290,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 291,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 292,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 293,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 294,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 295,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 660.0
+          },
+          {
+            "agent": 296,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 297,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 655.0
+          },
+          {
+            "agent": 298,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          },
+          {
+            "agent": 299,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 545.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      },
+      "control": {
+        "tasks": 400,
+        "agents": 50,
+        "reference_revisit_s": 600.0,
+        "service_only_minimum_agents": 10,
+        "service_only_utilization": 0.2,
+        "service_only_necessary_condition": true,
+        "constructed_cycles": [
+          {
+            "agent": 300,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 301,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 302,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 303,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 304,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 305,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 306,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 307,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 308,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 309,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 310,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 311,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 312,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 313,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 314,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 315,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 316,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 317,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 318,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 319,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 320,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 321,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 322,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 323,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 324,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 325,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 326,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 327,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 328,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 329,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 330,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 331,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 332,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 333,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 334,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 335,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 336,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 337,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 338,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 339,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 340,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 341,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 342,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 343,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 344,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 345,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 620.0
+          },
+          {
+            "agent": 346,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 347,
+            "tasks": 8,
+            "closed_distance_m": 474.0,
+            "closed_quantized_cycle_s": 615.0
+          },
+          {
+            "agent": 348,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          },
+          {
+            "agent": 349,
+            "tasks": 8,
+            "closed_distance_m": 360.0,
+            "closed_quantized_cycle_s": 505.0
+          }
+        ],
+        "all_constructed_cycles_within_revisit": false
+      }
+    },
+    "claim": "Service is a necessary lower bound; listed closed tours certify only the constructed repetitive schedule, not all policies or initial backlog"
+  }
+]

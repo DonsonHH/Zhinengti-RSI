@@ -1,0 +1,87 @@
+{
+  "smoke": true,
+  "estimator": "history",
+  "seed": 0,
+  "episodes": 2,
+  "decision_steps": 718,
+  "PPO_epochs": 8,
+  "initial_parameters_sha256": "9a0e86fbe80ea16f8aa4fb9cc5750ee4d03c68e2545f86d24604a44f42f630da",
+  "parameters": 3010,
+  "best_validation_public_return": -17.02619335840164,
+  "selected_episode": 1,
+  "checkpoint_sha256": "01cd0cecaae3484c940c4642db24e7196778407cd33d507f167b83caaf28945b",
+  "learning": [
+    {
+      "episode": 1,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "history",
+        "seed": 90000,
+        "resources": "scarce",
+        "scenario": "healthy",
+        "control": "feedback"
+      },
+      "update": {
+        "losses": [
+          1.7546237707138062,
+          1.7306175231933594,
+          1.706835389137268,
+          1.683274269104004
+        ],
+        "team_steps": 359,
+        "task_choices": 143,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.10357005894184113
+      },
+      "public_return": -37.181651969696965,
+      "validation_public_return": -17.02619335840164,
+      "per_validation_case": [
+        -16.991376726190474,
+        -17.02072204029752,
+        -17.08936998917749,
+        -17.003304677941067
+      ]
+    },
+    {
+      "episode": 2,
+      "process": {
+        "racks": 128,
+        "variant": "open",
+        "estimator": "history",
+        "seed": 90001,
+        "resources": "provisioned",
+        "scenario": "dc_contact_hotspot",
+        "control": "fixed_commands"
+      },
+      "update": {
+        "losses": [
+          0.27914944291114807,
+          0.27267545461654663,
+          0.2659173607826233,
+          0.25902265310287476
+        ],
+        "team_steps": 359,
+        "task_choices": 593,
+        "full_rollout_epochs": 4,
+        "mean_public_reward": -0.040499355643987656
+      },
+      "public_return": -14.539268862241185,
+      "validation_public_return": -17.038653742096137,
+      "per_validation_case": [
+        -16.986868446969694,
+        -17.075179430053876,
+        -17.089168771645024,
+        -17.003398319715963
+      ]
+    }
+  ],
+  "seconds": 13.030099019408226,
+  "device": "CPU",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.3",
+  "job_id": "129935",
+  "array_task": null,
+  "estimator_checkpoint_sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "reward_scope": "Public observation and qualified completion only; no evaluation true hazards"
+}

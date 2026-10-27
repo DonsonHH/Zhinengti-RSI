@@ -1,0 +1,56 @@
+{
+  "phase": "M11",
+  "protocol_version": 2,
+  "clock_s": 5,
+  "decision_steps": 359,
+  "physical_steps": 360,
+  "first_decision_s": 5,
+  "end_s": 1800,
+  "training_episodes_each": 48,
+  "formal_training_runs": 6,
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "estimator_modes": [
+    "nominal",
+    "history"
+  ],
+  "actor_features": [
+    "age_ratio",
+    "eta_ratio",
+    "public_severity",
+    "never_inspected",
+    "measurement_age_ratio",
+    "model_disagreement",
+    "asset_weight",
+    "service_ratio",
+    "travel_ratio",
+    "thermal",
+    "electrical",
+    "cooling",
+    "control",
+    "clock_fraction",
+    "local_fraction",
+    "team_unverified_fraction"
+  ],
+  "rules": [
+    "cycle",
+    "urgency",
+    "risk",
+    "rolling"
+  ],
+  "guard_threshold_projected_age_ratio": 0.9,
+  "validation_interval_episodes": 12,
+  "PPO_epochs_each_episode": 4,
+  "PPO_gamma": 0.99,
+  "GAE_lambda": 0.95,
+  "PPO_clip": 0.2,
+  "learning_rate": 0.0003,
+  "test_base_process_conditions": 52,
+  "test_small_episodes": 1040,
+  "test_GW_episodes": 96,
+  "formal_test_episodes": 1136,
+  "scope": "Synthetic qualified zoned task scheduling; fixed plant, no repair, calibrated probability or recursive improver claim"
+}
