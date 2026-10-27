@@ -8,6 +8,8 @@
 
 当前代码是缩小的原理参考实现。M6已完成3组×3种子的高层分配实验和66项测试：完整组新布局逾期率0.159%，风险年龄/距离启发式3.52%；无VAE组0.184%，允许本轮重复目标的学习对照为0%。结果支持继续研究高层学习，尚不支持VAE稳定增益、显式排重优势或RSI有效的结论。M6同时改变动作、表示和算法，不能与M5作单因素比较。尚未复现论文表格；源仓库及版本差异见[源代码审计](research/2026-10-26-paper-rsi/source_audit.json)。
 
+最新M7已完成74项测试及27个冻结权重部署／规划任务：新压力条件下，完整学习组逾期4.875%、成对巡回4.324%。学习在相近机柜布局上更好，在交错通道布局上落后；VAE与排重的独立任务收益仍未证实。后续优先做新布局训练和表示对照。
+
 ## 研究说明
 
 - [方向校准](research/2026-10-26-paper-rsi/方向校准与实施记录.md)
@@ -31,6 +33,11 @@
 - [M6运行与结果：高层学习有效，VAE与排重增益待证](research/2026-10-27-m6-dispatch/运行与结果.md)
 - [M6实现与解释复核](research/2026-10-27-m6-dispatch/代码与方法复核.md)
 - [M6阶段验收与后续安排](research/2026-10-27-m6-dispatch/阶段验收.md)
+- [M6再次复核与M7安排](research/2026-10-27-m7-stress/M6复核与M7规划.md)
+- [M7冻结设计：固定权重压力迁移与部署交叉消融](research/2026-10-27-m7-stress/实验设计.md)
+- [M7代码与方法复核](research/2026-10-27-m7-stress/代码与方法复核.md)
+- [M7运行与结果：布局迁移、规划和部署交叉](research/2026-10-27-m7-stress/运行与结果.md)
+- [M7阶段验收](research/2026-10-27-m7-stress/阶段验收.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 
@@ -174,3 +181,21 @@ python scripts/summarize_m6_supplement.py --results research/2026-10-27-m6-dispa
 ```
 
 前两个命令仍需要PyTorch；最后一个只读取数据，使用Python标准库。
+
+## M7：压力迁移与部署开关交叉
+
+M6复核确认：静态场中目标测量永久保留，全部目标看过后，VAE不再影响这些目标的估计。完整组平均第10.625步看完目标，后续88.93%的决策步属于这种情况。M7先固定M6全部9份权重，检查更复杂布局和紧时限下的迁移，区分训练方式与部署工具／排重规则的作用。
+
+`stress.py`复用相同低层控制，增加交错通道布局、时刻位置配对噪声、全队到达收益匹配和成对巡回规则。`m7.py`评价7种学习部署设置×3检查点种子与6种规划设置，共27任务、96条件、2,592条记录；不做新训练或检查点重选。
+
+```bash
+sbatch --output="$PWD/smoke-%j.out" --error="$PWD/smoke-%j.err" cluster/m7_stress.sbatch \
+  "$PWD" /absolute/M6-results /absolute/frozen_m6_weights.json /absolute/M1-results/vae/best-vae.pt smoke
+# 开发门槛完整通过后：
+sbatch --array=0-26%6 --output="$PWD/eval-%A_%a.out" --error="$PWD/eval-%A_%a.err" cluster/m7_stress.sbatch \
+  "$PWD" /absolute/M6-results /absolute/frozen_m6_weights.json /absolute/M1-results/vae/best-vae.pt
+```
+
+部署交叉是冻结权重的敏感性检验，不能当成重新训练消融；全队匹配仅对一次加性代理目标穷举最优，不是最优持续巡检。启动逾期下界与完整任务可行性分别报告。
+
+M7全部2,592条记录已通过物理／规划重放，本地复算全部分层均值、样本标准差和工具／掩码交叉结果。四张结果图、原始压缩轨迹和Slurm终态见M7报告。没有增加新的语言模型或RSI调用。
