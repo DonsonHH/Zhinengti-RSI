@@ -1,0 +1,62 @@
+{
+  "stage": "M12-B paired improver-update study",
+  "generation_seeds": [
+    7101,
+    7102,
+    7103
+  ],
+  "meta_rounds": 2,
+  "inner_candidates_each_arm": 2,
+  "direct_candidates": 13,
+  "random_meta_task_candidates": 5,
+  "model_meta_task_candidates": 3,
+  "random_search_candidates": 13,
+  "fixed3_is_direct13_prefix": true,
+  "random_meta3_is_random_meta5_prefix": true,
+  "maximum_model_calls_per_generation_seed": 39,
+  "maximum_input_tokens_per_call": 6144,
+  "maximum_output_tokens_per_call": 768,
+  "meta_seeds": [
+    6400,
+    6401,
+    6402,
+    6403
+  ],
+  "adaptation_seeds": [
+    6500,
+    6501
+  ],
+  "test_seeds": [
+    6600,
+    6601
+  ],
+  "test_physical_conditions": 16,
+  "test_observation_conditions": 32,
+  "noise_c": [
+    0.2,
+    1.0
+  ],
+  "fault_start_domain_s": [
+    150,
+    335,
+    520,
+    705
+  ],
+  "new_neural_training": false,
+  "model": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "actor": "M11 history-seed0, frozen",
+  "estimator": "M10 frozen history-seed1",
+  "initial_program": {
+    "refresh_s": 30,
+    "cooldown_s": 60,
+    "fallback": "tour",
+    "rules": []
+  },
+  "validator_change": "Annotated development evaluation selects programs; prompt only sees public diagnostics plus limited accept/rollback feedback.",
+  "transfer": "Only validated protocol transfers; task program and experience reset.",
+  "shared_tail_rule": "No optional detours once next baseline item cannot finish before1800.",
+  "all_test_groups_per_trial": 11,
+  "all_test_group_case_references_per_trial": 352,
+  "scope": "Synthetic fixed-layout procedural improver updates; not unrestricted self-modifying code or model weight improvement"
+}

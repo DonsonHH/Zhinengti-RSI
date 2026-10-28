@@ -1,0 +1,66 @@
+{
+  "tag": "random_search",
+  "slot": 1,
+  "generation_seed": 71019501,
+  "parent_id": "8725c244aa61749b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11793.399999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "4ff4bcc0fda46c3e",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 0,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "contact_heat",
+          "threshold": 0.5,
+          "action": "ppo"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": true,
+  "reason": "validated_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11784.774999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "e7e1f78a7045e9e1de799fcc",
+    "8c268bd54e0d0630df6ff9c8",
+    "1a1c95d1180034c16ab3da14",
+    "80ad7f55620320797f0fad49",
+    "ca5fa961b14385a245259149",
+    "d3661b319901de948a5b3be4",
+    "f1994b6be32b08b26071ee99",
+    "60a4c1bc2283268e4ea4dc78"
+  ]
+}

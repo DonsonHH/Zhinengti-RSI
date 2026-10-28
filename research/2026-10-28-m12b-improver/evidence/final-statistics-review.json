@@ -1,0 +1,123 @@
+{
+  "counts_by_trial": {
+    "0": 456,
+    "1": 482,
+    "2": 414
+  },
+  "phase_totals": {
+    "adapt": 512,
+    "meta0": 34,
+    "meta1": 38,
+    "test": 768
+  },
+  "actual_records": 1352,
+  "distinct_case_signatures": 1078,
+  "distinct_physical_processes": 28,
+  "all_group_conditions_and_attribution_fractions_verified": true,
+  "same_process_service_loss_across_policies_and_noise_verified": true,
+  "physical_anomaly_denominator": "21 underlying segments repeated under2noise conditions;42evaluation records per group, shared again over3proposal trials",
+  "meta_model_accepts": 4,
+  "meta_random_accepts": 3,
+  "audit_totals": {
+    "actual_dispatches": 1890075,
+    "completed_measurements": 1890075,
+    "full_return_plans_independently_checked": 1890075,
+    "typed_choices_independently_checked": 1890075,
+    "all_actual_cases_replayed": 1352,
+    "physical_arrays_verified": 84,
+    "actual_model_calls": 117,
+    "task_candidate_slots": 150
+  },
+  "total_formal_generation_cost": {
+    "model_calls": 117,
+    "input_tokens": 182706,
+    "output_tokens": 21070,
+    "generation_seconds": 951.7428217129782,
+    "duplicate_task_proposals": 52,
+    "invalid_task_proposals": 1
+  },
+  "model_program_deployment_attribution": [
+    {
+      "trial": 0,
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      },
+      "no_executed_PPO_tool": true,
+      "no_actor_and_nominal_have_identical_anomaly_outcomes": true
+    },
+    {
+      "trial": 1,
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "no_executed_PPO_tool": true,
+      "no_actor_and_nominal_have_identical_anomaly_outcomes": true
+    },
+    {
+      "trial": 2,
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "no_executed_PPO_tool": true,
+      "no_actor_and_nominal_have_identical_anomaly_outcomes": true
+    }
+  ],
+  "scope": "Current local checks of all compact metrics and declared example records; complete raw-event/physical-array verification is in the successful independent Slurm audits"
+}

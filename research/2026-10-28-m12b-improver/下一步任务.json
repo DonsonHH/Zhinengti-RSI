@@ -1,0 +1,53 @@
+{
+  "goal": "在指定巡检论文基础上，以可信机房任务检验技能、工具调用、协作流程及改进器自身的持续改进，形成论文证据",
+  "current_stage": "M12-B复核、接口修订、配对协议更新与迁移比较",
+  "current_status": "completed_with_full_actual_replay_and_original_evidence",
+  "next_stage_status": "planned_not_submitted",
+  "current_findings": {
+    "full_tests_no_skips": 152,
+    "actual_closed_loop_records": 1352,
+    "case_signatures_after_cross_trial_deduplication": 1078,
+    "formal_model_calls": 117,
+    "test_physical_conditions": 16,
+    "test_noise_conditions": 32,
+    "fixed3_missed_per_trial_out_of42": [12, 12, 12],
+    "model_meta3_missed_per_trial_out_of42": [12, 14, 12],
+    "model_protocol_updates_accepted_out_of6": 4,
+    "recursive_transfer_gain_demonstrated": false,
+    "PPO_or_CVAE_task_gain_in_final_model_programs_demonstrated": false
+  },
+  "tasks": [
+    {
+      "id": "C0-evidence-diagnosis",
+      "objective": "解释开发有效但迁移无效的协议，形成事件级公开诊断",
+      "deliverables": ["逐元协议的任务程序变化、重复/无效提案、开发与测试结果对应表", "设备-项目-证据-时间-代价的公开失败事件结构", "回合摘要/事件诊断/固定直接搜索对照", "明确每回合最大值均值与全局最坏值的接口区别"],
+      "gate": "本轮测试只作诊断；后续方法和协议选择使用新开发数据，不能继续以旧测试选优"
+    },
+    {
+      "id": "C1-tool-value",
+      "objective": "在保持原论文关系的同时证明学习/估计工具的实际任务价值",
+      "deliverables": ["需要历史利用或预测的可解释受控任务", "同观测、工时、时限下的规则/名义模型/CVAE对照", "必要时在新动作接口上冻结预算并用3个配对初始化重训策略", "学习、人工返回技能、自动工作流与计算成本分别归因"],
+      "gate": "工具在代码中存在不等于有效；不强制调用无收益工具制造AI占比；不以冻结演员负结果否定充分训练的学习方法"
+    },
+    {
+      "id": "C2-professional-handoff",
+      "objective": "将有用改进扩展到导师要求的检查内容和跨专业交接",
+      "deliverables": ["设备-检查项目-有效证据映射及专业依据", "合格遥测足够时免移动、不足时产生补查需求", "同设备多项目行程合并与分别核验", "单角色同调用预算对照，及任务交接、失败重试的有界流程", "若允许跨执行者接管，重新构建共同覆盖计划"],
+      "gate": "已有固定所属任务证明不能支持共享责任；未知设备和区域发现另立任务，不能用已知清单覆盖替代"
+    },
+    {
+      "id": "C3-protocol-and-budget",
+      "objective": "在诊断和任务接口冻结后再次检验元协议迁移与成本价值",
+      "deliverables": ["独立元开发、任务开发和测试划分及注入相位/噪声配对", "固定改进器、随机协议、模型协议和直接搜索从相同起点比较", "只迁移协议，不迁移已优化程序或元案例", "元准备/任务适配/真实token/环境评价/部署工具成本表和效果曲线", "根据需要区分同布局新实例与跨布局泛化"],
+      "gate": "不按当前负结果追加预算直到出现正结果；模型调用数相同不等于实际总资源相同"
+    },
+    {
+      "id": "paper-decision",
+      "objective": "依据稳定受控结果确定论文贡献与导师汇报",
+      "deliverables": ["原方法保留、领域适配、人工接口和自动修改对应表", "与已有自动工作流/递归智能体工作的逐机制比较", "正负案例、强巡回基线、完整复现记录及适用范围", "现场参数、检查规程和有价值短时异常的资料需求"],
+      "gate": "没有额外元协议收益时，不以递归增强为已验证主贡献；原文完整复现、现场标定和新颖性仍需各自证据"
+    }
+  ],
+  "plan_document": "下一步方案.md",
+  "not_started": ["M12-C事件诊断比较", "新接口策略重训", "跨专业任务交接试验", "跨布局泛化验证", "现场标定", "未知设备自动发现", "论文提交"]
+}

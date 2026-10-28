@@ -1,0 +1,389 @@
+{
+  "stage": "M12-A retrospective review; no new selection on old test data",
+  "compact_source_sha256": "79c39abb6d9416e9c5d53eba2be77816172372e946b3b6bae9eb3004cb732b9c",
+  "development_unique_programs": 11,
+  "development_case_records": 88,
+  "all_first_alert_task_weights_equal": true,
+  "all_coverage_and_exact_violation_terms_equal": true,
+  "selection_rank_ordered_programs": [
+    {
+      "version_id": "921458d17db9a2da",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": [
+          {
+            "role": "all",
+            "signal": "risk",
+            "threshold": 0.5,
+            "ranker": "risk"
+          },
+          {
+            "role": "cooling",
+            "signal": "age",
+            "threshold": 0.75,
+            "ranker": "urgency"
+          },
+          {
+            "role": "all",
+            "signal": "age",
+            "threshold": 0.25,
+            "ranker": "uncertainty"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 11,
+      "weighted_censored_delay_s": 110.53304490469725,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.3263067720875788,
+      "mean_travel_m": 12565.249999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "54edf3aecd1b8d19",
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 120,
+        "rules": [
+          {
+            "role": "electrical",
+            "signal": "age",
+            "threshold": 0.75,
+            "ranker": "urgency"
+          },
+          {
+            "role": "all",
+            "signal": "uncertainty",
+            "threshold": 0.25,
+            "ranker": "uncertainty"
+          },
+          {
+            "role": "all",
+            "signal": "age",
+            "threshold": 0.5,
+            "ranker": "risk"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 11,
+      "weighted_censored_delay_s": 106.28727407865566,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.3371413995288801,
+      "mean_travel_m": 13079.549999999992,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "066d0b25f8e82e9c",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 120,
+        "rules": []
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 96.06489785594513,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.34158076426114437,
+      "mean_travel_m": 13202.074999999992,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "8256909cf6390543",
+      "workflow": {
+        "refresh_s": 120,
+        "cooldown_s": 120,
+        "rules": [
+          {
+            "role": "thermal",
+            "signal": "risk",
+            "threshold": 0.05,
+            "ranker": "urgency"
+          },
+          {
+            "role": "electrical",
+            "signal": "risk",
+            "threshold": 0.05,
+            "ranker": "uncertainty"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 96.06489785594513,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.3416367020494486,
+      "mean_travel_m": 13203.949999999992,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "77fad5deeb0d242d",
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "rules": [
+          {
+            "role": "electrical",
+            "signal": "uncertainty",
+            "threshold": 0.05,
+            "ranker": "urgency"
+          },
+          {
+            "role": "control",
+            "signal": "age",
+            "threshold": 0.75,
+            "ranker": "uncertainty"
+          },
+          {
+            "role": "electrical",
+            "signal": "age",
+            "threshold": 0.25,
+            "ranker": "urgency"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 106.06246311027296,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.34807888427774286,
+      "mean_travel_m": 13308.824999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "874cc59b4ed1ec72",
+      "workflow": {
+        "refresh_s": 120,
+        "cooldown_s": 30,
+        "rules": [
+          {
+            "role": "electrical",
+            "signal": "uncertainty",
+            "threshold": 0.05,
+            "ranker": "risk"
+          },
+          {
+            "role": "electrical",
+            "signal": "risk",
+            "threshold": 0.25,
+            "ranker": "urgency"
+          },
+          {
+            "role": "cooling",
+            "signal": "age",
+            "threshold": 0.25,
+            "ranker": "uncertainty"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 114.52995430126626,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.34834294803629356,
+      "mean_travel_m": 13320.624999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "ba10532f0b6bf24d",
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "rules": [
+          {
+            "role": "thermal",
+            "signal": "risk",
+            "threshold": 0.25,
+            "ranker": "risk"
+          },
+          {
+            "role": "electrical",
+            "signal": "uncertainty",
+            "threshold": 0.5,
+            "ranker": "urgency"
+          },
+          {
+            "role": "cooling",
+            "signal": "age",
+            "threshold": 0.5,
+            "ranker": "risk"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 114.52995430126626,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.3510091592855611,
+      "mean_travel_m": 13420.574999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "7be97118c7cbc76f",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 30,
+        "rules": []
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 114.52995430126626,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.35110603835540116,
+      "mean_travel_m": 13422.074999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "34e357a694a43a9f",
+      "workflow": {
+        "refresh_s": 120,
+        "cooldown_s": 60,
+        "rules": [
+          {
+            "role": "thermal",
+            "signal": "age",
+            "threshold": 0.75,
+            "ranker": "urgency"
+          },
+          {
+            "role": "electrical",
+            "signal": "age",
+            "threshold": 0.5,
+            "ranker": "uncertainty"
+          },
+          {
+            "role": "cooling",
+            "signal": "age",
+            "threshold": 0.25,
+            "ranker": "uncertainty"
+          }
+        ]
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 123.66557716862637,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.3543439223295994,
+      "mean_travel_m": 13846.199999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "ea260b780ec88869",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 91.37157444318935,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.35647106274114804,
+      "mean_travel_m": 13820.999999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    },
+    {
+      "version_id": "56e36d99f92387d5",
+      "workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "anomaly_segments": 19,
+      "missed_segments": 10,
+      "weighted_censored_delay_s": 91.37157444318935,
+      "mean_public_first_alert_task_weight": 1.5078125,
+      "mean_public_weighted_age": 0.35647106274114804,
+      "mean_travel_m": 13820.999999999993,
+      "violating_tasks": 0,
+      "mean_coverage": 1.0
+    }
+  ],
+  "initial_program": {
+    "version_id": "ea260b780ec88869",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "anomaly_segments": 19,
+    "missed_segments": 10,
+    "weighted_censored_delay_s": 91.37157444318935,
+    "mean_public_first_alert_task_weight": 1.5078125,
+    "mean_public_weighted_age": 0.35647106274114804,
+    "mean_travel_m": 13820.999999999993,
+    "violating_tasks": 0,
+    "mean_coverage": 1.0
+  },
+  "selected_model_program": {
+    "version_id": "ba10532f0b6bf24d",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "anomaly_segments": 19,
+    "missed_segments": 10,
+    "weighted_censored_delay_s": 114.52995430126626,
+    "mean_public_first_alert_task_weight": 1.5078125,
+    "mean_public_weighted_age": 0.3510091592855611,
+    "mean_travel_m": 13420.574999999993,
+    "violating_tasks": 0,
+    "mean_coverage": 1.0
+  },
+  "model_versus_initial_development": {
+    "public_age_delta": -0.005461903455586947,
+    "missed_segment_delta": 0,
+    "censored_delay_delta_s": 23.158379858076913
+  },
+  "proposal_outcomes": {
+    "random_search": {
+      "no_strict_public_improvement": 4,
+      "strict_public_development_improvement": 5
+    },
+    "llm_no_memory": {
+      "strict_public_development_improvement": 3,
+      "duplicate_consumes_slot": 6
+    },
+    "llm_memory": {
+      "strict_public_development_improvement": 3,
+      "duplicate_consumes_slot": 6
+    }
+  },
+  "all_llm_selected_programs_identical": true,
+  "interpretation": "Public first-alert count saturates on these development cases; selection then favors age, which is not the hidden confirmation-delay objective. Numeric M12-A results remain unchanged.",
+  "hypotheses_not_proven": [
+    "Coarse aggregate diagnostics, restricted grammar or proposal instructions may contribute to repeats; repetition alone does not identify the cause"
+  ],
+  "review_scope": "Current source/archive/statistic verification plus complete retrospective metadata; previous full312case replay retained, not rerun again here"
+}

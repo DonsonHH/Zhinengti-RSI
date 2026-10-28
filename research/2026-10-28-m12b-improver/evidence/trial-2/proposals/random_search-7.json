@@ -1,0 +1,76 @@
+{
+  "tag": "random_search",
+  "slot": 7,
+  "generation_seed": 71039507,
+  "parent_id": "c038cb892393c78b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 3,
+    "weighted_censored_delay_s": 109.07573068631548,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 12778.899999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "da2b1b31da1d8957",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 0,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "verified_sensor_bias",
+          "threshold": 0.5,
+          "action": "ppo"
+        },
+        {
+          "signal": "verified_sensor_bias",
+          "threshold": 0.5,
+          "action": "return_tour"
+        },
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.5,
+          "action": "signal"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 6,
+    "weighted_censored_delay_s": 91.70427651467614,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11798.787499999991,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "411de2b462c295a30f81a8f1",
+    "78a56867329a5570d9466e96",
+    "adfa66328e7eb18988dd5127",
+    "10f4ca94241a33f6b57468c4",
+    "13d71667e15d6a3fd5b1c599",
+    "69e530e27550fb62bd7a957a",
+    "b61afd96784b09ccdaf9e40f",
+    "9ed363f19d99966d9130ef73"
+  ]
+}

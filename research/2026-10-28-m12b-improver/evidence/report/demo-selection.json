@@ -1,0 +1,102 @@
+[
+  {
+    "trial": 0,
+    "group": "tour",
+    "case": "d64255888f419074d7002f2e",
+    "path": "cases/d64255888f419074d7002f2e.json.gz",
+    "version_id": "8725c244aa61749b",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    }
+  },
+  {
+    "trial": 0,
+    "group": "direct3",
+    "case": "78a4907f02d7a7b817612831",
+    "path": "cases/78a4907f02d7a7b817612831.json.gz",
+    "version_id": "b41a98ddf270bbd5",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.05,
+          "action": "return_tour"
+        }
+      ]
+    }
+  },
+  {
+    "trial": 0,
+    "group": "random_search13",
+    "case": "a4745bfb486de9e9509b0aae",
+    "path": "cases/a4745bfb486de9e9509b0aae.json.gz",
+    "version_id": "49483e093dd7d27e",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 0,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.5,
+          "action": "signal"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "urgency"
+        }
+      ]
+    }
+  },
+  {
+    "trial": 0,
+    "group": "model_meta3",
+    "case": "b3559dec3ff69bd6857afc0e",
+    "path": "cases/b3559dec3ff69bd6857afc0e.json.gz",
+    "version_id": "063db664db57d7f7",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "signal"
+        }
+      ]
+    }
+  }
+]

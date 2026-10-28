@@ -1,0 +1,260 @@
+{
+  "tag": "random_meta-transfer",
+  "slot": 0,
+  "generation_seed": 71038000,
+  "parent_id": "8725c244aa61749b",
+  "protocol": {
+    "diagnostics": [
+      "professional_evidence"
+    ],
+    "memory": "none",
+    "instruction": "Reduce repeated checking and use history-model disagreement only for thermal tasks."
+  },
+  "protocol_id": "f1390592ed8b14e1",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11793.399999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "generation": {
+    "prompt": {
+      "task": "propose_patrol_program",
+      "current_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "improver_protocol": {
+        "diagnostics": [
+          "professional_evidence"
+        ],
+        "memory": "none",
+        "instruction": "Reduce repeated checking and use history-model disagreement only for thermal tasks."
+      },
+      "public_diagnostics": [
+        {
+          "tool": "professional_evidence",
+          "result": {
+            "thermal": {
+              "checks": 1132.0,
+              "distinct_checked_tasks": 128.0,
+              "distinct_measured_alarm_tasks": 1.25,
+              "new_measured_alerts": 1.25,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 1.25,
+              "measurement_field": "temperature_c",
+              "unit": "degC",
+              "mean_measured_value": 51.11555605740813,
+              "largest_public_completion_gap_s": 240.0
+            },
+            "electrical": {
+              "checks": 94.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.25,
+              "new_measured_alerts": 0.25,
+              "persistent_rechecks": 0.75,
+              "recovery_confirmations": 0.0,
+              "measurement_field": "contact_temperature_c",
+              "unit": "degC",
+              "mean_measured_value": 43.144650245954594,
+              "largest_public_completion_gap_s": 310.0
+            },
+            "cooling": {
+              "checks": 94.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.25,
+              "new_measured_alerts": 0.25,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 0.25,
+              "measurement_field": "pod_flow_kg_s",
+              "unit": "kg/s",
+              "mean_measured_value": 36.03611567245797,
+              "largest_public_completion_gap_s": 310.0
+            },
+            "control": {
+              "checks": 106.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.0,
+              "new_measured_alerts": 0.0,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 0.0,
+              "measurement_field": "controller_sensor_error_c",
+              "unit": "degC",
+              "mean_measured_value": 0.0,
+              "largest_public_completion_gap_s": 270.0
+            }
+          }
+        }
+      ],
+      "retrieved_candidates": [],
+      "response_keys": [
+        "diagnosis",
+        "workflow",
+        "expected_effect"
+      ],
+      "response_types": {
+        "diagnosis": "ONE explanatory string, never a list",
+        "workflow": "object",
+        "expected_effect": "ONE string"
+      },
+      "maximum_rule_count": 3,
+      "rule_count_policy": "Choose at most three conditions, not one per profession. Four rules is invalid.",
+      "workflow_keys": [
+        "refresh_s",
+        "cooldown_s",
+        "fallback",
+        "rules"
+      ],
+      "domains": {
+        "refresh_s": [
+          30,
+          60,
+          120
+        ],
+        "cooldown_s": [
+          0,
+          30,
+          60,
+          120
+        ],
+        "fallback": [
+          "tour",
+          "ppo"
+        ],
+        "rules": "0..3 ordered rules; each has exactly signal, threshold, action",
+        "signal": [
+          "age",
+          "thermal_excess",
+          "thermal_disagreement",
+          "contact_heat",
+          "flow_deficit",
+          "verified_sensor_bias"
+        ],
+        "threshold": "ONE NUMBER from the signal threshold domain",
+        "threshold_domains": {
+          "age": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "thermal_excess": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "thermal_disagreement": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "contact_heat": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "flow_deficit": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "verified_sensor_bias": [
+            0.5
+          ]
+        },
+        "action": [
+          "signal",
+          "urgency",
+          "ppo",
+          "return_tour"
+        ]
+      },
+      "semantics": {
+        "signal_profession": {
+          "age": "all",
+          "thermal_excess": "thermal",
+          "thermal_disagreement": "thermal",
+          "contact_heat": "electrical",
+          "flow_deficit": "cooling",
+          "verified_sensor_bias": "control"
+        },
+        "thermal_excess": "max(estimatedTemp-65,0)/20; degC scale; thermal only",
+        "thermal_disagreement": "abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty",
+        "contact_heat": "max(measuredContactTemp-60,0)/30; electrical only, not supply availability",
+        "flow_deficit": "max(1-measuredFlow/33.6,0); cooling only",
+        "verified_sensor_bias": "Previously valid reference comparison above1degC; control only",
+        "age": "Known task age/public revisit period",
+        "rules": "First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.",
+        "signal_action": "Typed signal times public asset weight divided by completion cost",
+        "fallback": "tour returns to baseline; ppo uses the frozen trained actor if no rule matches.",
+        "tool_use": "refresh_s changes actual CVAE calls; cooldown applies only to optional detours."
+      },
+      "constraints": [
+        "Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.",
+        "No changes to hidden evaluator, weights, data, costs or budgets; no source code.",
+        "Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.",
+        "Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters."
+      ]
+    },
+    "rendered_prompt": "<|im_start|>system\nReturn one JSON object using exactly the response_keys in the request. This is offline patrol-program or improver-protocol adaptation with a fixed validator. Use only supplied public diagnostics and allowed feedback. Preserve models, measurement validity, coverage, evaluation, grammar, data and budgets. Never emit source code. diagnosis and expected_effect must each be a short STRING, never a list. workflow.rules must contain at most THREE entries; choose a subset, never four rules.<|im_end|>\n<|im_start|>user\n{\"task\": \"propose_patrol_program\", \"current_workflow\": {\"refresh_s\": 30, \"cooldown_s\": 60, \"fallback\": \"tour\", \"rules\": []}, \"improver_protocol\": {\"diagnostics\": [\"professional_evidence\"], \"memory\": \"none\", \"instruction\": \"Reduce repeated checking and use history-model disagreement only for thermal tasks.\"}, \"public_diagnostics\": [{\"tool\": \"professional_evidence\", \"result\": {\"thermal\": {\"checks\": 1132.0, \"distinct_checked_tasks\": 128.0, \"distinct_measured_alarm_tasks\": 1.25, \"new_measured_alerts\": 1.25, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 1.25, \"measurement_field\": \"temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 51.11555605740813, \"largest_public_completion_gap_s\": 240.0}, \"electrical\": {\"checks\": 94.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.25, \"new_measured_alerts\": 0.25, \"persistent_rechecks\": 0.75, \"recovery_confirmations\": 0.0, \"measurement_field\": \"contact_temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 43.144650245954594, \"largest_public_completion_gap_s\": 310.0}, \"cooling\": {\"checks\": 94.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.25, \"new_measured_alerts\": 0.25, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 0.25, \"measurement_field\": \"pod_flow_kg_s\", \"unit\": \"kg/s\", \"mean_measured_value\": 36.03611567245797, \"largest_public_completion_gap_s\": 310.0}, \"control\": {\"checks\": 106.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.0, \"new_measured_alerts\": 0.0, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 0.0, \"measurement_field\": \"controller_sensor_error_c\", \"unit\": \"degC\", \"mean_measured_value\": 0.0, \"largest_public_completion_gap_s\": 270.0}}}], \"retrieved_candidates\": [], \"response_keys\": [\"diagnosis\", \"workflow\", \"expected_effect\"], \"response_types\": {\"diagnosis\": \"ONE explanatory string, never a list\", \"workflow\": \"object\", \"expected_effect\": \"ONE string\"}, \"maximum_rule_count\": 3, \"rule_count_policy\": \"Choose at most three conditions, not one per profession. Four rules is invalid.\", \"workflow_keys\": [\"refresh_s\", \"cooldown_s\", \"fallback\", \"rules\"], \"domains\": {\"refresh_s\": [30, 60, 120], \"cooldown_s\": [0, 30, 60, 120], \"fallback\": [\"tour\", \"ppo\"], \"rules\": \"0..3 ordered rules; each has exactly signal, threshold, action\", \"signal\": [\"age\", \"thermal_excess\", \"thermal_disagreement\", \"contact_heat\", \"flow_deficit\", \"verified_sensor_bias\"], \"threshold\": \"ONE NUMBER from the signal threshold domain\", \"threshold_domains\": {\"age\": [0.25, 0.5, 0.75], \"thermal_excess\": [0.05, 0.25, 0.5], \"thermal_disagreement\": [0.05, 0.25, 0.5], \"contact_heat\": [0.05, 0.25, 0.5], \"flow_deficit\": [0.05, 0.25, 0.5], \"verified_sensor_bias\": [0.5]}, \"action\": [\"signal\", \"urgency\", \"ppo\", \"return_tour\"]}, \"semantics\": {\"signal_profession\": {\"age\": \"all\", \"thermal_excess\": \"thermal\", \"thermal_disagreement\": \"thermal\", \"contact_heat\": \"electrical\", \"flow_deficit\": \"cooling\", \"verified_sensor_bias\": \"control\"}, \"thermal_excess\": \"max(estimatedTemp-65,0)/20; degC scale; thermal only\", \"thermal_disagreement\": \"abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty\", \"contact_heat\": \"max(measuredContactTemp-60,0)/30; electrical only, not supply availability\", \"flow_deficit\": \"max(1-measuredFlow/33.6,0); cooling only\", \"verified_sensor_bias\": \"Previously valid reference comparison above1degC; control only\", \"age\": \"Known task age/public revisit period\", \"rules\": \"First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.\", \"signal_action\": \"Typed signal times public asset weight divided by completion cost\", \"fallback\": \"tour returns to baseline; ppo uses the frozen trained actor if no rule matches.\", \"tool_use\": \"refresh_s changes actual CVAE calls; cooldown applies only to optional detours.\"}, \"constraints\": [\"Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.\", \"No changes to hidden evaluator, weights, data, costs or budgets; no source code.\", \"Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.\", \"Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters.\"]}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_response": "{\n  \"diagnosis\": \"High thermal checks and low distinct tasks suggest over-checking in thermal areas.\",\n  \"workflow\": {\n    \"refresh_s\": 60,\n    \"cooldown_s\": 30,\n    \"fallback\": \"ppo\",\n    \"rules\": [\n      {\n        \"signal\": \"thermal_excess\",\n        \"threshold\": 0.25,\n        \"action\": \"urgency\"\n      },\n      {\n        \"signal\": \"contact_heat\",\n        \"threshold\": 0.05,\n        \"action\": \"signal\"\n      },\n      {\n        \"signal\": \"flow_deficit\",\n        \"threshold\": 0.25,\n        \"action\": \"return_tour\"\n      }\n    ]\n  },\n  \"expected_effect\": \"Reduce redundant thermal checks and prioritize urgent tasks with higher signal-action weights.\"\n}",
+    "input_tokens": 1413,
+    "output_tokens": 175,
+    "generation_seconds": 7.763108471408486
+  },
+  "valid": true,
+  "candidate_id": "8999a33fce1f1bb4",
+  "proposal": {
+    "diagnosis": "High thermal checks and low distinct tasks suggest over-checking in thermal areas.",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "ppo",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.05,
+          "action": "signal"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "expected_effect": "Reduce redundant thermal checks and prioritize urgent tasks with higher signal-action weights."
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 8,
+    "weighted_censored_delay_s": 115.78232928820137,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 13363.849999999991,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "691fa23fea177b46bc4ddc44",
+    "5b590fd470053bf4b178a2bd",
+    "29ea85ac9e41a9e953c2aea5",
+    "663a07c941e212e8c9d9a970",
+    "02c1e734803cc4c3553e1b0a",
+    "30462e266e3cc25d66bc12d9",
+    "f4fafcd6f83edf6b74408236",
+    "7005eff341908b7dc27daf68"
+  ]
+}

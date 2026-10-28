@@ -1,0 +1,71 @@
+{
+  "tag": "random_search",
+  "slot": 7,
+  "generation_seed": 71019507,
+  "parent_id": "49483e093dd7d27e",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11778.374999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "801dd5a0278fbe35",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "return_tour"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "ppo"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11793.399999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "f7c6f2be15a5082e461873d5",
+    "100aeb01c8b27aa8274f3ca2",
+    "181abb3dc2d5cb9454734dfe",
+    "671762c8a791db671492f1b4",
+    "4e0c7a78d1e47593d28a5bfc",
+    "90ebb76b089ab6a58f4509de",
+    "e89f939eb944172fd8294b01",
+    "170013a15eeb9967d8e000f8"
+  ]
+}

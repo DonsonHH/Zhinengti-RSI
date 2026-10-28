@@ -1,0 +1,190 @@
+{
+  "tag": "random_meta-round0-candidate",
+  "slot": 0,
+  "generation_seed": 71030000,
+  "parent_id": "8725c244aa61749b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "novelty",
+      "thermal_disagreement"
+    ],
+    "memory": "none",
+    "instruction": "Use measured professional evidence to choose when an extra check is justified; otherwise return to the protected tour."
+  },
+  "protocol_id": "7f51d08471308b2b",
+  "parent_validation": {
+    "cases": 2,
+    "anomaly_segments": 2,
+    "missed_segments": 0,
+    "weighted_censored_delay_s": 119.93398113969447,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11793.399999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "generation": {
+    "prompt": {
+      "task": "propose_patrol_program",
+      "current_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "improver_protocol": {
+        "diagnostics": [
+          "coverage",
+          "novelty",
+          "thermal_disagreement"
+        ],
+        "memory": "none",
+        "instruction": "Use measured professional evidence to choose when an extra check is justified; otherwise return to the protected tour."
+      },
+      "public_diagnostics": [
+        {
+          "tool": "coverage",
+          "result": {
+            "coverage": 1.0,
+            "violating_tasks": 0.0,
+            "weighted_age_ratio": 0.30374176522027774,
+            "first_alert_tasks": 1.0
+          }
+        },
+        {
+          "tool": "novelty",
+          "result": {
+            "prior_candidate_count": 0,
+            "duplicates": 0,
+            "seen_versions": []
+          }
+        },
+        {
+          "tool": "thermal_disagreement",
+          "result": {
+            "meaning": "TemperatureCVAE versus nominal temperature; thermal units only, not other professions",
+            "mean_abs_difference_degC": 0.21819253686124884,
+            "peak_abs_difference_degC": 2.3255972004517176
+          }
+        }
+      ],
+      "retrieved_candidates": [],
+      "response_keys": [
+        "diagnosis",
+        "workflow",
+        "expected_effect"
+      ],
+      "response_types": {
+        "diagnosis": "ONE explanatory string, never a list",
+        "workflow": "object",
+        "expected_effect": "ONE string"
+      },
+      "maximum_rule_count": 3,
+      "rule_count_policy": "Choose at most three conditions, not one per profession. Four rules is invalid.",
+      "workflow_keys": [
+        "refresh_s",
+        "cooldown_s",
+        "fallback",
+        "rules"
+      ],
+      "domains": {
+        "refresh_s": [
+          30,
+          60,
+          120
+        ],
+        "cooldown_s": [
+          0,
+          30,
+          60,
+          120
+        ],
+        "fallback": [
+          "tour",
+          "ppo"
+        ],
+        "rules": "0..3 ordered rules; each has exactly signal, threshold, action",
+        "signal": [
+          "age",
+          "thermal_excess",
+          "thermal_disagreement",
+          "contact_heat",
+          "flow_deficit",
+          "verified_sensor_bias"
+        ],
+        "threshold": "ONE NUMBER from the signal threshold domain",
+        "threshold_domains": {
+          "age": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "thermal_excess": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "thermal_disagreement": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "contact_heat": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "flow_deficit": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "verified_sensor_bias": [
+            0.5
+          ]
+        },
+        "action": [
+          "signal",
+          "urgency",
+          "ppo",
+          "return_tour"
+        ]
+      },
+      "semantics": {
+        "signal_profession": {
+          "age": "all",
+          "thermal_excess": "thermal",
+          "thermal_disagreement": "thermal",
+          "contact_heat": "electrical",
+          "flow_deficit": "cooling",
+          "verified_sensor_bias": "control"
+        },
+        "thermal_excess": "max(estimatedTemp-65,0)/20; degC scale; thermal only",
+        "thermal_disagreement": "abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty",
+        "contact_heat": "max(measuredContactTemp-60,0)/30; electrical only, not supply availability",
+        "flow_deficit": "max(1-measuredFlow/33.6,0); cooling only",
+        "verified_sensor_bias": "Previously valid reference comparison above1degC; control only",
+        "age": "Known task age/public revisit period",
+        "rules": "First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.",
+        "signal_action": "Typed signal times public asset weight divided by completion cost",
+        "fallback": "tour returns to baseline; ppo uses the frozen trained actor if no rule matches.",
+        "tool_use": "refresh_s changes actual CVAE calls; cooldown applies only to optional detours."
+      },
+      "constraints": [
+        "Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.",
+        "No changes to hidden evaluator, weights, data, costs or budgets; no source code.",
+        "Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.",
+        "Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters."
+      ]
+    },
+    "rendered_prompt": "<|im_start|>system\nReturn one JSON object using exactly the response_keys in the request. This is offline patrol-program or improver-protocol adaptation with a fixed validator. Use only supplied public diagnostics and allowed feedback. Preserve models, measurement validity, coverage, evaluation, grammar, data and budgets. Never emit source code. diagnosis and expected_effect must each be a short STRING, never a list. workflow.rules must contain at most THREE entries; choose a subset, never four rules.<|im_end|>\n<|im_start|>user\n{\"task\": \"propose_patrol_program\", \"current_workflow\": {\"refresh_s\": 30, \"cooldown_s\": 60, \"fallback\": \"tour\", \"rules\": []}, \"improver_protocol\": {\"diagnostics\": [\"coverage\", \"novelty\", \"thermal_disagreement\"], \"memory\": \"none\", \"instruction\": \"Use measured professional evidence to choose when an extra check is justified; otherwise return to the protected tour.\"}, \"public_diagnostics\": [{\"tool\": \"coverage\", \"result\": {\"coverage\": 1.0, \"violating_tasks\": 0.0, \"weighted_age_ratio\": 0.30374176522027774, \"first_alert_tasks\": 1.0}}, {\"tool\": \"novelty\", \"result\": {\"prior_candidate_count\": 0, \"duplicates\": 0, \"seen_versions\": []}}, {\"tool\": \"thermal_disagreement\", \"result\": {\"meaning\": \"TemperatureCVAE versus nominal temperature; thermal units only, not other professions\", \"mean_abs_difference_degC\": 0.21819253686124884, \"peak_abs_difference_degC\": 2.3255972004517176}}], \"retrieved_candidates\": [], \"response_keys\": [\"diagnosis\", \"workflow\", \"expected_effect\"], \"response_types\": {\"diagnosis\": \"ONE explanatory string, never a list\", \"workflow\": \"object\", \"expected_effect\": \"ONE string\"}, \"maximum_rule_count\": 3, \"rule_count_policy\": \"Choose at most three conditions, not one per profession. Four rules is invalid.\", \"workflow_keys\": [\"refresh_s\", \"cooldown_s\", \"fallback\", \"rules\"], \"domains\": {\"refresh_s\": [30, 60, 120], \"cooldown_s\": [0, 30, 60, 120], \"fallback\": [\"tour\", \"ppo\"], \"rules\": \"0..3 ordered rules; each has exactly signal, threshold, action\", \"signal\": [\"age\", \"thermal_excess\", \"thermal_disagreement\", \"contact_heat\", \"flow_deficit\", \"verified_sensor_bias\"], \"threshold\": \"ONE NUMBER from the signal threshold domain\", \"threshold_domains\": {\"age\": [0.25, 0.5, 0.75], \"thermal_excess\": [0.05, 0.25, 0.5], \"thermal_disagreement\": [0.05, 0.25, 0.5], \"contact_heat\": [0.05, 0.25, 0.5], \"flow_deficit\": [0.05, 0.25, 0.5], \"verified_sensor_bias\": [0.5]}, \"action\": [\"signal\", \"urgency\", \"ppo\", \"return_tour\"]}, \"semantics\": {\"signal_profession\": {\"age\": \"all\", \"thermal_excess\": \"thermal\", \"thermal_disagreement\": \"thermal\", \"contact_heat\": \"electrical\", \"flow_deficit\": \"cooling\", \"verified_sensor_bias\": \"control\"}, \"thermal_excess\": \"max(estimatedTemp-65,0)/20; degC scale; thermal only\", \"thermal_disagreement\": \"abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty\", \"contact_heat\": \"max(measuredContactTemp-60,0)/30; electrical only, not supply availability\", \"flow_deficit\": \"max(1-measuredFlow/33.6,0); cooling only\", \"verified_sensor_bias\": \"Previously valid reference comparison above1degC; control only\", \"age\": \"Known task age/public revisit period\", \"rules\": \"First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.\", \"signal_action\": \"Typed signal times public asset weight divided by completion cost\", \"fallback\": \"tour returns to baseline; ppo uses the frozen trained actor if no rule matches.\", \"tool_use\": \"refresh_s changes actual CVAE calls; cooldown applies only to optional detours.\"}, \"constraints\": [\"Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.\", \"No changes to hidden evaluator, weights, data, costs or budgets; no source code.\", \"Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.\", \"Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters.\"]}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_response": "{\n  \"diagnosis\": \"Thermal disagreement and coverage metrics suggest potential anomalies in thermal systems that require focused attention.\",\n  \"workflow\": {\n    \"refresh_s\": 60,\n    \"cooldown_s\": 30,\n    \"fallback\": \"tour\",\n    \"rules\": [\n      {\n        \"signal\": \"thermal_disagreement\",\n        \"threshold\": 0.25,\n        \"action\": \"signal\"\n      },\n      {\n        \"signal\": \"coverage\",\n        \"threshold\": 0.75,\n        \"action\": \"urgency\"\n      },\n      {\n        \"signal\": \"thermal_excess\",\n        \"threshold\": 0.25,\n        \"action\": \"return_tour\"\n      }\n    ]\n  },\n  \"expected_effect\": \"The patrol program will prioritize thermal disagreement checks and coverage anomalies, escalating urgency for coverage issues while returning to the tour for thermal excess.\"\n}",
+    "input_tokens": 1100,
+    "output_tokens": 189,
+    "generation_seconds": 8.225638660602272
+  },
+  "valid": false,
+  "accepted": false,
+  "reason": "invalid",
+  "error": "Unknown typed signal/action"
+}

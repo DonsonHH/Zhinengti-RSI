@@ -1,0 +1,217 @@
+{
+  "tag": "random_meta-round0-candidate",
+  "candidate_slots": 2,
+  "protocol": {
+    "diagnostics": [
+      "novelty",
+      "efficiency"
+    ],
+    "memory": "none",
+    "instruction": "Prioritize distinct proposals, inspect previous failures and change one evidence-driven part of the patrol program."
+  },
+  "protocol_id": "c4378e9dfe14efd0",
+  "workflow": {
+    "refresh_s": 60,
+    "cooldown_s": 30,
+    "fallback": "ppo",
+    "rules": [
+      {
+        "signal": "thermal_excess",
+        "threshold": 0.25,
+        "action": "urgency"
+      },
+      {
+        "signal": "flow_deficit",
+        "threshold": 0.25,
+        "action": "signal"
+      },
+      {
+        "signal": "verified_sensor_bias",
+        "threshold": 0.5,
+        "action": "return_tour"
+      }
+    ]
+  },
+  "version_id": "0399f07c7ddaa1e1",
+  "validator": {
+    "cases": 2,
+    "anomaly_segments": 2,
+    "missed_segments": 0,
+    "weighted_censored_delay_s": 40.88116605145001,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 13465.449999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "public": {
+    "coverage": {
+      "coverage": 1.0,
+      "violating_tasks": 0.0,
+      "weighted_age_ratio": 0.35339887546097426,
+      "first_alert_tasks": 1.0
+    },
+    "efficiency": {
+      "travel_m": 13465.449999999992,
+      "service_s": 15420.0,
+      "extra_checks": 235.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1321.0,
+      "different_from_actor": 0.0
+    },
+    "professional_evidence": {
+      "thermal": {
+        "checks": 1050.0,
+        "distinct_checked_tasks": 128.0,
+        "distinct_measured_alarm_tasks": 0.5,
+        "new_measured_alerts": 0.5,
+        "persistent_rechecks": 0.0,
+        "recovery_confirmations": 0.5,
+        "measurement_field": "temperature_c",
+        "unit": "degC",
+        "mean_measured_value": 51.099666684329975,
+        "largest_public_completion_gap_s": 300.0
+      },
+      "electrical": {
+        "checks": 86.0,
+        "distinct_checked_tasks": 16.0,
+        "distinct_measured_alarm_tasks": 0.5,
+        "new_measured_alerts": 0.5,
+        "persistent_rechecks": 2.5,
+        "recovery_confirmations": 0.0,
+        "measurement_field": "contact_temperature_c",
+        "unit": "degC",
+        "mean_measured_value": 44.85484457852388,
+        "largest_public_completion_gap_s": 450.0
+      },
+      "cooling": {
+        "checks": 85.0,
+        "distinct_checked_tasks": 16.0,
+        "distinct_measured_alarm_tasks": 0.0,
+        "new_measured_alerts": 0.0,
+        "persistent_rechecks": 0.0,
+        "recovery_confirmations": 0.0,
+        "measurement_field": "pod_flow_kg_s",
+        "unit": "kg/s",
+        "mean_measured_value": 36.06446627934229,
+        "largest_public_completion_gap_s": 450.0
+      },
+      "control": {
+        "checks": 100.0,
+        "distinct_checked_tasks": 16.0,
+        "distinct_measured_alarm_tasks": 0.0,
+        "new_measured_alerts": 0.0,
+        "persistent_rechecks": 0.0,
+        "recovery_confirmations": 0.0,
+        "measurement_field": "controller_sensor_error_c",
+        "unit": "degC",
+        "mean_measured_value": 0.0,
+        "largest_public_completion_gap_s": 400.0
+      }
+    },
+    "thermal_disagreement": {
+      "meaning": "TemperatureCVAE versus nominal temperature; thermal units only, not other professions",
+      "mean_abs_difference_degC": 0.2659915553368744,
+      "peak_abs_difference_degC": 2.434426978843593
+    }
+  },
+  "case_ids": [
+    "8697be9ae89bd43c1c387353",
+    "4e0db7d45c36eb5fd953f51d"
+  ],
+  "task_start": {
+    "version_id": "8725c244aa61749b",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "validator": {
+      "cases": 2,
+      "anomaly_segments": 2,
+      "missed_segments": 0,
+      "weighted_censored_delay_s": 119.93398113969447,
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "mean_travel_m": 11793.399999999992,
+      "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+    },
+    "public": {
+      "coverage": {
+        "coverage": 1.0,
+        "violating_tasks": 0.0,
+        "weighted_age_ratio": 0.30374176522027774,
+        "first_alert_tasks": 1.0
+      },
+      "efficiency": {
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "extra_checks": 0.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1426.0,
+        "different_from_actor": 1203.0
+      },
+      "professional_evidence": {
+        "thermal": {
+          "checks": 1132.0,
+          "distinct_checked_tasks": 128.0,
+          "distinct_measured_alarm_tasks": 0.5,
+          "new_measured_alerts": 0.5,
+          "persistent_rechecks": 0.0,
+          "recovery_confirmations": 0.5,
+          "measurement_field": "temperature_c",
+          "unit": "degC",
+          "mean_measured_value": 51.0544117469041,
+          "largest_public_completion_gap_s": 240.0
+        },
+        "electrical": {
+          "checks": 94.0,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.5,
+          "new_measured_alerts": 0.5,
+          "persistent_rechecks": 1.0,
+          "recovery_confirmations": 0.0,
+          "measurement_field": "contact_temperature_c",
+          "unit": "degC",
+          "mean_measured_value": 43.438648388854915,
+          "largest_public_completion_gap_s": 310.0
+        },
+        "cooling": {
+          "checks": 94.0,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.0,
+          "new_measured_alerts": 0.0,
+          "persistent_rechecks": 0.0,
+          "recovery_confirmations": 0.0,
+          "measurement_field": "pod_flow_kg_s",
+          "unit": "kg/s",
+          "mean_measured_value": 36.17479725874243,
+          "largest_public_completion_gap_s": 310.0
+        },
+        "control": {
+          "checks": 106.0,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.0,
+          "new_measured_alerts": 0.0,
+          "persistent_rechecks": 0.0,
+          "recovery_confirmations": 0.0,
+          "measurement_field": "controller_sensor_error_c",
+          "unit": "degC",
+          "mean_measured_value": 0.0,
+          "largest_public_completion_gap_s": 270.0
+        }
+      },
+      "thermal_disagreement": {
+        "meaning": "TemperatureCVAE versus nominal temperature; thermal units only, not other professions",
+        "mean_abs_difference_degC": 0.21819253686124884,
+        "peak_abs_difference_degC": 2.3255972004517176
+      }
+    },
+    "case_ids": [
+      "ba8b0dd9424ca6302265272d",
+      "d07a9d0c3f7d40fa0e76112a"
+    ]
+  },
+  "history_start_length": 0,
+  "source": "open_model"
+}

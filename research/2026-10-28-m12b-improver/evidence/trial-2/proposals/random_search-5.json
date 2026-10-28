@@ -1,0 +1,76 @@
+{
+  "tag": "random_search",
+  "slot": 5,
+  "generation_seed": 71039505,
+  "parent_id": "c038cb892393c78b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 3,
+    "weighted_censored_delay_s": 109.07573068631548,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 12778.899999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "839ee1be2a545254",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 0,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.25,
+          "action": "return_tour"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.05,
+          "action": "urgency"
+        },
+        {
+          "signal": "age",
+          "threshold": 0.25,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11782.899999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "d4b012b64d0a3102c8a25ade",
+    "c5c1dca8f7943f15f19e57bf",
+    "a27c59992f2e6e2531838e02",
+    "9324eadd5b73cdbcd769aa59",
+    "d39e641a550d4f7eafd85a50",
+    "7426fb8a3719411488e6a716",
+    "e9c07462c5e46275fb8bde77",
+    "123b06462175c6cee577f508"
+  ]
+}

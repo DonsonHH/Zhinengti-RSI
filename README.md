@@ -10,6 +10,8 @@
 
 M12-A已完成18次正式开源模型调用、312条独立闭环及完整重放。模型流程漏7/22段，当前冻结PPO漏10/22段，固定巡回漏5/22段；有/无候选记忆均选出同一程序。覆盖要求均满足，但尚未证明优于强基线或递归改进有效。下一步聚焦分专业诊断、返回巡回/不补查技能和独立改进器更新。[结果与图表](research/2026-10-28-m12-alignment/运行与结果.md) · [导师汇报要点](research/2026-10-28-m12-alignment/给导师的汇报要点.md)
 
+M12-B已完成复核和改进器更新试验：旧选择代理与异常等待目标不一致，在新划分中修订验证器、专业信号和返回技能，保留旧结果。152项测试、117次正式模型调用、1,352条实际闭环全部独立重放。固定改进器3候选漏12/42，模型元更新三次为12/14/12，未显示额外迁移收益；42条是两档噪声对21段物理异常的重复评价。最终程序未实际调用PPO，CVAE也未表现任务增益，不能把这些模块的存在当作贡献。[M12-B结果](research/2026-10-28-m12b-improver/运行与结果.md) · [下一步方案](research/2026-10-28-m12b-improver/下一步方案.md)
+
 当前研究以ESWA 2025论文为起点，研究VAE重要度估计、多执行者持续重访与智能体自改进。M1–M5使用共享DDQN，M6改为学习高层检查点分配，低层导航由共同控制器完成。
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
@@ -85,6 +87,10 @@ M11.1已开启并验证首个原型：任务能力矩阵、完整返回计划检
 - [自动工作流与递归改进相关工作](research/2026-10-28-m12-alignment/相关工作与贡献边界.md)
 - [M12结果、对照与归因图](research/2026-10-28-m12-alignment/运行与结果.md)
 - [本轮导师汇报要点](research/2026-10-28-m12-alignment/给导师的汇报要点.md)
+- [M12-B复核与预定实验](research/2026-10-28-m12b-improver/复核与实验设计.md)
+- [M12-B结果、协议迁移与成本](research/2026-10-28-m12b-improver/运行与结果.md)
+- [M12-B实现、边界与接受规则](research/2026-10-28-m12b-improver/代码与方法复核.md)
+- [后续技能、信息诊断与跨专业安排](research/2026-10-28-m12b-improver/下一步方案.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 

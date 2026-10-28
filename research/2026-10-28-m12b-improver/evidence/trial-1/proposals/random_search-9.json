@@ -1,0 +1,71 @@
+{
+  "tag": "random_search",
+  "slot": 9,
+  "generation_seed": 71029509,
+  "parent_id": "56a793eb1c690d1b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 3,
+    "weighted_censored_delay_s": 107.76085914564425,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 12731.974999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "564c22628076c6f3",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.05,
+          "action": "ppo"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 9,
+    "weighted_censored_delay_s": 94.24458217801417,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 12956.999999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "6f8f0e7355018bd4f2b65b0a",
+    "fb52d2b5a196bfdd34ed0309",
+    "1a330cfa30dc0c7d0fff1f32",
+    "fede1f9feda202f62e0ab4e4",
+    "a85178264d767336733df937",
+    "5a37852375321197463f8906",
+    "16684fa91235b578339e01de",
+    "19afe207ea90d9dde4224d7f"
+  ]
+}

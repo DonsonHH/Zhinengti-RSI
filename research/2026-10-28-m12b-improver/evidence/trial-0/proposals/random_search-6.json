@@ -1,0 +1,76 @@
+{
+  "tag": "random_search",
+  "slot": 6,
+  "generation_seed": 71019506,
+  "parent_id": "49483e093dd7d27e",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11778.374999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "cd1b8e50199b7bb4",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "ppo"
+        },
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "urgency"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 7,
+    "weighted_censored_delay_s": 96.775575854089,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11828.787499999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "f0930c80892c9bba31bf7f07",
+    "c3bad076afe99a90740822e6",
+    "96c1a492cce501d50b34d618",
+    "2363c8d5dce8cf661e3e48b9",
+    "c3adc49580ad3514f0cd7e5e",
+    "b0bac5ab22cc01a550c2adfc",
+    "8311146f04b9886062f29645",
+    "5d9ee661a7f3b218f8b16167"
+  ]
+}

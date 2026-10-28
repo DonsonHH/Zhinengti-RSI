@@ -1,0 +1,71 @@
+{
+  "tag": "random_search",
+  "slot": 5,
+  "generation_seed": 71029505,
+  "parent_id": "56a793eb1c690d1b",
+  "protocol": {
+    "diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency"
+    ],
+    "memory": "recent",
+    "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+  },
+  "protocol_id": "71a68b6dc0022f0b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 3,
+    "weighted_censored_delay_s": 107.76085914564425,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 12731.974999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "d0c3ed411258794d",
+  "proposal": {
+    "diagnosis": "Bounded random program search",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.25,
+          "action": "return_tour"
+        },
+        {
+          "signal": "age",
+          "threshold": 0.5,
+          "action": "signal"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 19,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 91.1761882000026,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11881.349999999993,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "e89146388a932400deb6d53a",
+    "593f89b6613009eddde18a68",
+    "6222215d7abfa4553e9ecbe1",
+    "8392f9b8ace69578e7b84651",
+    "0137c97dd4f864dee4561f9a",
+    "00f0ab4ff229624687d7f589",
+    "64b26d82966ff7ac03525451",
+    "caf66dc5967311a36e87f78d"
+  ]
+}
