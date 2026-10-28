@@ -1,0 +1,56 @@
+{
+  "goal": "在指定巡检论文基础上，以可核对任务价值检验技能、工具调用、协作流程及改进器自身的持续改进，形成论文证据",
+  "current_stage": "C1-A局部一次补查机会与全程代价核验",
+  "current_status": "completed_with_full_actual_replay_and_original_evidence_verified",
+  "next_stage_status": "planned_not_submitted",
+  "current_findings": {
+    "complete_tests_no_skips": 167,
+    "main_cases": 192,
+    "independent_evaluator_one_detour_branches": 20,
+    "all_actual_cases": 212,
+    "physical_processes": 16,
+    "all_public_legal_candidates_independently_rebuilt": 1565985,
+    "dispatches_and_measurements_independently_checked": 292174,
+    "tour_missed_records_per_estimator_out_of44": 12,
+    "local_first_witness_branches_per_estimator": 10,
+    "branch_outcomes_per_estimator": {"net_fewer_misses": 4, "net_equal_misses": 4, "net_more_misses": 2, "collateral_miss": 6},
+    "LLM_calls": 0,
+    "new_training": false,
+    "global_optimal_bound_or_impossibility_proof_claimed": false,
+    "new_RSI_gain_demonstrated": false
+  },
+  "tasks": [
+    {
+      "id": "C1-B1-cue-quality",
+      "objective": "在新开发数据中核对线索辨识度、提前量及可行决策机会",
+      "deliverables": ["公开线索与可确认窗口、合法候选、计划余量和工时对应表", "所有触发中的无效/重复候选与正负样本统计", "测量保持、简单历史、名义物理估计及CVAE的误差/热点/动作差异", "明确观测限制、资源限制和策略未利用信息的证据范围"],
+      "gate": "预设线索未触发不等于全部信息不存在；模型分歧不等于校准不确定性；没有局部见证不等于全程无解"
+    },
+    {
+      "id": "C1-B2-net-inspection-value",
+      "objective": "构建能权衡目标确认与后续任务损失的补查技能评价",
+      "deliverables": ["独立开发实例中的单次或有限时域干预及目标/附带损失/成本标签", "只读公开输入的收益/代价估计与合法动作接口", "强巡回、公开规则、未训练评分及必要的从头训练策略对照", "运行前冻结资源、奖励/监督、更新数、验证/测试及3个配对初始化"],
+      "gate": "评价器未来标签不进入部署演员、LLM输入或合法在线基线；独立分支恢复数不能相加成共同策略收益；不为AI优势改时限或移除强巡回"
+    },
+    {
+      "id": "C2-professional-workflow",
+      "objective": "将有价值技能扩展到检查内容、专业证据与交接",
+      "deliverables": ["设备-项目-有效证据映射和专业规程需求", "遥测充分时对应项目确认，不足时产生合格补查请求", "同设备多检查项目行程合并、分别核验和失败重试", "人工流程、单角色同调用上限、随机搜索与固定改进器对照"],
+      "gate": "供电服务、接点热、电压/电流分别定义；缺实测通道保持不支持；共享任务接管需新的共同返回计划，未知设备/区域发现另立任务"
+    },
+    {
+      "id": "C3-skill-and-improver-transfer",
+      "objective": "将有效技能接回外层版本链，独立检验改进器更新与迁移",
+      "deliverables": ["父子版本、公开执行证据、开发保留/回退和独立测试", "固定改进器、同预算直接搜索及随机/模型元协议比较", "共同任务起点、空历史，仅迁移协议", "元准备/任务适配/token/环境评价/部署成本分项及效果曲线"],
+      "gate": "有用人工接口与模型自动修改分别归因；同调用上限不等于实际资源相同；不在旧测试上追加搜索直至正结果"
+    },
+    {
+      "id": "paper-and-supervisor",
+      "objective": "据真实任务价值和稳定对照确定论文贡献",
+      "deliverables": ["原方法保留、领域适配、人工技能与自动改进来源表", "可重复收益、失败例、强基线、成本与现有工作差异", "同布局新实例/跨布局范围区分", "现场参数、值得响应短时异常与检查规程资料需求"],
+      "gate": "当前局部探针不代替最优调度、原文完整复现、现场标定、新颖性或RSI稳定增强证据"
+    }
+  ],
+  "plan_document": "下一步方案.md",
+  "not_started": ["新C1-B估计/线索质量试验", "新接口策略重训", "C2跨专业任务接管试验", "新C3元协议更新", "全程最优调度求解", "现场标定", "未知设备发现", "论文提交"]
+}

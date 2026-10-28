@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/analysis-code-v1/scripts/audit_m12c1.py", line 360, in <module>
+    main()
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/analysis-code-v1/scripts/audit_m12c1.py", line 273, in main
+    replay, env = runner.run_public(row['specification'], predictor, scorer,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/code-b69432b6/src/patrol_rsi/opportunity_run.py", line 70, in run_public
+    return _run(spec, predictor, scorer, method, probe_enabled, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/code-b69432b6/src/patrol_rsi/opportunity_run.py", line 23, in _run
+    choices, logs = choose(groups, method)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/analysis-code-v1/scripts/audit_m12c1.py", line 178, in checked_choose
+    equivalent(actual, choices, 'Independent public controller actions')
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/analysis-code-v1/scripts/audit_m111.py", line 39, in equivalent
+    equivalent(a[key], b[key], context + '/' + key)
+                               ~~~~~~~~~~~~~~^~~~~
+TypeError: can only concatenate str (not "int") to str

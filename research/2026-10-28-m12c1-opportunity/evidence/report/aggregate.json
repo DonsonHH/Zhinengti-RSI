@@ -1,0 +1,326 @@
+{
+  "groups": {
+    "nominal": {
+      "tour": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 12,
+        "pooled_miss_rate": 0.2727272727272727,
+        "weighted_censored_delay_s": 113.32806148027251,
+        "maximum_exact_gap_ratio": 0.8,
+        "mean_extra_checks": 0.0,
+        "mean_travel_m": 11793.399999999992,
+        "mean_service_s": 16670.0,
+        "mean_estimator_calls": 0.0,
+        "false_measured_confirmations": 0
+      },
+      "cue_rule": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 12,
+        "pooled_miss_rate": 0.2727272727272727,
+        "weighted_censored_delay_s": 99.03143631758212,
+        "maximum_exact_gap_ratio": 0.8,
+        "mean_extra_checks": 0.75,
+        "mean_travel_m": 11800.624999999993,
+        "mean_service_s": 16664.375,
+        "mean_estimator_calls": 0.0,
+        "false_measured_confirmations": 0
+      },
+      "actor": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 12,
+        "pooled_miss_rate": 0.2727272727272727,
+        "weighted_censored_delay_s": 120.20451892495281,
+        "maximum_exact_gap_ratio": 1.0,
+        "mean_extra_checks": 221.1875,
+        "mean_travel_m": 13846.012499999992,
+        "mean_service_s": 14925.0,
+        "mean_estimator_calls": 0.0,
+        "false_measured_confirmations": 0
+      }
+    },
+    "history": {
+      "tour": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 12,
+        "pooled_miss_rate": 0.2727272727272727,
+        "weighted_censored_delay_s": 113.32806148027251,
+        "maximum_exact_gap_ratio": 0.8,
+        "mean_extra_checks": 0.0,
+        "mean_travel_m": 11793.399999999992,
+        "mean_service_s": 16670.0,
+        "mean_estimator_calls": 60.0,
+        "false_measured_confirmations": 0
+      },
+      "cue_rule": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 14,
+        "pooled_miss_rate": 0.3181818181818182,
+        "weighted_censored_delay_s": 90.30532574378063,
+        "maximum_exact_gap_ratio": 1.0,
+        "mean_extra_checks": 41.59375,
+        "mean_travel_m": 12216.293749999992,
+        "mean_service_s": 16376.875,
+        "mean_estimator_calls": 60.0,
+        "false_measured_confirmations": 2
+      },
+      "actor": {
+        "cases": 32,
+        "anomaly_segments": 44,
+        "missed_segments": 12,
+        "pooled_miss_rate": 0.2727272727272727,
+        "weighted_censored_delay_s": 120.20451892495281,
+        "maximum_exact_gap_ratio": 1.0,
+        "mean_extra_checks": 221.1875,
+        "mean_travel_m": 13846.087499999992,
+        "mean_service_s": 14921.25,
+        "mean_estimator_calls": 60.0,
+        "false_measured_confirmations": 0
+      }
+    }
+  },
+  "opportunity": {
+    "nominal": {
+      "tour_cases": 32,
+      "missed_segment_records": 12,
+      "classes": {
+        "one_detour_with_prespecified_unconfirmed_cue": 6,
+        "one_detour_without_prespecified_unconfirmed_cue": 4,
+        "no_one_detour_witness_on_original_tour_states": 2
+      },
+      "missed_with_any_prespecified_cue_witness": 6,
+      "missed_with_unconfirmed_cue_witness": 6,
+      "actual_one_detour_branches": 10,
+      "branch_tradeoffs": [
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour--branch--5",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour",
+          "target_segment_index": 5,
+          "recovered_segments": 1,
+          "lost_segments": 2,
+          "total_missed_delta": 1,
+          "travel_delta_m": 22.299999999999272,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour--branch--6",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour",
+          "target_segment_index": 6,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 1.1000000000003638,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour--branch--7",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour",
+          "target_segment_index": 7,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 7.399999999999636,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour--branch--8",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--nominal--tour",
+          "target_segment_index": 8,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 21.0,
+          "service_delta_s": -20.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour--branch--5",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour",
+          "target_segment_index": 5,
+          "recovered_segments": 1,
+          "lost_segments": 2,
+          "total_missed_delta": 1,
+          "travel_delta_m": 22.299999999999272,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour--branch--6",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour",
+          "target_segment_index": 6,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 1.1000000000003638,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour--branch--7",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour",
+          "target_segment_index": 7,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 7.399999999999636,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour--branch--8",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--nominal--tour",
+          "target_segment_index": 8,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 21.0,
+          "service_delta_s": -20.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7701--0.2--nominal--tour--branch--0",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7701--0.2--nominal--tour",
+          "target_segment_index": 0,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 17.5,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7701--1.0--nominal--tour--branch--0",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7701--1.0--nominal--tour",
+          "target_segment_index": 0,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 17.5,
+          "service_delta_s": -10.0
+        }
+      ],
+      "branches_with_collateral_miss": 6,
+      "branches_net_fewer_missed": 4,
+      "scope": "Separate one-action experiments on original tour states; never sum recoveries as a jointly executable schedule."
+    },
+    "history": {
+      "tour_cases": 32,
+      "missed_segment_records": 12,
+      "classes": {
+        "one_detour_with_prespecified_unconfirmed_cue": 10,
+        "no_one_detour_witness_on_original_tour_states": 2
+      },
+      "missed_with_any_prespecified_cue_witness": 10,
+      "missed_with_unconfirmed_cue_witness": 10,
+      "actual_one_detour_branches": 10,
+      "branch_tradeoffs": [
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour--branch--5",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour",
+          "target_segment_index": 5,
+          "recovered_segments": 1,
+          "lost_segments": 2,
+          "total_missed_delta": 1,
+          "travel_delta_m": 22.299999999999272,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour--branch--6",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour",
+          "target_segment_index": 6,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 1.1000000000003638,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour--branch--7",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour",
+          "target_segment_index": 7,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 7.399999999999636,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour--branch--8",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--0.2--history--tour",
+          "target_segment_index": 8,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 21.0,
+          "service_delta_s": -20.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour--branch--5",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour",
+          "target_segment_index": 5,
+          "recovered_segments": 1,
+          "lost_segments": 2,
+          "total_missed_delta": 1,
+          "travel_delta_m": 22.299999999999272,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour--branch--6",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour",
+          "target_segment_index": 6,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 1.1000000000003638,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour--branch--7",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour",
+          "target_segment_index": 7,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 7.399999999999636,
+          "service_delta_s": 0.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour--branch--8",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7700--1.0--history--tour",
+          "target_segment_index": 8,
+          "recovered_segments": 1,
+          "lost_segments": 0,
+          "total_missed_delta": -1,
+          "travel_delta_m": 21.0,
+          "service_delta_s": -20.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7701--0.2--history--tour--branch--0",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7701--0.2--history--tour",
+          "target_segment_index": 0,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 17.5,
+          "service_delta_s": -10.0
+        },
+        {
+          "case": "formal--aux_feeder_loss+cdu_fouling--180--7701--1.0--history--tour--branch--0",
+          "baseline_case": "formal--aux_feeder_loss+cdu_fouling--180--7701--1.0--history--tour",
+          "target_segment_index": 0,
+          "recovered_segments": 1,
+          "lost_segments": 1,
+          "total_missed_delta": 0,
+          "travel_delta_m": 17.5,
+          "service_delta_s": -10.0
+        }
+      ],
+      "branches_with_collateral_miss": 6,
+      "branches_net_fewer_missed": 4,
+      "scope": "Separate one-action experiments on original tour states; never sum recoveries as a jointly executable schedule."
+    }
+  },
+  "main_cases": 192,
+  "evaluator_branches": 20,
+  "all_actual_cases": 212,
+  "physical_processes": 16,
+  "note": "Known layout, paired estimator/noise references on16physical processes; no globally optimal oracle or impossible-miss conclusion"
+}

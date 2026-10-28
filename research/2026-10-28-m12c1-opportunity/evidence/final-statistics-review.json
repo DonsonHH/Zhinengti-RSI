@@ -1,0 +1,193 @@
+{
+  "main_cases": 192,
+  "independent_branches": 20,
+  "all_actual_cases": 212,
+  "distinct_physical_processes": 16,
+  "per_estimator": {
+    "nominal": {
+      "main_groups": {
+        "tour": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 12,
+          "pooled_miss_rate": 0.2727272727272727,
+          "weighted_censored_delay_s": 113.32806148027251,
+          "maximum_exact_gap_ratio": 0.8,
+          "mean_extra_checks": 0.0,
+          "mean_travel_m": 11793.399999999992,
+          "mean_service_s": 16670.0,
+          "mean_estimator_calls": 0.0,
+          "false_measured_confirmations": 0
+        },
+        "cue_rule": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 12,
+          "pooled_miss_rate": 0.2727272727272727,
+          "weighted_censored_delay_s": 99.03143631758212,
+          "maximum_exact_gap_ratio": 0.8,
+          "mean_extra_checks": 0.75,
+          "mean_travel_m": 11800.624999999993,
+          "mean_service_s": 16664.375,
+          "mean_estimator_calls": 0.0,
+          "false_measured_confirmations": 0
+        },
+        "actor": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 12,
+          "pooled_miss_rate": 0.2727272727272727,
+          "weighted_censored_delay_s": 120.20451892495281,
+          "maximum_exact_gap_ratio": 1.0,
+          "mean_extra_checks": 221.1875,
+          "mean_travel_m": 13846.012499999992,
+          "mean_service_s": 14925.0,
+          "mean_estimator_calls": 0.0,
+          "false_measured_confirmations": 0
+        }
+      },
+      "tour_missed_records": 12,
+      "missed_classes": {
+        "one_detour_with_prespecified_unconfirmed_cue": 6,
+        "one_detour_without_prespecified_unconfirmed_cue": 4,
+        "no_one_detour_witness_on_original_tour_states": 2
+      },
+      "independent_branches": 10,
+      "unique_physical_branch_targets": 5,
+      "branch_total_miss_delta_counts": {
+        "1": 2,
+        "0": 4,
+        "-1": 4
+      },
+      "branch_recovery_and_collateral_counts": [
+        {
+          "recovered": 1,
+          "lost": 2,
+          "branches": 2
+        },
+        {
+          "recovered": 1,
+          "lost": 1,
+          "branches": 4
+        },
+        {
+          "recovered": 1,
+          "lost": 0,
+          "branches": 4
+        }
+      ],
+      "mean_added_travel_m": 13.859999999999854,
+      "mean_service_delta_s": -8.0,
+      "noise_denominators": [
+        {
+          "noise_c": 0.2,
+          "physical_cases": 16,
+          "anomaly_segments": 22,
+          "missed_segments": 6
+        },
+        {
+          "noise_c": 1.0,
+          "physical_cases": 16,
+          "anomaly_segments": 22,
+          "missed_segments": 6
+        }
+      ]
+    },
+    "history": {
+      "main_groups": {
+        "tour": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 12,
+          "pooled_miss_rate": 0.2727272727272727,
+          "weighted_censored_delay_s": 113.32806148027251,
+          "maximum_exact_gap_ratio": 0.8,
+          "mean_extra_checks": 0.0,
+          "mean_travel_m": 11793.399999999992,
+          "mean_service_s": 16670.0,
+          "mean_estimator_calls": 60.0,
+          "false_measured_confirmations": 0
+        },
+        "cue_rule": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 14,
+          "pooled_miss_rate": 0.3181818181818182,
+          "weighted_censored_delay_s": 90.30532574378063,
+          "maximum_exact_gap_ratio": 1.0,
+          "mean_extra_checks": 41.59375,
+          "mean_travel_m": 12216.293749999992,
+          "mean_service_s": 16376.875,
+          "mean_estimator_calls": 60.0,
+          "false_measured_confirmations": 2
+        },
+        "actor": {
+          "cases": 32,
+          "anomaly_segments": 44,
+          "missed_segments": 12,
+          "pooled_miss_rate": 0.2727272727272727,
+          "weighted_censored_delay_s": 120.20451892495281,
+          "maximum_exact_gap_ratio": 1.0,
+          "mean_extra_checks": 221.1875,
+          "mean_travel_m": 13846.087499999992,
+          "mean_service_s": 14921.25,
+          "mean_estimator_calls": 60.0,
+          "false_measured_confirmations": 0
+        }
+      },
+      "tour_missed_records": 12,
+      "missed_classes": {
+        "one_detour_with_prespecified_unconfirmed_cue": 10,
+        "no_one_detour_witness_on_original_tour_states": 2
+      },
+      "independent_branches": 10,
+      "unique_physical_branch_targets": 5,
+      "branch_total_miss_delta_counts": {
+        "1": 2,
+        "0": 4,
+        "-1": 4
+      },
+      "branch_recovery_and_collateral_counts": [
+        {
+          "recovered": 1,
+          "lost": 2,
+          "branches": 2
+        },
+        {
+          "recovered": 1,
+          "lost": 1,
+          "branches": 4
+        },
+        {
+          "recovered": 1,
+          "lost": 0,
+          "branches": 4
+        }
+      ],
+      "mean_added_travel_m": 13.859999999999854,
+      "mean_service_delta_s": -8.0,
+      "noise_denominators": [
+        {
+          "noise_c": 0.2,
+          "physical_cases": 16,
+          "anomaly_segments": 22,
+          "missed_segments": 6
+        },
+        {
+          "noise_c": 1.0,
+          "physical_cases": 16,
+          "anomaly_segments": 22,
+          "missed_segments": 6
+        }
+      ]
+    }
+  },
+  "same_process_service_loss_across_policies_noise_and_branches": true,
+  "first_saved_example_net_missed_delta": 1,
+  "first_saved_example_travel_delta_m": 22.299999999999272,
+  "first_saved_example_service_delta_s": -10.0,
+  "candidate_instances_checked": 1565985,
+  "dispatches_measurements_checked": 292174,
+  "scope": "Fresh local checks on all compact records; complete independent candidate enumeration and raw branch replay in Slurm130301",
+  "denominator_note": "22physical segments repeated under2noises per estimator;12tour misses are6physical misses;10branches target5physical segments; never sum separate branch outcomes into a joint policy"
+}

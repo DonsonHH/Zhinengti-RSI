@@ -1,0 +1,32 @@
+renly
+mu01
+/share/home/renly
+2026-10-28T13:58:35Z
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|20|alloc|cu[01-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+UNRELATED_QUEUE_ENTRIES_OMITTED=0
+JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem
+130295|COMPLETED|0:0|00:00:45|2|8G
+130295.batch|COMPLETED|0:0|00:00:45|2|
+130296|FAILED|1:0|00:00:02|2|8G
+130296.batch|FAILED|1:0|00:00:02|2|
+130298|COMPLETED|0:0|00:00:34|2|8G
+130298.batch|COMPLETED|0:0|00:00:34|2|
+130300|COMPLETED|0:0|00:06:04|2|8G
+130300.batch|COMPLETED|0:0|00:06:04|2|
+130301|COMPLETED|0:0|00:09:40|2|8G
+130301.batch|COMPLETED|0:0|00:09:40|2|
+130302|COMPLETED|0:0|00:00:02|2|8G
+130302.batch|COMPLETED|0:0|00:00:02|2|
+130303|COMPLETED|0:0|00:00:00|1|4G
+130303.batch|COMPLETED|0:0|00:00:00|1|
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/delivery.tar.gz", "bytes": 2099132, "sha256": "7171d44af99da8d0635bb56f9d772296ffdd8fcd5aecc8dd0d13fc9b9dcc17e0"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/report/aggregate.json", "bytes": 12963, "sha256": "d9393b01acdbf0e4b2e9f943e43496c8d9d2cdc2ad9dd51437d937cf4742210e"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/formal-audit.json", "bytes": 879, "sha256": "fb94d4a33dda6914636a8a1e2c04f67e8fd06c1dd822bb191a79ec29bedccf2a"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/formal-v1/case-index.json", "bytes": 1131542, "sha256": "18306f2a50ad7ae320a248181ca889b8410cc68c9195f7c6e8903af9b8e0efde"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/formal-v1/branch-index.json", "bytes": 112859, "sha256": "13a03fe11cad439d07841f4bbbf2f3a5dda7b002912690adaa84f61702d962ee"}
+REMOTE_RAW {"kind": "cases", "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/formal-v1/cases", "files": 212, "bytes": 33309543}
+REMOTE_RAW {"kind": "process-traces", "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12c1/formal-v1/process-traces", "files": 16, "bytes": 14911988}

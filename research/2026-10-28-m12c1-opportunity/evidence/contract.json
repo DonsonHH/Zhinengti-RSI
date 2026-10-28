@@ -1,0 +1,34 @@
+{
+  "stage": "M12-C1A local decision-opportunity diagnosis",
+  "methods": [
+    "tour",
+    "cue_rule",
+    "actor"
+  ],
+  "estimators": [
+    "nominal",
+    "history"
+  ],
+  "complete_main_cases": 192,
+  "physical_processes": 16,
+  "observation_conditions": 32,
+  "formal_seeds": [
+    7700,
+    7701
+  ],
+  "smoke_seed": 7699,
+  "noise_c": [
+    0.2,
+    1.0
+  ],
+  "probe_tour_cases": 64,
+  "branch_rule": "One independent branch for first feasible optional witness of each tour-missed segment; do not combine branches.",
+  "probe_scope": "Finite one-detour witnesses on original tour states, not a globally optimal schedule, an upper bound or a proof of impossibility.",
+  "signal_scope": "Prespecified public profession cue family plus thermal raw telemetry and model disagreement; absence is not information-theoretic absence.",
+  "actor": "Existing M11 history-seed0 deployed unchanged in both estimation modes",
+  "estimator": "Existing M10 history-seed1 checkpoint",
+  "new_training": false,
+  "LLM_calls": 0,
+  "improver_updated": false,
+  "isolation": "Policy accepts only explicit public snapshot; hidden label matching and override selection are evaluator-only"
+}
