@@ -1,0 +1,27 @@
+renly
+mu01
+/share/home/renly
+2026-10-28T04:54:29Z
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|20|idle|cu[01-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+PartitionName=cu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=YES QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=cu[01-20] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=1120 TotalNodes=20 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=1120,mem=3820000M,node=20,billing=1120
+PartitionName=8gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu01 PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=32 TotalNodes=1 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=4 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=32,mem=385000M,node=1,billing=32,gres/gpu=8
+PartitionName=4gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu[02-03] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=64 TotalNodes=2 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=8 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=64,mem=770000M,node=2,billing=64,gres/gpu=8
+130099|COMPLETED|0:0|00:00:09|2|8G
+130099.batch|COMPLETED|0:0|00:00:09|2|
+130100|COMPLETED|0:0|00:00:32|2|8G
+130100.batch|COMPLETED|0:0|00:00:32|2|
+130101|COMPLETED|0:0|00:02:34|2|8G
+130101.batch|COMPLETED|0:0|00:02:34|2|
+130102|COMPLETED|0:0|00:03:15|2|8G
+130102.batch|COMPLETED|0:0|00:03:15|2|
+130103|COMPLETED|0:0|00:00:00|2|8G
+130103.batch|COMPLETED|0:0|00:00:00|2|
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/full-audit-130102.json", "bytes": 881, "sha256": "eb3fd7d55f017473c73f63fd18ba1dc8ac9148a9634dba33573f7c6157372e5f"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt", "bytes": 111358, "sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa"}
+REMOTE_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/delivery.tar.gz", "bytes": 1928668, "sha256": "968a20c398e4b84e346585d09872e4f2fee9e35752f11785bd17efd95d961f8f"}
+REMOTE_RETAINED {"directory": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/pilot-130101/cases", "files": 128, "bytes": 16496104}
+REMOTE_RETAINED {"directory": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/pilot-130101/process-traces", "files": 16, "bytes": 15062637}

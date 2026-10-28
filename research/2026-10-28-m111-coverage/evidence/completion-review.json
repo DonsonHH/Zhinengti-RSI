@@ -1,0 +1,196 @@
+{
+  "recorded_utc": "2026-10-28T04:57:31.465979+00:00",
+  "reviewed_commit": "582beca4ebbb89cf819ac7759b995a6d398152e1",
+  "objective": "Review M11, arrange next stage, and actually start the next stage",
+  "scope": "Completion audit of the requested review-plan-start sequence; full formal M11.1 and M12 remain planned",
+  "frozen_original_manifest_sha256": "4728501b28aacf5a2da6d56442741abf533d4fce85194a30ca45b12c7ab4632a",
+  "unchanged_current_manifest_bound_files": {
+    "research_files": 62,
+    "additional_files": 12
+  },
+  "unchanged_m11_manifest_bound_research_files": 127,
+  "fresh_local_verifiers": [
+    "scripts/verify_m11_delivery.py",
+    "scripts/verify_m111.py"
+  ],
+  "new_test_or_simulation_jobs_submitted": 0,
+  "tests": {
+    "original_successful_m111_test_log": 132,
+    "rerun_in_this_completion_audit": false
+  },
+  "jobs_freshly_confirmed": {
+    "130099": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:09"
+    },
+    "130100": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:32"
+    },
+    "130101": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:34"
+    },
+    "130102": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:03:15"
+    },
+    "130103": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    }
+  },
+  "remote_identity_and_topology_freshly_checked": true,
+  "remote_snapshot_utc": "2026-10-28T04:54:29Z",
+  "active_renly_jobs_at_snapshot": 0,
+  "remote_files_hash_verified": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/full-audit-130102.json",
+      "bytes": 881,
+      "sha256": "eb3fd7d55f017473c73f63fd18ba1dc8ac9148a9634dba33573f7c6157372e5f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt",
+      "bytes": 111358,
+      "sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/delivery.tar.gz",
+      "bytes": 1928668,
+      "sha256": "968a20c398e4b84e346585d09872e4f2fee9e35752f11785bd17efd95d961f8f"
+    }
+  ],
+  "raw_remote_retention_rechecked_by_count_and_bytes": [
+    {
+      "directory": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/pilot-130101/cases",
+      "files": 128,
+      "bytes": 16496104
+    },
+    {
+      "directory": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/pilot-130101/process-traces",
+      "files": 16,
+      "bytes": 15062637
+    }
+  ],
+  "raw_retention_file_hashes_all_recomputed_in_this_audit": false,
+  "figures_freshly_opened_and_visually_reviewed": [
+    {
+      "file": "m111-pilot.png",
+      "pixels": [
+        2363,
+        808
+      ],
+      "sha256": "c6518d4701885af3f2fc8940056a074c3329a5f94ea10651dc14f954770c4f9f"
+    },
+    {
+      "file": "m111-return-plans.png",
+      "pixels": [
+        2193,
+        797
+      ],
+      "sha256": "47f4aa4b877fbcc2bce1b6c128a606f1479429de091571bd792bc7b8d1fcebe7"
+    },
+    {
+      "file": "m111-service-evidence.png",
+      "pixels": [
+        1683,
+        1001
+      ],
+      "sha256": "e548d2d38c8472db5cc3aba98e26b692b45769918e8e173e80e40cd56cd1b6bb"
+    }
+  ],
+  "figure_review": "All three display, with readable labels and essential content; two viewer previews resized",
+  "correction": {
+    "file": "启动方案.md",
+    "archived_text": "开发用种子5000/5001",
+    "actual_executed_development_seeds": [
+      5000
+    ],
+    "actual_development_cases": 12,
+    "pilot_seeds_unchanged": [
+      5100,
+      5101
+    ],
+    "preserved_original_freeze": true,
+    "superseding_note": "复核补记.md"
+  },
+  "requirements": [
+    {
+      "requirement": "Review previous process",
+      "status": "verified",
+      "evidence": [
+        "completion-m11-verification.json",
+        "m11-targeted-review.json",
+        "../运行与结果.md"
+      ]
+    },
+    {
+      "requirement": "Correct identified issues",
+      "status": "verified",
+      "evidence": [
+        "contract.json",
+        "development-case-index.json",
+        "../复核补记.md"
+      ]
+    },
+    {
+      "requirement": "Arrange next process",
+      "status": "verified",
+      "evidence": [
+        "../启动方案.md",
+        "../下一阶段任务.json",
+        "../复核补记.md"
+      ]
+    },
+    {
+      "requirement": "Actually initiate next process",
+      "status": "verified",
+      "evidence": [
+        "development-summary.json",
+        "pilot-summary.json",
+        "full-audit.json",
+        "completion-local-verification.json"
+      ]
+    },
+    {
+      "requirement": "Check figures and evidence",
+      "status": "verified",
+      "evidence": [
+        "completion-local-verification.json",
+        "completion-remote-state.txt"
+      ]
+    }
+  ],
+  "remaining_formal_research_not_claimed_complete": [
+    "Task/field calibration",
+    "Robust timing and dynamic access",
+    "Matched information-value controls",
+    "Separate with/without-protection training",
+    "M12 open-model improver"
+  ],
+  "receipt_files": {
+    "completion-remote-state.txt": {
+      "bytes": 3269,
+      "sha256": "5e4b379e811ad3175e5fddadcbc648018e3214aefaefea0d4194b3948e7fc4ff",
+      "capture_source_sha256": "22f01a2e79fddeac07517424f5f278776edd84e05ce5eecc191e11822fffe811"
+    },
+    "completion-local-verification.json": {
+      "bytes": 933,
+      "sha256": "39e26dcf4776ee032d1aad602d04a322c40ecdfa4447d4eefee45aff5f7ea31d",
+      "capture_source_sha256": "cbf922a52d67ad3f0ee161af4bf40d9c438cf9df8b57b7d5db1c1f3d9fe6d089"
+    },
+    "completion-m11-verification.json": {
+      "bytes": 1597,
+      "sha256": "187f0796c8d3ca86ab96a0743c750ea0a0334018f4f0007afb18ce701ab2aa93",
+      "capture_source_sha256": "094832f566996b0392bd5e14b917d3090165c762628b7007fc08501f6678c2c3"
+    }
+  },
+  "correction_note_sha256": "89013ce63896905c9b58eb0c2cf0758b6f968d2e61e0a8d807e4009dfe7535ae",
+  "original_manifest_scope": "This supplement is new; existing run_manifest.json continues to describe the unchanged original delivery",
+  "receipt_line_endings": "CRLF normalized to LF for Git portability; capture sources preserved in the local work directory"
+}
