@@ -1,0 +1,97 @@
+{
+  "goal": "在指定巡检论文基础上，检验技能、工具调用、协作流程及改进器自身的持续改进，形成可复核论文证据",
+  "current_stage": "M12-C0公开事件诊断与信息对照",
+  "current_status": "completed_with_full_replay_and_original_evidence_verified",
+  "next_stage_status": "planned_not_submitted",
+  "scope_boundary": "本轮只执行固定改进器的信息表示比较；不将完整C1/C2/C3、论文或现场验证标为完成",
+  "tasks": [
+    {
+      "id": "C1-A-decision-opportunity",
+      "objective": "逐段检查漏检时是否有公开线索和可行补查机会",
+      "deliverables": [
+        "测量/模型线索、合法候选、返回余量、实际移动与服务时钟对应表",
+        "强巡回、同预算公开规则、冻结学习器比较",
+        "明确标注的评价器离线理想参考用于诊断可改善空间"
+      ],
+      "gate": "理想参考真值不进入模型、训练奖励或合法部署基线；不为制造AI优势给学习组特权、改时限或移除强巡回"
+    },
+    {
+      "id": "C1-B-tool-value",
+      "objective": "把历史估计和学习器的真实任务价值与外层修改分开验证",
+      "deliverables": [
+        "相同观测序列下测量保持、简单历史规则、名义物理估计和CVAE的误差/热点/决策差异",
+        "必要时冻结新接口训练预算、3个配对初始化及独立验证/测试",
+        "未训练评分、公开规则与巡回强基线",
+        "训练、外层适配、部署计算成本分别归因"
+      ],
+      "gate": "不强制调用无收益工具制造AI占比；模型误差改善不自动等于巡检改善；冻结演员负结果不代表充分训练的算法上限"
+    },
+    {
+      "id": "C2-professional-handoff",
+      "objective": "落实导师要求的检查内容与跨专业流程",
+      "deliverables": [
+        "设备-检查项目-有效证据映射与实际规程需求",
+        "遥测足够时确认对应项目、不足时生成合格补查请求",
+        "同设备多项目行程合并、逐项目核验和失败重试",
+        "同调用上限单角色、人工流程、随机搜索及固定改进器对照"
+      ],
+      "gate": "缺实测电压/电流通道时保持不支持；接点热不能证明服务供电可用；共享任务接管需新共同覆盖计划；未知清单发现另立任务"
+    },
+    {
+      "id": "C3-improver-update",
+      "objective": "信息与技能具有任务价值后再检验协议更新和迁移",
+      "deliverables": [
+        "旧/候选协议相同任务起点、空历史和配对候选种子",
+        "只迁移协议、不携带元开发程序/案例",
+        "新划分、故障相位/噪声配对和固定测试顺序",
+        "固定改进器、直接搜索、随机元协议与模型元协议的全成本效果表"
+      ],
+      "gate": "相同调用上限不冒充实际资源相同；不在旧测试上追加搜索直至正结果；任务流程收益与改进器能力分别判断"
+    },
+    {
+      "id": "paper-and-supervisor",
+      "objective": "据证据确定论文贡献和下一次导师汇报",
+      "deliverables": [
+        "原方法保留、领域适配、人工诊断提取与自动修改来源表",
+        "受控有效/无效案例、强对照和重复/成本报告",
+        "与现有自动工作流/递归智能体工作逐机制比较",
+        "现场规程、值得响应的短时异常和数据获取需求"
+      ],
+      "gate": "未验证递归增益、跨布局泛化或现场效果时不将其写为成果；不以模块名称替代任务贡献"
+    }
+  ],
+  "plan_document": "下一步方案.md",
+  "not_started": [
+    "新C1决策机会实验",
+    "新接口策略从头训练",
+    "C2跨专业交接",
+    "新C3协议更新",
+    "现场标定",
+    "未知设备发现",
+    "论文提交"
+  ],
+  "current_findings": {
+    "complete_tests_no_skips": 160,
+    "formal_model_calls": 45,
+    "actual_closed_loop_records": 1064,
+    "distinct_case_signatures": 776,
+    "physical_processes": 24,
+    "test_physical_processes": 16,
+    "noise_paired_test_conditions": 32,
+    "events3_missed_out_of44": [
+      18,
+      18,
+      18
+    ],
+    "tour_missed_out_of44": [
+      18,
+      18,
+      18
+    ],
+    "summary3_mean_censored_wait_s": 85.58468218724666,
+    "events3_mean_censored_wait_s": 87.29281677599202,
+    "event_information_extra_benefit_demonstrated": false,
+    "new_recursive_protocol_update_run": false,
+    "PPO_or_CVAE_task_gain_demonstrated": false
+  }
+}

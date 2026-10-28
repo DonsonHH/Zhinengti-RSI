@@ -1,0 +1,303 @@
+{
+  "method": "summary",
+  "slot": 0,
+  "generation_seed": 75028000,
+  "parent_id": "8725c244aa61749b",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 16,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 79.7468159682596,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11793.399999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "generation": {
+    "prompt": {
+      "task": "propose_patrol_program",
+      "current_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "improver_protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "public_diagnostics": [
+        {
+          "tool": "coverage",
+          "result": {
+            "coverage": 1.0,
+            "violating_tasks": 0.0,
+            "weighted_age_ratio": 0.3037822954349698,
+            "first_alert_tasks": 1.375
+          }
+        },
+        {
+          "tool": "professional_evidence",
+          "result": {
+            "thermal": {
+              "checks": 1132.0,
+              "distinct_checked_tasks": 128.0,
+              "distinct_measured_alarm_tasks": 1.0,
+              "new_measured_alerts": 1.0,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 1.0,
+              "measurement_field": "temperature_c",
+              "unit": "degC",
+              "mean_measured_value": 51.042500197317665,
+              "largest_public_completion_gap_s": 240.0
+            },
+            "electrical": {
+              "checks": 94.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.25,
+              "new_measured_alerts": 0.25,
+              "persistent_rechecks": 0.875,
+              "recovery_confirmations": 0.0,
+              "measurement_field": "contact_temperature_c",
+              "unit": "degC",
+              "mean_measured_value": 43.12330180706676,
+              "largest_public_completion_gap_s": 310.0
+            },
+            "cooling": {
+              "checks": 94.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.125,
+              "new_measured_alerts": 0.125,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 0.125,
+              "measurement_field": "pod_flow_kg_s",
+              "unit": "kg/s",
+              "mean_measured_value": 36.114986161853835,
+              "largest_public_completion_gap_s": 310.0
+            },
+            "control": {
+              "checks": 106.0,
+              "distinct_checked_tasks": 16.0,
+              "distinct_measured_alarm_tasks": 0.0,
+              "new_measured_alerts": 0.0,
+              "persistent_rechecks": 0.0,
+              "recovery_confirmations": 0.0,
+              "measurement_field": "controller_sensor_error_c",
+              "unit": "degC",
+              "mean_measured_value": 0.0,
+              "largest_public_completion_gap_s": 270.0
+            }
+          }
+        },
+        {
+          "tool": "efficiency",
+          "result": {
+            "travel_m": 11793.399999999992,
+            "service_s": 16670.0,
+            "extra_checks": 0.0,
+            "estimator_calls": 60.0,
+            "dispatches": 1426.0,
+            "different_from_actor": 1181.0
+          }
+        }
+      ],
+      "retrieved_candidates": [],
+      "response_keys": [
+        "diagnosis",
+        "workflow",
+        "expected_effect"
+      ],
+      "response_types": {
+        "diagnosis": "ONE explanatory string, never a list",
+        "workflow": "object",
+        "expected_effect": "ONE string"
+      },
+      "maximum_rule_count": 3,
+      "rule_count_policy": "Choose at most three conditions, not one per profession. Four rules is invalid.",
+      "workflow_keys": [
+        "refresh_s",
+        "cooldown_s",
+        "fallback",
+        "rules"
+      ],
+      "domains": {
+        "refresh_s": [
+          30,
+          60,
+          120
+        ],
+        "cooldown_s": [
+          0,
+          30,
+          60,
+          120
+        ],
+        "fallback": [
+          "tour",
+          "ppo"
+        ],
+        "rules": "0..3 ordered rules; each has exactly signal, threshold, action",
+        "signal": [
+          "age",
+          "thermal_excess",
+          "thermal_disagreement",
+          "contact_heat",
+          "flow_deficit",
+          "verified_sensor_bias"
+        ],
+        "threshold": "ONE NUMBER from the signal threshold domain",
+        "threshold_domains": {
+          "age": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "thermal_excess": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "thermal_disagreement": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "contact_heat": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "flow_deficit": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "verified_sensor_bias": [
+            0.5
+          ]
+        },
+        "action": [
+          "signal",
+          "urgency",
+          "ppo",
+          "return_tour"
+        ]
+      },
+      "semantics": {
+        "signal_profession": {
+          "age": "all",
+          "thermal_excess": "thermal",
+          "thermal_disagreement": "thermal",
+          "contact_heat": "electrical",
+          "flow_deficit": "cooling",
+          "verified_sensor_bias": "control"
+        },
+        "thermal_excess": "max(estimatedTemp-65,0)/20; degC scale; thermal only",
+        "thermal_disagreement": "abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty",
+        "contact_heat": "max(measuredContactTemp-60,0)/30; electrical only, not supply availability",
+        "flow_deficit": "max(1-measuredFlow/33.6,0); cooling only",
+        "verified_sensor_bias": "Previously valid reference comparison above1degC; control only",
+        "age": "Known task age/public revisit period",
+        "rules": "First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.",
+        "signal_action": "Typed signal times public asset weight divided by completion cost",
+        "fallback": "tour returns to baseline; ppo uses the frozen trained actor if no rule matches.",
+        "tool_use": "refresh_s changes actual CVAE calls; cooldown applies only to optional detours."
+      },
+      "constraints": [
+        "Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.",
+        "No changes to hidden evaluator, weights, data, costs or budgets; no source code.",
+        "Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.",
+        "Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters.",
+        "Event-card categories are public observations, not hidden fault labels. Never infer a tool capability from its name alone."
+      ],
+      "information_arm": "summary",
+      "tool_cards": {
+        "coverage": "Public completed-task coverage, exact recorded check ages and first measured-alert task count; not hidden anomaly detection.",
+        "professional_evidence": "Per-profession valid completed measurements, their units, measured alerts and rechecks; no fault labels.",
+        "efficiency": "Actual movement, service, optional checking and state-estimator calls.",
+        "thermal_disagreement": "Difference between historyCVAE and nominal temperature; thermal only, not calibrated uncertainty.",
+        "novelty": "Candidate-program repetition, number of previous proposals and seen version IDs. Does not detect new plant anomalies.",
+        "event_evidence": "Bounded public measurement sequences with task, time, unit and cost; first observed alarm time is not hidden fault onset."
+      },
+      "public_gap_extremes": {
+        "thermal": {
+          "mean_episode_largest_gap_s": 240.0,
+          "worst_observed_gap_s": 240.0
+        },
+        "electrical": {
+          "mean_episode_largest_gap_s": 310.0,
+          "worst_observed_gap_s": 310.0
+        },
+        "cooling": {
+          "mean_episode_largest_gap_s": 310.0,
+          "worst_observed_gap_s": 310.0
+        },
+        "control": {
+          "mean_episode_largest_gap_s": 270.0,
+          "worst_observed_gap_s": 270.0
+        }
+      },
+      "aggregation_note": "Legacy summary values are means over development episodes. public_gap_extremes separately names means and worst recorded gaps."
+    },
+    "rendered_prompt": "<|im_start|>system\nReturn one JSON object using exactly the response_keys in the request. This is offline patrol-program or improver-protocol adaptation with a fixed validator. Use only supplied public diagnostics and allowed feedback. Preserve models, measurement validity, coverage, evaluation, grammar, data and budgets. Never emit source code. diagnosis and expected_effect must each be a short STRING, never a list. workflow.rules must contain at most THREE entries; choose a subset, never four rules.<|im_end|>\n<|im_start|>user\n{\"task\": \"propose_patrol_program\", \"current_workflow\": {\"refresh_s\": 30, \"cooldown_s\": 60, \"fallback\": \"tour\", \"rules\": []}, \"improver_protocol\": {\"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"memory\": \"recent\", \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"}, \"public_diagnostics\": [{\"tool\": \"coverage\", \"result\": {\"coverage\": 1.0, \"violating_tasks\": 0.0, \"weighted_age_ratio\": 0.3037822954349698, \"first_alert_tasks\": 1.375}}, {\"tool\": \"professional_evidence\", \"result\": {\"thermal\": {\"checks\": 1132.0, \"distinct_checked_tasks\": 128.0, \"distinct_measured_alarm_tasks\": 1.0, \"new_measured_alerts\": 1.0, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 1.0, \"measurement_field\": \"temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 51.042500197317665, \"largest_public_completion_gap_s\": 240.0}, \"electrical\": {\"checks\": 94.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.25, \"new_measured_alerts\": 0.25, \"persistent_rechecks\": 0.875, \"recovery_confirmations\": 0.0, \"measurement_field\": \"contact_temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 43.12330180706676, \"largest_public_completion_gap_s\": 310.0}, \"cooling\": {\"checks\": 94.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.125, \"new_measured_alerts\": 0.125, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 0.125, \"measurement_field\": \"pod_flow_kg_s\", \"unit\": \"kg/s\", \"mean_measured_value\": 36.114986161853835, \"largest_public_completion_gap_s\": 310.0}, \"control\": {\"checks\": 106.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.0, \"new_measured_alerts\": 0.0, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 0.0, \"measurement_field\": \"controller_sensor_error_c\", \"unit\": \"degC\", \"mean_measured_value\": 0.0, \"largest_public_completion_gap_s\": 270.0}}}, {\"tool\": \"efficiency\", \"result\": {\"travel_m\": 11793.399999999992, \"service_s\": 16670.0, \"extra_checks\": 0.0, \"estimator_calls\": 60.0, \"dispatches\": 1426.0, \"different_from_actor\": 1181.0}}], \"retrieved_candidates\": [], \"response_keys\": [\"diagnosis\", \"workflow\", \"expected_effect\"], \"response_types\": {\"diagnosis\": \"ONE explanatory string, never a list\", \"workflow\": \"object\", \"expected_effect\": \"ONE string\"}, \"maximum_rule_count\": 3, \"rule_count_policy\": \"Choose at most three conditions, not one per profession. Four rules is invalid.\", \"workflow_keys\": [\"refresh_s\", \"cooldown_s\", \"fallback\", \"rules\"], \"domains\": {\"refresh_s\": [30, 60, 120], \"cooldown_s\": [0, 30, 60, 120], \"fallback\": [\"tour\", \"ppo\"], \"rules\": \"0..3 ordered rules; each has exactly signal, threshold, action\", \"signal\": [\"age\", \"thermal_excess\", \"thermal_disagreement\", \"contact_heat\", \"flow_deficit\", \"verified_sensor_bias\"], \"threshold\": \"ONE NUMBER from the signal threshold domain\", \"threshold_domains\": {\"age\": [0.25, 0.5, 0.75], \"thermal_excess\": [0.05, 0.25, 0.5], \"thermal_disagreement\": [0.05, 0.25, 0.5], \"contact_heat\": [0.05, 0.25, 0.5], \"flow_deficit\": [0.05, 0.25, 0.5], \"verified_sensor_bias\": [0.5]}, \"action\": [\"signal\", \"urgency\", \"ppo\", \"return_tour\"]}, \"semantics\": {\"signal_profession\": {\"age\": \"all\", \"thermal_excess\": \"thermal\", \"thermal_disagreement\": \"thermal\", \"contact_heat\": \"electrical\", \"flow_deficit\": \"cooling\", \"verified_sensor_bias\": \"control\"}, \"thermal_excess\": \"max(estimatedTemp-65,0)/20; degC scale; thermal only\", \"thermal_disagreement\": \"abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty\", \"contact_heat\": \"max(measuredContactTemp-60,0)/30; electrical only, not supply availability\", \"flow_deficit\": \"max(1-measuredFlow/33.6,0); cooling only\", \"verified_sensor_bias\": \"Previously valid reference comparison above1degC; control only\", \"age\": \"Known task age/public revisit period\", \"rules\": \"First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.\", \"signal_action\": \"Typed signal times public asset weight divided by completion cost\", \"fallback\": \"tour returns to baseline; ppo uses the frozen trained actor if no rule matches.\", \"tool_use\": \"refresh_s changes actual CVAE calls; cooldown applies only to optional detours.\"}, \"constraints\": [\"Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.\", \"No changes to hidden evaluator, weights, data, costs or budgets; no source code.\", \"Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.\", \"Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters.\", \"Event-card categories are public observations, not hidden fault labels. Never infer a tool capability from its name alone.\"], \"information_arm\": \"summary\", \"tool_cards\": {\"coverage\": \"Public completed-task coverage, exact recorded check ages and first measured-alert task count; not hidden anomaly detection.\", \"professional_evidence\": \"Per-profession valid completed measurements, their units, measured alerts and rechecks; no fault labels.\", \"efficiency\": \"Actual movement, service, optional checking and state-estimator calls.\", \"thermal_disagreement\": \"Difference between historyCVAE and nominal temperature; thermal only, not calibrated uncertainty.\", \"novelty\": \"Candidate-program repetition, number of previous proposals and seen version IDs. Does not detect new plant anomalies.\", \"event_evidence\": \"Bounded public measurement sequences with task, time, unit and cost; first observed alarm time is not hidden fault onset.\"}, \"public_gap_extremes\": {\"thermal\": {\"mean_episode_largest_gap_s\": 240.0, \"worst_observed_gap_s\": 240.0}, \"electrical\": {\"mean_episode_largest_gap_s\": 310.0, \"worst_observed_gap_s\": 310.0}, \"cooling\": {\"mean_episode_largest_gap_s\": 310.0, \"worst_observed_gap_s\": 310.0}, \"control\": {\"mean_episode_largest_gap_s\": 270.0, \"worst_observed_gap_s\": 270.0}}, \"aggregation_note\": \"Legacy summary values are means over development episodes. public_gap_extremes separately names means and worst recorded gaps.\"}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_response": "{\n  \"diagnosis\": \"Thermal and electrical systems show high alert activity with significant gaps in coverage, suggesting potential anomalies that require focused monitoring.\",\n  \"workflow\": {\n    \"refresh_s\": 60,\n    \"cooldown_s\": 30,\n    \"fallback\": \"tour\",\n    \"rules\": [\n      {\n        \"signal\": \"thermal_excess\",\n        \"threshold\": 0.25,\n        \"action\": \"urgency\"\n      },\n      {\n        \"signal\": \"contact_heat\",\n        \"threshold\": 0.25,\n        \"action\": \"signal\"\n      },\n      {\n        \"signal\": \"flow_deficit\",\n        \"threshold\": 0.25,\n        \"action\": \"return_tour\"\n      }\n    ]\n  },\n  \"expected_effect\": \"The patrol program will prioritize thermal and electrical anomalies with urgency, ensuring early detection and reducing unnecessary detours while maintaining coverage.\"\n}",
+    "input_tokens": 1951,
+    "output_tokens": 193,
+    "generation_seconds": 9.366429315879941
+  },
+  "valid": true,
+  "candidate_id": "23128e1ca8dfaf41",
+  "proposal": {
+    "diagnosis": "Thermal and electrical systems show high alert activity with significant gaps in coverage, suggesting potential anomalies that require focused monitoring.",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "expected_effect": "The patrol program will prioritize thermal and electrical anomalies with urgency, ensuring early detection and reducing unnecessary detours while maintaining coverage."
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 16,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 79.7468159682596,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11806.862499999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "ac08067a7d0184105365f845",
+    "6cf0df917a35db507d26401f",
+    "aed038ca194a738a4b0804cf",
+    "3fb7af1e2651aaf65741097d",
+    "a8a1f3de667bc1d7d46bee7b",
+    "16dd701fc6c66cd1cc13a785",
+    "d099e3265a9e00ea2a629934",
+    "c12f22d9e77a6e2b1dee3551"
+  ]
+}

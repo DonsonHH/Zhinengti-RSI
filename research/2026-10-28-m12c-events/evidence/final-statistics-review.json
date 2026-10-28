@@ -1,0 +1,217 @@
+{
+  "trial_actual_records": {
+    "0": 408,
+    "1": 296,
+    "2": 360
+  },
+  "all_actual_records": 1064,
+  "distinct_case_signatures": 776,
+  "distinct_physical_processes": 24,
+  "phase_record_counts": {
+    "adapt": 328,
+    "test": 736
+  },
+  "anomaly_denominator_by_noise": [
+    {
+      "trial": 0,
+      "per_noise": [
+        {
+          "noise_c": 0.2,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        },
+        {
+          "noise_c": 1.0,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        }
+      ],
+      "combined_segment_records": 44
+    },
+    {
+      "trial": 1,
+      "per_noise": [
+        {
+          "noise_c": 0.2,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        },
+        {
+          "noise_c": 1.0,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        }
+      ],
+      "combined_segment_records": 44
+    },
+    {
+      "trial": 2,
+      "per_noise": [
+        {
+          "noise_c": 0.2,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        },
+        {
+          "noise_c": 1.0,
+          "physical_cases": 16,
+          "anomaly_segments": 22
+        }
+      ],
+      "combined_segment_records": 44
+    }
+  ],
+  "same_process_service_loss_across_policy_and_noise": true,
+  "all_common_test_conditions_attribution_and_costs_checked": true,
+  "selected_information_arm_programs": [
+    {
+      "trial": 0,
+      "events3": {
+        "refresh_s": 60,
+        "cooldown_s": 120,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_disagreement",
+            "threshold": 0.5,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "summary3": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      },
+      "redacted3": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "return_tour"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          }
+        ]
+      },
+      "events_equal_initial": false
+    },
+    {
+      "trial": 1,
+      "events3": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "summary3": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "redacted3": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "events_equal_initial": true
+    },
+    {
+      "trial": 2,
+      "events3": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "summary3": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "redacted3": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "events_equal_initial": true
+    }
+  ],
+  "audit_totals": {
+    "actual_closed_loops_replayed": 1064,
+    "physical_arrays_verified": 72,
+    "actual_dispatches": 1492991,
+    "completed_measurements": 1492991,
+    "complete_return_plans_checked": 1492991,
+    "typed_choices_checked": 1492991,
+    "actual_model_calls": 45,
+    "task_candidate_slots": 72
+  },
+  "total_formal_generation_cost": {
+    "model_calls": 45,
+    "input_tokens": 121644,
+    "output_tokens": 8508,
+    "generation_seconds": 413.79121808335185,
+    "duplicates": 32,
+    "invalid": 0
+  },
+  "scope": "Fresh local verification from all compact records and original selection receipts; complete raw event checks in independent Slurm audits"
+}

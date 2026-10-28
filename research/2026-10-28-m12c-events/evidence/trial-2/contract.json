@@ -1,0 +1,48 @@
+{
+  "stage": "M12-C0 event-diagnostic information study",
+  "generation_seeds": [
+    7501,
+    7502,
+    7503
+  ],
+  "candidate_slots_per_trial": {
+    "summary": 9,
+    "events": 3,
+    "redacted": 3,
+    "random": 9
+  },
+  "formal_model_calls_per_trial": 15,
+  "summary3_is_prefix_of_summary9": true,
+  "task_candidate_slots_per_trial": 24,
+  "initial_program": {
+    "refresh_s": 30,
+    "cooldown_s": 60,
+    "fallback": "tour",
+    "rules": []
+  },
+  "development_seeds": [
+    7300,
+    7301
+  ],
+  "test_seeds": [
+    7400,
+    7401
+  ],
+  "test_physical_processes": 16,
+  "test_noise_conditions": 32,
+  "test_noise_c": [
+    0.2,
+    1.0
+  ],
+  "test_groups_per_trial": 11,
+  "test_group_references_per_trial": 352,
+  "model": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "input_token_cap": 6144,
+  "output_token_cap": 768,
+  "maximum_event_cards": 8,
+  "protocol_updated": false,
+  "neural_training": false,
+  "shared_grammar_and_annotated_validator": "M12-B unchanged; public measurements plus limited development acceptance feedback in prompts",
+  "scope": "Compare public evidence representations on known-layout new instances; completeC1/C2/C3research remains"
+}

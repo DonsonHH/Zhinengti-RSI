@@ -1,0 +1,102 @@
+[
+  {
+    "trial": 0,
+    "group": "tour",
+    "case": "fdc74fbe6c8c808322aea014",
+    "path": "cases/fdc74fbe6c8c808322aea014.json.gz",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "version_id": "8725c244aa61749b"
+  },
+  {
+    "trial": 0,
+    "group": "summary3",
+    "case": "37a43339feaab2af3ebdbfaa",
+    "path": "cases/37a43339feaab2af3ebdbfaa.json.gz",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "signal"
+        }
+      ]
+    },
+    "version_id": "063db664db57d7f7"
+  },
+  {
+    "trial": 0,
+    "group": "events3",
+    "case": "da9f723661563afdc27752aa",
+    "path": "cases/da9f723661563afdc27752aa.json.gz",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 120,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.5,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "version_id": "a955b99d6841e35e"
+  },
+  {
+    "trial": 0,
+    "group": "redacted3",
+    "case": "c79e107cab922b65d0256c00",
+    "path": "cases/c79e107cab922b65d0256c00.json.gz",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "verified_sensor_bias",
+          "threshold": 0.5,
+          "action": "return_tour"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "signal"
+        }
+      ]
+    },
+    "version_id": "8f9fb6ce97f09e68"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "rule_signals_inactive": {
+    "original_program": {
+      "refresh_s": 60,
+      "cooldown_s": 120,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_disagreement",
+          "threshold": 0.5,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "effective_program": {
+      "refresh_s": 60,
+      "cooldown_s": 120,
+      "fallback": "tour",
+      "rules": []
+    },
+    "meaning": "Only non-age workflow rules removed; actor/estimate/observation permissions unchanged"
+  }
+}

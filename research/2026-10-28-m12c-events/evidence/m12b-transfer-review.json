@@ -1,0 +1,348 @@
+{
+  "scope": "Retrospective metadata review of M12-B; old results unchanged and no workflow reselected",
+  "aggregate_sha256": "d716bc3a89ebc7be0943444f32aeb2c5dfd73621b748d499e3b8224dde10217b",
+  "accepted_model_protocol_updates": [
+    {
+      "trial": 0,
+      "round": 0,
+      "valid": true,
+      "accepted": true,
+      "changed_protocol_fields": [
+        "diagnostics"
+      ],
+      "old_tools": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "candidate_tools": [
+        "coverage",
+        "professional_evidence",
+        "thermal_disagreement"
+      ],
+      "development_incumbent": {
+        "cases": 2,
+        "anomaly_segments": 2,
+        "missed_segments": 0,
+        "weighted_censored_delay_s": 119.93398113969447,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11793.399999999992,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      },
+      "development_candidate": {
+        "cases": 2,
+        "anomaly_segments": 2,
+        "missed_segments": 0,
+        "weighted_censored_delay_s": 116.89436982351113,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11824.749999999993,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      }
+    },
+    {
+      "trial": 0,
+      "round": 1,
+      "valid": true,
+      "accepted": true,
+      "changed_protocol_fields": [
+        "diagnostics"
+      ],
+      "old_tools": [
+        "coverage",
+        "professional_evidence",
+        "thermal_disagreement"
+      ],
+      "candidate_tools": [
+        "coverage",
+        "professional_evidence",
+        "novelty"
+      ],
+      "development_incumbent": {
+        "cases": 2,
+        "anomaly_segments": 6,
+        "missed_segments": 5,
+        "weighted_censored_delay_s": 119.69667242732082,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11793.399999999992,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      },
+      "development_candidate": {
+        "cases": 2,
+        "anomaly_segments": 6,
+        "missed_segments": 4,
+        "weighted_censored_delay_s": 116.73718366454754,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11801.249999999993,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      }
+    },
+    {
+      "trial": 1,
+      "round": 0,
+      "valid": true,
+      "accepted": true,
+      "changed_protocol_fields": [
+        "diagnostics"
+      ],
+      "old_tools": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "candidate_tools": [
+        "coverage",
+        "professional_evidence",
+        "thermal_disagreement"
+      ],
+      "development_incumbent": {
+        "cases": 2,
+        "anomaly_segments": 2,
+        "missed_segments": 0,
+        "weighted_censored_delay_s": 116.89436982351113,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11857.749999999993,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      },
+      "development_candidate": {
+        "cases": 2,
+        "anomaly_segments": 2,
+        "missed_segments": 0,
+        "weighted_censored_delay_s": 116.89436982351113,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11824.749999999993,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      }
+    },
+    {
+      "trial": 1,
+      "round": 1,
+      "valid": true,
+      "accepted": true,
+      "changed_protocol_fields": [
+        "diagnostics"
+      ],
+      "old_tools": [
+        "coverage",
+        "professional_evidence",
+        "thermal_disagreement"
+      ],
+      "candidate_tools": [
+        "coverage",
+        "professional_evidence",
+        "novelty"
+      ],
+      "development_incumbent": {
+        "cases": 2,
+        "anomaly_segments": 6,
+        "missed_segments": 5,
+        "weighted_censored_delay_s": 119.69667242732082,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11793.399999999992,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      },
+      "development_candidate": {
+        "cases": 2,
+        "anomaly_segments": 6,
+        "missed_segments": 4,
+        "weighted_censored_delay_s": 116.73718366454754,
+        "violating_tasks": 0,
+        "coverage": 1.0,
+        "mean_travel_m": 11801.249999999993,
+        "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+      }
+    }
+  ],
+  "accepted_updates_only_changed_tool_selection": true,
+  "fresh_task_outcomes_by_trial": [
+    {
+      "trial": 0,
+      "fixed3_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "meta3_workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      },
+      "same_selected_program": false,
+      "test_missed_delta_meta_minus_fixed": 0,
+      "test_weighted_wait_delta_s_meta_minus_fixed": 2.9109986902234226
+    },
+    {
+      "trial": 1,
+      "fixed3_workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      },
+      "meta3_workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "same_selected_program": false,
+      "test_missed_delta_meta_minus_fixed": 2,
+      "test_weighted_wait_delta_s_meta_minus_fixed": 4.459528770065788
+    },
+    {
+      "trial": 2,
+      "fixed3_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "meta3_workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "same_selected_program": true,
+      "test_missed_delta_meta_minus_fixed": 0,
+      "test_weighted_wait_delta_s_meta_minus_fixed": 0.0
+    }
+  ],
+  "tool_semantics_examples": [
+    {
+      "trial": 0,
+      "round": 1,
+      "model_diagnosis_unverified": "The current protocol lacks a tool to detect novel patterns that could lead to early anomaly confirmation, which may result in unnecessary detours during patrols.",
+      "model_expected_effect_unverified": "The addition of the 'novelty' diagnostic tool will enhance the protocol's ability to identify new patterns, leading to earlier anomaly detection and more efficient patrol workflows.",
+      "actual_tool_output": [
+        "prior_candidate_count",
+        "duplicates",
+        "seen_versions"
+      ],
+      "review": "This tool describes proposal repetition, not plant anomalies. The quoted model explanation does not prove a sensing capability."
+    },
+    {
+      "trial": 1,
+      "round": 1,
+      "model_diagnosis_unverified": "The current protocol lacks a tool to detect novel patterns that could indicate early-stage anomalies, which may delay confirmation and reduce efficiency.",
+      "model_expected_effect_unverified": "The inclusion of 'novelty' as a diagnostic tool will enhance the ability to detect previously unseen anomalies, leading to faster and more accurate confirmation of issues.",
+      "actual_tool_output": [
+        "prior_candidate_count",
+        "duplicates",
+        "seen_versions"
+      ],
+      "review": "This tool describes proposal repetition, not plant anomalies. The quoted model explanation does not prove a sensing capability."
+    }
+  ],
+  "findings": [
+    "Accepted protocol changes did not improve the new-task fixed3comparison in any of3trials.",
+    "The accepted4updates changed diagnostic tool selection; memory and instruction stayed the same.",
+    "Protocol proposal prompt listed tool names without detailed meanings. Some model explanations confused proposal novelty with anomaly detection.",
+    "The old task prompt provided aggregate episode statistics rather than per-device measurement sequences."
+  ],
+  "causal_limits": "This metadata does not prove that coarse diagnostics or tool-name confusion caused transfer failure. A fresh matched comparison is required."
+}

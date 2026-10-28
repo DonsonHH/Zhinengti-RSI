@@ -1,0 +1,61 @@
+{
+  "method": "random",
+  "slot": 4,
+  "generation_seed": 75029504,
+  "parent_id": "e8f7dba02a2d37a8",
+  "parent_validation": {
+    "cases": 8,
+    "anomaly_segments": 16,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 74.43383113815987,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 11805.074999999992,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "valid": true,
+  "candidate_id": "c440e8b2df3ee442",
+  "proposal": {
+    "diagnosis": "Random program control",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 120,
+      "fallback": "ppo",
+      "rules": [
+        {
+          "signal": "contact_heat",
+          "threshold": 0.5,
+          "action": "return_tour"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.05,
+          "action": "urgency"
+        }
+      ]
+    },
+    "expected_effect": "No model hypothesis"
+  },
+  "accepted": false,
+  "reason": "no_improvement",
+  "candidate_validation": {
+    "cases": 8,
+    "anomaly_segments": 16,
+    "missed_segments": 5,
+    "weighted_censored_delay_s": 92.48455291384184,
+    "violating_tasks": 0,
+    "coverage": 1.0,
+    "mean_travel_m": 13124.724999999991,
+    "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+  },
+  "case_ids": [
+    "e81c689f5718367904d54506",
+    "57aaad08a258018083c74cd3",
+    "9ef2848db1beb3eb11467e8d",
+    "f87a753d63a35861d5f01055",
+    "0813365706033e3c01b79881",
+    "f7632c531b3c7ec889ea207f",
+    "facbd4a697efcf2328f61879",
+    "b3d2619a0e7d94b39cdaa8b0"
+  ]
+}
