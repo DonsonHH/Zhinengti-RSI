@@ -1,0 +1,60 @@
+{
+  "scope": "Simulation task/evidence contract, not field certification",
+  "capabilities": {
+    "thermal_reference": {
+      "implemented": true,
+      "accepted": [
+        "qualified_mobile_temperature",
+        "validated_remote_temperature"
+      ],
+      "current_remote_temperature_validated": false,
+      "meaning": "Calibrated representative node temperature, not apparent IR pixels"
+    },
+    "electrical_contact_heat": {
+      "implemented": true,
+      "accepted": [
+        "qualified_contact_temperature",
+        "validated_remote_contact_temperature"
+      ],
+      "meaning": "Connection temperature only; not supply availability or voltage"
+    },
+    "cooling_flow": {
+      "implemented": true,
+      "accepted": [
+        "qualified_flow_measurement",
+        "validated_remote_flow"
+      ],
+      "meaning": "Calibrated pod flow"
+    },
+    "control_sensor_bias": {
+      "implemented": true,
+      "accepted": [
+        "qualified_reference_comparison"
+      ],
+      "meaning": "Reference comparison, not ordinary remote temperature alone"
+    },
+    "IT_service_availability": {
+      "implemented": true,
+      "accepted": [
+        "calibrated_requested_and_delivered_power"
+      ],
+      "meaning": "Observed IT service deficit; cause remains undiagnosed"
+    },
+    "ac_voltage": {
+      "implemented": false,
+      "accepted": [
+        "calibrated_voltage_measurement"
+      ],
+      "meaning": "No actual voltage observation channel in this reduced-order model"
+    },
+    "branch_current": {
+      "implemented": false,
+      "accepted": [
+        "calibrated_current_measurement"
+      ],
+      "meaning": "A nominal V/power calculation is an estimate, not current measurement"
+    }
+  },
+  "startup_remote_power_calibration": "Declared exact public power channels in the synthetic generator; no voltage/current or cause inference",
+  "mobile_reference_tasks_replaced_in_this_pilot": false
+}

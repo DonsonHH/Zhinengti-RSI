@@ -1,0 +1,68 @@
+{
+  "stage": "M11.1 startup prototype",
+  "new_policy_training": false,
+  "protected_ownership": "Original baseline owner sets for every comparator; no partner takeover",
+  "conditions": [
+    [
+      "healthy",
+      900
+    ],
+    [
+      "coldplate_fouling",
+      60
+    ],
+    [
+      "coldplate_fouling",
+      180
+    ],
+    [
+      "coldplate_fouling",
+      900
+    ],
+    [
+      "dc_contact_hotspot",
+      900
+    ],
+    [
+      "it_feeder_loss",
+      180
+    ],
+    [
+      "it_feeder_loss",
+      900
+    ],
+    [
+      "aux_feeder_loss+cdu_fouling",
+      180
+    ]
+  ],
+  "pilot_seeds": [
+    5100,
+    5101
+  ],
+  "development_seeds": [
+    5000
+  ],
+  "pilot_cases": 128,
+  "physical_conditions": 16,
+  "selectors": [
+    "cycle",
+    "risk_free",
+    "risk_certified",
+    "untrained_certified"
+  ],
+  "estimators": [
+    "nominal",
+    "history"
+  ],
+  "untrained_score_seed": 77,
+  "history_estimator_retrained": false,
+  "gate": "Candidate completion plus complete baseline continuation; repeated cycle within all owned deadlines",
+  "exact_gap_metric": "Initial time0, actual completion timestamps and terminal1800 all included",
+  "remote_power": "Declared calibrated simulation power channels; over10percent deficit for3 consecutive5s readings; cause undiagnosed",
+  "unsupported_measurement_channels": [
+    "actual_voltage",
+    "actual_branch_current"
+  ],
+  "scope": "Known static layout, deterministic service/travel; no collision, communication latency or real deployment guarantee"
+}

@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-10-28T04:40:04.244067+00:00",
+  "figures": [
+    {
+      "file": "m111-pilot.png",
+      "pixels": [
+        2363,
+        808
+      ],
+      "sha256": "c6518d4701885af3f2fc8940056a074c3329a5f94ea10651dc14f954770c4f9f"
+    },
+    {
+      "file": "m111-return-plans.png",
+      "pixels": [
+        2193,
+        797
+      ],
+      "sha256": "47f4aa4b877fbcc2bce1b6c128a606f1479429de091571bd792bc7b8d1fcebe7"
+    },
+    {
+      "file": "m111-service-evidence.png",
+      "pixels": [
+        1683,
+        1001
+      ],
+      "sha256": "e548d2d38c8472db5cc3aba98e26b692b45769918e8e173e80e40cd56cd1b6bb"
+    }
+  ],
+  "method": "All three PNGs individually viewed; two resized by viewer; original files retained",
+  "checks": [
+    "Readable labels/units and no missing essential plot content",
+    "Exact gaps include initial and terminal intervals",
+    "No training-seed error bars claimed for nontraining pilot",
+    "Return slack is modeled projected slack, not real latency margin",
+    "Service evidence does not claim voltage/current or fault cause"
+  ],
+  "static_figures_reviewed": 3
+}

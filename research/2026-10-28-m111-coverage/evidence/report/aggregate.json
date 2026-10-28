@@ -1,0 +1,705 @@
+{
+  "scope": "Startup prototype, no new policy training; pooled16 paired process fixtures per estimator/method; not a policy-training-seed significance study",
+  "groups": {
+    "nominal": {
+      "cycle": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 7,
+        "pooled_miss_rate": 0.3333333333333333,
+        "weighted_censored_delay_s": 65.33998061143336,
+        "maximum_exact_gap_ratio": 0.8,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 0
+      },
+      "risk_free": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 11,
+        "pooled_miss_rate": 0.5238095238095238,
+        "weighted_censored_delay_s": 321.94646537202476,
+        "maximum_exact_gap_ratio": 6.0,
+        "cases_with_exact_gap_violation": 16,
+        "mean_coverage": 0.11470170454545454,
+        "mean_overdue_fraction": 0.7059185606060606,
+        "mean_extra_inspections": 2722.5625
+      },
+      "risk_certified": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 6,
+        "pooled_miss_rate": 0.2857142857142857,
+        "weighted_censored_delay_s": 48.263006603424074,
+        "maximum_exact_gap_ratio": 1.0,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 995
+      },
+      "untrained_certified": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 8,
+        "pooled_miss_rate": 0.38095238095238093,
+        "weighted_censored_delay_s": 79.95077637594716,
+        "maximum_exact_gap_ratio": 1.0,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 925.5
+      }
+    },
+    "history": {
+      "cycle": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 7,
+        "pooled_miss_rate": 0.3333333333333333,
+        "weighted_censored_delay_s": 65.33998061143336,
+        "maximum_exact_gap_ratio": 0.8,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 0
+      },
+      "risk_free": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 11,
+        "pooled_miss_rate": 0.5238095238095238,
+        "weighted_censored_delay_s": 323.16746699299665,
+        "maximum_exact_gap_ratio": 6.0,
+        "cases_with_exact_gap_violation": 16,
+        "mean_coverage": 0.11470170454545454,
+        "mean_overdue_fraction": 0.705911655618687,
+        "mean_extra_inspections": 2722.5625
+      },
+      "risk_certified": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 7,
+        "pooled_miss_rate": 0.3333333333333333,
+        "weighted_censored_delay_s": 51.541160194975575,
+        "maximum_exact_gap_ratio": 1.0,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 995.1875
+      },
+      "untrained_certified": {
+        "cases": 16,
+        "segments": 21,
+        "missed_segments": 8,
+        "pooled_miss_rate": 0.38095238095238093,
+        "weighted_censored_delay_s": 79.95077637594716,
+        "maximum_exact_gap_ratio": 1.0,
+        "cases_with_exact_gap_violation": 0,
+        "mean_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "mean_extra_inspections": 926.125
+      }
+    }
+  },
+  "remote_service_evidence_identical_across_all_selectors": true,
+  "remote_service_by_process": {
+    "healthy--900--5100": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "healthy--900--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--60--5100": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--60--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--180--5100": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--180--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--900--5100": {
+      "events": [
+        {
+          "time_s": 1005.0,
+          "pod": 12,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1317.8871969554712,
+          "delivered_kw": 1185.8796983494212,
+          "service_gap_ratio": 0.10016600731155764,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1025.0,
+          "pod": 12,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1304.287929205229,
+          "delivered_kw": 1174.7462316553956,
+          "service_gap_ratio": 0.09931986231657443,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1195.0,
+          "pod": 12,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1299.361697560942,
+          "delivered_kw": 1168.0166137619385,
+          "service_gap_ratio": 0.1010843124324459,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1220.0,
+          "pod": 12,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1296.8691642422718,
+          "delivered_kw": 1197.2138762330937,
+          "service_gap_ratio": 0.07684297750066729,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        }
+      ],
+      "root_cause_diagnosed": false
+    },
+    "coldplate_fouling--900--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "dc_contact_hotspot--900--5100": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "dc_contact_hotspot--900--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "it_feeder_loss--180--5100": {
+      "events": [
+        {
+          "time_s": 315.0,
+          "pod": 12,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1275.1601694671256,
+          "delivered_kw": 117.24681472489495,
+          "service_gap_ratio": 0.9080532645762525,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 375.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1308.3892697030487,
+          "delivered_kw": 117.24681472489493,
+          "service_gap_ratio": 0.910388431455491,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 435.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1337.6683282777374,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9123498611379612,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 495.0,
+          "pod": 12,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1332.7561861059985,
+          "delivered_kw": 1332.7561861059985,
+          "service_gap_ratio": 0.0,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        }
+      ],
+      "root_cause_diagnosed": false
+    },
+    "it_feeder_loss--180--5101": {
+      "events": [
+        {
+          "time_s": 315.0,
+          "pod": 13,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1340.2359991083176,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.9117573414707578,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 375.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1289.9164804216489,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.908315003790591,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 435.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1297.1962145558005,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9088295307287719,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 495.0,
+          "pod": 13,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1334.2340994732322,
+          "delivered_kw": 1334.2340994732322,
+          "service_gap_ratio": 0.0,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        }
+      ],
+      "root_cause_diagnosed": false
+    },
+    "it_feeder_loss--900--5100": {
+      "events": [
+        {
+          "time_s": 315.0,
+          "pod": 12,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1275.1601694671256,
+          "delivered_kw": 117.24681472489495,
+          "service_gap_ratio": 0.9080532645762525,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 375.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1308.3892697030487,
+          "delivered_kw": 117.24681472489493,
+          "service_gap_ratio": 0.910388431455491,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 435.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1337.6683282777374,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9123498611379612,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 495.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1332.7561861059985,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9120268088438122,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 555.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1324.160488101811,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9114557368397477,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 615.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1346.268871444991,
+          "delivered_kw": 117.24681472489497,
+          "service_gap_ratio": 0.9129098078312913,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 675.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1373.8488114419342,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.914658138691522,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 735.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1365.5358482270778,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9141386036279308,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 795.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1336.8281189727331,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9122947721843317,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 855.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1332.3401155177999,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9119993360859452,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 915.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1346.8686474415617,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9129485900888624,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 975.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1336.13894338306,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9122495341479758,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1035.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1297.8819458722674,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.909662958870965,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1095.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1278.2450367748354,
+          "delivered_kw": 117.24681472489496,
+          "service_gap_ratio": 0.9082751652838625,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1155.0,
+          "pod": 12,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1291.8291956898292,
+          "delivered_kw": 117.24681472489495,
+          "service_gap_ratio": 0.9092396927425953,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1215.0,
+          "pod": 12,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1297.869537255484,
+          "delivered_kw": 1297.869537255484,
+          "service_gap_ratio": 0.0,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        }
+      ],
+      "root_cause_diagnosed": false
+    },
+    "it_feeder_loss--900--5101": {
+      "events": [
+        {
+          "time_s": 315.0,
+          "pod": 13,
+          "kind": "new_measured_alert",
+          "task": "IT_service_availability",
+          "requested_kw": 1340.2359991083176,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.9117573414707578,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 375.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1289.9164804216489,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.908315003790591,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 435.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1297.1962145558005,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9088295307287719,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 495.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1334.2340994732322,
+          "delivered_kw": 118.26598761791303,
+          "service_gap_ratio": 0.911360391954751,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 555.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1322.9151704643073,
+          "delivered_kw": 118.26598761791303,
+          "service_gap_ratio": 0.9106019869918002,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 615.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1275.655161616461,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9072900018935753,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 675.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1274.0885817312014,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9071760085494087,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 735.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1323.6014448142696,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.9106483389835615,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 795.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1343.4287643343193,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9119670571617433,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 855.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1310.0305835618728,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9097227277729983,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 915.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1297.8199420584774,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9088733469218151,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 975.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1344.6607086597364,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9120477107300977,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1035.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1382.4880206576622,
+          "delivered_kw": 118.26598761791301,
+          "service_gap_ratio": 0.9144542405787699,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1095.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1357.133509934201,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9128560405058107,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1155.0,
+          "pod": 13,
+          "kind": "persistent_recheck",
+          "task": "IT_service_availability",
+          "requested_kw": 1323.578276179186,
+          "delivered_kw": 118.265987617913,
+          "service_gap_ratio": 0.9106467749234182,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        },
+        {
+          "time_s": 1215.0,
+          "pod": 13,
+          "kind": "recovery_confirmation",
+          "task": "IT_service_availability",
+          "requested_kw": 1346.7073469075058,
+          "delivered_kw": 1346.7073469075058,
+          "service_gap_ratio": 0.0,
+          "calibration_declared_in_simulation": true,
+          "root_cause_diagnosed": false,
+          "voltage_or_current_measured": false
+        }
+      ],
+      "root_cause_diagnosed": false
+    },
+    "aux_feeder_loss+cdu_fouling--180--5100": {
+      "events": [],
+      "root_cause_diagnosed": false
+    },
+    "aux_feeder_loss+cdu_fouling--180--5101": {
+      "events": [],
+      "root_cause_diagnosed": false
+    }
+  }
+}

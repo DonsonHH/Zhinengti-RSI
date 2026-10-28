@@ -1,0 +1,38 @@
+{
+  "status": "planned_not_submitted",
+  "current_stage_status": "M11.1 startup slice validated; complete formal task/learning study remains",
+  "next_stage": "M11.1 calibrated task definitions and matched policy-training study",
+  "tasks": [
+    {
+      "id": "A-remaining",
+      "objective": "Validate actionable task and observation semantics",
+      "deliverables": ["Expert-referenced actionable transients and consequence priorities", "Calibrated telemetry/mobile capability matrix with channel availability", "Actual voltage/current observations or explicit unsupported task status", "Known-inventory versus discovery-task scope"],
+      "gate": "Service deficit evidence is not fault root cause; ordinary temperature or apparent IR is not automatically a calibrated reference"
+    },
+    {
+      "id": "B-robustness",
+      "objective": "Extend and stress the return-plan checker",
+      "deliverables": ["Proof assumptions and independent certificate checks", "Dynamic access/service-time uncertainty and computation-delay treatment", "Feasible initial backlog and mission-tail rules", "Shared-ownership handoff only if a joint certificate is defined"],
+      "gate": "No general real-time or physical safety guarantee inferred from deterministic static128rack tests"
+    },
+    {
+      "id": "C-controls",
+      "objective": "Isolate active-information benefit",
+      "comparators": ["Owned fixed tour", "Risk heuristic with the same complete-return gate", "Untrained scoring with the same gate", "Matched extra-check budget and baseline phase controls", "Risk-information permutation or matched random detours", "Nominal and frozen history-estimator controls"],
+      "gate": "One fewer miss among21segments is prototype evidence, not a general improvement or significance claim; this pilot becomes development data"
+    },
+    {
+      "id": "D-training",
+      "objective": "Freeze and execute an independent learned-policy comparison after task gates pass",
+      "deliverables": ["Separate training with and without coverage protection", "Three paired model initializations and fixed resource/update budgets", "Validation-only selection", "New untouched seeds, anomaly-duration and sensor-quality shifts", "First alert, persistent recheck and recovery rewards separated"],
+      "gate": "Do not count inference-only removal as separately trained policy; retain exact event gaps, miss/censored-delay and service-loss reporting"
+    }
+  ],
+  "later_M12": {
+    "objective": "Open-model proposals for skills, tool selection and collaboration workflows",
+    "prototype_boundary": "Declarative bounded changes above the protected task/evidence/evaluation layer",
+    "comparators": ["Fixed workflow", "Matched-budget search", "Fixed improver", "Updated improver tested independently"],
+    "gate": "Separate improved task workflows from recursive improvement of the improver"
+  },
+  "not_started": ["New PPO training inM11.1", "Full formal M11.1-C/D benchmark", "Actual voltage/current channel integration", "Field calibration", "GW new closed-loop trial", "M12 RSI or B-PID inference"]
+}

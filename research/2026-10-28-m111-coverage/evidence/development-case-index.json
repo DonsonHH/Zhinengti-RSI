@@ -1,0 +1,974 @@
+[
+  {
+    "case": "development--healthy--900--5000--nominal--cycle",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "cycle"
+    },
+    "path": "cases/development--healthy--900--5000--nominal--cycle.json.gz",
+    "sha256": "d7f428d8aefb29cdcc14cdc23674cdb6b3682f495328b8909f0113bd7635a86d",
+    "bytes": 130294,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -0.25288252525252547,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.15184143651276827,
+      "certificate_candidate_evaluations": 1426,
+      "certificate_candidate_rejections": 0,
+      "selected_detours": 0
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 235.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 265.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--healthy--900--5000--nominal--risk_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "risk_certified"
+    },
+    "path": "cases/development--healthy--900--5000--nominal--risk_certified.json.gz",
+    "sha256": "918ca6f04f11ee9055f567e5fca3cf7ee839549ce32874df7c2749430000ebdc",
+    "bytes": 146217,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1921,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 6975.7999999999965,
+      "service_s": 22940.0,
+      "idle_s": 2394.199999999999,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -1.1290120202020215,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.44627334643155336,
+      "certificate_candidate_evaluations": 18774,
+      "certificate_candidate_rejections": 9873,
+      "selected_detours": 1035
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--healthy--900--5000--nominal--untrained_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "untrained_certified"
+    },
+    "path": "cases/development--healthy--900--5000--nominal--untrained_certified.json.gz",
+    "sha256": "3b4d1afbb8712e381d769d9523a2b2a3a7023d263470fe45314f62c8df179d3e",
+    "bytes": 149448,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1803,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 8309.499999999996,
+      "service_s": 21485.0,
+      "idle_s": 2515.499999999999,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -1.1226023358585862,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.7097361730411649,
+      "certificate_candidate_evaluations": 17644,
+      "certificate_candidate_rejections": 9838,
+      "selected_detours": 912
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--healthy--900--5000--history--cycle",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "cycle"
+    },
+    "path": "cases/development--healthy--900--5000--history--cycle.json.gz",
+    "sha256": "de07243d02cae53ba9f93180ecd09f97e931a12e07cbfbebd7ef6110ab40c384",
+    "bytes": 130304,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.02434317860752344,
+      "public_return": -0.25288252525252547,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.14968421589583158,
+      "certificate_candidate_evaluations": 1426,
+      "certificate_candidate_rejections": 0,
+      "selected_detours": 0
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 235.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 265.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--healthy--900--5000--history--risk_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "risk_certified"
+    },
+    "path": "cases/development--healthy--900--5000--history--risk_certified.json.gz",
+    "sha256": "d908db8db1b4e40309d5d36457417776ebda6fda3afbd4f09cc82a2ef2540755",
+    "bytes": 146225,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1921,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 6975.7999999999965,
+      "service_s": 22940.0,
+      "idle_s": 2394.199999999999,
+      "history_estimator_inference_s": 0.024972095154225826,
+      "public_return": -1.1290120202020215,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.46970375813543797,
+      "certificate_candidate_evaluations": 18774,
+      "certificate_candidate_rejections": 9873,
+      "selected_detours": 1035
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--healthy--900--5000--history--untrained_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "untrained_certified"
+    },
+    "path": "cases/development--healthy--900--5000--history--untrained_certified.json.gz",
+    "sha256": "b1faac0cee110df3fe59680a70b77240191c90d5080bda4ca013c521e05e7af4",
+    "bytes": 149875,
+    "process_key": "healthy--900--5000",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1814,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 8201.699999999997,
+      "service_s": 21595.0,
+      "idle_s": 2513.2999999999993,
+      "history_estimator_inference_s": 0.024087916128337383,
+      "public_return": -1.126725037878788,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.7097496083006263,
+      "certificate_candidate_evaluations": 17732,
+      "certificate_candidate_rejections": 9892,
+      "selected_detours": 927
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--nominal--cycle",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "cycle"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--nominal--cycle.json.gz",
+    "sha256": "b85c9f611aaf6b77a34c7315fda1311d6a87251af838169c4cc5948ff308e5d2",
+    "bytes": 134709,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 1,
+      "missed_segments": 0,
+      "miss_rate": 0.0,
+      "consequence_weighted_censored_delay_s": 60.00000000000001,
+      "detected_only_mean_delay_s": 60.0,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -0.2519428290747449,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.15185424406081438,
+      "certificate_candidate_evaluations": 1426,
+      "certificate_candidate_rejections": 0,
+      "selected_detours": 0
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 1,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 235.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 265.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--nominal--risk_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "risk_certified"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--nominal--risk_certified.json.gz",
+    "sha256": "fedfe454264df401f7db61ed872041ea3e8064cb78984571e6480ea01da367e6",
+    "bytes": 149709,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 75.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1921,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 6975.7999999999965,
+      "service_s": 22940.0,
+      "idle_s": 2394.199999999999,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -1.1290988598838951,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.4452640451490879,
+      "certificate_candidate_evaluations": 18774,
+      "certificate_candidate_rejections": 9873,
+      "selected_detours": 1035
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--nominal--untrained_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "nominal",
+      "selector": "untrained_certified"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--nominal--untrained_certified.json.gz",
+    "sha256": "ec0ab661d693502ca7fc99ec81f91b9f88ae40d5a4897e3e564647a4f7672f54",
+    "bytes": 153383,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 75.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1803,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 8309.499999999996,
+      "service_s": 21485.0,
+      "idle_s": 2515.499999999999,
+      "history_estimator_inference_s": 0.0,
+      "public_return": -1.1226947194229409,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.7071155747398734,
+      "certificate_candidate_evaluations": 17644,
+      "certificate_candidate_rejections": 9838,
+      "selected_detours": 912
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--history--cycle",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "cycle"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--history--cycle.json.gz",
+    "sha256": "1d7d1010d6a0f9f3a1a9febdad0e70878953215b12888fb95c2271f63dd57ecd",
+    "bytes": 134719,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 1,
+      "missed_segments": 0,
+      "miss_rate": 0.0,
+      "consequence_weighted_censored_delay_s": 60.00000000000001,
+      "detected_only_mean_delay_s": 60.0,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.024103308096528053,
+      "public_return": -0.2519428290747449,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.14945285767316818,
+      "certificate_candidate_evaluations": 1426,
+      "certificate_candidate_rejections": 0,
+      "selected_detours": 0
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 1,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 235.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 265.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--history--risk_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "risk_certified"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--history--risk_certified.json.gz",
+    "sha256": "21f193466e9dd7a4fc1c6962b45cd6bab842a521a97e5dd2f91a8f5b31faa766",
+    "bytes": 149723,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 75.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1921,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 6975.7999999999965,
+      "service_s": 22940.0,
+      "idle_s": 2394.199999999999,
+      "history_estimator_inference_s": 0.02458300068974495,
+      "public_return": -1.1290988598838951,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.43608343228697777,
+      "certificate_candidate_evaluations": 18774,
+      "certificate_candidate_rejections": 9873,
+      "selected_detours": 1035
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 585.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  },
+  {
+    "case": "development--coldplate_fouling--180--5000--history--untrained_certified",
+    "specification": {
+      "phase": "development",
+      "seed": 5000,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "selector": "untrained_certified"
+    },
+    "path": "cases/development--coldplate_fouling--180--5000--history--untrained_certified.json.gz",
+    "sha256": "194a555af87ebde70f27ab69a7872e2b0c05d23e2e096b9436e4729ee055f8c7",
+    "bytes": 153883,
+    "process_key": "coldplate_fouling--180--5000",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 75.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1814,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 595.0,
+      "travel_m": 8201.699999999997,
+      "service_s": 21595.0,
+      "idle_s": 2513.2999999999993,
+      "history_estimator_inference_s": 0.024234645999968052,
+      "public_return": -1.126817421443143,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.3216432805338981,
+      "maximum_exact_gap_s": 600.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.7114417999982834,
+      "certificate_candidate_evaluations": 17732,
+      "certificate_candidate_rejections": 9892,
+      "selected_detours": 927
+    },
+    "by_role": {
+      "thermal": {
+        "segments": 1,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 295.0
+      },
+      "electrical": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "cooling": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 590.0
+      },
+      "control": {
+        "segments": 0,
+        "confirmed": 0,
+        "final_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 595.0
+      }
+    },
+    "service_evidence_event_counts": {
+      "new_measured_alert": 0,
+      "persistent_recheck": 0,
+      "recovery_confirmation": 0
+    }
+  }
+]

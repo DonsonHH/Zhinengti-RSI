@@ -1,0 +1,422 @@
+{
+  "stage": "M11.1 startup slice",
+  "status": "review_plan_and_executable_startup_prototype_verified",
+  "recorded_utc": "2026-10-28T04:41:57.936487+00:00",
+  "parent_commit": "1f6a7aee23e7a3ab041d4534e00c3eb3b25786fc",
+  "goal_scope": "Review M11, arrange next-stage plan and actually initiate it; not completion of the entire formalM11.1/M12 study",
+  "remote_root": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111",
+  "M11_review": {
+    "frozen_research_files_unchanged": 127,
+    "targeted_actual_closed_loop_replay": 4,
+    "prior_full1136case_audit_retained": true,
+    "fresh_full1136replay_claimed": false,
+    "source_archives_verified": 4,
+    "original_transferred_files_verified": 92,
+    "all_prior_groups_and_paired_statistics_recomputed": true
+  },
+  "source_archives": {
+    "source_manifest_v1.json": "d3008cf4de35181634c4bafea3606b22238a536747bb71cff1bba040f33ab445",
+    "analysis_source_manifest_v1.json": "253f834056f825bb3eba5ba27936fe5719b9bb207083866915dae276103ba0dc",
+    "package_source_manifest_v1.json": "b65a061bc29236aadc5aa8c1c1a1713278cb7455166f45eb1dc4b70a48c1671b"
+  },
+  "analysis_helper_provenance": {
+    "path": "scripts/audit_m11.py",
+    "sha256": "ec94e7cde818ed7cf0e0387a8611f0aba0183cd096d0802d8a452623bc96877a",
+    "staging": "Same frozen helper copied beside the two analysis scripts; no source edits"
+  },
+  "protocol": {
+    "development_cases": 12,
+    "pilot_cases": 128,
+    "physical_conditions": 16,
+    "racks": 128,
+    "fixed_executor_count": 18,
+    "new_policy_training": false,
+    "untrained_score_seed": 77,
+    "temperature_estimator": "Existing M10 validation-selected historyseed1, unchanged",
+    "all_comparators_use_same_fixed_owned_tasks": true,
+    "exact_gap_includes": "time0, completion timestamps, terminal1800"
+  },
+  "jobs": {
+    "review": 130099,
+    "development": 130100,
+    "source": "code-d3008cf4",
+    "pilot": 130101,
+    "audit_report": 130102,
+    "package": 130103
+  },
+  "all5jobs_terminal_completed0": true,
+  "full_tests_no_skips": 132,
+  "audit": {
+    "all_pilot_cases_replayed": 128,
+    "unique_process_arrays_replayed": 16,
+    "fixed_estimator_bytes_verified": true,
+    "untrained_scorer_seed_and_no_updates_verified": true,
+    "accepted_complete_round_certificates_independently_checked": 172185,
+    "all_actual_dispatches_independently_checked": 251813,
+    "all_completed_measurements_independently_checked": 251813,
+    "protected_cases": 96,
+    "maximum_protected_exact_gap_ratio": 1.0,
+    "all_exact_completion_gaps_including_initial_and_terminal_recomputed": true,
+    "all_public_power_evidence_lifecycles_independently_rebuilt": true,
+    "maximum_independent_energy_residual_kj": 1.0135408956557512e-08,
+    "maximum_independent_electric_residual_kw": 1.0743406164692715e-11,
+    "scope": "Startup prototype and deterministic known-layout certificates, not completeM11.1 policy research, a general safety theorem or field validation"
+  },
+  "delivery": {
+    "original_files": 39,
+    "archive_sha256": "968a20c398e4b84e346585d09872e4f2fee9e35752f11785bd17efd95d961f8f",
+    "source_archives": 3,
+    "figures_individually_viewed": 3,
+    "figure_details": [
+      {
+        "file": "m111-pilot.png",
+        "pixels": [
+          2363,
+          808
+        ],
+        "sha256": "c6518d4701885af3f2fc8940056a074c3329a5f94ea10651dc14f954770c4f9f"
+      },
+      {
+        "file": "m111-return-plans.png",
+        "pixels": [
+          2193,
+          797
+        ],
+        "sha256": "47f4aa4b877fbcc2bce1b6c128a606f1479429de091571bd792bc7b8d1fcebe7"
+      },
+      {
+        "file": "m111-service-evidence.png",
+        "pixels": [
+          1683,
+          1001
+        ],
+        "sha256": "e548d2d38c8472db5cc3aba98e26b692b45769918e8e173e80e40cd56cd1b6bb"
+      }
+    ],
+    "all_groups_recomputed_locally": true,
+    "full_demo_records": 4,
+    "demo_process_NPZs": 1,
+    "relative_links_checked": 64,
+    "full_data_retained_remotely": "128case records,16process arrays, indexed byte hashes; not all downloaded"
+  },
+  "coverage_scope": [
+    "Known static graph, deterministic travel and service, fixed disjoint ownership",
+    "No collision, queue, runtime computation delay or communication delay inside action clock",
+    "Not a general safety theorem, optimal schedule or field certification",
+    "More conservative ownership than M11; no direct cross-stage performance claim"
+  ],
+  "measurement_scope": [
+    "Declared calibrated synthetic power channels can confirm service deficit",
+    "Voltage/current channel unavailable; no fabricated reading or fault-cause claim",
+    "Ordinary temperature/model/apparentIR not automatically a reference measurement",
+    "First measured alert, persistent recheck and recovery separate"
+  ],
+  "findings_scope": [
+    "96protected cases have0exact gap violations",
+    "Nominal risk-plus-plan misses6/21 versus tour7/21; history7/21; small prototype, no significance or learned superiority",
+    "Untrained scoring plus plan also preserves coverage; no new model training",
+    "Additional visits may be repetitive rather than useful information"
+  ],
+  "remaining_formal_phase": "Capability/engineering calibration, robust access/timing, matched active-information controls and separately trained with/without-protection policies; later M12; planned_not_submitted",
+  "research_files": {
+    "analysis_source_manifest_v1.json": {
+      "bytes": 441,
+      "sha256": "e4d76910446565b1f605b481b032fbfd38689dff8d21ba7b48c4bcf8cd958cae"
+    },
+    "evidence/case-index.json": {
+      "bytes": 328521,
+      "sha256": "f55f8b3d0087cbdfe27da17efb869e4cbae289d37e105739f4d3a0ac08e3e84b"
+    },
+    "evidence/contract.json": {
+      "bytes": 1517,
+      "sha256": "3c8de9c2e40b706abe3ca027319a740470c852202f837ef8f24a622e82be4f67"
+    },
+    "evidence/delivery-storage.json": {
+      "bytes": 180,
+      "sha256": "3b0bc0c8b6e6f510ee66e70a15b3ca945dcd808ba8e4fefb85b5e16b7b426bf0"
+    },
+    "evidence/delivery-verification.json": {
+      "bytes": 933,
+      "sha256": "39e26dcf4776ee032d1aad602d04a322c40ecdfa4447d4eefee45aff5f7ea31d"
+    },
+    "evidence/demo/cycle.json.gz": {
+      "bytes": 134484,
+      "sha256": "63a373f24fd1eb0d0c2ab7c86d83c0edc4010eac2932442430b23bf549f175d4"
+    },
+    "evidence/demo/process.npz": {
+      "bytes": 930209,
+      "sha256": "1dcf8aee8ff8ac892f33491ac09de5fccf252f16e8f1a09c82b3634e3ac3f2d5"
+    },
+    "evidence/demo/risk_certified.json.gz": {
+      "bytes": 149686,
+      "sha256": "5e4ecd33e572217c3bb52032054f395c227152947446ccc51f9b917478a81a7e"
+    },
+    "evidence/demo/risk_free.json.gz": {
+      "bytes": 84038,
+      "sha256": "3b89ae2e74fcc7ee56c6770905f2972c4a530e8e33cc8b75fc04617a6b3df9a0"
+    },
+    "evidence/demo/untrained_certified.json.gz": {
+      "bytes": 148994,
+      "sha256": "726d98c847fa67631713eb79d427198ddb35c036af46f0094de77cf960f353ca"
+    },
+    "evidence/development-case-index.json": {
+      "bytes": 30546,
+      "sha256": "25ae61c0dda73d516fb63fac37eb893a3badb71193c4ee06dab3752a95bf7888"
+    },
+    "evidence/development-gate.json": {
+      "bytes": 223,
+      "sha256": "7719c0973847cad993fedf81fd128ffd891bc2d42961b9fafaf7e1b44be7db72"
+    },
+    "evidence/development-summary.json": {
+      "bytes": 230,
+      "sha256": "4bdd216ecc94728c2b3cadbacfbfc2cbb0db18ca1e5613de70f403df8b19b00b"
+    },
+    "evidence/full-audit.json": {
+      "bytes": 881,
+      "sha256": "eb3fd7d55f017473c73f63fd18ba1dc8ac9148a9634dba33573f7c6157372e5f"
+    },
+    "evidence/job-identities.json": {
+      "bytes": 143,
+      "sha256": "8ac5f35fe33c68601c016ee85732a7966b05713dc3060a583786cf8d83894012"
+    },
+    "evidence/jobs/audit-report-130102.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/jobs/audit-report-130102.out": {
+      "bytes": 270,
+      "sha256": "5fa70b9969aa403da71eb566aec682e490e0eb46a995e0f1bb49d05c7eec2886"
+    },
+    "evidence/jobs/audit-report.sbatch": {
+      "bytes": 796,
+      "sha256": "43801aa3704d63113db9e520bc904e0251f20689b3da2cb93402283865a3ce2b"
+    },
+    "evidence/jobs/development-130100.err": {
+      "bytes": 19572,
+      "sha256": "c7db40b88719f4e68199035e7f3745a0954de2a08371c6a108d4f17d5968d99d"
+    },
+    "evidence/jobs/development-130100.out": {
+      "bytes": 1259,
+      "sha256": "975295016f2d80eb908bf4e96f02d3149ddb8548e8eb33d9b716c98edfcb0aaa"
+    },
+    "evidence/jobs/package-130103.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/jobs/package-130103.out": {
+      "bytes": 199,
+      "sha256": "4e0022b6a7d254a54e1d5b1b851a1c9a962e078d013a4b917691ff2f7b02cd90"
+    },
+    "evidence/jobs/package.sbatch": {
+      "bytes": 379,
+      "sha256": "31d10410bb2f1e0a948ad3a9ef8eb6da10f09578eba817a5932268c2fca91aae"
+    },
+    "evidence/jobs/pilot-130101.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/jobs/pilot-130101.out": {
+      "bytes": 13268,
+      "sha256": "4949805936ad6f76aef0299ebc72146cf69c004d9c42e83458078903886a7962"
+    },
+    "evidence/jobs/review-130099.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/jobs/review-130099.out": {
+      "bytes": 460,
+      "sha256": "523fe0302344e2ef01a8e3bc99ba640918ae0eea5dea87480e797abd9e0d2512"
+    },
+    "evidence/jobs/review-m11.py": {
+      "bytes": 2025,
+      "sha256": "290ad140652f34c3d8714b254d3b73956d724e56c629fd93653f08eac670c5c3"
+    },
+    "evidence/jobs/review.sbatch": {
+      "bytes": 470,
+      "sha256": "ead8c032457b41d7c95f9a36225f6fcb9efb63c5ea5eb490be13ddb1de7a741b"
+    },
+    "evidence/local-text-normalization.json": {
+      "bytes": 1743,
+      "sha256": "82f0292a3a1d020da2462ffee3801dfe4d8e2778ddf757a474b1d70f83604dcd"
+    },
+    "evidence/m11-targeted-review.json": {
+      "bytes": 1344,
+      "sha256": "53f0e7cc0f63493514125685fe1ccc3e67f29d38a6361df74427239b4826c9e1"
+    },
+    "evidence/pilot-summary.json": {
+      "bytes": 226,
+      "sha256": "298a23587f0e6e7dd23b4c714a52f6ea2bbaf053187262bc3996b24840b677ff"
+    },
+    "evidence/process-index.json": {
+      "bytes": 34152,
+      "sha256": "1f9db7829939a2eee37c73784e8b9ad9d24b68a8e6ba349255f8d1a35f6300e6"
+    },
+    "evidence/raw-storage.json": {
+      "bytes": 81905,
+      "sha256": "60b074d4a1d00f5f9321bac3299702d47c3d65efa60931f4cd44c052b6a827c3"
+    },
+    "evidence/report/aggregate.json": {
+      "bytes": 24524,
+      "sha256": "0f6924d177d301f18721111fef35d7a395443e2a238333384d163cc6d4a48f11"
+    },
+    "evidence/report/compact-metrics.json.gz": {
+      "bytes": 16403,
+      "sha256": "fb88bb5d432bf14ba7fab9e1866e5cbce0c5b11323b094d91ee4524239c7adfe"
+    },
+    "evidence/report/demo-selection.json": {
+      "bytes": 363,
+      "sha256": "61a23dc6ac1d95528c6ce216e765f365a1e20611ec2f0e541e28a2243bb4a7f7"
+    },
+    "evidence/report/m111-pilot.png": {
+      "bytes": 129988,
+      "sha256": "c6518d4701885af3f2fc8940056a074c3329a5f94ea10651dc14f954770c4f9f"
+    },
+    "evidence/report/m111-pilot.svg": {
+      "bytes": 77170,
+      "sha256": "bddd1c9da9ae8ab90f2cea966faadae29bc0f51ed33eec474d9d8af5f30cebcd"
+    },
+    "evidence/report/m111-return-plans.png": {
+      "bytes": 216655,
+      "sha256": "47f4aa4b877fbcc2bce1b6c128a606f1479429de091571bd792bc7b8d1fcebe7"
+    },
+    "evidence/report/m111-return-plans.svg": {
+      "bytes": 127019,
+      "sha256": "a332db1674f58edea002ad9ec16f2fe6ce2e5241de6439345e81341d260226bc"
+    },
+    "evidence/report/m111-service-evidence.png": {
+      "bytes": 83526,
+      "sha256": "e548d2d38c8472db5cc3aba98e26b692b45769918e8e173e80e40cd56cd1b6bb"
+    },
+    "evidence/report/m111-service-evidence.svg": {
+      "bytes": 56304,
+      "sha256": "36cfe2104cfed1c0eae780145dfc543c65488d1bb6cab1698167c36e6b3b4c99"
+    },
+    "evidence/retrieval-verification.json": {
+      "bytes": 397,
+      "sha256": "0138d1cd80996bc60cf8436a2f5c19e089fc1cb07b549acdaca9aa1b68a881ac"
+    },
+    "evidence/slurm-before-package.psv": {
+      "bytes": 636,
+      "sha256": "cde636ec2f92c0ebec5b9b2e4c75cf0e02d55477673a995aa5c22b665ab5d5e8"
+    },
+    "evidence/slurm-final.psv": {
+      "bytes": 780,
+      "sha256": "fe5fb430818a1aee323eb120fe78681ad486e5fd678e5828bcfa18a8f760cda3"
+    },
+    "evidence/text-normalization.json": {
+      "bytes": 830,
+      "sha256": "1471fb49d7535419b4a9c8b8e5c7985558bbf39ecf2c5f93ce9d737839769c1b"
+    },
+    "evidence/transfer-manifest.json": {
+      "bytes": 5300,
+      "sha256": "ac507f10c44e182c9af331341cdcb2acf5a2bb60bb742081dd70c709c62802c3"
+    },
+    "evidence/visual-review.json": {
+      "bytes": 1117,
+      "sha256": "a269bc741be26821faef35fb9569523424325044a785dd2140e7474c2b30e583"
+    },
+    "frozen_estimator.json": {
+      "bytes": 697,
+      "sha256": "8653f5a8250c0d3c2900768d3f9e16e8742c5fa051fb98532c8f7fd684e803a0"
+    },
+    "package_source_manifest_v1.json": {
+      "bytes": 305,
+      "sha256": "ee8cc4cd8f8f8adc3994d1ad4bb7d8396089b0dd55fac44c71f4e4ffcf7ab38b"
+    },
+    "source/analysis-source-v1.tar.gz": {
+      "bytes": 7373,
+      "sha256": "253f834056f825bb3eba5ba27936fe5719b9bb207083866915dae276103ba0dc"
+    },
+    "source/package-source-v1.tar.gz": {
+      "bytes": 2063,
+      "sha256": "b65a061bc29236aadc5aa8c1c1a1713278cb7455166f45eb1dc4b70a48c1671b"
+    },
+    "source/source-v1.tar.gz": {
+      "bytes": 203601,
+      "sha256": "d3008cf4de35181634c4bafea3606b22238a536747bb71cff1bba040f33ab445"
+    },
+    "source_manifest_v1.json": {
+      "bytes": 13350,
+      "sha256": "90de5a74d47a6e2446b6d886a7c938aff5804c8108ba12f13ab4f1194c26578c"
+    },
+    "verification_source_manifest.json": {
+      "bytes": 183,
+      "sha256": "9ad0718f907b22a2f93df06a65987e082b21f23a73e3d0bb3c7af7c4f683f09f"
+    },
+    "下一阶段任务.json": {
+      "bytes": 3101,
+      "sha256": "4cdac99e9ed4d05d91a0554869c38fcf96ff7153a62245ecba95b7b0708183d2"
+    },
+    "任务能力矩阵.json": {
+      "bytes": 1932,
+      "sha256": "f52b6aad510d14dbf017a891536560ea1ad42cedf5de8efe043dad87ab97dd58"
+    },
+    "可行性检查说明.md": {
+      "bytes": 2097,
+      "sha256": "70f2037b0196d5185e3018b6c445c67a09e29a80cf459b4189ffce5f87a262b8"
+    },
+    "启动方案.md": {
+      "bytes": 5469,
+      "sha256": "434abccf574e12cec8b4e3f66fd5d70160b6e0e7d5f52eb168c2c2de9db23d17"
+    },
+    "运行与结果.md": {
+      "bytes": 7488,
+      "sha256": "98582077f50f1aef94c1c355e574a5b8a7e257972e266b31d38ed6cbda354144"
+    },
+    "阶段验收.md": {
+      "bytes": 2120,
+      "sha256": "4f7b5fab6fa9df4e10f7ca3249c6c7ebd9cbe8c1ba55aa977a57e1b0dc19c453"
+    }
+  },
+  "additional_files": {
+    "README.md": {
+      "bytes": 24167,
+      "sha256": "2f247a4b59296dc48a87290b8c75b4d6537757d463c3b9af50beeb49d2b85981"
+    },
+    "CONTEXT.md": {
+      "bytes": 7533,
+      "sha256": "33bfdc05dcf271b17e80b250461192b8d7096339c01894658206953a6a75eb2c"
+    },
+    "src/patrol_rsi/inspection_contracts.py": {
+      "bytes": 5123,
+      "sha256": "803bef71270d6a66ce985ae4b881865b4b3fd741567c02c67641adfb187a08ef"
+    },
+    "src/patrol_rsi/coverage_plan.py": {
+      "bytes": 4382,
+      "sha256": "21390989b7828655404b10d45c9ad252a48722438ac669fd7cb4b597d64403a2"
+    },
+    "src/patrol_rsi/covered_inspection.py": {
+      "bytes": 11937,
+      "sha256": "12fb05788590b47d908b0dc1e918b661a671b365c27fc363e97d17a1735e9082"
+    },
+    "src/patrol_rsi/m111.py": {
+      "bytes": 5664,
+      "sha256": "f34abadb019b5bdbb30bb052a8768397695f28dfce9eab53bad45bfe935738b2"
+    },
+    "tests/test_coverage_plan.py": {
+      "bytes": 6891,
+      "sha256": "89071bd231f790b7768d79aec86662ef38068f9183c7b6760d80917c95af18d4"
+    },
+    "cluster/m111_startup.sbatch": {
+      "bytes": 729,
+      "sha256": "940307ed8d8bc50923f6ae9438a32a0eb03f0b49a1f33371bbb55b6a508504b5"
+    },
+    "scripts/audit_m111.py": {
+      "bytes": 13698,
+      "sha256": "1c21b5fb9f67fb20d037ea8320df85db14fcd98d0c1995dee557ccab8fd0fcd8"
+    },
+    "scripts/report_m111.py": {
+      "bytes": 8959,
+      "sha256": "70860cc342a41d2cc9604b86edf3e01660d3bdeb9ea010fb3689b82045ef1af0"
+    },
+    "scripts/package_m111.py": {
+      "bytes": 5356,
+      "sha256": "41d70a5b49cbb03481df4e7e6cb966a77f63cfdbc0f5ba273f53e9917e1f12a3"
+    },
+    "scripts/verify_m111.py": {
+      "bytes": 8661,
+      "sha256": "71b7e490974eb02885e4b4f00c6fe544c71e4eb17d5f8d47352c10d38910615f"
+    }
+  },
+  "checksum_scope": "Excludes this self-referential manifest; commit and remote equality checked separately"
+}
