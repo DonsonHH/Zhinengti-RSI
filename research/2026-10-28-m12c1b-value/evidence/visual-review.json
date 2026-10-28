@@ -1,0 +1,44 @@
+{
+  "recorded_utc": "2026-10-28T16:29:24.148673+00:00",
+  "figures": [
+    {
+      "path": "evidence/report-v2/c1b-cue-and-estimation.png",
+      "pixels": [
+        2137,
+        801
+      ],
+      "sha256": "1299faf14beb8f635b512308a0551974f4bd596e51fc3c57e58e857e17893c2b"
+    },
+    {
+      "path": "evidence/report-v2/c1b-labels-and-value.png",
+      "pixels": [
+        2408,
+        953
+      ],
+      "sha256": "b16ab7883ab5d755b38a43612fc850c24f609ce45dd2f27a7e660270912d788a"
+    },
+    {
+      "path": "evidence/report-v2/c1b-one-check-outcomes.png",
+      "pixels": [
+        2857,
+        884
+      ],
+      "sha256": "c9cf9702f19b241213493cd29b3a6333c71cd2a8c5eafd9b3f400b8c4e165cd2"
+    }
+  ],
+  "method": "Each PNG opened individually at original resolution after retrieval",
+  "checks": [
+    "Labels units legends and points readable",
+    "Repeated observations and scorer initializations disclosed",
+    "Current estimation separated from future forecasting",
+    "Target-only regression uses its own label objective",
+    "Teacher/natural sample overlap and one-action scope disclosed"
+  ],
+  "layout_corrections": [
+    "Widened outcome panels and wrapped untrained MLP label",
+    "Heldout regression labels moved to horizontal bars"
+  ],
+  "original_figures_retained": "evidence/report",
+  "final_figures": "evidence/report-v2",
+  "further_corrections_needed": false
+}

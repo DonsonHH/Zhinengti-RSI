@@ -1,0 +1,105 @@
+{
+  "stage": "C1-B0 supervised one-global-check skill and public cue quality",
+  "train_seeds": [
+    7800,
+    7801,
+    7802,
+    7803
+  ],
+  "validation_seeds": [
+    7850,
+    7851
+  ],
+  "test_seeds": [
+    7900,
+    7901
+  ],
+  "smoke_seed": 7899,
+  "train_physical": 16,
+  "validation_physical": 8,
+  "test_physical": 16,
+  "test_observation_conditions": 32,
+  "noise_c_test": [
+    0.2,
+    1.0
+  ],
+  "global_optional_budget": 1,
+  "natural_train_caps": {
+    "unconfirmed_cue": 6,
+    "no_cue_age_at_least_half_deadline": 3,
+    "remaining": 3
+  },
+  "teacher_cap_per_baseline": 4,
+  "heldout_natural_caps": {
+    "cue": 2,
+    "other": 2
+  },
+  "feature_names": [
+    "candidate_0",
+    "candidate_1",
+    "candidate_2",
+    "candidate_3",
+    "candidate_4",
+    "candidate_5",
+    "candidate_6",
+    "candidate_7",
+    "candidate_8",
+    "candidate_9",
+    "candidate_10",
+    "candidate_11",
+    "candidate_12",
+    "candidate_13",
+    "candidate_14",
+    "candidate_15",
+    "thermal_excess",
+    "thermal_disagreement",
+    "contact_heat",
+    "flow_deficit",
+    "verified_sensor_bias",
+    "raw_remote_thermal_excess",
+    "return_slack_over_300",
+    "finish_eta_over_300",
+    "baseline_age",
+    "baseline_eta",
+    "baseline_severity",
+    "baseline_return_slack_over_300",
+    "slack_difference_over_300",
+    "mean_legal_age",
+    "max_legal_age",
+    "baseline_completed_over_32",
+    "legal_count_over_32",
+    "free_agents_over_18"
+  ],
+  "initialization_seeds": [
+    0,
+    1,
+    2
+  ],
+  "updates": 400,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "hidden_widths": [
+    32,
+    32
+  ],
+  "activation": "Tanh",
+  "thresholds_in_tie_order": [
+    0.0,
+    0.1,
+    0.3,
+    "off"
+  ],
+  "selection_order": [
+    "total_missed_segments",
+    "pooled_weighted_wait_s",
+    "total_travel_m"
+  ],
+  "net_label": "baseline_missed - branch_missed + pooled_weighted_wait_gain_s/3000 - added_travel_m/100000",
+  "target_label": "target_new_confirmations + max(target_weighted_wait_gain_s,0)/3000; ignores all collateral losses",
+  "estimation": "Current estimates on identical tour histories; hold, clipped linear history, nominal, frozen CVAE",
+  "actor_control": "Best positive optional-vs-baseline frozen actor advantage at first eligible frame, one global action",
+  "LLM_calls": 0,
+  "PPO_or_CVAE_retrained": false,
+  "improver_updated": false,
+  "scope": "Supervised skill prototype; not continuous PPO, full RSI or field validation"
+}
