@@ -1,0 +1,39 @@
+{
+  "stage": "C1-B1 one-global-check timing and signal diagnosis",
+  "development_seeds": [
+    8100,
+    8101
+  ],
+  "validation_seeds": [
+    8150,
+    8151
+  ],
+  "test_seeds": [
+    8200,
+    8201
+  ],
+  "smoke_seed": 8199,
+  "test_physical_processes": 16,
+  "test_observation_conditions": 32,
+  "frozen_gates": [
+    0,
+    60,
+    180,
+    300,
+    "off"
+  ],
+  "public_lookahead_s": 120,
+  "future_schedule_grid_s": 5,
+  "one_global_optional_action": true,
+  "main_test_groups": 8,
+  "nominal_substitution_groups": 1,
+  "main_test_rollouts": 288,
+  "development_tours": 8,
+  "branch_sampling": "first, last and minimum-completion-cost valid legal optional witness per event; merge identical actions",
+  "branch_scope": "Original tour states only, separate counterfactuals, not a global upper bound or unavoidable-miss proof",
+  "surrogate": "weight*professional_excess*completion_lead/300 - .05*extra_duration/300 - .05*lost_slack/300",
+  "wait_discount": "exp(-wait_s/300)",
+  "new_neural_training": false,
+  "LLM_calls": 0,
+  "improver_updated": false
+}

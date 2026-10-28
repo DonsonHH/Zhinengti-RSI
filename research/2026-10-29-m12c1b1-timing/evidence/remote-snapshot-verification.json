@@ -1,0 +1,147 @@
+{
+  "snapshot_utc": "2026-10-28T18:21:11Z",
+  "critical_remote_hashes_verified": [
+    {
+      "path": "source-v1.tar.gz",
+      "bytes": 399923,
+      "sha256": "46eb21a2c2554ac1db79a545b047be7e592510285c7de32966cb8546b6734dd8"
+    },
+    {
+      "path": "analysis-v1.tar.gz",
+      "bytes": 405258,
+      "sha256": "933114011500243bbac1ddb163692e393acf0810d9337f0b8b5abe588cf347e8"
+    },
+    {
+      "path": "report-v1.tar.gz",
+      "bytes": 411070,
+      "sha256": "936c5038fc18a8c1e3c05b1d5524f6d1eb0afb1d9bd4b92bf95bc2de1adb307f"
+    },
+    {
+      "path": "report-v2.tar.gz",
+      "bytes": 411686,
+      "sha256": "735057ef5538ccc7ce94cd7c9688fb376256ba620c0f3e3a6c31573ba60c078c"
+    },
+    {
+      "path": "report-v3.tar.gz",
+      "bytes": 412043,
+      "sha256": "b82ff4efe336917e54df148d36a72c3dad773d3b9584f8fc1987c136734846d2"
+    },
+    {
+      "path": "package-v1.tar.gz",
+      "bytes": 413349,
+      "sha256": "a65a05a4213b73f6f7f77019bd4204488271de338eb9001e7a190e675532c245"
+    },
+    {
+      "path": "delivery.tar.gz",
+      "bytes": 14345392,
+      "sha256": "0c51e8b31ee92be46e7befbf83103cc23b42755ef7d542b5f0282473b218b791"
+    },
+    {
+      "path": "package-v2.tar.gz",
+      "bytes": 413441,
+      "sha256": "d88aa024c1b22ec45e14e27c9e3cae8134dd3d32f37c8b9a16dd11425f0f600a"
+    },
+    {
+      "path": "package-v3.tar.gz",
+      "bytes": 413466,
+      "sha256": "8809cbf3fec83fb35dbf817ad4834e7f3ad626a9ef10eef89f1fcf0ef88eff88"
+    },
+    {
+      "path": "delivery-storage.json",
+      "bytes": 218,
+      "sha256": "74fa5da048af2debde51b5d5768409d23e2a83ca93873502e08d5263d5449501"
+    },
+    {
+      "path": "formal-audit.json",
+      "bytes": 606,
+      "sha256": "e8787e74fafe178499b796698af7a9cadb744a7b8e46bed5658cbc96e274e62b"
+    },
+    {
+      "path": "formal/case-index.json",
+      "bytes": 1256199,
+      "sha256": "738870c5309fdcb7bd34245abf05a1733b2f34e39b3bbc97defba80f37660072"
+    },
+    {
+      "path": "formal/atlas-before-branches.json",
+      "bytes": 63432745,
+      "sha256": "048633421d9c4bde0f76ebec0a6cfa8e4f2151f4b25969cdd480628fe3e23ff8"
+    },
+    {
+      "path": "formal/branch-index.json",
+      "bytes": 100481,
+      "sha256": "b787b56abb8b60bbb5c3bb82a4ce23598984f6383fddc24ef538f7964595d50d"
+    },
+    {
+      "path": "report/aggregate.json",
+      "bytes": 197619,
+      "sha256": "30bb7a8c0991ec35638ec3f96f2e4f1e6808cf16239bc0e051c7c0126fe3b5df"
+    },
+    {
+      "path": "report-v2/aggregate.json",
+      "bytes": 251622,
+      "sha256": "b7f23512a0632eef7f0f6b15cad93bf413361ec37ce8a0ab98749935a052afda"
+    },
+    {
+      "path": "report-enrichment-source.json",
+      "bytes": 558,
+      "sha256": "e48927f2c79b3264e2c1fdc81fdd24265211d96e65bee6f245e0b42d1c6683c0"
+    },
+    {
+      "path": "public-evidence/transfer-manifest.json",
+      "bytes": 11175,
+      "sha256": "d157a30febbb523b58fd89463ab34f0da65b3098acf8e724a49f9159c6b9b9cd"
+    },
+    {
+      "path": "public-evidence/raw-storage.json",
+      "bytes": 199776,
+      "sha256": "bda0db4400e164eb386cac1089468ef3a3e623cc51851799f035dfd593d06aaf"
+    },
+    {
+      "path": "jobs/slurm-final.psv",
+      "bytes": 1361,
+      "sha256": "7f4889b769b781d57330d55b4530bfec21d06eeff0cf3586b0c6a9c588357d77"
+    }
+  ],
+  "raw_counts_and_sizes_verified": [
+    {
+      "kind": "cases",
+      "groups": {
+        "smoke": {
+          "files": 17,
+          "bytes": 2762867
+        },
+        "validation": {
+          "files": 40,
+          "bytes": 6530797
+        },
+        "formal": {
+          "files": 436,
+          "bytes": 71383031
+        }
+      },
+      "all_indexed_paths_and_sizes_verified": true
+    },
+    {
+      "kind": "processes",
+      "groups": {
+        "smoke": {
+          "files": 2,
+          "bytes": 1859327
+        },
+        "validation": {
+          "files": 8,
+          "bytes": 7501804
+        },
+        "formal": {
+          "files": 24,
+          "bytes": 22567851
+        }
+      },
+      "all_indexed_paths_and_sizes_verified": true
+    }
+  ],
+  "all_goal_jobs_absent_from_live_queue": true,
+  "unrelated_queue_rows_omitted": 0,
+  "all_raw_bytes_rehashed_at_final_login": false,
+  "raw_evidence": "Every actual case/physical array read and replayed in successful Slurm audits; final login reads only counts/sizes and critical fingerprints."
+}
