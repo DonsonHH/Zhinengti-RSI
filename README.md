@@ -2,6 +2,14 @@
 
 超算机房持续巡检：论文基线与智能体RSI。
 
+**最终目标**：依据导师“在指定论文基础上优化，嵌入RSI思想”的要求，保留VAE状态估计与多执行者学习，验证开源模型根据巡检经验修改技能、工具使用和协作流程的价值；进一步独立检验改进器自身的改进。仿真建模、覆盖检查和测试数量为这条论文证据链服务。
+
+当前回到M12外层研究：在冻结的机房过程、温度CVAE、已训练PPO和返回计划上执行工作流提案—评价—保留/回退，再与固定巡回、固定学习流程和同候选预算搜索比较。任务流程变好与递归改进有效分别评价。
+
+[目标与导师要求](research/2026-10-28-m12-alignment/目标与导师要求.md) · [本轮设计](research/2026-10-28-m12-alignment/实验设计.md) · [后续任务](research/2026-10-28-m12-alignment/下一步任务.json)
+
+M12-A已完成18次正式开源模型调用、312条独立闭环及完整重放。模型流程漏7/22段，当前冻结PPO漏10/22段，固定巡回漏5/22段；有/无候选记忆均选出同一程序。覆盖要求均满足，但尚未证明优于强基线或递归改进有效。下一步聚焦分专业诊断、返回巡回/不补查技能和独立改进器更新。[结果与图表](research/2026-10-28-m12-alignment/运行与结果.md) · [导师汇报要点](research/2026-10-28-m12-alignment/给导师的汇报要点.md)
+
 当前研究以ESWA 2025论文为起点，研究VAE重要度估计、多执行者持续重访与智能体自改进。M1–M5使用共享DDQN，M6改为学习高层检查点分配，低层导航由共同控制器完成。
 
 论文：[Variational model-based Deep Reinforcement Learning for Non-Homogeneous Patrolling aquatic environments with multiple unmanned surface vehicles](https://doi.org/10.1016/j.eswa.2025.126483)。
@@ -71,6 +79,12 @@ M11.1已开启并验证首个原型：任务能力矩阵、完整返回计划检
 - [M11.1原型结果与三张图](research/2026-10-28-m111-coverage/运行与结果.md)
 - [M11.1完整返回计划检查说明](research/2026-10-28-m111-coverage/可行性检查说明.md)
 - [M11.1启动切片验收](research/2026-10-28-m111-coverage/阶段验收.md)
+- [M12目标、已有成果与主线缺口](research/2026-10-28-m12-alignment/目标与导师要求.md)
+- [M12固定开源改进器试验设计](research/2026-10-28-m12-alignment/实验设计.md)
+- [M12实现和贡献归因边界](research/2026-10-28-m12-alignment/代码与方法复核.md)
+- [自动工作流与递归改进相关工作](research/2026-10-28-m12-alignment/相关工作与贡献边界.md)
+- [M12结果、对照与归因图](research/2026-10-28-m12-alignment/运行与结果.md)
+- [本轮导师汇报要点](research/2026-10-28-m12-alignment/给导师的汇报要点.md)
 - [项目术语](CONTEXT.md)
 - 论文资料与已制作的组会报告分别保存在literature/与reports/。
 

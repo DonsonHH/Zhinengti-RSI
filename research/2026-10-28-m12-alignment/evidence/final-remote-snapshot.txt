@@ -1,0 +1,37 @@
+renly
+mu01
+/share/home/renly
+2026-10-28T08:48:09Z
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|2|alloc|cu[01-02]|(null)
+cu*|up|infinite|18|idle|cu[03-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|1|mix|gpu02|gpu:V100S:4
+4gpu|up|infinite|1|idle|gpu03|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem
+130204|FAILED|1:0|00:01:30|4|48G
+130204.batch|FAILED|1:0|00:01:30|4|
+130205|COMPLETED|0:0|00:01:48|4|48G
+130205.batch|COMPLETED|0:0|00:01:48|4|
+130206|COMPLETED|0:0|00:01:48|4|48G
+130206.batch|COMPLETED|0:0|00:01:48|4|
+130207|COMPLETED|0:0|00:13:00|4|48G
+130207.batch|COMPLETED|0:0|00:13:00|4|
+130208|COMPLETED|0:0|00:00:17|2|8G
+130208.batch|COMPLETED|0:0|00:00:17|2|
+130209|FAILED|1:0|00:11:26|2|8G
+130209.batch|FAILED|1:0|00:11:26|2|
+130216|COMPLETED|0:0|00:11:37|2|8G
+130216.batch|COMPLETED|0:0|00:11:37|2|
+130218|COMPLETED|0:0|00:00:01|1|2G
+130218.batch|COMPLETED|0:0|00:00:01|1|
+130219|COMPLETED|0:0|00:00:01|1|2G
+130219.batch|COMPLETED|0:0|00:00:01|1|
+CURRENT_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/full-audit.json", "bytes": 1121, "sha256": "4ef9c894da45272843670f089bde326dff32d9b05dbf75e64bb622b2930e8868"}
+CURRENT_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/pilot-v3/selections-frozen.json", "bytes": 25828, "sha256": "f35c2eb3698692c42b0610a0430bea12345bfd2aa53ab934232017a2810bd6a8"}
+CURRENT_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/pilot-v3/case-index.json", "bytes": 854433, "sha256": "857bb3be7a4fb15008af11c633e2afba28113115386c75a1d53129e635e6734f"}
+CURRENT_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/delivery.tar.gz", "bytes": 2130336, "sha256": "297bcbc7e9f13d41ad84a7a84a6177473fda45a668968095a3a4c00e9a3ca0c1"}
+CURRENT_FILE {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/figure-delivery.tar.gz", "bytes": 114527, "sha256": "f2118917160dce49c7bd0e041e4e4ded81dd00d551430e61021b68ea1711bb6c"}
+CURRENT_RAW {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/pilot-v3/cases", "files": 312, "bytes": 47613501}
+CURRENT_RAW {"path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/pilot-v3/process-traces", "files": 24, "bytes": 22508111}

@@ -1,0 +1,90 @@
+{
+  "method": "random_search",
+  "generation_seed": 6101,
+  "slot": 1,
+  "parent_id": "ea260b780ec88869",
+  "parent_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.35647106274114804,
+    "travel_m": 13820.999999999993,
+    "service_s": 14950.0,
+    "estimator_calls": 60.0,
+    "dispatches": 1286.0,
+    "extra_checks": 224.5,
+    "rule_dispatches": 0.0,
+    "ppo_dispatches": 1286.0,
+    "forced_single_candidate": 984.75,
+    "different_from_actor": 0.0,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10259,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 13
+    },
+    "cases": 8
+  },
+  "candidate_seed": 610101,
+  "source": "random_generator",
+  "valid": true,
+  "proposal": {
+    "diagnosis": "Bounded random search control",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 120,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "urgency"
+        },
+        {
+          "role": "electrical",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "uncertainty"
+        }
+      ]
+    },
+    "expected_effect": "No model-generated hypothesis"
+  },
+  "candidate_id": "8256909cf6390543",
+  "candidate_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.3416367020494486,
+    "travel_m": 13203.949999999992,
+    "service_s": 15522.5,
+    "estimator_calls": 15.0,
+    "dispatches": 1341.625,
+    "extra_checks": 163.5,
+    "rule_dispatches": 1.75,
+    "ppo_dispatches": 1339.875,
+    "forced_single_candidate": 1117.875,
+    "different_from_actor": 0.25,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10707,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 10
+    },
+    "cases": 8
+  },
+  "case_ids": [
+    "6a14d9355d771670d2fe8ee9",
+    "3b77d4d99aa7f98b35787072",
+    "b74e6ede27955675c183943c",
+    "dfcf6a01222bf56346dfd435",
+    "302f290191741ce0cd0e3570",
+    "e2bf7d83fbff159442675618",
+    "76a16d6bd88b3c401c8df049",
+    "3e21a07ba08a65ccdf3fac00"
+  ],
+  "accepted": true,
+  "reason": "strict_public_development_improvement"
+}

@@ -1,0 +1,96 @@
+{
+  "method": "random_search",
+  "generation_seed": 6101,
+  "slot": 2,
+  "parent_id": "8256909cf6390543",
+  "parent_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.3416367020494486,
+    "travel_m": 13203.949999999992,
+    "service_s": 15522.5,
+    "estimator_calls": 15.0,
+    "dispatches": 1341.625,
+    "extra_checks": 163.5,
+    "rule_dispatches": 1.75,
+    "ppo_dispatches": 1339.875,
+    "forced_single_candidate": 1117.875,
+    "different_from_actor": 0.25,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10707,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 10
+    },
+    "cases": 8
+  },
+  "candidate_seed": 610102,
+  "source": "random_generator",
+  "valid": true,
+  "proposal": {
+    "diagnosis": "Bounded random search control",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.05,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.25,
+          "ranker": "uncertainty"
+        }
+      ]
+    },
+    "expected_effect": "No model-generated hypothesis"
+  },
+  "candidate_id": "874cc59b4ed1ec72",
+  "candidate_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.34834294803629356,
+    "travel_m": 13320.624999999993,
+    "service_s": 15513.75,
+    "estimator_calls": 15.0,
+    "dispatches": 1326.375,
+    "extra_checks": 220.875,
+    "rule_dispatches": 83.25,
+    "ppo_dispatches": 1243.125,
+    "forced_single_candidate": 970.875,
+    "different_from_actor": 50.0,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10580,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 15
+    },
+    "cases": 8
+  },
+  "case_ids": [
+    "d429545ad64e0278ed2efc74",
+    "b240018b59575b99e2be8f7d",
+    "5d73d937b2811ae48386c824",
+    "c548bcb647582de726565eaa",
+    "201349cd52d829e39dfb6e0d",
+    "1d519d79be84557ad10d0dd8",
+    "16724c0ff5bc66a655843ca7",
+    "6f3a166c38eeefe7ad315a33"
+  ],
+  "accepted": false,
+  "reason": "no_strict_public_improvement"
+}

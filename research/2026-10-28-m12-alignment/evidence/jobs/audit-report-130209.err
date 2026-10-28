@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/analysis-code-v1/scripts/audit_m12.py", line 313, in <module>
+    main()
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/analysis-code-v1/scripts/audit_m12.py", line 294, in main
+    adaptation = {'interface_smoke_only': True} if args.smoke else verify_adaptation(args.results, index, public)
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/analysis-code-v1/scripts/audit_m12.py", line 177, in verify_adaptation
+    require(json.dumps(expected) in generation['rendered_prompt'], 'Rendered prompt includes supplied public user object')
+  File "/share/home/renly/renly-patrol-rsi/runs/20261028-m12/analysis-code-v1/scripts/audit_m12.py", line 24, in require
+    raise RuntimeError(message)
+RuntimeError: Rendered prompt includes supplied public user object

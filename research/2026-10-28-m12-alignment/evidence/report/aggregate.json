@@ -1,0 +1,1015 @@
+{
+  "main_groups": {
+    "cycle": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 5,
+      "pooled_miss_rate": 0.22727272727272727,
+      "weighted_censored_delay_s": 70.27366033258738,
+      "maximum_exact_gap_ratio": 0.8,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 0.0,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 11793.399999999992,
+      "mean_service_s": 16670.0,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.66015625,
+      "behavior_counts": {
+        "forced": 22816
+      },
+      "behavior_fractions": {
+        "forced": 1.0,
+        "rule": 0.0,
+        "ppo": 0.0,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    },
+    "fixed_actor": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 10,
+      "pooled_miss_rate": 0.45454545454545453,
+      "weighted_censored_delay_s": 161.83466642088817,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 224.0625,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13869.562499999993,
+      "mean_service_s": 14949.375,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.0234375,
+      "behavior_counts": {
+        "ppo": 4848,
+        "forced": 15702
+      },
+      "behavior_fractions": {
+        "forced": 0.7640875912408759,
+        "rule": 0.0,
+        "ppo": 0.2359124087591241,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    },
+    "human_risk_rules": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 160.68667801398755,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 224.375,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13888.968749999995,
+      "mean_service_s": 14939.6875,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.1484375,
+      "behavior_counts": {
+        "ppo": 4788,
+        "forced": 15700,
+        "rule": 54
+      },
+      "behavior_fractions": {
+        "forced": 0.7642878006036413,
+        "rule": 0.00262876058806348,
+        "ppo": 0.2330834388082952,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.001655145555447376
+    },
+    "random_search": {
+      "case_references": 48,
+      "unique_case_records": 48,
+      "anomaly_segments": 66,
+      "missed_segments": 25,
+      "pooled_miss_rate": 0.3787878787878788,
+      "weighted_censored_delay_s": 142.83850138038054,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 184.47916666666666,
+      "mean_estimator_calls": 35.0,
+      "mean_travel_m": 13005.66041666666,
+      "mean_service_s": 15717.1875,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3046875,
+      "behavior_counts": {
+        "ppo": 5993,
+        "forced": 49969,
+        "rule": 9115
+      },
+      "behavior_fractions": {
+        "forced": 0.7678442460469905,
+        "rule": 0.14006484625904697,
+        "ppo": 0.09209090769396254,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.11501759454185043
+    },
+    "llm_no_memory": {
+      "case_references": 48,
+      "unique_case_records": 16,
+      "anomaly_segments": 66,
+      "missed_segments": 21,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.68749999999,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 3,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 14376,
+        "forced": 48042,
+        "rule": 819
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory": {
+      "case_references": 48,
+      "unique_case_records": 16,
+      "anomaly_segments": 66,
+      "missed_segments": 21,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.68749999999,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 3,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 14376,
+        "forced": 48042,
+        "rule": 819
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    }
+  },
+  "all_groups": {
+    "fixed_actor": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 10,
+      "pooled_miss_rate": 0.45454545454545453,
+      "weighted_censored_delay_s": 161.83466642088817,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 224.0625,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13869.562499999993,
+      "mean_service_s": 14949.375,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.0234375,
+      "behavior_counts": {
+        "ppo": 4848,
+        "forced": 15702
+      },
+      "behavior_fractions": {
+        "forced": 0.7640875912408759,
+        "rule": 0.0,
+        "ppo": 0.2359124087591241,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    },
+    "cycle": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 5,
+      "pooled_miss_rate": 0.22727272727272727,
+      "weighted_censored_delay_s": 70.27366033258738,
+      "maximum_exact_gap_ratio": 0.8,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 0.0,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 11793.399999999992,
+      "mean_service_s": 16670.0,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.66015625,
+      "behavior_counts": {
+        "forced": 22816
+      },
+      "behavior_fractions": {
+        "forced": 1.0,
+        "rule": 0.0,
+        "ppo": 0.0,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    },
+    "human_risk_rules": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 160.68667801398755,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 224.375,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13888.968749999995,
+      "mean_service_s": 14939.6875,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.1484375,
+      "behavior_counts": {
+        "ppo": 4788,
+        "forced": 15700,
+        "rule": 54
+      },
+      "behavior_fractions": {
+        "forced": 0.7642878006036413,
+        "rule": 0.00262876058806348,
+        "ppo": 0.2330834388082952,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.001655145555447376
+    },
+    "random_search/6101": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 153.83443763778033,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 163.5,
+      "mean_estimator_calls": 15.0,
+      "mean_travel_m": 13254.64999999999,
+      "mean_service_s": 15518.125,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.2109375,
+      "behavior_counts": {
+        "ppo": 3581,
+        "forced": 17850,
+        "rule": 12
+      },
+      "behavior_fractions": {
+        "forced": 0.8324394907428998,
+        "rule": 0.0005596231870540503,
+        "ppo": 0.16700088607004618,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0003264468591148627
+    },
+    "random_search/6102": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 151.91957885884108,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 165.875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 12866.974999999991,
+      "mean_service_s": 15824.375,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 1604,
+        "forced": 16752,
+        "rule": 3492
+      },
+      "behavior_fractions": {
+        "forced": 0.766752105455877,
+        "rule": 0.15983156352984254,
+        "ppo": 0.07341633101428048,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.130584035151959
+    },
+    "random_search/6103": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 122.7614876445202,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 224.0625,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 12895.356249999993,
+      "mean_service_s": 15809.0625,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3671875,
+      "behavior_counts": {
+        "ppo": 808,
+        "rule": 5611,
+        "forced": 15367
+      },
+      "behavior_fractions": {
+        "forced": 0.7053612411640503,
+        "rule": 0.2575507206462866,
+        "ppo": 0.03708803818966309,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.21229229780593042
+    },
+    "llm_no_memory/6101": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_no_memory/6102": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_no_memory/6103": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6101": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6101/nominal_estimator": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 151.22304527781475,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 0.0,
+      "mean_travel_m": 13487.087499999992,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.2734375,
+      "behavior_counts": {
+        "ppo": 4794,
+        "forced": 16014,
+        "rule": 271
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.012856397362303715,
+        "ppo": 0.22743014374495943,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6101/heuristic_fallback": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 6,
+      "pooled_miss_rate": 0.2727272727272727,
+      "weighted_censored_delay_s": 94.07317372433782,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 41.75,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 12788.256249999991,
+      "mean_service_s": 15841.25,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.56640625,
+      "behavior_counts": {
+        "other": 19228,
+        "forced": 2525,
+        "rule": 57
+      },
+      "behavior_fractions": {
+        "forced": 0.11577258138468592,
+        "rule": 0.0026134800550206326,
+        "ppo": 0.0,
+        "other": 0.8816139385602935
+      },
+      "different_from_actor_fraction": 0.7590554791380101
+    },
+    "llm_memory/6101/workflow_signals_permuted": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 148.05487505585893,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13483.681249999992,
+      "mean_service_s": 15399.375,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4779,
+        "forced": 16019,
+        "rule": 283
+      },
+      "behavior_fractions": {
+        "forced": 0.7598785636355012,
+        "rule": 0.013424410606707462,
+        "ppo": 0.22669702575779138,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011100042692471893
+    },
+    "llm_memory/6101/actor_transfer1": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 155.7620188467711,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 223.9375,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13289.924999999992,
+      "mean_service_s": 15578.75,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.2109375,
+      "behavior_counts": {
+        "ppo": 5115,
+        "forced": 15519,
+        "rule": 736
+      },
+      "behavior_fractions": {
+        "forced": 0.7262049602246139,
+        "rule": 0.03444080486663547,
+        "ppo": 0.23935423490875057,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.031071595694899392
+    },
+    "llm_memory/6101/actor_transfer2": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 115.14330163202975,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 242.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13094.787499999993,
+      "mean_service_s": 15562.5,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3984375,
+      "behavior_counts": {
+        "ppo": 3898,
+        "forced": 17341,
+        "rule": 363
+      },
+      "behavior_fractions": {
+        "forced": 0.8027497453939451,
+        "rule": 0.01680399962966392,
+        "ppo": 0.18044625497639108,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011665586519766688
+    },
+    "llm_memory/6102": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6102/nominal_estimator": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 151.22304527781475,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 0.0,
+      "mean_travel_m": 13487.087499999992,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.2734375,
+      "behavior_counts": {
+        "ppo": 4794,
+        "forced": 16014,
+        "rule": 271
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.012856397362303715,
+        "ppo": 0.22743014374495943,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6102/heuristic_fallback": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 6,
+      "pooled_miss_rate": 0.2727272727272727,
+      "weighted_censored_delay_s": 94.07317372433782,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 41.75,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 12788.256249999991,
+      "mean_service_s": 15841.25,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.56640625,
+      "behavior_counts": {
+        "other": 19228,
+        "forced": 2525,
+        "rule": 57
+      },
+      "behavior_fractions": {
+        "forced": 0.11577258138468592,
+        "rule": 0.0026134800550206326,
+        "ppo": 0.0,
+        "other": 0.8816139385602935
+      },
+      "different_from_actor_fraction": 0.7590554791380101
+    },
+    "llm_memory/6102/workflow_signals_permuted": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 148.05487505585893,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13483.681249999992,
+      "mean_service_s": 15399.375,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4779,
+        "forced": 16019,
+        "rule": 283
+      },
+      "behavior_fractions": {
+        "forced": 0.7598785636355012,
+        "rule": 0.013424410606707462,
+        "ppo": 0.22669702575779138,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011100042692471893
+    },
+    "llm_memory/6102/actor_transfer1": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 155.7620188467711,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 223.9375,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13289.924999999992,
+      "mean_service_s": 15578.75,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.2109375,
+      "behavior_counts": {
+        "ppo": 5115,
+        "forced": 15519,
+        "rule": 736
+      },
+      "behavior_fractions": {
+        "forced": 0.7262049602246139,
+        "rule": 0.03444080486663547,
+        "ppo": 0.23935423490875057,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.031071595694899392
+    },
+    "llm_memory/6102/actor_transfer2": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 115.14330163202975,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 242.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13094.787499999993,
+      "mean_service_s": 15562.5,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3984375,
+      "behavior_counts": {
+        "ppo": 3898,
+        "forced": 17341,
+        "rule": 363
+      },
+      "behavior_fractions": {
+        "forced": 0.8027497453939451,
+        "rule": 0.01680399962966392,
+        "ppo": 0.18044625497639108,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011665586519766688
+    },
+    "llm_memory/6103": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 7,
+      "pooled_miss_rate": 0.3181818181818182,
+      "weighted_censored_delay_s": 144.78836090363598,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13485.687499999993,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4792,
+        "forced": 16014,
+        "rule": 273
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.01295127852364913,
+        "ppo": 0.22733526258361403,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6103/nominal_estimator": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 151.22304527781475,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 0.0,
+      "mean_travel_m": 13487.087499999992,
+      "mean_service_s": 15398.125,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.2734375,
+      "behavior_counts": {
+        "ppo": 4794,
+        "forced": 16014,
+        "rule": 271
+      },
+      "behavior_fractions": {
+        "forced": 0.7597134588927369,
+        "rule": 0.012856397362303715,
+        "ppo": 0.22743014374495943,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.010389487167322927
+    },
+    "llm_memory/6103/heuristic_fallback": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 6,
+      "pooled_miss_rate": 0.2727272727272727,
+      "weighted_censored_delay_s": 94.07317372433782,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 41.75,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 12788.256249999991,
+      "mean_service_s": 15841.25,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.56640625,
+      "behavior_counts": {
+        "other": 19228,
+        "forced": 2525,
+        "rule": 57
+      },
+      "behavior_fractions": {
+        "forced": 0.11577258138468592,
+        "rule": 0.0026134800550206326,
+        "ppo": 0.0,
+        "other": 0.8816139385602935
+      },
+      "different_from_actor_fraction": 0.7590554791380101
+    },
+    "llm_memory/6103/workflow_signals_permuted": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 148.05487505585893,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 233.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13483.681249999992,
+      "mean_service_s": 15399.375,
+      "false_measurement_confirmations": 1,
+      "mean_first_alert_task_weight": 1.3359375,
+      "behavior_counts": {
+        "ppo": 4779,
+        "forced": 16019,
+        "rule": 283
+      },
+      "behavior_fractions": {
+        "forced": 0.7598785636355012,
+        "rule": 0.013424410606707462,
+        "ppo": 0.22669702575779138,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011100042692471893
+    },
+    "llm_memory/6103/actor_transfer1": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 9,
+      "pooled_miss_rate": 0.4090909090909091,
+      "weighted_censored_delay_s": 155.7620188467711,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 223.9375,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13289.924999999992,
+      "mean_service_s": 15578.75,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.2109375,
+      "behavior_counts": {
+        "ppo": 5115,
+        "forced": 15519,
+        "rule": 736
+      },
+      "behavior_fractions": {
+        "forced": 0.7262049602246139,
+        "rule": 0.03444080486663547,
+        "ppo": 0.23935423490875057,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.031071595694899392
+    },
+    "llm_memory/6103/actor_transfer2": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 8,
+      "pooled_miss_rate": 0.36363636363636365,
+      "weighted_censored_delay_s": 115.14330163202975,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 242.6875,
+      "mean_estimator_calls": 30.0,
+      "mean_travel_m": 13094.787499999993,
+      "mean_service_s": 15562.5,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.3984375,
+      "behavior_counts": {
+        "ppo": 3898,
+        "forced": 17341,
+        "rule": 363
+      },
+      "behavior_fractions": {
+        "forced": 0.8027497453939451,
+        "rule": 0.01680399962966392,
+        "ppo": 0.18044625497639108,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.011665586519766688
+    },
+    "fixed_actor/actor_transfer1": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 11,
+      "pooled_miss_rate": 0.5,
+      "weighted_censored_delay_s": 173.80734204535278,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 218.5,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13901.168749999993,
+      "mean_service_s": 14948.125,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.0234375,
+      "behavior_counts": {
+        "ppo": 5150,
+        "forced": 15519
+      },
+      "behavior_fractions": {
+        "forced": 0.7508345831922202,
+        "rule": 0.0,
+        "ppo": 0.24916541680777976,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    },
+    "fixed_actor/actor_transfer2": {
+      "case_references": 16,
+      "unique_case_records": 16,
+      "anomaly_segments": 22,
+      "missed_segments": 11,
+      "pooled_miss_rate": 0.5,
+      "weighted_censored_delay_s": 125.81842037192096,
+      "maximum_exact_gap_ratio": 1.0,
+      "exact_violating_tasks": 0,
+      "mean_extra_checks": 242.5,
+      "mean_estimator_calls": 60.0,
+      "mean_travel_m": 13195.899999999992,
+      "mean_service_s": 15466.875,
+      "false_measurement_confirmations": 0,
+      "mean_first_alert_task_weight": 1.1484375,
+      "behavior_counts": {
+        "ppo": 3912,
+        "forced": 17578
+      },
+      "behavior_fractions": {
+        "forced": 0.817961842717543,
+        "rule": 0.0,
+        "ppo": 0.18203815728245695,
+        "other": 0.0
+      },
+      "different_from_actor_fraction": 0.0
+    }
+  },
+  "proposal_costs": {
+    "random_search": {
+      "candidate_slots": 9,
+      "valid": 9,
+      "accepted": 5,
+      "duplicates": 0,
+      "model_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "generation_seconds": 0
+    },
+    "llm_no_memory": {
+      "candidate_slots": 9,
+      "valid": 9,
+      "accepted": 3,
+      "duplicates": 6,
+      "model_calls": 9,
+      "input_tokens": 8679,
+      "output_tokens": 2192,
+      "generation_seconds": 109.90918717067689
+    },
+    "llm_memory": {
+      "candidate_slots": 9,
+      "valid": 9,
+      "accepted": 3,
+      "duplicates": 6,
+      "model_calls": 9,
+      "input_tokens": 11229,
+      "output_tokens": 2158,
+      "generation_seconds": 95.30772939883173
+    }
+  },
+  "test_processes": 16,
+  "test_group_references": 464,
+  "test_unique_case_records": 224,
+  "note": "Generation repetitions reuse16physical conditions; no independent plant or new neural-training interpretation",
+  "selection_and_hidden_outcomes_are_distinct": true
+}

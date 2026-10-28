@@ -1,0 +1,941 @@
+[
+  {
+    "method": "random_search",
+    "generation_seed": 6101,
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 120,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "urgency"
+        },
+        {
+          "role": "electrical",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "uncertainty"
+        }
+      ]
+    },
+    "version_id": "8256909cf6390543",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3416367020494486,
+      "travel_m": 13203.949999999992,
+      "service_s": 15522.5,
+      "estimator_calls": 15.0,
+      "dispatches": 1341.625,
+      "extra_checks": 163.5,
+      "rule_dispatches": 1.75,
+      "ppo_dispatches": 1339.875,
+      "forced_single_candidate": 1117.875,
+      "different_from_actor": 0.25,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10707,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 10
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "6a14d9355d771670d2fe8ee9",
+      "3b77d4d99aa7f98b35787072",
+      "b74e6ede27955675c183943c",
+      "dfcf6a01222bf56346dfd435",
+      "302f290191741ce0cd0e3570",
+      "e2bf7d83fbff159442675618",
+      "76a16d6bd88b3c401c8df049",
+      "3e21a07ba08a65ccdf3fac00"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "random_search",
+    "generation_seed": 6102,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 120,
+      "rules": [
+        {
+          "role": "electrical",
+          "signal": "age",
+          "threshold": 0.75,
+          "ranker": "urgency"
+        },
+        {
+          "role": "all",
+          "signal": "uncertainty",
+          "threshold": 0.25,
+          "ranker": "uncertainty"
+        },
+        {
+          "role": "all",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "54edf3aecd1b8d19",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3371413995288801,
+      "travel_m": 13079.549999999992,
+      "service_s": 15641.25,
+      "estimator_calls": 30.0,
+      "dispatches": 1349.25,
+      "extra_checks": 164.875,
+      "rule_dispatches": 719.75,
+      "ppo_dispatches": 629.5,
+      "forced_single_candidate": 1055.875,
+      "different_from_actor": 158.375,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10767,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 11
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "3dc471c80d25da286492c0cf",
+      "8e092b8f24852c44afa0900f",
+      "87df97afef30c5c30e7f5664",
+      "0e4af99dda0079395e3dff94",
+      "3633f15834ad4b605fc7fe86",
+      "56e8baeaa3a2480a9d42ec5e",
+      "e28f259e38ab69c52ec311bc",
+      "626821c6527fc2bb5b410255"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "random_search",
+    "generation_seed": 6103,
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": [
+        {
+          "role": "all",
+          "signal": "risk",
+          "threshold": 0.5,
+          "ranker": "risk"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.75,
+          "ranker": "urgency"
+        },
+        {
+          "role": "all",
+          "signal": "age",
+          "threshold": 0.25,
+          "ranker": "uncertainty"
+        }
+      ]
+    },
+    "version_id": "921458d17db9a2da",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.32630677208757886,
+      "travel_m": 12565.249999999993,
+      "service_s": 16040.0,
+      "estimator_calls": 60.0,
+      "dispatches": 1375.625,
+      "extra_checks": 201.375,
+      "rule_dispatches": 1234.875,
+      "ppo_dispatches": 140.75,
+      "forced_single_candidate": 919.875,
+      "different_from_actor": 325.5,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10977,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 12
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "fd964d5aff5b7dacdcdfce43",
+      "a9817bf0845dd910f95576fe",
+      "725b2903ed1ce9a459cc35c2",
+      "83cb4dafe1967bc066259d5b",
+      "b4c15319081cf5645321ae5b",
+      "6d3219b973a5b36f0db5f70b",
+      "3f8c509138e8738ecb67fd3a",
+      "42017a57e464bd7b48337243"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_no_memory",
+    "generation_seed": 6101,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_no_memory",
+    "generation_seed": 6102,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_no_memory",
+    "generation_seed": 6103,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_memory",
+    "generation_seed": 6101,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_memory",
+    "generation_seed": 6102,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  },
+  {
+    "method": "llm_memory",
+    "generation_seed": 6103,
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "version_id": "ba10532f0b6bf24d",
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.3510091592855611,
+      "travel_m": 13420.574999999993,
+      "service_s": 15442.5,
+      "estimator_calls": 30.0,
+      "dispatches": 1322.875,
+      "extra_checks": 235.375,
+      "rule_dispatches": 47.75,
+      "ppo_dispatches": 1275.125,
+      "forced_single_candidate": 1002.0,
+      "different_from_actor": 15.875,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10552,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 15
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "8122d8691cded5e1b1a663c2",
+      "d95bc490887a44ecc5a20ac1",
+      "0d2d83a9f8b683ac5d5b0f5b",
+      "e2ce9a7163caebfe4820d1a4",
+      "240046c12e39d20585ff1b22",
+      "464a3ec72ffe91a402180296",
+      "860e638986bfd551078ecac5",
+      "15a17f45f28acd8dea466692"
+    ],
+    "initial": {
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "rules": []
+      },
+      "public_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.35647106274114804,
+        "travel_m": 13820.999999999993,
+        "service_s": 14950.0,
+        "estimator_calls": 60.0,
+        "dispatches": 1286.0,
+        "extra_checks": 224.5,
+        "rule_dispatches": 0.0,
+        "ppo_dispatches": 1286.0,
+        "forced_single_candidate": 984.75,
+        "different_from_actor": 0.0,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10259,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 13
+        },
+        "cases": 8
+      },
+      "case_ids": [
+        "e4b9a6aab99dd18a122e98d2",
+        "81e86a8d1d81a1181e163110",
+        "b9aeafbfc34204e30c91c490",
+        "641f03b9151d564ead8e9984",
+        "8655c01defedad8b9fd7563d",
+        "ac242c97d9b77657987b7378",
+        "c414d683c20d2c098f40e9b3",
+        "ee03c237b59ae14224f20989"
+      ]
+    },
+    "candidate_slots": 3,
+    "new_neural_training": false,
+    "improver_updated": false
+  }
+]

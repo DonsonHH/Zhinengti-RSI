@@ -1,0 +1,77 @@
+{
+  "fixed_actor": {
+    "case": "65c2248c7b3894c7ad6121cf",
+    "version_id": "ea260b780ec88869",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    }
+  },
+  "human_risk_rules": {
+    "case": "16b2b841265290c5dd2ab68b",
+    "version_id": "67c1bb39d93b6573",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": [
+        {
+          "role": "all",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "risk"
+        }
+      ]
+    }
+  },
+  "random_search/6101": {
+    "case": "32d49bb62f604350be8702e9",
+    "version_id": "8256909cf6390543",
+    "workflow": {
+      "refresh_s": 120,
+      "cooldown_s": 120,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "urgency"
+        },
+        {
+          "role": "electrical",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "uncertainty"
+        }
+      ]
+    }
+  },
+  "llm_memory/6101": {
+    "case": "0b7d13e09a45214581d523c9",
+    "version_id": "ba10532f0b6bf24d",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    }
+  }
+}

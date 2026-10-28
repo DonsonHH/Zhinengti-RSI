@@ -1,0 +1,115 @@
+{
+  "stage": "M12-A frozen-improver integration pilot",
+  "new_neural_training": false,
+  "recursive_improver_updated": false,
+  "generation_seeds": [
+    6101,
+    6102,
+    6103
+  ],
+  "candidate_slots_per_method_seed": 3,
+  "methods": [
+    "random_search",
+    "llm_no_memory",
+    "llm_memory"
+  ],
+  "development": {
+    "seeds": [
+      6201,
+      6202
+    ],
+    "fixtures": [
+      [
+        "healthy",
+        900
+      ],
+      [
+        "coldplate_fouling",
+        180
+      ],
+      [
+        "dc_contact_hotspot",
+        900
+      ],
+      [
+        "aux_feeder_loss+cdu_fouling",
+        180
+      ]
+    ],
+    "cases": 8
+  },
+  "test": {
+    "seeds": [
+      6300,
+      6301
+    ],
+    "fixtures": [
+      [
+        "healthy",
+        900
+      ],
+      [
+        "coldplate_fouling",
+        60
+      ],
+      [
+        "coldplate_fouling",
+        180
+      ],
+      [
+        "coldplate_fouling",
+        900
+      ],
+      [
+        "dc_contact_hotspot",
+        900
+      ],
+      [
+        "it_feeder_loss",
+        180
+      ],
+      [
+        "sensor_bias",
+        900
+      ],
+      [
+        "aux_feeder_loss+cdu_fouling",
+        180
+      ]
+    ],
+    "cases": 16
+  },
+  "actor_for_adaptation": "Existing M11 history-seed0",
+  "actor_transfer_seeds": [
+    1,
+    2
+  ],
+  "same_grammar_and_candidate_evaluation_budget": true,
+  "random_search_uses_no_LLM": true,
+  "total_GPU_cost_equal_claimed": false,
+  "input_token_cap": 6144,
+  "output_token_cap": 768,
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "model_precision": "float16",
+  "model_generation": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "thinking": false
+  },
+  "scope": "Known static128rack simulation; original paper adapted to temperatureCVAE and high-levelPPO; no field/optimality/recursive-improvement claim",
+  "selection": "Only public valid-measurement outcomes and event-time ages; hidden intervals and test data excluded",
+  "test_order": "All candidate selections frozen before test execution",
+  "predeclared_demo": {
+    "seed": 6301,
+    "scenario": "coldplate_fouling",
+    "duration_s": 180,
+    "groups": [
+      "fixed_actor",
+      "human_risk_rules",
+      "random_search/6101",
+      "llm_memory/6101"
+    ]
+  }
+}

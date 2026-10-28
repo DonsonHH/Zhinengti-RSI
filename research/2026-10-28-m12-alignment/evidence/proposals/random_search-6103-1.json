@@ -1,0 +1,96 @@
+{
+  "method": "random_search",
+  "generation_seed": 6103,
+  "slot": 1,
+  "parent_id": "7be97118c7cbc76f",
+  "parent_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.3511060383554012,
+    "travel_m": 13422.074999999993,
+    "service_s": 15462.5,
+    "estimator_calls": 60.0,
+    "dispatches": 1323.875,
+    "extra_checks": 236.875,
+    "rule_dispatches": 0.0,
+    "ppo_dispatches": 1323.875,
+    "forced_single_candidate": 1013.375,
+    "different_from_actor": 0.0,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10560,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 15
+    },
+    "cases": 8
+  },
+  "candidate_seed": 610301,
+  "source": "random_generator",
+  "valid": true,
+  "proposal": {
+    "diagnosis": "Bounded random search control",
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": [
+        {
+          "role": "all",
+          "signal": "risk",
+          "threshold": 0.5,
+          "ranker": "risk"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.75,
+          "ranker": "urgency"
+        },
+        {
+          "role": "all",
+          "signal": "age",
+          "threshold": 0.25,
+          "ranker": "uncertainty"
+        }
+      ]
+    },
+    "expected_effect": "No model-generated hypothesis"
+  },
+  "candidate_id": "921458d17db9a2da",
+  "candidate_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.32630677208757886,
+    "travel_m": 12565.249999999993,
+    "service_s": 16040.0,
+    "estimator_calls": 60.0,
+    "dispatches": 1375.625,
+    "extra_checks": 201.375,
+    "rule_dispatches": 1234.875,
+    "ppo_dispatches": 140.75,
+    "forced_single_candidate": 919.875,
+    "different_from_actor": 325.5,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10977,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 12
+    },
+    "cases": 8
+  },
+  "case_ids": [
+    "fd964d5aff5b7dacdcdfce43",
+    "a9817bf0845dd910f95576fe",
+    "725b2903ed1ce9a459cc35c2",
+    "83cb4dafe1967bc066259d5b",
+    "b4c15319081cf5645321ae5b",
+    "6d3219b973a5b36f0db5f70b",
+    "3f8c509138e8738ecb67fd3a",
+    "42017a57e464bd7b48337243"
+  ],
+  "accepted": true,
+  "reason": "strict_public_development_improvement"
+}

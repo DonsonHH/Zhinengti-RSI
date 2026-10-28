@@ -1,0 +1,105 @@
+{
+  "method": "random_search",
+  "generation_seed": 6103,
+  "workflow": {
+    "refresh_s": 30,
+    "cooldown_s": 60,
+    "rules": [
+      {
+        "role": "all",
+        "signal": "risk",
+        "threshold": 0.5,
+        "ranker": "risk"
+      },
+      {
+        "role": "cooling",
+        "signal": "age",
+        "threshold": 0.75,
+        "ranker": "urgency"
+      },
+      {
+        "role": "all",
+        "signal": "age",
+        "threshold": 0.25,
+        "ranker": "uncertainty"
+      }
+    ]
+  },
+  "version_id": "921458d17db9a2da",
+  "public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.32630677208757886,
+    "travel_m": 12565.249999999993,
+    "service_s": 16040.0,
+    "estimator_calls": 60.0,
+    "dispatches": 1375.625,
+    "extra_checks": 201.375,
+    "rule_dispatches": 1234.875,
+    "ppo_dispatches": 140.75,
+    "forced_single_candidate": 919.875,
+    "different_from_actor": 325.5,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10977,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 12
+    },
+    "cases": 8
+  },
+  "case_ids": [
+    "fd964d5aff5b7dacdcdfce43",
+    "a9817bf0845dd910f95576fe",
+    "725b2903ed1ce9a459cc35c2",
+    "83cb4dafe1967bc066259d5b",
+    "b4c15319081cf5645321ae5b",
+    "6d3219b973a5b36f0db5f70b",
+    "3f8c509138e8738ecb67fd3a",
+    "42017a57e464bd7b48337243"
+  ],
+  "initial": {
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.35647106274114804,
+      "travel_m": 13820.999999999993,
+      "service_s": 14950.0,
+      "estimator_calls": 60.0,
+      "dispatches": 1286.0,
+      "extra_checks": 224.5,
+      "rule_dispatches": 0.0,
+      "ppo_dispatches": 1286.0,
+      "forced_single_candidate": 984.75,
+      "different_from_actor": 0.0,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10259,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 13
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "e4b9a6aab99dd18a122e98d2",
+      "81e86a8d1d81a1181e163110",
+      "b9aeafbfc34204e30c91c490",
+      "641f03b9151d564ead8e9984",
+      "8655c01defedad8b9fd7563d",
+      "ac242c97d9b77657987b7378",
+      "c414d683c20d2c098f40e9b3",
+      "ee03c237b59ae14224f20989"
+    ]
+  },
+  "candidate_slots": 3,
+  "new_neural_training": false,
+  "improver_updated": false
+}

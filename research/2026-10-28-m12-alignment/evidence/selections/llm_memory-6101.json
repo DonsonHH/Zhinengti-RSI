@@ -1,0 +1,105 @@
+{
+  "method": "llm_memory",
+  "generation_seed": 6101,
+  "workflow": {
+    "refresh_s": 60,
+    "cooldown_s": 30,
+    "rules": [
+      {
+        "role": "thermal",
+        "signal": "risk",
+        "threshold": 0.25,
+        "ranker": "risk"
+      },
+      {
+        "role": "electrical",
+        "signal": "uncertainty",
+        "threshold": 0.5,
+        "ranker": "urgency"
+      },
+      {
+        "role": "cooling",
+        "signal": "age",
+        "threshold": 0.5,
+        "ranker": "risk"
+      }
+    ]
+  },
+  "version_id": "ba10532f0b6bf24d",
+  "public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.3510091592855611,
+    "travel_m": 13420.574999999993,
+    "service_s": 15442.5,
+    "estimator_calls": 30.0,
+    "dispatches": 1322.875,
+    "extra_checks": 235.375,
+    "rule_dispatches": 47.75,
+    "ppo_dispatches": 1275.125,
+    "forced_single_candidate": 1002.0,
+    "different_from_actor": 15.875,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10552,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 15
+    },
+    "cases": 8
+  },
+  "case_ids": [
+    "8122d8691cded5e1b1a663c2",
+    "d95bc490887a44ecc5a20ac1",
+    "0d2d83a9f8b683ac5d5b0f5b",
+    "e2ce9a7163caebfe4820d1a4",
+    "240046c12e39d20585ff1b22",
+    "464a3ec72ffe91a402180296",
+    "860e638986bfd551078ecac5",
+    "15a17f45f28acd8dea466692"
+  ],
+  "initial": {
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "public_summary": {
+      "coverage": 1.0,
+      "first_alert_tasks": 1.125,
+      "first_alert_task_weight": 1.5078125,
+      "weighted_age_ratio": 0.35647106274114804,
+      "travel_m": 13820.999999999993,
+      "service_s": 14950.0,
+      "estimator_calls": 60.0,
+      "dispatches": 1286.0,
+      "extra_checks": 224.5,
+      "rule_dispatches": 0.0,
+      "ppo_dispatches": 1286.0,
+      "forced_single_candidate": 984.75,
+      "different_from_actor": 0.0,
+      "violating_tasks": 0,
+      "measurement_transitions": {
+        "normal_check": 10259,
+        "new_measured_alert": 9,
+        "recovery_confirmation": 7,
+        "persistent_recheck": 13
+      },
+      "cases": 8
+    },
+    "case_ids": [
+      "e4b9a6aab99dd18a122e98d2",
+      "81e86a8d1d81a1181e163110",
+      "b9aeafbfc34204e30c91c490",
+      "641f03b9151d564ead8e9984",
+      "8655c01defedad8b9fd7563d",
+      "ac242c97d9b77657987b7378",
+      "c414d683c20d2c098f40e9b3",
+      "ee03c237b59ae14224f20989"
+    ]
+  },
+  "candidate_slots": 3,
+  "new_neural_training": false,
+  "improver_updated": false
+}

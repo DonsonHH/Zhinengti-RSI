@@ -1,0 +1,694 @@
+[
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "5ff11aeda7e8745408d863ac",
+    "path": "cases/5ff11aeda7e8745408d863ac.json.gz",
+    "sha256": "6c1765ad114fa5bd7f7403f2e7d234531d6036a9be3f6354385099995320b59c",
+    "bytes": 144926,
+    "version_id": "ea260b780ec88869",
+    "process_key": "healthy--900--6200",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1283,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "idle_s": 3534.4999999999986,
+      "history_estimator_inference_s": 0.0296217892318964,
+      "public_return": -0.6558398989898994,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.5881711514666677,
+      "selected_detours": 222,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3607044388762735,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1283
+      },
+      "estimator_calls": 60,
+      "dispatches": 1283,
+      "extra_checks": 222,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 1283,
+      "forced_single_candidate": 975,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 0,
+    "weighted_delay_sum": 0
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "b62cfcd80c33610af0bedfb0",
+    "path": "cases/b62cfcd80c33610af0bedfb0.json.gz",
+    "sha256": "d288697703228dbd3279a85bb16ce8a96553c4093b5a35846c0d6ed96d0aeccd",
+    "bytes": 149034,
+    "version_id": "ea260b780ec88869",
+    "process_key": "coldplate_fouling--180--6200",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 60.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1283,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "idle_s": 3534.4999999999986,
+      "history_estimator_inference_s": 0.027143271639943123,
+      "public_return": -0.6559728197057493,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.1742644393066536,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.7586897257715464,
+      "selected_detours": 222,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3607044388762735,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1283
+      },
+      "estimator_calls": 60,
+      "dispatches": 1283,
+      "extra_checks": 222,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 1283,
+      "forced_single_candidate": 975,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 1.6757286608912443,
+    "weighted_delay_sum": 100.54371965347465
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "deployment": {
+      "control": "cycle",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "5a7f8f0785d6ec3492250ee2",
+    "path": "cases/5a7f8f0785d6ec3492250ee2.json.gz",
+    "sha256": "6a4e5755b0ce42636db045d5a0b019bb59e78fde16d42584ddc5249da16b6eb9",
+    "bytes": 145978,
+    "version_id": "ea260b780ec88869",
+    "process_key": "healthy--900--6200",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.02768765762448311,
+      "public_return": -0.25288252525252547,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.4238832565024495,
+      "selected_detours": 0,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.30466338666597065,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1426
+      },
+      "estimator_calls": 60,
+      "dispatches": 1426,
+      "extra_checks": 0,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 0,
+      "forced_single_candidate": 1426,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 0,
+    "weighted_delay_sum": 0
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": []
+    },
+    "deployment": {
+      "control": "cycle",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "f5e27ef88a4511924096eb74",
+    "path": "cases/f5e27ef88a4511924096eb74.json.gz",
+    "sha256": "082c61fa69dab6048461ba3dc99c280d37f2c0ee0cc6279c8ed67855a04594f3",
+    "bytes": 150182,
+    "version_id": "ea260b780ec88869",
+    "process_key": "coldplate_fouling--180--6200",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 1,
+      "missed_segments": 0,
+      "miss_rate": 0.0,
+      "consequence_weighted_censored_delay_s": 45.0,
+      "detected_only_mean_delay_s": 45.0,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1426,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 305.0,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "idle_s": 3846.599999999998,
+      "history_estimator_inference_s": 0.026960701681673527,
+      "public_return": -0.2518634033082829,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.1742644393066536,
+      "maximum_exact_gap_s": 310.0,
+      "maximum_exact_gap_ratio": 0.8,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.4208544231951237,
+      "selected_detours": 0,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 1,
+      "first_alert_task_weight": 1.5,
+      "weighted_age_ratio": 0.30466338666597065,
+      "travel_m": 11793.399999999992,
+      "service_s": 16670.0,
+      "measurement_transitions": {
+        "new_measured_alert": 1,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 1,
+        "normal_check": 1424
+      },
+      "estimator_calls": 60,
+      "dispatches": 1426,
+      "extra_checks": 0,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 0,
+      "forced_single_candidate": 1426,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 1.6757286608912443,
+    "weighted_delay_sum": 75.407789740106
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": [
+        {
+          "role": "all",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "00409ca8afb7e8b3bddecb48",
+    "path": "cases/00409ca8afb7e8b3bddecb48.json.gz",
+    "sha256": "7f4633ca72bd864e94f52d98cd15db0869f53438d8259dfa1b5166925e6a9953",
+    "bytes": 144964,
+    "version_id": "67c1bb39d93b6573",
+    "process_key": "healthy--900--6200",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1283,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "idle_s": 3534.4999999999986,
+      "history_estimator_inference_s": 0.02755698561668396,
+      "public_return": -0.6558398989898994,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.5961449528113008,
+      "selected_detours": 222,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3607044388762735,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1283
+      },
+      "estimator_calls": 60,
+      "dispatches": 1283,
+      "extra_checks": 222,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 1283,
+      "forced_single_candidate": 975,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 0,
+    "weighted_delay_sum": 0
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "rules": [
+        {
+          "role": "all",
+          "signal": "risk",
+          "threshold": 0.05,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "8e7122ef0379eb29be3db951",
+    "path": "cases/8e7122ef0379eb29be3db951.json.gz",
+    "sha256": "94af1df1295df25fe090b5405fbadbc2bb0ed52839e169144105ed4089c69d39",
+    "bytes": 149071,
+    "version_id": "67c1bb39d93b6573",
+    "process_key": "coldplate_fouling--180--6200",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 60.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1283,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "idle_s": 3534.4999999999986,
+      "history_estimator_inference_s": 0.026864332146942616,
+      "public_return": -0.6559728197057493,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.1742644393066536,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.5928426813334227,
+      "selected_detours": 222,
+      "estimator_calls": 60
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3607044388762735,
+      "travel_m": 13845.499999999993,
+      "service_s": 14930.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1283
+      },
+      "estimator_calls": 60,
+      "dispatches": 1283,
+      "extra_checks": 222,
+      "rule_dispatches": 0,
+      "ppo_dispatches": 1283,
+      "forced_single_candidate": 975,
+      "different_from_actor": 0
+    },
+    "event_weight_sum": 1.6757286608912443,
+    "weighted_delay_sum": 100.54371965347465
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.25,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "3cbb57cf05bf593a97a7e8a6",
+    "path": "cases/3cbb57cf05bf593a97a7e8a6.json.gz",
+    "sha256": "a859c3d63d9a7064edec70bffd18357beafb9e181bbb19c9bb430cf6b1741cfa",
+    "bytes": 149091,
+    "version_id": "67d7e05d1fb3f457",
+    "process_key": "healthy--900--6200",
+    "metrics": {
+      "anomaly_segments": 0,
+      "confirmed_segments": 0,
+      "missed_segments": 0,
+      "miss_rate": null,
+      "consequence_weighted_censored_delay_s": null,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1331,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13328.099999999993,
+      "service_s": 15520.0,
+      "idle_s": 3461.8999999999983,
+      "history_estimator_inference_s": 0.013962206430733204,
+      "public_return": -0.5979370454545444,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.0,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.6330139087513089,
+      "selected_detours": 240,
+      "estimator_calls": 30
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3519711053254335,
+      "travel_m": 13328.099999999993,
+      "service_s": 15520.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1331
+      },
+      "estimator_calls": 30,
+      "dispatches": 1331,
+      "extra_checks": 240,
+      "rule_dispatches": 47,
+      "ppo_dispatches": 1284,
+      "forced_single_candidate": 1009,
+      "different_from_actor": 10
+    },
+    "event_weight_sum": 0,
+    "weighted_delay_sum": 0
+  },
+  {
+    "specification": {
+      "phase": "smoke",
+      "seed": 6200,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open",
+      "estimator": "history",
+      "actor_seed": 0
+    },
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.25,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "deployment": {
+      "control": "workflow",
+      "actor_fallback": "ppo",
+      "signals_permuted": false
+    },
+    "case": "b5b2f93fe87a6e6c1a09c461",
+    "path": "cases/b5b2f93fe87a6e6c1a09c461.json.gz",
+    "sha256": "8d999b702b023c93715d98b1a4005959dfe2b72d79b04724cbc70d54e2e1faf0",
+    "bytes": 152540,
+    "version_id": "67d7e05d1fb3f457",
+    "process_key": "coldplate_fouling--180--6200",
+    "metrics": {
+      "anomaly_segments": 1,
+      "confirmed_segments": 0,
+      "missed_segments": 1,
+      "miss_rate": 1.0,
+      "consequence_weighted_censored_delay_s": 60.0,
+      "detected_only_mean_delay_s": null,
+      "false_measured_confirmations": 0,
+      "completed_inspections": 1331,
+      "final_professional_coverage": 1.0,
+      "mean_overdue_fraction": 0.0,
+      "maximum_inspection_age_s": 445.0,
+      "travel_m": 13328.099999999993,
+      "service_s": 15520.0,
+      "idle_s": 3461.8999999999983,
+      "history_estimator_inference_s": 0.013136747293174267,
+      "public_return": -0.598069966119181,
+      "invalid_assignments": 0,
+      "duplicate_reservations": 0,
+      "unserved_IT_kwh": 0.1742644393066536,
+      "maximum_exact_gap_s": 450.0,
+      "maximum_exact_gap_ratio": 1.0,
+      "tasks_violating_exact_gap": 0,
+      "decision_CPU_seconds": 0.6298660337924957,
+      "selected_detours": 240,
+      "estimator_calls": 30
+    },
+    "public_selection": {
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "first_alert_tasks": 0,
+      "first_alert_task_weight": 0.0,
+      "weighted_age_ratio": 0.3519711053254335,
+      "travel_m": 13328.099999999993,
+      "service_s": 15520.0,
+      "measurement_transitions": {
+        "new_measured_alert": 0,
+        "persistent_recheck": 0,
+        "recovery_confirmation": 0,
+        "normal_check": 1331
+      },
+      "estimator_calls": 30,
+      "dispatches": 1331,
+      "extra_checks": 240,
+      "rule_dispatches": 47,
+      "ppo_dispatches": 1284,
+      "forced_single_candidate": 1009,
+      "different_from_actor": 10
+    },
+    "event_weight_sum": 1.6757286608912443,
+    "weighted_delay_sum": 100.54371965347465
+  }
+]

@@ -1,0 +1,203 @@
+{
+  "method": "llm_no_memory",
+  "generation_seed": 6103,
+  "slot": 1,
+  "parent_id": "ba10532f0b6bf24d",
+  "parent_public_summary": {
+    "coverage": 1.0,
+    "first_alert_tasks": 1.125,
+    "first_alert_task_weight": 1.5078125,
+    "weighted_age_ratio": 0.3510091592855611,
+    "travel_m": 13420.574999999993,
+    "service_s": 15442.5,
+    "estimator_calls": 30.0,
+    "dispatches": 1322.875,
+    "extra_checks": 235.375,
+    "rule_dispatches": 47.75,
+    "ppo_dispatches": 1275.125,
+    "forced_single_candidate": 1002.0,
+    "different_from_actor": 15.875,
+    "violating_tasks": 0,
+    "measurement_transitions": {
+      "normal_check": 10552,
+      "new_measured_alert": 9,
+      "recovery_confirmation": 7,
+      "persistent_recheck": 15
+    },
+    "cases": 8
+  },
+  "candidate_seed": 610301,
+  "source": "Qwen3-8B",
+  "generation": {
+    "prompt": {
+      "task": "Propose one executable facility-inspection workflow from public development evidence.",
+      "current_workflow": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "rules": [
+          {
+            "role": "thermal",
+            "signal": "risk",
+            "threshold": 0.25,
+            "ranker": "risk"
+          },
+          {
+            "role": "electrical",
+            "signal": "uncertainty",
+            "threshold": 0.5,
+            "ranker": "urgency"
+          },
+          {
+            "role": "cooling",
+            "signal": "age",
+            "threshold": 0.5,
+            "ranker": "risk"
+          }
+        ]
+      },
+      "public_development_summary": {
+        "coverage": 1.0,
+        "first_alert_tasks": 1.125,
+        "first_alert_task_weight": 1.5078125,
+        "weighted_age_ratio": 0.3510091592855611,
+        "travel_m": 13420.574999999993,
+        "service_s": 15442.5,
+        "estimator_calls": 30.0,
+        "dispatches": 1322.875,
+        "extra_checks": 235.375,
+        "rule_dispatches": 47.75,
+        "ppo_dispatches": 1275.125,
+        "forced_single_candidate": 1002.0,
+        "different_from_actor": 15.875,
+        "violating_tasks": 0,
+        "measurement_transitions": {
+          "normal_check": 10552,
+          "new_measured_alert": 9,
+          "recovery_confirmation": 7,
+          "persistent_recheck": 15
+        },
+        "cases": 8
+      },
+      "recent_candidates": [],
+      "grammar": {
+        "top_level": [
+          "diagnosis",
+          "workflow",
+          "expected_effect"
+        ],
+        "text_fields": "diagnosis and expected_effect are strings of at most600 characters",
+        "workflow": {
+          "refresh_s": [
+            30,
+            60,
+            120
+          ],
+          "cooldown_s": [
+            0,
+            30,
+            60,
+            120
+          ],
+          "rules": "0..3 ordered rules; each has role,signal,threshold,ranker"
+        },
+        "rule_keys": [
+          "role",
+          "signal",
+          "threshold",
+          "ranker"
+        ],
+        "rule_domains": {
+          "role": [
+            "all",
+            "thermal",
+            "electrical",
+            "cooling",
+            "control"
+          ],
+          "signal": [
+            "risk",
+            "uncertainty",
+            "age"
+          ],
+          "threshold": "ONE NUMBER, not an object; choose from allowed_thresholds_by_signal for this signal",
+          "ranker": [
+            "risk",
+            "uncertainty",
+            "urgency"
+          ]
+        },
+        "allowed_thresholds_by_signal": {
+          "risk": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "uncertainty": [
+            0.05,
+            0.25,
+            0.5
+          ],
+          "age": [
+            0.25,
+            0.5,
+            0.75
+          ]
+        }
+      },
+      "semantics": {
+        "refresh_s": "History temperatureCVAE inference period; causal feature frames still every30s.",
+        "cooldown_s": "Only extra checks; never prevents the next protected tour obligation.",
+        "risk": "Public model or measured severity feature, not hidden fault truth or calibrated probability.",
+        "uncertainty": "Absolute history versus nominal model disagreement /20, not calibrated uncertainty.",
+        "age": "Public time since task completion divided by task deadline.",
+        "ordered_rules": "For the first role-matching rule with qualifying candidates, use its ranker on those candidates.",
+        "rankers": "risk or disagreement times public asset weight divided by ETA; urgency is age plus ETA ratio.",
+        "fallback": "Frozen trainedPPO scores all remaining candidates if no rule triggers.",
+        "protection": "Complete-return gate, two extra checks per owned round, qualification and physical service are immutable."
+      },
+      "selection": "Minimize violating tasks; maximize coverage; maximize weight of distinct first measured-alert tasks; minimize public weighted age; minimize travel. Lexicographic strict improvement. Persistent rechecks add no discovery reward.",
+      "rules": [
+        "Return JSON only. Exact grammar; no code, new fields, labels, equipment IDs or metric changes.",
+        "Weights, physical processes, measurement validity, interpreter, budgets and hidden evaluator stay fixed.",
+        "Changing a workflow is task-level adaptation; the improver itself is fixed in this pilot."
+      ]
+    },
+    "rendered_prompt": "<|im_start|>system\nGenerate one bounded JSON facility workflow. Read only the supplied public development evidence. Do not change frozen models, measurement validity, coverage protection, evaluation, data or budgets. Return diagnosis, workflow and expected_effect using the exact supplied grammar.<|im_end|>\n<|im_start|>user\n{\"task\": \"Propose one executable facility-inspection workflow from public development evidence.\", \"current_workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"rules\": [{\"role\": \"thermal\", \"signal\": \"risk\", \"threshold\": 0.25, \"ranker\": \"risk\"}, {\"role\": \"electrical\", \"signal\": \"uncertainty\", \"threshold\": 0.5, \"ranker\": \"urgency\"}, {\"role\": \"cooling\", \"signal\": \"age\", \"threshold\": 0.5, \"ranker\": \"risk\"}]}, \"public_development_summary\": {\"coverage\": 1.0, \"first_alert_tasks\": 1.125, \"first_alert_task_weight\": 1.5078125, \"weighted_age_ratio\": 0.3510091592855611, \"travel_m\": 13420.574999999993, \"service_s\": 15442.5, \"estimator_calls\": 30.0, \"dispatches\": 1322.875, \"extra_checks\": 235.375, \"rule_dispatches\": 47.75, \"ppo_dispatches\": 1275.125, \"forced_single_candidate\": 1002.0, \"different_from_actor\": 15.875, \"violating_tasks\": 0, \"measurement_transitions\": {\"normal_check\": 10552, \"new_measured_alert\": 9, \"recovery_confirmation\": 7, \"persistent_recheck\": 15}, \"cases\": 8}, \"recent_candidates\": [], \"grammar\": {\"top_level\": [\"diagnosis\", \"workflow\", \"expected_effect\"], \"text_fields\": \"diagnosis and expected_effect are strings of at most600 characters\", \"workflow\": {\"refresh_s\": [30, 60, 120], \"cooldown_s\": [0, 30, 60, 120], \"rules\": \"0..3 ordered rules; each has role,signal,threshold,ranker\"}, \"rule_keys\": [\"role\", \"signal\", \"threshold\", \"ranker\"], \"rule_domains\": {\"role\": [\"all\", \"thermal\", \"electrical\", \"cooling\", \"control\"], \"signal\": [\"risk\", \"uncertainty\", \"age\"], \"threshold\": \"ONE NUMBER, not an object; choose from allowed_thresholds_by_signal for this signal\", \"ranker\": [\"risk\", \"uncertainty\", \"urgency\"]}, \"allowed_thresholds_by_signal\": {\"risk\": [0.05, 0.25, 0.5], \"uncertainty\": [0.05, 0.25, 0.5], \"age\": [0.25, 0.5, 0.75]}}, \"semantics\": {\"refresh_s\": \"History temperatureCVAE inference period; causal feature frames still every30s.\", \"cooldown_s\": \"Only extra checks; never prevents the next protected tour obligation.\", \"risk\": \"Public model or measured severity feature, not hidden fault truth or calibrated probability.\", \"uncertainty\": \"Absolute history versus nominal model disagreement /20, not calibrated uncertainty.\", \"age\": \"Public time since task completion divided by task deadline.\", \"ordered_rules\": \"For the first role-matching rule with qualifying candidates, use its ranker on those candidates.\", \"rankers\": \"risk or disagreement times public asset weight divided by ETA; urgency is age plus ETA ratio.\", \"fallback\": \"Frozen trainedPPO scores all remaining candidates if no rule triggers.\", \"protection\": \"Complete-return gate, two extra checks per owned round, qualification and physical service are immutable.\"}, \"selection\": \"Minimize violating tasks; maximize coverage; maximize weight of distinct first measured-alert tasks; minimize public weighted age; minimize travel. Lexicographic strict improvement. Persistent rechecks add no discovery reward.\", \"rules\": [\"Return JSON only. Exact grammar; no code, new fields, labels, equipment IDs or metric changes.\", \"Weights, physical processes, measurement validity, interpreter, budgets and hidden evaluator stay fixed.\", \"Changing a workflow is task-level adaptation; the improver itself is fixed in this pilot.\"]}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_response": "{\n  \"diagnosis\": \"The current workflow requires adjustments to optimize the balance between risk, uncertainty, and age signals while minimizing travel and maximizing coverage. The existing thresholds and cooldown periods may not be aligned with the system's performance metrics.\",\n  \"workflow\": {\n    \"refresh_s\": 60,\n    \"cooldown_s\": 30,\n    \"rules\": [\n      {\n        \"role\": \"thermal\",\n        \"signal\": \"risk\",\n        \"threshold\": 0.25,\n        \"ranker\": \"risk\"\n      },\n      {\n        \"role\": \"electrical\",\n        \"signal\": \"uncertainty\",\n        \"threshold\": 0.5,\n        \"ranker\": \"urgency\"\n      },\n      {\n        \"role\": \"cooling\",\n        \"signal\": \"age\",\n        \"threshold\": 0.5,\n        \"ranker\": \"risk\"\n      }\n    ]\n  },\n  \"expected_effect\": \"This workflow maintains the original structure but ensures alignment with the system's performance metrics by preserving the thresholds and cooldowns while leveraging the ranking strategies to prioritize critical tasks. It minimizes travel and maximizes coverage without altering the fixed parameters.\"\n}",
+    "input_tokens": 996,
+    "output_tokens": 244,
+    "generation_seconds": 10.665710459463298
+  },
+  "valid": true,
+  "proposal": {
+    "diagnosis": "The current workflow requires adjustments to optimize the balance between risk, uncertainty, and age signals while minimizing travel and maximizing coverage. The existing thresholds and cooldown periods may not be aligned with the system's performance metrics.",
+    "workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "rules": [
+        {
+          "role": "thermal",
+          "signal": "risk",
+          "threshold": 0.25,
+          "ranker": "risk"
+        },
+        {
+          "role": "electrical",
+          "signal": "uncertainty",
+          "threshold": 0.5,
+          "ranker": "urgency"
+        },
+        {
+          "role": "cooling",
+          "signal": "age",
+          "threshold": 0.5,
+          "ranker": "risk"
+        }
+      ]
+    },
+    "expected_effect": "This workflow maintains the original structure but ensures alignment with the system's performance metrics by preserving the thresholds and cooldowns while leveraging the ranking strategies to prioritize critical tasks. It minimizes travel and maximizes coverage without altering the fixed parameters."
+  },
+  "candidate_id": "ba10532f0b6bf24d",
+  "accepted": false,
+  "reason": "duplicate_consumes_slot"
+}
