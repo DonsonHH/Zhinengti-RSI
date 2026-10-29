@@ -269,13 +269,28 @@ def reference_signals(arrays):
     return np.concatenate((thermal, electrical, cooling, control), axis=1)
 
 
-def analytic_continuations(tour_record, geometry, reference):
+def effective_confirmability(arrays, seed):
+    """Require both physical positivity and the original calibrated alarm.
+
+    Thermal reference measurements have archived counter-based 0.1C noise.
+    Randomness is indexed by old seed/task/time; no new process is sampled.
+    """
+    reference = reference_signals(arrays)
+    confirmable = reference > 0
+    for tick, task in np.argwhere(confirmable[:, :128]):
+        noise = np.random.default_rng(3000000 + seed * 10000 + int(task) * 361 + int(tick)).normal(0, .1)
+        confirmable[tick, task] = arrays['rack_temperature_c'][tick, task] + noise > 65.
+    return confirmable
+
+
+def analytic_continuations(tour_record, geometry, reference, *, measurement_positive=None):
     """Specify CHECK once then Tour; sample only the archived physical trace.
 
     Inspection changes observations but cannot change the prescribed remaining
     Tour actions or the plant in this frozen task. No alternate policy is run.
     """
     intervals = tour_record['anomaly_intervals']
+    confirmable = reference > 0 if measurement_positive is None else measurement_positive
     count, total = len(geometry['task']), len(intervals)
     first = np.full((count, total), np.inf)
     events = tour_record['inspection_events']
@@ -291,14 +306,14 @@ def analytic_continuations(tour_record, geometry, reference):
             dispatch = geometry['dispatch_time_s'][use]
             future_times = original_times + shift
             in_mission = future_times <= 1800
-            positive = reference[np.minimum(359, (future_times / 5).astype(int) - 1), task] > 0
+            positive = confirmable[np.minimum(359, (future_times / 5).astype(int) - 1), task]
             valid = in_mission & positive & (future_times >= window['onset_s']) & (future_times <= window['end_s'])
             old_valid, new_valid = original_times[valid], future_times[valid]
             position = np.searchsorted(old_valid, dispatch, side='right')
             future = np.r_[new_valid, np.inf][position]
             past = np.where(old_first <= dispatch, old_first, np.inf)
             extra_time = geometry['finish_s'][use]
-            extra_positive = reference[np.minimum(359, (extra_time / 5).astype(int) - 1), task] > 0
+            extra_positive = confirmable[np.minimum(359, (extra_time / 5).astype(int) - 1), task]
             extra = np.where((geometry['task'][use] == task) & extra_positive &
                 (extra_time >= window['onset_s']) & (extra_time <= window['end_s']), extra_time, np.inf)
             first[use, column] = np.minimum(np.minimum(past, future), extra)

@@ -16,7 +16,7 @@ import torch
 from patrol_rsi.causal_observation import ObservedTask, capture_public
 from patrol_rsi.improver_task import PatrolProgram
 from patrol_rsi.information_audit import (KINDS, SOURCE_NAMES, PublicSignals,
-    analytic_continuations, audited_best, current_legal_geometry, pack_geometry,
+    analytic_continuations, audited_best, current_legal_geometry, effective_confirmability, pack_geometry,
     reference_signals, rescore_candidates, score_candidates)
 from patrol_rsi.m11 import frozen_predictor
 from patrol_rsi.m9 import arrays_digest
@@ -166,7 +166,8 @@ def analyze_condition(rows, records, folder, process, output, predictor, shared_
         for bundle in bundles:
             stream.write(json.dumps(bundle, allow_nan=False) + '\n')
     ref = reference_signals(arrays)
-    oracle = analytic_continuations(tour, geometry, ref)
+    confirmable = effective_confirmability(arrays, tour['specification']['seed'])
+    oracle = analytic_continuations(tour, geometry, ref, measurement_positive=confirmable)
     np.savez_compressed(output / 'analytic-continuations.npz', **oracle)
     lookup = {geometry_key(geometry, i): i for i in range(len(geometry['task']))}
     source_stamps = branches = 0
@@ -189,6 +190,8 @@ def analyze_condition(rows, records, folder, process, output, predictor, shared_
     statistics = ErrorStatistics()
     layer_counts = defaultdict(Counter)
     endpoint_sources = Counter()
+    fusion_counts = Counter()
+    cache_counts = Counter()
     forecasts = 0
     weak_history_roots = unique_history_roots = 0
     winner_checks = 0
@@ -196,6 +199,23 @@ def analyze_condition(rows, records, folder, process, output, predictor, shared_
     with gzip.open(frame_path, 'wt', encoding='utf-8') as frames:
         for root_index, bundle in enumerate(bundles):
             public = PublicSignals(bundle)
+            need(np.isfinite(public.channels['nominal'][:128]).all(),
+                 'Endpoint no-influence proof requires an available alternative thermal source')
+            history = public.channels['history_assimilated'][:128]
+            raw = public.channels['cvae_raw'][:128]
+            cache_available = np.isfinite(history)
+            prior_available = np.isfinite(raw)
+            cache_counts['thermal_task_frames'] += 128
+            cache_counts['nominal_available'] += 128
+            cache_counts['history_available'] += int(cache_available.sum())
+            cache_counts['raw_prior_available'] += int(prior_available.sum())
+            cache_counts['history_value_equals_raw_prior'] += int((cache_available & prior_available & (np.abs(history - raw) <= 1e-10)).sum())
+            cache_counts['history_value_differs_from_raw_prior'] += int((cache_available & prior_available & (np.abs(history - raw) > 1e-10)).sum())
+            for task in bundle['tasks'][:128]:
+                cache, prior, measurement = (task[k] for k in ('history_assimilated', 'cvae_raw', 'temperature_measurement'))
+                if cache['available']:
+                    cache_counts['history_stamp_matches_measurement'] += int(measurement['available'] and cache['time_s'] == measurement['time_s'])
+                    cache_counts['history_stamp_matches_prior'] += int(prior['available'] and cache['time_s'] == prior['time_s'])
             base_values = score_candidates(public, geometry)
             index = base_values['geometry_index']
             target = geometry['task'][index]
@@ -210,6 +230,18 @@ def analyze_condition(rows, records, folder, process, output, predictor, shared_
                                    (public.kind[target] == kind) & (bins == bin_index))
             thermal = public.kind[target] == 0
             pieces = public.thermal_components(target, delta)
+            temperatures = np.stack([pieces[k] for k in ('history_assimilated', 'nominal', 'measured_bounded_trend')])
+            safe_temperatures = np.where(np.isfinite(temperatures), temperatures, -np.inf)
+            maximum = safe_temperatures.max(axis=0)
+            ties = np.isfinite(temperatures) & np.isclose(temperatures, maximum, rtol=0., atol=1e-10)
+            positive_thermal = thermal & (signal > 0)
+            fusion_counts['thermal_candidate_root_pairs'] += int(thermal.sum())
+            fusion_counts['positive_fused_pairs'] += int(positive_thermal.sum())
+            fusion_counts['positive_fused_reference_zero'] += int((positive_thermal & (truth <= 0)).sum())
+            fusion_counts['positive_tied_source_pairs'] += int((positive_thermal & (ties.sum(axis=0) > 1)).sum())
+            for source_index, name in enumerate(('history_assimilated', 'nominal', 'measured_bounded_trend')):
+                fusion_counts[name + ':positive_unique_win'] += int((positive_thermal & ties[source_index] & (ties.sum(axis=0) == 1)).sum())
+                fusion_counts[name + ':positive_tie_member'] += int((positive_thermal & ties[source_index] & (ties.sum(axis=0) > 1)).sum())
             for source, temperature in pieces.items():
                 predicted = np.maximum(temperature - 65., 0.) / 20
                 for bin_index, bin_name in enumerate(BINS):
@@ -306,6 +338,8 @@ def analyze_condition(rows, records, folder, process, output, predictor, shared_
         'factorized_candidate_root_pairs': forecasts, 'positive_frontier_nonwinner_scores_checked': winner_checks,
         'error_statistics': statistics.groups, 'actual_revised_decision_layers': {k: dict(v) for k, v in layer_counts.items()},
         'all_candidate_winner_source_counts': dict(endpoint_sources),
+        'thermal_fusion_unique_and_tied_positive_counts': dict(fusion_counts),
+        'thermal_raw_and_assimilated_cache_provenance': dict(cache_counts),
         'history_channel_can_uniquely_increase_positive_signal_roots': unique_history_roots,
         'history_channel_endpoint_no_positive_influence_proofs': weak_history_roots,
         'oracle': oracle_summary, 'geometry_numeric_digest': arrays_digest(geometry),
@@ -325,6 +359,10 @@ def main():
     torch.set_num_threads(1)
     args.output.mkdir(exist_ok=False)
     folder = args.formal_root / args.folder
+    binding_path = Path(__file__).resolve().parents[1] / 'research/2026-10-29-m12c1b4a-information/evidence/original-source-bindings.json'
+    source_binding = read(binding_path)[args.folder]
+    for name, expected in source_binding.items():
+        need(sha(folder / name) == expected, 'Original source binding differs: ' + name)
     index = read(folder / 'case-index.json')
     processes = read(folder / 'process-index.json')
     cases = [row for row in index if row['alias'] == 'tour']
@@ -339,6 +377,7 @@ def main():
         need(path.stat().st_size == row['bytes'] and sha(path) == row['sha256'], 'Original case SHA/size differs')
         records[row['case']] = read(path)
     predictor = frozen_predictor(args.estimator_weights, args.estimator_manifest)
+    need(read(folder / 'model-inputs.json')['CVAE_sha256'] == sha(args.estimator_weights), 'Original frozen CVAE changed')
     frozen = {'original_folder': args.folder, 'original_case_index_sha256': sha(folder / 'case-index.json'),
               'original_process_index_sha256': sha(folder / 'process-index.json'),
               'CVAE_sha256': sha(args.estimator_weights), 'pilot': args.pilot,

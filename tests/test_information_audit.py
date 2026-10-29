@@ -7,7 +7,7 @@ import unittest
 import numpy as np
 
 from patrol_rsi.information_audit import (PublicSignals, SOURCE_NAMES, analytic_continuations,
-    current_legal_geometry, pack_geometry, reference_signals, scalar_candidate, score_candidates)
+    current_legal_geometry, effective_confirmability, pack_geometry, reference_signals, scalar_candidate, score_candidates)
 from patrol_rsi.public_stopping import StopConfig, public_frontier
 
 
@@ -88,6 +88,19 @@ class InformationAuditTests(unittest.TestCase):
         self.assertEqual(result['weighted_wait_delta_s'].tolist(), [15., -10.])
         self.assertEqual(result['lost_confirmations'].tolist(), [1, 0])
         self.assertEqual(result['helpful'].tolist(), [False, True])
+
+    def test_true_anomaly_requires_effective_measurement_to_confirm(self):
+        tour = {'inspection_events': [{'task': 0, 'agent': 0, 'time_s': 100.}],
+                'anomaly_intervals': [{'task': 0, 'onset_s': 85., 'end_s': 115., 'weight': 1.,
+                                      'detected': True, 'first_confirmation_s': 100., 'delay_or_censor_s': 15.}]}
+        geometry = {'agent': np.asarray([0]), 'task': np.asarray([0]),
+                    'dispatch_time_s': np.asarray([80.]), 'finish_s': np.asarray([90.]),
+                    'shift_s': np.asarray([30.])}
+        actual_positive = np.ones((360, 2), dtype=bool)
+        actual_positive[17, 0] = False
+        result = analytic_continuations(tour, geometry, np.ones((360, 2)), measurement_positive=actual_positive)
+        self.assertEqual(result['missed_delta'].tolist(), [1])
+        self.assertEqual(result['helpful'].tolist(), [False])
 
 
 if __name__ == '__main__':
