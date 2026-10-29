@@ -12,6 +12,7 @@ import torch
 
 from patrol_rsi.formal_run import execute
 from patrol_rsi.formal_study import conditions,load_protocol,method_definitions
+from patrol_rsi.formal_study import verify_case_index,verified_selection
 from patrol_rsi.m11 import frozen_predictor
 from patrol_rsi.m12 import actor_scorer,load_actors
 from patrol_rsi.public_stopping import StopConfig
@@ -36,6 +37,10 @@ def main():
         p.add_argument('--'+name,type=Path,required=True)
     args=p.parse_args();torch.set_num_threads(1);folder=args.folder
     frozen=read(folder/'phase-frozen.json');protocol=load_protocol(args.protocol)
+    if frozen['phase']!='development':
+        name='development' if frozen['phase']=='validation' else 'validation'
+        selected=verified_selection(folder.parent/(name+'-selection.json'),protocol,folder.parent,name)
+        if frozen['predecessor_selection']!=selected:raise RuntimeError('Final stage selection changed')
     methods=method_definitions(protocol,frozen['phase'],frozen['predecessor_selection'])
     specs=conditions(protocol,frozen['phase'],frozen['chunk'])
     rows=read(folder/'case-index.json');processes=read(folder/'process-index.json')
@@ -51,12 +56,13 @@ def main():
         if len(raw)!=row['bytes'] or hashlib.sha256(raw).hexdigest()!=row['sha256']:raise RuntimeError('Original case bytes')
         old=json.loads(gzip.decompress(raw));d=methods[row['alias']]
         fresh,env=execute(row['specification'],predictor,score,d['method'],StopConfig(**d['config']) if d['config'] else StopConfig())
+        verify_case_index(row,old,fresh)
         for key in ('action_log','inspection_events','selected_certificates','assignments','anomaly_intervals',
-            'stopping_decisions','causal_snapshot_stamps','source_attribution','selected_public_snapshots'):
+            'stopping_decisions','causal_snapshot_stamps','source_attribution','selected_public_snapshots','public_queue_comparison','initial_certificates'):
             if not same(old[key],fresh[key]):raise RuntimeError('Fresh policy/weight replay differs: '+key)
         if len(old['action_log'])!=359 or len(old['stopping_decisions'])!=359:raise RuntimeError('Partial episode')
         visits+=audit_routes(old,env)
-        cert_record=dict(old,initial_certificates=env.initial_certificates,metrics=dict(old['metrics'],
+        cert_record=dict(old,metrics=dict(old['metrics'],
             maximum_exact_gap_ratio=max(r['maximum_gap_including_initial_and_terminal_s']/env.deadlines[r['task']]
                 for r in old['exact_task_gaps'])))
         certificates+=independent_certificates(cert_record,env)[1]

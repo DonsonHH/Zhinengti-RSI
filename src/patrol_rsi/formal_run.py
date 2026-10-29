@@ -16,6 +16,10 @@ import torch
 
 from . import causal_run as runner
 from .formal_study import conditions,load_protocol,method_definitions
+from .formal_study import verified_selection
+from .aisles import build_agents
+from .queue_history import history_state
+from .queue_diagnostics import diagnose_queue
 from .m11 import frozen_predictor,seed_digest
 from .m12 import load_actors,actor_scorer
 from .public_stopping import StopConfig
@@ -48,8 +52,17 @@ def execute(spec,predictor,score,method,config):
     try:record,env=runner.run(spec,predictor,score,method,config)
     finally:runner.decision=original
     record['selected_public_snapshots']=selected_snapshots
+    record['initial_certificates']=copy.deepcopy(env.initial_certificates)
     record['source_attribution']={'target_source_occurrences':dict(sources),'history_cache_types':dict(cache_types),
         'scope':'Observed actual score provenance, no estimator intervention or causal module attribution.'}
+    extras=[r for r in record['workflow_decisions'] if r['task']!=r['baseline_next']]
+    record['public_queue_comparison']=None
+    if extras:
+        action=extras[0];now=action['time_s'];agent=build_agents(env.graph,'provisioned')[action['agent']]
+        state=history_state(env.plans[agent['id']],now=now,agent=agent,
+            assignments=[r for r in record['assignments'] if r['time_s']<now],
+            events=[r for r in record['inspection_events'] if r['time_s']<=now],weights=env.asset_weights,global_used=False)
+        record['public_queue_comparison']=diagnose_queue(env.plans[agent['id']],state,action['task'])
     return record,env
 
 
@@ -63,7 +76,8 @@ def main():
     args=p.parse_args();torch.set_num_threads(1)
     protocol=load_protocol(args.protocol);gate=read(args.gate)
     if not gate['success'] or gate['skipped'] or gate['tests']<215:raise RuntimeError('Real Torch start gate not passed')
-    selection=read(args.selection) if args.selection else None
+    selection=(verified_selection(args.selection,protocol,args.output.parent,
+        'development' if args.phase=='validation' else 'validation') if args.selection else None)
     methods=method_definitions(protocol,args.phase,selection)
     specs=conditions(protocol,args.phase,args.chunk)
     args.output.mkdir(exist_ok=False);(args.output/'cases').mkdir();(args.output/'processes').mkdir()
@@ -100,6 +114,9 @@ def main():
                 'stopping_CHECK_frames':sum(d.get('action')=='CHECK' for d in record['stopping_decisions']),
                 'waiting_positive_current_frames':sum(d.get('action')=='WAIT' and d.get('q_check',0)>0 for d in record['stopping_decisions']),
                 'source_attribution':record['source_attribution']})
+            index[-1]['public_queue_comparison']=record['public_queue_comparison']
+            extra=[r for r in record['workflow_decisions'] if r['task']!=r['baseline_next']]
+            index[-1]['optional_action']=extra[0] if extra else None
             if len(index)%8==0:print('FORMAL_PROGRESS',args.phase,args.chunk,len(index),alias,flush=True)
     for seed,model in actors.items():
         if seed_digest(model)!=weights[str(seed)]['parameters_sha256']:raise RuntimeError('Old PPO changed')

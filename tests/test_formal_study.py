@@ -47,5 +47,21 @@ class FormalStudyTests(unittest.TestCase):
         self.assertEqual(len(methods),5)
         self.assertEqual(methods['revised'],{'method':'tour','config':None})
 
+    def test_audit_binds_ranking_metrics_to_hashed_original_and_fresh_run(self):
+        from patrol_rsi.formal_study import verify_case_index
+        row=self.row('C0',8500);record={'metrics':dict(row['metrics'])};fresh={'metrics':dict(row['metrics'])}
+        verify_case_index(row,record,fresh)
+        changed=dict(row,metrics=dict(row['metrics'],travel_m=-999.))
+        with self.assertRaises(ValueError):verify_case_index(changed,record,fresh)
+
+    def test_minimal_or_wrong_protocol_receipt_cannot_open_final_test(self):
+        import json,tempfile
+        from pathlib import Path
+        from patrol_rsi.formal_study import verified_selection
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);p=root/'validation-selection.json'
+            p.write_text(json.dumps({'phase':'validation','selected':'C0'}))
+            with self.assertRaises(ValueError):verified_selection(p,{},root,'validation')
+
 
 if __name__=='__main__':unittest.main()
