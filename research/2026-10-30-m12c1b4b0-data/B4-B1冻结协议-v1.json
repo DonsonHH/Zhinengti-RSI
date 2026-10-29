@@ -1,0 +1,355 @@
+{
+  "protocol": "C1-B4-B1-minimal-v1",
+  "status": "frozen_design_before_new_process_generation_or_predictor_training",
+  "baseline": "d67aa4c85ec061d8d927a13025a789bc68a13d08",
+  "B0_scope": "Only old-data audit and interfaces. This protocol does not authorize opening training before its data gate passes.",
+  "labels": {
+    "A": "Physical professional anomaly at exact endpoint, including short runs; retained>=15s event membership separate.",
+    "B_reference": "A and calibrated qualified measurement alarm, conditional on completion.",
+    "B_action_primary": "B_reference where root-known qualified Tour or one-CHECK-then-Tour completion exists at exact endpoint; otherwise missing -1.",
+    "C": "Independent future B4-C whole-episode miss/delay/cost labels; never a predictor feature or A/B target.",
+    "validity": "Endpoint<=1800, exact5s grid, source clock<=root, role/access/timing/complete-return qualification; illegal is not a negative."
+  },
+  "profession_horizons": {
+    "thermal": [
+      30,
+      60,
+      120
+    ],
+    "electrical": [
+      30,
+      60,
+      120
+    ],
+    "cooling": [
+      30,
+      60,
+      120
+    ],
+    "control": [
+      30,
+      60,
+      120
+    ]
+  },
+  "old_data_policy": "8500-8703 and all earlier data are diagnostic/development material only; never final independent test. No time/noise/event random split or test oversampling.",
+  "new_seed_groups": {
+    "development": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019,
+      20020,
+      20021,
+      20022,
+      20023
+    ],
+    "validation_calibration": [
+      20200,
+      20201,
+      20202,
+      20203,
+      20204,
+      20205,
+      20206,
+      20207
+    ],
+    "validation_selection": [
+      20208,
+      20209,
+      20210,
+      20211,
+      20212,
+      20213,
+      20214,
+      20215
+    ],
+    "final_test": [
+      20400,
+      20401,
+      20402,
+      20403,
+      20404,
+      20405,
+      20406,
+      20407,
+      20408,
+      20409,
+      20410,
+      20411,
+      20412,
+      20413,
+      20414,
+      20415,
+      20416,
+      20417,
+      20418,
+      20419,
+      20420,
+      20421,
+      20422,
+      20423
+    ]
+  },
+  "split_assignment": "A seed and all its scenarios/phases/noise versions remain in one split. Identical numeric process fingerprints across splits are a hard stop requiring an amended protocol before training, never relabelled independent.",
+  "new_process_plan": {
+    "fixtures": [
+      [
+        "healthy",
+        900
+      ],
+      [
+        "coldplate_fouling",
+        180
+      ],
+      [
+        "dc_contact_hotspot",
+        180
+      ],
+      [
+        "sensor_bias",
+        900
+      ],
+      [
+        "aux_feeder_loss+cdu_fouling",
+        180
+      ]
+    ],
+    "fault_starts_s": [
+      335,
+      705
+    ],
+    "noise_c": [
+      0.2,
+      1.0
+    ],
+    "new_seed_groups": 64,
+    "nominal_processes": 640,
+    "noise_condition_episodes": 1280,
+    "observer_controller": "Original protected Tour with frozen CVAE and original calibrated measurements. Same old plant parameters, no score/policy optimization.",
+    "roots_s": [
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330,
+      360,
+      390,
+      420,
+      450,
+      480,
+      510,
+      540,
+      570,
+      600,
+      630,
+      660,
+      690,
+      720,
+      750,
+      780,
+      810,
+      840,
+      870,
+      900,
+      930,
+      960,
+      990,
+      1020,
+      1050,
+      1080,
+      1110,
+      1140,
+      1170,
+      1200,
+      1230,
+      1260,
+      1290,
+      1320,
+      1350,
+      1380,
+      1410,
+      1440,
+      1470,
+      1500,
+      1530,
+      1560,
+      1590,
+      1620,
+      1650,
+      1680,
+      1710,
+      1740,
+      1770
+    ],
+    "root_grid_s": 30,
+    "no_more_samples_rule": "Generate exactly this manifest once; failed correctness jobs may be repaired/versioned, no fault strengthening, seed replacement, event copying, resampling or append-until-positive."
+  },
+  "data_gate": {
+    "per_kind_per_horizon_per_split_minimum": {
+      "development": {
+        "positive_seed_groups": 8,
+        "positive_numeric_processes": 12,
+        "distinct_retained_positive_events": 20,
+        "valid_negative_seed_groups": 12
+      },
+      "validation_calibration": {
+        "positive_seed_groups": 4,
+        "positive_numeric_processes": 6,
+        "distinct_retained_positive_events": 8,
+        "valid_negative_seed_groups": 6
+      },
+      "validation_selection": {
+        "positive_seed_groups": 4,
+        "positive_numeric_processes": 6,
+        "distinct_retained_positive_events": 8,
+        "valid_negative_seed_groups": 6
+      },
+      "final_test": {
+        "positive_seed_groups": 8,
+        "positive_numeric_processes": 12,
+        "distinct_retained_positive_events": 20,
+        "valid_negative_seed_groups": 12
+      }
+    },
+    "readiness": "All claimed kind/horizon cells need enough valid B_action positives and negatives before model selection; endpoint A/B_reference separately reported. Generation not yet executed means coverage unverified and no training GO.",
+    "failure": "Stop model search for failing cells; report exact deficits. Limited domain requires explicit declared subset and separate claim, not pooled all-task success."
+  },
+  "features": {
+    "schema": "b4b0-opportunity-v1",
+    "root_only": true,
+    "qualified_history": 3,
+    "no_id_features": [
+      "seed",
+      "scenario",
+      "fault_start",
+      "actual_onset",
+      "actual_end",
+      "future_alarm",
+      "future_temperature",
+      "future_measurement",
+      "event_id",
+      "numeric_fingerprint",
+      "C_utility",
+      "oracle"
+    ],
+    "topology": "Public same-Pod/CDU/power branch identifiers only; no hidden fault topology.",
+    "preprocessing": "Fit value scaling and any imputation on development only; missing masks retained; no class oversampling, class balancing or seed/scenario feature. Process/noise conditions uniformly weighted within seed group."
+  },
+  "candidate_budget": {
+    "empirical_frequency": {
+      "definition": "Development per-profession/horizon Laplace smoothed event-frequency probability on valid samples; fixed alpha=1,beta=1",
+      "fits_per_head": 1
+    },
+    "logistic_regression": {
+      "L2": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "initialization": "zero",
+      "max_iterations": 300,
+      "optimizer": "deterministic full-batch or fixed-order streaming convex solver",
+      "max_fits": 72,
+      "heads": "2labels x4professions x3horizons; choose using validation_selection process-mean Brier, tie strongerL2"
+    },
+    "bounded_trend": {
+      "definition": "Original bounded history extrapolation at horizon for thermal; original professional held evidence for other roles. Calibrate scalar, no new coefficients."
+    },
+    "nominal_physical": {
+      "definition": "Root causal nominal temperature held at endpoint for thermal; explicit professional evidence baseline for nonthermal. No future simulator rollforward or hidden faults."
+    },
+    "frozen_CVAE_raw": {
+      "definition": "Root raw CVAE prior output held; raw and assimilated separate. Thermal-only model claim; other professions get explicit unavailable, not fake CVAE estimates."
+    },
+    "frozen_CVAE_assimilated": {
+      "definition": "Separate ablation/representation baseline using the root measurement-overwritten cache, held to endpoint; not another trained estimator."
+    },
+    "optional_small_temporal": {
+      "enabled": false,
+      "training_budget": 0,
+      "design": "One-layer GRU width16 on last3 qualified/readout states with timestamps and missingness. Activate only via separately frozen amendment; not a rescue candidate after test."
+    },
+    "neural_CVAE_updates": 0,
+    "PPO_updates": 0,
+    "LLM_calls": 0,
+    "extra_hyperparameters_or_models": 0
+  },
+  "calibration": {
+    "method": "Fixed ridge Platt/logistic sigmoid on validation_calibration only; score scaling constants development only; ridge=1, max_iterations=200.",
+    "applies": "Each scalar family, label, profession and horizon that is available. Logistic heads receive same fixed sigmoid calibration; empirical frequency constant remains its development probability.",
+    "degenerate_cell": "No independent positives/negatives means data gate fails, not a manufactured calibration curve.",
+    "threshold": "Validation_selection negatives only: smallest score threshold with empirical FPR<=0.01, strict score>threshold and ties conservatively rejected. Threshold fixed before test; no test tuning."
+  },
+  "metrics": {
+    "primary": [
+      "Event-level recall at fixed1% validation FPR budget on B_action, retained>=15s events with at least one valid sample",
+      "Process/seed-macro Brier on B_action"
+    ],
+    "secondary": [
+      "A and B_reference results separately",
+      "Test FPR and false alarms per1800s/valid opportunity",
+      "Sample precision-recall AUPRC with prevalence",
+      "Log loss clipped probabilities[1e-6,1-1e-6]",
+      "10fixed-bin reliability diagram and ECE",
+      "Event eligibility denominator and unforecastable events",
+      "Per-profession/horizon/scenario/noise and worst seed",
+      "Prediction horizon degradation",
+      "Inference time/RSS/model training time"
+    ],
+    "event_recall": "A retained event counts once per numeric physical trajectory; noise versions averaged within process then seed. A sample predicts its completion-bin event, not a future window chosen after truth. Raw short events secondary.",
+    "uncertainty": "2000 paired bootstrap resamples of independent seed groups, seed770030 fixed; recompute macro metrics including noise/scenario/phase together. Report95%percentileCI, raw n seeds and event/process counts; no row bootstrap or significance from millions of timestamps."
+  },
+  "test_seal": "All model, calibrator, hyperparameter and threshold SHA receipts frozen after validation. Only then expose final test scores/metrics once; no seed or candidate replacement.",
+  "GO_NO_GO": {
+    "GO": "Every prespecified cell passes data gate; selected predictive family increases eligible-event recall >=0.05 absolute over best fixed nonlearned baseline and reduces macro Brier >=5% relative; paired95%CI excludes no-improvement for both; test FPR<=0.02 overall and<=0.05 per seed with>=100 negatives; no profession loses>0.05 recall. Gains need unique information attribution, not raw-CVAE label by presence.",
+    "LIMITED_GO": "All full-domain GO gates fail but a prespecified profession/horizon cell passes the same effect/FPR/data rules with positive paired95%CI, reported as limited with multiplicity Holm correction across12cells; no test-defined new subgroup.",
+    "NO_GO": "Data/causality gate failure, absent reliable incremental prediction, or materially higher false alarms. Preserve results and investigate sensors/objective; no automatic policy expansion.",
+    "B0_GO": "Data interface and causality verified AND fresh process-level independent positive/negative coverage empirically satisfies gate. An ungenerated new manifest never meets this gate."
+  },
+  "resources": {
+    "partition": "cu",
+    "GPU_GRES": 0,
+    "cpus_per_task": 2,
+    "memory_GB": 8,
+    "max_concurrency": 2,
+    "generation_max_allocated_CPU_minutes": 2880,
+    "predictor_fit_calibration_max_allocated_CPU_minutes": 960,
+    "evaluation_and_audit_max_allocated_CPU_minutes": 480,
+    "total_max_allocated_CPU_minutes": 4320,
+    "per_allocation_max_minutes": 60,
+    "max_public_derived_storage_GB": 6,
+    "Slurm_phases": [
+      "source/seed-manifest freeze and full test gate",
+      "bounded development+validation data generation and label audit",
+      "coverage gate -> fits on development only",
+      "calibration split -> selection/threshold split",
+      "freeze all artifacts -> one final test scoring",
+      "independent audit and resource accounting"
+    ],
+    "this_B0_runs_B1_training": false
+  },
+  "licensing_and_site_scope": "Synthetic calibrated-in-model measurements, no site calibration or real risk probability claim. Existing model weights stay private with SHA."
+}
