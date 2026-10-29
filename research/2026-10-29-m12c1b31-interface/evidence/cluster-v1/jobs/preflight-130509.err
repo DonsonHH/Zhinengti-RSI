@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b31/code-v1/scripts/preflight_causal_stopping.py", line 121, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b31/code-v1/scripts/preflight_causal_stopping.py", line 67, in main
+    actors,fingerprints=load_actors(args.actors);score=actor_scorer(actors[0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b31/code-v1/src/patrol_rsi/m12.py", line 75, in load_actors
+    manifest = json.loads((ROOT / 'research/2026-10-27-m11-scheduling/evidence/policy-weight-retrieval.json').read_text())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b31/code-v1/research/2026-10-27-m11-scheduling/evidence/policy-weight-retrieval.json'

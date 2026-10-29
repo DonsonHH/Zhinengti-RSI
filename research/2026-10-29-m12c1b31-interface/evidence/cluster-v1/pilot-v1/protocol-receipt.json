@@ -1,0 +1,197 @@
+{
+  "sha256": "0244b1c409bb99fab572ba7d9ae1c0dbbb95ac03b309d15f07bb09012785321f",
+  "started_unix": 1793270327.8363082,
+  "protocol": {
+    "protocol": "C1-B3.1-preflight-v1",
+    "status": "frozen_before_Torch_pilot_not_formal_results",
+    "physical_seeds": {
+      "development": [
+        8500,
+        8501
+      ],
+      "validation": [
+        8600,
+        8601
+      ],
+      "test": [
+        8700,
+        8701,
+        8702,
+        8703
+      ]
+    },
+    "engineering_pilot_seed": 8499,
+    "old_development_only": [
+      8300,
+      8301
+    ],
+    "fixtures": [
+      [
+        "healthy",
+        900
+      ],
+      [
+        "coldplate_fouling",
+        180
+      ],
+      [
+        "sensor_bias",
+        900
+      ],
+      [
+        "aux_feeder_loss+cdu_fouling",
+        180
+      ]
+    ],
+    "fault_start_s": [
+      335,
+      705
+    ],
+    "noise_c": [
+      0.2,
+      1.0
+    ],
+    "fixed_conditions_per_physical_seed": 16,
+    "mission": {
+      "racks": 128,
+      "agents": 18,
+      "horizon_s": 1800,
+      "global_optional_budget": 1,
+      "weights": "frozen M10 history-seed1 CVAE; old PPO seed0 shadow only"
+    },
+    "main_methods": [
+      "tour",
+      "evidence",
+      "lookahead",
+      "conservative",
+      "revised"
+    ],
+    "revised_candidates": [
+      {
+        "id": "C0",
+        "config": {
+          "collateral": 0.5,
+          "future_risk": 0.0,
+          "unknown_risk": 0.05,
+          "tour_soon_s": 0,
+          "threshold": 0.0
+        }
+      },
+      {
+        "id": "C1",
+        "config": {
+          "collateral": 0.5,
+          "future_risk": 0.25,
+          "unknown_risk": 0.05,
+          "tour_soon_s": 60,
+          "threshold": 0.0
+        }
+      },
+      {
+        "id": "C2",
+        "config": {
+          "collateral": 1.0,
+          "future_risk": 0.25,
+          "unknown_risk": 0.05,
+          "tour_soon_s": 60,
+          "threshold": 0.0
+        }
+      },
+      {
+        "id": "C3",
+        "config": {
+          "collateral": 1.0,
+          "future_risk": 0.25,
+          "unknown_risk": 0.05,
+          "tour_soon_s": 60,
+          "threshold": 0.01
+        }
+      }
+    ],
+    "candidate_budget": {
+      "development_candidates": 4,
+      "development_retained": 2,
+      "validation_candidates": 2,
+      "final_selected": 1,
+      "extra_candidates_allowed": 0,
+      "neural_updates": 0,
+      "LLM_calls": 0
+    },
+    "selection": {
+      "development": "Evaluate all 4 and four fixed controls on the same 32 conditions. Rank by total misses, consequence-weighted censored delay, travel, candidate id; retain first two. No test access.",
+      "validation": "Evaluate both retained candidates and four fixed controls on 32 validation conditions. Eligible only if every underlying seed has missed_delta<=0 vs tour, aggregate delay_delta<=0 and at least one strict miss or delay improvement. Among eligible use the same deterministic ranking. If none eligible select TOUR as revised fallback.",
+      "test": "Freeze selected config or TOUR before opening test outputs; evaluate five methods once on 64 conditions. No further selection, updates or seed replacement."
+    },
+    "statistics": {
+      "primary": [
+        "missed anomaly records",
+        "consequence_weighted_censored_delay_s"
+      ],
+      "dependence": "Noise/method/phase repetitions share physical seeds; give each underlying seed and fixture stratum; no independent-n claim for rollouts.",
+      "hard_constraints": [
+        "zero exact initial/terminal revisit violations",
+        "qualified calibrated inspections",
+        "whole return plan",
+        "global optional budget<=1",
+        "no hidden future input"
+      ],
+      "worst_seed_tolerance": "0 additional missed records for each validation/test physical seed; final breach prevents stable-superiority claim; delay tradeoff is disclosed, not hidden.",
+      "auxiliary": [
+        "travel and service",
+        "delay exposure",
+        "executed checks",
+        "decision wall time",
+        "estimator calls",
+        "worst paired configuration"
+      ]
+    },
+    "formal_case_upper_bounds": {
+      "development": 256,
+      "validation": 192,
+      "test": 320,
+      "total": 768,
+      "replay_audit_extra": 768
+    },
+    "resource_caps": {
+      "partition": "4gpu CPU allocation if cu remains full; otherwise cu",
+      "cpus_per_task": 2,
+      "memory_gb": 8,
+      "GPU_GRES": 0,
+      "concurrency": 2,
+      "development_array_tasks": 2,
+      "validation_array_tasks": 2,
+      "test_array_tasks": 4,
+      "time_limit_each_min": 30,
+      "maximum_allocated_CPU_minutes_including_one_full_replay": 960,
+      "pilot_max_elapsed_s_per_case": 30,
+      "pilot_max_peak_RSS_MB": 2048
+    },
+    "pilot": {
+      "cases": 10,
+      "fixtures": [
+        [
+          "healthy",
+          900
+        ],
+        [
+          "aux_feeder_loss+cdu_fouling",
+          180
+        ]
+      ],
+      "seed": 8499,
+      "fault_start_s": 335,
+      "noise_c": 0.2,
+      "methods": "all five",
+      "revised_config": "C2",
+      "horizon_s": 1800,
+      "may_select_candidates": false
+    },
+    "stop_rules": [
+      "Any leakage/constraint breach stops advancement, preserve diagnostics.",
+      "Pilot count, full trajectory or cost mismatch is NO-GO until implementation repair and new versioned rerun; no scoring changes to chase old positives.",
+      "No extra model/candidate/seed search after validation or test.",
+      "Test worst-seed missed_delta>0 or nonpositive aggregate utility means no stable-superiority claim; preserve and stop scope expansion."
+    ],
+    "this_turn_execution_boundary": "Run actual Torch tests, old regression and ten-case CPU pilot, then deliver GO/NO-GO for later formal submission. Do not open new final test during preflight."
+  }
+}

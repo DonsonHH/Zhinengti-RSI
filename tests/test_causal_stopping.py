@@ -117,6 +117,51 @@ class CausalStoppingTests(unittest.TestCase):
         self.assertEqual(select_validation({'C0':bad,'C1':good},tour),'C1')
         with self.assertRaises(ValueError):select_validation({}, {'8700':row(1,1.)})
 
+    def test_declining_hot_signal_is_kept_at_its_actual_completion_time(self):
+        from patrol_rsi.causal_observation import reading
+        from patrol_rsi.public_stopping import public_frontier
+        b=capture_public(ImproverTask(specification(),PatrolProgram()))
+        row=b['tasks'][2];row['velocity_c_s']=-.2
+        row['nominal']['value']=50.
+        row['temperature_measurement']=reading(80.,5.,source='test_past_measurement',unit='degC',now=5.)
+        match=[v for v in public_frontier(b) if v['task']==2 and v['dispatch_time_s']==5.]
+        self.assertTrue(match)
+        self.assertGreater(match[0]['target_signal'],0.)
+
+    def test_nonfinite_policy_fields_and_nested_hidden_keys_are_rejected(self):
+        b=capture_public(ImproverTask(specification(),PatrolProgram()))
+        for mutate in (
+            lambda c:c['tasks'][0].update(velocity_c_s=float('nan')),
+            lambda c:c['tasks'][0].update(deadline_s=0.),
+            lambda c:c['tasks'][0].update(weight_scaled=-1.),
+            lambda c:c['tasks'][156]['flow'].update(unit='degC'),
+            lambda c:c['agents'][0]['costs_s'].update(hidden_future={'value':1}),
+            lambda c:c['topology'].update(task_pods={'future_labels':[1]})):
+            c=copy.deepcopy(b);mutate(c)
+            with self.assertRaises(ValueError):validate_public(c)
+
+    def test_short_tour_guard_uses_full_risk_margin_independent_of_soft_net(self):
+        from patrol_rsi.public_stopping import short_tour_veto
+        parts=dict(target_benefit=.10,first_round_collateral_cost=.08,
+            full_future_risk_cost=.04,execution_cost=.01,net_score=.04)
+        self.assertTrue(short_tour_veto(parts,tour_eta_s=50.,soon_s=60))
+        self.assertFalse(short_tour_veto(parts,tour_eta_s=50.,soon_s=0))
+
+    def test_busy_completion_and_schedule_counter_domains_are_checked(self):
+        from patrol_rsi.public_dispatch import snapshot,choose
+        env=ImproverTask(specification(),PatrolProgram())
+        env.step(choose(snapshot(env,lambda f:f[:,0]),'tour')[0])
+        b=capture_public(env);i=next(i for i,r in enumerate(b['agents']) if r['busy_target'] is not None)
+        for mutate in (
+            lambda c:c['agents'][i].update(busy_finish_s=float('nan')),
+            lambda c:c['agents'][i].update(busy_finish_s=c['time_s']-5),
+            lambda c:c['agents'][i].update(busy_finish_s=c['time_s']+1),
+            lambda c:c['agents'][i].update(cursor=0.5),
+            lambda c:c['agents'][i].update(detours_used=3),
+            lambda c:c['agents'][i].update(baseline_completed=len(c['agents'][i]['tour']))):
+            c=copy.deepcopy(b);mutate(c)
+            with self.assertRaises(ValueError):validate_public(c)
+
 
 if __name__=='__main__':
     unittest.main()

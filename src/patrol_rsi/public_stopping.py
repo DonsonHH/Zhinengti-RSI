@@ -36,6 +36,12 @@ def _exposure(at,shift,period,end=1800.):
     return visits
 
 
+def short_tour_veto(parts,*,tour_eta_s,soon_s):
+    """Near-tour checks must cover full (not soft-scaled) risk costs."""
+    margin=parts['target_benefit']-parts['first_round_collateral_cost']-parts['full_future_risk_cost']-parts['execution_cost']
+    return bool(soon_s and tour_eta_s<=soon_s and margin<=0.)
+
+
 def public_frontier(bundle,config=StopConfig()):
     """All positive-risk legal optional CHECKs under TOUR until mission end.
 
@@ -60,7 +66,10 @@ def public_frontier(bundle,config=StopConfig()):
             if j!=tour[cursor]:raise ValueError('Forecast is only used before optional action')
             last[j]=t;costs=edge[str(j)];cursor=(cursor+1)%len(tour);completed+=1
             if completed==len(tour):completed=detours=0
-        possible=[j for j in tour if (task_signal(tasks[j],1800-root)[0] or 0)>0 and not tasks[j]['already_alarm']]
+        # Thermal forecasts are bounded monotone trends plus held estimates:
+        # either endpoint can be positive. Do not discard a cooling-down cue.
+        possible=[j for j in tour if max((task_signal(tasks[j],dt)[0] or 0.)
+            for dt in (0.,1800-root))>0 and not tasks[j]['already_alarm']]
         if not possible:continue
         while t<=1795:
             base=tour[cursor];base_finish=t+costs[str(base)]
@@ -103,11 +112,14 @@ def public_frontier(bundle,config=StopConfig()):
                 execution=.05*shift/300
                 risk_correction=config.future_risk*future_cost
                 net=target_benefit-config.collateral*(first_cost+risk_correction)-execution
-                veto=bool(config.tour_soon_s and arrivals[j]-t<=config.tour_soon_s and net<=config.threshold)
+                components={'target_benefit':target_benefit,'first_round_collateral_cost':first_cost,
+                    'full_future_risk_cost':future_cost,'execution_cost':execution}
+                veto=short_tour_veto(components,tour_eta_s=arrivals[j]-t,soon_s=config.tour_soon_s)
                 result.append({'agent':agent['agent'],'task':j,'dispatch_time_s':float(t),'finish_s':finish,
                     'tour_target_finish_s':arrivals[j],'target_lead_s':lead,'target_signal':signal,'target_source':source,
                     'target_benefit':target_benefit,'first_round_collateral_cost':first_cost,
                     'full_delay_exposure_s':exposure,'future_risk_correction':risk_correction,'execution_cost':execution,
+                    'full_future_risk_cost':future_cost,
                     'net_score':net,'tour_slack_veto':veto,'unknown_collateral_tasks':unknown,
                     'return_slack_s':slack,'task_costs':cost_rows})
             last[base]=base_finish;costs=edge[str(base)];cursor=(cursor+1)%len(tour);completed+=1
@@ -140,4 +152,6 @@ def decision(bundle,used=False,config=StopConfig()):
     rows=[] if used else public_frontier(bundle,config)
     value=stopping_decision(rows,now=bundle['time_s'],used=used,threshold=config.threshold)
     value['config']=asdict(config)
+    value['unavailable_target_signals']=[r['task'] for r in bundle['tasks'] if task_signal(r)[0] is None] if not used else []
+    value['missing_target_rule']='Unscorable for CHECK, explicitly unavailable; never interpreted as normal/zero risk.'
     return value

@@ -81,6 +81,7 @@ def capture_public(env):
     telemetry={k:[float(v) for v in env.current_packet[k]] for k in (
         'public_requested_it_kw','public_delivered_it_kw','pod_pump_command','secondary_supply_c')}
     telemetry['time_s']=float(env.current_packet['time_s'])
+    telemetry['primary_supply_c']=float(env.current_packet['primary_supply_c'])
     result={'schema':'causal-public-v1','time_s':now,'tasks':tasks,'agents':packet['agents'],
         'telemetry':telemetry,'topology':{'relation':'same_public_pod_power_and_cdu_branch',
             'task_pods':[r['pod'] for r in tasks]},'estimator':{'mode':env.mode,
@@ -96,14 +97,41 @@ def validate_public(bundle):
         raise ValueError('Invalid observation time')
     if bundle['telemetry']['time_s']>now:
         raise ValueError('Future telemetry')
-    if set(bundle['telemetry'])!={'time_s','public_requested_it_kw','public_delivered_it_kw','pod_pump_command','secondary_supply_c'}:
+    if set(bundle['telemetry'])!={'time_s','primary_supply_c','public_requested_it_kw','public_delivered_it_kw','pod_pump_command','secondary_supply_c'}:
         raise ValueError('Unexpected telemetry field')
     if set(bundle['topology'])!={'relation','task_pods'} or set(bundle['estimator'])!={'mode','calls','pure_prior_recorded'}:
         raise ValueError('Unexpected topology/estimator metadata')
+    numeric=lambda v:isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v)
+    for key,values in bundle['telemetry'].items():
+        entries=values if isinstance(values,list) else [values]
+        if not all(numeric(v) for v in entries):
+            raise ValueError('Nonfinite telemetry')
+    if not isinstance(bundle['topology']['task_pods'],list) or bundle['topology']['task_pods']!=[r['pod'] for r in bundle['tasks']]:
+        raise ValueError('Invalid public topology membership')
     for agent in bundle['agents']:
         if set(agent)!={'agent','tour','cursor','busy_target','busy_finish_s','detours_used','baseline_completed',
                 'first_costs_s','costs_s','period_s'}:
             raise ValueError('Unexpected schedule field')
+        tour=agent['tour'];keys={str(j) for j in tour}
+        if not tour or len(set(tour))!=len(tour) or any(type(j) is not int or not 0<=j<len(bundle['tasks']) for j in tour):
+            raise ValueError('Invalid owned tour')
+        if any(type(agent[k]) is not int or agent[k]<0 for k in ('agent','cursor','detours_used','baseline_completed')):
+            raise ValueError('Integer public schedule counters required')
+        if agent['detours_used']>2 or agent['baseline_completed']>=len(tour):
+            raise ValueError('Public schedule counter outside frozen budget')
+        busy=agent['busy_target'];finish=agent['busy_finish_s']
+        if busy is None:
+            if finish is not None:raise ValueError('An idle agent has no pending completion')
+        elif (type(busy) is not int or busy not in tour or not numeric(finish)
+                or not now<=finish<=1800 or finish%5):
+            raise ValueError('Busy completion must be causal, finite and on the execution grid')
+        if not numeric(agent['period_s']) or agent['period_s']<=0 or not 0<=agent['cursor']<len(tour):
+            raise ValueError('Nonprogressing schedule')
+        if set(agent['first_costs_s'])!=keys or set(agent['costs_s'])!=keys:
+            raise ValueError('Unexpected nested schedule field')
+        if any(not numeric(v) or v<=0 for v in agent['first_costs_s'].values()):raise ValueError('Invalid dispatch cost')
+        for edges in agent['costs_s'].values():
+            if set(edges)!=keys or any(not numeric(v) or v<=0 for v in edges.values()):raise ValueError('Invalid edge cost')
     fields=set(CHANNELS)|{'task','pod','required_role','access','qualified_available',
         'kind','service_s','deadline_s','weight_scaled','last_check_s','already_alarm',
         'temperature_c','last_temperature_c','temperature_age_s','temperature_stamp_s','velocity_c_s',
@@ -111,10 +139,20 @@ def validate_public(bundle):
     for j,row in enumerate(bundle['tasks']):
         if set(row)!=fields or row['task']!=j or row['last_check_s']>now:
             raise ValueError('Unexpected task/evaluator field or future check')
+        for field in ('service_s','deadline_s','weight_scaled','last_check_s','temperature_c','last_temperature_c',
+                'temperature_age_s','temperature_stamp_s','velocity_c_s','nominal_temperature_c'):
+            if not numeric(row[field]):raise ValueError('Nonfinite public policy input')
+        if row['deadline_s']<=0 or row['service_s']<=0 or row['weight_scaled']<0 or abs(row['velocity_c_s'])>.2+1e-10:
+            raise ValueError('Invalid public policy scale')
+        if row['temperature_stamp_s']>now or row['temperature_age_s']<0:
+            raise ValueError('Future legacy observation')
         for k in CHANNELS:
             r=row[k]
             if set(r)!={'available','value','time_s','age_s','context_cutoff_s','source','unit','reason'}:
                 raise ValueError('Unexpected measurement field')
+            unit='kg/s' if k=='flow' or k=='qualified' and row['kind']=='cooling' else 'degC'
+            if type(r['available']) is not bool or r['unit']!=unit:
+                raise ValueError('Availability and channel units must be explicit')
             if r['available']:
                 if not all(isinstance(r[v],(int,float)) and math.isfinite(r[v]) for v in ('value','time_s','context_cutoff_s','age_s')):
                     raise ValueError('Available reading must be finite')
