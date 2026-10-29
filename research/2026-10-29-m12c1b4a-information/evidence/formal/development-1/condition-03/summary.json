@@ -1,0 +1,675 @@
+{
+  "condition": {
+    "phase": "development",
+    "seed": 8501,
+    "scenario": "healthy",
+    "duration_s": 900,
+    "fault_start_s": 705,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned"
+  },
+  "source_cases": [
+    {
+      "case": "development--8501--healthy--900--705--1.0--tour",
+      "source_sha256": "0c9ee59247f040b97e57f034e32d16ca60ce1a959a82e007c9d5fafb871943b1",
+      "source_bytes": 147793,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--evidence",
+      "source_sha256": "9160136abb0f410ecea39b305b6e882e101b494fb996cea488d668fb9233bc4f",
+      "source_bytes": 147781,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--lookahead",
+      "source_sha256": "f383b37319baeb84c95e302fbc14732a55efc03ad79765e6483e843007e432a2",
+      "source_bytes": 164023,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--conservative",
+      "source_sha256": "bf1652b497e2b0b0c7a3481f56ce1fc7d88d9dbbaeaf52e421726ba46b15f171",
+      "source_bytes": 147786,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--C0",
+      "source_sha256": "9621b2a89f3e673fb6f6e6b09fe5ab01bfd919a11196b7b237925268c5bc9826",
+      "source_bytes": 216868,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--C1",
+      "source_sha256": "3f6f3e0bee64c6413bfdf45a5d571f53f9136adc4ffe4397058e6ff973b4558f",
+      "source_bytes": 213793,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--C2",
+      "source_sha256": "b9c446c5bb570f454d4a281d5f6bdbaae49e07d4c2bae232e14e6977883baef8",
+      "source_bytes": 213193,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    },
+    {
+      "case": "development--8501--healthy--900--705--1.0--C3",
+      "source_sha256": "9594650d2fc2b4b1b0d1b3bbe472f525982f9cf04d0370cea1b5df0e2653e3ab",
+      "source_bytes": 212438,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    }
+  ],
+  "common_Tour_history_frames": 359,
+  "original_public_SHA_frames_verified": 1436,
+  "factorized_candidate_root_pairs": 1427284,
+  "positive_frontier_nonwinner_scores_checked": 1559,
+  "error_statistics": {
+    "all_legal/thermal/0-30": {
+      "n": 9130,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/thermal/30-60": {
+      "n": 38968,
+      "sum_error": 11.900588324298758,
+      "sum_absolute_error": 11.900588324298758,
+      "sum_squared_error": 1.113363244791429,
+      "predicted_positive": 219,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 219,
+      "false_negative": 0
+    },
+    "all_legal/thermal/60-120": {
+      "n": 76916,
+      "sum_error": 1395.4789918140038,
+      "sum_absolute_error": 1395.4789918140038,
+      "sum_squared_error": 534.8030052834611,
+      "predicted_positive": 5120,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 5120,
+      "false_negative": 0
+    },
+    "all_legal/thermal/120-300": {
+      "n": 214250,
+      "sum_error": 8219.72399324735,
+      "sum_absolute_error": 8219.72399324735,
+      "sum_squared_error": 4330.862692131057,
+      "predicted_positive": 17958,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 17958,
+      "false_negative": 0
+    },
+    "all_legal/thermal/300-600": {
+      "n": 303280,
+      "sum_error": 11494.87336383541,
+      "sum_absolute_error": 11494.87336383541,
+      "sum_squared_error": 5983.293061506021,
+      "predicted_positive": 25525,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 25525,
+      "false_negative": 0
+    },
+    "all_legal/thermal/600-1800": {
+      "n": 538786,
+      "sum_error": 20407.026034438055,
+      "sum_absolute_error": 20407.026034438055,
+      "sum_squared_error": 10518.175387030777,
+      "predicted_positive": 45630,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 45630,
+      "false_negative": 0
+    },
+    "all_legal/cooling/30-60": {
+      "n": 650,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/cooling/60-120": {
+      "n": 4878,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/cooling/120-300": {
+      "n": 14010,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/cooling/300-600": {
+      "n": 19623,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/cooling/600-1800": {
+      "n": 32293,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/0-30": {
+      "n": 9130,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/30-60": {
+      "n": 38968,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/60-120": {
+      "n": 76916,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/120-300": {
+      "n": 214250,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/300-600": {
+      "n": 303280,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/600-1800": {
+      "n": 538786,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/0-30": {
+      "n": 8462,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/30-60": {
+      "n": 37006,
+      "sum_error": 11.900588324298758,
+      "sum_absolute_error": 11.900588324298758,
+      "sum_squared_error": 1.113363244791429,
+      "predicted_positive": 219,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 219,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/60-120": {
+      "n": 74330,
+      "sum_error": 1395.4789918140038,
+      "sum_absolute_error": 1395.4789918140038,
+      "sum_squared_error": 534.8030052834611,
+      "predicted_positive": 5120,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 5120,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/120-300": {
+      "n": 202586,
+      "sum_error": 8219.72399324735,
+      "sum_absolute_error": 8219.72399324735,
+      "sum_squared_error": 4330.862692131057,
+      "predicted_positive": 17958,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 17958,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/300-600": {
+      "n": 286278,
+      "sum_error": 11494.87336383541,
+      "sum_absolute_error": 11494.87336383541,
+      "sum_squared_error": 5983.293061506021,
+      "predicted_positive": 25525,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 25525,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/600-1800": {
+      "n": 470564,
+      "sum_error": 20407.026034438055,
+      "sum_absolute_error": 20407.026034438055,
+      "sum_squared_error": 10518.175387030777,
+      "predicted_positive": 45630,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 45630,
+      "false_negative": 0
+    },
+    "selected_future/C0": {
+      "n": 341,
+      "sum_error": 206.44649588089572,
+      "sum_absolute_error": 206.44649588089572,
+      "sum_squared_error": 129.02959358783048,
+      "predicted_positive": 341,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 341,
+      "false_negative": 0
+    },
+    "selected_future/C1": {
+      "n": 341,
+      "sum_error": 206.44649588089572,
+      "sum_absolute_error": 206.44649588089572,
+      "sum_squared_error": 129.02959358783048,
+      "predicted_positive": 341,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 341,
+      "false_negative": 0
+    },
+    "selected_future/C2": {
+      "n": 341,
+      "sum_error": 203.29791117215058,
+      "sum_absolute_error": 203.29791117215058,
+      "sum_squared_error": 125.4156434414663,
+      "predicted_positive": 341,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 341,
+      "false_negative": 0
+    },
+    "selected_future/C3": {
+      "n": 335,
+      "sum_error": 201.4583986874097,
+      "sum_absolute_error": 201.4583986874097,
+      "sum_squared_error": 124.75406562171297,
+      "predicted_positive": 335,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 335,
+      "false_negative": 0
+    },
+    "all_legal/control/60-120": {
+      "n": 5612,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/120-300": {
+      "n": 15480,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/300-600": {
+      "n": 21640,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/600-1800": {
+      "n": 34024,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/60-120": {
+      "n": 4686,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/120-300": {
+      "n": 13336,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/300-600": {
+      "n": 18480,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/600-1800": {
+      "n": 27982,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/0-30": {
+      "n": 8854,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/30-60": {
+      "n": 38234,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/60-120": {
+      "n": 75662,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/120-300": {
+      "n": 210980,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/300-600": {
+      "n": 297550,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/600-1800": {
+      "n": 516614,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/0-30": {
+      "n": 8854,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/30-60": {
+      "n": 38234,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/60-120": {
+      "n": 75662,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/120-300": {
+      "n": 210980,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/300-600": {
+      "n": 297550,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/600-1800": {
+      "n": 516614,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/30-60": {
+      "n": 1056,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/30-60": {
+      "n": 612,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    }
+  },
+  "actual_revised_decision_layers": {
+    "C0": {
+      "no_net_helpful_current_action": 359
+    },
+    "C1": {
+      "no_net_helpful_current_action": 359
+    },
+    "C2": {
+      "no_net_helpful_current_action": 359
+    },
+    "C3": {
+      "no_net_helpful_current_action": 359
+    }
+  },
+  "all_candidate_winner_source_counts": {
+    "nominal": 573903,
+    "unavailable": 31592,
+    "remote_flow": 38906,
+    "measured_bounded_trend": 507271,
+    "qualified_sensor_error": 77812,
+    "qualified_contact": 65096,
+    "qualified_flow": 32548,
+    "history_assimilated": 100156
+  },
+  "thermal_fusion_unique_and_tied_positive_counts": {
+    "thermal_candidate_root_pairs": 1181330,
+    "positive_fused_pairs": 94452,
+    "positive_fused_reference_zero": 94452,
+    "positive_tied_source_pairs": 0,
+    "history_assimilated:positive_unique_win": 0,
+    "history_assimilated:positive_tie_member": 0,
+    "nominal:positive_unique_win": 0,
+    "nominal:positive_tie_member": 0,
+    "measured_bounded_trend:positive_unique_win": 94452,
+    "measured_bounded_trend:positive_tie_member": 0
+  },
+  "thermal_raw_and_assimilated_cache_provenance": {
+    "thermal_task_frames": 45952,
+    "nominal_available": 45952,
+    "history_available": 45312,
+    "raw_prior_available": 45312,
+    "history_value_equals_raw_prior": 30844,
+    "history_value_differs_from_raw_prior": 14468,
+    "history_stamp_matches_measurement": 14468,
+    "history_stamp_matches_prior": 33788
+  },
+  "history_channel_can_uniquely_increase_positive_signal_roots": 0,
+  "history_channel_endpoint_no_positive_influence_proofs": 359,
+  "oracle": {
+    "hard_legal_dispatch_candidates": 8282,
+    "net_helpful_candidates": 0,
+    "net_harmful_candidates": 0,
+    "minimum_missed_delta": 0,
+    "executed_original_branches_verified": 0,
+    "executed_branch_checks": []
+  },
+  "geometry_numeric_digest": "6d1f83b6000ed5330d3bb0ec9c05d1019c424e71fc83ac2b24c8e7024caca9aa",
+  "wall_s": 25.50050081498921,
+  "scope": "All hard-legal current/future Tour dispatch candidates; exact factorized public states and geometry. Evaluator-only one-CHECK-then-Tour analytic outcomes, validated against every saved executed detour. No new policy selection or trained predictors."
+}

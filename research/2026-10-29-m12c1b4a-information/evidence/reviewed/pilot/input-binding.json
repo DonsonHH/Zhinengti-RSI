@@ -1,0 +1,35 @@
+{
+  "original_folder": "development-0",
+  "original_case_index_sha256": "6800e4ff563d9724f6b2c85cb9e6a94ade2ce858f3228208ab620e42b97fdbff",
+  "original_process_index_sha256": "f481b00cb7723da183c746ce4a3a8c2cf5dc948e1334610c3e0ee9d2f40d7dcd",
+  "CVAE_sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "pilot": true,
+  "old_observation_conditions": [
+    {
+      "phase": "development",
+      "seed": 8500,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 335,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned"
+    },
+    {
+      "phase": "development",
+      "seed": 8500,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned"
+    }
+  ],
+  "new_physical_instances": 0,
+  "new_policy_trials": 0,
+  "neural_updates": 0,
+  "LLM_calls": 0
+}

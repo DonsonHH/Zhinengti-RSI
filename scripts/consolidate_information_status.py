@@ -108,17 +108,21 @@ def main():
 
 ![全候选预测视野与误差](evidence/report/b4a-horizon-error.png)
 
+读图：横轴是从当前到预测检查完成的时间；左图越高表示风险信号越高估，右图表示正预测中真实参考为零的比例。fused是最大值融合，history cache是覆盖缓存，nominal是物理名义估计，bounded trend是有界趋势，raw CVAE是未覆盖的CVAE先验输出。远期误差应与异常召回一起看；很少报异常也可能得到较低平均误差。
+
 信号是连续代理，尚不是异常概率；此处不计算伪装成概率的Brier分数。不同来源可用量不同，逐来源误差的分母在完整统计中保留。重复根时刻、候选、噪声和种子存在依赖，图上的海量点不构成海量独立样本。
 
 ## 4. CVAE这次提供了什么独立信息？
 
 热任务历史帧{cache['thermal_task_frames']:,}个，原始先验可用{cache['raw_prior_available']:,}个，融合缓存可用{cache['history_available']:,}个。缓存与原始值相同{cache['history_value_equals_raw_prior']:,}次、不同{cache['history_value_differs_from_raw_prior']:,}次。时间戳匹配测量和先验的计数可重叠，不能当互斥来源比例。
 
-history_assimilated在正信号中独立胜出{fusion['history_assimilated:positive_unique_win']:,}次，参与平局{fusion['history_assimilated:positive_tie_member']:,}次。所有{r['old_public_history_frames_reconstructed']:,}帧都具备可用名义温度；端点界检查发现可由历史缓存独立提高正信号的帧为{r['history_positive_influence_roots']:,}。在这批保存的巡回历史上，去掉该融合分量没有带来额外风险信号变化，固定评分因此也缺少它的新增信息。
+history_assimilated在正信号中独立胜出{fusion['history_assimilated:positive_unique_win']:,}次，参与平局{fusion['history_assimilated:positive_tie_member']:,}次（平局容差1e−10）。所有{r['old_public_history_frames_reconstructed']:,}帧都具备可用名义温度；端点界检查发现可由历史缓存独立提高正信号的帧为{r['history_positive_influence_roots']:,}，信号比较容差1e−12。在这批保存的巡回历史上，该融合分量没有产生可检测的额外风险信号，固定评分因此缺少相应的新增信息。
 
 这比仅看显示的胜出来源更具体，范围仍是**冻结模型、旧任务与固定历史上的输入／评分支配分析**。它不替代新训练模型或其他观测条件下的闭环估计器消融，也不说明VAE这一模型类别无价值。cvae_raw本来未直接进入旧task_signal，独立保留它是为了检验原始输出及后续预测目标。
 
 ![当前检查与未来等待关系](evidence/report/b4a-check-wait.png)
+
+读图：横轴是当前最优可接受CHECK分数，纵轴是未来WAIT分数；虚线两侧表示二者大小关系。灰点表示最终未补查的WAIT，蓝点表示后来有补查的WAIT，橙叉标记当前最优动作事后有益却仍等待，绿星为实际CHECK。两个面板是原C0／C1，点会重叠。
 
 图中“事后有益”由离线评价器计算，不作为公开输入。C0/C1实际决策只来自开发与验证；最终测试执行的是Tour回退，没有虚构C0/C1测试成绩。
 
@@ -229,6 +233,28 @@ B3.2的NO-GO保持。B4-A的完成允许进入**B4-B方案冻结**，尚不授�
             '当前结论': {'一句话': '当前任务有可用检查机会，但风险线索经常没识别出来；未来趋势高估又造成等待，先做信息与价值验证。',
                          '阶段状态': status, '关键数字': diagnostic,
                          '下一步': 'B4-B先冻结有效检查机会预测协议；没有提交新训练或新闭环。'},
+            '用户本轮审查建议_完整文本': gzip.decompress((EV / '用户审查建议原文.txt.gz').read_bytes()).decode('utf-8-sig'),
+            '目前仍不知道的答案': [
+                {'问题': '零风险线索究竟是传感信息不足，还是已有信息没用好？',
+                 '已知': '旧轨迹中有益动作经常没有正线索，缺失与零估计已分别计数。',
+                 '未知': '没有经过新预测器验证，尚不能证明现有信息在统计意义上不可用。',
+                 '下一检验': '同一公开历史、同一预测完成时刻比较简单模型和现有工具的异常确认机会预测。'},
+                {'问题': '怎样计算真正的WAIT信息价值？',
+                 '已知': '原q_wait为当前信息外推的最大代理，不是收到新观测后的期望价值。',
+                 '未知': '未来异常持续性、新信息及机会损失如何统一成可校准目标，尚无实验证实的最佳函数。',
+                 '下一检验': '先校准有限视野确认概率；整回合反事实价值另立B4-C协议。'},
+                {'问题': '怎样让CVAE提供其他信号没有的增量信息？',
+                 '已知': '当前冻结缓存在这些旧巡回历史里没有独立提高正风险信号。',
+                 '未知': '改变训练目标或观测条件能否带来动作和任务收益，仍需新实验。',
+                 '下一检验': '保留原始输出，在相同决策器下独立比较，不立即重训更大网络。'},
+                {'问题': '是否应该扩大一次补查的动作空间？',
+                 '已知': '若干旧条件在现有限制内已有有益动作。',
+                 '未知': '多次补查、任务交接和局部重排的收益及代价未独立测量。',
+                 '下一检验': '先解决可用信息，再以独立任务协议评价更大动作空间。'},
+                {'问题': '何时恢复RSI，以及论文主贡献落在哪一层？',
+                 '已知': '流程合成已能运行，元更新优势和现场后果权重仍未建立。',
+                 '未知': '最佳递归修改对象、必要原论文复现范围和业务价值需要导师与新证据共同确定。',
+                 '下一检验': '工具收益可信后比较人工、随机、固定改进器与更新改进器，分别报告成本。'}],
             '本轮通俗说明_markdown': documents['运行与归因结果.md'],
             '完整分层与条件统计': r,
             '全部128条件摘要': read(EV / 'report/all-condition-summaries.json'),
@@ -242,14 +268,23 @@ B3.2的NO-GO保持。B4-A的完成允许进入**B4-B方案冻结**，尚不授�
             '后续研究路线': documents['B4-B下一阶段方案.md'],
             '历史_B3_2及此前全部23阶段_原样': old,
             '历史快照SHA256': hashlib.sha256(old_path.read_bytes()).hexdigest()}
-    for name in ('visual-review.json', 'portable-verification.json'):
+    for name in ('visual-review.json', 'portable-verification.json',
+                 'portable-verification-final.json', 'candidate-export-review.json'):
         if (EV / name).exists():
             core[name] = read(EV / name)
+    core['单候选还原验证_实际原件'] = {name: read(EV / name) for name in
+        ('healthy-candidate-export.json', 'positive-candidate-export.json', 'waiting-candidate-export.json')
+        if (EV / name).exists()}
+    if (EV / 'github-ci-initial.json').exists():
+        core['GitHub_CPU_CI_首次现场验证'] = read(EV / 'github-ci-initial.json')
     target = ROOT / 'reports/2026-10-30-Zhinengti-RSI-项目全量汇总.json'
     save(target, core)
     save(BASE / '本轮汇总.json', {'阶段状态': status, '完整统计': r, '诊断解释': diagnostic,
         '全部文字材料': documents, '全项目单文件入口': target.relative_to(ROOT).as_posix()})
-    human = '# Zhinengti-RSI当前进度与瓶颈：B4-A更新\n\n' + documents['阶段验收与导师汇报.md'] + '\n' + documents['运行与归因结果.md'] + '\n' + documents['B4-B下一阶段方案.md']
+    explanation = ('先用一个例子理解：系统像巡检班组，先按固定路线工作；发现线索后可以临时加查一次。'
+        'CVAE等工具负责估计没直接看到的状态，规则负责决定现在查还是保留机会，大模型的外层改进负责修改技能和流程。'
+        '本轮没有训练或修改这些模型，而是在旧考试记录里拆开看：系统看到了什么、为何这样决定、当时是否确有更好的合法选择。\n\n')
+    human = '# Zhinengti-RSI当前进度与瓶颈：B4-A更新\n\n' + explanation + documents['阶段验收与导师汇报.md'] + '\n' + documents['运行与归因结果.md'] + '\n' + documents['B4-B下一阶段方案.md']
     human = human.replace('(evidence/', '(../research/2026-10-29-m12c1b4a-information/evidence/')
     (ROOT / 'reports/2026-10-30-项目进度与瓶颈说明-新手版.md').write_text(human, encoding='utf-8', newline='\n')
     print(json.dumps({'consolidated_project_JSON': str(target), 'bytes': target.stat().st_size,

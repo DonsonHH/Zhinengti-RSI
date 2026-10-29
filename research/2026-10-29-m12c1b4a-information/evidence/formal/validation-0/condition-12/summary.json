@@ -1,0 +1,669 @@
+{
+  "condition": {
+    "phase": "validation",
+    "seed": 8600,
+    "scenario": "aux_feeder_loss+cdu_fouling",
+    "duration_s": 180,
+    "fault_start_s": 335,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned"
+  },
+  "source_cases": [
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--tour",
+      "source_sha256": "0ff2d74fb5eee5f33dfa123023704d3203d13334eab534d6198629199a0719ab",
+      "source_bytes": 148497,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--evidence",
+      "source_sha256": "7e967fe6311b3dc539a99e3ca1c04250b5deaedf392b14bc918dc086f26709da",
+      "source_bytes": 152311,
+      "common_prefix_until_s": 385.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--lookahead",
+      "source_sha256": "01ae751b2703e4ed82375147b6ffcf9da03d506a96a95853fe64a87fb911d886",
+      "source_bytes": 155449,
+      "common_prefix_until_s": 595.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--conservative",
+      "source_sha256": "65e585bea5642b3da172431390c034ea21c75adcbd6e542141f945d91f828674",
+      "source_bytes": 153717,
+      "common_prefix_until_s": 595.0,
+      "archived_public_SHA_frames_verified": 0
+    },
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--C0",
+      "source_sha256": "5343a4db669ea34fac287d879c3e9d712b17aa0353ecd5fd5db7ef393e425de4",
+      "source_bytes": 198762,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    },
+    {
+      "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--C1",
+      "source_sha256": "9d6eeea5025637381b82a1b5f1c478277948aafe20d10f7ccc6d6f7868ff63c7",
+      "source_bytes": 195705,
+      "common_prefix_until_s": 1800.0,
+      "archived_public_SHA_frames_verified": 359
+    }
+  ],
+  "common_Tour_history_frames": 359,
+  "original_public_SHA_frames_verified": 718,
+  "factorized_candidate_root_pairs": 1427284,
+  "positive_frontier_nonwinner_scores_checked": 245,
+  "error_statistics": {
+    "all_legal/thermal/0-30": {
+      "n": 9130,
+      "sum_error": 13.434310055205675,
+      "sum_absolute_error": 14.528856950050391,
+      "sum_squared_error": 6.202665394261084,
+      "predicted_positive": 52,
+      "reference_positive": 9,
+      "true_positive": 9,
+      "false_positive": 43,
+      "false_negative": 0
+    },
+    "all_legal/thermal/30-60": {
+      "n": 38968,
+      "sum_error": 78.00870119873476,
+      "sum_absolute_error": 92.24220645652181,
+      "sum_squared_error": 39.54823733955706,
+      "predicted_positive": 277,
+      "reference_positive": 89,
+      "true_positive": 30,
+      "false_positive": 247,
+      "false_negative": 59
+    },
+    "all_legal/thermal/60-120": {
+      "n": 76916,
+      "sum_error": 226.18922591830702,
+      "sum_absolute_error": 260.28348776569874,
+      "sum_squared_error": 112.39988283829825,
+      "predicted_positive": 858,
+      "reference_positive": 192,
+      "true_positive": 35,
+      "false_positive": 823,
+      "false_negative": 157
+    },
+    "all_legal/thermal/120-300": {
+      "n": 214250,
+      "sum_error": 1002.3533851700734,
+      "sum_absolute_error": 1128.2225956443149,
+      "sum_squared_error": 520.8641524267185,
+      "predicted_positive": 3878,
+      "reference_positive": 576,
+      "true_positive": 12,
+      "false_positive": 3866,
+      "false_negative": 564
+    },
+    "all_legal/thermal/300-600": {
+      "n": 303280,
+      "sum_error": 1581.3006998336962,
+      "sum_absolute_error": 1704.0765952019826,
+      "sum_squared_error": 796.7846885944996,
+      "predicted_positive": 5829,
+      "reference_positive": 525,
+      "true_positive": 2,
+      "false_positive": 5827,
+      "false_negative": 523
+    },
+    "all_legal/thermal/600-1800": {
+      "n": 538786,
+      "sum_error": 3318.883791894698,
+      "sum_absolute_error": 3318.883791894698,
+      "sum_squared_error": 1689.427077638919,
+      "predicted_positive": 11319,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 11319,
+      "false_negative": 0
+    },
+    "all_legal/cooling/30-60": {
+      "n": 650,
+      "sum_error": -1.6295135869415813,
+      "sum_absolute_error": 4.101234234372589,
+      "sum_squared_error": 2.816268480859613,
+      "predicted_positive": 2,
+      "reference_positive": 4,
+      "true_positive": 0,
+      "false_positive": 2,
+      "false_negative": 4
+    },
+    "all_legal/cooling/60-120": {
+      "n": 4878,
+      "sum_error": 0.7024115257783156,
+      "sum_absolute_error": 34.36944825762173,
+      "sum_squared_error": 23.312337460598723,
+      "predicted_positive": 28,
+      "reference_positive": 23,
+      "true_positive": 0,
+      "false_positive": 28,
+      "false_negative": 23
+    },
+    "all_legal/cooling/120-300": {
+      "n": 14010,
+      "sum_error": 34.99848901818525,
+      "sum_absolute_error": 140.49272465041577,
+      "sum_squared_error": 98.15165792535241,
+      "predicted_positive": 130,
+      "reference_positive": 72,
+      "true_positive": 0,
+      "false_positive": 130,
+      "false_negative": 72
+    },
+    "all_legal/cooling/300-600": {
+      "n": 19623,
+      "sum_error": 99.64878671261455,
+      "sum_absolute_error": 136.1161758315435,
+      "sum_squared_error": 92.67899325688114,
+      "predicted_positive": 176,
+      "reference_positive": 25,
+      "true_positive": 0,
+      "false_positive": 176,
+      "false_negative": 25
+    },
+    "all_legal/cooling/600-1800": {
+      "n": 32293,
+      "sum_error": 279.6564887299931,
+      "sum_absolute_error": 279.6564887299931,
+      "sum_squared_error": 189.4802985672712,
+      "predicted_positive": 415,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 415,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/0-30": {
+      "n": 9130,
+      "sum_error": -0.5541760850054934,
+      "sum_absolute_error": 1.0324497054793915,
+      "sum_squared_error": 0.10057708916854327,
+      "predicted_positive": 12,
+      "reference_positive": 9,
+      "true_positive": 9,
+      "false_positive": 3,
+      "false_negative": 0
+    },
+    "thermal_source/nominal/30-60": {
+      "n": 38968,
+      "sum_error": -7.527599621738308,
+      "sum_absolute_error": 10.699273002653623,
+      "sum_squared_error": 1.55580699819772,
+      "predicted_positive": 28,
+      "reference_positive": 89,
+      "true_positive": 14,
+      "false_positive": 14,
+      "false_negative": 75
+    },
+    "thermal_source/nominal/60-120": {
+      "n": 76916,
+      "sum_error": 7.431297777452684,
+      "sum_absolute_error": 50.405964254697224,
+      "sum_squared_error": 10.487657677987478,
+      "predicted_positive": 151,
+      "reference_positive": 192,
+      "true_positive": 1,
+      "false_positive": 150,
+      "false_negative": 191
+    },
+    "thermal_source/nominal/120-300": {
+      "n": 214250,
+      "sum_error": 21.626681964139404,
+      "sum_absolute_error": 150.62589877115067,
+      "sum_squared_error": 26.464591267415216,
+      "predicted_positive": 627,
+      "reference_positive": 576,
+      "true_positive": 0,
+      "false_positive": 627,
+      "false_negative": 576
+    },
+    "thermal_source/nominal/300-600": {
+      "n": 303280,
+      "sum_error": 88.9869752063093,
+      "sum_absolute_error": 212.3822635425644,
+      "sum_squared_error": 42.169966521994816,
+      "predicted_positive": 965,
+      "reference_positive": 525,
+      "true_positive": 0,
+      "false_positive": 965,
+      "false_negative": 525
+    },
+    "thermal_source/nominal/600-1800": {
+      "n": 538786,
+      "sum_error": 347.0683736053564,
+      "sum_absolute_error": 347.0683736053564,
+      "sum_squared_error": 72.190980494935,
+      "predicted_positive": 2357,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 2357,
+      "false_negative": 0
+    },
+    "thermal_source/measured_bounded_trend/0-30": {
+      "n": 8462,
+      "sum_error": 12.612429835740244,
+      "sum_absolute_error": 14.872463549041925,
+      "sum_squared_error": 6.341062813250831,
+      "predicted_positive": 43,
+      "reference_positive": 9,
+      "true_positive": 3,
+      "false_positive": 40,
+      "false_negative": 6
+    },
+    "thermal_source/measured_bounded_trend/30-60": {
+      "n": 37006,
+      "sum_error": 76.17952249795178,
+      "sum_absolute_error": 91.90579427302752,
+      "sum_squared_error": 39.61627127910602,
+      "predicted_positive": 253,
+      "reference_positive": 89,
+      "true_positive": 17,
+      "false_positive": 236,
+      "false_negative": 72
+    },
+    "thermal_source/measured_bounded_trend/60-120": {
+      "n": 74330,
+      "sum_error": 220.18314859594162,
+      "sum_absolute_error": 254.3024829017592,
+      "sum_squared_error": 111.27554342806795,
+      "predicted_positive": 812,
+      "reference_positive": 192,
+      "true_positive": 34,
+      "false_positive": 778,
+      "false_negative": 158
+    },
+    "thermal_source/measured_bounded_trend/120-300": {
+      "n": 202586,
+      "sum_error": 961.8602980654525,
+      "sum_absolute_error": 1087.7295085396938,
+      "sum_squared_error": 514.6370470004982,
+      "predicted_positive": 3513,
+      "reference_positive": 576,
+      "true_positive": 12,
+      "false_positive": 3501,
+      "false_negative": 564
+    },
+    "thermal_source/measured_bounded_trend/300-600": {
+      "n": 286278,
+      "sum_error": 1535.6053563424086,
+      "sum_absolute_error": 1640.979994412922,
+      "sum_squared_error": 786.7364536897257,
+      "predicted_positive": 5360,
+      "reference_positive": 441,
+      "true_positive": 2,
+      "false_positive": 5358,
+      "false_negative": 439
+    },
+    "thermal_source/measured_bounded_trend/600-1800": {
+      "n": 470564,
+      "sum_error": 3178.015055008446,
+      "sum_absolute_error": 3178.015055008446,
+      "sum_squared_error": 1667.355030231995,
+      "predicted_positive": 10071,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 10071,
+      "false_negative": 0
+    },
+    "selected_future/C0": {
+      "n": 234,
+      "sum_error": 68.837078512746,
+      "sum_absolute_error": 68.837078512746,
+      "sum_squared_error": 34.32456241854134,
+      "predicted_positive": 234,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 234,
+      "false_negative": 0
+    },
+    "selected_future/C1": {
+      "n": 234,
+      "sum_error": 68.837078512746,
+      "sum_absolute_error": 68.837078512746,
+      "sum_squared_error": 34.32456241854134,
+      "predicted_positive": 234,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 234,
+      "false_negative": 0
+    },
+    "all_legal/control/60-120": {
+      "n": 5612,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/120-300": {
+      "n": 15480,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/300-600": {
+      "n": 21640,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/control/600-1800": {
+      "n": 34024,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/60-120": {
+      "n": 4686,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/120-300": {
+      "n": 13336,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/300-600": {
+      "n": 18480,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/600-1800": {
+      "n": 27982,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "thermal_source/history_assimilated/0-30": {
+      "n": 8854,
+      "sum_error": -1.376056304470925,
+      "sum_absolute_error": 1.376056304470925,
+      "sum_squared_error": 0.23897450815829085,
+      "predicted_positive": 3,
+      "reference_positive": 9,
+      "true_positive": 3,
+      "false_positive": 0,
+      "false_negative": 6
+    },
+    "thermal_source/history_assimilated/30-60": {
+      "n": 38234,
+      "sum_error": -8.47850258331845,
+      "sum_absolute_error": 11.24113655836216,
+      "sum_squared_error": 1.7984386988345775,
+      "predicted_positive": 11,
+      "reference_positive": 89,
+      "true_positive": 1,
+      "false_positive": 10,
+      "false_negative": 88
+    },
+    "thermal_source/history_assimilated/60-120": {
+      "n": 75662,
+      "sum_error": -1.5271493248944523,
+      "sum_absolute_error": 41.472589610775955,
+      "sum_squared_error": 8.469549668102191,
+      "predicted_positive": 110,
+      "reference_positive": 192,
+      "true_positive": 0,
+      "false_positive": 110,
+      "false_negative": 192
+    },
+    "thermal_source/history_assimilated/120-300": {
+      "n": 210980,
+      "sum_error": -20.23594052283803,
+      "sum_absolute_error": 108.7632762841732,
+      "sum_squared_error": 19.518253339404705,
+      "predicted_positive": 284,
+      "reference_positive": 576,
+      "true_positive": 0,
+      "false_positive": 284,
+      "false_negative": 576
+    },
+    "thermal_source/history_assimilated/300-600": {
+      "n": 297550,
+      "sum_error": 36.20887560283705,
+      "sum_absolute_error": 141.6876060492295,
+      "sum_squared_error": 29.418351618782836,
+      "predicted_positive": 530,
+      "reference_positive": 445,
+      "true_positive": 0,
+      "false_positive": 530,
+      "false_negative": 445
+    },
+    "thermal_source/history_assimilated/600-1800": {
+      "n": 516614,
+      "sum_error": 194.10235428741316,
+      "sum_absolute_error": 194.10235428741316,
+      "sum_squared_error": 45.45448175907283,
+      "predicted_positive": 1180,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 1180,
+      "false_negative": 0
+    },
+    "thermal_source/cvae_raw/0-30": {
+      "n": 8854,
+      "sum_error": -1.5430713669895268,
+      "sum_absolute_error": 1.5430713669895268,
+      "sum_squared_error": 0.2894755778954877,
+      "predicted_positive": 0,
+      "reference_positive": 9,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 9
+    },
+    "thermal_source/cvae_raw/30-60": {
+      "n": 38234,
+      "sum_error": -9.615716131394072,
+      "sum_absolute_error": 10.123401983444856,
+      "sum_squared_error": 1.4889813390770246,
+      "predicted_positive": 7,
+      "reference_positive": 89,
+      "true_positive": 0,
+      "false_positive": 7,
+      "false_negative": 89
+    },
+    "thermal_source/cvae_raw/60-120": {
+      "n": 75662,
+      "sum_error": -20.810867240052012,
+      "sum_absolute_error": 22.188871695618403,
+      "sum_squared_error": 3.2439710911972943,
+      "predicted_positive": 19,
+      "reference_positive": 192,
+      "true_positive": 0,
+      "false_positive": 19,
+      "false_negative": 192
+    },
+    "thermal_source/cvae_raw/120-300": {
+      "n": 210980,
+      "sum_error": -63.52049997455053,
+      "sum_absolute_error": 65.4787168324607,
+      "sum_squared_error": 9.692462519861392,
+      "predicted_positive": 27,
+      "reference_positive": 576,
+      "true_positive": 0,
+      "false_positive": 27,
+      "false_negative": 576
+    },
+    "thermal_source/cvae_raw/300-600": {
+      "n": 297550,
+      "sum_error": -50.45477888896772,
+      "sum_absolute_error": 55.02395155742473,
+      "sum_squared_error": 8.22078894672917,
+      "predicted_positive": 63,
+      "reference_positive": 445,
+      "true_positive": 0,
+      "false_positive": 63,
+      "false_negative": 445
+    },
+    "thermal_source/cvae_raw/600-1800": {
+      "n": 516614,
+      "sum_error": 4.496646118164063,
+      "sum_absolute_error": 4.496646118164063,
+      "sum_squared_error": 0.1630631154193543,
+      "predicted_positive": 124,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 124,
+      "false_negative": 0
+    },
+    "all_legal/control/30-60": {
+      "n": 1056,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "all_legal/electrical/30-60": {
+      "n": 612,
+      "sum_error": 0.0,
+      "sum_absolute_error": 0.0,
+      "sum_squared_error": 0.0,
+      "predicted_positive": 0,
+      "reference_positive": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0
+    }
+  },
+  "actual_revised_decision_layers": {
+    "C0": {
+      "no_net_helpful_current_action": 357,
+      "helpful_current_lacks_positive_available_unalarmed_signal": 2
+    },
+    "C1": {
+      "no_net_helpful_current_action": 357,
+      "helpful_current_lacks_positive_available_unalarmed_signal": 2
+    }
+  },
+  "all_candidate_winner_source_counts": {
+    "nominal": 565191,
+    "unavailable": 31592,
+    "remote_flow": 38906,
+    "measured_bounded_trend": 511887,
+    "qualified_sensor_error": 77812,
+    "qualified_contact": 65096,
+    "qualified_flow": 32548,
+    "history_assimilated": 104252
+  },
+  "thermal_fusion_unique_and_tied_positive_counts": {
+    "thermal_candidate_root_pairs": 1181330,
+    "positive_fused_pairs": 22213,
+    "positive_fused_reference_zero": 22125,
+    "positive_tied_source_pairs": 385,
+    "history_assimilated:positive_unique_win": 0,
+    "history_assimilated:positive_tie_member": 385,
+    "nominal:positive_unique_win": 1776,
+    "nominal:positive_tie_member": 385,
+    "measured_bounded_trend:positive_unique_win": 20052,
+    "measured_bounded_trend:positive_tie_member": 0
+  },
+  "thermal_raw_and_assimilated_cache_provenance": {
+    "thermal_task_frames": 45952,
+    "nominal_available": 45952,
+    "history_available": 45312,
+    "raw_prior_available": 45312,
+    "history_value_equals_raw_prior": 30844,
+    "history_value_differs_from_raw_prior": 14468,
+    "history_stamp_matches_measurement": 14468,
+    "history_stamp_matches_prior": 33788
+  },
+  "history_channel_can_uniquely_increase_positive_signal_roots": 0,
+  "history_channel_endpoint_no_positive_influence_proofs": 359,
+  "oracle": {
+    "hard_legal_dispatch_candidates": 8282,
+    "net_helpful_candidates": 2,
+    "net_harmful_candidates": 458,
+    "minimum_missed_delta": 0,
+    "executed_original_branches_verified": 3,
+    "executed_branch_checks": [
+      {
+        "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--evidence",
+        "geometry_index": 1989,
+        "action": [
+          385,
+          6,
+          64
+        ],
+        "missed_delta": 2,
+        "weighted_wait_delta_s": 15.548862347013893
+      },
+      {
+        "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--lookahead",
+        "geometry_index": 2934,
+        "action": [
+          595,
+          6,
+          70
+        ],
+        "missed_delta": 0,
+        "weighted_wait_delta_s": 0.0
+      },
+      {
+        "case": "validation--8600--aux_feeder_loss+cdu_fouling--180--335--0.2--conservative",
+        "geometry_index": 2934,
+        "action": [
+          595,
+          6,
+          70
+        ],
+        "missed_delta": 0,
+        "weighted_wait_delta_s": 0.0
+      }
+    ]
+  },
+  "geometry_numeric_digest": "6d1f83b6000ed5330d3bb0ec9c05d1019c424e71fc83ac2b24c8e7024caca9aa",
+  "wall_s": 24.615011861547828,
+  "scope": "All hard-legal current/future Tour dispatch candidates; exact factorized public states and geometry. Evaluator-only one-CHECK-then-Tour analytic outcomes, validated against every saved executed detour. No new policy selection or trained predictors."
+}
