@@ -28,6 +28,8 @@ def write(path, value):
 
 class Coverage:
     def __init__(self):
+        self.kind = None
+        self.horizon_s = None
         self.counts = Counter()
         self.seeds = set()
         self.numeric = set()
@@ -39,13 +41,19 @@ class Coverage:
         self.channel = defaultdict(Counter)
 
     def add(self, row, condition, event_index):
+        if self.kind is None:
+            self.kind, self.horizon_s = row['kind'], row['horizon_s']
+        if (self.kind, self.horizon_s) != (row['kind'], row['horizon_s']):
+            raise ValueError('Coverage cell mixes professional tasks or horizons')
         spec, digest = condition['condition'], condition['numeric_process_fingerprint']
         self.seeds.add(spec['seed']); self.numeric.add(digest)
         if row['B_action_positive']:
             self.positive_seeds.add(spec['seed']); self.positive_numeric.add(digest)
-        for key, value in row.items():
-            if isinstance(value, int):
-                self.counts[key] += value
+        for key in ('total_samples', 'A_valid', 'A_positive', 'A_negative',
+                    'B_reference_valid', 'B_reference_positive', 'B_action_valid',
+                    'B_action_positive', 'B_action_negative', 'B_action_invalid',
+                    'physical_event_count', 'retained_event_count'):
+            self.counts[key] += row.get(key, 0)
         def event_key(i):
             item = event_index[i]
             return (digest, item['task'], item['first_tick'], item['last_exclusive_tick'])
@@ -57,7 +65,11 @@ class Coverage:
 
     def value(self):
         c = dict(self.counts)
-        c.update({'seed_groups': sorted(self.seeds), 'numeric_processes': len(self.numeric),
+        c.update({'kind': self.kind, 'horizon_s': self.horizon_s,
+            'B_reference_negative': c['B_reference_valid'] - c['B_reference_positive'],
+            'B_reference_invalid': c['total_samples'] - c['B_reference_valid'],
+            'B_reference_positive_fraction': c['B_reference_positive'] / c['B_reference_valid'] if c['B_reference_valid'] else None,
+            'seed_groups': sorted(self.seeds), 'numeric_processes': len(self.numeric),
             'B_positive_seed_groups': sorted(self.positive_seeds), 'B_positive_numeric_processes': len(self.positive_numeric),
             'distinct_physical_events': len(self.physical_events), 'distinct_B_positive_events': len(self.events),
             'distinct_B_positive_retained_events': len(self.retained_events),

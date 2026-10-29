@@ -1,0 +1,42 @@
+{
+  "old_condition": "8500 coupled180 start705 low0.2",
+  "full_independent_sample": {
+    "frames": 359,
+    "available_readings": 485450,
+    "A_B_physical_cells": 63360,
+    "public_base_values_verified": 5370640,
+    "public_action_values_verified": 2464176,
+    "samples": 189552,
+    "events": 8
+  },
+  "negative_controls": [
+    {
+      "matrix": "base",
+      "modified_index": [
+        0,
+        0,
+        20
+      ],
+      "rejected": true,
+      "reason": "Public task/topology/telemetry/clock feature column differs"
+    },
+    {
+      "matrix": "completion",
+      "modified_index": [
+        0,
+        0,
+        0,
+        7
+      ],
+      "rejected": true,
+      "reason": "All public completion/ETA/slack/inflight/qualification features"
+    },
+    {
+      "matrix": "C-sidecar action join",
+      "rejected": true,
+      "reason": "C-sidecar join IDs and legal multiplicity"
+    }
+  ],
+  "original_sample_restored": true,
+  "scope": "Local copied frozen data, no old research file altered; verifier covers all feature columns and sidecar joins."
+}

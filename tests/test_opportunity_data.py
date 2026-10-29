@@ -1,6 +1,7 @@
 import copy
 import gzip
 import json
+import importlib.util
 from pathlib import Path
 import unittest
 
@@ -94,6 +95,30 @@ class OpportunityDataTests(unittest.TestCase):
         self.assertFalse(any('oracle' in name or 'anomaly' in name for name in FEATURE_NAMES + ACTION_FEATURE_NAMES))
         with self.assertRaises(ValueError):
             action_features(base, 735., 60., rows, np.ones(176, dtype=np.int16))
+
+    def test_coverage_cell_keeps_horizon_metadata_and_deduplicates_events(self):
+        root = Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location('opportunity_report_for_test', root / 'scripts/report_opportunity_data.py')
+        report = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(report)
+        cell = report.Coverage()
+        row = {'kind': 'thermal', 'horizon_s': 30, 'total_samples': 10,
+            'A_valid': 10, 'A_positive': 2, 'A_negative': 8,
+            'B_reference_valid': 10, 'B_reference_positive': 2,
+            'B_action_valid': 5, 'B_action_positive': 1, 'B_action_negative': 4,
+            'B_action_invalid': 5, 'physical_event_count': 1, 'retained_event_count': 1,
+            'B_positive_event_ids': [1], 'B_positive_retained_event_ids': [1],
+            'availability_in_valid_B_samples': {}}
+        condition = {'condition': {'seed': 8500}, 'numeric_process_fingerprint': 'same-physical-trace'}
+        events = {1: {'task': 0, 'kind': 'thermal', 'first_tick': 2, 'last_exclusive_tick': 5}}
+        cell.add(row, condition, events)
+        cell.add(row, condition, events)
+        values = cell.value()
+        self.assertEqual(values['horizon_s'], 30)
+        self.assertEqual(values['total_samples'], 20)
+        self.assertEqual(values['B_reference_negative'], 16)
+        self.assertEqual(values['distinct_B_positive_retained_events'], 1)
+        self.assertEqual(values['numeric_processes'], 1)
 
 
 if __name__ == '__main__':

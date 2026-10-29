@@ -19,6 +19,7 @@ cd "$source_root"
 python scripts/verify_opportunity_data.py --data-root "$run_root/full" \
     --b4a-root /share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b4a/formal \
     --source-root /share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b32 \
-    --output "$run_root/independent-verification.json"
-python scripts/report_opportunity_data.py --root "$run_root/full" --output "$run_root/report"
-cp "$run_root/independent-verification.json" "$run_root/report/independent-verification.json"
+    --output "$run_root/independent-verification-v2.json"
+python scripts/report_opportunity_data.py --root "$run_root/full" --output "$run_root/report-v2"
+cp "$run_root/independent-verification-v2.json" "$run_root/report-v2/independent-verification.json"
+python scripts/package_opportunity_data.py --root "$run_root" --report-folder report-v2 --output "$run_root/public-evidence"

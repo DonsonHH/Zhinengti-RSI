@@ -1,0 +1,836 @@
+{
+  "condition": {
+    "phase": "validation",
+    "seed": 8600,
+    "scenario": "healthy",
+    "duration_s": 900,
+    "fault_start_s": 335,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned"
+  },
+  "numeric_process_fingerprint": "65ccc32c048b8323f6792d965aefbfd7c02b9355c726bfe7019f026a13eab592",
+  "event_definitions": [],
+  "strata": [
+    {
+      "kind": "thermal",
+      "horizon_s": 30,
+      "total_samples": 45952,
+      "A_valid": 45312,
+      "A_positive": 0,
+      "A_negative": 45312,
+      "B_reference_valid": 45312,
+      "B_reference_positive": 0,
+      "B_action_valid": 6198,
+      "B_action_positive": 0,
+      "B_action_negative": 6198,
+      "B_action_invalid": 39754,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 5672,
+          "B_valid_missing": 526
+        },
+        "temperature_measurement": {
+          "B_valid_available": 5792,
+          "B_valid_missing": 406
+        },
+        "flow": {
+          "B_valid_available": 5859,
+          "B_valid_missing": 339
+        },
+        "contact": {
+          "B_valid_available": 5626,
+          "B_valid_missing": 572
+        },
+        "sensor_error": {
+          "B_valid_available": 5675,
+          "B_valid_missing": 523
+        },
+        "nominal": {
+          "B_valid_available": 6198,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 6050,
+          "B_valid_missing": 148
+        },
+        "history_assimilated": {
+          "B_valid_available": 6050,
+          "B_valid_missing": 148
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "thermal",
+      "horizon_s": 60,
+      "total_samples": 45952,
+      "A_valid": 44544,
+      "A_positive": 0,
+      "A_negative": 44544,
+      "B_reference_valid": 44544,
+      "B_reference_positive": 0,
+      "B_action_valid": 7644,
+      "B_action_positive": 0,
+      "B_action_negative": 7644,
+      "B_action_invalid": 38308,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 7192,
+          "B_valid_missing": 452
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7294,
+          "B_valid_missing": 350
+        },
+        "flow": {
+          "B_valid_available": 7305,
+          "B_valid_missing": 339
+        },
+        "contact": {
+          "B_valid_available": 6954,
+          "B_valid_missing": 690
+        },
+        "sensor_error": {
+          "B_valid_available": 7044,
+          "B_valid_missing": 600
+        },
+        "nominal": {
+          "B_valid_available": 7644,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7524,
+          "B_valid_missing": 120
+        },
+        "history_assimilated": {
+          "B_valid_available": 7524,
+          "B_valid_missing": 120
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "thermal",
+      "horizon_s": 120,
+      "total_samples": 45952,
+      "A_valid": 43008,
+      "A_positive": 0,
+      "A_negative": 43008,
+      "B_reference_valid": 43008,
+      "B_reference_positive": 0,
+      "B_action_valid": 7342,
+      "B_action_positive": 0,
+      "B_action_negative": 7342,
+      "B_action_invalid": 38610,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 6996,
+          "B_valid_missing": 346
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7072,
+          "B_valid_missing": 270
+        },
+        "flow": {
+          "B_valid_available": 7033,
+          "B_valid_missing": 309
+        },
+        "contact": {
+          "B_valid_available": 6691,
+          "B_valid_missing": 651
+        },
+        "sensor_error": {
+          "B_valid_available": 6805,
+          "B_valid_missing": 537
+        },
+        "nominal": {
+          "B_valid_available": 7342,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7244,
+          "B_valid_missing": 98
+        },
+        "history_assimilated": {
+          "B_valid_available": 7244,
+          "B_valid_missing": 98
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "electrical",
+      "horizon_s": 30,
+      "total_samples": 5744,
+      "A_valid": 5664,
+      "A_positive": 0,
+      "A_negative": 5664,
+      "B_reference_valid": 5664,
+      "B_reference_positive": 0,
+      "B_action_valid": 92,
+      "B_action_positive": 0,
+      "B_action_negative": 92,
+      "B_action_invalid": 5652,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 78,
+          "B_valid_missing": 14
+        },
+        "temperature_measurement": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 85,
+          "B_valid_missing": 7
+        },
+        "contact": {
+          "B_valid_available": 78,
+          "B_valid_missing": 14
+        },
+        "sensor_error": {
+          "B_valid_available": 84,
+          "B_valid_missing": 8
+        },
+        "nominal": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "electrical",
+      "horizon_s": 60,
+      "total_samples": 5744,
+      "A_valid": 5568,
+      "A_positive": 0,
+      "A_negative": 5568,
+      "B_reference_valid": 5568,
+      "B_reference_positive": 0,
+      "B_action_valid": 410,
+      "B_action_positive": 0,
+      "B_action_negative": 410,
+      "B_action_invalid": 5334,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "temperature_measurement": {
+          "B_valid_available": 410,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 387,
+          "B_valid_missing": 23
+        },
+        "contact": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "sensor_error": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "nominal": {
+          "B_valid_available": 410,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 398,
+          "B_valid_missing": 12
+        },
+        "history_assimilated": {
+          "B_valid_available": 398,
+          "B_valid_missing": 12
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "electrical",
+      "horizon_s": 120,
+      "total_samples": 5744,
+      "A_valid": 5376,
+      "A_positive": 0,
+      "A_negative": 5376,
+      "B_reference_valid": 5376,
+      "B_reference_positive": 0,
+      "B_action_valid": 518,
+      "B_action_positive": 0,
+      "B_action_negative": 518,
+      "B_action_invalid": 5226,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 478,
+          "B_valid_missing": 40
+        },
+        "temperature_measurement": {
+          "B_valid_available": 518,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 498,
+          "B_valid_missing": 20
+        },
+        "contact": {
+          "B_valid_available": 478,
+          "B_valid_missing": 40
+        },
+        "sensor_error": {
+          "B_valid_available": 486,
+          "B_valid_missing": 32
+        },
+        "nominal": {
+          "B_valid_available": 518,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 510,
+          "B_valid_missing": 8
+        },
+        "history_assimilated": {
+          "B_valid_available": 510,
+          "B_valid_missing": 8
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "cooling",
+      "horizon_s": 30,
+      "total_samples": 5744,
+      "A_valid": 5664,
+      "A_positive": 0,
+      "A_negative": 5664,
+      "B_reference_valid": 5664,
+      "B_reference_positive": 0,
+      "B_action_valid": 92,
+      "B_action_positive": 0,
+      "B_action_negative": 92,
+      "B_action_invalid": 5652,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 78,
+          "B_valid_missing": 14
+        },
+        "temperature_measurement": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 85,
+          "B_valid_missing": 7
+        },
+        "contact": {
+          "B_valid_available": 78,
+          "B_valid_missing": 14
+        },
+        "sensor_error": {
+          "B_valid_available": 84,
+          "B_valid_missing": 8
+        },
+        "nominal": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 92,
+          "B_valid_missing": 0
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "cooling",
+      "horizon_s": 60,
+      "total_samples": 5744,
+      "A_valid": 5568,
+      "A_positive": 0,
+      "A_negative": 5568,
+      "B_reference_valid": 5568,
+      "B_reference_positive": 0,
+      "B_action_valid": 410,
+      "B_action_positive": 0,
+      "B_action_negative": 410,
+      "B_action_invalid": 5334,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "temperature_measurement": {
+          "B_valid_available": 410,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 387,
+          "B_valid_missing": 23
+        },
+        "contact": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "sensor_error": {
+          "B_valid_available": 364,
+          "B_valid_missing": 46
+        },
+        "nominal": {
+          "B_valid_available": 410,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 398,
+          "B_valid_missing": 12
+        },
+        "history_assimilated": {
+          "B_valid_available": 398,
+          "B_valid_missing": 12
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "cooling",
+      "horizon_s": 120,
+      "total_samples": 5744,
+      "A_valid": 5376,
+      "A_positive": 0,
+      "A_negative": 5376,
+      "B_reference_valid": 5376,
+      "B_reference_positive": 0,
+      "B_action_valid": 518,
+      "B_action_positive": 0,
+      "B_action_negative": 518,
+      "B_action_invalid": 5226,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 478,
+          "B_valid_missing": 40
+        },
+        "temperature_measurement": {
+          "B_valid_available": 518,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 498,
+          "B_valid_missing": 20
+        },
+        "contact": {
+          "B_valid_available": 478,
+          "B_valid_missing": 40
+        },
+        "sensor_error": {
+          "B_valid_available": 486,
+          "B_valid_missing": 32
+        },
+        "nominal": {
+          "B_valid_available": 518,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 510,
+          "B_valid_missing": 8
+        },
+        "history_assimilated": {
+          "B_valid_available": 510,
+          "B_valid_missing": 8
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "control",
+      "horizon_s": 30,
+      "total_samples": 5744,
+      "A_valid": 5664,
+      "A_positive": 0,
+      "A_negative": 5664,
+      "B_reference_valid": 5664,
+      "B_reference_positive": 0,
+      "B_action_valid": 106,
+      "B_action_positive": 0,
+      "B_action_negative": 106,
+      "B_action_invalid": 5638,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 90,
+          "B_valid_missing": 16
+        },
+        "temperature_measurement": {
+          "B_valid_available": 106,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 98,
+          "B_valid_missing": 8
+        },
+        "contact": {
+          "B_valid_available": 90,
+          "B_valid_missing": 16
+        },
+        "sensor_error": {
+          "B_valid_available": 90,
+          "B_valid_missing": 16
+        },
+        "nominal": {
+          "B_valid_available": 106,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 102,
+          "B_valid_missing": 4
+        },
+        "history_assimilated": {
+          "B_valid_available": 102,
+          "B_valid_missing": 4
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "control",
+      "horizon_s": 60,
+      "total_samples": 5744,
+      "A_valid": 5568,
+      "A_positive": 0,
+      "A_negative": 5568,
+      "B_reference_valid": 5568,
+      "B_reference_positive": 0,
+      "B_action_valid": 466,
+      "B_action_positive": 0,
+      "B_action_negative": 466,
+      "B_action_invalid": 5278,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 426,
+          "B_valid_missing": 40
+        },
+        "temperature_measurement": {
+          "B_valid_available": 466,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 446,
+          "B_valid_missing": 20
+        },
+        "contact": {
+          "B_valid_available": 426,
+          "B_valid_missing": 40
+        },
+        "sensor_error": {
+          "B_valid_available": 426,
+          "B_valid_missing": 40
+        },
+        "nominal": {
+          "B_valid_available": 466,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 458,
+          "B_valid_missing": 8
+        },
+        "history_assimilated": {
+          "B_valid_available": 458,
+          "B_valid_missing": 8
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    },
+    {
+      "kind": "control",
+      "horizon_s": 120,
+      "total_samples": 5744,
+      "A_valid": 5376,
+      "A_positive": 0,
+      "A_negative": 5376,
+      "B_reference_valid": 5376,
+      "B_reference_positive": 0,
+      "B_action_valid": 594,
+      "B_action_positive": 0,
+      "B_action_negative": 594,
+      "B_action_invalid": 5150,
+      "A_positive_event_ids": [],
+      "B_positive_event_ids": [],
+      "B_positive_retained_event_ids": [],
+      "availability_in_valid_B_samples": {
+        "qualified": {
+          "B_valid_available": 560,
+          "B_valid_missing": 34
+        },
+        "temperature_measurement": {
+          "B_valid_available": 594,
+          "B_valid_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 572,
+          "B_valid_missing": 22
+        },
+        "contact": {
+          "B_valid_available": 550,
+          "B_valid_missing": 44
+        },
+        "sensor_error": {
+          "B_valid_available": 560,
+          "B_valid_missing": 34
+        },
+        "nominal": {
+          "B_valid_available": 594,
+          "B_valid_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 586,
+          "B_valid_missing": 8
+        },
+        "history_assimilated": {
+          "B_valid_available": 586,
+          "B_valid_missing": 8
+        }
+      },
+      "physical_event_count": 0,
+      "retained_event_count": 0
+    }
+  ],
+  "feature_audit": {
+    "frames": 359,
+    "root_task_features": 63184,
+    "timestamp_available_readings_checked": 485450,
+    "future_timestamp_violations": 0,
+    "closed_feature_schema_passed": true,
+    "channel_availability_by_kind": {
+      "thermal": {
+        "qualified": {
+          "available": 43416,
+          "total": 45952,
+          "missing": 2536
+        },
+        "temperature_measurement": {
+          "available": 44002,
+          "total": 45952,
+          "missing": 1950
+        },
+        "flow": {
+          "available": 44032,
+          "total": 45952,
+          "missing": 1920
+        },
+        "contact": {
+          "available": 42112,
+          "total": 45952,
+          "missing": 3840
+        },
+        "sensor_error": {
+          "available": 42688,
+          "total": 45952,
+          "missing": 3264
+        },
+        "nominal": {
+          "available": 45952,
+          "total": 45952,
+          "missing": 0
+        },
+        "cvae_raw": {
+          "available": 45312,
+          "total": 45952,
+          "missing": 640
+        },
+        "history_assimilated": {
+          "available": 45312,
+          "total": 45952,
+          "missing": 640
+        }
+      },
+      "electrical": {
+        "qualified": {
+          "available": 5264,
+          "total": 5744,
+          "missing": 480
+        },
+        "temperature_measurement": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "flow": {
+          "available": 5504,
+          "total": 5744,
+          "missing": 240
+        },
+        "contact": {
+          "available": 5264,
+          "total": 5744,
+          "missing": 480
+        },
+        "sensor_error": {
+          "available": 5336,
+          "total": 5744,
+          "missing": 408
+        },
+        "nominal": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "cvae_raw": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        },
+        "history_assimilated": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        }
+      },
+      "cooling": {
+        "qualified": {
+          "available": 5264,
+          "total": 5744,
+          "missing": 480
+        },
+        "temperature_measurement": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "flow": {
+          "available": 5504,
+          "total": 5744,
+          "missing": 240
+        },
+        "contact": {
+          "available": 5264,
+          "total": 5744,
+          "missing": 480
+        },
+        "sensor_error": {
+          "available": 5336,
+          "total": 5744,
+          "missing": 408
+        },
+        "nominal": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "cvae_raw": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        },
+        "history_assimilated": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        }
+      },
+      "control": {
+        "qualified": {
+          "available": 5336,
+          "total": 5744,
+          "missing": 408
+        },
+        "temperature_measurement": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "flow": {
+          "available": 5504,
+          "total": 5744,
+          "missing": 240
+        },
+        "contact": {
+          "available": 5264,
+          "total": 5744,
+          "missing": 480
+        },
+        "sensor_error": {
+          "available": 5336,
+          "total": 5744,
+          "missing": 408
+        },
+        "nominal": {
+          "available": 5744,
+          "total": 5744,
+          "missing": 0
+        },
+        "cvae_raw": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        },
+        "history_assimilated": {
+          "available": 5664,
+          "total": 5744,
+          "missing": 80
+        }
+      }
+    },
+    "missing_padding_has_explicit_availability_masks": true,
+    "feature_files_have_no_seed_scenario_event_truth_or_oracle_fields": true
+  },
+  "dataset_samples": 189552,
+  "public_feature_bytes": 3734690,
+  "whole_condition_bytes": 3804546,
+  "wall_s": 6.337645350024104
+}

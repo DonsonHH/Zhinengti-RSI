@@ -1,5 +1,5 @@
 {
-  "protocol": "C1-B4-B1-minimal-v2",
+  "protocol": "C1-B4-B1-minimal-v3",
   "status": "frozen_design_before_new_process_generation_or_predictor_training",
   "baseline": "d67aa4c85ec061d8d927a13025a789bc68a13d08",
   "B0_scope": "Only old-data audit and interfaces. This protocol does not authorize opening training before its data gate passes.",
@@ -256,7 +256,7 @@
       "oracle"
     ],
     "topology": "Public same-Pod/CDU/power branch identifiers only; no hidden fault topology.",
-    "preprocessing": "Fit value scaling and any imputation on development only; missing masks retained; no class oversampling, class balancing or seed/scenario feature. Process/noise conditions uniformly weighted within seed group."
+    "preprocessing": "Deduplicate exact numeric process fingerprints within each seed; average both observation-noise versions per process; equal process weight within seed and equal seed weight. Row weights within each process/noise condition sum equally; rescale all development weights to total Nvalid rows. Fit scaling/imputation on development only, missing masks retained. No class oversampling or balancing; no hidden scenario/seed/event features."
   },
   "candidate_budget": {
     "empirical_frequency": {
@@ -271,9 +271,10 @@
       ],
       "initialization": "zero",
       "max_iterations": 300,
-      "optimizer": "deterministic full-batch or fixed-order streaming convex solver",
+      "optimizer": "PyTorch2.6 CPU float64 LBFGS lr=1,history_size=10,max_iter=300,max_eval=400,tolerance_grad=1e-6,tolerance_change=1e-9,line_search_fn=strong_wolfe; torch threads1, zero initialization.",
       "max_fits": 72,
-      "heads": "2labels x4professions x3horizons; choose using validation_selection process-mean Brier, tie strongerL2"
+      "heads": "A_physical and B_action x4professions x3horizons;72total fits including3lambda candidates.",
+      "objective": "Weighted mean binary log loss plus lambda/2 times slope L2 norm; intercept unpenalized. Record evaluations and convergence; failed fit consumes its slot, no rescue hyperparameters."
     },
     "bounded_trend": {
       "definition": "Original bounded history extrapolation at horizon for thermal; original professional held evidence for other roles. Calibrate scalar, no new coefficients."
@@ -298,7 +299,7 @@
     "extra_hyperparameters_or_models": 0
   },
   "calibration": {
-    "method": "Fixed ridge Platt/logistic sigmoid on validation_calibration only; score scaling constants development only; ridge=1, max_iterations=200.",
+    "method": "Fixed monotone sigmoid Platt calibration p=sigmoid(a*s+b), a=softplus(z)>=0; weighted mean binary logloss +a^2/2. Intercept unpenalized, starta=1,b=0, CPUfloat64LBFGS max_iter200,max_eval300,history10,tolgrad1e-6,tolchange1e-9,strong_wolfe,threads1. Fit only validation_calibration; failed convergence recorded, no search.",
     "applies": "Each scalar family, label, profession and horizon that is available. Logistic heads receive same fixed sigmoid calibration; empirical frequency constant remains its development probability.",
     "degenerate_cell": "No independent positives/negatives means data gate fails, not a manufactured calibration curve.",
     "threshold": "Validation_selection negatives only: smallest score threshold with empirical FPR<=0.01, strict score>threshold and ties conservatively rejected. Threshold fixed before test; no test tuning."
@@ -355,11 +356,19 @@
   "review_changes": [
     "Known in-flight qualified protected-Tour completion is legal if root public pending task/time match; optional CHECK still cannot start before root.",
     "Freeze comparator and predictive head selection on validation_selection, not final test.",
-    "Use explicit simultaneous paired-bootstrap lower bounds for prespecified limited-domain multiplicity, replacing undefined Holm procedure."
+    "Use explicit simultaneous paired-bootstrap lower bounds for prespecified limited-domain multiplicity, replacing undefined Holm procedure.",
+    "Train heads are explicitly A_physical and B_action; conditional B_reference remains separately audited on all endpoints and evaluated on the same valid completion subset, not an unbudgeted third family of fits.",
+    "Freeze deterministic float64 CPU LBFGS, weighting/deduplication and convergence reporting; controlled-design probabilities are not site-calibrated failure rates."
   ],
   "selection_rule": {
     "fixed_nonlearned_comparator": "For each profession/horizon/label, choose among empirical_frequency,bounded_trend,nominal_physical using validation_selection seed-macro Brier, then negative eligible-event recall at fixedFPR, then alphabetical family name. Freeze identity/calibrator/threshold SHA before final test. Never choose best baseline from test.",
     "predictive_family": "For each head choose among predeclared available families by same validation_selection ranking; logistic regularization choices count within72-fit budget. Thermal-only frozenCVAE not assigned to unrelated professions. Full-domain macro gives equal weight to12profession/horizon cells.",
     "test_comparison": "Only validation-selected predictive and validation-selected comparator, both frozen; all other families descriptive. No post-test head/subgroup replacement."
-  }
+  },
+  "learned_label_heads": [
+    "A_physical",
+    "B_action"
+  ],
+  "B_reference_secondary_scope": "All-endpoint reference prevalence and event coverage reported descriptively. On valid B_action samples B_reference equals B_action; predictor/calibration metrics use that same subset. No separate third label-head fit or unsupported nonlegal-endpoint generalization.",
+  "probability_scope": "Probabilities and calibration refer only to the frozen controlled synthetic fixture mixture and observation design. Real facility prevalence and consequences are uncalibrated; no site failure-rate interpretation."
 }

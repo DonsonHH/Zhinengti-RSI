@@ -1,0 +1,44 @@
+{
+  "stage": "C1-B4-B0",
+  "engineering_preparation": "complete",
+  "B4B1_predictor_training_gate": "NO-GO",
+  "B3_2_formal_policy_verdict": "NO-GO unchanged",
+  "reasons": [
+    "All available old8500-8703data have already been used/read and remain diagnostic only.",
+    "Electrical task has zero physical and confirmable positive events at all three horizons.",
+    "Cooling30s has14 distinct retained positive events despite28 positive noise-repeated sample rows.",
+    "Fresh64seed-group development/calibration/selection/final manifest is frozen but not generated, so independent split coverage is unverified."
+  ],
+  "fresh_generation": 0,
+  "new_predictor_training": 0,
+  "PPO_updates": 0,
+  "LLM_calls": 0,
+  "permitted_next_step": "Execute only the frozen new-process generation/coverage phase after explicit continuation; fitting starts only after empirical coverage and causality gates pass.",
+  "old_diagnostic_totals": {
+    "A_valid": 23384064,
+    "A_positive": 32196,
+    "A_negative": 23351868,
+    "B_reference_valid": 23384064,
+    "B_reference_positive": 32106,
+    "B_action_valid": 3121920,
+    "B_action_positive": 3306,
+    "B_action_negative": 3118614,
+    "B_action_invalid": 21140736
+  },
+  "old_conditions": 128,
+  "old_seed_groups": [
+    8500,
+    8501,
+    8600,
+    8601,
+    8700,
+    8701,
+    8702,
+    8703
+  ],
+  "old_named_processes": 64,
+  "old_numeric_processes": 56,
+  "protocol": "C1-B4-B1-minimal-v3",
+  "protocol_sha256": "d049c0d39663ce35824bfe61059a00c7c48f030d543386511e7bda8c65c77e5e",
+  "fresh_manifest_sha256": "2580b46da58320e4349e149ab13b08f926d64b49ced57808cfc138cdc274b269"
+}
