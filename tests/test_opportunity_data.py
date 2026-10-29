@@ -67,6 +67,21 @@ class OpportunityDataTests(unittest.TestCase):
         a, reference, b = sample_targets(labels, 1795, 30, selected)
         self.assertTrue((a == -1).all() and (reference == -1).all() and (b == -1).all())
 
+    def test_publicly_known_inflight_Tour_completion_is_a_valid_B_opportunity(self):
+        bundle = copy.deepcopy(self.bundle)
+        agent = bundle['agents'][12]
+        agent.update(busy_target=132, busy_finish_s=780.)
+        rows = [{'task': 132, 'agent': 12, 'dispatch_s': 745., 'finish_s': 780.,
+                 'optional': False, 'tour_finish_s': 780., 'return_slack_s': 0.},
+                {'task': 148, 'agent': 14, 'dispatch_s': 745., 'finish_s': 780.,
+                 'optional': True, 'tour_finish_s': 990., 'return_slack_s': 225.}]
+        selected, count = legal_completions(750., 30., rows, bundle)
+        self.assertIsNotNone(selected[132])
+        self.assertIsNone(selected[148])
+        values = action_features(FeatureHistory().append(bundle), 750., 30., selected, count)
+        self.assertEqual(values[132, ACTION_FEATURE_NAMES.index('inflight_protected_Tour')], 1.)
+        self.assertEqual(values[132, ACTION_FEATURE_NAMES.index('planned_dispatch_offset_s')], -5.)
+
     def test_closed_action_features_do_not_accept_evaluator_labels(self):
         base = FeatureHistory().append(self.bundle)
         rows = [None] * 176

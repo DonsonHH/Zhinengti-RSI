@@ -31,7 +31,7 @@ FEATURE_NAMES = BASE_FEATURES + tuple(f'{channel}.{name}' for channel in CHANNEL
 ACTION_FEATURE_NAMES = ('horizon_s', 'completion_time_s', 'legal_completion_available',
     'optional_check', 'planned_dispatch_offset_s', 'planned_service_and_travel_s',
     'planned_Tour_target_offset_s', 'complete_return_slack_s', 'legal_completion_count',
-    'qualified_executor_available', 'return_slack_available', 'bounded_trend_at_completion_c')
+    'qualified_executor_available', 'return_slack_available', 'inflight_protected_Tour', 'bounded_trend_at_completion_c')
 
 
 def need(value, message):
@@ -147,15 +147,21 @@ def completion_lookup(geometry, tour_record=None):
     return rows
 
 
-def legal_completions(root, horizon, rows):
+def legal_completions(root, horizon, rows, public_bundle=None):
     """Choose the earliest publicly planned legal dispatch, no outcome ranking."""
     finish = root + horizon
     selected = [None] * 176
     count = np.zeros(176, dtype=np.int16)
     if finish > 1800:
         return selected, count
+    pending = {}
+    if public_bundle is not None:
+        need(public_bundle['time_s'] == root, 'Future or mismatched public schedule root')
+        pending = {a['agent']: (a['busy_target'], a['busy_finish_s']) for a in public_bundle['agents']}
     for row in rows:
-        if row['finish_s'] == finish and row['dispatch_s'] >= root:
+        inflight = (not row['optional'] and row['dispatch_s'] < root and
+                    pending.get(row['agent']) == (row['task'], row['finish_s']))
+        if row['finish_s'] == finish and (row['dispatch_s'] >= root or inflight):
             j = row['task']
             count[j] += 1
             if selected[j] is None:
@@ -181,12 +187,13 @@ def action_features(public_array, root, horizon, selected, count):
     for j, row in enumerate(selected):
         if row is None:
             continue
-        need(row['finish_s'] == root + horizon and row['dispatch_s'] >= root,
+        need(row['finish_s'] == root + horizon and (row['dispatch_s'] >= root or not row['optional']),
              'Future completion inconsistent with public prediction root')
         out[j, 2:10] = (1., float(row['optional']), row['dispatch_s'] - root,
             row['finish_s'] - row['dispatch_s'], row['tour_finish_s'] - root,
             row['return_slack_s'], count[j], 1.)
         out[j, 10] = float(row['optional'])
+        out[j, 11] = float(not row['optional'] and row['dispatch_s'] < root)
     return out
 
 

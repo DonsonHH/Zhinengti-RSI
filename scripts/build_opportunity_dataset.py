@@ -12,6 +12,7 @@ import time
 import numpy as np
 
 from patrol_rsi.causal_observation import CHANNELS
+from patrol_rsi.m9 import arrays_digest
 from patrol_rsi.opportunity_data import (FEATURE_NAMES, HORIZONS, KINDS, FeatureHistory,
     action_features, completion_lookup, contract, evaluator_labels, legal_completions, sample_targets)
 
@@ -47,12 +48,16 @@ def one_condition(source_root, b4a_root, folder, index, output, expected):
     case_index = read(source / 'case-index.json')
     tour_row = next(v for v in case_index if v['alias'] == 'tour' and v['specification'] == spec)
     tour_path = source / tour_row['path']
-    need(sha(tour_path) == tour_row['sha256'], 'Original Tour record changed')
+    anchored_tour = next(v for v in summary['source_cases'] if v['case'] == tour_row['case'])
+    need(sha(tour_path) == tour_row['sha256'] == anchored_tour['source_sha256'],
+         'Original Tour record differs from independently hash-bound B4-A source')
     record = json.loads(gzip.decompress(tour_path.read_bytes()))
     process = read(source / 'process-index.json')[tour_row['process_key']]
     need(sha(source / process['path']) == process['sha256'], 'Original physical arrays changed')
     with np.load(source / process['path']) as arrays:
         truth = {k: arrays[k].copy() for k in arrays.files}
+    need(arrays_digest(truth) == record['trace_fingerprint'] == process['numeric_digest'],
+         'Original physical numeric fingerprint differs from anchored Tour record')
     geometry_path = b4a_root / folder / 'geometry.npz'
     need(sha(geometry_path) == expected[str(geometry_path)], 'Original legal geometry changed')
     with np.load(geometry_path) as arrays:
@@ -75,7 +80,7 @@ def one_condition(source_root, b4a_root, folder, index, output, expected):
             endpoint = []
             aa, rr, bb, ci, counts = [], [], [], [], []
             for horizon in HORIZONS:
-                selected, count = legal_completions(root, horizon, completions)
+                selected, count = legal_completions(root, horizon, completions, bundle)
                 endpoint.append(action_features(base, root, horizon, selected, count))
                 a, reference, b = sample_targets(labels, root, horizon, selected)
                 aa.append(a); rr.append(reference); bb.append(b)
