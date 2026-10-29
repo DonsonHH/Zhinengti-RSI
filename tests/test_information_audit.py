@@ -2,6 +2,9 @@ import copy
 import gzip
 import json
 from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 
 import numpy as np
@@ -101,6 +104,25 @@ class InformationAuditTests(unittest.TestCase):
         result = analytic_continuations(tour, geometry, np.ones((360, 2)), measurement_positive=actual_positive)
         self.assertEqual(result['missed_delta'].tolist(), [1])
         self.assertEqual(result['helpful'].tolist(), [False])
+
+    def test_candidate_restore_preserves_undefined_event_wait_as_null(self):
+        root = Path(__file__).resolve().parents[1]
+        geometry = pack_geometry(current_legal_geometry(self.bundle))
+        with tempfile.TemporaryDirectory() as directory:
+            folder = Path(directory)
+            condition = folder / 'condition-00'
+            condition.mkdir()
+            with gzip.open(condition / 'public-states.jsonl.gz', 'wt', encoding='utf-8') as stream:
+                stream.write(json.dumps(self.bundle) + '\n')
+            np.savez_compressed(folder / 'geometry.npz', **{k: v[:1] for k, v in geometry.items()})
+            np.savez_compressed(condition / 'analytic-continuations.npz', weighted_wait_delta_s=np.asarray([np.nan]))
+            output = folder / 'candidate.json'
+            result = subprocess.run([sys.executable, str(root / 'scripts/inspect_information_candidate.py'),
+                '--folder', str(folder), '--condition', '0', '--root-time', '750',
+                '--candidate-index', '0', '--output', str(output)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            saved = json.loads(output.read_bytes())
+            self.assertIsNone(saved['offline_evaluator_only']['weighted_wait_delta_s'])
 
 
 if __name__ == '__main__':

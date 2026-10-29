@@ -4,12 +4,24 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+import math
 from pathlib import Path
 
 import numpy as np
 
 from patrol_rsi.information_audit import scalar_candidate
 from patrol_rsi.public_stopping import StopConfig
+
+
+def json_finite(value):
+    """Undefined event waiting remains null, never a fabricated zero."""
+    if isinstance(value, np.generic):
+        value = value.item()
+    if isinstance(value, dict):
+        return {key: json_finite(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [json_finite(item) for item in value]
+    return None if isinstance(value, float) and not math.isfinite(value) else value
 
 
 def main():
@@ -57,9 +69,9 @@ def main():
     # Evaluator outcomes are deliberately a sibling, not part of public input.
     result = {'public_candidate': public, 'offline_evaluator_only': effect,
               'scope': 'Old Tour-continuation one-check candidate. Labels use future truth and cannot be deployed or fed into a model as public history.'}
+    serialized = json.dumps(json_finite(result), ensure_ascii=False, indent=2, allow_nan=False) + '\n'
     with args.output.open('x', encoding='utf-8', newline='\n') as stream:
-        json.dump(result, stream, ensure_ascii=False, indent=2, allow_nan=False)
-        stream.write('\n')
+        stream.write(serialized)
     print(json.dumps({'output': str(args.output), 'geometry_index': i, 'target': score['task'],
                       'root_time': args.root_time, 'dispatch_time': score['dispatch_time_s']}))
 
