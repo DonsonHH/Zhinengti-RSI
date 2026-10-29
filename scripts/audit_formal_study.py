@@ -13,11 +13,13 @@ import torch
 from patrol_rsi.formal_run import execute
 from patrol_rsi.formal_study import conditions,load_protocol,method_definitions
 from patrol_rsi.formal_study import verify_case_index,verified_selection
+from patrol_rsi.formal_study import persisted_view
 from patrol_rsi.m11 import frozen_predictor
 from patrol_rsi.m12 import actor_scorer,load_actors
 from patrol_rsi.public_stopping import StopConfig
 from audit_causal_preflight import audit_routes
 from audit_m111 import independent_certificates
+from formal_recovery import recovery_proof,saved_environment,recovered_queue
 
 
 def read(path):
@@ -35,6 +37,7 @@ def main():
     p=argparse.ArgumentParser()
     for name in ('folder','protocol','output','actors','estimator-weights','estimator-manifest'):
         p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--recover-old-job')
     args=p.parse_args();torch.set_num_threads(1);folder=args.folder
     frozen=read(folder/'phase-frozen.json');protocol=load_protocol(args.protocol)
     if frozen['phase']!='development':
@@ -50,16 +53,27 @@ def main():
     if [(r['alias'],r['specification']) for r in rows]!=expected:raise RuntimeError('Missing, reordered or extra case')
     predictor=frozen_predictor(args.estimator_weights,args.estimator_manifest)
     actors,_=load_actors(args.actors);score=actor_scorer(actors[0])
-    visits=certificates=decisions=0;seen=set()
+    recovery=recovery_proof(folder,rows,args.recover_old_job) if args.recover_old_job else None
+    prefix=recovery['recovered_weight_replays'] if recovery else 0
+    visits=certificates=decisions=new_replays=0;seen=set()
+    checkpoints=args.output.with_suffix('.progress.jsonl')
+    if checkpoints.exists():raise RuntimeError('Do not overwrite an earlier audit checkpoint')
     for i,row in enumerate(rows):
         path=folder/row['path'];raw=path.read_bytes()
         if len(raw)!=row['bytes'] or hashlib.sha256(raw).hexdigest()!=row['sha256']:raise RuntimeError('Original case bytes')
         old=json.loads(gzip.decompress(raw));d=methods[row['alias']]
-        fresh,env=execute(row['specification'],predictor,score,d['method'],StopConfig(**d['config']) if d['config'] else StopConfig())
-        verify_case_index(row,old,fresh)
-        for key in ('action_log','inspection_events','selected_certificates','assignments','anomaly_intervals',
-            'stopping_decisions','causal_snapshot_stamps','source_attribution','selected_public_snapshots','public_queue_comparison','initial_certificates'):
-            if not same(old[key],fresh[key]):raise RuntimeError('Fresh policy/weight replay differs: '+key)
+        if i<prefix:
+            env=saved_environment(old,folder,processes[row['process_key']])
+            if row['metrics']!=old['metrics']:raise RuntimeError('Recovered index differs from original')
+            if not same(old['public_queue_comparison'],persisted_view(recovered_queue(old,env))):raise RuntimeError('Recovered public queue is not JSON-equivalent')
+            if not same(old['initial_certificates'],persisted_view(env.initial_certificates)):raise RuntimeError('Recovered original initial certificate differs')
+        else:
+            fresh,env=execute(row['specification'],predictor,score,d['method'],StopConfig(**d['config']) if d['config'] else StopConfig());new_replays+=1
+            if fresh['trace_fingerprint']!=old['trace_fingerprint']:raise RuntimeError('Fresh physical fingerprint differs')
+            verify_case_index(row,old,fresh)
+            for key in ('action_log','inspection_events','selected_certificates','assignments','anomaly_intervals',
+                'stopping_decisions','causal_snapshot_stamps','source_attribution','selected_public_snapshots','public_queue_comparison','initial_certificates'):
+                if not same(old[key],persisted_view(fresh[key])):raise RuntimeError('Fresh policy/weight replay differs: '+key)
         if len(old['action_log'])!=359 or len(old['stopping_decisions'])!=359:raise RuntimeError('Partial episode')
         visits+=audit_routes(old,env)
         cert_record=dict(old,metrics=dict(old['metrics'],
@@ -86,16 +100,25 @@ def main():
         if row['process_key'] not in seen:
             source=processes[row['process_key']];pfile=folder/source['path']
             if hashlib.sha256(pfile.read_bytes()).hexdigest()!=source['sha256']:raise RuntimeError('Physical archive bytes')
-            with np.load(pfile) as data:
-                if set(data.files)!=set(env.trace.arrays) or any(not np.array_equal(data[k],env.trace.arrays[k]) for k in data.files):
-                    raise RuntimeError('Saved physical arrays differ from fresh process')
+            if i<prefix:
+                if old['trace_fingerprint']!=source['numeric_digest']:raise RuntimeError('Recovered physical identity differs')
+            else:
+                with np.load(pfile) as data:
+                    if set(data.files)!=set(env.trace.arrays) or any(not np.array_equal(data[k],env.trace.arrays[k]) for k in data.files):
+                        raise RuntimeError('Saved physical arrays differ from fresh process')
             seen.add(row['process_key'])
         if (i+1)%8==0:print('FORMAL_AUDIT',frozen['phase'],frozen['chunk'],i+1,flush=True)
+        with checkpoints.open('a',encoding='utf-8') as f:
+            f.write(json.dumps({'case':row['case'],'original_sha256':row['sha256'],'new_weight_replay':i>=prefix,
+                'recovered_from':recovery['old_job'] if i<prefix else None,'routes_certificates_metrics_complete':True})+'\n')
     result={'phase':frozen['phase'],'chunk':frozen['chunk'],'actual_cases_replayed':len(rows),
         'independent_route_measurements':visits,'independent_return_certificates':certificates,
         'consistent_stopping_frames':decisions,'physical_arrays_verified':len(seen),'exact_violations':0,
         'case_index_sha256':hashlib.sha256((folder/'case-index.json').read_bytes()).hexdigest(),
         'global_optional_budget':1,'all_statistics_and_original_cases_checked':True}
+    result.update(new_weight_replays_this_attempt=new_replays,recovered_prior_weight_replays=prefix,recovery=recovery)
+    result['physical_array_check_scope']=('All arrays compared to fresh process in the prior fully-audited prefix; recovered hashes and identities checked again.'
+        if recovery else 'Every physical array compared with a fresh process in this attempt.')
     with args.output.open('x',encoding='utf-8') as f:json.dump(result,f,indent=2);f.write('\n')
     print('FORMAL_AUDIT_DONE',len(rows),flush=True)
 

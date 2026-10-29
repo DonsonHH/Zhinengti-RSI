@@ -63,5 +63,10 @@ class FormalStudyTests(unittest.TestCase):
             p.write_text(json.dumps({'phase':'validation','selected':'C0'}))
             with self.assertRaises(ValueError):verified_selection(p,{},root,'validation')
 
+    def test_public_queue_integer_task_keys_match_saved_json_without_changing_values(self):
+        from patrol_rsi.formal_study import persisted_view
+        memory={'first_tour_completion_s':{32:510.,34:530.},'selected':None}
+        self.assertEqual(persisted_view(memory),{'first_tour_completion_s':{'32':510.,'34':530.},'selected':None})
+
 
 if __name__=='__main__':unittest.main()

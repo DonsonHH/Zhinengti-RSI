@@ -12,6 +12,11 @@ PROTOCOL_SHA256='5018ee1cd7165cf9e501ebb4218fa9be825d1d76398313305cab08834cb5608
 CONTROLS=('tour','evidence','lookahead','conservative')
 
 
+def persisted_view(value):
+    """Use the same finite JSON representation as original trajectory files."""
+    return json.loads(json.dumps(value,allow_nan=False))
+
+
 def verify_case_index(row,record,fresh):
     """Bind saved timing exactly; compare every deterministic replay metric."""
     if row['metrics']!=record['metrics']:raise ValueError('Index metrics differ from hashed original case')

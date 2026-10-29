@@ -17,7 +17,7 @@ selection=()
 if [[ "$phase" == validation ]]; then selection=(--selection "$run/development-selection.json"); fi
 if [[ "$phase" == test ]]; then selection=(--selection "$run/validation-selection.json"); fi
 python -m patrol_rsi.formal_run --phase "$phase" --chunk "$SLURM_ARRAY_TASK_ID" \
-  --output "$run/$phase-$SLURM_ARRAY_TASK_ID" --gate "$run/gate/full-tests.json" \
+  --output "$run/$phase-$SLURM_ARRAY_TASK_ID" --gate "$run/code-reviewed-gate/gate/full-tests.json" \
   --protocol research/2026-10-29-m12c1b31-interface/正式实验冻结方案.json \
   --actors /share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2 \
   --estimator-weights /share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt \

@@ -13,9 +13,11 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export PYTHONPATH="$PWD/src"
 phase="$1"
 run="$2"
+recovery=()
+if [[ "${3:-}" == recover-development ]]; then recovery=(--recover-old-job 130534); fi
 python scripts/audit_formal_study.py --folder "$run/$phase-$SLURM_ARRAY_TASK_ID" \
   --output "$run/$phase-$SLURM_ARRAY_TASK_ID-audit.json" \
   --protocol research/2026-10-29-m12c1b31-interface/正式实验冻结方案.json \
   --actors /share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2 \
   --estimator-weights /share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt \
-  --estimator-manifest research/2026-10-28-m111-coverage/frozen_estimator.json
+  --estimator-manifest research/2026-10-28-m111-coverage/frozen_estimator.json "${recovery[@]}"

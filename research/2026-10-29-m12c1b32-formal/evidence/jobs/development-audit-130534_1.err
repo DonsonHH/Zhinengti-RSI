@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b32/code-v3/scripts/audit_formal_study.py", line 103, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261029-m12c1b32/code-v3/scripts/audit_formal_study.py", line 62, in main
+    if not same(old[key],fresh[key]):raise RuntimeError('Fresh policy/weight replay differs: '+key)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Fresh policy/weight replay differs: public_queue_comparison
