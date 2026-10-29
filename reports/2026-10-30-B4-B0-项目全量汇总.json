@@ -1,7 +1,7 @@
 {
   "文档信息": {
     "标题": "Zhinengti-RSI B4-B0全量汇总：未来有效检查机会的数据与协议",
-    "北京时间": "2026-10-30T02:29:52.386169+08:00",
+    "北京时间": "2026-10-30T02:36:14.414689+08:00",
     "最新阶段": "C1-B4-B0",
     "阶段状态": "数据与协议准备完成，B4-B1训练启动NO-GO",
     "阅读入口": "先读当前结论与通俗说明；完整分层、协议及历史均内嵌。大规模特征矩阵以路径/SHA引用。"
@@ -346546,5 +346546,96 @@
     "physical_positive_no_legal_B_is_missing": true,
     "public_loader_reads_no_label_or_identity_file": true,
     "new_model_fit": 0
+  },
+  "github-ci-initial.json": {
+    "head_sha": "55b794a12926fe4e6953d6a7ecfa98d95a8e13a4",
+    "run_id": 40931961175,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/DonsonHH/Zhinengti-RSI/actions/runs/40931961175",
+    "jobs": [
+      {
+        "id": 123652432812,
+        "name": "numpy-contracts",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/DonsonHH/Zhinengti-RSI/actions/runs/40931961175/job/123652432812",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-29T18:33:43Z",
+            "completed_at": "2026-10-29T18:33:43Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-29T18:33:43Z",
+            "completed_at": "2026-10-29T18:33:53Z"
+          },
+          {
+            "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-29T18:33:53Z",
+            "completed_at": "2026-10-29T18:33:53Z"
+          },
+          {
+            "name": "Install CPU dependency",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-29T18:33:53Z",
+            "completed_at": "2026-10-29T18:33:58Z"
+          },
+          {
+            "name": "Check formal-study and information-audit contracts",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-29T18:33:58Z",
+            "completed_at": "2026-10-29T18:33:59Z"
+          },
+          {
+            "name": "Compile package and scripts",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-29T18:33:59Z",
+            "completed_at": "2026-10-29T18:33:59Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-29T18:33:59Z",
+            "completed_at": "2026-10-29T18:33:59Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-10-29T18:33:59Z",
+            "completed_at": "2026-10-29T18:33:59Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-29T18:33:59Z",
+            "completed_at": "2026-10-29T18:33:59Z"
+          }
+        ]
+      }
+    ],
+    "scope": "CPU contract tests only; complete real Torch gate is separate Slurm evidence."
   }
 }
