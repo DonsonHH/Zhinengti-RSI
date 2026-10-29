@@ -1,0 +1,69 @@
+{
+  "configurations": {
+    "tour": {
+      "method": "tour"
+    },
+    "cue_immediate": {
+      "method": "cue"
+    },
+    "evidence_now": {
+      "method": "evidence"
+    },
+    "lookahead": {
+      "method": "lookahead"
+    },
+    "lookahead_permuted": {
+      "method": "lookahead",
+      "signal_mode": "permuted"
+    },
+    "lookahead_masked": {
+      "method": "lookahead",
+      "signal_mode": "masked"
+    },
+    "lookahead_conservative": {
+      "method": "lookahead",
+      "conservative": true
+    },
+    "blind_0": {
+      "method": "blind",
+      "blind_seed": 0
+    },
+    "blind_1": {
+      "method": "blind",
+      "blind_seed": 1
+    },
+    "blind_2": {
+      "method": "blind",
+      "blind_seed": 2
+    }
+  },
+  "conditions": [
+    {
+      "phase": "smoke",
+      "seed": 8399,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 335,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "smoke",
+      "seed": 8399,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 335,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    }
+  ],
+  "frozen_at_unix": 1793249008.3534687,
+  "chunk": 0,
+  "smoke": true
+}

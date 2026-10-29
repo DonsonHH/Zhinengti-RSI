@@ -1,0 +1,72 @@
+{
+  "stage": "C1-B2 frozen timing confirmation, information and blind controls",
+  "physical_seeds": [
+    8300,
+    8301
+  ],
+  "fault_start_grid_s": [
+    150,
+    335,
+    520,
+    705
+  ],
+  "noise_c": [
+    0.2,
+    1.0
+  ],
+  "physical_configurations": 64,
+  "observation_conditions": 128,
+  "public_control_groups": {
+    "tour": {
+      "method": "tour"
+    },
+    "cue_immediate": {
+      "method": "cue"
+    },
+    "evidence_now": {
+      "method": "evidence"
+    },
+    "lookahead": {
+      "method": "lookahead"
+    },
+    "lookahead_permuted": {
+      "method": "lookahead",
+      "signal_mode": "permuted"
+    },
+    "lookahead_masked": {
+      "method": "lookahead",
+      "signal_mode": "masked"
+    },
+    "lookahead_conservative": {
+      "method": "lookahead",
+      "conservative": true
+    },
+    "blind_0": {
+      "method": "blind",
+      "blind_seed": 0
+    },
+    "blind_1": {
+      "method": "blind",
+      "blind_seed": 1
+    },
+    "blind_2": {
+      "method": "blind",
+      "blind_seed": 2
+    }
+  },
+  "formal_rollouts": 1280,
+  "chunks": 8,
+  "cases_per_chunk": 160,
+  "blind_trigger_s": {
+    "0": 275,
+    "1": 675,
+    "2": 870
+  },
+  "one_global_optional_check": true,
+  "new_neural_training": false,
+  "LLM_calls": 0,
+  "improver_updated": false,
+  "selection": "No hyperparameter selection; all ten frozen controls reported.",
+  "independence": "Two physical seeds shared across scenarios/phases; noise/control repetitions dependent.",
+  "scope": "Controlled same-layout confirmation, not field or new learning/RSI evidence"
+}

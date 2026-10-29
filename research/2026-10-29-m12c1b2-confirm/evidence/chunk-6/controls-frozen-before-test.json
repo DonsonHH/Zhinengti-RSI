@@ -1,0 +1,237 @@
+{
+  "configurations": {
+    "tour": {
+      "method": "tour"
+    },
+    "cue_immediate": {
+      "method": "cue"
+    },
+    "evidence_now": {
+      "method": "evidence"
+    },
+    "lookahead": {
+      "method": "lookahead"
+    },
+    "lookahead_permuted": {
+      "method": "lookahead",
+      "signal_mode": "permuted"
+    },
+    "lookahead_masked": {
+      "method": "lookahead",
+      "signal_mode": "masked"
+    },
+    "lookahead_conservative": {
+      "method": "lookahead",
+      "conservative": true
+    },
+    "blind_0": {
+      "method": "blind",
+      "blind_seed": 0
+    },
+    "blind_1": {
+      "method": "blind",
+      "blind_seed": 1
+    },
+    "blind_2": {
+      "method": "blind",
+      "blind_seed": 2
+    }
+  },
+  "conditions": [
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 60,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 60,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "coldplate_fouling",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "it_feeder_loss",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "it_feeder_loss",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 0.2,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    },
+    {
+      "phase": "test",
+      "seed": 8300,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 705,
+      "noise_c": 1.0,
+      "estimator": "history",
+      "control": "feedback",
+      "resources": "provisioned",
+      "variant": "open"
+    }
+  ],
+  "frozen_at_unix": 1793249795.8963306,
+  "chunk": 6,
+  "smoke": false
+}
