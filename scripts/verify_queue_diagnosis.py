@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import sys
@@ -13,6 +13,11 @@ import tempfile
 
 def read(path):
     return json.loads(path.read_bytes())
+
+
+def source_basename(value):
+    """Read recorded Windows or POSIX paths on either execution host."""
+    return PurePosixPath(value.replace('\\', '/')).name
 
 
 def main():
@@ -37,6 +42,13 @@ def main():
         for name in ('public-queue-diagnostics.json', 'offline-queue-review.json'):
             if read(output / name) != read(final / name):
                 raise RuntimeError('Recomputed diagnostic differs: ' + name)
+        def portable_inputs(value):
+            for row in value['cases']:
+                for field in ('source', 'baseline_source'):
+                    row[field]['path'] = source_basename(row[field]['path'])
+            return value
+        if portable_inputs(read(output / 'diagnostic-inputs.json')) != portable_inputs(read(final / 'diagnostic-inputs.json')):
+            raise RuntimeError('Public states or original source fingerprints differ')
         summary = read(output / 'execution-summary.json')
         saved = read(final / 'execution-summary.json')
         if {k:v for k,v in summary.items() if k != 'seconds'} != {k:v for k,v in saved.items() if k != 'seconds'}:
@@ -56,6 +68,8 @@ def main():
     inspect(public)
     offline = read(final / 'offline-queue-review.json')
     original_inputs = read(final / 'diagnostic-inputs.json')['cases']
+    if not len(original_inputs) == len(public['cases']) == len(offline['cases']) == 7:
+        raise RuntimeError('Every original public state and offline outcome must be present')
     for inputs, before, after in zip(original_inputs, public['cases'], offline['cases']):
         if not inputs['case_alias'] == before['case_alias'] == after['case_alias']:
             raise RuntimeError('Public/offline aliases do not match')
@@ -63,7 +77,7 @@ def main():
             # Saved paths can be repository-relative or from the generating
             # machine; use the original basename and public fixture folders.
             source = inputs[key]
-            basename = Path(source['path']).name
+            basename = source_basename(source['path'])
             paths = list((root / 'research/2026-10-29-m12c1b2-confirm/evidence').glob('*/' + basename))
             if len(paths) != 1 or hashlib.sha256(paths[0].read_bytes()).hexdigest() != source['sha256']:
                 raise RuntimeError('Original development source no longer matches')

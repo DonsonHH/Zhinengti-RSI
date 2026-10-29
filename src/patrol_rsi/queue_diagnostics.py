@@ -173,6 +173,8 @@ def diagnose_queue(plan: ReturnPlan, state: QueueState, target: int, *, horizon_
     """
     if type(state) is not QueueState:
         raise TypeError('An explicit public QueueState is required')
+    if not math.isfinite(plan.period) or plan.period <= 0:
+        raise ValueError('Queue plans must make positive finite progress')
     if not math.isfinite(state.time_s) or state.time_s < 5 or state.time_s % 5:
         raise ValueError('Dispatch time must lie on the existing 5s grid')
     if horizon_s != 1800. or state.time_s >= horizon_s:
@@ -225,6 +227,8 @@ def diagnose_queue(plan: ReturnPlan, state: QueueState, target: int, *, horizon_
     certificate = plan.check(state.time_s, state.position_m, state.last_checks_s, state.cursor, target)
     baseline = plan.tour[state.cursor]
     base_certificate = plan.check(state.time_s, state.position_m, state.last_checks_s, state.cursor, baseline)
+    if state.time_s + plan.travel_service(state.position_m, baseline) > horizon_s:
+        return {'legal': False, 'reason': 'baseline_finishes_after_mission'}
     if not certificate['ok'] or not base_certificate['ok']:
         return {'legal': False, 'reason': 'whole_return_plan_infeasible',
             'detour_certificate': certificate, 'tour_certificate': base_certificate}

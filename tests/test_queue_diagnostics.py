@@ -1,4 +1,5 @@
 import gzip
+import importlib.util
 import json
 from dataclasses import asdict, replace
 from pathlib import Path
@@ -169,6 +170,27 @@ class QueueDiagnosticsTests(unittest.TestCase):
         self.assertEqual(len(row['delayed_normal_visits']), 9)
         cost = next(r for r in collateral_proxy(plan, state, diagnostic)['task_costs'] if r['task'] == 110)
         self.assertGreater(cost['estimated_loss_increment'], cost['first_round_loss_increment'])
+
+    def test_mission_tail_keeps_the_original_baseline_can_finish_gate(self):
+        plan, state = public_example()
+        tail = replace(state, time_s=1790., position_m=plan.tasks[108].position_m,
+            last_checks_s=tuple(1700. for _ in plan.tasks), evidence=())
+        self.assertEqual(diagnose_queue(plan, tail, 108)['reason'], 'baseline_finishes_after_mission')
+
+    def test_verifier_accepts_recorded_windows_and_posix_source_paths(self):
+        spec = importlib.util.spec_from_file_location('queue_verify', ROOT / 'scripts/verify_queue_diagnosis.py')
+        module = importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        for value in (r'research\demo\case.json.gz', '/tmp/research/demo/case.json.gz'):
+            self.assertEqual(module.source_basename(value), 'case.json.gz')
+
+    def test_zero_duration_custom_plan_is_rejected_before_projection(self):
+        plan, state = public_example()
+        task = replace(plan.tasks[0], service_s=0.)
+        empty = ReturnPlan(plan.graph, (task, replace(task, task_id='thermal:other')), (0,1), (300.,300.))
+        tiny = replace(state, time_s=5., cursor=0, position_m=task.position_m,
+            last_checks_s=(-1.,-1.), task_weights=(1.,1.), evidence=())
+        with self.assertRaises(ValueError):
+            diagnose_queue(empty, tiny, 1)
 
 
 if __name__ == '__main__':

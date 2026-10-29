@@ -1,0 +1,91 @@
+{
+  "tests_discovered": 202,
+  "tests_executed_without_skip": 182,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_test_set_and_training_seed_ranges_are_disjoint (test_active_inspection.ConfirmationMetricTests.test_test_set_and_training_seed_ranges_are_disjoint)",
+      "reason": "PyTorch required by runner"
+    },
+    {
+      "test": "test_masked_actions_and_cpu_update_execute (test_active_inspection.TaskPolicyTests.test_masked_actions_and_cpu_update_execute)",
+      "reason": "PyTorch required"
+    },
+    {
+      "test": "test_advantage_does_not_leak_across_episode_boundary (test_dispatch.DispatchNeuralTests.test_advantage_does_not_leak_across_episode_boundary)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_joint_behavior_replay_and_gradient (test_dispatch.DispatchNeuralTests.test_joint_behavior_replay_and_gradient)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_inference_never_calls_target_posterior (test_estimation.ConditionalInferenceTests.test_inference_never_calls_target_posterior)",
+      "reason": "PyTorch required"
+    },
+    {
+      "test": "test_same_capacity_and_paired_initialization_for_history_ablation (test_estimation.ConditionalInferenceTests.test_same_capacity_and_paired_initialization_for_history_ablation)",
+      "reason": "PyTorch required"
+    },
+    {
+      "test": "test_training_loss_updates_prior_and_decoder (test_estimation.ConditionalInferenceTests.test_training_loss_updates_prior_and_decoder)",
+      "reason": "PyTorch required"
+    },
+    {
+      "test": "test_only_evidence_representation_changes_and_no_hidden_scores (test_event_evidence.EventPromptTests.test_only_evidence_representation_changes_and_no_hidden_scores)",
+      "reason": "Prompt integration requires neural runtime"
+    },
+    {
+      "test": "test_prompt_excludes_hidden_record_and_parser_does_not_repair (test_facility_workflow.FacilityProposalTests.test_prompt_excludes_hidden_record_and_parser_does_not_repair)",
+      "reason": "Full integration schema test requires the neural runtime"
+    },
+    {
+      "test": "test_paired_meta_arms_and_transfer_restart_from_same_task_program (test_improver_task.MetaResetTests.test_paired_meta_arms_and_transfer_restart_from_same_task_program)",
+      "reason": "Protocol integration requires neural runtime"
+    },
+    {
+      "test": "test_model_freeze_roundtrip_and_paired_initialization (test_inspection_value.ValueSkillTests.test_model_freeze_roundtrip_and_paired_initialization)",
+      "reason": "Training verified on scheduled torch runtime"
+    },
+    {
+      "test": "test_same_architecture_can_update_from_eight_channel_replay (test_m5.M5NeuralTests.test_same_architecture_can_update_from_eight_channel_replay)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_prior_prediction_cannot_invoke_ground_truth_posterior (test_neural.NeuralTests.test_prior_prediction_cannot_invoke_ground_truth_posterior)",
+      "reason": "Neural tests require the cluster PyTorch module"
+    },
+    {
+      "test": "test_replay_drives_shared_dueling_double_q_parameter_update (test_neural.NeuralTests.test_replay_drives_shared_dueling_double_q_parameter_update)",
+      "reason": "Neural tests require the cluster PyTorch module"
+    },
+    {
+      "test": "test_vae_can_learn_spatial_reconstruction_instead_of_constant_output (test_neural.NeuralTests.test_vae_can_learn_spatial_reconstruction_instead_of_constant_output)",
+      "reason": "Neural tests require the cluster PyTorch module"
+    },
+    {
+      "test": "test_vae_loss_has_real_gradient_and_requires_staged_perceptual_model (test_neural.NeuralTests.test_vae_loss_has_real_gradient_and_requires_staged_perceptual_model)",
+      "reason": "Neural tests require the cluster PyTorch module"
+    },
+    {
+      "test": "test_conditional_collection_replay_probability_and_gradients_both_modes (test_relations.RelationNetworkTests.test_conditional_collection_replay_probability_and_gradients_both_modes)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_local_actor_ignores_relations_while_critic_can_use_them (test_relations.RelationNetworkTests.test_local_actor_ignores_relations_while_critic_can_use_them)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_matched_parameters_initialization_and_common_critic (test_relations.RelationNetworkTests.test_matched_parameters_initialization_and_common_critic)",
+      "reason": "Cluster PyTorch required"
+    },
+    {
+      "test": "test_target_permutation_equivariance_and_team_slot_invariance (test_relations.RelationNetworkTests.test_target_permutation_equivariance_and_team_slot_invariance)",
+      "reason": "Cluster PyTorch required"
+    }
+  ],
+  "seconds": 22.931794299998728,
+  "successful": true,
+  "neural_scope": "Local environment has no Torch; 20 skipped tests are disclosed. Previous 188 no-skip B2 result is separate archived cluster evidence."
+}

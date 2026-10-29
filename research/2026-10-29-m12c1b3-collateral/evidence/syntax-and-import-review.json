@@ -1,0 +1,81 @@
+{
+  "src/patrol_rsi/queue_diagnostics.py": {
+    "syntax_valid": true,
+    "imports": [
+      "__future__",
+      "dataclasses",
+      "math",
+      "typing",
+      "coverage_plan"
+    ]
+  },
+  "src/patrol_rsi/queue_history.py": {
+    "syntax_valid": true,
+    "imports": [
+      "__future__",
+      "math",
+      "queue_diagnostics"
+    ]
+  },
+  "src/patrol_rsi/queue_oracle.py": {
+    "syntax_valid": true,
+    "imports": [
+      "__future__"
+    ]
+  },
+  "scripts/diagnose_queue_cost.py": {
+    "syntax_valid": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "gzip",
+      "hashlib",
+      "heapq",
+      "json",
+      "math",
+      "pathlib",
+      "time",
+      "patrol_rsi.aisles",
+      "patrol_rsi.coverage_plan",
+      "patrol_rsi.facility",
+      "patrol_rsi.queue_diagnostics",
+      "patrol_rsi.queue_history",
+      "patrol_rsi.queue_oracle"
+    ]
+  },
+  "scripts/verify_queue_diagnosis.py": {
+    "syntax_valid": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "tempfile"
+    ]
+  },
+  "tests/test_queue_diagnostics.py": {
+    "syntax_valid": true,
+    "imports": [
+      "gzip",
+      "importlib.util",
+      "json",
+      "dataclasses",
+      "pathlib",
+      "unittest",
+      "patrol_rsi.aisles",
+      "patrol_rsi.coverage_plan",
+      "patrol_rsi.facility",
+      "patrol_rsi.queue_diagnostics",
+      "patrol_rsi.queue_history",
+      "patrol_rsi.queue_diagnostics",
+      "patrol_rsi.queue_oracle",
+      "patrol_rsi.queue_diagnostics",
+      "patrol_rsi.queue_diagnostics"
+    ]
+  }
+}
