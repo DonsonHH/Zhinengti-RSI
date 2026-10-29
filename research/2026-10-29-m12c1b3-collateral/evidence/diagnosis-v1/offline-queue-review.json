@@ -1,0 +1,718 @@
+{
+  "view": "offline_evaluator_only",
+  "development_only_old_B2_cases": true,
+  "cases": [
+    {
+      "case_alias": "development-01",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--blind_0",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8300,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 275.0,
+        "agent": 5,
+        "task": 33,
+        "baseline_next": 41,
+        "actor_task": 37,
+        "tool": "b2_blind",
+        "rule_index": null,
+        "legal_candidates": 5,
+        "cue_strength": 0.009165019665056206,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 7,
+        "skill_value": null
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 275.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": null,
+        "wait_value": null,
+        "future_best": null,
+        "blind_seed": 0,
+        "blind_trigger_s": 275,
+        "selected_blind": {
+          "agent": 5,
+          "task": 33
+        }
+      },
+      "saved_target_value_minus_new_collateral": null,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 1,
+        "actual_missed_after": 1,
+        "actual_missed_delta": 0,
+        "target_confirmation_lead_s": null,
+        "lost_confirmations": [],
+        "gained_confirmations": [],
+        "changed_confirmations": [],
+        "window_opportunity_missed_delta": 0,
+        "window_opportunities": []
+      },
+      "all_remaining_completions_checked": 161
+    },
+    {
+      "case_alias": "development-02",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--evidence_now",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8300,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 370.0,
+        "agent": 14,
+        "task": 156,
+        "baseline_next": 152,
+        "actor_task": 156,
+        "tool": "timing_evidence",
+        "rule_index": null,
+        "legal_candidates": 6,
+        "cue_strength": 0.7407291012926234,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.03519992012950609
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 370.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.03519992012950609,
+        "wait_value": 0.0,
+        "future_best": null,
+        "projected_candidates": 1,
+        "selected_now": {
+          "agent": 14,
+          "task": 156,
+          "dispatch_time_s": 370.0,
+          "finish_s": 415.0,
+          "signal": 0.7407291012926234,
+          "surrogate_value": 0.03519992012950609,
+          "baseline_target_finish_s": 440.0,
+          "return_slack_s": 245.0,
+          "discounted_value": 0.03519992012950609
+        }
+      },
+      "saved_target_value_minus_new_collateral": 0.02013153527694784,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 1,
+        "actual_missed_after": 1,
+        "actual_missed_delta": 0,
+        "target_confirmation_lead_s": 25.0,
+        "lost_confirmations": [],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 156,
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_confirmation_s": 440.0,
+            "detour_confirmation_s": 415.0
+          }
+        ],
+        "window_opportunity_missed_delta": 0,
+        "window_opportunities": [
+          {
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 73
+    },
+    {
+      "case_alias": "development-03",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8300,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 370.0,
+        "agent": 14,
+        "task": 156,
+        "baseline_next": 152,
+        "actor_task": 156,
+        "tool": "b2_lookahead",
+        "rule_index": null,
+        "legal_candidates": 6,
+        "cue_strength": 0.7407291012926234,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.03519992012950609
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 370.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.03519992012950609,
+        "wait_value": 0.002949628974191125,
+        "future_best": {
+          "agent": 10,
+          "task": 100,
+          "dispatch_time_s": 425.0,
+          "finish_s": 455.0,
+          "signal": 0.11390850426429608,
+          "surrogate_value": 0.003543137819822204,
+          "baseline_target_finish_s": 485.0,
+          "return_slack_s": 130.0,
+          "discounted_value": 0.002949628974191125
+        },
+        "projected_candidates": 3,
+        "selected_now": {
+          "agent": 14,
+          "task": 156,
+          "dispatch_time_s": 370.0,
+          "finish_s": 415.0,
+          "signal": 0.7407291012926234,
+          "surrogate_value": 0.03519992012950609,
+          "baseline_target_finish_s": 440.0,
+          "return_slack_s": 245.0,
+          "discounted_value": 0.03519992012950609
+        }
+      },
+      "saved_target_value_minus_new_collateral": 0.02013153527694784,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 1,
+        "actual_missed_after": 1,
+        "actual_missed_delta": 0,
+        "target_confirmation_lead_s": 25.0,
+        "lost_confirmations": [],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 156,
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_confirmation_s": 440.0,
+            "detour_confirmation_s": 415.0
+          }
+        ],
+        "window_opportunity_missed_delta": 0,
+        "window_opportunities": [
+          {
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 73
+    },
+    {
+      "case_alias": "development-04",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead_conservative",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8300,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 370.0,
+        "agent": 14,
+        "task": 156,
+        "baseline_next": 152,
+        "actor_task": 156,
+        "tool": "b2_lookahead",
+        "rule_index": null,
+        "legal_candidates": 6,
+        "cue_strength": 0.7407291012926234,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.03519992012950609
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 370.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.03519992012950609,
+        "wait_value": 0.0,
+        "future_best": null,
+        "projected_candidates": 1,
+        "selected_now": {
+          "agent": 14,
+          "task": 156,
+          "dispatch_time_s": 370.0,
+          "finish_s": 415.0,
+          "signal": 0.7407291012926234,
+          "surrogate_value": 0.03519992012950609,
+          "baseline_target_finish_s": 440.0,
+          "return_slack_s": 245.0,
+          "discounted_value": 0.03519992012950609
+        }
+      },
+      "saved_target_value_minus_new_collateral": 0.02013153527694784,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 1,
+        "actual_missed_after": 1,
+        "actual_missed_delta": 0,
+        "target_confirmation_lead_s": 25.0,
+        "lost_confirmations": [],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 156,
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_confirmation_s": 440.0,
+            "detour_confirmation_s": 415.0
+          }
+        ],
+        "window_opportunity_missed_delta": 0,
+        "window_opportunities": [
+          {
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 73
+    },
+    {
+      "case_alias": "development-05",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead_permuted",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8300,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 370.0,
+        "agent": 14,
+        "task": 150,
+        "baseline_next": 152,
+        "actor_task": 156,
+        "tool": "b2_lookahead",
+        "rule_index": null,
+        "legal_candidates": 6,
+        "cue_strength": 0.0,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.1902436884831644
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 370.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.1902436884831644,
+        "wait_value": 0.10613842611019449,
+        "future_best": {
+          "agent": 14,
+          "task": 150,
+          "dispatch_time_s": 405.0,
+          "finish_s": 465.0,
+          "signal": 0.7407291012926234,
+          "surrogate_value": 0.11927250289929012,
+          "baseline_target_finish_s": 560.0,
+          "return_slack_s": 195.0,
+          "discounted_value": 0.10613842611019449
+        },
+        "projected_candidates": 10,
+        "selected_now": {
+          "agent": 14,
+          "task": 150,
+          "dispatch_time_s": 370.0,
+          "finish_s": 420.0,
+          "signal": 0.7407291012926234,
+          "surrogate_value": 0.1902436884831644,
+          "baseline_target_finish_s": 560.0,
+          "return_slack_s": 215.0,
+          "discounted_value": 0.1902436884831644
+        }
+      },
+      "saved_target_value_minus_new_collateral": 0.15698446623208007,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 1,
+        "actual_missed_after": 1,
+        "actual_missed_delta": 0,
+        "target_confirmation_lead_s": null,
+        "lost_confirmations": [],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 156,
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_confirmation_s": 440.0,
+            "detour_confirmation_s": 515.0
+          }
+        ],
+        "window_opportunity_missed_delta": 0,
+        "window_opportunities": [
+          {
+            "task_id": "cooling:12",
+            "onset_s": 335.0,
+            "end_s": 515.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 72
+    },
+    {
+      "case_alias": "development-06",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8301--335--0.2--history--lookahead",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8301--335--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8301,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 465.0,
+        "agent": 10,
+        "task": 108,
+        "baseline_next": 100,
+        "actor_task": 108,
+        "tool": "b2_lookahead",
+        "rule_index": null,
+        "legal_candidates": 4,
+        "cue_strength": 0.19868546304192805,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.029006309050179504
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 465.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.029006309050179504,
+        "wait_value": 0.023355417169197083,
+        "future_best": {
+          "agent": 11,
+          "task": 111,
+          "dispatch_time_s": 480.0,
+          "finish_s": 510.0,
+          "signal": 0.21368583342520822,
+          "surrogate_value": 0.024552875013781235,
+          "baseline_target_finish_s": 555.0,
+          "return_slack_s": 115.0,
+          "discounted_value": 0.023355417169197083
+        },
+        "projected_candidates": 20,
+        "selected_now": {
+          "agent": 10,
+          "task": 108,
+          "dispatch_time_s": 465.0,
+          "finish_s": 490.0,
+          "signal": 0.34839642383512837,
+          "surrogate_value": 0.029006309050179504,
+          "baseline_target_finish_s": 520.0,
+          "return_slack_s": 125.0,
+          "discounted_value": 0.029006309050179504
+        }
+      },
+      "saved_target_value_minus_new_collateral": -0.0799059241727988,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 4,
+        "actual_missed_after": 5,
+        "actual_missed_delta": 1,
+        "target_confirmation_lead_s": 30.0,
+        "lost_confirmations": [
+          {
+            "task": 110,
+            "task_id": "thermal:110",
+            "onset_s": 445.0,
+            "end_s": 535.0,
+            "tour_confirmation_s": 535.0,
+            "detour_confirmation_s": null
+          }
+        ],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 108,
+            "task_id": "thermal:108",
+            "onset_s": 425.0,
+            "end_s": 545.0,
+            "tour_confirmation_s": 520.0,
+            "detour_confirmation_s": 490.0
+          },
+          {
+            "task": 110,
+            "task_id": "thermal:110",
+            "onset_s": 445.0,
+            "end_s": 535.0,
+            "tour_confirmation_s": 535.0,
+            "detour_confirmation_s": null
+          }
+        ],
+        "window_opportunity_missed_delta": 1,
+        "window_opportunities": [
+          {
+            "task_id": "thermal:106",
+            "onset_s": 455.0,
+            "end_s": 535.0,
+            "tour_has_window_visit": false,
+            "detour_has_window_visit": false
+          },
+          {
+            "task_id": "thermal:108",
+            "onset_s": 425.0,
+            "end_s": 545.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          },
+          {
+            "task_id": "thermal:110",
+            "onset_s": 445.0,
+            "end_s": 535.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": false
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 146
+    },
+    {
+      "case_alias": "development-07",
+      "original_case": "test--aux_feeder_loss+cdu_fouling--180--8301--520--0.2--history--lookahead",
+      "baseline_case": "test--aux_feeder_loss+cdu_fouling--180--8301--520--0.2--history--tour",
+      "specification": {
+        "phase": "test",
+        "seed": 8301,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 520,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "original_action": {
+        "time_s": 610.0,
+        "agent": 10,
+        "task": 108,
+        "baseline_next": 100,
+        "actor_task": 108,
+        "tool": "b2_lookahead",
+        "rule_index": null,
+        "legal_candidates": 4,
+        "cue_strength": 0.176572167161531,
+        "known_measured_alarm": false,
+        "detours_used_before": 0,
+        "baseline_completed_before": 2,
+        "skill_value": 0.03682388338281977
+      },
+      "saved_B2_timing_comparison": {
+        "time_s": 610.0,
+        "budget_available": true,
+        "decision": "check",
+        "now_value": 0.03682388338281977,
+        "wait_value": 0.018213412230285244,
+        "future_best": {
+          "agent": 8,
+          "task": 116,
+          "dispatch_time_s": 720.0,
+          "finish_s": 760.0,
+          "signal": 0.09907305529542043,
+          "surrogate_value": 0.026280439706425178,
+          "baseline_target_finish_s": 885.0,
+          "return_slack_s": 0.0,
+          "discounted_value": 0.018213412230285244
+        },
+        "projected_candidates": 6,
+        "selected_now": {
+          "agent": 10,
+          "task": 108,
+          "dispatch_time_s": 610.0,
+          "finish_s": 635.0,
+          "signal": 0.426572167161531,
+          "surrogate_value": 0.03682388338281977,
+          "baseline_target_finish_s": 665.0,
+          "return_slack_s": 125.0,
+          "discounted_value": 0.03682388338281977
+        }
+      },
+      "saved_target_value_minus_new_collateral": -0.0027472104420691867,
+      "note": "Post hoc diagnostic arithmetic only, not a deployed revised policy or test performance.",
+      "offline_outcome": {
+        "view": "offline_evaluator_only",
+        "not_for_online_input_or_candidate_selection": true,
+        "oracle_scope": "Hidden-window visit opportunity for the two already recorded branches, not a global optimum",
+        "actual_missed_before": 2,
+        "actual_missed_after": 4,
+        "actual_missed_delta": 2,
+        "target_confirmation_lead_s": 30.0,
+        "lost_confirmations": [
+          {
+            "task": 104,
+            "task_id": "thermal:104",
+            "onset_s": 690.0,
+            "end_s": 705.0,
+            "tour_confirmation_s": 700.0,
+            "detour_confirmation_s": null
+          },
+          {
+            "task": 106,
+            "task_id": "thermal:106",
+            "onset_s": 630.0,
+            "end_s": 715.0,
+            "tour_confirmation_s": 715.0,
+            "detour_confirmation_s": null
+          }
+        ],
+        "gained_confirmations": [],
+        "changed_confirmations": [
+          {
+            "task": 104,
+            "task_id": "thermal:104",
+            "onset_s": 690.0,
+            "end_s": 705.0,
+            "tour_confirmation_s": 700.0,
+            "detour_confirmation_s": null
+          },
+          {
+            "task": 106,
+            "task_id": "thermal:106",
+            "onset_s": 630.0,
+            "end_s": 715.0,
+            "tour_confirmation_s": 715.0,
+            "detour_confirmation_s": null
+          },
+          {
+            "task": 108,
+            "task_id": "thermal:108",
+            "onset_s": 580.0,
+            "end_s": 730.0,
+            "tour_confirmation_s": 665.0,
+            "detour_confirmation_s": 635.0
+          },
+          {
+            "task": 110,
+            "task_id": "thermal:110",
+            "onset_s": 615.0,
+            "end_s": 720.0,
+            "tour_confirmation_s": 680.0,
+            "detour_confirmation_s": 710.0
+          }
+        ],
+        "window_opportunity_missed_delta": 2,
+        "window_opportunities": [
+          {
+            "task_id": "thermal:104",
+            "onset_s": 690.0,
+            "end_s": 705.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": false
+          },
+          {
+            "task_id": "thermal:106",
+            "onset_s": 630.0,
+            "end_s": 715.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": false
+          },
+          {
+            "task_id": "thermal:108",
+            "onset_s": 580.0,
+            "end_s": 730.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          },
+          {
+            "task_id": "thermal:110",
+            "onset_s": 615.0,
+            "end_s": 720.0,
+            "tour_has_window_visit": true,
+            "detour_has_window_visit": true
+          }
+        ]
+      },
+      "all_remaining_completions_checked": 130
+    }
+  ]
+}
