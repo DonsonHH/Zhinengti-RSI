@@ -25,10 +25,11 @@ def main():
     total_b=sum(v['B_action_valid'] for v in cells);b_pos=sum(v['B_action_positive'] for v in cells)
     missing=sum(v['B_action_invalid'] for v in cells)
     without=sum(v['A_positive_without_legal_B'] for v in cells)
+    unique_physical_events=sum(v['distinct_physical_events'] for v in cells if v['horizon_s']==30)
     full=read(e/'gate/full-tests.json');cpu=read(e/'local-cpu-tests.json')
     alignment=read(e/'public-schedule-alignment-diagnostic.json')
     report=[f'# Zhinengti-RSI项目进度、瓶颈与下一步：B4-B1a', '',
-        f'本轮实际生成与工程审计已完成。覆盖结论为 **{acceptance["coverage_verdict"]}**，通过{len(cells)-len(failed)}/48个单元。**全域B4-B1b拟合允许：{acceptance["B4_B1b_full_domain_fitting_allowed"]}**。', '',
+        f'本轮实际生成与工程审计已完成。覆盖结论为 **{acceptance["coverage_verdict"]}**，通过{len(cells)-len(failed)}/48个单元。**是否允许全域B4-B1b拟合：{"是" if acceptance["B4_B1b_full_domain_fitting_allowed"] else "否"}**。', '',
         '## 1. 先把项目要解决的事情讲明白', '',
         '设想机房里有一个巡检班组。设备一直运行，人员只能在部分位置测量。固定巡回能守住检查义务，但有时会错过短暂异常。我们希望AI利用当时能看到的温度、流量、功率和检查历史，判断何时值得加一次检查，最终再研究智能体怎样改进技能与流程。', '',
         '本轮沿用的仿真规模为128个机柜、16个分区、18名专业执行者，额定IT负载32MW。物理参数和故障比例属于合成研究设定；这些结果不等于已经在真实机房部署，也不是本轮完成了GW规模验证。', '',
@@ -44,6 +45,7 @@ def main():
         f'A的有效端点共{total_a:,}条，其中物理异常{a_pos:,}条；合法B样本{total_b:,}条，其中正例{b_pos:,}条。另有{missing:,}条不满足端点或检查时刻条件，保留为-1，不能算“正常”。其中{without:,}个物理正例端点没有合法B检查。', '',
         '这些是相关记录数，不是独立故障数。同一故障每隔一段时间都会被再次记账；两档传感噪声也不会创造第二次物理故障。统计验收使用底层种子组、数值过程指纹和去重保留事件，三种计数分别达到门槛。不同预测视野仍共享事件，各行事件数不能相加当独立样本量。', '',
         '“种子”是控制随机仿真背景的编号，例如让机柜负载和关键度产生不同初始条件；同一种子下的情景统一归组。“数值指纹”用于识别两份轨迹是否实际上完全相同。“事件”是某项专业检查对应的真实状态连续处于异常范围的一段时间；持续至少15秒才计入本轮主要事件覆盖门槛。', '',
+        f'按数值过程、专业任务和真实时间段去重的物理事件共{unique_physical_events:,}个；审计流水中events={c["independent_counts"]["events"]:,}是各观测版本读到的事件出现次数，含噪声与重复健康相位，不能替代独立事件量。', '',
         '一个合法B样本说明该次候选检查可以单独按时完成。多个候选分别可行，并不代表在同一轮能全部执行；真正的整轮取舍留给后续C评价。', '',
         '例如开发集每专业／视野至少需要8个有正例的种子、12个有正例的数值过程、20个可预测且持续至少15秒的事件，以及12个有合法负例的种子；校准和选择各为4／6／8／6，最终为8／12／20／12。规则在生成前已冻结，没有看完结果再改。', '',
         '## 4. 电气故障：区分真的没过热与来不及查', '',
@@ -56,6 +58,7 @@ def main():
             report.append(f'{SPLIT[split]}集的{len(values)}个接点热配置，故障期间峰值为{min(during):.2f}–{max(during):.2f}°C，故障结束后峰值为{min(after):.2f}–{max(after):.2f}°C。逐过程与起点明细见非最终诊断文件；最终明细保持封存。')
             report.append('')
     report+=['每个视野同时列出A物理正例、B合法正例和“有物理异常但无合法B”的数量。若温度超过60°C而30秒B仍无正例，定位为行动时刻覆盖，不能把设备说成正常。若事件不足15秒，也单独列出，不能将短事件偷偷抹掉或变成长事件。', '',
+        '电气30秒的开发单元达标，但校准／选择／最终的可预测保留事件分别只有5／6／19个，对应门槛8／8／20；因此不能仅凭开发结果将这个视野纳入拟合。冷却30秒在各划分均不足，且冷却60／120秒的校准集也没有达到事件门槛。缺口主要在独立可预测事件与行动时刻覆盖，不能靠大量重复时间点补足。', '',
         '## 5. 完整48单元覆盖与所有缺口', '',
         '表中“种子／过程／事件／负种子”是实际独立覆盖；缺口是离冻结最低要求还差多少。正例比例的分母只用合法B。', '',
         '|划分|专业|视野秒|合法B／总候选|B正例|正例比例|种子／过程／事件／负种子|缺口|通过|',
@@ -82,15 +85,32 @@ def main():
         f'公开衍生数据{c["public_derived_data_bytes"]:,}字节，低于6,000,000,000上限；另存私有物理原件{c["private_physical_source_bytes"]:,}字节，总计{c["derived_and_source_data_bytes"]:,}字节。早期gzip和后续xz均保留，xz只改变无损存储，未改观测内容。', '',
         '协议、清单、源代码归档、冻结权重、每份原件和传输包均保留SHA。详细日志、账本、原始复算收据和复现命令见本阶段evidence；最终测试原件仍在远端私有目录。', '',
         '## 9. 下一步允许做什么', '',
-        acceptance['next_step'], '',
+        ('数据验收允许进入原冻结B4-B1b拟合；本轮尚未运行拟合。' if acceptance['B4_B1b_full_domain_fitting_allowed'] else
+         '不允许启动全四专业／三视野的B4-B1b拟合。可先讨论上述限定覆盖范围是否另立协议，或者针对精确30秒目标修订采样与行动机会定义；两个决定都需要在后续拟合前独立写清，不能自动继续训练。'), '',
         'B3.2正式策略NO-GO及B4-B0旧数据训练NO-GO作为历史结论原样保存。本轮完成的是新数据与覆盖验收，不回写旧结果。', '']
+    prevalence=['### 按专业查看分母与A／B关系','',
+        '|专业|A有效端点|A物理正例率|合法B|B正例率|有A但无合法B|B正例而A正常|',
+        '|---|---:|---:|---:|---:|---:|---:|']
+    for kind in ROLE:
+        own=[v for v in cells if v['kind']==kind]
+        n=sum(v['A_valid'] for v in own);ap=sum(v['A_positive'] for v in own)
+        bn=sum(v['B_action_valid'] for v in own);bp=sum(v['B_action_positive'] for v in own)
+        unavailable=sum(v['A_positive_without_legal_B'] for v in own)
+        false=sum(v['B_positive_A_negative'] for v in own)
+        prevalence.append('|'+ '|'.join(map(str,[ROLE[kind],f'{n:,}',f'{ap/n:.4%}',f'{bn:,}',f'{bp/bn:.4%}' if bn else '无有效样本',f'{unavailable:,}',false]))+'|')
+    prevalence+=['','上表合并三个视野，仅用于样本分母与标签一致性描述，不用于独立事件计数。B正例要求A为真；物理A异常仍可能因未匹配到合法完成时刻而没有B。缺失B不记为负例。','']
+    insert=report.index('## 4. 电气故障：区分真的没过热与来不及查')
+    report[insert:insert]=prevalence
     text='\n'.join(report)
     report_path=root/'reports/2026-10-30-B4-B1a-进度与瓶颈.md'
     need(not report_path.exists(),'New final report path must not overwrite historical handoff')
-    report_path.write_text(text,encoding='utf-8')
+    report_path.write_text(text,encoding='utf-8',newline='\n')
     prior=root/'reports/2026-10-30-B4-B0-项目全量汇总.json'
     package={'文档信息':{'阶段':'B4-B1a','基准':'567bab9f60b5882d6eff536c13b7817a8356b0af','用途':'单文档科研进度、瓶颈、未知与下一步；最终逐样本数据不嵌入'},
         '当前最终验收':acceptance,'给新手的完整说明_markdown':text,'全部48单元覆盖与缺口':c,
+        '计数口径':{'独立性单位':'底层种子组；同种子的情景/相位/噪声归同一划分',
+            '物理事件去重数':unique_physical_events,'events流水口径':'按观测条件读取的出现次数，包含重复，不能视为独立故障',
+            '合法性':'无合法B=-1；负例B=0；比例分母为合法B；零合法样本显示不适用'},
         '各非最终维度统计':read(e/'report/coverage-dimensions.json'),
         '非最终800条件计数':json.loads(gzip.decompress((e/'report/condition-counts-nonfinal.json.gz').read_bytes())),
         '电气故障非最终逐过程诊断':electrical,'时间排班遥测开发描述':clock,

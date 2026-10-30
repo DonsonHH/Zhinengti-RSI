@@ -1,0 +1,93 @@
+{
+  "stage": "B4-B1a",
+  "engineering_execution_and_audit": "complete",
+  "coverage_verdict": "LIMITED",
+  "B4_B1b_full_domain_fitting_allowed": false,
+  "limited_protocol_automatically_authorized": false,
+  "passed_cells": 35,
+  "failed_cells": 13,
+  "requirements_proved": {
+    "frozen_protocol_manifest_weights": true,
+    "all64groups_1280conditions_generated": true,
+    "all360physical_arrays_and359public_history_frames": true,
+    "original_noise_and_Tour_completion": true,
+    "all_A_B_labels_and85plus13features": true,
+    "whole_return_qualification": true,
+    "all48_coverage_gates_independently_evaluated": true,
+    "cross_split_and_noise_independence": true,
+    "final_raw_test_stays_sealed": true,
+    "Torch_and_light_CPU_tests": true,
+    "terminal_Slurm_and_budgets": true
+  },
+  "protocol_SHA256": "d049c0d39663ce35824bfe61059a00c7c48f030d543386511e7bda8c65c77e5e",
+  "manifest_SHA256": "2580b46da58320e4349e149ab13b08f926d64b49ced57808cfc138cdc274b269",
+  "weights_SHA256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "kind_horizon_domains_passing_all_four_splits": [
+    {
+      "kind": "thermal",
+      "horizon_s": 30
+    },
+    {
+      "kind": "thermal",
+      "horizon_s": 60
+    },
+    {
+      "kind": "thermal",
+      "horizon_s": 120
+    },
+    {
+      "kind": "electrical",
+      "horizon_s": 60
+    },
+    {
+      "kind": "electrical",
+      "horizon_s": 120
+    },
+    {
+      "kind": "control",
+      "horizon_s": 60
+    },
+    {
+      "kind": "control",
+      "horizon_s": 120
+    }
+  ],
+  "new_predictor_fits": 0,
+  "PPO_retraining": 0,
+  "CVAE_updates": 0,
+  "Qwen_calls": 0,
+  "B4C_policy_search": 0,
+  "B3_2_verdict": "NO-GO unchanged",
+  "B4B0_historical_verdict": "NO-GO unchanged; new B1a evidence recorded separately",
+  "next_step": "Full-domain B4-B1b fitting remains disallowed. Report exact cell deficits; any limited-domain protocol is a separate decision, without automatic training or changed faults/seeds.",
+  "bindings": {
+    "report/coverage.json": {
+      "bytes": 181389,
+      "sha256": "4d08cbd6e9350f73ee4a750dd7958470a08cf72b50a133d7fff9ce11f5a25854"
+    },
+    "report/counts-independent.json": {
+      "bytes": 397,
+      "sha256": "312b342bf3d20871594599162991109105df5c5c7e3514dd233cdce909b54e01"
+    },
+    "report/source-replay.json": {
+      "bytes": 474,
+      "sha256": "681e408c617e74fe6fb8c9f875324e7224c1e8e5aa0e587e0f8fcf7165937057"
+    },
+    "report/raw-storage.json": {
+      "bytes": 4309447,
+      "sha256": "ef404d3ecadb8b6e6b503e6bfac11551a32e9a10d66c117c74648f25acae8065"
+    },
+    "slurm-cost-review.json": {
+      "bytes": 53307,
+      "sha256": "e574d5288bff03f5a6e4fbb15d557c2bfd981b645a27d18fb369b7d516f8e054"
+    },
+    "gate/full-tests.json": {
+      "bytes": 112,
+      "sha256": "b26e86dcc9e7ba67edd7487f6c901a82f52454fff726d912074be83196be0150"
+    },
+    "local-cpu-tests.json": {
+      "bytes": 303,
+      "sha256": "9f4a4b5b2d900d3a634a7a0fe01142bdd5e30f4e3a7f99095e21e226b5d9c24e"
+    }
+  }
+}

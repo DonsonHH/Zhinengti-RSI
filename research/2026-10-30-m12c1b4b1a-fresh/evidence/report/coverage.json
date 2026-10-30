@@ -1,0 +1,6413 @@
+{
+  "stage": "B4-B1a",
+  "generation_complete": true,
+  "generated_conditions": 1280,
+  "named_physical_processes": 640,
+  "numeric_processes": 576,
+  "seed_groups": 64,
+  "sample_rows": 39874560,
+  "coverage_cells": [
+    {
+      "split": "development",
+      "total_samples": 3624960,
+      "A_valid": 3624960,
+      "A_positive": 1980,
+      "A_negative": 3622980,
+      "B_reference_valid": 3624960,
+      "B_reference_positive": 1960,
+      "B_action_valid": 531840,
+      "B_action_positive": 300,
+      "B_action_negative": 531540,
+      "B_action_invalid": 3093120,
+      "physical_event_count": 758,
+      "retained_event_count": 722,
+      "kind": "thermal",
+      "horizon_s": 30,
+      "B_reference_negative": 3623000,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.0005406956214689266,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 60,
+      "distinct_physical_events": 379,
+      "distinct_B_positive_events": 113,
+      "distinct_B_positive_retained_events": 113,
+      "valid_B_positive_fraction": 0.0005640794223826715,
+      "A_positive_fraction": 0.0005462129237288135,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 490560,
+          "B_valid_missing": 41280,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 502080,
+          "B_valid_missing": 29760,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 504960,
+          "B_valid_missing": 26880,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 485760,
+          "B_valid_missing": 46080,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 489600,
+          "B_valid_missing": 42240,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 1680,
+      "A_positive_B_reference_negative": 20,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.14671610169491525,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 60,
+          "distinct_retained_positive_events": 113,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 3624960,
+      "A_valid": 3563520,
+      "A_positive": 1980,
+      "A_negative": 3561540,
+      "B_reference_valid": 3563520,
+      "B_reference_positive": 1960,
+      "B_action_valid": 636480,
+      "B_action_positive": 342,
+      "B_action_negative": 636138,
+      "B_action_invalid": 2988480,
+      "physical_event_count": 758,
+      "retained_event_count": 722,
+      "kind": "thermal",
+      "horizon_s": 60,
+      "B_reference_negative": 3561560,
+      "B_reference_invalid": 61440,
+      "B_reference_positive_fraction": 0.0005500179597701149,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 68,
+      "distinct_physical_events": 379,
+      "distinct_B_positive_events": 129,
+      "distinct_B_positive_retained_events": 129,
+      "valid_B_positive_fraction": 0.0005373303167420815,
+      "A_positive_fraction": 0.0005556303879310345,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 600000,
+          "B_valid_missing": 36480,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 610560,
+          "B_valid_missing": 25920,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 611040,
+          "B_valid_missing": 25440,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 581760,
+          "B_valid_missing": 54720,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 588480,
+          "B_valid_missing": 48000,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 1636,
+      "A_positive_B_reference_negative": 20,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.17558262711864406,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 68,
+          "distinct_retained_positive_events": 129,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 3624960,
+      "A_valid": 3440640,
+      "A_positive": 1980,
+      "A_negative": 3438660,
+      "B_reference_valid": 3440640,
+      "B_reference_positive": 1960,
+      "B_action_valid": 607680,
+      "B_action_positive": 342,
+      "B_action_negative": 607338,
+      "B_action_invalid": 3017280,
+      "physical_event_count": 758,
+      "retained_event_count": 722,
+      "kind": "thermal",
+      "horizon_s": 120,
+      "B_reference_negative": 3438680,
+      "B_reference_invalid": 184320,
+      "B_reference_positive_fraction": 0.0005696614583333334,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 68,
+      "distinct_physical_events": 379,
+      "distinct_B_positive_events": 129,
+      "distinct_B_positive_retained_events": 129,
+      "valid_B_positive_fraction": 0.0005627962085308056,
+      "A_positive_fraction": 0.0005754743303571429,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 580800,
+          "B_valid_missing": 26880,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 588480,
+          "B_valid_missing": 19200,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 587040,
+          "B_valid_missing": 20640,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 556800,
+          "B_valid_missing": 50880,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 567840,
+          "B_valid_missing": 39840,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 1636,
+      "A_positive_B_reference_negative": 20,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.1676377118644068,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 68,
+          "distinct_retained_positive_events": 129,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 2470,
+      "A_negative": 450650,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 2470,
+      "B_action_valid": 7680,
+      "B_action_positive": 42,
+      "B_action_negative": 7638,
+      "B_action_invalid": 445440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 30,
+      "B_reference_negative": 450650,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.005451094632768361,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20004,
+        20005,
+        20006,
+        20007,
+        20012,
+        20013,
+        20014,
+        20015,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 21,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 21,
+      "distinct_B_positive_retained_events": 21,
+      "valid_B_positive_fraction": 0.00546875,
+      "A_positive_fraction": 0.005451094632768361,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 6720,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 2428,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 12,
+          "positive_numeric_processes": 21,
+          "distinct_retained_positive_events": 21,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 2470,
+      "A_negative": 442970,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 2470,
+      "B_action_valid": 31680,
+      "B_action_positive": 180,
+      "B_action_negative": 31500,
+      "B_action_invalid": 421440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 60,
+      "B_reference_negative": 442970,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.005545079022988506,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 45,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 45,
+      "distinct_B_positive_retained_events": 45,
+      "valid_B_positive_fraction": 0.005681818181818182,
+      "A_positive_fraction": 0.005545079022988506,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 29760,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 2290,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 45,
+          "distinct_retained_positive_events": 45,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 2470,
+      "A_negative": 427610,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 2470,
+      "B_action_valid": 41280,
+      "B_action_positive": 256,
+      "B_action_negative": 41024,
+      "B_action_invalid": 411840,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "B_reference_negative": 427610,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.00574311755952381,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 48,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 48,
+      "distinct_B_positive_retained_events": 48,
+      "valid_B_positive_fraction": 0.006201550387596899,
+      "A_positive_fraction": 0.00574311755952381,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 39360,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 38400,
+          "B_valid_missing": 2880,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 2214,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 48,
+          "distinct_retained_positive_events": 48,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 576,
+      "A_negative": 452544,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 576,
+      "B_action_valid": 7680,
+      "B_action_positive": 12,
+      "B_action_negative": 7668,
+      "B_action_invalid": 445440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 30,
+      "B_reference_negative": 452544,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.001271186440677966,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20006,
+        20007,
+        20012,
+        20013,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 6,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 6,
+      "distinct_B_positive_retained_events": 6,
+      "valid_B_positive_fraction": 0.0015625,
+      "A_positive_fraction": 0.001271186440677966,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 6720,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 564,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 14,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 576,
+      "A_negative": 444864,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 576,
+      "B_action_valid": 31680,
+      "B_action_positive": 40,
+      "B_action_negative": 31640,
+      "B_action_invalid": 421440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 60,
+      "B_reference_negative": 444864,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.001293103448275862,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20006,
+        20007,
+        20010,
+        20011,
+        20012,
+        20013,
+        20016,
+        20017,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 20,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 20,
+      "distinct_B_positive_retained_events": 20,
+      "valid_B_positive_fraction": 0.0012626262626262627,
+      "A_positive_fraction": 0.001293103448275862,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 29760,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 536,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 12,
+          "positive_numeric_processes": 20,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 576,
+      "A_negative": 429504,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 576,
+      "B_action_valid": 41280,
+      "B_action_positive": 60,
+      "B_action_negative": 41220,
+      "B_action_invalid": 411840,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 120,
+      "B_reference_negative": 429504,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.0013392857142857143,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20004,
+        20005,
+        20006,
+        20007,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "B_positive_numeric_processes": 26,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 26,
+      "distinct_B_positive_retained_events": 26,
+      "valid_B_positive_fraction": 0.0014534883720930232,
+      "A_positive_fraction": 0.0013392857142857143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 39360,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 38400,
+          "B_valid_missing": 2880,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 516,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 26,
+          "distinct_retained_positive_events": 26,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 2880,
+      "A_negative": 450240,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 2880,
+      "B_action_valid": 0,
+      "B_action_positive": 0,
+      "B_action_negative": 0,
+      "B_action_invalid": 453120,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 30,
+      "B_reference_negative": 450240,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.006355932203389831,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [],
+      "B_positive_numeric_processes": 0,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 0,
+      "distinct_B_positive_retained_events": 0,
+      "valid_B_positive_fraction": null,
+      "A_positive_fraction": 0.006355932203389831,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [],
+      "A_positive_without_legal_B": 2880,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.0,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 2880,
+      "A_negative": 442560,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 2880,
+      "B_action_valid": 72000,
+      "B_action_positive": 476,
+      "B_action_negative": 71524,
+      "B_action_invalid": 381120,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 60,
+      "B_reference_negative": 442560,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.00646551724137931,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20008,
+        20009,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021
+      ],
+      "B_positive_numeric_processes": 36,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 36,
+      "distinct_B_positive_retained_events": 36,
+      "valid_B_positive_fraction": 0.006611111111111111,
+      "A_positive_fraction": 0.00646551724137931,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 71040,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 2404,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15889830508474576,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 36,
+          "distinct_retained_positive_events": 36,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "development",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 2880,
+      "A_negative": 427200,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 2880,
+      "B_action_valid": 70080,
+      "B_action_positive": 476,
+      "B_action_negative": 69604,
+      "B_action_invalid": 383040,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 120,
+      "B_reference_negative": 427200,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.006696428571428571,
+      "seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "numeric_processes": 216,
+      "B_positive_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20008,
+        20009,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021
+      ],
+      "B_positive_numeric_processes": 36,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 36,
+      "distinct_B_positive_retained_events": 36,
+      "valid_B_positive_fraction": 0.006792237442922375,
+      "A_positive_fraction": 0.006696428571428571,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 66240,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015,
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023
+      ],
+      "A_positive_without_legal_B": 2404,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15466101694915255,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 36,
+          "distinct_retained_positive_events": 36,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 1208320,
+      "A_valid": 1208320,
+      "A_positive": 694,
+      "A_negative": 1207626,
+      "B_reference_valid": 1208320,
+      "B_reference_positive": 692,
+      "B_action_valid": 177280,
+      "B_action_positive": 104,
+      "B_action_negative": 177176,
+      "B_action_invalid": 1031040,
+      "physical_event_count": 256,
+      "retained_event_count": 246,
+      "kind": "thermal",
+      "horizon_s": 30,
+      "B_reference_negative": 1207628,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.0005726959745762712,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 23,
+      "distinct_physical_events": 128,
+      "distinct_B_positive_events": 43,
+      "distinct_B_positive_retained_events": 42,
+      "valid_B_positive_fraction": 0.0005866425992779783,
+      "A_positive_fraction": 0.0005743511652542373,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 163520,
+          "B_valid_missing": 13760,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 167360,
+          "B_valid_missing": 9920,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 168320,
+          "B_valid_missing": 8960,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 161920,
+          "B_valid_missing": 15360,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 163200,
+          "B_valid_missing": 14080,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 590,
+      "A_positive_B_reference_negative": 2,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.14671610169491525,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 23,
+          "distinct_retained_positive_events": 42,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 1208320,
+      "A_valid": 1187840,
+      "A_positive": 694,
+      "A_negative": 1187146,
+      "B_reference_valid": 1187840,
+      "B_reference_positive": 692,
+      "B_action_valid": 212160,
+      "B_action_positive": 122,
+      "B_action_negative": 212038,
+      "B_action_invalid": 996160,
+      "physical_event_count": 256,
+      "retained_event_count": 246,
+      "kind": "thermal",
+      "horizon_s": 60,
+      "B_reference_negative": 1187148,
+      "B_reference_invalid": 20480,
+      "B_reference_positive_fraction": 0.0005825700431034482,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 25,
+      "distinct_physical_events": 128,
+      "distinct_B_positive_events": 50,
+      "distinct_B_positive_retained_events": 49,
+      "valid_B_positive_fraction": 0.0005750377073906486,
+      "A_positive_fraction": 0.0005842537715517242,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 200000,
+          "B_valid_missing": 12160,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 203520,
+          "B_valid_missing": 8640,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 203680,
+          "B_valid_missing": 8480,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 193920,
+          "B_valid_missing": 18240,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 196160,
+          "B_valid_missing": 16000,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 572,
+      "A_positive_B_reference_negative": 2,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.17558262711864406,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 25,
+          "distinct_retained_positive_events": 49,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 1208320,
+      "A_valid": 1146880,
+      "A_positive": 694,
+      "A_negative": 1146186,
+      "B_reference_valid": 1146880,
+      "B_reference_positive": 692,
+      "B_action_valid": 202560,
+      "B_action_positive": 122,
+      "B_action_negative": 202438,
+      "B_action_invalid": 1005760,
+      "physical_event_count": 256,
+      "retained_event_count": 246,
+      "kind": "thermal",
+      "horizon_s": 120,
+      "B_reference_negative": 1146188,
+      "B_reference_invalid": 61440,
+      "B_reference_positive_fraction": 0.0006033761160714286,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 25,
+      "distinct_physical_events": 128,
+      "distinct_B_positive_events": 50,
+      "distinct_B_positive_retained_events": 49,
+      "valid_B_positive_fraction": 0.0006022906793048973,
+      "A_positive_fraction": 0.0006051199776785714,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 193600,
+          "B_valid_missing": 8960,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 196160,
+          "B_valid_missing": 6400,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 195680,
+          "B_valid_missing": 6880,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 185600,
+          "B_valid_missing": 16960,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 189280,
+          "B_valid_missing": 13280,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 572,
+      "A_positive_B_reference_negative": 2,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.1676377118644068,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 25,
+          "distinct_retained_positive_events": 49,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 848,
+      "A_negative": 150192,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 848,
+      "B_action_valid": 2560,
+      "B_action_positive": 10,
+      "B_action_negative": 2550,
+      "B_action_invalid": 148480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 30,
+      "B_reference_negative": 150192,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.005614406779661017,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 5,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 5,
+      "distinct_B_positive_retained_events": 5,
+      "valid_B_positive_fraction": 0.00390625,
+      "A_positive_fraction": 0.005614406779661017,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 2240,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 838,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 5,
+          "distinct_retained_positive_events": 5,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 1,
+          "distinct_retained_positive_events": 3,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 848,
+      "A_negative": 147632,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 848,
+      "B_action_valid": 10560,
+      "B_action_positive": 50,
+      "B_action_negative": 10510,
+      "B_action_invalid": 140480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 60,
+      "B_reference_negative": 147632,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.005711206896551724,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 13,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 13,
+      "distinct_B_positive_retained_events": 13,
+      "valid_B_positive_fraction": 0.004734848484848485,
+      "A_positive_fraction": 0.005711206896551724,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 9920,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 798,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 13,
+          "distinct_retained_positive_events": 13,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 848,
+      "A_negative": 142512,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 848,
+      "B_action_valid": 13760,
+      "B_action_positive": 64,
+      "B_action_negative": 13696,
+      "B_action_invalid": 137280,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "B_reference_negative": 142512,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.005915178571428571,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 15,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 15,
+      "distinct_B_positive_retained_events": 15,
+      "valid_B_positive_fraction": 0.004651162790697674,
+      "A_positive_fraction": 0.005915178571428571,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 13120,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 12800,
+          "B_valid_missing": 960,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 784,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 15,
+          "distinct_retained_positive_events": 15,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 192,
+      "A_negative": 150848,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 192,
+      "B_action_valid": 2560,
+      "B_action_positive": 4,
+      "B_action_negative": 2556,
+      "B_action_invalid": 148480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 30,
+      "B_reference_negative": 150848,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.001271186440677966,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20204,
+        20205
+      ],
+      "B_positive_numeric_processes": 2,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 2,
+      "distinct_B_positive_retained_events": 2,
+      "valid_B_positive_fraction": 0.0015625,
+      "A_positive_fraction": 0.001271186440677966,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 2240,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 188,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 2,
+          "distinct_retained_positive_events": 2,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 4,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 192,
+      "A_negative": 148288,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 192,
+      "B_action_valid": 10560,
+      "B_action_positive": 8,
+      "B_action_negative": 10552,
+      "B_action_invalid": 140480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 60,
+      "B_reference_negative": 148288,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.001293103448275862,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20202,
+        20203,
+        20204,
+        20205
+      ],
+      "B_positive_numeric_processes": 4,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 4,
+      "distinct_B_positive_retained_events": 4,
+      "valid_B_positive_fraction": 0.0007575757575757576,
+      "A_positive_fraction": 0.001293103448275862,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 9920,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 184,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 4,
+          "distinct_retained_positive_events": 4,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 2,
+          "distinct_retained_positive_events": 4,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 192,
+      "A_negative": 143168,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 192,
+      "B_action_valid": 13760,
+      "B_action_positive": 12,
+      "B_action_negative": 13748,
+      "B_action_invalid": 137280,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 120,
+      "B_reference_negative": 143168,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.0013392857142857143,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 6,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 6,
+      "distinct_B_positive_retained_events": 6,
+      "valid_B_positive_fraction": 0.0008720930232558139,
+      "A_positive_fraction": 0.0013392857142857143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 13120,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 12800,
+          "B_valid_missing": 960,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 180,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 2,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 960,
+      "A_negative": 150080,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 960,
+      "B_action_valid": 0,
+      "B_action_positive": 0,
+      "B_action_negative": 0,
+      "B_action_invalid": 151040,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 30,
+      "B_reference_negative": 150080,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.006355932203389831,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [],
+      "B_positive_numeric_processes": 0,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 0,
+      "distinct_B_positive_retained_events": 0,
+      "valid_B_positive_fraction": null,
+      "A_positive_fraction": 0.006355932203389831,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [],
+      "A_positive_without_legal_B": 960,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.0,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 960,
+      "A_negative": 147520,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 960,
+      "B_action_valid": 24000,
+      "B_action_positive": 156,
+      "B_action_negative": 23844,
+      "B_action_invalid": 127040,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 60,
+      "B_reference_negative": 147520,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.00646551724137931,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 12,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 12,
+      "distinct_B_positive_retained_events": 12,
+      "valid_B_positive_fraction": 0.0065,
+      "A_positive_fraction": 0.00646551724137931,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 23680,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 804,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15889830508474576,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 12,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_calibration",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 960,
+      "A_negative": 142400,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 960,
+      "B_action_valid": 23360,
+      "B_action_positive": 156,
+      "B_action_negative": 23204,
+      "B_action_invalid": 127680,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 120,
+      "B_reference_negative": 142400,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.006696428571428571,
+      "seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20200,
+        20201,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "B_positive_numeric_processes": 12,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 12,
+      "distinct_B_positive_retained_events": 12,
+      "valid_B_positive_fraction": 0.006678082191780822,
+      "A_positive_fraction": 0.006696428571428571,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 22080,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20200,
+        20201,
+        20202,
+        20203,
+        20204,
+        20205,
+        20206,
+        20207
+      ],
+      "A_positive_without_legal_B": 804,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15466101694915255,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 12,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 1208320,
+      "A_valid": 1208320,
+      "A_positive": 654,
+      "A_negative": 1207666,
+      "B_reference_valid": 1208320,
+      "B_reference_positive": 650,
+      "B_action_valid": 177280,
+      "B_action_positive": 92,
+      "B_action_negative": 177188,
+      "B_action_invalid": 1031040,
+      "physical_event_count": 242,
+      "retained_event_count": 220,
+      "kind": "thermal",
+      "horizon_s": 30,
+      "B_reference_negative": 1207670,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.000537936970338983,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 18,
+      "distinct_physical_events": 121,
+      "distinct_B_positive_events": 35,
+      "distinct_B_positive_retained_events": 35,
+      "valid_B_positive_fraction": 0.0005189530685920578,
+      "A_positive_fraction": 0.0005412473516949153,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 163520,
+          "B_valid_missing": 13760,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 167360,
+          "B_valid_missing": 9920,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 168320,
+          "B_valid_missing": 8960,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 161920,
+          "B_valid_missing": 15360,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 163200,
+          "B_valid_missing": 14080,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 177280,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 562,
+      "A_positive_B_reference_negative": 4,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.14671610169491525,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 18,
+          "distinct_retained_positive_events": 35,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 1208320,
+      "A_valid": 1187840,
+      "A_positive": 654,
+      "A_negative": 1187186,
+      "B_reference_valid": 1187840,
+      "B_reference_positive": 650,
+      "B_action_valid": 212160,
+      "B_action_positive": 108,
+      "B_action_negative": 212052,
+      "B_action_invalid": 996160,
+      "physical_event_count": 242,
+      "retained_event_count": 220,
+      "kind": "thermal",
+      "horizon_s": 60,
+      "B_reference_negative": 1187190,
+      "B_reference_invalid": 20480,
+      "B_reference_positive_fraction": 0.0005472117456896551,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 21,
+      "distinct_physical_events": 121,
+      "distinct_B_positive_events": 40,
+      "distinct_B_positive_retained_events": 40,
+      "valid_B_positive_fraction": 0.0005090497737556561,
+      "A_positive_fraction": 0.0005505792025862069,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 200000,
+          "B_valid_missing": 12160,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 203520,
+          "B_valid_missing": 8640,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 203680,
+          "B_valid_missing": 8480,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 193920,
+          "B_valid_missing": 18240,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 196160,
+          "B_valid_missing": 16000,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 212160,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 544,
+      "A_positive_B_reference_negative": 4,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.17558262711864406,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 21,
+          "distinct_retained_positive_events": 40,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 1208320,
+      "A_valid": 1146880,
+      "A_positive": 654,
+      "A_negative": 1146226,
+      "B_reference_valid": 1146880,
+      "B_reference_positive": 650,
+      "B_action_valid": 202560,
+      "B_action_positive": 108,
+      "B_action_negative": 202452,
+      "B_action_invalid": 1005760,
+      "physical_event_count": 242,
+      "retained_event_count": 220,
+      "kind": "thermal",
+      "horizon_s": 120,
+      "B_reference_negative": 1146230,
+      "B_reference_invalid": 61440,
+      "B_reference_positive_fraction": 0.0005667550223214286,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 21,
+      "distinct_physical_events": 121,
+      "distinct_B_positive_events": 40,
+      "distinct_B_positive_retained_events": 40,
+      "valid_B_positive_fraction": 0.0005331753554502369,
+      "A_positive_fraction": 0.0005702427455357143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 193600,
+          "B_valid_missing": 8960,
+          "all_root_available": 1149440,
+          "all_root_missing": 58880
+        },
+        "temperature_measurement": {
+          "B_valid_available": 196160,
+          "B_valid_missing": 6400,
+          "all_root_available": 1162560,
+          "all_root_missing": 45760
+        },
+        "flow": {
+          "B_valid_available": 195680,
+          "B_valid_missing": 6880,
+          "all_root_available": 1160960,
+          "all_root_missing": 47360
+        },
+        "contact": {
+          "B_valid_available": 185600,
+          "B_valid_missing": 16960,
+          "all_root_available": 1113600,
+          "all_root_missing": 94720
+        },
+        "sensor_error": {
+          "B_valid_available": 189280,
+          "B_valid_missing": 13280,
+          "all_root_available": 1126400,
+          "all_root_missing": 81920
+        },
+        "nominal": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 202560,
+          "B_valid_missing": 0,
+          "all_root_available": 1208320,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 544,
+      "A_positive_B_reference_negative": 4,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.1676377118644068,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 21,
+          "distinct_retained_positive_events": 40,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 828,
+      "A_negative": 150212,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 828,
+      "B_action_valid": 2560,
+      "B_action_positive": 12,
+      "B_action_negative": 2548,
+      "B_action_invalid": 148480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 30,
+      "B_reference_negative": 150212,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.005481991525423729,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 6,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 6,
+      "distinct_B_positive_retained_events": 6,
+      "valid_B_positive_fraction": 0.0046875,
+      "A_positive_fraction": 0.005481991525423729,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 2240,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 816,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 2,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 828,
+      "A_negative": 147652,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 828,
+      "B_action_valid": 10560,
+      "B_action_positive": 72,
+      "B_action_negative": 10488,
+      "B_action_invalid": 140480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 60,
+      "B_reference_negative": 147652,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.005576508620689655,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 14,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 14,
+      "distinct_B_positive_retained_events": 14,
+      "valid_B_positive_fraction": 0.006818181818181818,
+      "A_positive_fraction": 0.005576508620689655,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 9920,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 756,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 14,
+          "distinct_retained_positive_events": 14,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 828,
+      "A_negative": 142532,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 828,
+      "B_action_valid": 13760,
+      "B_action_positive": 100,
+      "B_action_negative": 13660,
+      "B_action_invalid": 137280,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "B_reference_negative": 142532,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.005775669642857143,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 16,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 16,
+      "distinct_B_positive_retained_events": 16,
+      "valid_B_positive_fraction": 0.007267441860465116,
+      "A_positive_fraction": 0.005775669642857143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 13120,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 12800,
+          "B_valid_missing": 960,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 728,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 16,
+          "distinct_retained_positive_events": 16,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 192,
+      "A_negative": 150848,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 192,
+      "B_action_valid": 2560,
+      "B_action_positive": 4,
+      "B_action_negative": 2556,
+      "B_action_invalid": 148480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 30,
+      "B_reference_negative": 150848,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.001271186440677966,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 2,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 2,
+      "distinct_B_positive_retained_events": 2,
+      "valid_B_positive_fraction": 0.0015625,
+      "A_positive_fraction": 0.001271186440677966,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 2240,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 1920,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 2560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 188,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 2,
+          "distinct_retained_positive_events": 2,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 4,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 192,
+      "A_negative": 148288,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 192,
+      "B_action_valid": 10560,
+      "B_action_positive": 16,
+      "B_action_negative": 10544,
+      "B_action_invalid": 140480,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 60,
+      "B_reference_negative": 148288,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.001293103448275862,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 8,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 8,
+      "distinct_B_positive_retained_events": 8,
+      "valid_B_positive_fraction": 0.0015151515151515152,
+      "A_positive_fraction": 0.001293103448275862,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 9920,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 9280,
+          "B_valid_missing": 1280,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 10560,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 176,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 8,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 192,
+      "A_negative": 143168,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 192,
+      "B_action_valid": 13760,
+      "B_action_positive": 24,
+      "B_action_negative": 13736,
+      "B_action_invalid": 137280,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "cooling",
+      "horizon_s": 120,
+      "B_reference_negative": 143168,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.0013392857142857143,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "B_positive_numeric_processes": 10,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 10,
+      "distinct_B_positive_retained_events": 10,
+      "valid_B_positive_fraction": 0.0017441860465116279,
+      "A_positive_fraction": 0.0013392857142857143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "temperature_measurement": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 13120,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 12480,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 12800,
+          "B_valid_missing": 960,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 13760,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 168,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 10,
+          "distinct_retained_positive_events": 10,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 151040,
+      "A_positive": 960,
+      "A_negative": 150080,
+      "B_reference_valid": 151040,
+      "B_reference_positive": 960,
+      "B_action_valid": 0,
+      "B_action_positive": 0,
+      "B_action_negative": 0,
+      "B_action_invalid": 151040,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 30,
+      "B_reference_negative": 150080,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.006355932203389831,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [],
+      "B_positive_numeric_processes": 0,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 0,
+      "distinct_B_positive_retained_events": 0,
+      "valid_B_positive_fraction": null,
+      "A_positive_fraction": 0.006355932203389831,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [],
+      "A_positive_without_legal_B": 960,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.0,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 148480,
+      "A_positive": 960,
+      "A_negative": 147520,
+      "B_reference_valid": 148480,
+      "B_reference_positive": 960,
+      "B_action_valid": 24000,
+      "B_action_positive": 160,
+      "B_action_negative": 23840,
+      "B_action_invalid": 127040,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 60,
+      "B_reference_negative": 147520,
+      "B_reference_invalid": 2560,
+      "B_reference_positive_fraction": 0.00646551724137931,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213
+      ],
+      "B_positive_numeric_processes": 12,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 12,
+      "distinct_B_positive_retained_events": 12,
+      "valid_B_positive_fraction": 0.006666666666666667,
+      "A_positive_fraction": 0.00646551724137931,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 23680,
+          "B_valid_missing": 320,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 24000,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 800,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15889830508474576,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 12,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "validation_selection",
+      "total_samples": 151040,
+      "A_valid": 143360,
+      "A_positive": 960,
+      "A_negative": 142400,
+      "B_reference_valid": 143360,
+      "B_reference_positive": 960,
+      "B_action_valid": 23360,
+      "B_action_positive": 160,
+      "B_action_negative": 23200,
+      "B_action_invalid": 127680,
+      "physical_event_count": 32,
+      "retained_event_count": 32,
+      "kind": "control",
+      "horizon_s": 120,
+      "B_reference_negative": 142400,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.006696428571428571,
+      "seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "numeric_processes": 72,
+      "B_positive_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213
+      ],
+      "B_positive_numeric_processes": 12,
+      "distinct_physical_events": 16,
+      "distinct_B_positive_events": 12,
+      "distinct_B_positive_retained_events": 12,
+      "valid_B_positive_fraction": 0.00684931506849315,
+      "A_positive_fraction": 0.006696428571428571,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "temperature_measurement": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 145120,
+          "all_root_missing": 5920
+        },
+        "contact": {
+          "B_valid_available": 22080,
+          "B_valid_missing": 1280,
+          "all_root_available": 139200,
+          "all_root_missing": 11840
+        },
+        "sensor_error": {
+          "B_valid_available": 22720,
+          "B_valid_missing": 640,
+          "all_root_available": 140800,
+          "all_root_missing": 10240
+        },
+        "nominal": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 23360,
+          "B_valid_missing": 0,
+          "all_root_available": 151040,
+          "all_root_missing": 0
+        }
+      },
+      "B_negative_seed_groups": [
+        20208,
+        20209,
+        20210,
+        20211,
+        20212,
+        20213,
+        20214,
+        20215
+      ],
+      "A_positive_without_legal_B": 800,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15466101694915255,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 12,
+          "valid_negative_seed_groups": 8
+        },
+        "minimum": {
+          "positive_seed_groups": 4,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 8,
+          "valid_negative_seed_groups": 6
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 3624960,
+      "A_valid": 3624960,
+      "A_positive": 1850,
+      "A_negative": 3623110,
+      "B_reference_valid": 3624960,
+      "B_reference_positive": 1834,
+      "B_action_valid": 531840,
+      "B_action_positive": 268,
+      "B_action_negative": 531572,
+      "B_action_invalid": 3093120,
+      "physical_event_count": 730,
+      "retained_event_count": 692,
+      "kind": "thermal",
+      "horizon_s": 30,
+      "B_reference_negative": 3623126,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.0005059366172316384,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 61,
+      "distinct_physical_events": 365,
+      "distinct_B_positive_events": 106,
+      "distinct_B_positive_retained_events": 106,
+      "valid_B_positive_fraction": 0.0005039109506618532,
+      "A_positive_fraction": 0.000510350459039548,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 490560,
+          "B_valid_missing": 41280,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 502080,
+          "B_valid_missing": 29760,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 504960,
+          "B_valid_missing": 26880,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 485760,
+          "B_valid_missing": 46080,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 489600,
+          "B_valid_missing": 42240,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 531840,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 1578,
+      "A_positive_B_reference_negative": 16,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.14671610169491525,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 61,
+          "distinct_retained_positive_events": 106,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 3624960,
+      "A_valid": 3563520,
+      "A_positive": 1850,
+      "A_negative": 3561670,
+      "B_reference_valid": 3563520,
+      "B_reference_positive": 1834,
+      "B_action_valid": 636480,
+      "B_action_positive": 306,
+      "B_action_negative": 636174,
+      "B_action_invalid": 2988480,
+      "physical_event_count": 730,
+      "retained_event_count": 692,
+      "kind": "thermal",
+      "horizon_s": 60,
+      "B_reference_negative": 3561686,
+      "B_reference_invalid": 61440,
+      "B_reference_positive_fraction": 0.0005146596623563218,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 68,
+      "distinct_physical_events": 365,
+      "distinct_B_positive_events": 122,
+      "distinct_B_positive_retained_events": 122,
+      "valid_B_positive_fraction": 0.0004807692307692308,
+      "A_positive_fraction": 0.0005191496048850575,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 600000,
+          "B_valid_missing": 36480,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 610560,
+          "B_valid_missing": 25920,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 611040,
+          "B_valid_missing": 25440,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 581760,
+          "B_valid_missing": 54720,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 588480,
+          "B_valid_missing": 48000,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 636480,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 1540,
+      "A_positive_B_reference_negative": 16,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.17558262711864406,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 68,
+          "distinct_retained_positive_events": 122,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 3624960,
+      "A_valid": 3440640,
+      "A_positive": 1850,
+      "A_negative": 3438790,
+      "B_reference_valid": 3440640,
+      "B_reference_positive": 1834,
+      "B_action_valid": 607680,
+      "B_action_positive": 306,
+      "B_action_negative": 607374,
+      "B_action_invalid": 3017280,
+      "physical_event_count": 730,
+      "retained_event_count": 692,
+      "kind": "thermal",
+      "horizon_s": 120,
+      "B_reference_negative": 3438806,
+      "B_reference_invalid": 184320,
+      "B_reference_positive_fraction": 0.0005330403645833333,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 68,
+      "distinct_physical_events": 365,
+      "distinct_B_positive_events": 122,
+      "distinct_B_positive_retained_events": 122,
+      "valid_B_positive_fraction": 0.0005035545023696682,
+      "A_positive_fraction": 0.000537690662202381,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 580800,
+          "B_valid_missing": 26880,
+          "all_root_available": 3448320,
+          "all_root_missing": 176640
+        },
+        "temperature_measurement": {
+          "B_valid_available": 588480,
+          "B_valid_missing": 19200,
+          "all_root_available": 3487680,
+          "all_root_missing": 137280
+        },
+        "flow": {
+          "B_valid_available": 587040,
+          "B_valid_missing": 20640,
+          "all_root_available": 3482880,
+          "all_root_missing": 142080
+        },
+        "contact": {
+          "B_valid_available": 556800,
+          "B_valid_missing": 50880,
+          "all_root_available": 3340800,
+          "all_root_missing": 284160
+        },
+        "sensor_error": {
+          "B_valid_available": 567840,
+          "B_valid_missing": 39840,
+          "all_root_available": 3379200,
+          "all_root_missing": 245760
+        },
+        "nominal": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 607680,
+          "B_valid_missing": 0,
+          "all_root_available": 3624960,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 1540,
+      "A_positive_B_reference_negative": 16,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.1676377118644068,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 68,
+          "distinct_retained_positive_events": 122,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 2336,
+      "A_negative": 450784,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 2336,
+      "B_action_valid": 7680,
+      "B_action_positive": 38,
+      "B_action_negative": 7642,
+      "B_action_invalid": 445440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 30,
+      "B_reference_negative": 450784,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.005155367231638418,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 19,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 19,
+      "distinct_B_positive_retained_events": 19,
+      "valid_B_positive_fraction": 0.0049479166666666664,
+      "A_positive_fraction": 0.005155367231638418,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 6720,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2298,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 12,
+          "positive_numeric_processes": 19,
+          "distinct_retained_positive_events": 19,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 1,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 2336,
+      "A_negative": 443104,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 2336,
+      "B_action_valid": 31680,
+      "B_action_positive": 176,
+      "B_action_negative": 31504,
+      "B_action_invalid": 421440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 60,
+      "B_reference_negative": 443104,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.005244252873563219,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 43,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 43,
+      "distinct_B_positive_retained_events": 43,
+      "valid_B_positive_fraction": 0.005555555555555556,
+      "A_positive_fraction": 0.005244252873563219,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 29760,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2160,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 43,
+          "distinct_retained_positive_events": 43,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 2336,
+      "A_negative": 427744,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 2336,
+      "B_action_valid": 41280,
+      "B_action_positive": 248,
+      "B_action_negative": 41032,
+      "B_action_invalid": 411840,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "B_reference_negative": 427744,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.005431547619047619,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 47,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 47,
+      "distinct_B_positive_retained_events": 47,
+      "valid_B_positive_fraction": 0.006007751937984496,
+      "A_positive_fraction": 0.005431547619047619,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 39360,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 38400,
+          "B_valid_missing": 2880,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2088,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 24,
+          "positive_numeric_processes": 47,
+          "distinct_retained_positive_events": 47,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 576,
+      "A_negative": 452544,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 576,
+      "B_action_valid": 7680,
+      "B_action_positive": 12,
+      "B_action_negative": 7668,
+      "B_action_invalid": 445440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 30,
+      "B_reference_negative": 452544,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.001271186440677966,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 6,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 6,
+      "distinct_B_positive_retained_events": 6,
+      "valid_B_positive_fraction": 0.0015625,
+      "A_positive_fraction": 0.001271186440677966,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 6720,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 5760,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 7680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 564,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.01694915254237288,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 6,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 6,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 2,
+          "positive_numeric_processes": 6,
+          "distinct_retained_positive_events": 14,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 576,
+      "A_negative": 444864,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 576,
+      "B_action_valid": 31680,
+      "B_action_positive": 40,
+      "B_action_negative": 31640,
+      "B_action_invalid": 421440,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 60,
+      "B_reference_negative": 444864,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.001293103448275862,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 20,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 20,
+      "distinct_B_positive_retained_events": 20,
+      "valid_B_positive_fraction": 0.0012626262626262627,
+      "A_positive_fraction": 0.001293103448275862,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 29760,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 27840,
+          "B_valid_missing": 3840,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 31680,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 536,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.06991525423728813,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 12,
+          "positive_numeric_processes": 20,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 576,
+      "A_negative": 429504,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 576,
+      "B_action_valid": 41280,
+      "B_action_positive": 60,
+      "B_action_negative": 41220,
+      "B_action_invalid": 411840,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "cooling",
+      "horizon_s": 120,
+      "B_reference_negative": 429504,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.0013392857142857143,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 26,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 26,
+      "distinct_B_positive_retained_events": 26,
+      "valid_B_positive_fraction": 0.0014534883720930232,
+      "A_positive_fraction": 0.0013392857142857143,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "temperature_measurement": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 39360,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 37440,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 38400,
+          "B_valid_missing": 2880,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 41280,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 516,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.09110169491525423,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 26,
+          "distinct_retained_positive_events": 26,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 453120,
+      "A_positive": 2880,
+      "A_negative": 450240,
+      "B_reference_valid": 453120,
+      "B_reference_positive": 2880,
+      "B_action_valid": 0,
+      "B_action_positive": 0,
+      "B_action_negative": 0,
+      "B_action_invalid": 453120,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 30,
+      "B_reference_negative": 450240,
+      "B_reference_invalid": 0,
+      "B_reference_positive_fraction": 0.006355932203389831,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 0,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 0,
+      "distinct_B_positive_retained_events": 0,
+      "valid_B_positive_fraction": null,
+      "A_positive_fraction": 0.006355932203389831,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 0,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2880,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.0,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "passed": false
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 445440,
+      "A_positive": 2880,
+      "A_negative": 442560,
+      "B_reference_valid": 445440,
+      "B_reference_positive": 2880,
+      "B_action_valid": 72000,
+      "B_action_positive": 476,
+      "B_action_negative": 71524,
+      "B_action_invalid": 381120,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 60,
+      "B_reference_negative": 442560,
+      "B_reference_invalid": 7680,
+      "B_reference_positive_fraction": 0.00646551724137931,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 36,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 36,
+      "distinct_B_positive_retained_events": 36,
+      "valid_B_positive_fraction": 0.006611111111111111,
+      "A_positive_fraction": 0.00646551724137931,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 71040,
+          "B_valid_missing": 960,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 72000,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2404,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15889830508474576,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 36,
+          "distinct_retained_positive_events": 36,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    },
+    {
+      "split": "final_test",
+      "total_samples": 453120,
+      "A_valid": 430080,
+      "A_positive": 2880,
+      "A_negative": 427200,
+      "B_reference_valid": 430080,
+      "B_reference_positive": 2880,
+      "B_action_valid": 70080,
+      "B_action_positive": 476,
+      "B_action_negative": 69604,
+      "B_action_invalid": 383040,
+      "physical_event_count": 96,
+      "retained_event_count": 96,
+      "kind": "control",
+      "horizon_s": 120,
+      "B_reference_negative": 427200,
+      "B_reference_invalid": 23040,
+      "B_reference_positive_fraction": 0.006696428571428571,
+      "numeric_processes": 216,
+      "B_positive_numeric_processes": 36,
+      "distinct_physical_events": 48,
+      "distinct_B_positive_events": 36,
+      "distinct_B_positive_retained_events": 36,
+      "valid_B_positive_fraction": 0.006792237442922375,
+      "A_positive_fraction": 0.006696428571428571,
+      "available_sensor_counts_in_valid_B": {
+        "qualified": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "temperature_measurement": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "flow": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 435360,
+          "all_root_missing": 17760
+        },
+        "contact": {
+          "B_valid_available": 66240,
+          "B_valid_missing": 3840,
+          "all_root_available": 417600,
+          "all_root_missing": 35520
+        },
+        "sensor_error": {
+          "B_valid_available": 68160,
+          "B_valid_missing": 1920,
+          "all_root_available": 422400,
+          "all_root_missing": 30720
+        },
+        "nominal": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "cvae_raw": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        },
+        "history_assimilated": {
+          "B_valid_available": 70080,
+          "B_valid_missing": 0,
+          "all_root_available": 453120,
+          "all_root_missing": 0
+        }
+      },
+      "A_positive_without_legal_B": 2404,
+      "A_positive_B_reference_negative": 0,
+      "B_positive_A_negative": 0,
+      "B_action_valid_fraction": 0.15466101694915255,
+      "gate": {
+        "actual": {
+          "positive_seed_groups": 18,
+          "positive_numeric_processes": 36,
+          "distinct_retained_positive_events": 36,
+          "valid_negative_seed_groups": 24
+        },
+        "minimum": {
+          "positive_seed_groups": 8,
+          "positive_numeric_processes": 12,
+          "distinct_retained_positive_events": 20,
+          "valid_negative_seed_groups": 12
+        },
+        "deficits": {
+          "positive_seed_groups": 0,
+          "positive_numeric_processes": 0,
+          "distinct_retained_positive_events": 0,
+          "valid_negative_seed_groups": 0
+        },
+        "passed": true
+      }
+    }
+  ],
+  "passed_cells": 35,
+  "failed_cells": 13,
+  "coverage_verdict": "LIMITED",
+  "B4_B1b_full_domain_fitting_allowed": false,
+  "engineering_acceptance": "Pending independent counts, original-source replay, final tests and resource ledger. Coverage alone never grants fitting permission.",
+  "limited_protocol_automatically_authorized": false,
+  "cross_split_fingerprint_conflicts": [],
+  "all640_noise_pairs_labels_identical": true,
+  "derived_and_source_data_bytes": 6343211686,
+  "private_physical_source_bytes": 599126869,
+  "public_derived_data_bytes": 5744084817,
+  "public_derived_cap_bytes": 6000000000,
+  "independent_counts": {
+    "conditions": 1280,
+    "history_frames": 459520,
+    "sampled_roots": 75520,
+    "available_readings": 621376000,
+    "physical_label_cells": 81100800,
+    "sample_rows": 39874560,
+    "base_values": 1129779200,
+    "action_values": 518369280,
+    "events": 2754,
+    "original_measurements_recomputed": 1825280,
+    "complete_return_checks_recomputed": 10600960
+  },
+  "predictor_fits": 0,
+  "CVAE_updates": 0,
+  "PPO_updates": 0,
+  "LLM_calls": 0,
+  "denominators": "Sample rows correlated; deduplicated retained event keys=(numeric fingerprint,task,start,end). Separate counts for A endpoints and legal B; events across horizons never summed as independent.",
+  "final_test_seal": "Final row labels, process arrays, public histories and continuous per-process diagnostics remain700/600 at source. Released statistics only; no predictor score or model selection.",
+  "sealed_full_coverage": {
+    "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/sealed-full-coverage.json",
+    "sha256": "a0709ce4eaff3c1d7254bbd7b793caf9cdcf94fb22edbd606d68c5d55a26836d",
+    "exported": false
+  }
+}

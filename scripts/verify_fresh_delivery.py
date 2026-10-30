@@ -26,7 +26,8 @@ def main():
             need((e/name).stat().st_size==row['bytes'] and sha(e/name)==row['sha256'],'Every extracted artifact bytes')
             need('final_test' not in name and ('sealed' not in name or name=='report/sealed-diagnostic-receipt.json'),
                 'No final original or sealed evaluator file delivered; hash-only receipt allowed')
-            need(not name.startswith('jobs/final-'),'Final per-seed event counts stay in sealed original logs')
+            need(not(name.startswith('jobs/final-') and Path(name).suffix in ('.out','.err')),
+                'Final per-seed event counts stay in sealed original logs; public correction text retained')
     archives=[]
     latest={}
     manifests=[p for p in b.glob('*-manifest.json') if 'created_utc' in read(p)]
@@ -47,7 +48,11 @@ def main():
     protected=read(e/'protected-baseline.json');allowed={'.github/workflows/cpu-checks.yml','CURRENT_RESEARCH.md','README.md'}
     unchanged=0
     for name,row in protected['files'].items():
-        if name in allowed:continue
+        if name in allowed:
+            snapshot=e/{'.github/workflows/cpu-checks.yml':'baseline-cpu-checks.yml',
+                'CURRENT_RESEARCH.md':'baseline-CURRENT_RESEARCH.md','README.md':'baseline-README.md'}[name]
+            need(sha(snapshot)==row['sha256'] and snapshot.stat().st_size==row['bytes'],'Exact original entry snapshot: '+name)
+            continue
         need(sha(root/name)==row['sha256'] and (root/name).stat().st_size==row['bytes'],'Old evidence/code must remain exact: '+name)
         unchanged+=1
     old=root/'research/2026-10-30-m12c1b4b0-data'

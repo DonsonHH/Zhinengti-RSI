@@ -34,6 +34,7 @@ class FreshExportSealTests(unittest.TestCase):
         (root/'jobs/final-v5-1_40.out').write_text('PRIVATE_FINAL_SEED_EVENTS=12',encoding='utf-8')
         (root/'jobs/final-v5-1_40.err').write_bytes(b'')
         (root/'jobs/package-final-log-seal-correction.txt').write_text('public cancellation explanation',encoding='utf-8')
+        (root/'jobs/final-audit-version-correction.txt').write_text('public audit version explanation',encoding='utf-8')
         (root/'jobs/package-99.out').write_text('live packaging output',encoding='utf-8')
         (root/'final/gate/full-tests.json').write_text('{}',encoding='utf-8')
         for name in ('cluster-start.txt','environment-start.txt'):(root/name).write_text('fixture',encoding='utf-8')
@@ -55,7 +56,8 @@ class FreshExportSealTests(unittest.TestCase):
             with tarfile.open(out/'delivery.tar.gz','r:gz') as tar:
                 names=tar.getnames()
                 self.assertIn('jobs/package-final-log-seal-correction.txt',names)
-                self.assertFalse(any(name.startswith('jobs/final-') for name in names))
+                self.assertIn('jobs/final-audit-version-correction.txt',names)
+                self.assertFalse(any(name.startswith('jobs/final-') and Path(name).suffix in ('.out','.err') for name in names))
                 self.assertNotIn('jobs/package-99.out',names)
                 self.assertFalse(any(b'PRIVATE_FINAL_SEED_EVENTS' in tar.extractfile(v).read() for v in tar.getmembers() if v.isfile()))
 

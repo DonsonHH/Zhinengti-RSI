@@ -28,7 +28,7 @@ def main():
     for folder in ('final/gate','jobs'):
         for path in (r/folder).iterdir():
             if folder=='jobs' and path.name.startswith('package-') and path.suffix in ('.out','.err'):continue
-            if folder=='jobs' and path.name.startswith('final-'):
+            if folder=='jobs' and path.name.startswith('final-') and path.suffix in ('.out','.err'):
                 if path.is_file():
                     sealed_final_logs.append({'path':str(path),'bytes':path.stat().st_size,'sha256':sha(path),'content_exported':False})
                     if path.suffix=='.err':need(path.stat().st_size==0,'Final jobs have no unhandled stderr')
