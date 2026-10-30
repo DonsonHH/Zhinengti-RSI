@@ -1,0 +1,354 @@
+{
+  "protocol": "B4-B1b-Limited-v1",
+  "baseline": "ee2e262fea57707183a6b16a2615875af789af0a",
+  "status": "design_for_independent_review_before_any_predictor_fit",
+  "old_protocol_unchanged": "C1-B4-B1-minimal-v3",
+  "original_protocol_SHA256": "d049c0d39663ce35824bfe61059a00c7c48f030d543386511e7bda8c65c77e5e",
+  "original_manifest_SHA256": "2580b46da58320e4349e149ab13b08f926d64b49ced57808cfc138cdc274b269",
+  "original_checkpoint_SHA256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "cells": [
+    [
+      "thermal",
+      30
+    ],
+    [
+      "thermal",
+      60
+    ],
+    [
+      "thermal",
+      120
+    ],
+    [
+      "electrical",
+      60
+    ],
+    [
+      "electrical",
+      120
+    ],
+    [
+      "control",
+      60
+    ],
+    [
+      "control",
+      120
+    ]
+  ],
+  "cell_weights": [
+    0.14285714285714285,
+    0.14285714285714285,
+    0.14285714285714285,
+    0.14285714285714285,
+    0.14285714285714285,
+    0.14285714285714285,
+    0.14285714285714285
+  ],
+  "excluded_cells": [
+    [
+      "electrical",
+      30
+    ],
+    [
+      "cooling",
+      30
+    ],
+    [
+      "cooling",
+      60
+    ],
+    [
+      "cooling",
+      120
+    ],
+    [
+      "control",
+      30
+    ]
+  ],
+  "scope_selection": {
+    "basis": "User-declared seven cells selected from already published B1a48-cell coverage counts including final coverage. Not selected using predictor scores or final row data.",
+    "post_scope_final_status": "Existing24 final seeds remain score-held-out for this fixed limited protocol, but are not a wholly new scope-blind confirmation.",
+    "new_confirmation_required_for_transfer_claim": true,
+    "new_confirmation_executed_here": false,
+    "claim_limit": "Within the existing synthetic controlled fixture mixture and coverage-selected domain. New seed+unseen-onset/layout confirmation must be separately preregistered before claiming transferable facility prediction."
+  },
+  "splits": {
+    "development": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019,
+      20020,
+      20021,
+      20022,
+      20023
+    ],
+    "validation_calibration": [
+      20200,
+      20201,
+      20202,
+      20203,
+      20204,
+      20205,
+      20206,
+      20207
+    ],
+    "validation_selection": [
+      20208,
+      20209,
+      20210,
+      20211,
+      20212,
+      20213,
+      20214,
+      20215
+    ],
+    "final_test": [
+      20400,
+      20401,
+      20402,
+      20403,
+      20404,
+      20405,
+      20406,
+      20407,
+      20408,
+      20409,
+      20410,
+      20411,
+      20412,
+      20413,
+      20414,
+      20415,
+      20416,
+      20417,
+      20418,
+      20419,
+      20420,
+      20421,
+      20422,
+      20423
+    ]
+  },
+  "labels": {
+    "heads": [
+      "A_physical",
+      "B_action"
+    ],
+    "fit_and_primary_evaluation_cohort": "Both heads use the SAME valid B_action>=0 cohort, with A_physical and B_action stored separately. This tests whether physical anomaly and qualified confirmation differ conditional on a legal opportunity.",
+    "A_all_endpoint_scope": "B1a all-endpoint prevalence is descriptive only; do not extrapolate these heads to illegal/no-opportunity endpoints.",
+    "B_missing": "-1 is excluded, never a negative0.",
+    "retained_event": "Original maximal physical-positive run>=15s; eligible if at least one sampled valid B_action=1 at exact completion. Short/raw events secondary.",
+    "endpoint": "Original30s root grid,30/60/120s exact endpoints and original tick/noise thresholds unchanged.",
+    "no_C": "No whole-episode utility,oracle,repair or hidden-fault input."
+  },
+  "weighting": {
+    "dedup": "Within each split,seed,numeric-process-fingerprint and noise_c choose first manifest condition; duplicate healthy phases removed. Same fingerprint across splits stops.",
+    "hierarchy": "Equal seed weight;equal unique physical process within seed;equal two noise versions within process;each condition divides its weight across its valid cohort rows. Zero-valid condition is a gate failure, not silent drop.",
+    "preprocessing": "Original float32 base85/completion13 zero padding plus explicit masks. No learned imputation. Weighted mean/std learned on development only;std<1e-8 set1. Append59root onehots and16public-Pod onehots identically to all LR views; categorical0/1 also development-scaled.",
+    "no_oversampling": true
+  },
+  "features": {
+    "base_schema": "b4b0-opportunity-v1;85+13 columns",
+    "clock_basis": "Onehot of each frozen30s root30..1770 (59);onehot known public pod0..15 (16). Knots not chosen at fault onsets.",
+    "time_lr_base": [
+      "root_time_s",
+      "pod",
+      "cdu_branch",
+      "power_branch",
+      "service_s",
+      "deadline_s",
+      "last_check_available",
+      "last_check_s",
+      "inspection_age_s",
+      "qualified_history_0.available",
+      "qualified_history_0.time_s",
+      "qualified_history_0.age_s",
+      "qualified_history_1.available",
+      "qualified_history_1.time_s",
+      "qualified_history_1.age_s",
+      "qualified_history_2.available",
+      "qualified_history_2.time_s",
+      "qualified_history_2.age_s"
+    ],
+    "time_lr_action": "All13completion columns EXCEPT bounded_trend_at_completion_c;no measured value/alarm/velocity/power/flow/CVAE channel. Profession and horizon fixed by head.",
+    "public_lr": "All85+13 public columns except cvae_raw.* and history_assimilated.*;same clock/pod bases as time_lr.",
+    "public_raw_lr": "Thermal only:public_lr plus all6cvae_raw columns.",
+    "public_assimilated_lr": "Thermal only:public_lr plus all6history_assimilated columns.",
+    "public_all_lr": "Thermal only:public_lr plus both6-column channels.",
+    "forbidden": [
+      "seed",
+      "scenario",
+      "fault_start",
+      "event_id",
+      "onset",
+      "future_value",
+      "future_measurement",
+      "future_alarm",
+      "process_fingerprint",
+      "C",
+      "oracle"
+    ]
+  },
+  "candidates": {
+    "constant": "Development weighted empirical frequency with fixed Laplace alpha=beta=1, effective counts rescaled to validN;not recalibrated.",
+    "scalars": [
+      "professional_hold",
+      "bounded_trend",
+      "nominal_physical",
+      "frozen_CVAE_raw_thermal_only",
+      "frozen_CVAE_assimilated_thermal_only"
+    ],
+    "scalar_definition": "Thermal score=max((temperature-65)/20,0):hold uses public temperature_measurement,trend uses original bounded completion trend,nominal uses root nominal,raw/cache each root channel. Nonthermal hold=max((contact-60)/30,0) or indicator(abs(sensor_error)>1);trend/nominal alias professional hold explicitly (no nonexistent nonthermal forecast). Missing yields score0 with missingness reported. No coefficients searched.",
+    "LR_views": [
+      "time_lr",
+      "public_lr",
+      "public_raw_lr_thermal",
+      "public_assimilated_lr_thermal",
+      "public_all_lr_thermal"
+    ],
+    "L2": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "LR_fit_slots": 138,
+    "count": "14heads*(time+public)*3 +6thermalheads*(raw+assimilated+both)*3=138; failed fit consumes slot, no rescue hyperparameters.",
+    "optimizer": {
+      "framework": "Torch2.6 CPUfloat64",
+      "name": "LBFGS",
+      "lr": 1.0,
+      "history_size": 10,
+      "max_iter": 300,
+      "max_eval": 400,
+      "tolerance_grad": 1e-06,
+      "tolerance_change": 1e-09,
+      "line_search_fn": "strong_wolfe",
+      "threads": 1,
+      "initialization": "all coefficients and intercept zero"
+    },
+    "objective": "Weighted mean binary logloss + lambda/2*squared standardized slope norm;intercept unpenalized. Stream batches of16384;accumulate gradients across all batches per closure before optimizer step. Hard400closure limit;nonfinite/limit failure recorded without new candidate.",
+    "GRU_CVAE_PPO_training": 0,
+    "LLM_calls": 0
+  },
+  "calibration": {
+    "split": "validation_calibration only",
+    "method": "p=sigmoid(softplus(z)*score+b);weighted logloss+a^2/2,intercept unpenalized;start a=1,b=0;TorchCPUfloat64LBFGS lr1,history10,max_iter200,max_eval300,tolgrad1e-6,tolchange1e-9,strong_wolfe,threads1. LR raw score=logit. All candidate scores calibrated identically;frequency constant unchanged.",
+    "max_calibrators": 192,
+    "failure": "Record consumes fixed slot;no alternate method;exclude failed candidate before selection."
+  },
+  "selection": {
+    "split": "validation_selection only",
+    "ranking": [
+      "seed_process_macro_Brier",
+      "negative_eligible_event_recall_at_fixedFPR",
+      "lambda_then_family_lexical"
+    ],
+    "threshold": "Unweighted selection negatives only, strict calibrated score>threshold. threshold=descending_negative_scores[floor(0.01*Nnegative)] (0-based);ties conservatively rejected. Exactlyfixed1%empirical FPR budget.",
+    "per_view": "Select its L2 by ranking;freeze selected coefficients/scaler/calibrator/threshold/SHA before final open.",
+    "primary_full": "public_all_lr for thermal,public_lr for electrical/control;no replacing this primary family using final or selection scalar results.",
+    "time_comparator": "L2-selected time_lr;must be beaten for any device-information claim.",
+    "fixed_comparator": "Best of constant,professional_hold,bounded_trend,nominal_physical on selection ranking;freeze before final.",
+    "final_views": "Only each view preselected L2 and each fixed scalar;unselected L2 never scored on final. Final test exactlyonce after receipt."
+  },
+  "metrics": {
+    "primary": [
+      "Equal7-cell mean of seed/process-macro Brier on B_action",
+      "Equal7-cell eligible retained-event recall at frozen1%selectionFPR budget"
+    ],
+    "event_macro": "Per noise condition,each eligible physical retained event counted once regardless root/horizon repeat. Average event recalls within process,then both noise versions,then mean processes witheligibleevents withinseed,then mean eligible seeds. Report denominator and no-event processes/seeds separately.",
+    "probability_macro": "Equal noise within unique process,equal process withinseed,equal seed;calibration/reliability/logloss/AUPRC use those row weights.",
+    "secondary": [
+      "A_physical separately on same legal cohort",
+      "B_reference same as B_action on that cohort",
+      "ActualFPR and per-seed FPR",
+      "Weighted AUPRC with exactscore ties grouped",
+      "LogLoss clipped[1e-6,1-1e-6]",
+      "10fixed bins[0,.1,..,1] reliability/ECE",
+      "Per-seed and cell metrics",
+      "Per-noise/process eligible and all physical event counts",
+      "Alarms per1800s condition and per valid opportunity",
+      "Repeated alarms beyond firstper task and beyond firstper eligible retained event",
+      "Unique(task,completion) candidates and cross-horizon duplicate alarm keys;not simultaneously executable schedule",
+      "Inference/training/RSS/storage cost",
+      "Nonfinal concrete failure examples;final aggregate failure categories only"
+    ]
+  },
+  "uncertainty": {
+    "unit": "Independent seed group,all correlated scenarios/phases/noises staytogether. Never bootstrap rows/events as independent.",
+    "replicates": 2000,
+    "seed": 770030,
+    "aggregate": "Paired final24seed bootstrap95%percentile,7cell equalweights;resample same seed indices across all model views and cells. Missing eligible-event cells keep undefined with counts;no zero-as-perfect.",
+    "limited_bounds": "Simultaneous lower quantile0.05/28 for7cells*2gainmetrics*2comparators(time andfixed). Predeclared cells only.",
+    "CVAE_increment_bounds": "Thermal3cells*3addedviews(raw,cache,both)*2gains =18 simultaneous lower quantile0.05/18 versus public_lr. Separately report raw/cache/both and selection-frozenL2. This is representation-conditional prediction increment,not physical causal attribution."
+  },
+  "GO_NO_GO": {
+    "GO_limited_domain": "Across declared7cells,primary full gains>=0.05 absoluteeventrecall AND>=5%relativeBrier against BOTH time and selectedfixed;paired95%CI excludes0forbothcomparators/bothmetrics;overallFPR<=.02;each seedFPR<=.05 where>=100neg;no cellrecall loss>.05. Supports proposal of a separate limited B4-C value experiment only;not whole-facility/closed-loop benefit.",
+    "LIMITED_GO": "At leastone of7predeclared cells meets same effect/FPR thresholds againstbothcomparators andall4gain simultaneouslowerbounds quantile.05/28>0;no final-defined subgroupor modelreplacement.",
+    "NO_GO": "No supported incremental value overtime,material FPRcost,source/causality/seal failure,or no fixed-budget successfulfit. Preserve results.",
+    "CVAE_claim": "Require predeclared multiplicity-controlled raw/cache/both increment;rawalone not credited for cache/history measurement effects.",
+    "transfer": "EvenGOdoesnot establishunseen-onset/layout/real-site transfer;newblindconfirmation required before thatclaim."
+  },
+  "seal": {
+    "beforefit": "Independent protocol review receipt with protocolSHA,source consistency,coverage authority and actualTorch gates required. No final row cache or modelscore allowed.",
+    "phases": "Prepare development/calibration/selection cache only;fitdevelopment;calibratecalibration;selectthreshold/modelselection;freeze receipt/artifactSHA;then prepare/score final once;raw final arrays andper-row scores stayprivate.",
+    "correctness_repair": "Preserve failures andversioncode. Afterfinalopens,no refit/calibration/threshold/familychange. Failed final export may be repaired from same frozen predictions;do not rescore newmodel."
+  },
+  "action_indexed": {
+    "scope": "Development24seedgroups only (480oldconditions);never final;not used in model selection.",
+    "definition": "At every original5s public decision root,enumerate current legal extraCHECK geometry and actualprotectedTour dispatch;exact candidate finish,originalrole/access/service/travel/cooldown/agentquota/globalone-extra/whole-returnconstraints. Eachcandidate evaluated independently,not all executabletogether.",
+    "labels": "OriginalB_reference at exactfinish tick;originalA/retainedevent separate. No any-anomaly-in-window shortcut.",
+    "comparisons": [
+      "All3595sroots action-indexed",
+      "Same59original30sroots action-indexed",
+      "Historicalfixed30/60/120samples same59roots"
+    ],
+    "report": [
+      "Perrole legal/positive/uniqueevents/seeds/processes",
+      "ETA bins(0,30],(30,60],(60,120],(120,1800]",
+      "Control valid30s change with explicit root-grid contrast",
+      "Cooling event eligibility change",
+      "Feature/label/ID storage estimates forflat98float32 versus factoredroot+action representation",
+      "Wall/RSS/source dependencies"
+    ],
+    "newphysics": 0,
+    "newpredictortraining": 0
+  },
+  "resources": {
+    "partition": "cu",
+    "cpus_per_task": 2,
+    "memory_GB": 8,
+    "max_concurrency": 2,
+    "max_minutes_per_allocation": 60,
+    "GPU": 0,
+    "source_preparation_max_allocated_CPU_minutes": 120,
+    "fit_and_calibration_max_allocated_CPU_minutes": 960,
+    "evaluation_audit_max_allocated_CPU_minutes": 480,
+    "action_diagnostic_max_allocated_CPU_minutes": 240,
+    "total_max_allocated_CPU_minutes": 1800,
+    "new_derived_storage_cap_bytes": 4000000000,
+    "batch_rows": 16384,
+    "no_all_samples_float64_copies": true,
+    "source_existing_data_bytes": 6343211686,
+    "newlargephysics": 0
+  },
+  "created_utc": "2026-10-30T07:52:12.827649+00:00"
+}
