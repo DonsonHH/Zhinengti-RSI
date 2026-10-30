@@ -41,7 +41,7 @@ def review(ledger_path,data_root,protocol,manifest):
     for row in allocations:
         state=row['State'];elapsed=float(row['ElapsedRaw']);cpus=int(row['AllocCPUS'] or 0)
         if state.startswith('CANCELLED'):
-            need(elapsed==0 and row['JobID'].split('_')[0] in ('130648','130652','130660','130661','130662','130663'), 'Only documented not-started export/audit-version allocations cancelled')
+            need(elapsed==0 and row['JobID'].split('_')[0] in ('130648','130652','130660','130661','130662','130663','130683','130688','130713'), 'Only documented not-started export/audit-version allocations cancelled')
             cancelled.append(row);continue
         need(state=='COMPLETED' and row['ExitCode']=='0:0','Every executed allocation completed0:0')
         need(row['Partition']=='cu' and cpus==2 and elapsed<=3600 and 'gres/gpu' not in row['AllocTRES'],'Frozen CPU partition/resources/time, no GPU')

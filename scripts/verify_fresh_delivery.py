@@ -24,10 +24,13 @@ def main():
             raw=tar.extractfile(members[name]).read()
             need(len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256'],'Every archive member bytes')
             need((e/name).stat().st_size==row['bytes'] and sha(e/name)==row['sha256'],'Every extracted artifact bytes')
-            need('final_test' not in name and 'sealed' not in name,'No final original or sealed evaluator file delivered')
+            need('final_test' not in name and ('sealed' not in name or name=='report/sealed-diagnostic-receipt.json'),
+                'No final original or sealed evaluator file delivered; hash-only receipt allowed')
+            need(not name.startswith('jobs/final-'),'Final per-seed event counts stay in sealed original logs')
     archives=[]
     latest={}
-    for manifest_path in sorted(b.glob('*-manifest.json')):
+    manifests=[p for p in b.glob('*-manifest.json') if 'created_utc' in read(p)]
+    for manifest_path in sorted(manifests,key=lambda p:read(p)['created_utc']):
         m=read(manifest_path)
         if 'created_utc' not in m:continue
         path=b/'source'/m['archive'];need(sha(path)==m['sha256'],'All immutable source archive SHA')
@@ -50,6 +53,8 @@ def main():
     old=root/'research/2026-10-30-m12c1b4b0-data'
     need(sha(old/'B4-B1冻结协议.json')==PROTOCOL_SHA and sha(old/'B4-B1新数据清单.json')==MANIFEST_SHA,'Original frozen protocol and manifest')
     acceptance=read(e/'final-acceptance.json')
+    need(len(delivery['sealed_final_log_receipts'])==48 and
+        all(not v['content_exported'] for v in delivery['sealed_final_log_receipts']), 'All24 final stdout/stderr pairs sealed; hashes only')
     for name,row in acceptance['bindings'].items():
         need(sha(e/name)==row['sha256'] and (e/name).stat().st_size==row['bytes'],'Acceptance evidence SHA')
     coverage=read(e/'report/coverage.json');table=coverage['coverage_cells'];need(len(table)==48,'Complete48 cells')

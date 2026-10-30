@@ -24,8 +24,8 @@ def main():
     need(sources['source_coverage_SHA']==sha(e/'report/raw-storage.json') and sources['frozen_weights_SHA']==WEIGHTS_SHA,
         'Entire raw source/weights snapshot SHA')
     need(sources['final_permissions_verified'] and sources['raw_files_SHA_verified']>1280*9,'All raw files and final test seal')
-    need(full['success'] and full['tests']>=245 and not(full['failures'] or full['errors'] or full['skipped']),'Final real Torch complete regression including resource timestamp regressions')
-    need(cpu['success'] and cpu['tests']>=30 and not(cpu['failures'] or cpu['errors'] or cpu['skipped']),'Lightweight CPU complete regression including resource timestamp regressions')
+    need(full['success'] and full['tests']>=247 and not(full['failures'] or full['errors'] or full['skipped']),'Final real Torch complete regression including resource timestamps and final-log seal regressions')
+    need(cpu['success'] and cpu['tests']>=32 and not(cpu['failures'] or cpu['errors'] or cpu['skipped']),'Lightweight CPU complete regression including timestamp and export boundary regressions')
     need(cost['status']=='passed' and cost['generated_groups']==64 and cost['GPU_allocations']==0,'Terminal Slurm ledger and resource caps')
     need(coverage['public_derived_data_bytes']<=6*1000**3,'Actual decimal6GB public-derived cap')
     independent=coverage['independent_counts']

@@ -1,0 +1,179 @@
+{
+  "source": "Original unchanged map, fixed Tour and service times, no physical labels or final-test reads",
+  "roots_grid_s": 30,
+  "horizons_s": [
+    30,
+    60,
+    120
+  ],
+  "role_details": [
+    {
+      "role": "thermal",
+      "service_s": [
+        10.0
+      ],
+      "planned_Tour_finish_mod30_counts": {
+        "15": 224,
+        "0": 226,
+        "20": 220,
+        "5": 218,
+        "25": 122,
+        "10": 122
+      },
+      "planned_Tour_finishes_on30s_grid": 226,
+      "first_completions": [
+        {
+          "agent": 0,
+          "task": 0,
+          "dispatch_s": 5,
+          "finish_s": 15
+        },
+        {
+          "agent": 0,
+          "task": 2,
+          "dispatch_s": 15,
+          "finish_s": 30
+        },
+        {
+          "agent": 0,
+          "task": 4,
+          "dispatch_s": 30,
+          "finish_s": 50
+        },
+        {
+          "agent": 0,
+          "task": 6,
+          "dispatch_s": 50,
+          "finish_s": 65
+        }
+      ]
+    },
+    {
+      "role": "electrical",
+      "service_s": [
+        20.0
+      ],
+      "planned_Tour_finish_mod30_counts": {
+        "25": 16,
+        "0": 16,
+        "5": 14,
+        "10": 16,
+        "15": 16,
+        "20": 16
+      },
+      "planned_Tour_finishes_on30s_grid": 16,
+      "first_completions": [
+        {
+          "agent": 12,
+          "task": 128,
+          "dispatch_s": 5,
+          "finish_s": 25
+        },
+        {
+          "agent": 12,
+          "task": 132,
+          "dispatch_s": 25,
+          "finish_s": 60
+        },
+        {
+          "agent": 12,
+          "task": 136,
+          "dispatch_s": 60,
+          "finish_s": 95
+        },
+        {
+          "agent": 12,
+          "task": 140,
+          "dispatch_s": 95,
+          "finish_s": 130
+        }
+      ]
+    },
+    {
+      "role": "cooling",
+      "service_s": [
+        20.0
+      ],
+      "planned_Tour_finish_mod30_counts": {
+        "25": 16,
+        "0": 16,
+        "5": 14,
+        "10": 16,
+        "15": 16,
+        "20": 16
+      },
+      "planned_Tour_finishes_on30s_grid": 16,
+      "first_completions": [
+        {
+          "agent": 14,
+          "task": 144,
+          "dispatch_s": 5,
+          "finish_s": 25
+        },
+        {
+          "agent": 14,
+          "task": 148,
+          "dispatch_s": 25,
+          "finish_s": 60
+        },
+        {
+          "agent": 14,
+          "task": 152,
+          "dispatch_s": 60,
+          "finish_s": 95
+        },
+        {
+          "agent": 14,
+          "task": 156,
+          "dispatch_s": 95,
+          "finish_s": 130
+        }
+      ]
+    },
+    {
+      "role": "control",
+      "service_s": [
+        15.0
+      ],
+      "planned_Tour_finish_mod30_counts": {
+        "20": 56,
+        "5": 50
+      },
+      "planned_Tour_finishes_on30s_grid": 0,
+      "first_completions": [
+        {
+          "agent": 16,
+          "task": 160,
+          "dispatch_s": 5,
+          "finish_s": 20
+        },
+        {
+          "agent": 16,
+          "task": 164,
+          "dispatch_s": 20,
+          "finish_s": 50
+        },
+        {
+          "agent": 16,
+          "task": 168,
+          "dispatch_s": 50,
+          "finish_s": 80
+        },
+        {
+          "agent": 16,
+          "task": 172,
+          "dispatch_s": 80,
+          "finish_s": 110
+        }
+      ]
+    }
+  ],
+  "interpretation": "Control service is15s, not a >30s service obstruction. Protected Tour finishes never align with multiples30; all legal optional CHECK completions that align have minimum60s lead from the latest permitted30s prediction root. Thus fixed exact30s B_action is structurally empty, regardless of faults/seeds/noise. This is temporal sample alignment, not physical normality.",
+  "control_optional_geometry": {
+    "all_legal_extra_checks": 534,
+    "finish_on30s_grid": 156,
+    "minimum_lead_from_latest30s_root_s": 60.0,
+    "minimum_service_plus_travel_s": 30.0,
+    "optional_with30s_aligned_root": 0
+  }
+}

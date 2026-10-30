@@ -25,8 +25,13 @@ test_exact_frozen_inventory_and_disjoint_splits (test_fresh_opportunity.FreshOpp
 test_numeric_conflict_is_across_splits_not_names_or_noise (test_fresh_opportunity.FreshOpportunityTests.test_numeric_conflict_is_across_splits_not_names_or_noise) ... ok
 test_physical_positive_with_no_action_is_missing_not_normal (test_fresh_opportunity.FreshOpportunityTests.test_physical_positive_with_no_action_is_missing_not_normal) ... ok
 test_repeated_positive_rows_do_not_satisfy_event_or_seed_gate (test_fresh_opportunity.FreshOpportunityTests.test_repeated_positive_rows_do_not_satisfy_event_or_seed_gate) ... ok
+test_actual_interval_matches_requested_charge_seconds (test_fresh_resources.FreshResourceTests.test_actual_interval_matches_requested_charge_seconds) ... ok
+test_missing_allocation_timestamps_cannot_prove_concurrency (test_fresh_resources.FreshResourceTests.test_missing_allocation_timestamps_cannot_prove_concurrency) ... ok
+test_reversed_or_inconsistent_times_are_rejected (test_fresh_resources.FreshResourceTests.test_reversed_or_inconsistent_times_are_rejected) ... ok
+test_final_seed_event_log_is_sealed_but_cancellation_reason_preserved (test_fresh_export_seal.FreshExportSealTests.test_final_seed_event_log_is_sealed_but_cancellation_reason_preserved) ... ok
+test_unapproved_final_evaluator_output_cannot_enter_release (test_fresh_export_seal.FreshExportSealTests.test_unapproved_final_evaluator_output_cannot_enter_release) ... ok
 
 ----------------------------------------------------------------------
-Ran 27 tests in 0.716s
+Ran 32 tests in 0.453s
 
 OK
