@@ -29,5 +29,6 @@ jobs:
           python -m unittest discover -s tests -p test_formal_study.py -v
           python -m unittest discover -s tests -p test_information_audit.py -v
           python -m unittest discover -s tests -p test_opportunity_data.py -v
+          python -m unittest discover -s tests -p test_fresh_opportunity.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts
