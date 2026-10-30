@@ -72,7 +72,8 @@
     "post_scope_final_status": "Existing24 final seeds remain score-held-out for this fixed limited protocol, but are not a wholly new scope-blind confirmation.",
     "new_confirmation_required_for_transfer_claim": true,
     "new_confirmation_executed_here": false,
-    "claim_limit": "Within the existing synthetic controlled fixture mixture and coverage-selected domain. New seed+unseen-onset/layout confirmation must be separately preregistered before claiming transferable facility prediction."
+    "claim_limit": "Existing held-out model scores supply coverage-selected exploratory evidence only. Even confirmation on new seeds of the SAME fixture distribution requires a new coverage/scope-blind preregistered test;onset/layout/site transfer requires further confirmation. No new physical data generated here.",
+    "new_confirmation_required_for_same_distribution_claim": true
   },
   "splits": {
     "development": [
@@ -274,7 +275,7 @@
       "Equal7-cell mean of seed/process-macro Brier on B_action",
       "Equal7-cell eligible retained-event recall at frozen1%selectionFPR budget"
     ],
-    "event_macro": "Per noise condition,each eligible physical retained event counted once regardless root/horizon repeat. Average event recalls within process,then both noise versions,then mean processes witheligibleevents withinseed,then mean eligible seeds. Report denominator and no-event processes/seeds separately.",
+    "event_macro": "Within EACH profession/horizon cell,each eligible retained physical event counts once across roots andtasks. Average two noise recalls within process,then processes witheligibleevents withinseed,then eligible seeds;finally equal7cells. Samephysical event may appear in multiple prespecified cells but is not claimed an independent event replicate;shared-seed bootstrap preserves cross-horizon dependence. Cross-horizon de-duplication is only the joint alarm diagnostic.",
     "probability_macro": "Equal noise within unique process,equal process withinseed,equal seed;calibration/reliability/logloss/AUPRC use those row weights.",
     "secondary": [
       "A_physical separately on same legal cohort",
@@ -290,7 +291,8 @@
       "Unique(task,completion) candidates and cross-horizon duplicate alarm keys;not simultaneously executable schedule",
       "Inference/training/RSS/storage cost",
       "Nonfinal concrete failure examples;final aggregate failure categories only"
-    ]
+    ],
+    "zero_event_rule": "Two noise versions must have identical eligibility by immutable original label/mask checks;any mismatch stops. Process withzeroeligibleevents has nullrecall and stays in Brier/FPR/alarm denominators. Seed withzeroeligibleevents has nullrecall;mean only eligible seeds with n reported. Sameeligibility mask for all models;no model-dependent denominator. Bootstrap resamples whole seeds;undefined draws prevent GO rather than zero-fill/resample until favorable."
   },
   "uncertainty": {
     "unit": "Independent seed group,all correlated scenarios/phases/noises staytogether. Never bootstrap rows/events as independent.",
@@ -298,14 +300,15 @@
     "seed": 770030,
     "aggregate": "Paired final24seed bootstrap95%percentile,7cell equalweights;resample same seed indices across all model views and cells. Missing eligible-event cells keep undefined with counts;no zero-as-perfect.",
     "limited_bounds": "Simultaneous lower quantile0.05/28 for7cells*2gainmetrics*2comparators(time andfixed). Predeclared cells only.",
-    "CVAE_increment_bounds": "Thermal3cells*3addedviews(raw,cache,both)*2gains =18 simultaneous lower quantile0.05/18 versus public_lr. Separately report raw/cache/both and selection-frozenL2. This is representation-conditional prediction increment,not physical causal attribution."
+    "CVAE_increment_bounds": "Thermal3cells*3addedviews(raw,cache,both)*2gains =18 simultaneous lower quantile0.05/18 versus public_lr. Separately report raw/cache/both and selection-frozenL2. This is representation-conditional prediction increment,not physical causal attribution.",
+    "post_scope_limit": "All intervals and GO gates are exploratory conditional-on-coverage-selected scope;95% percentile and simultaneous tail rules do not correct scope selection. Do not label them unconditional confirmatory95%coverage or proof of same-distribution/new-seed reliability."
   },
   "GO_NO_GO": {
-    "GO_limited_domain": "Across declared7cells,primary full gains>=0.05 absoluteeventrecall AND>=5%relativeBrier against BOTH time and selectedfixed;paired95%CI excludes0forbothcomparators/bothmetrics;overallFPR<=.02;each seedFPR<=.05 where>=100neg;no cellrecall loss>.05. Supports proposal of a separate limited B4-C value experiment only;not whole-facility/closed-loop benefit.",
-    "LIMITED_GO": "At leastone of7predeclared cells meets same effect/FPR thresholds againstbothcomparators andall4gain simultaneouslowerbounds quantile.05/28>0;no final-defined subgroupor modelreplacement.",
+    "GO_limited_domain": "Across declared7cells,primary full gains>=0.05 absoluteeventrecall AND>=5%relativeBrier against BOTH time and selectedfixed;paired95%CI excludes0forbothcomparators/bothmetrics;overallFPR<=.02;each seedFPR<=.05 where>=100neg;no cellrecall loss>.05. Supports proposal of a separate limited B4-C value experiment only;not whole-facility/closed-loop benefit. This is exploratory prioritization for a separately reviewed B4-C/confirmation protocol;not confirmatory evidence even on same-distribution new seeds.",
+    "LIMITED_GO": "At leastone of7predeclared cells meets same effect/FPR thresholds againstbothcomparators andall4gain simultaneouslowerbounds quantile.05/28>0;no final-defined subgroupor modelreplacement. Exploratory post-scope suggestion only,not confirmation.",
     "NO_GO": "No supported incremental value overtime,material FPRcost,source/causality/seal failure,or no fixed-budget successfulfit. Preserve results.",
     "CVAE_claim": "Require predeclared multiplicity-controlled raw/cache/both increment;rawalone not credited for cache/history measurement effects.",
-    "transfer": "EvenGOdoesnot establishunseen-onset/layout/real-site transfer;newblindconfirmation required before thatclaim."
+    "transfer": "A wholly unused scope-blind seed confirmation is required for reliable same-distribution prediction claims,plus independent unseen-onset/layout/site work for transfer. This run only reports fixed-model evidence on the previously coverage-inventoried final split."
   },
   "seal": {
     "beforefit": "Independent protocol review receipt with protocolSHA,source consistency,coverage authority and actualTorch gates required. No final row cache or modelscore allowed.",
@@ -350,5 +353,9 @@
     "source_existing_data_bytes": 6343211686,
     "newlargephysics": 0
   },
-  "created_utc": "2026-10-30T07:52:12.827649+00:00"
+  "created_utc": "2026-10-30T07:52:12.827649+00:00",
+  "review_changes": [
+    "Explicit post-scope exploratory CI/GO status and same-distribution blind confirmation requirement",
+    "Per-cell event de-duplication and paired-noise/zero-event denominator rule"
+  ]
 }

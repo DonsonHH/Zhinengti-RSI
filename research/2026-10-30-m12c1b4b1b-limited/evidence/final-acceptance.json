@@ -1,0 +1,192 @@
+{
+  "engineering_status": "completed_and_independently_verified",
+  "scientific_recommendation": "NO-GO",
+  "baseline": "ee2e262fea57707183a6b16a2615875af789af0a",
+  "protocol_SHA256": "45b2eec45461eb89d2d629aa6173ccf6ae9d05c0479fdeee91e676b13c7a9ef3",
+  "selection_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345",
+  "requirements": [
+    {
+      "requirement": "source_and_four_facts",
+      "status": "verified",
+      "evidence": "inherited-four-facts.json;protected-baseline-verification.json;independent-evidence-audit.json"
+    },
+    {
+      "requirement": "independent_new_seven_cell_protocol_before_fit",
+      "status": "verified",
+      "evidence": "B4-B1b-Limited-v1.json;protocol-freeze.json;all7fitsstarted.json"
+    },
+    {
+      "requirement": "coverage_scope_selection_and_confirmation_limit",
+      "status": "verified",
+      "evidence": "protocol.scope_selection;results.inference_scope;complete novice report"
+    },
+    {
+      "requirement": "all_fixed_baselines_LR_calibration_and_selection",
+      "status": "verified",
+      "evidence": "138LR+192calibration+206candidates;selection-receipt.json"
+    },
+    {
+      "requirement": "A_B_missing_legality_and_no_future_inputs",
+      "status": "verified",
+      "evidence": "262Torch+43CPU;all28source-cachecomparisons;originalpublicfeatureaudit"
+    },
+    {
+      "requirement": "all7final_views_frozen_once",
+      "status": "verified",
+      "evidence": "114releasedmodels;selectionSHA;final-openchronology;zero refits"
+    },
+    {
+      "requirement": "metrics_uncertainty_time_CVAE_and_failures",
+      "status": "verified",
+      "evidence": "results.json;prediction-diagnostics.json;event-denominator-diagnostics.json"
+    },
+    {
+      "requirement": "per_seed_FPR_and_alarm_counts_verified",
+      "status": "verified",
+      "evidence": "alarm-probability-audit.json114models"
+    },
+    {
+      "requirement": "actual_development_action_indexed_all4roles",
+      "status": "verified",
+      "evidence": "24seed480conditions;4659840candidates;action-indexed-feasibility.json"
+    },
+    {
+      "requirement": "action_grid_cooling_control_and_storage_interpretation",
+      "status": "verified",
+      "evidence": "same30svsall5scontrasts;realfinishB_reference;storageestimates"
+    },
+    {
+      "requirement": "all_resources_and_originals_preserved",
+      "status": "verified",
+      "evidence": "45allocationsCOMPLETED0;resource-ledger;storage-final;all13056originalSHA"
+    },
+    {
+      "requirement": "B4C_recommendation_and_no_extra_experiments",
+      "status": "verified",
+      "evidence": "NO-GO;noCVAE/PPO/Qwen/newphysics/policysearch"
+    },
+    {
+      "requirement": "single_document_novice_progress_bottlenecks_unknowns",
+      "status": "verified",
+      "evidence": "completeMarkdown embeddedplusallreleasednewandpriorJSONevidence"
+    }
+  ],
+  "new_confirmation_or_transfer_not_claimed": true,
+  "closed_loop_gain_not_claimed": true,
+  "all_actual_jobs_complete": true,
+  "new_training_after_final_open": 0,
+  "historical_experimental_changes": 0,
+  "independent_audit": {
+    "status": "passed",
+    "protocol_SHA256": "45b2eec45461eb89d2d629aa6173ccf6ae9d05c0479fdeee91e676b13c7a9ef3",
+    "selection_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345",
+    "original_files_rehashed": 13056,
+    "original_bytes_rehashed": 6343211686,
+    "unique_numeric_processes_all_splits": 576,
+    "cross_split_process_overlap": 0,
+    "phases": [
+      {
+        "phase": "development",
+        "conditions": 432,
+        "numeric_processes": 216,
+        "seed_groups": 24,
+        "rows_by_cell": [
+          478656,
+          572832,
+          546912,
+          28512,
+          37152,
+          64800,
+          63072
+        ]
+      },
+      {
+        "phase": "validation_calibration",
+        "conditions": 144,
+        "numeric_processes": 72,
+        "seed_groups": 8,
+        "rows_by_cell": [
+          159552,
+          190944,
+          182304,
+          9504,
+          12384,
+          21600,
+          21024
+        ]
+      },
+      {
+        "phase": "validation_selection",
+        "conditions": 144,
+        "numeric_processes": 72,
+        "seed_groups": 8,
+        "rows_by_cell": [
+          159552,
+          190944,
+          182304,
+          9504,
+          12384,
+          21600,
+          21024
+        ]
+      },
+      {
+        "phase": "final_test",
+        "conditions": 432,
+        "numeric_processes": 216,
+        "seed_groups": 24,
+        "rows_by_cell": [
+          478656,
+          572832,
+          546912,
+          28512,
+          37152,
+          64800,
+          63072
+        ]
+      }
+    ],
+    "final_frozen_models_arithmetic_recomputed": 114,
+    "source_cache_feature_target_meta_weight_exact": true,
+    "final_row_or_event_ID_exports": 0,
+    "model_inference_refits_or_threshold_changes": 0,
+    "wall_s": 110.33385755307972,
+    "method": "Independent loops and arithmetic on immutable source and saved probability vectors;does not call fit,predict,productionevaluate or probability metric helpers."
+  },
+  "alarm_audit_summary": {
+    "status": "passed",
+    "protocol_SHA256": "45b2eec45461eb89d2d629aa6173ccf6ae9d05c0479fdeee91e676b13c7a9ef3",
+    "selection_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345",
+    "frozen_models_checked": 114,
+    "per_seed_FPR_and_negative_counts_independently_verified": true,
+    "alarm_task_event_cross_horizon_counts_verified": true,
+    "model_calls_or_refits": 0,
+    "raw_final_rows_exported": false
+  },
+  "resources_summary": {
+    "job_allocation_count": 45,
+    "allocated_CPU_minutes_by_category": {
+      "source_preparation": 1.2333333333333334,
+      "fit_calibration": 72.03333333333333,
+      "evaluation_audit": 17.266666666666666,
+      "action_diagnostic": 0.8
+    },
+    "caps_allocated_CPU_minutes": {
+      "source_preparation": 120,
+      "fit_calibration": 960,
+      "evaluation_audit": 480,
+      "action_diagnostic": 240
+    },
+    "total_allocated_CPU_minutes": 91.33333333333333,
+    "total_cap": 1800,
+    "max_study_job_concurrency": 2,
+    "gpu_allocations": 0,
+    "all_completed_exit0": true,
+    "raw_sacct_SHA256": "a664a567164ee3ae7c9ee6b20ef4dd9f3434b168413aaade83ce20fd54444c64",
+    "cluster_time_zone": "Asia/Shanghai",
+    "unrelated_user_jobs_included": false,
+    "scope": "Actual study allocations only;login-stage transfers and local read-only rendering/report work have no Slurm allocation."
+  },
+  "checked_utc": "2026-10-30T09:12:59.450231+00:00",
+  "publication_state_note": "Git commit/push and its exactHEAD CI are verified separately after artifact creation;thisreceipt attests experiment and local files."
+}

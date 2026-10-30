@@ -1,0 +1,1195 @@
+{
+  "stage": "Action-Indexed exploratory feasibility",
+  "seed": 20002,
+  "split": "development",
+  "conditions": 20,
+  "unique_numeric_processes": 9,
+  "sourcefiles": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--0.2/tour-record.json.gz",
+      "sha256": "94dc6063e2942163738c5abbbd340c02900347e2b43816ea506e0af3d1e20344"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--0.2/labels-only.npz",
+      "sha256": "1142baae300f4e32e48109922df20409334cd2be46cf5982cefdc5d4ccde419b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--0.2/events-evaluator-only.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--0.2/source-identity-not-features.json",
+      "sha256": "72a590709d6363a66affe1450cbb4eb1b13b78d7554cd958245fb71da16cfe17"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--1.0/tour-record.json.gz",
+      "sha256": "5cd2639f644646b1b6deeebafacb22656b36b7eaafe78c6062c25c8ae6bc18cd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--1.0/labels-only.npz",
+      "sha256": "1142baae300f4e32e48109922df20409334cd2be46cf5982cefdc5d4ccde419b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--1.0/events-evaluator-only.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--335--1.0/source-identity-not-features.json",
+      "sha256": "8dfe199db159ed69b29f0e6017969760d4fd6295bcf172be5dd5ff38a6bc55e4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--0.2/tour-record.json.gz",
+      "sha256": "6d139980baae96a178e315851fe8bc099ec999cee44907b5aa68621818b0935f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--0.2/labels-only.npz",
+      "sha256": "1142baae300f4e32e48109922df20409334cd2be46cf5982cefdc5d4ccde419b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--0.2/events-evaluator-only.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--0.2/source-identity-not-features.json",
+      "sha256": "34d2dba770484409d49f56e1c77eb61f2cefdeaff73b3e58588c33058df3d283"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--1.0/tour-record.json.gz",
+      "sha256": "c1b2bf0bcc829bdb5ffee4e3f0e4bbf54d1dde01f3f3110e6e6289d857b42a44"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--1.0/labels-only.npz",
+      "sha256": "1142baae300f4e32e48109922df20409334cd2be46cf5982cefdc5d4ccde419b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--1.0/events-evaluator-only.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--healthy--900--705--1.0/source-identity-not-features.json",
+      "sha256": "d6815b695b1e044a76068c417cb7ff5e51d66596cd64c2b73f29913d54a0a5d9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--0.2/tour-record.json.gz",
+      "sha256": "5beba31fa9a18d2a210a401bd867b29f4e976c75d90fea0ce7c07b639dd1a222"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--0.2/labels-only.npz",
+      "sha256": "da1fb0c59fa135fe6932ea6fcf295b5bf635e297b6cf1c5eca1dfd27424701ca"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--0.2/events-evaluator-only.json",
+      "sha256": "ba28bc8c4270f2767534af1b9f9fbbc8bad4449467ebb65a7165840be02129fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--0.2/source-identity-not-features.json",
+      "sha256": "ccf6e90203cb16049069cd8b1b4aed2b12a3ce74846fe6a4aa012c9ce3bdcd8c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--1.0/tour-record.json.gz",
+      "sha256": "fc614891a0fe066fe53528056de96ba444e716f01eb6230805643ef735a3e3e5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--1.0/labels-only.npz",
+      "sha256": "da1fb0c59fa135fe6932ea6fcf295b5bf635e297b6cf1c5eca1dfd27424701ca"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--1.0/events-evaluator-only.json",
+      "sha256": "ba28bc8c4270f2767534af1b9f9fbbc8bad4449467ebb65a7165840be02129fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--335--1.0/source-identity-not-features.json",
+      "sha256": "155cfa74d83639ab621512c3b3eacfa277962cfa672d4d45485f92c858836099"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--0.2/tour-record.json.gz",
+      "sha256": "4612e5f91c8f29bf4dd5339857e11d1e4f543f53f5ce4283bcd14194a3ad8f58"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--0.2/labels-only.npz",
+      "sha256": "94455647333ac970355b6e6bf1deece65228fd408ba4f41bbbc807bdf2065177"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--0.2/events-evaluator-only.json",
+      "sha256": "2444515043057a515314fc72af156dbf2b1b3501005c76dc4060d4dbcebc3f97"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--0.2/source-identity-not-features.json",
+      "sha256": "86118ce07f9e583cd39eeee40a1042b3752392abefd23f8916a42985dbc61790"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--1.0/tour-record.json.gz",
+      "sha256": "5946d5f8f45c7fbaa751b17f135ce158ff7ca43912abca382c668af6d232d96b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--1.0/labels-only.npz",
+      "sha256": "94455647333ac970355b6e6bf1deece65228fd408ba4f41bbbc807bdf2065177"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--1.0/events-evaluator-only.json",
+      "sha256": "2444515043057a515314fc72af156dbf2b1b3501005c76dc4060d4dbcebc3f97"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--coldplate_fouling--180--705--1.0/source-identity-not-features.json",
+      "sha256": "999da124b9af3443e46d408db311de94c33f098ff18964863d44b7154ef73e1a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--0.2/tour-record.json.gz",
+      "sha256": "ebf16330bf82e04ea99d18a7f1a42bc84bf5c1471946ff5dc3484bd1ef3b44c2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--0.2/labels-only.npz",
+      "sha256": "b1a5612b89aacfd539a3bc46f83ea3480bdbf54b8a7aa26a914984e68b75e11c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--0.2/events-evaluator-only.json",
+      "sha256": "8e5a108d2ee8ffb2ec1224390355028f97127c319fa230c4f36291f538d25bbd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--0.2/source-identity-not-features.json",
+      "sha256": "732fc4c9cf83cc86d83ef146129ff897d9e9992f2e9d29c04246e8bedd5882fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--1.0/tour-record.json.gz",
+      "sha256": "4bd307faaee77a7f86b3e34247a918ad31fe546db0469001da996e8f0523ce87"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--1.0/labels-only.npz",
+      "sha256": "b1a5612b89aacfd539a3bc46f83ea3480bdbf54b8a7aa26a914984e68b75e11c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--1.0/events-evaluator-only.json",
+      "sha256": "8e5a108d2ee8ffb2ec1224390355028f97127c319fa230c4f36291f538d25bbd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--335--1.0/source-identity-not-features.json",
+      "sha256": "9fad770ca159b7873081d7392563b3d2336c86c71b5c55db7a7401e85ee5cba5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--0.2/tour-record.json.gz",
+      "sha256": "672811402bdb6bf7550eeca6d463e196032273aadf73176100314389d661c83c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--0.2/labels-only.npz",
+      "sha256": "8d494685a3fb35541f8a86e7139bd235359a85d533ef6f84b80a55323886b4f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--0.2/events-evaluator-only.json",
+      "sha256": "20fdc4a28bb738c5c3f7bc1fae088c64fdc7d6d0dc742b7885d6caff6a0cd2a8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--0.2/source-identity-not-features.json",
+      "sha256": "75496945af2ca5b548d9f3117828f92c405390471e04db676040e10802688cb5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--1.0/tour-record.json.gz",
+      "sha256": "11b6d87cc9a685827e678ff32421852b6c57439897a8e6040d78bf750acf0ae3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--1.0/labels-only.npz",
+      "sha256": "8d494685a3fb35541f8a86e7139bd235359a85d533ef6f84b80a55323886b4f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--1.0/events-evaluator-only.json",
+      "sha256": "20fdc4a28bb738c5c3f7bc1fae088c64fdc7d6d0dc742b7885d6caff6a0cd2a8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--dc_contact_hotspot--180--705--1.0/source-identity-not-features.json",
+      "sha256": "9f9b7d5fb34e8060d6ce9eb42a625530eb8ac9612666340120c23e36a0620d23"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--0.2/tour-record.json.gz",
+      "sha256": "a6c8a79c409baaab2d71ba2e36311867848ae2ff3524f4d03fa7b5354dec6f76"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--0.2/labels-only.npz",
+      "sha256": "be9a4287279e2a76317e464cef0053985b57f8f950f59f4d823fbb72ec4d4099"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--0.2/events-evaluator-only.json",
+      "sha256": "80e9f15529ced263dd29142fb58417b12a862a2143462b2e41dab2b95676392a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--0.2/source-identity-not-features.json",
+      "sha256": "09303729de94e1b43c2e120c13d414a2168f8293f609eb9de09e745d4fa53a97"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--1.0/tour-record.json.gz",
+      "sha256": "e170a6b3a221dd627c5fff28c596f6883c55a44028b57e68d33bf1821fe7a019"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--1.0/labels-only.npz",
+      "sha256": "be9a4287279e2a76317e464cef0053985b57f8f950f59f4d823fbb72ec4d4099"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--1.0/events-evaluator-only.json",
+      "sha256": "80e9f15529ced263dd29142fb58417b12a862a2143462b2e41dab2b95676392a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--335--1.0/source-identity-not-features.json",
+      "sha256": "1f010ee15ec6ad63ea7906a724804389e6cf267d731aa8014fca4ff6f7335bd4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--0.2/tour-record.json.gz",
+      "sha256": "fdc8abd03be94e2201074e18a5cc01528d7df7e78cd91b89ef23122a445a10fe"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--0.2/labels-only.npz",
+      "sha256": "b04842d8156b332f43f2ff438ba8fadcf5667f51912c76b73b90c05d82c92f5b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--0.2/events-evaluator-only.json",
+      "sha256": "fa5cc7807e9a56694336df287d1de9e1b03937a7bc8756dbbe575ad7a689ba2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--0.2/source-identity-not-features.json",
+      "sha256": "40ec761a40f6e73156ac2d3dc91c49c56ab0f3524bca32417b1cdeee89742a3e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--1.0/tour-record.json.gz",
+      "sha256": "b2ad29d7b234007ba48926fc9e8cced818325c97b59d550123cf572761d84727"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--1.0/labels-only.npz",
+      "sha256": "b04842d8156b332f43f2ff438ba8fadcf5667f51912c76b73b90c05d82c92f5b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--1.0/events-evaluator-only.json",
+      "sha256": "fa5cc7807e9a56694336df287d1de9e1b03937a7bc8756dbbe575ad7a689ba2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--sensor_bias--900--705--1.0/source-identity-not-features.json",
+      "sha256": "89743fef63d0ea2b113bc80c6cf17a48510ff6aa94af573597b7a339015437f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--0.2/tour-record.json.gz",
+      "sha256": "a02d09ad3439401c3e349ee7edb58107f46329eafe855ac4e34e72321596f224"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--0.2/labels-only.npz",
+      "sha256": "6ed6fbff1420f4f075a5f2f2f0bd6de9f845a471bf9a4624e9e1c7acb54b8a7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--0.2/events-evaluator-only.json",
+      "sha256": "749d7fa4ff6e1045e135aa98ddfa425b7cfe87a9a3f9beedc1580bf13147cf68"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--0.2/source-identity-not-features.json",
+      "sha256": "8dc37e1ee200dddec1f42207dd28c28df5a2249635ff03aad67e9df1d09198b9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--1.0/tour-record.json.gz",
+      "sha256": "c075a2e1af97ac7bf1de6bc0f2b0e65c9214f898d0376dbd092af5b9cea1e4bc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--1.0/labels-only.npz",
+      "sha256": "6ed6fbff1420f4f075a5f2f2f0bd6de9f845a471bf9a4624e9e1c7acb54b8a7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--1.0/events-evaluator-only.json",
+      "sha256": "749d7fa4ff6e1045e135aa98ddfa425b7cfe87a9a3f9beedc1580bf13147cf68"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--335--1.0/source-identity-not-features.json",
+      "sha256": "dea591f0cb0797d1a79977a5d762d558ca2dab9207030b1b402c56689d431f37"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--0.2/tour-record.json.gz",
+      "sha256": "ab8d53bac4dd57de166c51e777a090cf8778f38eddad6cc6562edfe57a19a4bc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--0.2/labels-only.npz",
+      "sha256": "edbc4349d24f37f52535ae7a567f841e201ffa46ab3389f9f431db46fa06c72f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--0.2/events-evaluator-only.json",
+      "sha256": "8a2a1ce63b0c9a409e4541ba1b75662d00b72445ca6fdeca7f8af12293cb1a12"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--0.2/source-identity-not-features.json",
+      "sha256": "90a7ffb9289c19a3ff4792a800c8f5bdae871877543cb8be4c5e7b106fd682b2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--1.0/tour-record.json.gz",
+      "sha256": "c87d14fc61f9569163a2b06bcc00e1eeeac0271e28f63c74ba7bde64843363f5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--1.0/labels-only.npz",
+      "sha256": "edbc4349d24f37f52535ae7a567f841e201ffa46ab3389f9f431db46fa06c72f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--1.0/events-evaluator-only.json",
+      "sha256": "8a2a1ce63b0c9a409e4541ba1b75662d00b72445ca6fdeca7f8af12293cb1a12"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20002/development--20002--aux_feeder_loss+cdu_fouling--180--705--1.0/source-identity-not-features.json",
+      "sha256": "fc88aae4ed8ca28a6089d93e4e83ae8cbde182b6b94ec82fb31655187d484498"
+    }
+  ],
+  "protocol_SHA256": "45b2eec45461eb89d2d629aa6173ccf6ae9d05c0479fdeee91e676b13c7a9ef3",
+  "statistics": {
+    "all_5s_roots/thermal/all": {
+      "legal_candidates": 159040,
+      "optional_candidates": 136400,
+      "protected_Tour_candidates": 22640,
+      "B_reference_positive": 88,
+      "A_physical_positive": 90,
+      "sum_horizon_s": 4356600,
+      "minimum_horizon_s": 10,
+      "maximum_horizon_s": 40,
+      "distinct_retained_positive_events": 14,
+      "distinct_raw_positive_events": 15,
+      "positive_numeric_processes": 4,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "19ef6f9a397fc7d492ffc4903a27177bc8d5ccac5d5c041245fbd251d570b5c6",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          2
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          3
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          5
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          1
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          2
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          3
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          4
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          7
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          8
+        ],
+        [
+          "da1bff482f13397d0544de7cc9a32209d054812f80b77724ecdc62dea20192a2",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/thermal/0-30": {
+      "legal_candidates": 124400,
+      "optional_candidates": 102880,
+      "protected_Tour_candidates": 21520,
+      "B_reference_positive": 70,
+      "A_physical_positive": 72,
+      "sum_horizon_s": 3063800,
+      "minimum_horizon_s": 10,
+      "maximum_horizon_s": 30,
+      "distinct_retained_positive_events": 10,
+      "distinct_raw_positive_events": 11,
+      "positive_numeric_processes": 4,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "19ef6f9a397fc7d492ffc4903a27177bc8d5ccac5d5c041245fbd251d570b5c6",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          1
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          2
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          3
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          4
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          7
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          8
+        ],
+        [
+          "da1bff482f13397d0544de7cc9a32209d054812f80b77724ecdc62dea20192a2",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/thermal/30-60": {
+      "legal_candidates": 34640,
+      "optional_candidates": 33520,
+      "protected_Tour_candidates": 1120,
+      "B_reference_positive": 18,
+      "A_physical_positive": 18,
+      "sum_horizon_s": 1292800,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 40,
+      "distinct_retained_positive_events": 6,
+      "distinct_raw_positive_events": 6,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          2
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          3
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          5
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          3
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          6
+        ]
+      ]
+    },
+    "all_5s_roots/thermal/60-120": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/thermal/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/electrical/all": {
+      "legal_candidates": 11160,
+      "optional_candidates": 9280,
+      "protected_Tour_candidates": 1880,
+      "B_reference_positive": 68,
+      "A_physical_positive": 68,
+      "sum_horizon_s": 627200,
+      "minimum_horizon_s": 20,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/electrical/0-30": {
+      "legal_candidates": 40,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 40,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "sum_horizon_s": 800,
+      "minimum_horizon_s": 20,
+      "maximum_horizon_s": 20,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/electrical/30-60": {
+      "legal_candidates": 8360,
+      "optional_candidates": 6520,
+      "protected_Tour_candidates": 1840,
+      "B_reference_positive": 46,
+      "A_physical_positive": 46,
+      "sum_horizon_s": 424000,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 60,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/electrical/60-120": {
+      "legal_candidates": 2760,
+      "optional_candidates": 2760,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 22,
+      "A_physical_positive": 22,
+      "sum_horizon_s": 202400,
+      "minimum_horizon_s": 70,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/electrical/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/cooling/all": {
+      "legal_candidates": 11160,
+      "optional_candidates": 9280,
+      "protected_Tour_candidates": 1880,
+      "B_reference_positive": 14,
+      "A_physical_positive": 14,
+      "sum_horizon_s": 627200,
+      "minimum_horizon_s": 20,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          8
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          9
+        ]
+      ]
+    },
+    "all_5s_roots/cooling/0-30": {
+      "legal_candidates": 40,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 40,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "sum_horizon_s": 800,
+      "minimum_horizon_s": 20,
+      "maximum_horizon_s": 20,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/cooling/30-60": {
+      "legal_candidates": 8360,
+      "optional_candidates": 6520,
+      "protected_Tour_candidates": 1840,
+      "B_reference_positive": 8,
+      "A_physical_positive": 8,
+      "sum_horizon_s": 424000,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 60,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          8
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          9
+        ]
+      ]
+    },
+    "all_5s_roots/cooling/60-120": {
+      "legal_candidates": 2760,
+      "optional_candidates": 2760,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 6,
+      "A_physical_positive": 6,
+      "sum_horizon_s": 202400,
+      "minimum_horizon_s": 70,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          8
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          9
+        ]
+      ]
+    },
+    "all_5s_roots/cooling/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "all_5s_roots/control/all": {
+      "legal_candidates": 12800,
+      "optional_candidates": 10680,
+      "protected_Tour_candidates": 2120,
+      "B_reference_positive": 84,
+      "A_physical_positive": 84,
+      "sum_horizon_s": 656200,
+      "minimum_horizon_s": 15,
+      "maximum_horizon_s": 75,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "38cd9f83b3664c59a2fb58c9b5d140485564dee5b1fe12b068d69e21d103b343",
+          1
+        ],
+        [
+          "d6dca6c726dedf32d66a2e0a8562d5f534f99486bfe87435573487b53c35f5d1",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/control/0-30": {
+      "legal_candidates": 1640,
+      "optional_candidates": 40,
+      "protected_Tour_candidates": 1600,
+      "B_reference_positive": 14,
+      "A_physical_positive": 14,
+      "sum_horizon_s": 48600,
+      "minimum_horizon_s": 15,
+      "maximum_horizon_s": 30,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "38cd9f83b3664c59a2fb58c9b5d140485564dee5b1fe12b068d69e21d103b343",
+          1
+        ],
+        [
+          "d6dca6c726dedf32d66a2e0a8562d5f534f99486bfe87435573487b53c35f5d1",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/control/30-60": {
+      "legal_candidates": 8000,
+      "optional_candidates": 7480,
+      "protected_Tour_candidates": 520,
+      "B_reference_positive": 42,
+      "A_physical_positive": 42,
+      "sum_horizon_s": 391800,
+      "minimum_horizon_s": 40,
+      "maximum_horizon_s": 55,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "38cd9f83b3664c59a2fb58c9b5d140485564dee5b1fe12b068d69e21d103b343",
+          1
+        ],
+        [
+          "d6dca6c726dedf32d66a2e0a8562d5f534f99486bfe87435573487b53c35f5d1",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/control/60-120": {
+      "legal_candidates": 3160,
+      "optional_candidates": 3160,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 28,
+      "A_physical_positive": 28,
+      "sum_horizon_s": 215800,
+      "minimum_horizon_s": 65,
+      "maximum_horizon_s": 75,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "38cd9f83b3664c59a2fb58c9b5d140485564dee5b1fe12b068d69e21d103b343",
+          1
+        ],
+        [
+          "d6dca6c726dedf32d66a2e0a8562d5f534f99486bfe87435573487b53c35f5d1",
+          1
+        ]
+      ]
+    },
+    "all_5s_roots/control/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/thermal/all": {
+      "legal_candidates": 31640,
+      "optional_candidates": 27160,
+      "protected_Tour_candidates": 4480,
+      "B_reference_positive": 12,
+      "A_physical_positive": 12,
+      "sum_horizon_s": 855000,
+      "minimum_horizon_s": 15,
+      "maximum_horizon_s": 40,
+      "distinct_retained_positive_events": 6,
+      "distinct_raw_positive_events": 6,
+      "positive_numeric_processes": 4,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "19ef6f9a397fc7d492ffc4903a27177bc8d5ccac5d5c041245fbd251d570b5c6",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          1
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          3
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          6
+        ],
+        [
+          "da1bff482f13397d0544de7cc9a32209d054812f80b77724ecdc62dea20192a2",
+          1
+        ]
+      ]
+    },
+    "same_30s_roots/thermal/0-30": {
+      "legal_candidates": 24880,
+      "optional_candidates": 20560,
+      "protected_Tour_candidates": 4320,
+      "B_reference_positive": 12,
+      "A_physical_positive": 12,
+      "sum_horizon_s": 601600,
+      "minimum_horizon_s": 15,
+      "maximum_horizon_s": 30,
+      "distinct_retained_positive_events": 6,
+      "distinct_raw_positive_events": 6,
+      "positive_numeric_processes": 4,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "19ef6f9a397fc7d492ffc4903a27177bc8d5ccac5d5c041245fbd251d570b5c6",
+          1
+        ],
+        [
+          "71dead4da23b702d984bcd8983e8e15f46fa3f5539f42712212382c031d631dd",
+          6
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          1
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          3
+        ],
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          6
+        ],
+        [
+          "da1bff482f13397d0544de7cc9a32209d054812f80b77724ecdc62dea20192a2",
+          1
+        ]
+      ]
+    },
+    "same_30s_roots/thermal/30-60": {
+      "legal_candidates": 6760,
+      "optional_candidates": 6600,
+      "protected_Tour_candidates": 160,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "sum_horizon_s": 253400,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 40,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/thermal/60-120": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/thermal/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/electrical/all": {
+      "legal_candidates": 1680,
+      "optional_candidates": 1400,
+      "protected_Tour_candidates": 280,
+      "B_reference_positive": 16,
+      "A_physical_positive": 16,
+      "sum_horizon_s": 95600,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "same_30s_roots/electrical/0-30": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/electrical/30-60": {
+      "legal_candidates": 1240,
+      "optional_candidates": 960,
+      "protected_Tour_candidates": 280,
+      "B_reference_positive": 12,
+      "A_physical_positive": 12,
+      "sum_horizon_s": 63200,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 60,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "same_30s_roots/electrical/60-120": {
+      "legal_candidates": 440,
+      "optional_candidates": 440,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 4,
+      "A_physical_positive": 4,
+      "sum_horizon_s": 32400,
+      "minimum_horizon_s": 70,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 2,
+      "distinct_raw_positive_events": 2,
+      "positive_numeric_processes": 2,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "0310ca32f5b5821d7ce9493e0b52d078cb8053547ebcc7864a7c3461c70b60ab",
+          1
+        ],
+        [
+          "2df37ca9cb89e206231f0b69db34651ec433f39048257c8b123432bab1427ad8",
+          1
+        ]
+      ]
+    },
+    "same_30s_roots/electrical/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/cooling/all": {
+      "legal_candidates": 1680,
+      "optional_candidates": 1400,
+      "protected_Tour_candidates": 280,
+      "B_reference_positive": 2,
+      "A_physical_positive": 2,
+      "sum_horizon_s": 95600,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 1,
+      "distinct_raw_positive_events": 1,
+      "positive_numeric_processes": 1,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          9
+        ]
+      ]
+    },
+    "same_30s_roots/cooling/0-30": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/cooling/30-60": {
+      "legal_candidates": 1240,
+      "optional_candidates": 960,
+      "protected_Tour_candidates": 280,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "sum_horizon_s": 63200,
+      "minimum_horizon_s": 35,
+      "maximum_horizon_s": 60,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/cooling/60-120": {
+      "legal_candidates": 440,
+      "optional_candidates": 440,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 2,
+      "A_physical_positive": 2,
+      "sum_horizon_s": 32400,
+      "minimum_horizon_s": 70,
+      "maximum_horizon_s": 80,
+      "distinct_retained_positive_events": 1,
+      "distinct_raw_positive_events": 1,
+      "positive_numeric_processes": 1,
+      "positive_seed_groups": 1,
+      "event_keys": [
+        [
+          "c695b3e1c6a036ba0101b57d68aa7b6c81f4a6c4ebe159b83e40ca6c645cecbf",
+          9
+        ]
+      ]
+    },
+    "same_30s_roots/cooling/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/control/all": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/control/0-30": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/control/30-60": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/control/60-120": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    },
+    "same_30s_roots/control/120-1800": {
+      "legal_candidates": 0,
+      "optional_candidates": 0,
+      "protected_Tour_candidates": 0,
+      "B_reference_positive": 0,
+      "A_physical_positive": 0,
+      "distinct_retained_positive_events": 0,
+      "distinct_raw_positive_events": 0,
+      "positive_numeric_processes": 0,
+      "positive_seed_groups": 0,
+      "event_keys": []
+    }
+  },
+  "unique_physical_retained_events_by_profession": {
+    "thermal": 16,
+    "electrical": 2,
+    "cooling": 2,
+    "control": 2
+  },
+  "elapsed_s": 0.5006904173642397,
+  "predictor_fits": 0,
+  "new_physics": 0,
+  "final_data_access": false,
+  "scope": "Eachcurrent candidate evaluated independently using originalhard-legal geometry/quotas/Tour andexactB_reference endpoint. Root-grid andETA effects separated;not allcandidates jointlyexecutable."
+}

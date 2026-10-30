@@ -1,0 +1,4692 @@
+{
+  "cell": 4,
+  "kind": "electrical",
+  "horizon_s": 120,
+  "models": [
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--bounded_trend",
+      "family": "bounded_trend",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--constant",
+      "family": "constant",
+      "L2": null,
+      "threshold": 0.006917155622544003,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006630779072785401,
+        "LogLoss": 0.0400960334240061,
+        "AUPRC": 0.006675279931098145,
+        "ECE": 0.0002418756914499873,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.006917155622543873,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.006917155622544003,
+        "empirical_FPR": 0.0,
+        "sample_recall": 0.0,
+        "alarms": 0,
+        "false_alarms": 0,
+        "seed_macro_Brier": 0.0066307790727855335,
+        "seed_macro_event_recall": 0.0,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.0,
+        "repeat_task_alarms_per1800s": 0.0,
+        "repeat_event_alarms_per1800s": 0.0,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.008966658180516804,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.0076925423035724754,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038701946727394826,
+          "event_recall": 0.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005144310549683816,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005144310549683816,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038701946727394848,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038701946727394848,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025960787957951545,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025960787957951545,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "2166ecd8b0bca2e91d8d0aca01476c46e7122f3db1ba78c6aac48dfe16c54679",
+      "raw_metrics_SHA256": "b0a19f2349028b495e3c53d890a9cd32ea24b276327d46234e6f1600904c2001",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--nominal_physical",
+      "family": "nominal_physical",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--professional_hold",
+      "family": "professional_hold",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--public_lr--L2-0.1",
+      "family": "public_lr",
+      "L2": 0.1,
+      "threshold": 0.005196930672533484,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006627582306911942,
+        "LogLoss": 0.03979490820774979,
+        "AUPRC": 0.5366599826909123,
+        "ECE": 0.0015062339661369986,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005169045964956886,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005196930672533484,
+        "empirical_FPR": 0.02037719488402341,
+        "sample_recall": 0.7056451612903226,
+        "alarms": 927,
+        "false_alarms": 752,
+        "seed_macro_Brier": 0.0066275823069119446,
+        "seed_macro_event_recall": 0.9375,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 2.1458333333333335,
+        "repeat_task_alarms_per1800s": 0.45601851851851855,
+        "repeat_event_alarms_per1800s": 0.2013888888888889,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01024825510781513,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.009138381201044387,
+          "alarms_per1800s": 1.4444444444444444
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.008970915682787288,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.007170795306388526,
+          "alarms_per1800s": 1.1111111111111112
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007690798164991807,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.026692708333333332,
+          "alarms_per1800s": 2.8333333333333335
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.01024491580211663,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.01174934725848564,
+          "alarms_per1800s": 1.7777777777777777
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006415176220858324,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.014304291287386216,
+          "alarms_per1800s": 1.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038610371723443596,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.014915693904020753,
+          "alarms_per1800s": 1.3888888888888888
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006415125868491981,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.011703511053315995,
+          "alarms_per1800s": 1.3333333333333333
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006415148283305205,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.027958387516254877,
+          "alarms_per1800s": 2.7222222222222223
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006415268451958309,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.006501950585175552,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.0064153317236616495,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.029258777633289986,
+          "alarms_per1800s": 2.888888888888889
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005135345361375036,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.03636363636363636,
+          "alarms_per1800s": 3.5555555555555554
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.0051353573747120965,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.025324675324675326,
+          "alarms_per1800s": 2.611111111111111
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038609320183724508,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.018158236057068743,
+          "alarms_per1800s": 1.7777777777777777
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038609680215233675,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.02464332036316472,
+          "alarms_per1800s": 2.2222222222222223
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.002582453808182556,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.014248704663212436,
+          "alarms_per1800s": 1.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025824726204908264,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.014896373056994818,
+          "alarms_per1800s": 1.3888888888888888
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007692368629385211,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.024088541666666668,
+          "alarms_per1800s": 2.5
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007692380706199806,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.027994791666666668,
+          "alarms_per1800s": 2.888888888888889
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010244813682636895,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0293733681462141,
+          "alarms_per1800s": 3.2777777777777777
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010244916388731878,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.02349869451697128,
+          "alarms_per1800s": 2.7777777777777777
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006415250188069947,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.025357607282184655,
+          "alarms_per1800s": 2.5
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.006415237729456107,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.008452535760728219,
+          "alarms_per1800s": 1.0555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.007692401827960729,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.030598958333333332,
+          "alarms_per1800s": 3.0555555555555554
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006415104530459081,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.026657997399219768,
+          "alarms_per1800s": 2.611111111111111
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "05ca27d12fd325bc79c41abd20818d76abbdf6211063dd70b6716dd4ef539691",
+      "raw_metrics_SHA256": "fb5229ce0629b9473ee05db205aaef1537b613c79af14b3e263659ec0499ba8f",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "A_physical",
+      "id": "A_physical--time_lr--L2-1.0",
+      "family": "time_lr",
+      "L2": 1.0,
+      "threshold": 0.005168809007712292,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632989946964932,
+        "LogLoss": 0.04029371636605723,
+        "AUPRC": 0.013306040321948667,
+        "ECE": 0.0015064990167746508,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005168780914319234,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005168809007712292,
+        "empirical_FPR": 0.0,
+        "sample_recall": 0.0,
+        "alarms": 0,
+        "false_alarms": 0,
+        "seed_macro_Brier": 0.006632989946964935,
+        "seed_macro_event_recall": 0.0,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.0,
+        "repeat_task_alarms_per1800s": 0.0,
+        "repeat_event_alarms_per1800s": 0.0,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.010255785048594118,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897715145020819,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698517874474546,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255785098453752,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006419884176975606,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038626170519520556,
+          "event_recall": 0.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419884403637675,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419884431004392,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.0064198844453277025,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419884486257867,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005141250859194612,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141250882499241,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.003862617307846731,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038626173185746285,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.002583983619320395,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.002583983626473291,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698517821297646,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698517842739673,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255785030311682,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255785098453752,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419884176975606,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.00641988421734995,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.0076985180282309095,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419884431004392,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "A_physical--public_lr--L2-0.1",
+        "time_comparator": "A_physical--time_lr--L2-1.0",
+        "fixed_comparator": "A_physical--constant"
+      },
+      "raw_predictions_SHA256": "7d5449d80ae6d87bed957f1494be49f9149c8ae970bf9e38bcbf098770826c5f",
+      "raw_metrics_SHA256": "6fdcb44f3b5da91aa1a6d8ed05b9e0b07ce1a45b38a1003aa212b2b2926ce954",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--bounded_trend",
+      "family": "bounded_trend",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--constant",
+      "family": "constant",
+      "L2": null,
+      "threshold": 0.006917155622544003,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006630779072785401,
+        "LogLoss": 0.0400960334240061,
+        "AUPRC": 0.006675279931098145,
+        "ECE": 0.0002418756914499873,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.006917155622543873,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.006917155622544003,
+        "empirical_FPR": 0.0,
+        "sample_recall": 0.0,
+        "alarms": 0,
+        "false_alarms": 0,
+        "seed_macro_Brier": 0.0066307790727855335,
+        "seed_macro_event_recall": 0.0,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.0,
+        "repeat_task_alarms_per1800s": 0.0,
+        "repeat_event_alarms_per1800s": 0.0,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.008966658180516804,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.0076925423035724754,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038701946727394826,
+          "event_recall": 0.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005144310549683816,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005144310549683816,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038701946727394848,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038701946727394848,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025960787957951545,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025960787957951545,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010240774057461134,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.007692542303572474,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006418426426628144,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "2166ecd8b0bca2e91d8d0aca01476c46e7122f3db1ba78c6aac48dfe16c54679",
+      "raw_metrics_SHA256": "b0a19f2349028b495e3c53d890a9cd32ea24b276327d46234e6f1600904c2001",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--nominal_physical",
+      "family": "nominal_physical",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--professional_hold",
+      "family": "professional_hold",
+      "L2": null,
+      "threshold": 0.005167900751897897,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632984647071023,
+        "LogLoss": 0.040293200991620294,
+        "AUPRC": 0.6611697870125726,
+        "ECE": 0.0015073746510485507,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005167905280045334,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005167900751897897,
+        "empirical_FPR": 0.001842618686321266,
+        "sample_recall": 0.6774193548387096,
+        "alarms": 236,
+        "false_alarms": 68,
+        "seed_macro_Brier": 0.006632984647070875,
+        "seed_macro_event_recall": 0.9166666666666666,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.5462962962962963,
+        "repeat_task_alarms_per1800s": 0.33796296296296297,
+        "repeat_event_alarms_per1800s": 0.18981481481481483,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01025578066596207,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0026109660574412533,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897714833804124,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.002607561929595828,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698505254951104,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255775853946646,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.0064198774736858675,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.003862612043833832,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0025940337224383916,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419879280049395,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419882699007803,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006419880616898643,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419880001196636,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0013003901170351106,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.00514124260013437,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141243295141557,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0025974025974025974,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038626140835080073,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.003862613851601107,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0012970168612191958,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.0025839776523745033,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0025906735751295338,
+          "alarms_per1800s": 0.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025839775432625494,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0012953367875647669,
+          "alarms_per1800s": 0.2222222222222222
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698515335668458,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.4444444444444444
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698514845386505,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0013020833333333333,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255779542788218,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0013054830287206266,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255778443888525,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.7777777777777778
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419879939766846,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.0064198799424562605,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.002600780234070221,
+          "alarms_per1800s": 0.5555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.00769851283888524,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0026041666666666665,
+          "alarms_per1800s": 0.6666666666666666
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419879387265615,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0039011703511053317,
+          "alarms_per1800s": 0.6666666666666666
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "a4bc37832ec5804a9cdd4c2364e75c17f92f803a1588ee4fda2d7cdf7ea59f4b",
+      "raw_metrics_SHA256": "c4bae5262e43bbfde6470aa18d22aeb80a9ba816da264ea18b248e76531f9ebd",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--public_lr--L2-0.1",
+      "family": "public_lr",
+      "L2": 0.1,
+      "threshold": 0.005196930672533484,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006627582306911942,
+        "LogLoss": 0.03979490820774979,
+        "AUPRC": 0.5366599826909123,
+        "ECE": 0.0015062339661369986,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005169045964956886,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005196930672533484,
+        "empirical_FPR": 0.02037719488402341,
+        "sample_recall": 0.7056451612903226,
+        "alarms": 927,
+        "false_alarms": 752,
+        "seed_macro_Brier": 0.0066275823069119446,
+        "seed_macro_event_recall": 0.9375,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 2.1458333333333335,
+        "repeat_task_alarms_per1800s": 0.45601851851851855,
+        "repeat_event_alarms_per1800s": 0.2013888888888889,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.01024825510781513,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.009138381201044387,
+          "alarms_per1800s": 1.4444444444444444
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.008970915682787288,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.007170795306388526,
+          "alarms_per1800s": 1.1111111111111112
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007690798164991807,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.026692708333333332,
+          "alarms_per1800s": 2.8333333333333335
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.01024491580211663,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.01174934725848564,
+          "alarms_per1800s": 1.7777777777777777
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006415176220858324,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.014304291287386216,
+          "alarms_per1800s": 1.5555555555555556
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038610371723443596,
+          "event_recall": 1.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.014915693904020753,
+          "alarms_per1800s": 1.3888888888888888
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006415125868491981,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.011703511053315995,
+          "alarms_per1800s": 1.3333333333333333
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006415148283305205,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.027958387516254877,
+          "alarms_per1800s": 2.7222222222222223
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.006415268451958309,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.006501950585175552,
+          "alarms_per1800s": 0.8888888888888888
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.0064153317236616495,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.029258777633289986,
+          "alarms_per1800s": 2.888888888888889
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005135345361375036,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.03636363636363636,
+          "alarms_per1800s": 3.5555555555555554
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.0051353573747120965,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.025324675324675326,
+          "alarms_per1800s": 2.611111111111111
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.0038609320183724508,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.018158236057068743,
+          "alarms_per1800s": 1.7777777777777777
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038609680215233675,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.02464332036316472,
+          "alarms_per1800s": 2.2222222222222223
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.002582453808182556,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.014248704663212436,
+          "alarms_per1800s": 1.3333333333333333
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.0025824726204908264,
+          "event_recall": 0.5,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.014896373056994818,
+          "alarms_per1800s": 1.3888888888888888
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007692368629385211,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.024088541666666668,
+          "alarms_per1800s": 2.5
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007692380706199806,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.027994791666666668,
+          "alarms_per1800s": 2.888888888888889
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010244813682636895,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0293733681462141,
+          "alarms_per1800s": 3.2777777777777777
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010244916388731878,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.02349869451697128,
+          "alarms_per1800s": 2.7777777777777777
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006415250188069947,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.025357607282184655,
+          "alarms_per1800s": 2.5
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.006415237729456107,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.008452535760728219,
+          "alarms_per1800s": 1.0555555555555556
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.007692401827960729,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.030598958333333332,
+          "alarms_per1800s": 3.0555555555555554
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006415104530459081,
+          "event_recall": 1.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.026657997399219768,
+          "alarms_per1800s": 2.611111111111111
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "05ca27d12fd325bc79c41abd20818d76abbdf6211063dd70b6716dd4ef539691",
+      "raw_metrics_SHA256": "fb5229ce0629b9473ee05db205aaef1537b613c79af14b3e263659ec0499ba8f",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    },
+    {
+      "cell": 4,
+      "kind": "electrical",
+      "horizon_s": 120,
+      "label": "B_action",
+      "id": "B_action--time_lr--L2-1.0",
+      "family": "time_lr",
+      "L2": 1.0,
+      "threshold": 0.005168809007712292,
+      "summary": {
+        "samples": 37152,
+        "positive": 248,
+        "weighted_prevalence": 0.006675279931093882,
+        "Brier": 0.006632989946964932,
+        "LogLoss": 0.04029371636605723,
+        "AUPRC": 0.013306040321948667,
+        "ECE": 0.0015064990167746508,
+        "reliability_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 37152,
+            "weight": 0.9999999999999994,
+            "mean_probability": 0.005168780914319234,
+            "observed_fraction": 0.006675279931093885
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "weight": 0.0,
+            "mean_probability": null,
+            "observed_fraction": null
+          }
+        ],
+        "threshold": 0.005168809007712292,
+        "empirical_FPR": 0.0,
+        "sample_recall": 0.0,
+        "alarms": 0,
+        "false_alarms": 0,
+        "seed_macro_Brier": 0.006632989946964935,
+        "seed_macro_event_recall": 0.0,
+        "eligible_seeds": 24,
+        "seed_groups": 24,
+        "event_eligibility_and_detection_label": "B_action for both prediction heads;Aprobability/samplemetrics remain A_physical",
+        "alarms_per1800s": 0.0,
+        "repeat_task_alarms_per1800s": 0.0,
+        "repeat_event_alarms_per1800s": 0.0,
+        "unique_eligible_events": 47
+      },
+      "seeds": [
+        {
+          "seed": 20400,
+          "Brier": 0.010255785048594118,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20401,
+          "Brier": 0.00897715145020819,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1534,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20402,
+          "Brier": 0.007698517874474546,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20403,
+          "Brier": 0.010255785098453752,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20404,
+          "Brier": 0.006419884176975606,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20405,
+          "Brier": 0.0038626170519520556,
+          "event_recall": 0.0,
+          "event_eligible_processes": 1,
+          "event_eligible": 1,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20406,
+          "Brier": 0.006419884403637675,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20407,
+          "Brier": 0.006419884431004392,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20408,
+          "Brier": 0.0064198844453277025,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20409,
+          "Brier": 0.006419884486257867,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20410,
+          "Brier": 0.005141250859194612,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20411,
+          "Brier": 0.005141250882499241,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1540,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20412,
+          "Brier": 0.003862617307846731,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20413,
+          "Brier": 0.0038626173185746285,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1542,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20414,
+          "Brier": 0.002583983619320395,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20415,
+          "Brier": 0.002583983626473291,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1544,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20416,
+          "Brier": 0.007698517821297646,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20417,
+          "Brier": 0.007698517842739673,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20418,
+          "Brier": 0.010255785030311682,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20419,
+          "Brier": 0.010255785098453752,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1532,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20420,
+          "Brier": 0.006419884176975606,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20421,
+          "Brier": 0.00641988421734995,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20422,
+          "Brier": 0.0076985180282309095,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1536,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        },
+        {
+          "seed": 20423,
+          "Brier": 0.006419884431004392,
+          "event_recall": 0.0,
+          "event_eligible_processes": 2,
+          "event_eligible": 2,
+          "numeric_processes": 9,
+          "negative_samples": 1538,
+          "FPR": 0.0,
+          "alarms_per1800s": 0.0
+        }
+      ],
+      "selection_roles": {
+        "primary_full": "B_action--public_lr--L2-0.1",
+        "time_comparator": "B_action--time_lr--L2-1.0",
+        "fixed_comparator": "B_action--constant"
+      },
+      "raw_predictions_SHA256": "7d5449d80ae6d87bed957f1494be49f9149c8ae970bf9e38bcbf098770826c5f",
+      "raw_metrics_SHA256": "6fdcb44f3b5da91aa1a6d8ed05b9e0b07ce1a45b38a1003aa212b2b2926ce954",
+      "raw_rows_exported": false,
+      "freeze_receipt_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345"
+    }
+  ],
+  "wall_s": 1.6362006990239024,
+  "selection_SHA256": "bc7651b2b822ffef1dde34f4a4ee5ae165f6fc5af99773f285e793facf8e0345",
+  "model_refits": 0,
+  "calibration_refits": 0,
+  "threshold_changes": 0
+}
