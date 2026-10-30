@@ -25,6 +25,6 @@ python scripts/generate_fresh_opportunity.py --protocol "$protocol" --manifest "
   --estimator-weights /share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt \
   --estimator-manifest "$source_root/research/2026-10-28-m111-coverage/frozen_estimator.json"
 python scripts/verify_fresh_opportunity.py --root "$run_root/data" --protocol "$protocol" \
-  --manifest "$manifest" --group-index "$group_index" --output "$run_root/audits/group-$group_index.json"
+  --manifest "$manifest" --group-index "$group_index" --output "$run_root/audits-v4/group-$group_index.json"
 python scripts/report_fresh_opportunity.py --root "$run_root/data" --protocol "$protocol" \
   --manifest "$manifest" --partial --output "$run_root/audits/after-$group_index.json"

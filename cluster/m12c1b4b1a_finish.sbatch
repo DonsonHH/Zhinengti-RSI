@@ -18,9 +18,9 @@ cd "$source_root"
 protocol="$source_root/research/2026-10-30-m12c1b4b0-data/B4-B1冻结协议.json"
 manifest="$source_root/research/2026-10-30-m12c1b4b0-data/B4-B1新数据清单.json"
 python scripts/report_fresh_opportunity.py --root "$run_root/data" --protocol "$protocol" \
-  --manifest "$manifest" --audit-root "$run_root/audits" --output "$run_root/report"
+  --manifest "$manifest" --audit-root "$run_root/audits-v4" --output "$run_root/report"
 python scripts/audit_fresh_counts.py --root "$run_root/data" --protocol "$protocol" \
-  --manifest "$manifest" --report "$run_root/report/coverage.json" --output "$run_root/report/counts-independent.json"
+  --manifest "$manifest" --report "$run_root/sealed-full-coverage.json" --output "$run_root/report/counts-independent.json"
 python scripts/audit_fresh_sources.py --root "$run_root/data" --protocol "$protocol" \
   --manifest "$manifest" --storage "$run_root/report/raw-storage.json" \
   --weights /share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt \

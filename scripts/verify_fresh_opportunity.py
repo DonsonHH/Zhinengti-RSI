@@ -22,6 +22,7 @@ from patrol_rsi.fresh_opportunity import (ROOTS, KIND_IDS, frozen_inputs, need, 
 from patrol_rsi.m9 import arrays_digest
 from patrol_rsi.opportunity_data import FEATURE_NAMES, ACTION_FEATURE_NAMES, HORIZONS, SOURCE_CODES
 from verify_opportunity_data import direct_labels
+from fresh_schedule_audit import GeometryAudit, verify_record
 
 
 def read_gz(path):
@@ -43,6 +44,8 @@ def verify_condition(folder, group):
     need(arrays_digest(arrays) == identity['numeric_process_fingerprint'], 'Physical numerical fingerprint')
     record = read_gz(folder / 'tour-record.json.gz')
     need(record['specification'] == spec and record['trace_fingerprint'] == identity['numeric_process_fingerprint'], 'Tour spec and process binding')
+    measured_checks=verify_record(record,arrays,spec['seed'])
+    geometry_audit=GeometryAudit(record)
     # Original measurement rules are independent of the producer's references.
     a, ref = direct_labels(arrays, spec['seed'])
     with np.load(folder / 'labels-only.npz') as values:
@@ -94,6 +97,7 @@ def verify_condition(folder, group):
     with history_opener(history_path, 'rt', encoding='utf-8') as stream:
         for line in stream:
             bundle = json.loads(line); validate_public(bundle)
+            geometry_audit.append(bundle)
             now = (frames + 1) * 5
             need(bundle['time_s'] == now, 'Every5s public packet clock')
             while cursor < len(record['inspection_events']) and record['inspection_events'][cursor]['time_s'] <= now:
@@ -159,11 +163,13 @@ def verify_condition(folder, group):
                 need(np.array_equal(action[kept,h], expected_action), 'All13 public ETA/qualification/return-slack fields')
             kept += 1; frames += 1
     need((frames,kept)==(359,59), 'All359 source frames and59 dataset roots verified')
+    geometry_count=geometry_audit.finish(geom)
     summary = read(folder / 'summary.json')
     need(summary['feature_audit']['timestamp_available_readings_checked']==available_readings, 'All history timestamp count')
     return {'conditions':1,'history_frames':frames,'sampled_roots':kept,'available_readings':available_readings,
         'physical_label_cells':int(a.size),'sample_rows':int(targets['A'].size),
-        'base_values':int(base.size),'action_values':int(action.size),'events':len(events)}
+        'base_values':int(base.size),'action_values':int(action.size),'events':len(events),
+        'original_measurements_recomputed':measured_checks,'complete_return_checks_recomputed':geometry_count}
 
 
 def main():

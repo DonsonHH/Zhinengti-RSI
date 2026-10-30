@@ -21,11 +21,24 @@ def partial_inventory(root, manifest):
     rows=[]
     for item in manifest:
         p=root/item['split']/f"seed-{item['group_seed']}"/item['id']/'summary.json'
-        if p.exists():
+        # files.json is opened only after summary.json is closed by producer.
+        # Never inspect a concurrently half-written summary merely by exists().
+        if (p.parent/'files.json').exists():
             s=read(p)
             rows.append({k:s[k] for k in ('id','split','group_seed','numeric_process_fingerprint')})
+    public_bytes=0
+    for split in SPLITS:
+        if not (root/split).exists():continue
+        for group in (root/split).iterdir():
+            if not group.is_dir():continue
+            for child in group.iterdir():
+                if child.is_file():public_bytes+=child.stat().st_size
+                elif child.is_dir() and child.name!='processes':
+                    public_bytes+=sum(p.stat().st_size for p in child.iterdir() if p.is_file())
     return {'conditions_generated':len(rows),'expected':len(manifest),'complete':len(rows)==len(manifest),
-        'cross_split_fingerprint_conflicts':fingerprint_conflicts(rows)}
+        'cross_split_fingerprint_conflicts':fingerprint_conflicts(rows),
+        'public_derived_bytes_so_far':public_bytes,'public_derived_cap_bytes':6*1000**3,
+        'storage_headroom_bytes':6*1000**3-public_bytes}
 
 
 def diagnostic_entropy(groups):
@@ -89,6 +102,8 @@ def report(root, protocol, manifest, output, audit_root):
     for gi,(split,seed) in enumerate(groups):
         path=audit_root/f'group-{gi}.json'; v=read(path)
         need(v['status']=='passed' and v['counts']['conditions']==20 and (v['split'],v['seed'])==(split,seed),'Independent group audit')
+        need(v['counts']['original_measurements_recomputed']>0 and v['counts']['complete_return_checks_recomputed']>0,
+            'Independent original measurements and whole-return geometry, beyond feature/label receipts')
         audit_counts.update(v['counts']); audits.append({'group_index':gi,'split':split,'seed':seed,'sha256':sha(path),'counts':v['counts']})
     for item in manifest:
         group=root/item['split']/f"seed-{item['group_seed']}"; p=group/item['id']
@@ -106,6 +121,7 @@ def report(root, protocol, manifest, output, audit_root):
                 ('phase',item['split']+'/'+str(item['specification']['fault_start_s'])+'/'+row['kind']+'/'+str(row['horizon_s'])),
                 ('process',item['split']+'/'+fp+'/'+row['kind']+'/'+str(row['horizon_s']))]
             for dim,key in keys:
+                if item['split']=='final_test' and dim!='split':continue
                 cell=dimensions[dim].setdefault(key,Coverage());cell.add(row,condition,events)
                 if row['B_action_negative']:negatives[dim,key].add(item['group_seed'])
                 for field in ('A_positive_without_legal_B','A_positive_B_reference_negative','B_positive_A_negative'):
@@ -154,7 +170,8 @@ def report(root, protocol, manifest, output, audit_root):
         'numeric_processes':len(set(fingerprints.values())),'seed_groups':64,
         'sample_rows':sum(v['dataset_samples'] for v in sums),'coverage_cells':table,
         'passed_cells':len(passed),'failed_cells':48-len(passed),'coverage_verdict':verdict,
-        'B4_B1b_full_domain_fitting_allowed':verdict=='GO',
+        'B4_B1b_full_domain_fitting_allowed':False,
+        'engineering_acceptance':'Pending independent counts, original-source replay, final tests and resource ledger. Coverage alone never grants fitting permission.',
         'limited_protocol_automatically_authorized':False,
         'cross_split_fingerprint_conflicts':conflict,'all640_noise_pairs_labels_identical':True,
         'derived_and_source_data_bytes':storage,'private_physical_source_bytes':private_process_storage,
@@ -163,19 +180,32 @@ def report(root, protocol, manifest, output, audit_root):
         'predictor_fits':0,'CVAE_updates':0,'PPO_updates':0,'LLM_calls':0,
         'denominators':'Sample rows correlated; deduplicated retained event keys=(numeric fingerprint,task,start,end). Separate counts for A endpoints and legal B; events across horizons never summed as independent.',
         'final_test_seal':'Final row labels, process arrays, public histories and continuous per-process diagnostics remain700/600 at source. Released statistics only; no predictor score or model selection.'}
+    # Exact seed/event sets are used privately by the independent count audit.
+    private_coverage=root.parent/'sealed-full-coverage.json'
+    write(private_coverage,result);private_coverage.chmod(0o600)
+    def released_row(row):
+        if row.get('split')=='final_test':
+            row={k:v for k,v in row.items() if k not in ('seed_groups','B_positive_seed_groups','B_negative_seed_groups')}
+        return row
+    result=dict(result,coverage_cells=[released_row(v) for v in table],
+        sealed_full_coverage={'path':str(private_coverage),'sha256':sha(private_coverage),'exported':False})
     write(output/'coverage.json',result)
+    for key in list(values['split']):
+        if key.startswith('final_test/'):
+            values['split'][key]=released_row(dict(values['split'][key],split='final_test'))
     write(output/'coverage-dimensions.json',values)
-    write(output/'independent-audits.json',{'groups':audits,'totals':dict(audit_counts)})
+    released_audits=[dict(v,counts={k:c for k,c in v['counts'].items() if k!='events'}) if v['split']=='final_test' else v for v in audits]
+    write(output/'independent-audits.json',{'groups':released_audits,'totals':dict(audit_counts)})
     write(output/'raw-storage.json',{'bytes':storage,'public_derived_bytes':public_derived_storage,
         'private_physical_source_bytes':private_process_storage,'public_derived_cap_bytes':6*1000**3,'files':file_inventory})
-    (output/'condition-counts.json.gz').write_bytes(gzip.compress(json.dumps(sums,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
+    (output/'condition-counts-nonfinal.json.gz').write_bytes(gzip.compress(json.dumps([v for v in sums if v['split']!='final_test'],ensure_ascii=False,allow_nan=False).encode(),mtime=0))
     write(output/'electrical-nonfinal-diagnostics.json',public_electrical)
     # This path is separate and sealed. It is hashed, not downloaded for modelling.
     private_path=root.parent/'sealed-electrical-all-processes.json'
     write(private_path,private_electrical);private_path.chmod(0o600)
     write(output/'sealed-diagnostic-receipt.json',{'path':str(private_path),'bytes':private_path.stat().st_size,'sha256':sha(private_path),'processes':len(private_electrical),'exported':False})
     write(output/'development-clock-diagnostic.json',development_clock_diagnostic(root,manifest))
-    lines=['# 四专业×三视野×四划分覆盖验收','',f'结论：{verdict}。通过{len(passed)}/48单元；全域拟合允许={verdict=="GO"}。','',
+    lines=['# 四专业×三视野×四划分覆盖验收','',f'覆盖候选结论：{verdict}。通过{len(passed)}/48单元；拟合许可仍须独立最终验收收据。','',
         '|划分|专业|秒|有效B|B正例|正例种子|正例过程|保留事件|负例种子|缺口（种子/过程/事件/负种子）|通过|',
         '|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|']
     for v in table:
@@ -197,6 +227,8 @@ def main():
         value=partial_inventory(args.root,manifest);write(args.output,value)
         print(json.dumps(value,ensure_ascii=False),flush=True)
         if value['cross_split_fingerprint_conflicts']:raise SystemExit(2)
+        if not value['complete'] and value['storage_headroom_bytes']<200*1000**2:
+            raise SystemExit('Storage headroom below200MB two-concurrent-group reserve; no further generation.')
     else:report(args.root,protocol,manifest,args.output,args.audit_root)
 
 

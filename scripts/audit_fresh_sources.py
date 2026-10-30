@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import gzip
+import json
+import lzma
 from pathlib import Path
 import stat
 
@@ -9,6 +12,7 @@ import numpy as np
 
 from patrol_rsi.fresh_opportunity import WEIGHTS_SHA, frozen_inputs, need, read, sha, write
 from patrol_rsi.improver_task import PhasedTrace
+from fresh_schedule_audit import verify_fixed_task_metadata
 
 
 def main():
@@ -27,6 +31,18 @@ def main():
     physical_bytes=sum(v['bytes'] for v in storage['files'] if Path(v['path']).parent.name=='processes')
     need(size==storage['bytes'] and physical_bytes==storage['private_physical_source_bytes'] and
          size-physical_bytes==storage['public_derived_bytes']<=6*1000**3,'Separate private physical sources and6GB public-derived cap')
+    public_metadata_frames=0
+    for item in manifest:
+        folder=args.root/item['split']/f"seed-{item['group_seed']}"/item['id']
+        identity=read(folder/'source-identity-not-features.json')
+        path=folder/identity.get('source_public_history_path','public-states.jsonl.gz')
+        opener=lzma.open if path.suffix=='.xz' else gzip.open
+        frames=0
+        with opener(path,'rt',encoding='utf-8') as stream:
+            for line in stream:
+                verify_fixed_task_metadata(json.loads(line));frames+=1
+        need(frames==359,'All359 public task contracts rechecked')
+        public_metadata_frames+=frames
     seen=set();replayed=values=0
     for item in manifest:
         key=item['physical_key']
@@ -50,6 +66,7 @@ def main():
     need(replayed==640 and len(storage['files'])==len({v['path'] for v in storage['files']}),'All640 processes and no duplicate storage paths')
     write(args.output,{'status':'passed','original_processes_replayed':replayed,'physical_values_compared':values,
         'raw_files_SHA_verified':len(storage['files']),'all_data_bytes':size,'final_permissions_verified':True,
+        'fixed_public_task_metadata_frames':public_metadata_frames,
         'frozen_weights_SHA':WEIGHTS_SHA,'source_coverage_SHA':sha(args.storage),
         'no_new_model_training':True})
     print('FRESH_SOURCE_REPLAY_DONE',replayed,values,size,flush=True)
