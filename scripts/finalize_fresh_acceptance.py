@@ -35,7 +35,9 @@ def main():
         'Full original measurements, whole-return geometry and all85+13 feature columns')
     cells=coverage['coverage_cells'];need(len(cells)==48,'Four professions x3 horizons x4 splits')
     passed=[v for v in cells if v['gate']['passed']]
-    verdict='GO' if len(passed)==48 else 'LIMITED' if passed else 'NO-GO'
+    covered_domains=[{'kind':kind,'horizon_s':horizon} for kind in ('thermal','electrical','cooling','control')
+        for horizon in (30,60,120) if all(v['gate']['passed'] for v in cells if (v['kind'],v['horizon_s'])==(kind,horizon))]
+    verdict='GO' if len(passed)==48 else 'LIMITED' if covered_domains else 'NO-GO'
     result={'stage':'B4-B1a','engineering_execution_and_audit':'complete','coverage_verdict':verdict,
         'B4_B1b_full_domain_fitting_allowed':verdict=='GO','limited_protocol_automatically_authorized':False,
         'passed_cells':len(passed),'failed_cells':48-len(passed),'requirements_proved':{
@@ -45,6 +47,7 @@ def main():
             'all48_coverage_gates_independently_evaluated':True,'cross_split_and_noise_independence':True,
             'final_raw_test_stays_sealed':True,'Torch_and_light_CPU_tests':True,'terminal_Slurm_and_budgets':True},
         'protocol_SHA256':PROTOCOL_SHA,'manifest_SHA256':MANIFEST_SHA,'weights_SHA256':WEIGHTS_SHA,
+        'kind_horizon_domains_passing_all_four_splits':covered_domains,
         'new_predictor_fits':0,'PPO_retraining':0,'CVAE_updates':0,'Qwen_calls':0,'B4C_policy_search':0,
         'B3_2_verdict':'NO-GO unchanged','B4B0_historical_verdict':'NO-GO unchanged; new B1a evidence recorded separately',
         'next_step':('May start only the already frozen B4-B1b fitting after this data acceptance. No fit executed in B1a.' if verdict=='GO' else

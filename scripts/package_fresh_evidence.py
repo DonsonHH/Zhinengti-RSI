@@ -20,10 +20,11 @@ def main():
     # Explicit allow-list: all final row/process/event diagnostics are outside.
     for path in (r/'report').iterdir():
         if path.is_file():files.append((path,'report/'+path.name))
-    for folder in ('reviewed-v5/gate','jobs'):
+    for folder in ('final/gate','jobs'):
         for path in (r/folder).iterdir():
+            if folder=='jobs' and path.name.startswith('package-'):continue
             if path.is_file():files.append((path,('gate/' if folder.endswith('gate') else 'jobs/')+path.name))
-    for name in ('cluster-start.txt','environment-start.txt','slurm-final.psv','slurm-cost-review.json'):
+    for name in ('cluster-start.txt','environment-start.txt'):
         files.append((r/name,name))
     # One development positive-condition example permits local independent
     # reproduction without opening final data or duplicating full private runs.
