@@ -24,7 +24,9 @@ def main():
         size+=file['bytes']
         if file['final_test_sealed']:
             need(stat.S_IMODE(path.stat().st_mode)&0o077==0,'Final raw file permissions sealed')
-    need(size==storage['bytes'] and size<=6*1000**3,'Unique storage accounting cap')
+    physical_bytes=sum(v['bytes'] for v in storage['files'] if Path(v['path']).parent.name=='processes')
+    need(size==storage['bytes'] and physical_bytes==storage['private_physical_source_bytes'] and
+         size-physical_bytes==storage['public_derived_bytes']<=6*1000**3,'Separate private physical sources and6GB public-derived cap')
     seen=set();replayed=values=0
     for item in manifest:
         key=item['physical_key']

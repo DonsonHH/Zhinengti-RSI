@@ -2,7 +2,9 @@ import copy
 from pathlib import Path
 import unittest
 
-from patrol_rsi.fresh_opportunity import coverage_gate, fingerprint_conflicts, frozen_inputs, ROOTS
+import numpy as np
+
+from patrol_rsi.fresh_opportunity import coverage_gate, fingerprint_conflicts, frozen_inputs, ROOTS, condition_strata
 
 
 class FreshOpportunityTests(unittest.TestCase):
@@ -45,6 +47,20 @@ class FreshOpportunityTests(unittest.TestCase):
         value=fingerprint_conflicts(rows)
         self.assertEqual(len(value),1)
         self.assertEqual(set(value[0]['splits']),{'development','final_test'})
+
+    def test_physical_positive_with_no_action_is_missing_not_normal(self):
+        base=np.zeros((59,176,85),np.float32)
+        targets={k:np.zeros((59,3,176),np.int8) for k in ('A','B_reference','B_action')}
+        targets['B_action'][:]=-1
+        targets['A'][0,0,128]=targets['B_reference'][0,0,128]=1
+        labels={k:np.zeros((360,176),np.int32) for k in ('event_id','retained_event_id')}
+        labels['event_id'][11,128]=labels['retained_event_id'][11,128]=1
+        events=[{'id':1,'task':128,'kind':'electrical','retained_at_least_15s':True}]
+        rows=condition_strata(base,targets,labels,events)
+        row=next(v for v in rows if v['kind']=='electrical' and v['horizon_s']==30)
+        self.assertEqual((row['A_positive'],row['B_action_valid'],row['B_action_negative']),(1,0,0))
+        self.assertEqual(row['A_positive_without_legal_B'],1)
+        self.assertEqual(row['B_positive_retained_event_ids'],[])
 
 
 if __name__=='__main__':unittest.main()

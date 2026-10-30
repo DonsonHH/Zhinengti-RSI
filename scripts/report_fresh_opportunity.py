@@ -83,7 +83,7 @@ def report(root, protocol, manifest, output, audit_root):
     write(output/'cross-split-conflicts.json',inv)
     dimensions=defaultdict(dict); negatives=defaultdict(set)
     extras=defaultdict(Counter); sums=[]; fingerprints={}; noises=defaultdict(list)
-    audits=[]; audit_counts=Counter(); storage=0; private_electrical=[]; public_electrical=[]
+    audits=[]; audit_counts=Counter(); storage=0; private_process_storage=0; private_electrical=[]; public_electrical=[]
     file_inventory=[]
     groups=[(split,seed) for split,seeds in protocol['new_seed_groups'].items() for seed in seeds]
     for gi,(split,seed) in enumerate(groups):
@@ -125,13 +125,15 @@ def report(root, protocol, manifest, output, audit_root):
     for split,seed in groups:
         group=root/split/f'seed-{seed}'
         for file in group.rglob('*'):
-            if file.is_file() and file.parent==group or file.is_file() and file.parent==group/'processes':
+            if file.is_file() and file.parent in (group, group/'processes'):
                 storage+=file.stat().st_size
+                if file.parent==group/'processes':private_process_storage+=file.stat().st_size
                 file_inventory.append({'path':str(file),'bytes':file.stat().st_size,'sha256':sha(file),'final_test_sealed':split=='final_test'})
     for pair in noises.values():
         need(len(pair)==2 and {v['noise_c'] for v in pair}=={.2,1.},'Two exact noise versions')
         need(all(len({v[k] for v in pair})==1 for k in ('fingerprint','labels_SHA','targets_SHA')),'Same physical/noise A/B/legality identity')
-    need(len(noises)==640 and storage<=6*1000**3,'Manifest and6GB public/derived storage cap')
+    public_derived_storage=storage-private_process_storage
+    need(len(noises)==640 and public_derived_storage<=6*1000**3,'Manifest and6GB public-derived storage cap')
     values={}
     for dim,cells in dimensions.items():
         values[dim]={}
@@ -155,14 +157,17 @@ def report(root, protocol, manifest, output, audit_root):
         'B4_B1b_full_domain_fitting_allowed':verdict=='GO',
         'limited_protocol_automatically_authorized':False,
         'cross_split_fingerprint_conflicts':conflict,'all640_noise_pairs_labels_identical':True,
-        'derived_and_source_data_bytes':storage,'independent_counts':dict(audit_counts),
+        'derived_and_source_data_bytes':storage,'private_physical_source_bytes':private_process_storage,
+        'public_derived_data_bytes':public_derived_storage,'public_derived_cap_bytes':6*1000**3,
+        'independent_counts':dict(audit_counts),
         'predictor_fits':0,'CVAE_updates':0,'PPO_updates':0,'LLM_calls':0,
         'denominators':'Sample rows correlated; deduplicated retained event keys=(numeric fingerprint,task,start,end). Separate counts for A endpoints and legal B; events across horizons never summed as independent.',
         'final_test_seal':'Final row labels, process arrays, public histories and continuous per-process diagnostics remain700/600 at source. Released statistics only; no predictor score or model selection.'}
     write(output/'coverage.json',result)
     write(output/'coverage-dimensions.json',values)
     write(output/'independent-audits.json',{'groups':audits,'totals':dict(audit_counts)})
-    write(output/'raw-storage.json',{'bytes':storage,'files':file_inventory})
+    write(output/'raw-storage.json',{'bytes':storage,'public_derived_bytes':public_derived_storage,
+        'private_physical_source_bytes':private_process_storage,'public_derived_cap_bytes':6*1000**3,'files':file_inventory})
     (output/'condition-counts.json.gz').write_bytes(gzip.compress(json.dumps(sums,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
     write(output/'electrical-nonfinal-diagnostics.json',public_electrical)
     # This path is separate and sealed. It is hashed, not downloaded for modelling.

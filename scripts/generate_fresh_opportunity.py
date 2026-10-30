@@ -6,6 +6,7 @@ from dataclasses import asdict
 import gzip
 import hashlib
 import json
+import lzma
 import os
 from pathlib import Path
 import sys
@@ -42,7 +43,8 @@ def one_condition(item, predictor, group, geometry_common):
     roots, bases, geometry_rows, actions = [], [], [], []
     # All359 packets are retained. The59 sampled roots still contain all
     # intervening qualified measurements in the last-three-history encoding.
-    with gzip.open(output / 'public-states.jsonl.gz', 'wt', encoding='utf-8') as stream:
+    history_path = output / 'public-states.jsonl.xz'
+    with lzma.open(history_path, 'wt', encoding='utf-8', preset=3) as stream:
         for _ in range(359):
             bundle = capture_public(env)
             base = extractor.append(bundle)
@@ -106,7 +108,8 @@ def one_condition(item, predictor, group, geometry_common):
     identity = dict(item, numeric_process_fingerprint=env.trace.fingerprint,
         source_process_path=str(process_path.relative_to(group)), source_process_sha256=sha(process_path),
         source_Tour_sha256=sha(output / 'tour-record.json.gz'),
-        source_public_history_sha256=sha(output / 'public-states.jsonl.gz'),
+        source_public_history_path=history_path.name,
+        source_public_history_sha256=sha(history_path),
         source_geometry_sha256=sha(group / 'geometry.npz'),
         base_feature_names=list(FEATURE_NAMES), action_feature_names=list(ACTION_FEATURE_NAMES),
         protocol_sha256=PROTOCOL_SHA, manifest_sha256=MANIFEST_SHA,

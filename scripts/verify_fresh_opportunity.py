@@ -9,6 +9,7 @@ import argparse
 from collections import Counter
 import gzip
 import json
+import lzma
 import math
 from pathlib import Path
 
@@ -31,7 +32,8 @@ def verify_condition(folder, group):
     identity = read(folder / 'source-identity-not-features.json')
     spec = identity['specification']
     need(sha(folder / 'tour-record.json.gz') == identity['source_Tour_sha256'], 'Original Tour SHA')
-    need(sha(folder / 'public-states.jsonl.gz') == identity['source_public_history_sha256'], 'Public history SHA')
+    history_path = folder / identity.get('source_public_history_path', 'public-states.jsonl.gz')
+    need(sha(history_path) == identity['source_public_history_sha256'], 'Public history SHA')
     need(sha(group / identity['source_process_path']) == identity['source_process_sha256'], 'Physical source SHA')
     need(sha(group / 'geometry.npz') == identity['source_geometry_sha256'], 'Geometry SHA')
     for name, receipt in read(folder / 'files.json').items():
@@ -88,7 +90,8 @@ def verify_condition(folder, group):
     roles = {v['id']: v['role'] for v in build_agents(graph_for(128, 'open'), 'provisioned')}
     history = [[] for _ in range(176)]
     cursor = frames = kept = available_readings = 0
-    with gzip.open(folder / 'public-states.jsonl.gz', 'rt', encoding='utf-8') as stream:
+    history_opener = lzma.open if history_path.suffix == '.xz' else gzip.open
+    with history_opener(history_path, 'rt', encoding='utf-8') as stream:
         for line in stream:
             bundle = json.loads(line); validate_public(bundle)
             now = (frames + 1) * 5
