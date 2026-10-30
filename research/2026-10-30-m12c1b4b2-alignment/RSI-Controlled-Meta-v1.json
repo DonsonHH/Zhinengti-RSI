@@ -1,0 +1,208 @@
+{
+  "protocol": "RSI-Controlled-Meta-v1",
+  "baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+  "status": "frozen_for_independent_review_not_executed",
+  "research_goal": "Separatetaskprogramimprovement fromimprovermethodtransfer;partialobservationmultiagentpatrol stays task,LLMnotphysicalexecutor.",
+  "existing_interfaces": [
+    "Improver",
+    "PatrolProgram",
+    "ControlledImprover",
+    "run_slots",
+    "transfer_reset",
+    "partitions_disjoint",
+    "BudgetedEvaluationStore"
+  ],
+  "fixed_core": [
+    "allatomicmeasurement/model/returntools",
+    "safetyandexternalvalidator",
+    "taskgrammarthresholds",
+    "taskoutcomeweights",
+    "physicsfaults/noises",
+    "evaluationbudget"
+  ],
+  "permitted_protocol_changes": {
+    "Improver": [
+      "diagnosticsordered1..3ofexisting5",
+      "memory none/recent/best_and_failures",
+      "instruction chosenonlyfrom INSTRUCTION_TEMPLATES (nofreeformtaskidentifiers)"
+    ],
+    "ControlledImprover": {
+      "generator": [
+        "qwen_once",
+        "random_program"
+      ],
+      "dedup": [
+        "exact_version",
+        "canonical_rule_order"
+      ],
+      "acceptance": [
+        "strict_improvement",
+        "keep_parent"
+      ],
+      "failure_fallback": [
+        "keep_parent",
+        "safe_tour"
+      ]
+    },
+    "canonical_semantics": "Mayremoveexactrepeatedrule only;firstmatch order neverreordered. No evaluatororresourceparametercanbeedited."
+  },
+  "four_groups": {
+    "human_fixed": {
+      "proposal_slots": 0,
+      "model_calls": 0,
+      "program": "samehumanprofessionalPGfrompairedprotocol"
+    },
+    "random_search": {
+      "proposal_slots": 13,
+      "model_calls": 0,
+      "fixedgenerator": "existing boundedrandom_program"
+    },
+    "fixed_Qwen3_8B": {
+      "proposal_slots": 13,
+      "model_calls": 13,
+      "prefix3_saved": true,
+      "protocol_updated": false
+    },
+    "controlled_meta": {
+      "meta_rounds": 2,
+      "protocol_proposal_slots": 2,
+      "inner_candidates_per_arm": 2,
+      "meta_task_candidate_slots": 8,
+      "fresh_task_candidate_slots": 3,
+      "total_model_calls": 13
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "precision": "float16",
+    "thinking": false,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20
+    },
+    "input_token_cap_per_call": 6144,
+    "output_token_cap_per_call": 768,
+    "weights_updated": false
+  },
+  "generation_repeats": [
+    9101,
+    9102,
+    9103
+  ],
+  "partitions": {
+    "meta_round0": [
+      32000,
+      32001
+    ],
+    "meta_round1": [
+      32002,
+      32003
+    ],
+    "fresh_task_adapt": [
+      32100,
+      32101
+    ],
+    "fresh_task_validation": [
+      32120,
+      32121
+    ],
+    "fresh_task_final": [
+      32140,
+      32141,
+      32142,
+      32143
+    ]
+  },
+  "physical_conditions": "9uniqueprocesses/seed ×2noise aspairedprotocol. Metaonsets335/705;fresh task onsets150/520 fixedbeforeanyruns;healthyonephase. Reusefixedlegaltools,notcandidatehistory. Scopeinstance/onsettransfer only;no layouttransferclaimbecauseImproverTask currentlyhardcodes openlayout.",
+  "transfer_boundary": "SaveonlyControlledImproverprotocoljson/id. RecreatePatrolProgramdefaultTour,emptyhistory,emptycandidatearchive,emptytaskoutcomes;seedgroupsandnumericfingerprints disjoint. No metamemory/prompt/archive/candidateprogram/cachedscore crosses.",
+  "paired_meta_acceptance": "For eachprotocolattemptold/new useidenticalfreshdefaultPG+emptyhistory,samemetacasesandgenerationseeds,2candidateattemptseach. Acceptprotocol onlyifnewinnerselectedvalidatorstrictlybetter andsafety;invalid/duplicate/fail consumesattempt,no retries.",
+  "fair_comparisons": [
+    "Primaryfixedprefix3versusmeta3:equal fresh-taskproposal slots,allmeta prep costs counted separately",
+    "Secondaryfixed13versusmeta13:equal13modelcall cap,meta hasless fresh-taskslots;not equaldownstreamopportunity",
+    "Random13noLLM andhuman0 arestrong costreference,not claimtotalcompute equal"
+  ],
+  "budgets_per_generation_repeat": {
+    "task_candidate_attempts": 37,
+    "meta_protocol_attempts": 2,
+    "model_call_cap_total": 26,
+    "input_token_cap_total": 159744,
+    "output_token_cap_total": 19968,
+    "meta_environment_episode_cap": 360,
+    "fresh_adapt_environment_episode_cap": 1152,
+    "validation_episode_cap": 216,
+    "final_episode_cap": 432,
+    "total_environment_episode_cap": 2160
+  },
+  "all3repeats_caps": {
+    "model_calls": 78,
+    "input_tokens": 479232,
+    "output_tokens": 59904,
+    "task_candidate_attempts": 111,
+    "meta_protocol_attempts": 6,
+    "environment_episode_evaluations": 6480,
+    "formal_plus_future_preflight_model_calls": 79
+  },
+  "budget_explanation": "Meta2rounds*(sharedbaseline1+old2+new2)*36conditions=360;freshadapt sharedTour1+random13+fixed13+meta3+human1=31*36=1116<=1152;validation/final6references (Tour,human,random,fixed3,fixed13,meta)×36/72=216/432. Cachehitsrecordedreferencecountandactualuniqueeval separately.",
+  "acceptance_and_final": "Withinadaptuseunchangedstrictvalidation_rank from annotateddevelopment;onlywhitelistedpublicdiagnostics+accept/rejectfeedback enterQwen. Explicit perarmvalidationfallbackandfinalopen rule below isbinding.",
+  "metrics": {
+    "task": [
+      "pairedseedmiss/wait/cost vsTour andhuman;identicaltaskPGstart"
+    ],
+    "improver": [
+      "fresh-taskdeltaatmatched3proposal slots vsfixed3",
+      "pairedwin/tie/lossandtransfergain",
+      "costperacceptedusefuldistinctprogram"
+    ],
+    "costs": [
+      "allattemptedmodelcalls includingfailed",
+      "tokens inclunknownfailedcall flag",
+      "environmentactualeval+cache references",
+      "metaprepanddownstreamwall/RSS/GPUhours",
+      "duplicates/invalids/fallbacks"
+    ]
+  },
+  "GO": "Safetyandsplitgatepass;metafresh task no increasedmissperseed,atleast5%waitgain orfewermissesvsfixed3 acrossall3generationrepeats innewvalidationandfinalpointcomparison;reportmetaprep costs. Supportsindependentlargerconfirmation,not openendedRSI.",
+  "LIMITED_GO": "Interfaces/schema/reset/budget tests andprotocolreviewpassed. Allowsfollow-onboundedactualQwenexperiment underseparateexecutiongate,withoutpositivetask/metaclaim.",
+  "NO_GO": "Any hidden/overlapsafetyviolation ormetatransfernotbetterunderfrozencomparison;stopwithrecord,neverappendnewcandidates orreselectfinal.",
+  "resources": {
+    "model": "4gpu1xV100S32GB,4CPU,48GB,oneallocationmax60min,max3allocations,totalGPUhourscap3",
+    "CPU": "cu2CPU8GBmax2parallel,totalallocatedCPUmincap2400",
+    "source_storage_cap_bytes": 4000000000,
+    "no_model_training": true
+  },
+  "execution_gate": "No realQwencalls,metasearch,newformaltasktests orphysicalgenerationinB2. Review+actualmodelonecallpreflight+costestimate mustpassbeforefutureformallaunch;wouldrequireseparateexplicitexecutionstage.",
+  "created_utc": "2026-10-30T10:15:49.094378+00:00",
+  "environment_accounting": "Actual episode caps enforced by one shared immutable BudgetedEvaluationStore perpartition;budget chargedbeforeattempt includingfailedcallback. Repeatbaseline/fallback requests arecachehitsonly;logicalrequests+hits+attemptedactual+successfulactual recordedseparately. No cache crosses meta/freshtaskpartitions.",
+  "instruction_templates": [
+    "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+    "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.",
+    "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+  ],
+  "task_execution_contract": "All4groups andTour/fixed3 references use aligned_patrol.run_episode +samecommon_one_checkgate andqualification/cooldown/returncore boundby MultiAgent-Patrol-Paired-v1. CallbackinBudgetedEvaluationStore isthissameexecutor. OldunrestrictedM12B evaluate callbacknotpermitted.",
+  "validation_and_final_open_rule": {
+    "safety_fail": "Anyarm illegalassignment/revisit/quota/split/source/budgetfailure =>wholecampaignstop finalsealed. No silentTour masking.",
+    "performance_fallback": "For eachnonTour group compare selectedPG vsTour onfreshvalidation36conditions. pass=(allvalidationseed miss_delta<=0) AND ((pooledmiss_delta<0) OR (pooledmiss_delta==0 AND weightedcensoredwait_delta<0));safevalidatedPG retainediff pass else actualfinalPG=defaultTour. Manualfixedhuman undergoessamegate.",
+    "freeze": "Saveall6logicalgroup nominalPG,validationmetrics,booleanfallback,actualPG+model+sourceSHA beforefinalopen. FinalscoreactualfrozenPG once;cacheduplicatesrecorded.",
+    "final_open": "All6mappingssealedANDsafety/source/split/resource gatespassed;no requirementthatmeta alreadywins. Reportnegative metaevidence honestly. Formalorchestratormustverifythisbooleanbeforeopen.",
+    "report": "Allgroupdevelopment/validation,nominalPGandfallbackrate plusactualfinalscores,including Tourfallbacks. No nominalrescoring rescueafterfinal."
+  },
+  "statistical_unit": "3generationrepeats reuse4finalphysicalseedgroups,not12independentenvironments. Pairnoises/processes andgenerationrepeatswithinseed. Report3repeatdifferences plus4seedpairedvalues;any2000seedbootstrap descriptiveexploratory only,not confirmatorynewpopulationRSI.",
+  "future_preflight_separate_budget": {
+    "real_model_calls": 1,
+    "input_token_cap": 6144,
+    "output_token_cap": 128,
+    "GPU_minutes_cap": 10,
+    "not_part_of_78_formal_calls": true,
+    "account_in_total_costs": true,
+    "no_task_selection_or_meta_use": true,
+    "this_stage_calls": 0
+  },
+  "metric_aggregation": {
+    "wait": "Within eachcondition compute originalconsequenceweightedmean delay/censor overretained>=15sevents;averagepairednoise withinprocess,then equallyaverageeventbearingphysicalprocesseswithinseed,then equallyaverageseeds. Healthy/noeventprocessnullwait,retainedcost/safetyandmiss0;countsreported. Samephysicaleventeligibilityacrossarms.",
+    "misses": "Withinconditioncountmissedretainedevents,thenmeanpairednoise,meanall9physicalprocessesperseed,meanseeds. Perseednoincreaseusespairednoisemacroprocess count. Also report pooledeventcounts descriptively only.",
+    "GO_binding": "Everywaitdelta/strictwaitimprovement/5%gain andprimarygaininGO/fallback usesTHIS seed-process-noise macro,not pooledeventweightedvalidator. Pairedrelativegain=(baseline_macro_wait-candidate_macro_wait)/baseline_macro_wait.",
+    "development_selector": "Existingvalidation_rankinsideadapt/meta staysfixed annotatedpooleddevelopmentmetric;thisisexplicitlydifferentfromindependentvalidation/finalmacroconfirmation."
+  }
+}

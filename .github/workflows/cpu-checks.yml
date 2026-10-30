@@ -33,5 +33,6 @@ jobs:
           python -m unittest discover -s tests -p test_fresh_resources.py -v
           python -m unittest discover -s tests -p test_fresh_export_seal.py -v
           python -m unittest discover -s tests -p test_limited_prediction.py -v
+          python -m unittest discover -s tests -p test_b2_alignment.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts

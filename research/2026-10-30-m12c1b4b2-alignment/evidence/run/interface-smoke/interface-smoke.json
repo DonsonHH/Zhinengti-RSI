@@ -1,0 +1,670 @@
+{
+  "scope": "Engineeringonly:10episodes onealreadyknown developmentphysicalprocess. Notformalcomparison,noscientifictaskorRSIclaim.",
+  "terminal_packet_limit": "No1800sdecisionroot archived. Carry1795nonthermaltelemetryand1800sensorarray atterminalupdateonly;all10arms useidenticalpacket. NotanexactfullTourreplayor formalnewenvironmentresult.",
+  "sourcefiles": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20000/development--20000--coldplate_fouling--180--335--0.2/source-identity-not-features.json",
+      "sha256": "714629a223686c4d5a7ce233362a80da72f46505f75a7f410b3f79a70b324c08"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20000/development--20000--coldplate_fouling--180--335--0.2/public-states.jsonl.gz",
+      "sha256": "0b7a9cdc71e31795000b9df0277ddfd32d30f2dd22d8bba19e5957cef4b0ace7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20000/processes/20000--coldplate_fouling--180--335.npz",
+      "sha256": "9e7114f0a330a911e9bdb7d9a2a3d7269514ed072cea543eb760270bc612f0a6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20000/processes/20000--coldplate_fouling--180--335.json",
+      "sha256": "73b9203fb64afdd31d0933f3a2cc21876ac8f30867b73430d34b470ad52639d9"
+    }
+  ],
+  "actors": {
+    "0": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-0/selected.pt",
+      "sha256": "c7cee69fd196119d92bcba6e0682b8e2acec309e67faa5875e29936bbfef6691",
+      "parameters_sha256": "25e49a60cbeb297209e5bb3b74556cd9427bd7845631b55a64534652d24d563a"
+    },
+    "1": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-1/selected.pt",
+      "sha256": "0dbb7fc64123a9cb01c83094b430866b74da57091e10e9c0ceec55a961b901ab",
+      "parameters_sha256": "e50dcab2da79586bcfa008c7a1a7bc04e1a4c0ba53cee12a595ac9ee514db677"
+    },
+    "2": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-2/selected.pt",
+      "sha256": "a69125f186c6026116185ae61654e5f09fa8960e158f68e1f15c47c636d1157f",
+      "parameters_sha256": "a6221e8911dc321e9815885a5e916b1ed970c7bf164274b1c0c4d60d4ce2d8a8"
+    }
+  },
+  "CVAE_SHA256_before_and_after": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "rows": [
+    {
+      "arm": "Tour",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.038805561140179634,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9269386352971196,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "frozen_PPO",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.03860610816627741,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.9306928711012006,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1209,
+          "ppo": 214
+        },
+        "actual_PPO_dispatches": 214,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1209,
+        "global_optional_checks": 1,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "human_professional",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.038242398761212826,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9927324149757624,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04014743398874998,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.0215132646262646,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "signal"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.03672418836504221,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.0056903073564172,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1209,
+          "ppo": 213,
+          "signal": 1
+        },
+        "actual_PPO_dispatches": 213,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1210,
+        "global_optional_checks": 1,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "Tour",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9585378933697939,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "frozen_PPO",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.9470067014917731,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1209,
+          "ppo": 214
+        },
+        "actual_PPO_dispatches": 214,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1209,
+        "global_optional_checks": 1,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "human_professional",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.0346631165593863,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.0555270621553063,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "signal"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.0600158851593733,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1209,
+          "ppo": 213,
+          "signal": 1
+        },
+        "actual_PPO_dispatches": 213,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1210,
+        "global_optional_checks": 1,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    }
+  ],
+  "CVAE_deployment_cross_interventions": [
+    {
+      "arm": "Tour",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "frozen_PPO",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 95.0,
+      "nominal_wait_s": 95.0
+    },
+    {
+      "arm": "human_professional",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 95.0,
+      "nominal_wait_s": 95.0
+    }
+  ],
+  "new_physical_processes": 0,
+  "plant_step_calls": 0,
+  "new_model_training": 0,
+  "real_LLM_calls": 0,
+  "phases_opened": [
+    "development"
+  ],
+  "final_access": false,
+  "job_id": "130869"
+}

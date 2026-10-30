@@ -1,0 +1,173 @@
+{
+  "protocol": "B4-B2-development-v1",
+  "baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+  "status": "design_for_independent_review_before_new_diagnostic_fits",
+  "primary_objective": "Restore independent validation of multi-agent patrol task improvement, improver improvement and transfer. Prediction diagnosis is bounded support,not an indefinite prerequisite.",
+  "old_results_preserved": {
+    "B3.2": "NO-GO",
+    "B4-B1b-Limited": "NO-GO",
+    "B1a": "LIMITED35/48"
+  },
+  "data_boundary": {
+    "probability_phases": [
+      "development",
+      "validation_calibration"
+    ],
+    "action_phases": [
+      "development"
+    ],
+    "never_open": [
+      "validation_selection",
+      "final_test"
+    ],
+    "new_physical_processes": 0,
+    "CVAE_PPO_retraining": 0,
+    "Qwen_calls": 0,
+    "formal_tests_executed": 0
+  },
+  "probability": {
+    "cells": [
+      [
+        "thermal",
+        30
+      ],
+      [
+        "thermal",
+        60
+      ],
+      [
+        "thermal",
+        120
+      ],
+      [
+        "electrical",
+        60
+      ],
+      [
+        "electrical",
+        120
+      ],
+      [
+        "control",
+        60
+      ],
+      [
+        "control",
+        120
+      ]
+    ],
+    "labels": [
+      "B_action"
+    ],
+    "fixed_frozen_LR_views": [
+      "time_lr",
+      "primary_full:public_all_lr_thermal_else_public_lr"
+    ],
+    "fixed_L2": 0.1,
+    "source": "All14 corresponding old frozen successful development models,not old selection winners;sourceSHA checked againstoriginal fit index.",
+    "fixed_outputs": [
+      "raw_logit",
+      "sigmoid_raw_logit",
+      "original_frozen_probability",
+      "calibration_weighted_constant"
+    ],
+    "new_ablation_calibrators": [
+      {
+        "id": "hierarchy_ridge0",
+        "rho": 0.0,
+        "weights": "original seed/process/noise/row hierarchy"
+      },
+      {
+        "id": "hierarchy_ridge0p0001",
+        "rho": 0.0001,
+        "weights": "original hierarchy"
+      },
+      {
+        "id": "balanced_ridge0",
+        "rho": 0.0,
+        "weights": "original hierarchy normalized to0.5positive+0.5negative"
+      }
+    ],
+    "balanced_report": "Report balanced-native output separately as changed-prior diagnostic;also shift its logit by log(pi/(1-pi)) with original calibration weightedpi before populationprobability metrics. Never treat nativebalanced probabilities as calibrated originalprior.",
+    "objective": "WeightedBCE+rho*a*a/2,a=softplus(z),interceptfree;fixed CPUfloat64LBFGS200iter/300closures/history10/grad1e-6/change1e-9/strong_wolfe/starta1b0.",
+    "new_calibration_fit_cap": 42,
+    "original_calibration_replay_cap": 14,
+    "new_LR_fits": 0,
+    "all_fits_consumed_including_failure": true,
+    "assessment": "WeightedAP,AUROC,positive/negative rawscore distributions,withinclass/overall probability quantiles andrange/Brier/logloss/reliability;derivative decomposition vsrho;monotone ranking anddevelopment-calibration gap. Metrics on calibration are in-sample diagnostics,not confirmation or modelselection.",
+    "claims": "Can identify same-score regularization or weighting effects in the ablation;lowrawscore discrimination can be a limit of this frozenLR,not proof allLRcapacity exhausted. No replacement selectedforoldB1b."
+  },
+  "action": {
+    "seed_groups": [
+      20000,
+      20001
+    ],
+    "conditions": "First manifest condition per numeric fingerprint+noise:18 perseed,36total;healthyphase duplicate removed. IDs sealedbefore evaluation.",
+    "roots_s": "all359 original5s public decisionroots",
+    "candidates": "Only current hard-legal optionalCHECK geometry. Exclude plannedTour and in-flight completions as new actions;countseparately.",
+    "constraints": [
+      "profession/access unchanged",
+      "original cooldown>=60s",
+      "original per-agent2/owned-round",
+      "unspent global1extra/episode",
+      "actualdistance+service grid5s",
+      "complete cyclicreturn and all tasks deadline",
+      "original commonmissiontail"
+    ],
+    "public_rankers": [
+      "professional_cue",
+      "public_net",
+      "public_net_no_history",
+      "time_cost_only"
+    ],
+    "ranking": "Use only current publicbundle+currentgeometry. Professionalcue:positive unconfirmed task_signal weight*lead/300-.05*shift/300. Publicnet uses frozenStopConfig surrogate including allother delayedtask exposure. Nohistory removes onlyhistory_assimilated. Timecost ranks positivelead/(completioncost+1) with assetweight,without measurements. Stable ties:score,earliestfinish,lowestagent,lowesttask.",
+    "execution_gate": "At each5s root selectTop1 among currenthardlegal candidates. Forcue require signal>=.05 and unconfirmed andscore>0;fornet use originaladmissible>0;timecost score>0. Execute firstacceptedRootTop1 once,thenTourforremainingepisode;no laterreplaceorsecondextra.",
+    "oracle_scope": "Offline after public selections savedSHA;full-episode oneCHECKthenTour effects for allcandidates using archivedB_reference and originalretained>=15s eventweights. Oraclebest is diagnostic ceiling,never publicscoreinput.",
+    "net_definition": "Primarymissed_delta and weighted_censored_wait_delta_s,then shiftcost. Net_delay_gain_s=-wait_delta-.05*shift_s (zeroevent waitgain0). Netbeneficial requires no lost confirmations,no increasedmisses,and either fewer misses or positive net_delay_gain. Report gained AND lost,not only targetevent.",
+    "output": [
+      "percondition/seed onebudgetTop1action,legalcertificate,realETA,role,quota,returnslack,Tourtargetarrival,otherdelay",
+      "allcandidate resource/certificate distributions",
+      "within-rootTop1useful fraction andepisodefirstgate actualnetoutcomes",
+      "oracleceiling andselectedregret",
+      "cross-noise/process accounting",
+      "5s vs30scurrent dispatch counts"
+    ],
+    "independent_verification": "From savedTour eventtime lists construct selectedbranch schedule independently of productionanalytic_continuations;resample originalB_reference,check allretained eventfirsttimes,fullweightedwait andmiss/gain/loss;no freshplantstep.",
+    "new_physics_or_predictor_training": 0,
+    "no_final_access": true
+  },
+  "interface_work": {
+    "reuse": [
+      "Improver",
+      "PatrolProgram",
+      "currentqualificationandreturntools",
+      "validation_rank"
+    ],
+    "new_small_wrapper_only": [
+      "fixed allowlisted candidate/dedup/accept/fallback choice",
+      "strict publicprompt projection",
+      "nonoverlapping taskpartition guard",
+      "transfer reset todefaultprogramandemptyarchive",
+      "failureconsumesattemptedslotandcostledger"
+    ],
+    "LLM_validation": "Dependency-injected deterministicmockcaller only thisstage;explicitly engineering evidence,no realmodelimprovement.",
+    "old_run_usage_statistics": "Read original alreadyreleased aggregateindexes and devprivate records as needed;shadowPPO scoring separatedfromselectedPPOactions;CVAEdeploymentcrossinterventions inherit oldscope."
+  },
+  "next_round_protocols": "Freeze separate five-arm pairedwholeepisode protocol andfourgroupRSI protocol with newdisjoint seeds,budgets,predeclaredmetricsandstops;thisstage doesnot execute theirformaltests.",
+  "resources": {
+    "partition": "cu",
+    "cpus_per_job": 2,
+    "memory_GB": 8,
+    "max_concurrency": 2,
+    "max_minutes_per_allocation": 60,
+    "GPU": 0,
+    "calibration_allocated_CPU_minutes_cap": 120,
+    "action_allocated_CPU_minutes_cap": 240,
+    "interface_and_audit_allocated_CPU_minutes_cap": 120,
+    "total_allocated_CPU_minutes_cap": 480,
+    "newstorage_bytes_cap": 2000000000
+  },
+  "gate": "Independent protocolreviewSHA+actual regression gate before56 boundedcalibrationfits;allsourcefiles read-only;sourcebudget failure stopswithout expanding experiments.",
+  "final_decision": "Separate B2diagnostic completion,readiness of multiagentpairedproposal andRSImetainterface. LIMITEDGO can authorizesubsequentreviewedsmallprotocol even when B1b NO-GO retained. No taskorRSIpositiveclaim fromengineeringtests.",
+  "created_utc": "2026-10-30T09:57:29.376149+00:00"
+}

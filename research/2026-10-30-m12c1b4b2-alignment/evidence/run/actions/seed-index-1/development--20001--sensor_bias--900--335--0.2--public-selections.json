@@ -1,0 +1,121 @@
+{
+  "condition": "development--20001--sensor_bias--900--335--0.2",
+  "scope": "Currentpubliconly decisionsbefore anyevaluator data read",
+  "selections": {
+    "time_cost_only": {
+      "agent": 3,
+      "task": 51,
+      "dispatch_time_s": 5.0,
+      "finish_s": 40.0,
+      "tour_target_finish_s": 210.0,
+      "target_lead_s": 170.0,
+      "return_slack_s": 45.0,
+      "shift_s": 60.0,
+      "period_s": 230.0,
+      "other_tasks": [
+        25,
+        27,
+        31,
+        29,
+        57,
+        59,
+        63,
+        61,
+        55,
+        53,
+        49
+      ],
+      "other_arrivals_s": [
+        15.0,
+        30.0,
+        50.0,
+        65.0,
+        90.0,
+        105.0,
+        125.0,
+        140.0,
+        160.0,
+        175.0,
+        195.0
+      ],
+      "first_exposure_s": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "later_exposure_factor": [
+        9.132004626037594,
+        8.058965796866373,
+        6.821767268565909,
+        6.020188484662389,
+        4.88800984137491,
+        4.313653544816377,
+        3.6514288931966776,
+        3.222370048031466,
+        2.7276695007664356,
+        2.40715468620973,
+        2.0376080495871265
+      ],
+      "full_exposure_s": [
+        480.0,
+        480.0,
+        480.0,
+        480.0,
+        480.0,
+        480.0,
+        480.0,
+        470.0,
+        450.0,
+        435.0,
+        420.0
+      ],
+      "other_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "geometry_index": 43,
+      "score": 4.722222222222222,
+      "profession": "thermal",
+      "role": "thermal",
+      "quota_before": {
+        "global_extra_used": 0,
+        "per_agent_extra_used": 0,
+        "per_owned_round_limit": 2
+      },
+      "decision": "execute_currentTop1once_thenTour",
+      "future_readings_used": false
+    }
+  },
+  "root_Top1_counts": {
+    "time_cost_only": 292
+  },
+  "candidate_professions": {
+    "thermal": 6820,
+    "electrical": 464,
+    "cooling": 464,
+    "control": 534
+  },
+  "observation_counts": {
+    "inflight_observation_opportunities": 5000,
+    "free_agent_frames": 1462
+  },
+  "source_public_SHA256": "203bd7b2887b227c1d0db8532da10e35479f3941a73002269c456dc8489a5a8c",
+  "protocol_SHA256": "1da63415c59a2647b0d4f7b7ae493fac5b09c5a2374bf0460ce66579e72b24a8"
+}

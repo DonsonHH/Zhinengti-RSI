@@ -1,0 +1,1429 @@
+{
+  "source_baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+  "historical_public_aggregate_sources": [
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-0/case-index.json",
+      "sha256": "87309cf41530bf9cd326cbf2ccb57f4c2e5800150e7bf421f3a9270b1cde6fa6"
+    },
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-0/test-groups.json",
+      "sha256": "51801558f1809cb67f030a9abb4be99589b49b82fd6c9af17531e48cbfdf0a68"
+    },
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-1/case-index.json",
+      "sha256": "afe3a1dca9ef4a3c8af6f7d4a39fa4c6cc06d45799d6521ec8f607edcf9bc765"
+    },
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-1/test-groups.json",
+      "sha256": "eafc4ea31f39019d91ff77772fb6d3f86a316b94dd71e4c02b42a6f53546cbee"
+    },
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-2/case-index.json",
+      "sha256": "9e9d32387faeefe23b92a01ad839c4317e86cb4d87178157079e7616d0735d0a"
+    },
+    {
+      "path": "research/2026-10-28-m12b-improver/evidence/trial-2/test-groups.json",
+      "sha256": "a6ffc1751d167811ac852c6ef5bc0c4561d5f67ffa84288f35b13a51f20ece6f"
+    },
+    {
+      "path": "research/2026-10-27-m11-scheduling/evidence/case-index.json.gz",
+      "sha256": "9e55e72b00bc60f436c76c2efcffb10b9a89427012574457247b10912e04340c"
+    }
+  ],
+  "M12B_3repeat_groups": [
+    {
+      "group": "tour",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136896,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 384,
+      "different_from_shadow_actor": 115092,
+      "extra_checks": 0,
+      "estimator_calls": 5760,
+      "zero_extra_case_references": 96,
+      "mean_extra_checks": 0.0,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "actor",
+      "case_references": 96,
+      "actual_PPO_dispatches": 122736,
+      "dispatches": 122736,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 94434,
+      "different_from_shadow_actor": 0,
+      "extra_checks": 21168,
+      "estimator_calls": 5760,
+      "zero_extra_case_references": 0,
+      "mean_extra_checks": 220.5,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "human",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136818,
+      "rule_dispatches_including_return_rule": 7905,
+      "forced_single_candidate": 684,
+      "different_from_shadow_actor": 114750,
+      "extra_checks": 42,
+      "estimator_calls": 5760,
+      "zero_extra_case_references": 78,
+      "mean_extra_checks": 0.4375,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "direct3",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136789,
+      "rule_dispatches_including_return_rule": 290,
+      "forced_single_candidate": 622,
+      "different_from_shadow_actor": 115216,
+      "extra_checks": 80,
+      "estimator_calls": 4800,
+      "zero_extra_case_references": 72,
+      "mean_extra_checks": 0.8333333333333334,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "direct13",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136789,
+      "rule_dispatches_including_return_rule": 290,
+      "forced_single_candidate": 622,
+      "different_from_shadow_actor": 115216,
+      "extra_checks": 80,
+      "estimator_calls": 4800,
+      "zero_extra_case_references": 72,
+      "mean_extra_checks": 0.8333333333333334,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "random_search13",
+      "case_references": 96,
+      "actual_PPO_dispatches": 72172,
+      "dispatches": 133764,
+      "rule_dispatches_including_return_rule": 16022,
+      "forced_single_candidate": 64266,
+      "different_from_shadow_actor": 42277,
+      "extra_checks": 15626,
+      "estimator_calls": 3840,
+      "zero_extra_case_references": 22,
+      "mean_extra_checks": 162.77083333333334,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "random_meta3",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136864,
+      "rule_dispatches_including_return_rule": 134,
+      "forced_single_candidate": 482,
+      "different_from_shadow_actor": 114976,
+      "extra_checks": 14,
+      "estimator_calls": 4800,
+      "zero_extra_case_references": 90,
+      "mean_extra_checks": 0.14583333333333334,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "random_meta5",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136864,
+      "rule_dispatches_including_return_rule": 134,
+      "forced_single_candidate": 482,
+      "different_from_shadow_actor": 114976,
+      "extra_checks": 14,
+      "estimator_calls": 4800,
+      "zero_extra_case_references": 90,
+      "mean_extra_checks": 0.14583333333333334,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "model_meta3",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136782,
+      "rule_dispatches_including_return_rule": 239,
+      "forced_single_candidate": 556,
+      "different_from_shadow_actor": 115700,
+      "extra_checks": 102,
+      "estimator_calls": 3840,
+      "zero_extra_case_references": 66,
+      "mean_extra_checks": 1.0625,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "model_meta3/no_actor",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136782,
+      "rule_dispatches_including_return_rule": 239,
+      "forced_single_candidate": 556,
+      "different_from_shadow_actor": 115700,
+      "extra_checks": 102,
+      "estimator_calls": 3840,
+      "zero_extra_case_references": 66,
+      "mean_extra_checks": 1.0625,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    },
+    {
+      "group": "model_meta3/nominal",
+      "case_references": 96,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 136784,
+      "rule_dispatches_including_return_rule": 251,
+      "forced_single_candidate": 624,
+      "different_from_shadow_actor": 115638,
+      "extra_checks": 110,
+      "estimator_calls": 0,
+      "zero_extra_case_references": 70,
+      "mean_extra_checks": 1.1458333333333333,
+      "generation_repeats": 3,
+      "independent_physical_processes": 16,
+      "scope": "3generationrepeats reference same16physicalprocesses×2noises;not96 independent environments."
+    }
+  ],
+  "M12B_per_repeat": [
+    {
+      "trial": 0,
+      "group": "tour",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 40912,
+      "dispatches": 40912,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 31478,
+      "different_from_shadow_actor": 0,
+      "extra_checks": 7056,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 220.5,
+      "zero_extra_case_references": 0,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "human",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45606,
+      "rule_dispatches_including_return_rule": 2635,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38250,
+      "extra_checks": 14,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.4375,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "direct3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "direct13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "random_search13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45624,
+      "rule_dispatches_including_return_rule": 54,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38980,
+      "extra_checks": 44,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 22,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "random_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "random_meta5",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "model_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45589,
+      "rule_dispatches_including_return_rule": 60,
+      "forced_single_candidate": 166,
+      "different_from_shadow_actor": 38724,
+      "extra_checks": 44,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "model_meta3/no_actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45589,
+      "rule_dispatches_including_return_rule": 60,
+      "forced_single_candidate": 166,
+      "different_from_shadow_actor": 38724,
+      "extra_checks": 44,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 0,
+      "group": "model_meta3/nominal",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45590,
+      "rule_dispatches_including_return_rule": 64,
+      "forced_single_candidate": 200,
+      "different_from_shadow_actor": 38693,
+      "extra_checks": 48,
+      "estimator_calls": 0,
+      "mean_extra_checks": 1.5,
+      "zero_extra_case_references": 22,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "tour",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 40912,
+      "dispatches": 40912,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 31478,
+      "different_from_shadow_actor": 0,
+      "extra_checks": 7056,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 220.5,
+      "zero_extra_case_references": 0,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "human",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45606,
+      "rule_dispatches_including_return_rule": 2635,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38250,
+      "extra_checks": 14,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.4375,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "direct3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45589,
+      "rule_dispatches_including_return_rule": 60,
+      "forced_single_candidate": 166,
+      "different_from_shadow_actor": 38724,
+      "extra_checks": 44,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "direct13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45589,
+      "rule_dispatches_including_return_rule": 60,
+      "forced_single_candidate": 166,
+      "different_from_shadow_actor": 38724,
+      "extra_checks": 44,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "random_search13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 28114,
+      "dispatches": 44082,
+      "rule_dispatches_including_return_rule": 15968,
+      "forced_single_candidate": 30422,
+      "different_from_shadow_actor": 3297,
+      "extra_checks": 7708,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 240.875,
+      "zero_extra_case_references": 0,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "random_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 134,
+      "forced_single_candidate": 226,
+      "different_from_shadow_actor": 38248,
+      "extra_checks": 14,
+      "estimator_calls": 960,
+      "mean_extra_checks": 0.4375,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "random_meta5",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 134,
+      "forced_single_candidate": 226,
+      "different_from_shadow_actor": 38248,
+      "extra_checks": 14,
+      "estimator_calls": 960,
+      "mean_extra_checks": 0.4375,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "model_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45593,
+      "rule_dispatches_including_return_rule": 64,
+      "forced_single_candidate": 162,
+      "different_from_shadow_actor": 38730,
+      "extra_checks": 40,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.25,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "model_meta3/no_actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45593,
+      "rule_dispatches_including_return_rule": 64,
+      "forced_single_candidate": 162,
+      "different_from_shadow_actor": 38730,
+      "extra_checks": 40,
+      "estimator_calls": 960,
+      "mean_extra_checks": 1.25,
+      "zero_extra_case_references": 20,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 1,
+      "group": "model_meta3/nominal",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45594,
+      "rule_dispatches_including_return_rule": 68,
+      "forced_single_candidate": 196,
+      "different_from_shadow_actor": 38699,
+      "extra_checks": 44,
+      "estimator_calls": 0,
+      "mean_extra_checks": 1.375,
+      "zero_extra_case_references": 22,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "tour",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 40912,
+      "dispatches": 40912,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 31478,
+      "different_from_shadow_actor": 0,
+      "extra_checks": 7056,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 220.5,
+      "zero_extra_case_references": 0,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "human",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45606,
+      "rule_dispatches_including_return_rule": 2635,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38250,
+      "extra_checks": 14,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.4375,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "direct3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "direct13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "random_search13",
+      "case_references": 32,
+      "actual_PPO_dispatches": 44058,
+      "dispatches": 44058,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 33716,
+      "different_from_shadow_actor": 0,
+      "extra_checks": 7874,
+      "estimator_calls": 960,
+      "mean_extra_checks": 246.0625,
+      "zero_extra_case_references": 0,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "random_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "random_meta5",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45632,
+      "rule_dispatches_including_return_rule": 0,
+      "forced_single_candidate": 128,
+      "different_from_shadow_actor": 38364,
+      "extra_checks": 0,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.0,
+      "zero_extra_case_references": 32,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "model_meta3",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "model_meta3/no_actor",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 115,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 1920,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    },
+    {
+      "trial": 2,
+      "group": "model_meta3/nominal",
+      "case_references": 32,
+      "actual_PPO_dispatches": 0,
+      "dispatches": 45600,
+      "rule_dispatches_including_return_rule": 119,
+      "forced_single_candidate": 228,
+      "different_from_shadow_actor": 38246,
+      "extra_checks": 18,
+      "estimator_calls": 0,
+      "mean_extra_checks": 0.5625,
+      "zero_extra_case_references": 26,
+      "numeric_processes": 16,
+      "note": "Released caseaggregates only;actualPPOtoolcounts include forcedsinglecandidate actions. Actorwascomputedforshadowcomparisonevenwhenrule/Tourselected."
+    }
+  ],
+  "M11_method_records": [
+    {
+      "method": "cycle",
+      "recorded_cases": 128,
+      "completed_inspections": 611616,
+      "guard_forced_choices": 0,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    },
+    {
+      "method": "ppo_free",
+      "recorded_cases": 336,
+      "completed_inspections": 759993,
+      "guard_forced_choices": 0,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    },
+    {
+      "method": "ppo_guard",
+      "recorded_cases": 336,
+      "completed_inspections": 560978,
+      "guard_forced_choices": 363000,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    },
+    {
+      "method": "risk",
+      "recorded_cases": 104,
+      "completed_inspections": 232900,
+      "guard_forced_choices": 0,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    },
+    {
+      "method": "rolling",
+      "recorded_cases": 128,
+      "completed_inspections": 628055,
+      "guard_forced_choices": 0,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    },
+    {
+      "method": "urgency",
+      "recorded_cases": 104,
+      "completed_inspections": 72368,
+      "guard_forced_choices": 0,
+      "PPO_decision_count_available_in_released_aggregate": false,
+      "interpretation": "Source methoddispatch tellsactualactor/heuristicroute;completedinspections not substitutedforactorcallcount."
+    }
+  ],
+  "B2_archived_engineering_rows": [
+    {
+      "arm": "Tour",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03740462847054005,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9149069357663393,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "frozen_PPO",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.034801957197487354,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.9119660314172506,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "human_professional",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03947998117655516,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9806169150397182,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03940347582101822,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.0111618721857667,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "estimator": "history",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "signal"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.03771587926894426,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.0036944029852748,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 60
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "Tour",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9447407508268952,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "frozen_PPO",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": []
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.9246071055531502,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "human_professional",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9856388866901398,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 40.0,
+        "detected_only_mean_delay_s": 40.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25198569928274134,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.0027633104473352,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "inspection_events_SHA256": "fe032062e9e3e70e279eec0140167e61e3879fc902bad94a43e7e6b861f20a2b",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "estimator": "nominal",
+      "workflow": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "ppo",
+        "rules": [
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "signal"
+          }
+        ]
+      },
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 95.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.0,
+        "public_return": -0.25462007390862,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.6961184590965205,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.0180394360795617,
+        "estimator_calls": 0,
+        "tasks_violating_exact_gap": 0
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "inspection_events_SHA256": "140fd8a3a5a5f58a69f62eaa3d848a930d14df309a089d9c4e9e411c5f968507",
+      "process_fingerprint": "e02211bd2a94d45fc012a440c9413aca01ed716d4a56aa0d6fc5a822bf9b08a0"
+    }
+  ],
+  "B2_CVAE_cross_interventions": [
+    {
+      "arm": "Tour",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "frozen_PPO",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 95.0,
+      "nominal_wait_s": 95.0
+    },
+    {
+      "arm": "human_professional",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 40.0,
+      "nominal_wait_s": 40.0
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "action_frames_different": 0,
+      "history_minus_nominal_missed": 0,
+      "history_wait_s": 95.0,
+      "nominal_wait_s": 95.0
+    }
+  ],
+  "B2_receipt_repair": {
+    "prior_receipt_SHA256": "257cd24886dbc7821f5d47c9897a7d4f9e9aedb83fca467a9289dc938d2bbadf",
+    "all10_action_and_measurement_hashes_unchanged": true,
+    "reason": "After globaloneCHECKused, compulsoryTour decisions mustnot be creditedasactualPPO,evenwhen shadowPPOalsoselectedTour."
+  },
+  "no_private_final_records_opened": true,
+  "new_scientific_gain_claimed": false,
+  "M12B_effect_scope": "Historical fixedimprover descriptive smalltaskgain;metaupdatednotbetter. no_actor/nominalcrossinterventions notproofzero valueeverywhere.",
+  "atomic_tool_independence": "No standalonePPO/CVAEcausalbenefit established. B2publicnet-nohistorysamechoices. Returnlegalitytools providefeasibilityinthisfixedmodel,not general safety guarantee."
+}

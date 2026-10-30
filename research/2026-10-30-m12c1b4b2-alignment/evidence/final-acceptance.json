@@ -1,0 +1,148 @@
+{
+  "status": "completed_goal_stage",
+  "decision": "LIMITED GO for mainline preparation;freeze_not_launch",
+  "baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+  "requirements": [
+    {
+      "requirement": "A_original_goal_paper_code_evidence_contribution",
+      "status": "verified",
+      "evidence": "原论文与当前贡献对照.md;CONTEXT andmandatoryhistory read"
+    },
+    {
+      "requirement": "A_preserve_old_NO_GO_and_sources",
+      "status": "verified",
+      "evidence": "protected-baseline-verification.json;oldB3.2/B1bunchanged"
+    },
+    {
+      "requirement": "B1_prior_diagnostic_protocol_review",
+      "status": "verified",
+      "evidence": "B4-B2-development-v1.json;protocol-review.json;initial274Torchbeforefits"
+    },
+    {
+      "requirement": "B1_probability_compression_and_limited_ablation",
+      "status": "verified",
+      "evidence": "42new+14replayedfitreceipts;calibration-diagnosis;rawclassscores/ranges/weights/derivatives"
+    },
+    {
+      "requirement": "B2_current_action_actual_finish_and_constraints",
+      "status": "verified",
+      "evidence": "298152currentcandidates;sourcegeometry rebuiltall359roots of36devconditions"
+    },
+    {
+      "requirement": "B2_public_budgeted_Top1_vs_Tour_full_outcomes",
+      "status": "verified",
+      "evidence": "publicselectionreceiptsbeforelabels;70selectedindependentfullschedule/event/gapchecks"
+    },
+    {
+      "requirement": "C_actual_PPO_CVAE_workflow_usage",
+      "status": "verified",
+      "evidence": "interface-usage.json;M11/M12Balreadyreleasedaggregates;10engineeringcombos/repairhashes"
+    },
+    {
+      "requirement": "C_five_arm_paired_frozen_protocol",
+      "status": "verified",
+      "evidence": "MultiAgent-Patrol-Paired-v1.json;next-protocol-review;aligned_patrol"
+    },
+    {
+      "requirement": "D_bounded_reused_interfaces_and_allowed_meta_changes",
+      "status": "verified",
+      "evidence": "rsi_controlled reuseImproverPatrolProgram;279Torch/58CPU;nohugeframework"
+    },
+    {
+      "requirement": "D_four_fair_groups_and_transfer_cost_protocol",
+      "status": "verified",
+      "evidence": "RSI-Controlled-Meta-v1.json;counterfairness+78formal+1futurepreflightcaps;separatetasks/cache"
+    },
+    {
+      "requirement": "D_interface_only_protocol_transfer_verified",
+      "status": "verified",
+      "evidence": "meta-interface-finalsmoke;reset/overlap/failure/novelty/budgetnegativecases"
+    },
+    {
+      "requirement": "E_mainline_decision_and_stopping_boundaries",
+      "status": "verified",
+      "evidence": "reportLIMITEDGO;oldNO-GO;formalrunner/newsource/preflightnextstage;noBrieruniversalgate"
+    },
+    {
+      "requirement": "E_all_real_resources_scope",
+      "status": "verified",
+      "evidence": "resource-ledger;allactualjobsexit0;read-onlyoriginals;0newphysics0training0realLLM0formaltests"
+    },
+    {
+      "requirement": "E_one_document_delivery",
+      "status": "verified",
+      "evidence": "fullreport+newprotocols/diagnostics/usage/costs+exactpriorB1bfullJSON embedded"
+    }
+  ],
+  "engineering_tests_not_scientific_gain": true,
+  "old_B3_2_and_B1b_NO_GO_unchanged": true,
+  "formal_tests_launched": 0,
+  "real_LLM_calls": 0,
+  "new_physical_processes": 0,
+  "neural_retraining": 0,
+  "future_formal_orchestrator_and_model_preflight": "Explicit next execution gate,not performed in this goal stage.",
+  "latest_Torch_gate": {
+    "tests": 279,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "success": true,
+    "torch": "2.6.0+cu124"
+  },
+  "lightweight_CPU": {
+    "tests": 58,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "success": true
+  },
+  "source_snapshot_SHA256": "f25e21526f79f5def19684f52a432a5cafbda15340846a832d0b6868b0b0271b",
+  "resources": {
+    "allocation_count": 11,
+    "allocated_CPU_minutes": 30.133333333333333,
+    "by_category": {
+      "calibration": 1.8333333333333333,
+      "actions": 10.266666666666666,
+      "interface_audit": 18.033333333333335
+    },
+    "caps": {
+      "calibration": 120,
+      "actions": 240,
+      "interface_audit": 120
+    },
+    "total_cap": 480,
+    "max_concurrency": 2,
+    "all_completed_exit0": true,
+    "GPU_allocations": 0,
+    "real_LLM_calls": 0,
+    "new_physical_research_processes": 0,
+    "RSS_caveat": "Shortallocations maymissPythonpeak;smallRSSnot actualprocesspeak",
+    "formaltestallocations": 0,
+    "engineering_episode_executions": 20,
+    "engineering_distinct_arm_estimator_combinations": 10,
+    "extra10reason": "PPOattributionreceipt repair;allaction/measurementSHAidentical",
+    "regression_gate_history": "274then276,276,277,278,279;repeats only after interface or boundary fixes,not researchfit retries."
+  },
+  "protected_originals": {
+    "baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+    "original_tracked_files_checked": 6563,
+    "unchanged_tracked_files": 6561,
+    "allowed_navigation_CI_changes": [
+      {
+        "path": ".github/workflows/cpu-checks.yml",
+        "before_sha256": "321390e9c76b8abfdc9665a0bc8c451660f0f3c23baed6508f495a8868a3e28a",
+        "after_sha256": "b5994d2018cd6e71d330d0372a4d10615a789f42d085243813a99641e2e18faf"
+      },
+      {
+        "path": "CURRENT_RESEARCH.md",
+        "before_sha256": "07609b534c5ca3b86fdafaa4db61267827f5b1fc72eb0498dee682c6b6067007",
+        "after_sha256": "0f22d02df4ced887957656e7a952a940b81a678742ecdfed59d357446c28a73b"
+      }
+    ],
+    "historical_experimental_changes": 0,
+    "B2_diagnostic_executed_source_unchanged": true,
+    "final_interface_Torch_snapshot": "code-v6",
+    "final_Torch_gate_job": "130875"
+  },
+  "checked_utc": "2026-10-30T10:53:29.424255+00:00"
+}

@@ -1,0 +1,6398 @@
+{
+  "protocol_SHA256": "1da63415c59a2647b0d4f7b7ae493fac5b09c5a2374bf0460ce66579e72b24a8",
+  "seed": 20001,
+  "conditions": 18,
+  "rows": [
+    {
+      "condition": "development--20001--healthy--900--335--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "9d52c7aa8d342b249dad4efc95d2de2602471bd59d3e5f3829a52b9e2649626e",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "4ed8cc899cdeb4379a24791452a24fbda4a96c4e1d9ce54a6e81bdf64ce21ceb",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": null,
+        "event_weight_sum": 0.0
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 0,
+      "net_harmful_candidates": 8282,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": null,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 2.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 881,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": null,
+        "net_delay_gain_s": -0.5,
+        "net_beneficial": false,
+        "exists_net_beneficial": false
+      },
+      "wall_s": 7.957107863388956
+    },
+    {
+      "condition": "development--20001--healthy--900--335--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "9d52c7aa8d342b249dad4efc95d2de2602471bd59d3e5f3829a52b9e2649626e",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "4d8ba5419ef444a362b0d56e878269700b19c7f4bbc3ba0c07109db65f6ad9c2",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": null,
+        "event_weight_sum": 0.0
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 0,
+      "net_harmful_candidates": 8282,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": -0.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": null,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": null,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 2.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 881,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": null,
+        "net_delay_gain_s": -0.5,
+        "net_beneficial": false,
+        "exists_net_beneficial": false
+      },
+      "wall_s": 8.12576878350228
+    },
+    {
+      "condition": "development--20001--coldplate_fouling--180--335--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "d8a4566552b2264600f2acd2e376e16ec0369eaa22773749efe9aed584b2753f",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "7c0c399dc7e43a921ddecc75a98a961cb139983741d23db0245cb0bf839c24f7",
+      "baseline": {
+        "missed": 1,
+        "weighted_wait_s": 60.0,
+        "event_weight_sum": 1.670679967383858
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 1,
+          "branch_weighted_wait_s": 60.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 2226,
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -55.0,
+        "net_delay_gain_s": 53.0,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.292324596084654
+    },
+    {
+      "condition": "development--20001--coldplate_fouling--180--335--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "d8a4566552b2264600f2acd2e376e16ec0369eaa22773749efe9aed584b2753f",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "99e5b5880c97a831432f8bdc557f6395dfe89d082c6f4d9caf08f1e16cfb588a",
+      "baseline": {
+        "missed": 1,
+        "weighted_wait_s": 60.0,
+        "event_weight_sum": 1.670679967383858
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 1,
+          "branch_weighted_wait_s": 60.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 2226,
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -55.0,
+        "net_delay_gain_s": 53.0,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.369307488203049
+    },
+    {
+      "condition": "development--20001--coldplate_fouling--180--705--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "b79a0d49fca3baa8107f09ccaedf22f73b47a365d1f4525ece49b1f78711ce1e",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "5135e155a57090db2e3a93cdbbfe8afb2aacdd45ce77270ace8cf6e317f4f22d",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 54.99999999999999,
+        "event_weight_sum": 1.9394877998105002
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 54.99999999999999,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 45.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3710,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -45.00000000000001,
+        "net_delay_gain_s": 42.75000000000001,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.477954680100083
+    },
+    {
+      "condition": "development--20001--coldplate_fouling--180--705--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "b79a0d49fca3baa8107f09ccaedf22f73b47a365d1f4525ece49b1f78711ce1e",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "cdfd566449d65d915ec34d12c1f16efdef6cff01635d2f4f8f379963bdbab392",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 54.99999999999999,
+        "event_weight_sum": 1.9394877998105002
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 42.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 54.99999999999999,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 45.75000000000001,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3710,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -45.00000000000001,
+        "net_delay_gain_s": 42.75000000000001,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.490472728386521
+    },
+    {
+      "condition": "development--20001--dc_contact_hotspot--180--335--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "b6e90cb175d3996538be2fb6e1065b1f6340960ed310adff8356de6f8b593c92",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "ef8ebc964cbbdab4411649a112badb2d2dae3f6823a5ec003002d63b1539c501",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 200.0,
+        "event_weight_sum": 1.5795380975856448
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 11,
+      "net_harmful_candidates": 8271,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 200.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 194.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 2091,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -195.0,
+        "net_delay_gain_s": 191.5,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.394925591535866
+    },
+    {
+      "condition": "development--20001--dc_contact_hotspot--180--335--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "b6e90cb175d3996538be2fb6e1065b1f6340960ed310adff8356de6f8b593c92",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "2e76584930a7af1fb3f65ea4a990a578ef9511314904564cab5692d1d77da2c8",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 200.0,
+        "event_weight_sum": 1.5795380975856448
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 11,
+      "net_harmful_candidates": 8271,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 191.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 200.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 194.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 2091,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -195.0,
+        "net_delay_gain_s": 191.5,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.424262951128185
+    },
+    {
+      "condition": "development--20001--dc_contact_hotspot--180--705--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "8562a9c6e23e35ea0cecfa34db2b039f484aed42a787b056d2fce8d2b24119a7",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "d843543243f7fa3db366331422e5db834258210ddd5f1761a68603fc3d31d438",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 135.0,
+        "event_weight_sum": 1.5727237776142673
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 135.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 72.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3865,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -75.0,
+        "net_delay_gain_s": 69.25,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.487712142057717
+    },
+    {
+      "condition": "development--20001--dc_contact_hotspot--180--705--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "8562a9c6e23e35ea0cecfa34db2b039f484aed42a787b056d2fce8d2b24119a7",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "168cc743a121069eed976c503a20c1bf26f2598faa9220326538e542c4b4484a",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 135.0,
+        "event_weight_sum": 1.5727237776142673
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 69.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 135.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 72.25,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3865,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -75.0,
+        "net_delay_gain_s": 69.25,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.49967294652015
+    },
+    {
+      "condition": "development--20001--sensor_bias--900--335--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "42d65af939999b9f48761125a110b797724ec26c6f21463fda6aa16e275fa98a",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "b6ea9c0a5e01c98fcd097d103ae39b1b841b1a4523c256d7aa389d8e76d8c7fd",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 225.0,
+        "event_weight_sum": 2.75
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 46,
+      "net_harmful_candidates": 8236,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 225.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 210.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 740,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -210.0,
+        "net_delay_gain_s": 207.0,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.506490179337561
+    },
+    {
+      "condition": "development--20001--sensor_bias--900--335--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "42d65af939999b9f48761125a110b797724ec26c6f21463fda6aa16e275fa98a",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "4328cc24a21c4e9a9085757ba8a6b20add3eb2c2a6895112db7749501ed5adfd",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 225.0,
+        "event_weight_sum": 2.75
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 46,
+      "net_harmful_candidates": 8236,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 207.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 225.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 210.0,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 740,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -210.0,
+        "net_delay_gain_s": 207.0,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.504102090373635
+    },
+    {
+      "condition": "development--20001--sensor_bias--900--705--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "6009f36cdd3f6c82f3aca4c40d725f2c150f4c9eab7361791cb1cd55742812e7",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "b0f235409db318c4f71b93cd19192a3c37e8d6c53ed2c0d79378bd564a87bb8f",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 125.0,
+        "event_weight_sum": 2.75
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 125.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 57.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3385,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -60.0,
+        "net_delay_gain_s": 54.5,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.534409943968058
+    },
+    {
+      "condition": "development--20001--sensor_bias--900--705--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "6009f36cdd3f6c82f3aca4c40d725f2c150f4c9eab7361791cb1cd55742812e7",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "9598d1e25af370681f6de81396eb3117adc0d08ed35ef4f1bb72b32d47041246",
+      "baseline": {
+        "missed": 0,
+        "weighted_wait_s": 125.0,
+        "event_weight_sum": 2.75
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 3,
+      "net_harmful_candidates": 8279,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "selected": false,
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "net_delay_gain_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "net_beneficial": false,
+          "net_harmful": false,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 0,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 54.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 0,
+          "branch_weighted_wait_s": 125.0,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 0,
+            "net_harmful_roots": 292,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 0,
+            "net_delay_regret_s_when_equal_misses": 57.5,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 3385,
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -60.0,
+        "net_delay_gain_s": 54.5,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.55732116382569
+    },
+    {
+      "condition": "development--20001--aux_feeder_loss+cdu_fouling--180--335--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "cbce3085de998baeb11ae858c9406f1f61c80fab78f7e17b309915675c28639e",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "9ad15a131459ab3c6033d7488ee3a61dd57c725ee5e2dbf612e8e5c283e811f0",
+      "baseline": {
+        "missed": 7,
+        "weighted_wait_s": 125.18008465816281,
+        "event_weight_sum": 11.46829466250172
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 155,
+      "net_harmful_candidates": 8127,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -8.59732043501991,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 6.34732043501991,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 420.0,
+            "finish_s": 450.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              22,
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20
+            ],
+            "other_arrivals_s": [
+              435.0,
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.20680804878379155,
+              0.14818444223225838,
+              0.1307723112811939,
+              0.11069637162123729,
+              0.09768920508309523,
+              0.08269212682193144,
+              0.07297554578848703,
+              0.05451400979870509,
+              0.04614101806312836,
+              0.040713884809435975,
+              0.034457441394079115
+            ],
+            "full_exposure_s": [
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              260.0,
+              245.0,
+              225.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2132,
+            "score": 0.017629628508289676,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 116.5827642231429,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 9,
+            "net_beneficial_roots": 4,
+            "net_harmful_roots": 5,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -8.59732043501991,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 6.34732043501991,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 420.0,
+            "finish_s": 450.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              22,
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20
+            ],
+            "other_arrivals_s": [
+              435.0,
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.20680804878379155,
+              0.14818444223225838,
+              0.1307723112811939,
+              0.11069637162123729,
+              0.09768920508309523,
+              0.08269212682193144,
+              0.07297554578848703,
+              0.05451400979870509,
+              0.04614101806312836,
+              0.040713884809435975,
+              0.034457441394079115
+            ],
+            "full_exposure_s": [
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              260.0,
+              245.0,
+              225.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2132,
+            "score": 0.015998062524770203,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 116.5827642231429,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 7,
+            "net_beneficial_roots": 4,
+            "net_harmful_roots": 3,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -8.59732043501991,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 6.34732043501991,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 420.0,
+            "finish_s": 450.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              22,
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20
+            ],
+            "other_arrivals_s": [
+              435.0,
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.20680804878379155,
+              0.14818444223225838,
+              0.1307723112811939,
+              0.11069637162123729,
+              0.09768920508309523,
+              0.08269212682193144,
+              0.07297554578848703,
+              0.05451400979870509,
+              0.04614101806312836,
+              0.040713884809435975,
+              0.034457441394079115
+            ],
+            "full_exposure_s": [
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              270.0,
+              260.0,
+              245.0,
+              225.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2132,
+            "score": 0.015998062524770203,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 116.5827642231429,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 7,
+            "net_beneficial_roots": 4,
+            "net_harmful_roots": 3,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 7,
+          "branch_weighted_wait_s": 125.18008465816281,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 3,
+            "net_harmful_roots": 289,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 19,
+        "missed_delta": -2,
+        "weighted_wait_delta_s": -32.59747963695167,
+        "net_delay_gain_s": 29.097479636951668,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.522957060486078
+    },
+    {
+      "condition": "development--20001--aux_feeder_loss+cdu_fouling--180--335--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "cbce3085de998baeb11ae858c9406f1f61c80fab78f7e17b309915675c28639e",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "4c764554c3063e249c7689c4420b19d6d728d60d8ec6ec5f7fced5baa9f9b39f",
+      "baseline": {
+        "missed": 7,
+        "weighted_wait_s": 125.18008465816281,
+        "event_weight_sum": 11.46829466250172
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 155,
+      "net_harmful_candidates": 8127,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -7.080146240604634,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 0.75,
+          "net_delay_gain_s": 6.330146240604634,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 435.0,
+            "finish_s": 465.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 115.0,
+            "return_slack_s": 55.0,
+            "shift_s": 15.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20,
+              22
+            ],
+            "other_arrivals_s": [
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0,
+              665.0
+            ],
+            "first_exposure_s": [
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0
+            ],
+            "later_exposure_factor": [
+              0.049394814077419455,
+              0.04359077042706464,
+              0.036898790540412424,
+              0.03256306836103175,
+              0.027564042273977147,
+              0.024325181929495676,
+              0.01817133659956836,
+              0.015381704348370568,
+              0.013574306443909029,
+              0.011485813798026372,
+              0.010136195100421679
+            ],
+            "full_exposure_s": [
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              75.0,
+              75.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2197,
+            "score": 0.07180277118732109,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 118.09993841755818,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 8,
+            "net_beneficial_roots": 3,
+            "net_harmful_roots": 5,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -7.080146240604634,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 0.75,
+          "net_delay_gain_s": 6.330146240604634,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 435.0,
+            "finish_s": 465.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 115.0,
+            "return_slack_s": 55.0,
+            "shift_s": 15.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20,
+              22
+            ],
+            "other_arrivals_s": [
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0,
+              665.0
+            ],
+            "first_exposure_s": [
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0
+            ],
+            "later_exposure_factor": [
+              0.049394814077419455,
+              0.04359077042706464,
+              0.036898790540412424,
+              0.03256306836103175,
+              0.027564042273977147,
+              0.024325181929495676,
+              0.01817133659956836,
+              0.015381704348370568,
+              0.013574306443909029,
+              0.011485813798026372,
+              0.010136195100421679
+            ],
+            "full_exposure_s": [
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              75.0,
+              75.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2197,
+            "score": 0.07100180500258714,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 118.09993841755818,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 1,
+            "net_beneficial_roots": 1,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -7.080146240604634,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 0.75,
+          "net_delay_gain_s": 6.330146240604634,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 8,
+            "dispatch_time_s": 435.0,
+            "finish_s": 465.0,
+            "tour_target_finish_s": 580.0,
+            "target_lead_s": 115.0,
+            "return_slack_s": 55.0,
+            "shift_s": 15.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              0,
+              2,
+              4,
+              6,
+              12,
+              14,
+              10,
+              16,
+              18,
+              20,
+              22
+            ],
+            "other_arrivals_s": [
+              475.0,
+              490.0,
+              510.0,
+              525.0,
+              545.0,
+              560.0,
+              595.0,
+              615.0,
+              630.0,
+              650.0,
+              665.0
+            ],
+            "first_exposure_s": [
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0
+            ],
+            "later_exposure_factor": [
+              0.049394814077419455,
+              0.04359077042706464,
+              0.036898790540412424,
+              0.03256306836103175,
+              0.027564042273977147,
+              0.024325181929495676,
+              0.01817133659956836,
+              0.015381704348370568,
+              0.013574306443909029,
+              0.011485813798026372,
+              0.010136195100421679
+            ],
+            "full_exposure_s": [
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              90.0,
+              75.0,
+              75.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 2197,
+            "score": 0.07100180500258714,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 118.09993841755818,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 1,
+            "net_beneficial_roots": 1,
+            "net_harmful_roots": 0,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 1,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 7,
+          "branch_weighted_wait_s": 125.18008465816281,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 3,
+            "net_harmful_roots": 289,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 19,
+        "missed_delta": -2,
+        "weighted_wait_delta_s": -32.59747963695167,
+        "net_delay_gain_s": 29.097479636951668,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.482899050228298
+    },
+    {
+      "condition": "development--20001--aux_feeder_loss+cdu_fouling--180--705--0.2",
+      "seed": 20001,
+      "numeric_process_fingerprint": "f383fad908c240bcba9f955785494bf6c381925e64e2abcbf735e15b9226ad08",
+      "noise_c": 0.2,
+      "public_receipt_SHA256_before_labels": "b84f8759e01e6889ec3779a96f7836013df5758c94cccb8132de3db95d817977",
+      "baseline": {
+        "missed": 7,
+        "weighted_wait_s": 53.12816364063457,
+        "event_weight_sum": 14.105553868658417
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 527,
+      "net_harmful_candidates": 7755,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -2.9557934486882544,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 0.7057934486882544,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 845.0,
+            "finish_s": 875.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              18,
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16
+            ],
+            "other_arrivals_s": [
+              860.0,
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.005978770949970611,
+              0.005054802300046984,
+              0.004460847372968953,
+              0.0031963368144230864,
+              0.0028207573383454867,
+              0.0023877195372605468,
+              0.002107155095873156,
+              0.0015740817324855552,
+              0.0013324314200331775,
+              0.0011758666010856732,
+              0.0009912546067449152
+            ],
+            "full_exposure_s": [
+              200.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              170.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4058,
+            "score": 0.08866494178214707,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 50.172370191946314,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 18,
+            "net_beneficial_roots": 2,
+            "net_harmful_roots": 16,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -2.9557934486882544,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 0.7057934486882544,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 845.0,
+            "finish_s": 875.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              18,
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16
+            ],
+            "other_arrivals_s": [
+              860.0,
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.005978770949970611,
+              0.005054802300046984,
+              0.004460847372968953,
+              0.0031963368144230864,
+              0.0028207573383454867,
+              0.0023877195372605468,
+              0.002107155095873156,
+              0.0015740817324855552,
+              0.0013324314200331775,
+              0.0011758666010856732,
+              0.0009912546067449152
+            ],
+            "full_exposure_s": [
+              200.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              170.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4058,
+            "score": 0.04012981171967075,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 50.172370191946314,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 9,
+            "net_beneficial_roots": 2,
+            "net_harmful_roots": 7,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -2.9557934486882544,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 0.7057934486882544,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 845.0,
+            "finish_s": 875.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              18,
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16
+            ],
+            "other_arrivals_s": [
+              860.0,
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.005978770949970611,
+              0.005054802300046984,
+              0.004460847372968953,
+              0.0031963368144230864,
+              0.0028207573383454867,
+              0.0023877195372605468,
+              0.002107155095873156,
+              0.0015740817324855552,
+              0.0013324314200331775,
+              0.0011758666010856732,
+              0.0009912546067449152
+            ],
+            "full_exposure_s": [
+              200.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              170.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4058,
+            "score": 0.04012981171967075,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 50.172370191946314,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 9,
+            "net_beneficial_roots": 2,
+            "net_harmful_roots": 7,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 7,
+          "branch_weighted_wait_s": 53.12816364063457,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 12,
+            "net_harmful_roots": 280,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 3,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 166,
+        "missed_delta": -3,
+        "weighted_wait_delta_s": -3.005169299873696,
+        "net_delay_gain_s": -0.24483070012630392,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.55409783590585
+    },
+    {
+      "condition": "development--20001--aux_feeder_loss+cdu_fouling--180--705--1.0",
+      "seed": 20001,
+      "numeric_process_fingerprint": "f383fad908c240bcba9f955785494bf6c381925e64e2abcbf735e15b9226ad08",
+      "noise_c": 1.0,
+      "public_receipt_SHA256_before_labels": "41af84a8ff9302c2a7971c63efc218ae56c626b4a0521c5651c578683ba735a3",
+      "baseline": {
+        "missed": 7,
+        "weighted_wait_s": 53.12816364063457,
+        "event_weight_sum": 14.105553868658417
+      },
+      "candidates": 8282,
+      "net_beneficial_candidates": 527,
+      "net_harmful_candidates": 7755,
+      "all_candidate_resource_certificate_distributions": {
+        "completion_cost_s": {
+          "n": 8282,
+          "minimum": 15.0,
+          "maximum": 80.0,
+          "quantiles_0_25_50_75_100": [
+            15.0,
+            25.0,
+            30.0,
+            40.0,
+            80.0
+          ]
+        },
+        "return_slack_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 310.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            25.0,
+            40.0,
+            125.0,
+            310.0
+          ]
+        },
+        "tour_target_arrival_s": {
+          "n": 8282,
+          "minimum": 30.0,
+          "maximum": 1955.0,
+          "quantiles_0_25_50_75_100": [
+            30.0,
+            510.0,
+            970.0,
+            1420.0,
+            1955.0
+          ]
+        },
+        "other_task_shift_s": {
+          "n": 8282,
+          "minimum": 10.0,
+          "maximum": 140.0,
+          "quantiles_0_25_50_75_100": [
+            10.0,
+            30.0,
+            40.0,
+            55.0,
+            140.0
+          ]
+        },
+        "total_other_task_delay_exposure_s": {
+          "n": 8282,
+          "minimum": 0.0,
+          "maximum": 6105.0,
+          "quantiles_0_25_50_75_100": [
+            0.0,
+            665.0,
+            1395.0,
+            2325.0,
+            6105.0
+          ]
+        }
+      },
+      "current_candidates_same30sroots": 1498,
+      "rankers": {
+        "professional_cue": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -2.9557934486882544,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 2.25,
+          "net_delay_gain_s": 0.7057934486882544,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 845.0,
+            "finish_s": 875.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 130.0,
+            "return_slack_s": 25.0,
+            "shift_s": 45.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              18,
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16
+            ],
+            "other_arrivals_s": [
+              860.0,
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0
+            ],
+            "first_exposure_s": [
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0,
+              45.0
+            ],
+            "later_exposure_factor": [
+              0.005978770949970611,
+              0.005054802300046984,
+              0.004460847372968953,
+              0.0031963368144230864,
+              0.0028207573383454867,
+              0.0023877195372605468,
+              0.002107155095873156,
+              0.0015740817324855552,
+              0.0013324314200331775,
+              0.0011758666010856732,
+              0.0009912546067449152
+            ],
+            "full_exposure_s": [
+              200.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              180.0,
+              170.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4058,
+            "score": 0.11521469902293752,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 50.172370191946314,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 18,
+            "net_beneficial_roots": 2,
+            "net_harmful_roots": 16,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -1.1823173794752933,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 1.75,
+          "net_delay_gain_s": -0.5676826205247067,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 860.0,
+            "finish_s": 890.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 115.0,
+            "return_slack_s": 35.0,
+            "shift_s": 35.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16,
+              18
+            ],
+            "other_arrivals_s": [
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0,
+              1090.0
+            ],
+            "first_exposure_s": [
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0
+            ],
+            "later_exposure_factor": [
+              0.003931512900036544,
+              0.0034695479567536294,
+              0.0024860397445512898,
+              0.002193922374268712,
+              0.001857115195647092,
+              0.0016388984079013433,
+              0.0012242857919332096,
+              0.0010363355489146936,
+              0.0009145629119555236,
+              0.000774160791233095,
+              0.0006777737869909768
+            ],
+            "full_exposure_s": [
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              125.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4128,
+            "score": 0.07595968647668172,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 51.945846261159275,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 6,
+            "net_beneficial_roots": 1,
+            "net_harmful_roots": 5,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "public_net_no_history": {
+          "missed_delta": -1,
+          "weighted_wait_delta_s": -1.1823173794752933,
+          "gained_confirmations": 1,
+          "lost_confirmations": 0,
+          "shift_cost_s": 1.75,
+          "net_delay_gain_s": -0.5676826205247067,
+          "net_beneficial": true,
+          "net_harmful": false,
+          "selected": true,
+          "action": {
+            "agent": 0,
+            "task": 12,
+            "dispatch_time_s": 860.0,
+            "finish_s": 890.0,
+            "tour_target_finish_s": 1005.0,
+            "target_lead_s": 115.0,
+            "return_slack_s": 35.0,
+            "shift_s": 35.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              20,
+              22,
+              0,
+              2,
+              4,
+              6,
+              14,
+              8,
+              10,
+              16,
+              18
+            ],
+            "other_arrivals_s": [
+              880.0,
+              895.0,
+              935.0,
+              950.0,
+              970.0,
+              985.0,
+              1020.0,
+              1040.0,
+              1055.0,
+              1075.0,
+              1090.0
+            ],
+            "first_exposure_s": [
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0,
+              35.0
+            ],
+            "later_exposure_factor": [
+              0.003931512900036544,
+              0.0034695479567536294,
+              0.0024860397445512898,
+              0.002193922374268712,
+              0.001857115195647092,
+              0.0016388984079013433,
+              0.0012242857919332096,
+              0.0010363355489146936,
+              0.0009145629119555236,
+              0.000774160791233095,
+              0.0006777737869909768
+            ],
+            "full_exposure_s": [
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              140.0,
+              125.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 4128,
+            "score": 0.07595968647668172,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 6,
+          "branch_weighted_wait_s": 51.945846261159275,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 6,
+            "net_beneficial_roots": 1,
+            "net_harmful_roots": 5,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 2,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        },
+        "time_cost_only": {
+          "missed_delta": 0,
+          "weighted_wait_delta_s": 0.0,
+          "gained_confirmations": 0,
+          "lost_confirmations": 0,
+          "shift_cost_s": 3.0,
+          "net_delay_gain_s": -3.0,
+          "net_beneficial": false,
+          "net_harmful": true,
+          "selected": true,
+          "action": {
+            "agent": 3,
+            "task": 51,
+            "dispatch_time_s": 5.0,
+            "finish_s": 40.0,
+            "tour_target_finish_s": 210.0,
+            "target_lead_s": 170.0,
+            "return_slack_s": 45.0,
+            "shift_s": 60.0,
+            "period_s": 230.0,
+            "other_tasks": [
+              25,
+              27,
+              31,
+              29,
+              57,
+              59,
+              63,
+              61,
+              55,
+              53,
+              49
+            ],
+            "other_arrivals_s": [
+              15.0,
+              30.0,
+              50.0,
+              65.0,
+              90.0,
+              105.0,
+              125.0,
+              140.0,
+              160.0,
+              175.0,
+              195.0
+            ],
+            "first_exposure_s": [
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0,
+              60.0
+            ],
+            "later_exposure_factor": [
+              9.132004626037594,
+              8.058965796866373,
+              6.821767268565909,
+              6.020188484662389,
+              4.88800984137491,
+              4.313653544816377,
+              3.6514288931966776,
+              3.222370048031466,
+              2.7276695007664356,
+              2.40715468620973,
+              2.0376080495871265
+            ],
+            "full_exposure_s": [
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              480.0,
+              470.0,
+              450.0,
+              435.0,
+              420.0
+            ],
+            "other_mask": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "geometry_index": 43,
+            "score": 4.722222222222222,
+            "profession": "thermal",
+            "role": "thermal",
+            "quota_before": {
+              "global_extra_used": 0,
+              "per_agent_extra_used": 0,
+              "per_owned_round_limit": 2
+            },
+            "decision": "execute_currentTop1once_thenTour",
+            "future_readings_used": false
+          },
+          "branch_missed": 7,
+          "branch_weighted_wait_s": 53.12816364063457,
+          "independent_schedule_verified": true,
+          "within_root_Top1_diagnostic": {
+            "roots_with_accepted_candidate": 292,
+            "net_beneficial_roots": 12,
+            "net_harmful_roots": 280,
+            "not_executed_jointly": true
+          },
+          "oracle_ceiling_regret": {
+            "miss_count_regret": 3,
+            "net_delay_regret_s_when_equal_misses": null,
+            "scope": "Fullremainingepisode offline bestCHECK;futureinformation ceiling,not an executable publicpolicy."
+          }
+        }
+      },
+      "oracle_ceiling_not_deployable": {
+        "geometry_index": 166,
+        "missed_delta": -3,
+        "weighted_wait_delta_s": -3.005169299873696,
+        "net_delay_gain_s": -0.24483070012630392,
+        "net_beneficial": true,
+        "exists_net_beneficial": true
+      },
+      "wall_s": 8.525587628595531
+    }
+  ],
+  "independent_selected_schedule_checks": 30,
+  "sourcefiles": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--healthy--900--335--0.2/public-states.jsonl.gz",
+      "sha256": "55df49cfd3359f179bb27c66fbae22324c379bdddf37400d2e648ef048f1e6b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--healthy--900--335--0.2/tour-record.json.gz",
+      "sha256": "64c580e81721f80ca8297c215cce9e44968bd3e8b98b7f17966d9a2341a98273"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--healthy--900--335--1.0/public-states.jsonl.gz",
+      "sha256": "ab9d941245b186a1109d0e7adf290427301cbc833dc1d4088fada3562ef22a7f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--healthy--900--335--1.0/tour-record.json.gz",
+      "sha256": "f74a345c18e6debfbb3eccf497b26e1984bb1984892118712d17e8de7ca26a58"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--335--0.2/public-states.jsonl.gz",
+      "sha256": "dd71b62b0ddeaefe6a24d92609d1ca91540c92396bce2457c99dd628b32691be"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--335--0.2/tour-record.json.gz",
+      "sha256": "c9b4910d6c37fbb0a2ec542ff18abf7ab3b239b55906bfed120fc8f4d33a043a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--335--1.0/public-states.jsonl.gz",
+      "sha256": "3b7e0ea88d841d60bc191aa4ecb133f93693a95a96decfd8f1b0ffcd5c683843"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--335--1.0/tour-record.json.gz",
+      "sha256": "44ed80d484060066fcbf4ac536e751125a3aa14757a9a3f96c02af2c8b1b4ada"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--705--0.2/public-states.jsonl.gz",
+      "sha256": "01c39b26f4f1b4c55073434f9a668f62e3af74406c29d381e8058846bf3b11de"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--705--0.2/tour-record.json.gz",
+      "sha256": "e9b9670e8e90e01a744112eb9fbafad124c505a1101cf9b1ed3860aeb6f5f06d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--705--1.0/public-states.jsonl.gz",
+      "sha256": "bb5d1f9cfd3d8f62cfd6a549eaae050e5faecdf5679bb4738e5a4dd6d85c1120"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--coldplate_fouling--180--705--1.0/tour-record.json.gz",
+      "sha256": "b8b4b21e999b14f499772ecdda150b47971c3ece2e844a298ddbd2df2319bb6d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--335--0.2/public-states.jsonl.gz",
+      "sha256": "e14143f63ac10082d01227242fe4f5b90b617054756da5535490c6515c7bf411"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--335--0.2/tour-record.json.gz",
+      "sha256": "be084fb4b3f69d69054df2571dfe3878ac9b3a35a311fc8056d12020a215e503"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--335--1.0/public-states.jsonl.gz",
+      "sha256": "9b1fbaa23412d89a14a02f4a0f304b5cc63bab808f26cce530bc0a32726c4ecf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--335--1.0/tour-record.json.gz",
+      "sha256": "02e3eb9340255b8ff24da9712d88c3a514a90b4b109cf4ce78a3bc8ea984fe93"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--705--0.2/public-states.jsonl.gz",
+      "sha256": "a1806d3b10cfc828e6503aef0f09b154e1b9da74a0f4a350a2cf08734e7963a6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--705--0.2/tour-record.json.gz",
+      "sha256": "a567c186bbc5bca754387d5ffb5f3d888c284dd5888124961ab3626826437391"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--705--1.0/public-states.jsonl.gz",
+      "sha256": "29269c2e1a71b0e20ae4d4a9bcb9b3a766746f0610ab932188516f991dfa058b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--dc_contact_hotspot--180--705--1.0/tour-record.json.gz",
+      "sha256": "d5405649776765009b76ef409bbc89fda5e7b18aab305abbb90a3e2394c88c4e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--335--0.2/public-states.jsonl.gz",
+      "sha256": "203bd7b2887b227c1d0db8532da10e35479f3941a73002269c456dc8489a5a8c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--335--0.2/tour-record.json.gz",
+      "sha256": "221a5b385bd2b812e4340c7f8b2eb3b58170bad4952ee223efab662f5ec3b9b4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--335--1.0/public-states.jsonl.gz",
+      "sha256": "cfba912b0d5aac1bb31395dcd2ab77b18f49101517beb0c5f5bfd552d84b95d5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--335--1.0/tour-record.json.gz",
+      "sha256": "5cf8e733bd1531b063818b23e61a39b53d78d63141337de6e17a1c455cb49413"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--705--0.2/public-states.jsonl.gz",
+      "sha256": "9f41f18e920cd5c0a78bcf90cf007cda2e1e1668d3cddaecd5a553c8716f8913"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--705--0.2/tour-record.json.gz",
+      "sha256": "3d9019f67f7f6d35fd4be43f896dc1f1635991ddb50c1bc815e1b7236fe38ad1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--705--1.0/public-states.jsonl.gz",
+      "sha256": "fe7f25aa0410fd408445e19ed02474cf21d37c37cdb72547b7de0bf1efa601ff"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--sensor_bias--900--705--1.0/tour-record.json.gz",
+      "sha256": "f9b4ca52128db2e6c0e2a71f6fc73807c41c2e72a5a881fc424acb2f6bf49172"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--335--0.2/public-states.jsonl.gz",
+      "sha256": "d22695bec09d1442ebcc9bae1d5c8ef5306579fa0ce3606cc348ffd1972e4aba"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--335--0.2/tour-record.json.gz",
+      "sha256": "2cf7569894dcf264da9c4c0ea57d5e88133daf677c6967d238020d6d1e5df42a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--335--1.0/public-states.jsonl.gz",
+      "sha256": "441d51eb466d8f78d94acd4f2190ac2e8c1495578af81cdfd5f3cebe9356469d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--335--1.0/tour-record.json.gz",
+      "sha256": "0783ab1b8214acd1e4a33a0eb19818157370c94864b331ff1cb4a751e23b20b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--705--0.2/public-states.jsonl.gz",
+      "sha256": "b3f6b780ffdec0d976d2a13d6dc86982e1cd3fee9c523ea1a977914460ff2883"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--705--0.2/tour-record.json.gz",
+      "sha256": "79a88fb6406ddae30741abe6e3f19862357a6597381b2c3e8a2a4f2260316e52"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--705--1.0/public-states.jsonl.gz",
+      "sha256": "448d4cda8a024f6a2050ce203a58cfea8ca0d894f80d52f40092f832310ad171"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12c1b4b1a/data/development/seed-20001/development--20001--aux_feeder_loss+cdu_fouling--180--705--1.0/tour-record.json.gz",
+      "sha256": "22f4993cace661acf8514c9414b260b00cbff6bdde14a4ad8f30a5a7358f15b9"
+    }
+  ],
+  "new_physical_processes": 0,
+  "PPO_CVAE_training": 0,
+  "LLM_calls": 0,
+  "phases_opened": [
+    "development"
+  ],
+  "final_access": false,
+  "wall_s": 151.72345764096826,
+  "job_id": "130867",
+  "scope": "Descriptive existing2developmentseeds;one budgeted publicTop1 CHECKthenTour perranker/condition. Oraclecounterfactuals offlineonly;no newformaltestorRSIclaim."
+}

@@ -1,0 +1,227 @@
+{
+  "protocol": "MultiAgent-Patrol-Paired-v1",
+  "baseline": "d55c1613317f9dfb520f5d6eaea1083e32b3ecb2",
+  "status": "frozen_for_independent_review_not_executed",
+  "research_question": "With commonhardconstraints andtaskprocesses,do learningandtypedworkflowchanges improvewholeepisode confirmation/cost? ProbabilityBrier pass isnotprerequisite.",
+  "frozen_models": {
+    "actor": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-0/selected.pt",
+      "sha256": "c7cee69fd196119d92bcba6e0682b8e2acec309e67faa5875e29936bbfef6691",
+      "parameters_sha256": "25e49a60cbeb297209e5bb3b74556cd9427bd7845631b55a64534652d24d563a"
+    },
+    "temperature_CVAE_SHA256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa"
+  },
+  "arms": {
+    "Tour": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "frozen_PPO": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "ppo",
+      "rules": []
+    },
+    "human_professional": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "signal"
+        },
+        {
+          "signal": "age",
+          "threshold": 0.75,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "fixed_improver_retained": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "urgency"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.05,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "revised_PPO_evidence": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "ppo",
+      "rules": [
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.05,
+          "action": "signal"
+        },
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.05,
+          "action": "signal"
+        },
+        {
+          "signal": "verified_sensor_bias",
+          "threshold": 0.5,
+          "action": "signal"
+        }
+      ]
+    }
+  },
+  "fixed_retained_source": "M12Btrial0direct3workflow b41a98ddf270bbd5 chosenhistorically beforecurrentnewseeds",
+  "revised_candidate_origin": "Handspecifiedinterfacecandidate beforeB2diagnostics;notLLMdiscovery,not newscientificcontribution bydefinition.",
+  "common_environment": {
+    "qualification": "original18executors12thermal2electrical2cooling2control;fixedownerunchanged",
+    "motion_service": "originalgrid5s,staticaisles,deterministictravel_service",
+    "budget": "global1optionalCHECK/1800sepisode plusoriginal2perownedround;all5arms exactsamegate",
+    "tail": "NooptionalwhenprotectednextTouritemcannotfinishby1800;initialandterminalrevisitchecked",
+    "tools": "fixedpublicmeasurement,temperatureCVAEprior,actorlogits,returncertificate;modelsnotretrained",
+    "randomness": "pairedseed,processfingerprint,noisecounter acrossallarms;no randomrow splits"
+  },
+  "partition": {
+    "development": [
+      31000,
+      31001
+    ],
+    "validation": [
+      31020,
+      31021
+    ],
+    "final_test": [
+      31040,
+      31041,
+      31042,
+      31043
+    ]
+  },
+  "physical_fixtures": {
+    "healthy": [
+      [
+        900,
+        335
+      ]
+    ],
+    "coldplate_fouling": [
+      [
+        180,
+        335
+      ],
+      [
+        180,
+        705
+      ]
+    ],
+    "dc_contact_hotspot": [
+      [
+        180,
+        335
+      ],
+      [
+        180,
+        705
+      ]
+    ],
+    "sensor_bias": [
+      [
+        900,
+        335
+      ],
+      [
+        900,
+        705
+      ]
+    ],
+    "aux_feeder_loss+cdu_fouling": [
+      [
+        180,
+        335
+      ],
+      [
+        180,
+        705
+      ]
+    ]
+  },
+  "noise_c": [
+    0.2,
+    1.0
+  ],
+  "conditions_per_seed": 18,
+  "numeric_processes_per_seed": 9,
+  "max_primary_episode_allocations": 720,
+  "phase_counts": {
+    "development": 180,
+    "validation": 180,
+    "final_test": 360
+  },
+  "preexecution_binding": "Before formalgeneration bind manifestedseed×fixture×noise IDs,verify no old processhash/seed overlaps aftergeneration,allmodels/protocolSHA and phased runner source. Unused final seed data remain inaccessible until allarms+thresholds sealed.",
+  "selection": "No additions or tuningafterprotocolfreeze. All5fixedarms reportedforeachphase executed. Validationbinarycampaigngate hasexactrule;fail =>stop finalsealed,pass =>all5fixednominalarms finalonce.",
+  "metrics": {
+    "primary": [
+      "seed/process/noise macro missed retained>=15s events (pairedcounts, also missedfraction)",
+      "consequence weighted censored wait includingalllost andgained confirmations"
+    ],
+    "secondary": [
+      "travel+service+idle",
+      "exactinitial/terminalrevisit gaps",
+      "globalextra budget",
+      "perprofessionconfirmations",
+      "actualPPOselectedvs shadowcalls",
+      "CVAEactualcalls",
+      "invalidandrepeatchecks",
+      "wall/RSS/storage"
+    ],
+    "events": "Originalqualifiedreference+physicaltrue endpoint;arrivingatpointorforecastpositive isnot confirmation. Noise versionsaveragedwithinprocess;physicaleventnot duplicatedas independent.",
+    "no_event": "Healthyprocess retainedcost/safety;waitundefined not0goodperformance;reportcounts. Pairedwait only whereprocess haseligiblephysicalevents,eligibilityindependentofmethod."
+  },
+  "inference": "Only4finalseedgroups;paired perseed differences and2000seedbootstrap exploratory,not reliablepopulationCI orsitegeneralization. Nodes/noises/events notindependent n.",
+  "GO": "No invalidassignment/exactrevisit/budgetviolation inanycase. Revised beatsTour andhuman onvalidation pooledmisses or>=5%wait atsame misses,withno per-seedincreasedmisses;onfinal reportallscoresand require samepointthresholdvsTour/PPO/human/fixedretained topropose largerconfirmation. No claimRSI fromthishandcandidate.",
+  "LIMITED_GO": "Engineering andcomparisoncontractreviewed,limitedbaselinecanbereviewedandexecuted witholdNO-GO preserved;no effectclaimedbeforeformaltest.",
+  "NO_GO": "Anyillegaloperation,sharedfuturetruth,splitoverlap,sourcefailure orresourceexceed;candidatefailsfrozenvalidationperformance gate=>documentnoincrement,do notreplaceorappend.",
+  "resources": {
+    "partition": "cu",
+    "cpus_per_job": 2,
+    "memory_GB": 8,
+    "max_concurrency": 2,
+    "max_job_minutes": 60,
+    "primary_allocated_CPU_minutes_cap": 720,
+    "audit_allocated_CPU_minutes_cap": 240,
+    "total_allocated_CPU_minutes_cap": 960,
+    "new_storage_cap_bytes": 3000000000,
+    "GPU": 0,
+    "LLM_calls": 0
+  },
+  "execution_gate": "Thisstage protocol/interfaceonly. Actualformaltest forbidden untilindependentreviewapproved andnewphysicalsource/runner dryrun passed;no formaljob submittedhere.",
+  "optional_ablations": "Notauthorizedasextraformaltesthere;separateprotocol ifPPO/CVAEinteractions ormorequota/ownershipchanges tested. Originalonecheck limits multiagentadaptivity andmustlabelscope.",
+  "created_utc": "2026-10-30T10:15:49.093357+00:00",
+  "validation_and_final_open_rule": {
+    "all5_reported": "All5fixedarms reportedforeachactuallyexecutedphase. No outcome-dependent armomission.",
+    "validation_pass": "No safety/source/budget/splitfailure inanyarmAND revised hasno moremisses ineachvalidationseedversusTourANDhuman AND aggregate(vsTourANDhuman) eitherstrictlyfewermissed orsamecountand>=5%lowerweightedcensoredwait.",
+    "on_validation_fail": "Stop the formal campaign;finalremainssealed. Reportall5dev/val andNO-GO. No substituteoradditionalcandidate.",
+    "on_validation_pass": "Sealall5programs/modelSHA/commonsource+gate thenopenfinalonce forall5nominalfixedarms. No perarmTourreplacementafterthisgate;Tourbaselinealwaysretained."
+  },
+  "metric_aggregation": {
+    "wait": "Within eachcondition compute originalconsequenceweightedmean delay/censor overretained>=15sevents;averagepairednoise withinprocess,then equallyaverageeventbearingphysicalprocesseswithinseed,then equallyaverageseeds. Healthy/noeventprocessnullwait,retainedcost/safetyandmiss0;countsreported. Samephysicaleventeligibilityacrossarms.",
+    "misses": "Withinconditioncountmissedretainedevents,thenmeanpairednoise,meanall9physicalprocessesperseed,meanseeds. Perseednoincreaseusespairednoisemacroprocess count. Also report pooledeventcounts descriptively only.",
+    "GO_binding": "Everywaitdelta/strictwaitimprovement/5%gain andprimarygaininGO/fallback usesTHIS seed-process-noise macro,not pooledeventweightedvalidator. Pairedrelativegain=(baseline_macro_wait-candidate_macro_wait)/baseline_macro_wait.",
+    "development_selector": "Existingvalidation_rankinsideadapt/meta staysfixed annotatedpooleddevelopmentmetric;thisisexplicitlydifferentfromindependentvalidation/finalmacroconfirmation."
+  }
+}
