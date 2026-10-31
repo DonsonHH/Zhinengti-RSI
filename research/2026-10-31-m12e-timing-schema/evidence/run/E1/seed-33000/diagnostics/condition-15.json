@@ -1,0 +1,170 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "aux_feeder_loss+cdu_fouling",
+    "duration_s": 180,
+    "fault_start_s": 95,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "process_fingerprint": "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+  "public_receipt_before_labels_SHA256": "2ef95dc6a8cbdb5383aed2f2e90152ac8a4ec1b4763ce026ecebeeccd7cfc13e",
+  "roots": 359,
+  "legal_optional_candidates": 8282,
+  "analytic_useful_candidates": 23,
+  "public_eligible_analytic_useful_candidates": 2,
+  "public_Top1_analytic_useful_candidates": 2,
+  "public_Top1_analytic_useful_ranker_references": 4,
+  "actual_witnesses": [
+    {
+      "tags": [
+        "offline_best"
+      ],
+      "geometry_index": 282,
+      "forced_current_legal_check": {
+        "agent": 14,
+        "task": 152,
+        "dispatch_time_s": 25.0
+      },
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -25.27536707773359,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 23.02536707773359,
+        "net_beneficial": true,
+        "net_harmful": false
+      },
+      "analytic": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -25.275367077733584,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "first_confirmation_s": [
+          255,
+          260,
+          270,
+          280,
+          -1,
+          295,
+          140
+        ]
+      },
+      "actual_first_confirmation_s": [
+        255.0,
+        260.0,
+        270.0,
+        280.0,
+        -1,
+        295.0,
+        140.0
+      ],
+      "analytic_matches_actual": true,
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12e/E1/seed-33000/cases/condition-15--oracle-witness-0.json.gz",
+      "record_SHA256": "8d09066e92ed8da4ab981a63507427c2d1eeeb834d8f5043abb70e9da924fd7f",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1425,
+        "independent_full_return_certificates": 1425,
+        "selected_plan_count": 1425,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      }
+    },
+    {
+      "tags": [
+        "earliest_public_Top1"
+      ],
+      "geometry_index": 1070,
+      "forced_current_legal_check": {
+        "agent": 14,
+        "task": 152,
+        "dispatch_time_s": 180.0
+      },
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -6.552872946079077,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.75,
+        "net_delay_gain_s": 2.802872946079077,
+        "net_beneficial": true,
+        "net_harmful": false
+      },
+      "analytic": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -6.552872946079077,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "first_confirmation_s": [
+          255,
+          260,
+          270,
+          280,
+          -1,
+          295,
+          240
+        ]
+      },
+      "actual_first_confirmation_s": [
+        255.0,
+        260.0,
+        270.0,
+        280.0,
+        -1,
+        295.0,
+        240.0
+      ],
+      "analytic_matches_actual": true,
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12e/E1/seed-33000/cases/condition-15--oracle-witness-1.json.gz",
+      "record_SHA256": "d1576943a2aa3c1817a4cac030164fb3aa98f680bd7cdee3dbdaceddb72090cf",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1424,
+        "independent_full_return_certificates": 1424,
+        "selected_plan_count": 1424,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      }
+    }
+  ],
+  "public_Top1_actual_beneficial": true,
+  "missed_opportunity_diagnostics": {
+    "Tour": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 23,
+      "later_public_Top1_useful_roots": 2,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "human_professional": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 23,
+      "later_public_Top1_useful_roots": 2,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "unconditional_PPO": {
+      "spent_at_s": 5.0,
+      "later_analytic_useful_candidates": 16,
+      "later_public_Top1_useful_roots": 2,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "evidence_gate_PPO": {
+      "spent_at_s": 180.0,
+      "later_analytic_useful_candidates": 4,
+      "later_public_Top1_useful_roots": 1,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "evidence_gate_urgency": {
+      "spent_at_s": 180.0,
+      "later_analytic_useful_candidates": 4,
+      "later_public_Top1_useful_roots": 1,
+      "not_jointly_executable_or_closed_loop_verified": true
+    }
+  },
+  "physics_and_noisy_telemetry_matched": true
+}

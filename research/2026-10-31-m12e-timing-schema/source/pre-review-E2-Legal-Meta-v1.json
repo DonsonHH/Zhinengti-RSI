@@ -1,0 +1,122 @@
+{
+  "protocol": "M12E2-Legal-Meta-v1",
+  "status": "future_design_for_independent_review_not_executed",
+  "question": "After reliable legal proposal and a confirmed task opportunity, does a changed improver improve fresh-task search at matched3proposal slots and full preparation cost?",
+  "launch_requirements": [
+    "E0 exactfrozen format gate PASS",
+    "E1 opportunityANDtiming gates PASS",
+    "Independent task-level validation fromE2Task PASS",
+    "New adapter/schema/executiongate independentlyreviewed andregressed",
+    "No currentstage permission toexecute"
+  ],
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "thinking": false,
+    "precision": "float16",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "input_cap_per_call": 4096,
+    "output_cap_per_call": 768,
+    "weights_updated": false
+  },
+  "proposal_interface": "Use full_nested if its E0gatepassed; else compact_leaves onlyifpassed, explicitdeterministicassemblylabel. No switch aftermetaoutcomes; no freeformatrepair or retry.",
+  "meta_update_space": "Unchanged ControlledImprover:1..3distinctdiagnostics,3fixedinstructiontemplates,memory/generator/dedup/acceptance/failureenum. No task/evaluator/budget/physicalcoreedit.",
+  "NEW_task_adapter_semantics": {
+    "physical_core": "Same18staff/qualified ownedtasks/fullreturn/effectivemeasurement/revisit/oneglobalCHECK.",
+    "task_syntax": "ExistingPatrolProgramsubset:refresh_s30,cooldown_s60,fallbackTourorPPO,<=3typedorderedrules inoriginal signal/threshold/action domains; rejectotherintervals, do notrepair.",
+    "gate": "SamefixedE1 professional eligibility, positivelead andsignal*weight*lead>.05shift; no rule can bypassgate. All learned/randomtaskprograms share gate; Tour always legal.",
+    "rule_semantics": "Firstmatchingrule overgate-eligibleoptionalset; return_tour preservesquota; signal/urgency/PPO rank eligible subset using originalrank definitions. No matchingrule: Tour fallbackpreserves; PPO fallbackrankseligible only. AfterglobalCHECK all returnTour.",
+    "disclosure": "New task interpreter semantics, manually designed and fixed acrosssearchgroups; not attributedtoQwen or meta discovery. Must be implemented and separatelyreviewed before any future calls."
+  },
+  "groups": {
+    "human_fixed": "ExactoriginalE1 human_professional reference,0candidate/modelcalls. No source/qualification permissions differ.",
+    "random_search": {
+      "task_candidate_slots": 8,
+      "model_calls": 0
+    },
+    "fixed_Qwen": {
+      "task_candidate_slots": 8,
+      "model_call_cap": 8,
+      "prefix3_saved": true
+    },
+    "controlled_meta": {
+      "meta_protocol_slots": 1,
+      "paired_old_candidates": 2,
+      "paired_new_candidates": 2,
+      "fresh_task_candidates": 3,
+      "model_call_cap": 8
+    }
+  },
+  "logical_evaluation_references": [
+    "Tour",
+    "human_professional",
+    "evidence_gate_urgency",
+    "random8",
+    "fixed3",
+    "fixed8",
+    "controlled_meta3"
+  ],
+  "generation_repeats": [
+    9601,
+    9602,
+    9603
+  ],
+  "partitions": {
+    "meta_development": [
+      34000,
+      34001
+    ],
+    "fresh_task_adapt": [
+      34100,
+      34101
+    ],
+    "validation": [
+      34120,
+      34121
+    ],
+    "final_test": [
+      34140,
+      34141,
+      34142,
+      34143
+    ]
+  },
+  "fresh_phases": "NewM9manifestwithseparatenamespace andallseed/numericfingerprints disjointfromM12D/E1/E2Task;9processes/seed2noise. Must freezeexactonsetsbefore anygeneration, no oldfixedphasewaitrules.",
+  "paired_meta": "Defaultprotocolincumbent; oneproposedlegalprotocol. Old/new fromsameTour,emptyhistory/archive/cache,matchedmodelseeds,twoattemptseach. Strictannotateddevelopment improvement+safetyrequiredtoretain; invalid/duplicate/failure consumes. Onlyretainedprotocoltransfers.",
+  "transfer": "FreshprogramTour,emptyexperience/archive/validationresults/cache; onlyschema-validatedprotocol. No taskIDs, seeds, phase, evaluatorlabels inprompts; onlywhitelistedpublicdiagnostics andaccept/rejectfeedback.",
+  "comparisons": {
+    "primary": "fixedprefix3 vsmeta fresh3 onnewtask, all5meta-prepcalls/tokens/env/GPU costs separately included.",
+    "secondary": "fixed8 versusmeta8 totalcallcaps; directsearchhas8fresh opportunities whilemeta has3, report unequal downstreamopportunity. Random8 andhuman0 costreference, notequalcompute claim."
+  },
+  "budgets_per_repeat": {
+    "model_call_cap": 16,
+    "task_candidate_attempts": 23,
+    "meta_protocol_attempts": 1,
+    "meta_environment_episode_cap": 180,
+    "fresh_adapt_environment_episode_cap": 792,
+    "validation_environment_episode_cap": 252,
+    "final_environment_episode_cap": 504,
+    "environment_episode_cap": 1728
+  },
+  "all3_caps": {
+    "model_calls": 48,
+    "task_candidate_attempts": 69,
+    "meta_protocol_attempts": 3,
+    "environment_episodes": 5184,
+    "input_tokens": 196608,
+    "output_tokens": 36864,
+    "GPU_allocations": 3,
+    "GPU_seconds": 10800,
+    "CPU_minutes": 2400,
+    "storage_bytes": 4000000000
+  },
+  "accounting": "Chargeeveryattemptbeforegeneration/evaluation; perpartitionimmutablecache withactual/cachereferencesseparate; duplicatesinvalids/timeoutsnoresampling. Unknowntokens labelledandchargedupperbound. Allprep/inference/env/auditandfailedstartupcosts included.",
+  "validation_fallback": "EachnonTourreference: allseedmiss<=Tour and macro fewermisses ORtie strictlylesswait; otherwise actualfinalPG=Tour. Any safety/source/budgetfailure stopsall, no hiddenTourmask. Saveall7nominal/actualmappings beforefinal.",
+  "final_open": "All3generationrepeats andall7mappings complete+source/model/resource seal; onceonfixedactualPGs, cacheduplicatesreported. No nominalrescoring afterfinal.",
+  "GO": "Taskandmetaeffectsreportedseparately. MetaGO requiresperseednoincreasedmiss vsfixed3 andfewermacro miss OR>=5%waitgain in EACH3generationrepeats in validationANDfinal. Also taskvsTour/human/nonlearning baselines must not regress to calloverallproposaluseful. Fullcostincluded, accepts count not gain.",
+  "statistical_unit": "3generationrepeats reuse4finalphysicalseedgroups,not12independentenvironments;3repeat contrasts+4seedpairedmeans required. Independentrawrecords/auditsandmetricreconstruction beforedelivery.",
+  "current_stage_execution": false,
+  "no_78_call_search": "Thisfuturedesigncaps48calls; nofuturemeta callsauthorizedorlaunchedinM12E."
+}

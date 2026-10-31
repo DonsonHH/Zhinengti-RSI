@@ -1,0 +1,73 @@
+{
+  "protocol": "M12E2-Task-Paired-v1",
+  "status": "future_design_for_independent_review_not_executed",
+  "baseline": "6174f2ab3ae227b8bec6f83b05fdca512bb84192",
+  "question": "Does the fixed professional timing gate plus frozen PPO improve independent patrol outcomes beyond Tour, human and nonlearning gated ranking?",
+  "launch_requirements": [
+    "M12E-E1 opportunity gate PASS",
+    "M12E-E1 timing gate PASS",
+    "Independent exact-source/schema/model/resource review",
+    "Actual regression and immutable data manifest and final gate implementation"
+  ],
+  "arms": [
+    "Tour",
+    "human_professional",
+    "unconditional_PPO",
+    "evidence_gate_PPO",
+    "evidence_gate_urgency"
+  ],
+  "method_definitions": "Exactly reviewed E1 source/candidate gate/rankers, no newcandidate or parameter from E1 result; manual gate not credited to learning or RSI.",
+  "E1_protocol_SHA256": "4fc9b328400e9ca74c43ad7365306ae9beb95498bf952f5d8d8ec9b2f9ef9770",
+  "fixed_manifest_SHA256": "c8772f81648af78617c0c34609a24628f6e55e5f3f1ce59929cd9c024f957b10",
+  "partitions": {
+    "development_already_used": [
+      33000,
+      33001
+    ],
+    "validation": [
+      33020,
+      33021,
+      33022,
+      33023
+    ],
+    "final_test": [
+      33040,
+      33041,
+      33042,
+      33043
+    ]
+  },
+  "units": "9uniquephysicalprocesses/seed x2pairednoise x5methods;4independentseedgroups perconfirmationstage,not72independentenvironments.",
+  "primary": "evidence_gate_PPO versus Tour AND human_professional AND evidence_gate_urgency; unconditional_PPO secondary timing attribution.",
+  "aggregation": "Withincondition originalconsequenceweighted delay/censor;meanpairednoise withinprocess;equal event-bearingprocesses forwait andall9formiss withinseed;equalseeds. Healthy cost/safety/miss retained,waitnull.",
+  "validation_GO": "All safety/source/resource checks; perseed no increased miss versus each3primary baselines; versus EACH baseline lower macro miss ORsame macro miss and>=5%lower macro wait.",
+  "final_open": "Only after all5programs/models/sourceSHA andvalidationGO sealed. No failure masking byTour, no extra candidate. Failure stops whole taskcampaign with final sources ungenerated.",
+  "final_confirmation": "Score all5locked methods once;independently replay each primary episode and audit qualification/route/measurement/oneCHECK/fullreturn/head-tailrevisit. Report allseed/process/noise paired values, tooluseandcost. PointGOdoesnotprovepopulation effect.",
+  "statistics": "Report4seed differences; any2000seedbootstrap exploratory descriptive only; no event/noise pseudo-replication, no positive-publication claim from singlemacro.",
+  "budgets": {
+    "validation_primary_episodes": 360,
+    "final_primary_episodes": 360,
+    "primary_episode_cap": 720,
+    "independent_replay_cap": 720,
+    "all_environment_execution_cap": 1440,
+    "GPU_allocations": 0,
+    "LLM_calls": 0,
+    "CPU_minutes_cap": 960,
+    "max_parallel_CPU_jobs": 2,
+    "CPU_per_job": 2,
+    "RAM_GB": 8,
+    "storage_cap_bytes": 3000000000
+  },
+  "current_stage_permissions": "Design only. M12-E drivers implementdevelopment exclusively; no currentvalidation/final launch.",
+  "prohibited": [
+    "oldM12Dtestreuse",
+    "thresholdrelaxation",
+    "newtraining",
+    "extraworkforceoractionspace",
+    "oracleonline",
+    "postfinalreselection"
+  ],
+  "validation_replay_gate": "All360validationepisodes fromall5methods independently replayed withsamefrozenweights andcomplete qualification/route/measurement/oneCHECK/fullreturn/initial-tail audit BEFORE finalopen. Any mismatch/failure blocksfinal.",
+  "final_GO": "Independently satisfy the SAME validation_GO three-baseline/perseed/macrometric thresholds on final4seedgroups AND all360finalreplays/audits pass. Validation success alone is not final confirmation.",
+  "replay_scope": "All5methods in validationANDfinal;720primary+720independentneuralexecutions total1440 charged environment executions."
+}

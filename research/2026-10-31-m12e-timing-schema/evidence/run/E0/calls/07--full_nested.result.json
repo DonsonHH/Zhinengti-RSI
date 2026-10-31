@@ -1,0 +1,63 @@
+{
+  "slot": 7,
+  "method": "full_nested",
+  "input_tokens": 885,
+  "output_tokens": 145,
+  "output_tokens_charged_upper_bound": 145,
+  "generation_s": 7.368629551492631,
+  "raw_response": "{\n  \"diagnosis\": \"Analyze public measurement age and professional evidence before proposing a bounded workflow.\",\n  \"expected_effect\": \"A structured approach to ensure workflow boundaries are maintained while leveraging existing evidence.\",\n  \"protocol\": {\n    \"protocol\": {\n      \"diagnostics\": [\"efficiency\", \"professional_evidence\", \"thermal_disagreement\"],\n      \"memory\": \"recent\",\n      \"instruction\": \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"\n    },\n    \"generator\": \"qwen_once\",\n    \"dedup\": \"exact_version\",\n    \"acceptance\": \"strict_improvement\",\n    \"failure_fallback\": \"keep_parent\"\n  }\n}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": true,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": false,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.memory",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "coverage",
+        "novelty"
+      ],
+      "memory": "none",
+      "instruction": "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "efficiency",
+        "professional_evidence",
+        "thermal_disagreement"
+      ],
+      "memory": "recent",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

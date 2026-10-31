@@ -1,0 +1,63 @@
+{
+  "slot": 10,
+  "method": "compact_leaves",
+  "input_tokens": 786,
+  "output_tokens": 104,
+  "output_tokens_charged_upper_bound": 104,
+  "generation_s": 5.3139967024326324,
+  "raw_response": "{\"diagnosis\": \"Analyze measurement age and duplicate proposals to suggest a bounded workflow.\", \"expected_effect\": \"Enhanced focus on aged data and proposal consistency without unnecessary detours.\", \"protocol\": {\"diagnostic_ids\": [0, 3, 4], \"memory_id\": 2, \"instruction_id\": 2, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": false,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": true,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.memory",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "coverage",
+        "novelty"
+      ],
+      "memory": "none",
+      "instruction": "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "coverage",
+        "thermal_disagreement",
+        "novelty"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

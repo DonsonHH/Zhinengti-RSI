@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "audit_counts": {
+    "records": 220,
+    "public_roots": 12924,
+    "public_candidates": 298152,
+    "witnesses": 40,
+    "public_Top1_predictions": 100
+  },
+  "actual_main_episodes": 180,
+  "actual_witness_episodes": 40,
+  "actual_total_episodes": 220,
+  "independently_reconstructed_main_statistics": {
+    "Tour": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 158.34072915657475,
+          "missed_noise_repeated_sum": 16
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.5555555555555556,
+          "macro_wait_s": 130.5942411561752,
+          "missed_noise_repeated_sum": 28
+        }
+      ],
+      "macro_missed_count": 1.2222222222222223,
+      "macro_wait_s": 144.46748515637498,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 44
+    },
+    "human_professional": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.6666666666666666,
+          "macro_wait_s": 146.61852839731998,
+          "missed_noise_repeated_sum": 12
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.4444444444444444,
+          "macro_wait_s": 128.96214545959072,
+          "missed_noise_repeated_sum": 26
+        }
+      ],
+      "macro_missed_count": 1.0555555555555556,
+      "macro_wait_s": 137.79033692845536,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 38
+    },
+    "unconditional_PPO": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 158.34072915657475,
+          "missed_noise_repeated_sum": 16
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.5555555555555556,
+          "macro_wait_s": 130.5942411561752,
+          "missed_noise_repeated_sum": 28
+        }
+      ],
+      "macro_missed_count": 1.2222222222222223,
+      "macro_wait_s": 144.46748515637498,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 44
+    },
+    "evidence_gate_PPO": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.5555555555555556,
+          "macro_wait_s": 145.68869921454788,
+          "missed_noise_repeated_sum": 10
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.4444444444444444,
+          "macro_wait_s": 128.96214545959072,
+          "missed_noise_repeated_sum": 26
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 137.3254223370693,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 36
+    },
+    "evidence_gate_urgency": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.5555555555555556,
+          "macro_wait_s": 145.68869921454788,
+          "missed_noise_repeated_sum": 10
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.4444444444444444,
+          "macro_wait_s": 128.96214545959072,
+          "missed_noise_repeated_sum": 26
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 137.3254223370693,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 36
+    }
+  },
+  "public_witness_processes": {
+    "33000": {
+      "count": 4,
+      "numeric_processes": [
+        "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+        "7e51f5cae1c88c2f8edc3c10fdd604238135e823386e8d67e907aa447737db42",
+        "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+        "b75a8d36759de435b97afcfd254e6107e3d0312bcc28a88bc24a94888814f692"
+      ],
+      "both_noise_versions_required": true
+    },
+    "33001": {
+      "count": 1,
+      "numeric_processes": [
+        "f0642eb4332334f1d9a732d880dc2364c1b33d942c92027c27a3486ea1bced68"
+      ],
+      "both_noise_versions_required": true
+    }
+  },
+  "public_quota_preservation_then_CHECK": {
+    "33000": true,
+    "33001": true
+  },
+  "E1_opportunity_gate": false,
+  "E1_timing_comparators": {
+    "Tour": {
+      "no_seed_miss_increase": true,
+      "missed_noise_repeated_sum_delta": -8,
+      "macro_missed_delta_exact": -0.2222222222222222,
+      "macro_wait_gain_s": 7.142062819305664,
+      "relative_macro_wait_gain": 0.049437164435823945,
+      "passed": true
+    },
+    "human_professional": {
+      "no_seed_miss_increase": true,
+      "missed_noise_repeated_sum_delta": -2,
+      "macro_missed_delta_exact": -0.05555555555555555,
+      "macro_wait_gain_s": 0.46491459138604796,
+      "relative_macro_wait_gain": 0.003374072534763049,
+      "passed": true
+    },
+    "evidence_gate_urgency": {
+      "no_seed_miss_increase": true,
+      "missed_noise_repeated_sum_delta": 0,
+      "macro_missed_delta_exact": 0.0,
+      "macro_wait_gain_s": 0.0,
+      "relative_macro_wait_gain": 0.0,
+      "passed": false
+    }
+  },
+  "E1_timing_gate": false,
+  "verified_gated_action_prefixes": 24,
+  "source_identity_SHA256": "fc14ce09679d43c7dc94a9a2b33246b5bdcba383714c57bdf7e45fd2e89282be",
+  "actual_E1_job_ids": [
+    "130928",
+    "130929"
+  ],
+  "new_model_calls": 0,
+  "new_environment_episodes": 0,
+  "old_final_raw_access": false,
+  "scope": "Post-publication source/record hashes, event arithmetic, independent gate/ranker/Tour-prefix and witness checks; per-episode independent route/event/full-return audits already recorded. No second neural execution."
+}

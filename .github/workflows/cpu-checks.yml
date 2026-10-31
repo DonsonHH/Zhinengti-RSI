@@ -36,5 +36,7 @@ jobs:
           python -m unittest discover -s tests -p test_b2_alignment.py -v
           python -m unittest discover -s tests -p test_paired_campaign.py -v
           python -m unittest discover -s tests -p test_rsi_campaign.py -v
+          python -m unittest discover -s tests -p test_meta_schema.py -v
+          python -m unittest discover -s tests -p test_patrol_timing.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts

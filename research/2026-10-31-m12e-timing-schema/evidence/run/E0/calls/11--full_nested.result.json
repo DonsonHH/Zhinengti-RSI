@@ -1,0 +1,62 @@
+{
+  "slot": 11,
+  "method": "full_nested",
+  "input_tokens": 891,
+  "output_tokens": 129,
+  "output_tokens_charged_upper_bound": 129,
+  "generation_s": 6.553168541751802,
+  "raw_response": "{\"diagnosis\": \"Evaluate efficiency and novelty to identify underutilized methods.\", \"expected_effect\": \"Enhanced detection of innovative approaches that may improve system performance.\", \"protocol\": {\"protocol\": {\"diagnostics\": [\"efficiency\", \"novelty\"], \"memory\": \"recent\", \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": true,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": true,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.memory",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "thermal_disagreement",
+        "professional_evidence"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "efficiency",
+        "novelty"
+      ],
+      "memory": "recent",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

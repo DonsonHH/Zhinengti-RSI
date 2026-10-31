@@ -1,0 +1,263 @@
+{
+  "protocol": "M12E-E0-Schema-v1",
+  "baseline": "6174f2ab3ae227b8bec6f83b05fdca512bb84192",
+  "status": "frozen_for_independent_review_before_execution",
+  "created_utc": "2026-10-31T07:40:31.655723+00:00",
+  "question": "Can the fixed open model propose legal, different and transferable ControlledImprover protocols? Format/representation only, no performance or RSI gain claim.",
+  "methods": [
+    "full_nested",
+    "compact_leaves"
+  ],
+  "calls_each_method": 12,
+  "actual_model_call_cap": 24,
+  "paired_generation_seeds": [
+    940000,
+    940001,
+    940002,
+    940003,
+    940004,
+    940005,
+    940006,
+    940007,
+    940008,
+    940009,
+    940010,
+    940011
+  ],
+  "schedule": "Interleave full_nested then compact_leaves for each slot; same model seed per pair. Three predeclared synthetic format challenges/parents, four repetitions each. No response-dependent edits or retries.",
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "precision": "float16",
+    "thinking": false,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "input_token_cap": 4096,
+    "output_token_cap": 768,
+    "weights_updated": false
+  },
+  "full_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "diagnosis",
+      "expected_effect",
+      "protocol"
+    ],
+    "properties": {
+      "diagnosis": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "expected_effect": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "protocol": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "protocol",
+          "generator",
+          "dedup",
+          "acceptance",
+          "failure_fallback"
+        ],
+        "properties": {
+          "protocol": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "diagnostics",
+              "memory",
+              "instruction"
+            ],
+            "properties": {
+              "diagnostics": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "uniqueItems": true,
+                "items": {
+                  "enum": [
+                    "coverage",
+                    "professional_evidence",
+                    "efficiency",
+                    "thermal_disagreement",
+                    "novelty"
+                  ]
+                }
+              },
+              "memory": {
+                "enum": [
+                  "none",
+                  "recent",
+                  "best_and_failures"
+                ]
+              },
+              "instruction": {
+                "enum": [
+                  "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+                  "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.",
+                  "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+                ]
+              }
+            }
+          },
+          "generator": {
+            "enum": [
+              "qwen_once",
+              "random_program"
+            ]
+          },
+          "dedup": {
+            "enum": [
+              "exact_version",
+              "canonical_rule_order"
+            ]
+          },
+          "acceptance": {
+            "enum": [
+              "strict_improvement",
+              "keep_parent"
+            ]
+          },
+          "failure_fallback": {
+            "enum": [
+              "keep_parent",
+              "safe_tour"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "compact_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "diagnosis",
+      "expected_effect",
+      "protocol"
+    ],
+    "properties": {
+      "diagnosis": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "expected_effect": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "protocol": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "diagnostic_ids",
+          "memory_id",
+          "instruction_id",
+          "generator",
+          "dedup",
+          "acceptance",
+          "failure_fallback"
+        ],
+        "properties": {
+          "diagnostic_ids": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4
+            }
+          },
+          "memory_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "instruction_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "generator": {
+            "enum": [
+              "qwen_once",
+              "random_program"
+            ]
+          },
+          "dedup": {
+            "enum": [
+              "exact_version",
+              "canonical_rule_order"
+            ]
+          },
+          "acceptance": {
+            "enum": [
+              "strict_improvement",
+              "keep_parent"
+            ]
+          },
+          "failure_fallback": {
+            "enum": [
+              "keep_parent",
+              "safe_tour"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "compact_semantics": "NEW deterministic structural assembly. Model supplies all diagnostic/memory/instruction/enum leaves; compiler supplies nesting only. It cannot repair invalid values or substitute a successful proposal. Compiled format success is not model self-improvement.",
+  "public_input": "Only fixed synthetic coverage/violation/check/duplicate counts and current legal parent, schema, allowlists and complete example. No real task trace, seed, injection, outcome label or final-test information in prompt.",
+  "raw_parse": "Strict entire JSON object, duplicate keys/nonfinite constants/trailing prose rejected. Full interface validates original nested object. Compact validates leaf schema then compiles and validates unchanged DSL.",
+  "metrics": [
+    "raw_JSON_syntax_rate",
+    "raw_interface_schema_rate",
+    "raw_full_ControlledImprover_rate_distinct_from_compiled_rate",
+    "compiled_full_schema_rate",
+    "valid_different_parent_rate",
+    "distinct_valid_protocols",
+    "changed_allowed_fields",
+    "invalid_duplicate_timeout_counts",
+    "all_attempts_tokens_wall_GPU",
+    "complete_task_history_reset"
+  ],
+  "method_gate": {
+    "compiled_or_raw_full_valid_min": 11,
+    "valid_and_different_parent_min": 8,
+    "distinct_nonparent_legal_protocols_min": 3,
+    "zero_hidden_or_disallowed_change": true,
+    "all_valid_protocol_transfer_resets": true,
+    "all_attempts_and_costs_accounted": true
+  },
+  "decision": "E0 passes if either frozen interface meets ALL per-method criteria; full_nested preferred if both pass, otherwise compact interface explicitly labelled. Failure stops future costly meta search. n=12 diagnostic reliability screen, not population guarantee.",
+  "failure_accounting": "Each attempted generation charges one of24slots before model.generate; invalid/duplicate/timeout consumes slot, no resampling; invalid restores identical parent. Unknown failed output tokens charged at cap upper bound and labelled unknown. Model/runtime/source failure stops remaining activity.",
+  "budgets": {
+    "input_tokens_total_cap": 98304,
+    "output_tokens_total_cap": 18432,
+    "GPU_allocations_max": 1,
+    "GPU_seconds_max": 1800,
+    "per_call_timeout_s": 60,
+    "soft_stop_s": 1680,
+    "CPU_per_GPU_allocation": 4,
+    "RAM_GB": 48,
+    "source_storage_cap_bytes": 500000000
+  },
+  "not_allowed": [
+    "oldreplyrepair",
+    "oldM12Drescoring",
+    "taskprogramsearch",
+    "metasearch",
+    "newweights",
+    "newrealpreflightoutside24slots"
+  ]
+}

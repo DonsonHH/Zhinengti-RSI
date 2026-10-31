@@ -1,0 +1,82 @@
+{
+  "protocol": "M12E-E1-Timing-v1",
+  "baseline": "6174f2ab3ae227b8bec6f83b05fdca512bb84192",
+  "status": "frozen_for_independent_review_before_execution",
+  "created_utc": "2026-10-31T07:40:31.655723+00:00",
+  "question": "Separate using the sole optional check NOW from ranking legal targets. WAIT means continue protected Tour while retaining quota, never physical idle.",
+  "arms": [
+    "Tour",
+    "human_professional",
+    "unconditional_PPO",
+    "evidence_gate_PPO",
+    "evidence_gate_urgency"
+  ],
+  "fixed_core": "OriginalM9physics,18heterogeneousexecutors,ownedtask/qualification/cooldown60s/fullreturn/measurement/revisit unchanged; shared aligned_patrol.run_episode and global1CHECK gate.",
+  "development_manifest_SHA256": "c8772f81648af78617c0c34609a24628f6e55e5f3f1ce59929cd9c024f957b10",
+  "partitions": {
+    "development": [
+      33000,
+      33001
+    ],
+    "validation": [
+      33020,
+      33021,
+      33022,
+      33023
+    ],
+    "final_test": [
+      33040,
+      33041,
+      33042,
+      33043
+    ]
+  },
+  "only_current_partition": "development",
+  "gate": {
+    "signals": {
+      "thermal_excess": 0.05,
+      "contact_heat": 0.05,
+      "flow_deficit": 0.05,
+      "verified_sensor_bias": 0.5
+    },
+    "candidate": "Hard legal optional target, corresponding public professional evidence available and above fixed threshold, not already measured alarm; positive finish lead over protectedTour; signal*public_weight*lead >0.05*other_task_shift.",
+    "signal_sources": "Same typed_signal current history/qualified contact/observed flow/verified sensor bias; observation availability and age explicit. No event oracle, scenario, seed or fault clock.",
+    "ranking": "Same qualifying set for both gated arms; PPO uses frozen actor scores, urgency uses original f[:,0]+f[:,1]. Shared rotating dispatch order/common1CHECK determines selected agent.",
+    "after_spending": "MandatoryTour; no further optional candidate dispatch or quota reset across owned rounds."
+  },
+  "diagnostic": "Record all Tour legal candidates at every5sroot through1795, currentpublic measurement/age, feature/score at5s, projected downstream shift and exact routes. Evaluate offline oracle ONLY after public decisions saved.",
+  "oracle": "Existing analytic one-CHECK Tour continuation diagnostic; no labels to selector/model. Offline best and earliest public-eligible net-beneficial candidate each condition are independently executed once (dedup) then Tour and compared to analytic all-event miss/gain/loss/wait. Other oracle opportunities labelled approximate, never claimed closed-loop measured.",
+  "oracle_net_definition": "No lost confirmation, no increased miss AND (fewer misses OR censored wait gain minus0.05*shift >0). This is offline diagnostic, not online gate truth.",
+  "metrics": [
+    "macro_seed_process_noise_miss_and_weighted_censored_wait",
+    "professional_effective_confirmation",
+    "WAIT_continueTour_and_CHECK_counts",
+    "CHECK_time",
+    "actualPPO_multiple_and_single_candidate_rank",
+    "specific_Tour_deviation",
+    "missed_public_recognizable_opportunities",
+    "route_shift_and_work_cost",
+    "qualification_fullreturn_exact_initial_tail_revisit",
+    "physical_and_noise_pairing"
+  ],
+  "opportunity_gate": "Each of2developmentseedgroups >=2distinctnumericprocesses with a public-eligible net-beneficial witness verified by actual closed-loop branch, not two noise versions counted twice.",
+  "timing_gate": "GatedPPO actually retains quota then uses CHECK in both seeds; all safety/source/cost checks pass; perseedmiss no increase vs Tour AND human_professional AND gated_urgency; each comparator macro fewer misses OR same miss with>=5%lower macro wait.",
+  "E2_rule": "E2 remains unexecuted in this development stage. Future task-level launch requires independent reviewed protocol, E1 opportunity AND timing gates; future meta launch additionally requires E0 pass. No gate can replace the other.",
+  "budgets": {
+    "new_physical_processes_development": 18,
+    "noisy_conditions": 36,
+    "main_episodes": 180,
+    "closed_oracle_witness_cap": 72,
+    "total_new_episode_cap": 252,
+    "allocated_CPU_minutes_cap": 960,
+    "max_CPU_jobs_parallel": 2,
+    "CPU_per_job": 2,
+    "RAM_GB": 8,
+    "per_job_minutes": 60,
+    "real_LLM_calls": 0,
+    "GPU_allocations": 0,
+    "source_storage_cap_bytes": 3000000000
+  },
+  "stop": "Any source/split/safety/resource failure stops. No addedcandidatearms,thresholdrelaxation,newweights,changeddeadlinesorresultdrivenphasechanges. Negative performance retained; futurevalidation/finalsealed.",
+  "statistical_unit": "2developmentseedgroups,9numericprocessesperseed,2noisepaired,5arms; macro sameM12D hierarchicalmetric. Development descriptive screen, no confirmatory population claim."
+}

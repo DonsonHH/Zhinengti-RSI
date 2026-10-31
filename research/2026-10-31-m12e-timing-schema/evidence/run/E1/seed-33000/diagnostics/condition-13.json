@@ -1,0 +1,102 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "sensor_bias",
+    "duration_s": 900,
+    "fault_start_s": 120,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "process_fingerprint": "47ff8c55386026f8c02203ecbca6749cc78045a9d080469037a1071a7dfcb18d",
+  "public_receipt_before_labels_SHA256": "28846ca1e982eaf63395100769de143436d97b38d4924a224bf1a50f1b84b564",
+  "roots": 359,
+  "legal_optional_candidates": 8282,
+  "analytic_useful_candidates": 21,
+  "public_eligible_analytic_useful_candidates": 0,
+  "public_Top1_analytic_useful_candidates": 0,
+  "public_Top1_analytic_useful_ranker_references": 0,
+  "actual_witnesses": [
+    {
+      "tags": [
+        "offline_best"
+      ],
+      "geometry_index": 144,
+      "forced_current_legal_check": {
+        "agent": 16,
+        "task": 164,
+        "dispatch_time_s": 5.0
+      },
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -225.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 222.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      },
+      "analytic": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -225.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "first_confirmation_s": [
+          125
+        ]
+      },
+      "actual_first_confirmation_s": [
+        125.0
+      ],
+      "analytic_matches_actual": true,
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12e/E1/seed-33000/cases/condition-13--oracle-witness-0.json.gz",
+      "record_SHA256": "a52f9204b826dc3ce1889bf4a1dbdf430b76fc76b8f164e211b8bd19defa979c",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      }
+    }
+  ],
+  "public_Top1_actual_beneficial": false,
+  "missed_opportunity_diagnostics": {
+    "Tour": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 21,
+      "later_public_Top1_useful_roots": 0,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "human_professional": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 21,
+      "later_public_Top1_useful_roots": 0,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "unconditional_PPO": {
+      "spent_at_s": 5.0,
+      "later_analytic_useful_candidates": 14,
+      "later_public_Top1_useful_roots": 0,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "evidence_gate_PPO": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 21,
+      "later_public_Top1_useful_roots": 0,
+      "not_jointly_executable_or_closed_loop_verified": true
+    },
+    "evidence_gate_urgency": {
+      "spent_at_s": null,
+      "later_analytic_useful_candidates": 21,
+      "later_public_Top1_useful_roots": 0,
+      "not_jointly_executable_or_closed_loop_verified": true
+    }
+  },
+  "physics_and_noisy_telemetry_matched": true
+}

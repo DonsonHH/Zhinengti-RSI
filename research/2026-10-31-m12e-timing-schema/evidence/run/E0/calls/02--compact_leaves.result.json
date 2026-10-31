@@ -1,0 +1,62 @@
+{
+  "slot": 2,
+  "method": "compact_leaves",
+  "input_tokens": 792,
+  "output_tokens": 96,
+  "output_tokens_charged_upper_bound": 96,
+  "generation_s": 4.97305244486779,
+  "raw_response": "{\"diagnosis\": \"Evaluate efficiency and novelty against public data.\", \"expected_effect\": \"A streamlined approach to identify anomalies with minimal resource expenditure.\", \"protocol\": {\"diagnostic_ids\": [2, 3, 4], \"memory_id\": 2, \"instruction_id\": 0, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": false,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": false,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "thermal_disagreement",
+        "professional_evidence"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "efficiency",
+        "thermal_disagreement",
+        "novelty"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

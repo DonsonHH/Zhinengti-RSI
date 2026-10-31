@@ -1,0 +1,63 @@
+{
+  "slot": 2,
+  "method": "full_nested",
+  "input_tokens": 891,
+  "output_tokens": 149,
+  "output_tokens_charged_upper_bound": 149,
+  "generation_s": 7.646654126234353,
+  "raw_response": "{\n  \"diagnosis\": \"Analyze efficiency and novelty to identify potential improvements.\",\n  \"expected_effect\": \"A structured approach to evaluate new methods while maintaining safety and budget constraints.\",\n  \"protocol\": {\n    \"protocol\": {\n      \"diagnostics\": [\"efficiency\", \"novelty\"],\n      \"memory\": \"recent\",\n      \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"\n    },\n    \"generator\": \"qwen_once\",\n    \"dedup\": \"exact_version\",\n    \"acceptance\": \"strict_improvement\",\n    \"failure_fallback\": \"safe_tour\"\n  }\n}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": true,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": false,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.memory",
+    "protocol.instruction",
+    "failure_fallback"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "thermal_disagreement",
+        "professional_evidence"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "efficiency",
+        "novelty"
+      ],
+      "memory": "recent",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "safe_tour"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

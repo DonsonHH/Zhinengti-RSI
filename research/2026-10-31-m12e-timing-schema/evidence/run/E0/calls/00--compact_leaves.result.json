@@ -1,0 +1,62 @@
+{
+  "slot": 0,
+  "method": "compact_leaves",
+  "input_tokens": 803,
+  "output_tokens": 97,
+  "output_tokens_charged_upper_bound": 97,
+  "generation_s": 5.038524433970451,
+  "raw_response": "{\"diagnosis\": \"Analyze thermal disagreement and novelty to detect early anomalies.\", \"expected_effect\": \"Early anomaly detection through novel thermal patterns without unnecessary detours.\", \"protocol\": {\"diagnostic_ids\": [3, 4], \"memory_id\": 1, \"instruction_id\": 2, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": false,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": false,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "memory": "recent",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "thermal_disagreement",
+        "novelty"
+      ],
+      "memory": "recent",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}

@@ -1,0 +1,183 @@
+{
+  "slot": 8,
+  "method": "full_nested",
+  "generation_seed": 940008,
+  "input_tokens": 891,
+  "prompt": {
+    "purpose": "FORMAT PREFLIGHT ONLY. Synthetic public diagnostics, not task evidence or a self-improvement result.",
+    "task": "Propose one valid protocol different from the parent. Choose1..3 DISTINCT diagnostics; preserve all tool, safety, evaluator and budget boundaries.",
+    "interface": "full_nested",
+    "parent_protocol": {
+      "protocol": {
+        "diagnostics": [
+          "thermal_disagreement",
+          "professional_evidence"
+        ],
+        "memory": "best_and_failures",
+        "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "synthetic_public_diagnostics": {
+      "coverage": 1.0,
+      "violating_tasks": 0,
+      "extra_checks": 1,
+      "duplicate_proposals": 0
+    },
+    "allowed_diagnostic_order": [
+      "coverage",
+      "professional_evidence",
+      "efficiency",
+      "thermal_disagreement",
+      "novelty"
+    ],
+    "allowed_memory_order": [
+      "none",
+      "recent",
+      "best_and_failures"
+    ],
+    "allowed_instruction_templates_order": [
+      "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+      "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.",
+      "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    ],
+    "response_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnosis",
+        "expected_effect",
+        "protocol"
+      ],
+      "properties": {
+        "diagnosis": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "expected_effect": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "protocol": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "protocol",
+            "generator",
+            "dedup",
+            "acceptance",
+            "failure_fallback"
+          ],
+          "properties": {
+            "protocol": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "diagnostics",
+                "memory",
+                "instruction"
+              ],
+              "properties": {
+                "diagnostics": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 3,
+                  "uniqueItems": true,
+                  "items": {
+                    "enum": [
+                      "coverage",
+                      "professional_evidence",
+                      "efficiency",
+                      "thermal_disagreement",
+                      "novelty"
+                    ]
+                  }
+                },
+                "memory": {
+                  "enum": [
+                    "none",
+                    "recent",
+                    "best_and_failures"
+                  ]
+                },
+                "instruction": {
+                  "enum": [
+                    "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+                    "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.",
+                    "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+                  ]
+                }
+              }
+            },
+            "generator": {
+              "enum": [
+                "qwen_once",
+                "random_program"
+              ]
+            },
+            "dedup": {
+              "enum": [
+                "exact_version",
+                "canonical_rule_order"
+              ]
+            },
+            "acceptance": {
+              "enum": [
+                "strict_improvement",
+                "keep_parent"
+              ]
+            },
+            "failure_fallback": {
+              "enum": [
+                "keep_parent",
+                "safe_tour"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "complete_valid_example": {
+      "diagnosis": "Compare professional evidence and failures.",
+      "protocol": {
+        "protocol": {
+          "diagnostics": [
+            "coverage",
+            "professional_evidence"
+          ],
+          "memory": "best_and_failures",
+          "instruction": "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour."
+        },
+        "generator": "qwen_once",
+        "dedup": "exact_version",
+        "acceptance": "strict_improvement",
+        "failure_fallback": "keep_parent"
+      },
+      "expected_effect": "A legal alternative for later independent evaluation; no performance claim."
+    },
+    "important": "Full interface has TWO protocol keys at different nesting levels. Compact interface is NEW deterministic structural assembly, never a repair of invalid full outputs. No markdown fences, extra keys, task IDs, seeds, event times or private labels."
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn exactly one JSON object matching the complete supplied schema. No markdown or prose outside JSON.<|im_end|>\n<|im_start|>user\n{\"purpose\": \"FORMAT PREFLIGHT ONLY. Synthetic public diagnostics, not task evidence or a self-improvement result.\", \"task\": \"Propose one valid protocol different from the parent. Choose1..3 DISTINCT diagnostics; preserve all tool, safety, evaluator and budget boundaries.\", \"interface\": \"full_nested\", \"parent_protocol\": {\"protocol\": {\"diagnostics\": [\"thermal_disagreement\", \"professional_evidence\"], \"memory\": \"best_and_failures\", \"instruction\": \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}, \"synthetic_public_diagnostics\": {\"coverage\": 1.0, \"violating_tasks\": 0, \"extra_checks\": 1, \"duplicate_proposals\": 0}, \"allowed_diagnostic_order\": [\"coverage\", \"professional_evidence\", \"efficiency\", \"thermal_disagreement\", \"novelty\"], \"allowed_memory_order\": [\"none\", \"recent\", \"best_and_failures\"], \"allowed_instruction_templates_order\": [\"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\", \"Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.\", \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"], \"response_schema\": {\"type\": \"object\", \"additionalProperties\": false, \"required\": [\"diagnosis\", \"expected_effect\", \"protocol\"], \"properties\": {\"diagnosis\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 500}, \"expected_effect\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 500}, \"protocol\": {\"type\": \"object\", \"additionalProperties\": false, \"required\": [\"protocol\", \"generator\", \"dedup\", \"acceptance\", \"failure_fallback\"], \"properties\": {\"protocol\": {\"type\": \"object\", \"additionalProperties\": false, \"required\": [\"diagnostics\", \"memory\", \"instruction\"], \"properties\": {\"diagnostics\": {\"type\": \"array\", \"minItems\": 1, \"maxItems\": 3, \"uniqueItems\": true, \"items\": {\"enum\": [\"coverage\", \"professional_evidence\", \"efficiency\", \"thermal_disagreement\", \"novelty\"]}}, \"memory\": {\"enum\": [\"none\", \"recent\", \"best_and_failures\"]}, \"instruction\": {\"enum\": [\"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\", \"Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.\", \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"]}}}, \"generator\": {\"enum\": [\"qwen_once\", \"random_program\"]}, \"dedup\": {\"enum\": [\"exact_version\", \"canonical_rule_order\"]}, \"acceptance\": {\"enum\": [\"strict_improvement\", \"keep_parent\"]}, \"failure_fallback\": {\"enum\": [\"keep_parent\", \"safe_tour\"]}}}}}, \"complete_valid_example\": {\"diagnosis\": \"Compare professional evidence and failures.\", \"protocol\": {\"protocol\": {\"diagnostics\": [\"coverage\", \"professional_evidence\"], \"memory\": \"best_and_failures\", \"instruction\": \"Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}, \"expected_effect\": \"A legal alternative for later independent evaluation; no performance claim.\"}, \"important\": \"Full interface has TWO protocol keys at different nesting levels. Compact interface is NEW deterministic structural assembly, never a repair of invalid full outputs. No markdown fences, extra keys, task IDs, seeds, event times or private labels.\"}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "parent": {
+    "protocol": {
+      "diagnostics": [
+        "thermal_disagreement",
+        "professional_evidence"
+      ],
+      "memory": "best_and_failures",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "thinking": false,
+  "charged_before_generation": true,
+  "start_unix": 1793433579.1882393
+}

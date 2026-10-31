@@ -1,0 +1,63 @@
+{
+  "slot": 0,
+  "method": "full_nested",
+  "input_tokens": 902,
+  "output_tokens": 120,
+  "output_tokens_charged_upper_bound": 120,
+  "generation_s": 6.491382257081568,
+  "raw_response": "{\"diagnosis\": \"Analyze public measurement age and novelty to detect early anomalies.\", \"expected_effect\": \"Early detection of anomalies through novel diagnostic patterns.\", \"protocol\": {\"protocol\": {\"diagnostics\": [\"novelty\", \"thermal_disagreement\", \"efficiency\"], \"memory\": \"recent\", \"instruction\": \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}}",
+  "generation_error": null,
+  "raw_JSON_valid": true,
+  "raw_full_ControlledImprover_valid": true,
+  "interface_schema_valid": true,
+  "compiled_protocol_valid": true,
+  "different_parent": true,
+  "duplicate": false,
+  "changed_fields": [
+    "protocol.diagnostics",
+    "protocol.instruction"
+  ],
+  "fallback_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "memory": "recent",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "candidate_protocol": {
+    "protocol": {
+      "diagnostics": [
+        "novelty",
+        "thermal_disagreement",
+        "efficiency"
+      ],
+      "memory": "recent",
+      "instruction": "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    },
+    "generator": "qwen_once",
+    "dedup": "exact_version",
+    "acceptance": "strict_improvement",
+    "failure_fallback": "keep_parent"
+  },
+  "transfer_reset": {
+    "only_protocol_transferred": true,
+    "program": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "history_length": 0,
+    "candidate_archive_length": 0,
+    "task_outcomes_length": 0
+  },
+  "parse_error": null
+}
