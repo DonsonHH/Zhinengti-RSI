@@ -1,0 +1,440 @@
+{
+  "seed": 98010100,
+  "prompt": {
+    "task": "Propose ONE executable TimingSkill to improve inspection timing using only supplied causal public experience. A distinct skill is useful only if its actual CHECK/CONTINUE_TOUR behavior changes.",
+    "common_contract": "Known static layout,18 qualified owned executors,1800s; at most ONE additional check for the whole team. CONTINUE_TOUR continues mandatory work and preserves quota. External original legality,60s cooldown,fullreturn and exactrevisit are immutable. Do not invent observations or read future faults.",
+    "skill_schema": {
+      "keys": [
+        "schema_version",
+        "rules",
+        "default_action"
+      ],
+      "schema_version": "timing-skill-v1",
+      "default_action": "CONTINUE_TOUR",
+      "rules": "0..3 OR rules; each exactly {all:[1..6 AND predicates]}; CHECK iff any complete rule true; otherwise CONTINUE_TOUR",
+      "predicate_keys": [
+        "field",
+        "op",
+        "value"
+      ],
+      "boolean_fields": [
+        "already_alarm",
+        "direct_available",
+        "direct_is_qualified",
+        "direct_reading_normal",
+        "estimate_available",
+        "ever_checked",
+        "professional_available",
+        "quota_available"
+      ],
+      "boolean_ops": {
+        "eq": "literal true/false",
+        "is_missing": null
+      },
+      "kind": {
+        "eq": [
+          "thermal",
+          "electrical",
+          "cooling",
+          "control"
+        ],
+        "is_missing": null
+      },
+      "numeric_fields": {
+        "professional_signal": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1,
+            "kind_threshold"
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "inspection_age_ratio": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "direct_age_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            30,
+            60,
+            120,
+            300,
+            600
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "direct_age_ratio": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "estimate_age_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "thermal_disagreement": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.025,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "prior_disagreement": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.025,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_thermal_signal": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_flow_deficit": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_service_gap": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "lead_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120,
+            300
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "shift_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            5,
+            15,
+            30,
+            60,
+            120
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "completion_cost_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120,
+            300
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "importance": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        }
+      },
+      "evidence_margin": {
+        "op": "positive",
+        "value": [
+          0,
+          0.01,
+          0.05,
+          0.1,
+          0.25,
+          1
+        ],
+        "meaning": "professional_signal*importance*lead_s > value*shift_s; missing terms=false"
+      },
+      "kind_threshold": ".5 for control, .05 otherwise; profession must be known"
+    },
+    "public_feature_meanings": {
+      "professional_signal": "Existing own-profession cue: thermal fused excess/qualified contact/observed flow/qualified verified bias; None when unavailable, not a probability.",
+      "direct_reading_normal": "Available direct channel is on its reference-normal side. Not hidden truth or a guarantee of normality; remote versus qualified explicitly separated.",
+      "direct_is_qualified": "Most recent direct reading is a qualified reference, not merely a remote/model value.",
+      "direct_age_s": "Age of actual direct reading; None means missing. Thermal may be remote or qualified; other roles retain their declared sources.",
+      "estimate_age_s": "Timestamped pure temperature-CVAE invocation age; None when timestamp unavailable. Legacy30s reconstruction only when explicitly requested for verified E1 tapes.",
+      "thermal_disagreement": "Thermal tool difference/20: target rack for thermal, maximum of existing observed/estimated thermal racks in the same public pod otherwise. Not cross-profession uncertainty probability.",
+      "prior_disagreement": "Pure existing temperature-CVAE prior mean versus causal nominal model/20; missing on old tapes without raw prior recorder. Not a fault probability.",
+      "pod_thermal_signal": "Maximum available fused temperature excess in public same-pod thermal tasks; a cross-system cue, not confirmation.",
+      "pod_flow_deficit": "Existing observed same-pod flow deficit; None when not observed.",
+      "pod_service_gap": "Existing per-rack public requested/delivered IT power aggregated over known8-rack pod. Service-gap proxy, not voltage/current or contact-hotspot confirmation.",
+      "inspection_age_ratio": "Public qualified-check age/deadline, including startup age; distinct from direct remote measurement age.",
+      "lead_s": "Earlier completion than continuing protected Tour, from public deterministic route/service model.",
+      "shift_s": "Additional public own-tour schedule shift from optional check, not empirical risk or a safety rule.",
+      "already_alarm": "Already measured public alarm, not hidden truth. Rechecking it is not a new physical-event discovery.",
+      "professional_available": "An actual own-profession cue exists; false makes professional_signal null.",
+      "ever_checked": "At least one qualified check completed.",
+      "quota_available": "True for candidates before the single additional opportunity is consumed.",
+      "estimate_available": "Temperature-CVAE tool output exists; timestamp can still be unknown.",
+      "importance": "Public normalized consequence importance, not a fault probability.",
+      "direct_available": "Actual direct channel exists, including remote readings where explicitly allowed."
+    },
+    "data": {
+      "initial_skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "proposal_history": [],
+      "diagnostics": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+      "experience_cards": [],
+      "acceptance_feedback": []
+    },
+    "output_envelope": {
+      "diagnosis": "short string,1..1500 chars",
+      "skill": "exact TimingSkill object",
+      "expected_effect": "short string,1..1500 chars"
+    },
+    "response_keys": [
+      "diagnosis",
+      "skill",
+      "expected_effect"
+    ],
+    "format_example": {
+      "diagnosis": "The initial reference is supplied in data.",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "expected_effect": "This is the initial reference only, not an improved answer."
+    }
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn exactly one JSON object with the requested response_keys. Follow the bounded typed schema. No text outside JSON. Use only supplied public evidence.<|im_end|>\n<|im_start|>user\n{\"task\": \"Propose ONE executable TimingSkill to improve inspection timing using only supplied causal public experience. A distinct skill is useful only if its actual CHECK/CONTINUE_TOUR behavior changes.\", \"common_contract\": \"Known static layout,18 qualified owned executors,1800s; at most ONE additional check for the whole team. CONTINUE_TOUR continues mandatory work and preserves quota. External original legality,60s cooldown,fullreturn and exactrevisit are immutable. Do not invent observations or read future faults.\", \"skill_schema\": {\"keys\": [\"schema_version\", \"rules\", \"default_action\"], \"schema_version\": \"timing-skill-v1\", \"default_action\": \"CONTINUE_TOUR\", \"rules\": \"0..3 OR rules; each exactly {all:[1..6 AND predicates]}; CHECK iff any complete rule true; otherwise CONTINUE_TOUR\", \"predicate_keys\": [\"field\", \"op\", \"value\"], \"boolean_fields\": [\"already_alarm\", \"direct_available\", \"direct_is_qualified\", \"direct_reading_normal\", \"estimate_available\", \"ever_checked\", \"professional_available\", \"quota_available\"], \"boolean_ops\": {\"eq\": \"literal true/false\", \"is_missing\": null}, \"kind\": {\"eq\": [\"thermal\", \"electrical\", \"cooling\", \"control\"], \"is_missing\": null}, \"numeric_fields\": {\"professional_signal\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1, \"kind_threshold\"], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"inspection_age_ratio\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"direct_age_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 30, 60, 120, 300, 600], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"direct_age_ratio\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"estimate_age_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"thermal_disagreement\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.025, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"prior_disagreement\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.025, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_thermal_signal\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_flow_deficit\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_service_gap\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"lead_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120, 300], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"shift_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 5, 15, 30, 60, 120], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"completion_cost_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120, 300], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"importance\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}}, \"evidence_margin\": {\"op\": \"positive\", \"value\": [0, 0.01, 0.05, 0.1, 0.25, 1], \"meaning\": \"professional_signal*importance*lead_s > value*shift_s; missing terms=false\"}, \"kind_threshold\": \".5 for control, .05 otherwise; profession must be known\"}, \"public_feature_meanings\": {\"professional_signal\": \"Existing own-profession cue: thermal fused excess/qualified contact/observed flow/qualified verified bias; None when unavailable, not a probability.\", \"direct_reading_normal\": \"Available direct channel is on its reference-normal side. Not hidden truth or a guarantee of normality; remote versus qualified explicitly separated.\", \"direct_is_qualified\": \"Most recent direct reading is a qualified reference, not merely a remote/model value.\", \"direct_age_s\": \"Age of actual direct reading; None means missing. Thermal may be remote or qualified; other roles retain their declared sources.\", \"estimate_age_s\": \"Timestamped pure temperature-CVAE invocation age; None when timestamp unavailable. Legacy30s reconstruction only when explicitly requested for verified E1 tapes.\", \"thermal_disagreement\": \"Thermal tool difference/20: target rack for thermal, maximum of existing observed/estimated thermal racks in the same public pod otherwise. Not cross-profession uncertainty probability.\", \"prior_disagreement\": \"Pure existing temperature-CVAE prior mean versus causal nominal model/20; missing on old tapes without raw prior recorder. Not a fault probability.\", \"pod_thermal_signal\": \"Maximum available fused temperature excess in public same-pod thermal tasks; a cross-system cue, not confirmation.\", \"pod_flow_deficit\": \"Existing observed same-pod flow deficit; None when not observed.\", \"pod_service_gap\": \"Existing per-rack public requested/delivered IT power aggregated over known8-rack pod. Service-gap proxy, not voltage/current or contact-hotspot confirmation.\", \"inspection_age_ratio\": \"Public qualified-check age/deadline, including startup age; distinct from direct remote measurement age.\", \"lead_s\": \"Earlier completion than continuing protected Tour, from public deterministic route/service model.\", \"shift_s\": \"Additional public own-tour schedule shift from optional check, not empirical risk or a safety rule.\", \"already_alarm\": \"Already measured public alarm, not hidden truth. Rechecking it is not a new physical-event discovery.\", \"professional_available\": \"An actual own-profession cue exists; false makes professional_signal null.\", \"ever_checked\": \"At least one qualified check completed.\", \"quota_available\": \"True for candidates before the single additional opportunity is consumed.\", \"estimate_available\": \"Temperature-CVAE tool output exists; timestamp can still be unknown.\", \"importance\": \"Public normalized consequence importance, not a fault probability.\", \"direct_available\": \"Actual direct channel exists, including remote readings where explicitly allowed.\"}, \"data\": {\"initial_skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"proposal_history\": [], \"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\", \"experience_cards\": [], \"acceptance_feedback\": []}, \"output_envelope\": {\"diagnosis\": \"short string,1..1500 chars\", \"skill\": \"exact TimingSkill object\", \"expected_effect\": \"short string,1..1500 chars\"}, \"response_keys\": [\"diagnosis\", \"skill\", \"expected_effect\"], \"format_example\": {\"diagnosis\": \"The initial reference is supplied in data.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This is the initial reference only, not an improved answer.\"}}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "input_tokens": 2345,
+  "dropped_last_cards": 0,
+  "reservation": {
+    "first": 0,
+    "amount": 1,
+    "purpose": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/calls/0",
+    "job_id": "130943",
+    "unix": 1793455248.2080057
+  },
+  "output_cap": 1024,
+  "unknown_output_charge_upper_bound": 1024,
+  "thinking": false
+}

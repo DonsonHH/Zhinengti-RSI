@@ -1,0 +1,35 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "dc_contact_hotspot",
+    "duration_s": 180,
+    "fault_start_s": 300,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "estimate_age_s",
+              "op": "ge",
+              "value": 120
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793455198.4887228
+}

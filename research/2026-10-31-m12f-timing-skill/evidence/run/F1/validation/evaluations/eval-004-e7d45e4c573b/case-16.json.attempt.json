@@ -1,0 +1,55 @@
+{
+  "specification": {
+    "phase": "F1_validation",
+    "seed": 35021,
+    "scenario": "sensor_bias",
+    "duration_s": 900,
+    "fault_start_s": 270,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "ppo",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "professional_signal",
+              "op": "ge",
+              "value": "kind_threshold"
+            },
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "lead_s",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0.05
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793456782.122763
+}

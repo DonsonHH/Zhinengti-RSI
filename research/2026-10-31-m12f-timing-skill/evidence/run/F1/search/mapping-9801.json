@@ -1,0 +1,2230 @@
+{
+  "simple": {
+    "initial_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_evaluation_key": "d6c0188f137e08c6cfc25cf652ab1f3dff58867256e6670135ef96181125f0ea",
+    "selected_statistics": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.2,
+          "macro_wait_s": 160.87292613487725
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.8,
+          "macro_wait_s": 176.01257494876344
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 168.44275054182035,
+      "mean_CHECK": 0.3,
+      "mean_walk_m": 11795.399999999992,
+      "conditions": 20,
+      "physical_processes": 10,
+      "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+      "process_event_identities": [
+        [
+          [
+            33000,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            95
+          ],
+          "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+          "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+        ],
+        [
+          [
+            33000,
+            "coldplate_fouling",
+            180,
+            885
+          ],
+          "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+          "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+        ],
+        [
+          [
+            33000,
+            "dc_contact_hotspot",
+            180,
+            300
+          ],
+          "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+          "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+        ],
+        [
+          [
+            33000,
+            "healthy",
+            900,
+            555
+          ],
+          "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33000,
+            "sensor_bias",
+            900,
+            695
+          ],
+          "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+          "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+        ],
+        [
+          [
+            33001,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            115
+          ],
+          "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+          "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+        ],
+        [
+          [
+            33001,
+            "coldplate_fouling",
+            180,
+            395
+          ],
+          "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+          "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+        ],
+        [
+          [
+            33001,
+            "dc_contact_hotspot",
+            180,
+            630
+          ],
+          "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+          "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+        ],
+        [
+          [
+            33001,
+            "healthy",
+            900,
+            535
+          ],
+          "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33001,
+            "sensor_bias",
+            900,
+            130
+          ],
+          "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+          "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+        ]
+      ]
+    },
+    "protocol": {
+      "protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "prior_only": false,
+    "valid_proposals": 3,
+    "slots": 3,
+    "entries": [
+      {
+        "slot": 0,
+        "generation_seed": 98010200,
+        "valid": true,
+        "accepted": false,
+        "reason": "no_strict_development_improvement",
+        "source": "simple_same_grammar_sampler",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "estimate_age_s",
+                  "op": "ge",
+                  "value": 120
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "18e64932334a3e2d",
+        "evaluation_key": "aa54e477197a36ce61e231be9c1db632d8bb76dae863292f9ed5f761ccb1f5ef",
+        "statistics": {
+          "seeds": [
+            {
+              "seed": 33000,
+              "macro_missed_count": 0.6,
+              "macro_wait_s": 173.761144371397
+            },
+            {
+              "seed": 33001,
+              "macro_missed_count": 1.8,
+              "macro_wait_s": 177.50371202562908
+            }
+          ],
+          "macro_missed_count": 1.2,
+          "macro_wait_s": 175.63242819851303,
+          "mean_CHECK": 0.0,
+          "mean_walk_m": 11793.399999999992,
+          "conditions": 20,
+          "physical_processes": 10,
+          "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+          "process_event_identities": [
+            [
+              [
+                33000,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                95
+              ],
+              "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+              "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+            ],
+            [
+              [
+                33000,
+                "coldplate_fouling",
+                180,
+                885
+              ],
+              "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+              "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+            ],
+            [
+              [
+                33000,
+                "dc_contact_hotspot",
+                180,
+                300
+              ],
+              "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+              "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+            ],
+            [
+              [
+                33000,
+                "healthy",
+                900,
+                555
+              ],
+              "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33000,
+                "sensor_bias",
+                900,
+                695
+              ],
+              "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+              "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+            ],
+            [
+              [
+                33001,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                115
+              ],
+              "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+              "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+            ],
+            [
+              [
+                33001,
+                "coldplate_fouling",
+                180,
+                395
+              ],
+              "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+              "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+            ],
+            [
+              [
+                33001,
+                "dc_contact_hotspot",
+                180,
+                630
+              ],
+              "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+              "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+            ],
+            [
+              [
+                33001,
+                "healthy",
+                900,
+                535
+              ],
+              "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33001,
+                "sensor_bias",
+                900,
+                130
+              ],
+              "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+              "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+            ]
+          ]
+        },
+        "behavior": {
+          "same_input_rows": 130364,
+          "decision_differences": 6,
+          "actual_trajectory_differences": 6,
+          "behavior_changed": true
+        }
+      },
+      {
+        "slot": 1,
+        "generation_seed": 98010201,
+        "valid": true,
+        "accepted": false,
+        "reason": "no_strict_development_improvement",
+        "source": "simple_same_grammar_sampler",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "quota_available",
+                  "op": "is_missing",
+                  "value": null
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "pod_service_gap",
+                  "op": "lt",
+                  "value": 0.5
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "5ae34b792a555f28",
+        "evaluation_key": "3d53e723416310c0f2e473c89e75c99052a4a4cf5f35b0825d04c035f6da6fb7",
+        "statistics": {
+          "seeds": [
+            {
+              "seed": 33000,
+              "macro_missed_count": 0.6,
+              "macro_wait_s": 190.011144371397
+            },
+            {
+              "seed": 33001,
+              "macro_missed_count": 1.8,
+              "macro_wait_s": 177.50371202562908
+            }
+          ],
+          "macro_missed_count": 1.2,
+          "macro_wait_s": 183.75742819851303,
+          "mean_CHECK": 1.0,
+          "mean_walk_m": 11814.399999999992,
+          "conditions": 20,
+          "physical_processes": 10,
+          "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+          "process_event_identities": [
+            [
+              [
+                33000,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                95
+              ],
+              "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+              "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+            ],
+            [
+              [
+                33000,
+                "coldplate_fouling",
+                180,
+                885
+              ],
+              "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+              "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+            ],
+            [
+              [
+                33000,
+                "dc_contact_hotspot",
+                180,
+                300
+              ],
+              "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+              "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+            ],
+            [
+              [
+                33000,
+                "healthy",
+                900,
+                555
+              ],
+              "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33000,
+                "sensor_bias",
+                900,
+                695
+              ],
+              "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+              "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+            ],
+            [
+              [
+                33001,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                115
+              ],
+              "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+              "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+            ],
+            [
+              [
+                33001,
+                "coldplate_fouling",
+                180,
+                395
+              ],
+              "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+              "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+            ],
+            [
+              [
+                33001,
+                "dc_contact_hotspot",
+                180,
+                630
+              ],
+              "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+              "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+            ],
+            [
+              [
+                33001,
+                "healthy",
+                900,
+                535
+              ],
+              "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33001,
+                "sensor_bias",
+                900,
+                130
+              ],
+              "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+              "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+            ]
+          ]
+        },
+        "behavior": {
+          "same_input_rows": 130364,
+          "decision_differences": 88058,
+          "actual_trajectory_differences": 20,
+          "behavior_changed": true
+        }
+      },
+      {
+        "slot": 2,
+        "generation_seed": 98010202,
+        "valid": true,
+        "accepted": false,
+        "reason": "no_strict_development_improvement",
+        "source": "simple_same_grammar_sampler",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "15e136bb39449454",
+        "evaluation_key": "fd5edde11f7967f9d4a6a54e432e9c0292e79bbb8bbd6cef0d4ca42e6c9c7071",
+        "statistics": {
+          "seeds": [
+            {
+              "seed": 33000,
+              "macro_missed_count": 0.6,
+              "macro_wait_s": 173.761144371397
+            },
+            {
+              "seed": 33001,
+              "macro_missed_count": 1.8,
+              "macro_wait_s": 177.50371202562908
+            }
+          ],
+          "macro_missed_count": 1.2,
+          "macro_wait_s": 175.63242819851303,
+          "mean_CHECK": 0.0,
+          "mean_walk_m": 11793.399999999992,
+          "conditions": 20,
+          "physical_processes": 10,
+          "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+          "process_event_identities": [
+            [
+              [
+                33000,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                95
+              ],
+              "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+              "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+            ],
+            [
+              [
+                33000,
+                "coldplate_fouling",
+                180,
+                885
+              ],
+              "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+              "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+            ],
+            [
+              [
+                33000,
+                "dc_contact_hotspot",
+                180,
+                300
+              ],
+              "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+              "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+            ],
+            [
+              [
+                33000,
+                "healthy",
+                900,
+                555
+              ],
+              "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33000,
+                "sensor_bias",
+                900,
+                695
+              ],
+              "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+              "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+            ],
+            [
+              [
+                33001,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                115
+              ],
+              "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+              "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+            ],
+            [
+              [
+                33001,
+                "coldplate_fouling",
+                180,
+                395
+              ],
+              "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+              "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+            ],
+            [
+              [
+                33001,
+                "dc_contact_hotspot",
+                180,
+                630
+              ],
+              "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+              "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+            ],
+            [
+              [
+                33001,
+                "healthy",
+                900,
+                535
+              ],
+              "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33001,
+                "sensor_bias",
+                900,
+                130
+              ],
+              "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+              "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+            ]
+          ]
+        },
+        "behavior": {
+          "same_input_rows": 130364,
+          "decision_differences": 6,
+          "actual_trajectory_differences": 6,
+          "behavior_changed": true
+        }
+      }
+    ],
+    "history": [
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "estimate_age_s",
+                  "op": "ge",
+                  "value": 120
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": "aa54e477197a36ce61e231be9c1db632d8bb76dae863292f9ed5f761ccb1f5ef"
+      },
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "quota_available",
+                  "op": "is_missing",
+                  "value": null
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "pod_service_gap",
+                  "op": "lt",
+                  "value": 0.5
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": "3d53e723416310c0f2e473c89e75c99052a4a4cf5f35b0825d04c035f6da6fb7"
+      },
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": "fd5edde11f7967f9d4a6a54e432e9c0292e79bbb8bbd6cef0d4ca42e6c9c7071"
+      }
+    ]
+  },
+  "prior": {
+    "initial_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_evaluation_key": "d6c0188f137e08c6cfc25cf652ab1f3dff58867256e6670135ef96181125f0ea",
+    "selected_statistics": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.2,
+          "macro_wait_s": 160.87292613487725
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.8,
+          "macro_wait_s": 176.01257494876344
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 168.44275054182035,
+      "mean_CHECK": 0.3,
+      "mean_walk_m": 11795.399999999992,
+      "conditions": 20,
+      "physical_processes": 10,
+      "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+      "process_event_identities": [
+        [
+          [
+            33000,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            95
+          ],
+          "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+          "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+        ],
+        [
+          [
+            33000,
+            "coldplate_fouling",
+            180,
+            885
+          ],
+          "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+          "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+        ],
+        [
+          [
+            33000,
+            "dc_contact_hotspot",
+            180,
+            300
+          ],
+          "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+          "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+        ],
+        [
+          [
+            33000,
+            "healthy",
+            900,
+            555
+          ],
+          "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33000,
+            "sensor_bias",
+            900,
+            695
+          ],
+          "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+          "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+        ],
+        [
+          [
+            33001,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            115
+          ],
+          "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+          "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+        ],
+        [
+          [
+            33001,
+            "coldplate_fouling",
+            180,
+            395
+          ],
+          "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+          "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+        ],
+        [
+          [
+            33001,
+            "dc_contact_hotspot",
+            180,
+            630
+          ],
+          "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+          "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+        ],
+        [
+          [
+            33001,
+            "healthy",
+            900,
+            535
+          ],
+          "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33001,
+            "sensor_bias",
+            900,
+            130
+          ],
+          "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+          "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+        ]
+      ]
+    },
+    "protocol": {
+      "protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "prior_only": true,
+    "valid_proposals": 3,
+    "slots": 3,
+    "entries": [
+      {
+        "slot": 0,
+        "generation_seed": 98010100,
+        "valid": true,
+        "accepted": false,
+        "reason": "no_strict_development_improvement",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\"diagnosis\": \"The initial skill lacks a rule that leverages the thermal_disagreement field to trigger a check when thermal inconsistencies are detected, which could improve inspection timing by identifying potential issues earlier.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill introduces a rule to check for thermal inconsistencies, which may lead to earlier detection of anomalies and improve inspection timing without unnecessary detours.\"}",
+          "input_tokens": 2345,
+          "output_tokens": 230,
+          "generation_s": 12.63609623350203,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "15dccceb605526e0a3a7c7b2510084fe57f949b8f6454a0df1453f25eba64b6d"
+        },
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "b149fdcf6c0b72b2",
+        "evaluation_key": "0310bce9d44d098a3de52f4a46945a6122e7d5daefd8575a8d44e0d64ff3b402",
+        "statistics": {
+          "seeds": [
+            {
+              "seed": 33000,
+              "macro_missed_count": 0.4,
+              "macro_wait_s": 172.12292613487725
+            },
+            {
+              "seed": 33001,
+              "macro_missed_count": 1.8,
+              "macro_wait_s": 177.50371202562908
+            }
+          ],
+          "macro_missed_count": 1.1,
+          "macro_wait_s": 174.81331908025317,
+          "mean_CHECK": 0.1,
+          "mean_walk_m": 11793.399999999992,
+          "conditions": 20,
+          "physical_processes": 10,
+          "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+          "process_event_identities": [
+            [
+              [
+                33000,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                95
+              ],
+              "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+              "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+            ],
+            [
+              [
+                33000,
+                "coldplate_fouling",
+                180,
+                885
+              ],
+              "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+              "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+            ],
+            [
+              [
+                33000,
+                "dc_contact_hotspot",
+                180,
+                300
+              ],
+              "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+              "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+            ],
+            [
+              [
+                33000,
+                "healthy",
+                900,
+                555
+              ],
+              "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33000,
+                "sensor_bias",
+                900,
+                695
+              ],
+              "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+              "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+            ],
+            [
+              [
+                33001,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                115
+              ],
+              "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+              "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+            ],
+            [
+              [
+                33001,
+                "coldplate_fouling",
+                180,
+                395
+              ],
+              "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+              "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+            ],
+            [
+              [
+                33001,
+                "dc_contact_hotspot",
+                180,
+                630
+              ],
+              "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+              "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+            ],
+            [
+              [
+                33001,
+                "healthy",
+                900,
+                535
+              ],
+              "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33001,
+                "sensor_bias",
+                900,
+                130
+              ],
+              "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+              "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+            ]
+          ]
+        },
+        "behavior": {
+          "same_input_rows": 130364,
+          "decision_differences": 4,
+          "actual_trajectory_differences": 4,
+          "behavior_changed": true
+        }
+      },
+      {
+        "slot": 1,
+        "generation_seed": 98010101,
+        "valid": true,
+        "accepted": false,
+        "reason": "duplicate_consumes_slot",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\"diagnosis\": \"The initial skill is based on professional availability, signal strength, and evidence margin, but lacks a specific focus on thermal disagreement, which could help detect anomalies earlier.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill introduces a focus on thermal disagreement, enabling earlier anomaly detection without unnecessary detours.\"}",
+          "input_tokens": 2499,
+          "output_tokens": 216,
+          "generation_s": 11.675343276001513,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "6f747083715f3a4692c0975619c9694d0336e9b781196fa71373fa8ca26a29ac"
+        },
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "b149fdcf6c0b72b2",
+        "behavior": {
+          "behavior_changed": false
+        }
+      },
+      {
+        "slot": 2,
+        "generation_seed": 98010102,
+        "valid": true,
+        "accepted": false,
+        "reason": "duplicate_consumes_slot",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\"diagnosis\": \"The initial skill has a rule that checks for thermal disagreement above 0.05, but it's not included in the latest proposal. Adding a rule that triggers a CHECK when thermal disagreement exceeds 0.05 can improve inspection timing by catching potential issues earlier.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill improves inspection timing by introducing a CHECK action when thermal disagreement exceeds 0.05, ensuring potential issues are addressed earlier without unnecessary detours.\"}",
+          "input_tokens": 2654,
+          "output_tokens": 251,
+          "generation_s": 13.413676854223013,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "9156c24257f38f23a1f72d57c8ab91f0c539c76ed161b98dd692b9c6dd04cffb"
+        },
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "b149fdcf6c0b72b2",
+        "behavior": {
+          "behavior_changed": false
+        }
+      }
+    ],
+    "history": [
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": "0310bce9d44d098a3de52f4a46945a6122e7d5daefd8575a8d44e0d64ff3b402"
+      },
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": null
+      },
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "gt",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": null
+      }
+    ]
+  },
+  "experienced": {
+    "initial_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "selected_evaluation_key": "d6c0188f137e08c6cfc25cf652ab1f3dff58867256e6670135ef96181125f0ea",
+    "selected_statistics": {
+      "seeds": [
+        {
+          "seed": 33000,
+          "macro_missed_count": 0.2,
+          "macro_wait_s": 160.87292613487725
+        },
+        {
+          "seed": 33001,
+          "macro_missed_count": 1.8,
+          "macro_wait_s": 176.01257494876344
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 168.44275054182035,
+      "mean_CHECK": 0.3,
+      "mean_walk_m": 11795.399999999992,
+      "conditions": 20,
+      "physical_processes": 10,
+      "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+      "process_event_identities": [
+        [
+          [
+            33000,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            95
+          ],
+          "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+          "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+        ],
+        [
+          [
+            33000,
+            "coldplate_fouling",
+            180,
+            885
+          ],
+          "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+          "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+        ],
+        [
+          [
+            33000,
+            "dc_contact_hotspot",
+            180,
+            300
+          ],
+          "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+          "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+        ],
+        [
+          [
+            33000,
+            "healthy",
+            900,
+            555
+          ],
+          "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33000,
+            "sensor_bias",
+            900,
+            695
+          ],
+          "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+          "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+        ],
+        [
+          [
+            33001,
+            "aux_feeder_loss+cdu_fouling",
+            180,
+            115
+          ],
+          "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+          "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+        ],
+        [
+          [
+            33001,
+            "coldplate_fouling",
+            180,
+            395
+          ],
+          "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+          "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+        ],
+        [
+          [
+            33001,
+            "dc_contact_hotspot",
+            180,
+            630
+          ],
+          "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+          "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+        ],
+        [
+          [
+            33001,
+            "healthy",
+            900,
+            535
+          ],
+          "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+          "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        ],
+        [
+          [
+            33001,
+            "sensor_bias",
+            900,
+            130
+          ],
+          "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+          "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+        ]
+      ]
+    },
+    "protocol": {
+      "protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "prior_only": false,
+    "valid_proposals": 1,
+    "slots": 3,
+    "entries": [
+      {
+        "slot": 0,
+        "generation_seed": 98010100,
+        "valid": false,
+        "accepted": false,
+        "reason": "invalid_schema",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\"diagnosis\": \"The initial skill fails to address the cooling task with high thermal disagreement and direct reading anomalies, which could benefit from a more nuanced rule set.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"pod_flow_deficit\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill introduces a rule to check cooling tasks with high pod flow deficit and thermal disagreement, improving inspection timing for such critical cases.\"}",
+          "input_tokens": 5974,
+          "output_tokens": 241,
+          "generation_s": 15.174496074207127,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "417fff189bf3a3b6e6fcc025f7c2824a82d75a1f4fb0a441a0eb3f4d69f8d8e9"
+        },
+        "schema_error": "ValueError: One to six AND predicates, depth two"
+      },
+      {
+        "slot": 1,
+        "generation_seed": 98010101,
+        "valid": false,
+        "accepted": false,
+        "reason": "invalid_schema",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\"diagnosis\": \"The initial skill is based on professional signal and evidence margin, but it lacks a rule that specifically addresses thermal disagreement and inspection age ratio to improve inspection timing effectively.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}, {\"field\": \"inspection_age_ratio\", \"op\": \"gt\", \"value\": 0.75}]}, \"default_action\": \"CHECK\"}, \"expected_effect\": \"This skill introduces a rule that triggers a CHECK if thermal disagreement exceeds 0.05 and inspection age ratio exceeds 0.75, which can help identify potential issues earlier without unnecessary detours.\"}",
+          "input_tokens": 5988,
+          "output_tokens": 235,
+          "generation_s": 15.066759264096618,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "cf60fbdfa45f87f011dc5abefbbd5150c4bda17f5e9dbf8eb3a4093cc3e5018e"
+        },
+        "schema_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 671 (char 670)"
+      },
+      {
+        "slot": 2,
+        "generation_seed": 98010102,
+        "valid": true,
+        "accepted": false,
+        "reason": "no_strict_development_improvement",
+        "source": "fixed_Qwen3-8B",
+        "generation": {
+          "raw_response": "{\n  \"diagnosis\": \"The initial skill is based on professional_signal and evidence_margin, but it lacks a rule that triggers CHECK when there's a high thermal_disagreement and a low inspection_age_ratio, which could indicate an urgent issue that needs early detection.\",\n  \"skill\": {\n    \"schema_version\": \"timing-skill-v1\",\n    \"rules\": [\n      {\n        \"all\": [\n          {\n            \"field\": \"professional_available\",\n            \"op\": \"eq\",\n            \"value\": true\n          },\n          {\n            \"field\": \"thermal_disagreement\",\n            \"op\": \"ge\",\n            \"value\": 0.1\n          },\n          {\n            \"field\": \"inspection_age_ratio\",\n            \"op\": \"lt\",\n            \"value\": 0.5\n          },\n          {\n            \"field\": \"lead_s\",\n            \"op\": \"gt\",\n            \"value\": 0\n          },\n          {\n            \"field\": \"evidence_margin\",\n            \"op\": \"positive\",\n            \"value\": 0.05\n          }\n        ]\n      }\n    ],\n    \"default_action\": \"CONTINUE_TOUR\"\n  },\n  \"expected_effect\": \"This skill introduces a new rule that triggers CHECK when there is a high thermal_disagreement and a low inspection_age_ratio, allowing for earlier detection of potential issues without unnecessary detours.\"\n}",
+          "input_tokens": 6002,
+          "output_tokens": 287,
+          "generation_s": 17.684298527427018,
+          "dropped_last_cards": 0,
+          "prompt_SHA256": "2d496b6dc783dbd7c08fde7972208e0a84380d43d8a97d837ee76901fbeebb1c"
+        },
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.1
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "lt",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "candidate_id": "a303ce22f92cf19e",
+        "evaluation_key": "733aa5d3551aabc987e71e36edfaf8551f47dafb1817cbc52a2bceedad08c4bc",
+        "statistics": {
+          "seeds": [
+            {
+              "seed": 33000,
+              "macro_missed_count": 0.4,
+              "macro_wait_s": 172.12292613487725
+            },
+            {
+              "seed": 33001,
+              "macro_missed_count": 1.8,
+              "macro_wait_s": 177.50371202562908
+            }
+          ],
+          "macro_missed_count": 1.1,
+          "macro_wait_s": 174.81331908025317,
+          "mean_CHECK": 0.1,
+          "mean_walk_m": 11793.399999999992,
+          "conditions": 20,
+          "physical_processes": 10,
+          "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+          "process_event_identities": [
+            [
+              [
+                33000,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                95
+              ],
+              "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+              "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+            ],
+            [
+              [
+                33000,
+                "coldplate_fouling",
+                180,
+                885
+              ],
+              "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+              "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+            ],
+            [
+              [
+                33000,
+                "dc_contact_hotspot",
+                180,
+                300
+              ],
+              "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+              "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+            ],
+            [
+              [
+                33000,
+                "healthy",
+                900,
+                555
+              ],
+              "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33000,
+                "sensor_bias",
+                900,
+                695
+              ],
+              "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+              "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+            ],
+            [
+              [
+                33001,
+                "aux_feeder_loss+cdu_fouling",
+                180,
+                115
+              ],
+              "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+              "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+            ],
+            [
+              [
+                33001,
+                "coldplate_fouling",
+                180,
+                395
+              ],
+              "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+              "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+            ],
+            [
+              [
+                33001,
+                "dc_contact_hotspot",
+                180,
+                630
+              ],
+              "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+              "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+            ],
+            [
+              [
+                33001,
+                "healthy",
+                900,
+                535
+              ],
+              "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            [
+              [
+                33001,
+                "sensor_bias",
+                900,
+                130
+              ],
+              "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+              "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+            ]
+          ]
+        },
+        "behavior": {
+          "same_input_rows": 130364,
+          "decision_differences": 4,
+          "actual_trajectory_differences": 4,
+          "behavior_changed": true
+        }
+      }
+    ],
+    "history": [
+      {
+        "skill": null,
+        "accepted": false,
+        "schema_error": true
+      },
+      {
+        "skill": null,
+        "accepted": false,
+        "schema_error": true
+      },
+      {
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.1
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "lt",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        },
+        "accepted": false,
+        "evaluation_key": "733aa5d3551aabc987e71e36edfaf8551f47dafb1817cbc52a2bceedad08c4bc"
+      }
+    ]
+  },
+  "generation_seed": 9801,
+  "methods": {
+    "Tour": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "human_professional": {
+      "executor": "original-human-v1",
+      "ranker": "rules",
+      "skill": null
+    },
+    "initial_E1_skill": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "manual_information": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "direct_age_s",
+                "op": "ge",
+                "value": 120
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "ge",
+                "value": 0.5
+              },
+              {
+                "field": "lead_s",
+                "op": "ge",
+                "value": 60
+              },
+              {
+                "field": "shift_s",
+                "op": "le",
+                "value": 30
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "direct_age_s",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "ge",
+                "value": 0.5
+              },
+              {
+                "field": "lead_s",
+                "op": "ge",
+                "value": 60
+              },
+              {
+                "field": "shift_s",
+                "op": "le",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "simple3": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "prior3": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "experienced3": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "experienced3_PPOtool": {
+      "executor": "timing-skill-v1",
+      "ranker": "ppo",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    }
+  }
+}

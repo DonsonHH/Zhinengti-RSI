@@ -1,0 +1,25 @@
+{
+  "specification": {
+    "phase": "F1_validation",
+    "seed": 35021,
+    "scenario": "sensor_bias",
+    "duration_s": 900,
+    "fault_start_s": 270,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793456498.1501582
+}

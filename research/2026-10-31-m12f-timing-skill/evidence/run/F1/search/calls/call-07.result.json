@@ -1,0 +1,8 @@
+{
+  "raw_response": "{\"diagnosis\": \"The skill should prioritize checking tasks with high importance and sufficient evidence margins, especially when professional signals are strong and alarms are not already present.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"importance\", \"op\": \"ge\", \"value\": 0.75}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.1}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill will trigger CHECK actions for high-importance tasks with strong professional signals and sufficient evidence margins, improving early anomaly detection without unnecessary detours.\"}",
+  "input_tokens": 5974,
+  "output_tokens": 200,
+  "generation_s": 13.108043136075139,
+  "dropped_last_cards": 0,
+  "prompt_SHA256": "417fff189bf3a3b6e6fcc025f7c2824a82d75a1f4fb0a441a0eb3f4d69f8d8e9"
+}

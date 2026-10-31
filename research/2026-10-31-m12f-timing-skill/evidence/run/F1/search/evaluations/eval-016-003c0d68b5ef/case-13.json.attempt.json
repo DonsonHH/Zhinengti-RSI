@@ -1,0 +1,108 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33001,
+    "scenario": "coldplate_fouling",
+    "duration_s": 180,
+    "fault_start_s": 395,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "lead_s",
+              "op": "gt",
+              "value": 120
+            },
+            {
+              "field": "prior_disagreement",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "direct_age_s",
+              "op": "lt",
+              "value": 300
+            },
+            {
+              "field": "direct_age_s",
+              "op": "gt",
+              "value": 60
+            },
+            {
+              "field": "prior_disagreement",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "direct_age_s",
+              "op": "is_missing",
+              "value": null
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "importance",
+              "op": "gt",
+              "value": 0.75
+            },
+            {
+              "field": "pod_thermal_signal",
+              "op": "le",
+              "value": 0.5
+            },
+            {
+              "field": "shift_s",
+              "op": "gt",
+              "value": 30
+            },
+            {
+              "field": "quota_available",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "thermal_disagreement",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "estimate_age_s",
+              "op": "le",
+              "value": 0
+            },
+            {
+              "field": "pod_service_gap",
+              "op": "ge",
+              "value": 0.05
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793456061.4761472
+}

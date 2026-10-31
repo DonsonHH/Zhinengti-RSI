@@ -1,0 +1,8 @@
+{
+  "raw_response": "{\n  \"diagnosis\": \"The current rules lack a mechanism to prioritize tasks with high importance and sufficient evidence margin, leading to potential delays in addressing critical issues.\",\n  \"skill\": {\n    \"schema_version\": \"timing-skill-v1\",\n    \"rules\": [\n      {\n        \"all\": [\n          {\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true},\n          {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"},\n          {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false},\n          {\"field\": \"importance\", \"op\": \"ge\", \"value\": 0.75},\n          {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.1}\n        ]\n      }\n    ],\n    \"default_action\": \"CONTINUE_TOUR\"\n  },\n  \"expected_effect\": \"This skill prioritizes high-importance tasks with strong evidence, enabling earlier anomaly detection and reducing unnecessary detours.\"\n}",
+  "input_tokens": 5872,
+  "output_tokens": 216,
+  "generation_s": 13.48582363780588,
+  "dropped_last_cards": 1,
+  "prompt_SHA256": "40ee6cce0376f386b7853540a6cc8ae9277766124e817e73ff74e19b6f92ad74"
+}

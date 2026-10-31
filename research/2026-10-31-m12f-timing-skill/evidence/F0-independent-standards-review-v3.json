@@ -1,0 +1,64 @@
+{
+  "review_axis": "standards_reliability_schema",
+  "baseline": "39d06ce5edb4dc7f7fff18bedc76909350a946d4",
+  "approved": true,
+  "approved_scopes": [
+    "F0"
+  ],
+  "source_archive_SHA256": "ffe41f6b5cd10441386f01c228ba03a741404b04a5553c0f5b049514bee9f109",
+  "source_snapshot": ".work/m12f/code-v3",
+  "reviewed_input_SHA256": {
+    "study": "7a5f6e07fbd60ff590e3115a3a19f5abc12a93ad8e3c323f11b9b4d8fe7a33df",
+    "cases": "a40998b00a9056af09cd0320959466b7f8b22a0bbf179ac4b6dcac433592f0fc",
+    "source_manifest": "96da6a50957aa627f3eb40366ac74fff5af6efb62809dbbdf3e6762d772941cc"
+  },
+  "blocking_findings": [],
+  "verified": {
+    "manifest_archive_snapshot_files": 465,
+    "all_manifest_member_hashes_matched": true,
+    "local_snapshot_tests": {
+      "run": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "Torch_imported": false
+    },
+    "published_E1_development_public_inputs_checked": 38830,
+    "initial_skill_public_predicate_mismatches": 0,
+    "initial_skill_AST_equals_reviewed_study": true,
+    "known_closed_loop_case_count": 20,
+    "known_case_ids_unique": true,
+    "only_known_development_seeds": [
+      33000,
+      33001
+    ],
+    "physical_legal_core_unchanged": true,
+    "source_cli_model_manifest_and_case_bindings_reviewed": true,
+    "one_launch_wrapper_reviewed": true,
+    "identity_SHA_held_and_compared_before_completion": true,
+    "charged_record_and_mismatch_receipt_preserved_before_parity_assertion": true,
+    "unobserved_actor_counterfactual_marked_unavailable": true
+  },
+  "required_before_F0_release": [
+    "Actual full Torch gate on this exact immutable snapshot: at least329 tests, all3 F test source hashes, at least12 distinct F test ids, zero failures/errors/skips.",
+    "Immutable F0 identity must join this archive, source manifest, reviewed study/cases, model weights/manifests, review and actual gate.",
+    "Verify actual held Slurm batch bytes, retain the one-launch claim, and charge every attempted known-development parity episode."
+  ],
+  "approval_exclusions": [
+    "F1 runtime",
+    "F2 runtime",
+    "real Qwen calls",
+    "new physical process generation",
+    "independent validation/final opening"
+  ],
+  "review_execution": {
+    "SSH": false,
+    "model_loading_or_calls": false,
+    "new_physics": false,
+    "jobs_submitted": false,
+    "source_changes": false,
+    "only_write": "this review artifact"
+  },
+  "note": "Source-only F0 approval. Actual full Torch gate and charged closed-loop parity outcomes remain to be produced and verified; no scientific gain is approved.",
+  "created_utc": "2026-10-31T12:53:44.461571+00:00"
+}

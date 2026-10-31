@@ -38,5 +38,9 @@ jobs:
           python -m unittest discover -s tests -p test_rsi_campaign.py -v
           python -m unittest discover -s tests -p test_meta_schema.py -v
           python -m unittest discover -s tests -p test_patrol_timing.py -v
+          python -m unittest discover -s tests -p test_timing_skill.py -v
+          python -m unittest discover -s tests -p test_timing_semantics.py -v
+          python -m unittest discover -s tests -p test_timing_skill_features.py -v
+          python -m unittest discover -s tests -p test_timing_learning.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts

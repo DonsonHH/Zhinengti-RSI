@@ -1,0 +1,74 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "sensor_bias",
+    "duration_s": 900,
+    "fault_start_s": 695,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "quota_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "estimate_age_s",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0
+            },
+            {
+              "field": "direct_age_ratio",
+              "op": "le",
+              "value": 0
+            },
+            {
+              "field": "thermal_disagreement",
+              "op": "ge",
+              "value": 0.25
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "direct_available",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "importance",
+              "op": "gt",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793455673.553028
+}

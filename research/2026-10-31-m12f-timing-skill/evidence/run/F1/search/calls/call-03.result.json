@@ -1,0 +1,8 @@
+{
+  "raw_response": "{\"diagnosis\": \"The initial skill is based on professional signal and evidence margin, but it lacks a rule that specifically addresses thermal disagreement and inspection age ratio to improve inspection timing effectively.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}, {\"field\": \"inspection_age_ratio\", \"op\": \"gt\", \"value\": 0.75}]}, \"default_action\": \"CHECK\"}, \"expected_effect\": \"This skill introduces a rule that triggers a CHECK if thermal disagreement exceeds 0.05 and inspection age ratio exceeds 0.75, which can help identify potential issues earlier without unnecessary detours.\"}",
+  "input_tokens": 5988,
+  "output_tokens": 235,
+  "generation_s": 15.066759264096618,
+  "dropped_last_cards": 0,
+  "prompt_SHA256": "cf60fbdfa45f87f011dc5abefbbd5150c4bda17f5e9dbf8eb3a4093cc3e5018e"
+}

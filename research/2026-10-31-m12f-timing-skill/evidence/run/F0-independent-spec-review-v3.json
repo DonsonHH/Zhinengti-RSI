@@ -1,0 +1,49 @@
+{
+  "review": "M12F F0 independent specification and source review",
+  "approved": true,
+  "scope": "F0",
+  "approved_scopes": ["F0"],
+  "baseline": "39d06ce5edb4dc7f7fff18bedc76909350a946d4",
+  "source_snapshot": ".work/m12f/code-v3",
+  "source_archive_SHA256": "ffe41f6b5cd10441386f01c228ba03a741404b04a5553c0f5b049514bee9f109",
+  "reviewed_input_SHA256": {
+    "study": "7a5f6e07fbd60ff590e3115a3a19f5abc12a93ad8e3c323f11b9b4d8fe7a33df",
+    "cases": "a40998b00a9056af09cd0320959466b7f8b22a0bbf179ac4b6dcac433592f0fc",
+    "source_manifest": "96da6a50957aa627f3eb40366ac74fff5af6efb62809dbbdf3e6762d772941cc"
+  },
+  "authorized_execution": {
+    "purpose": "One source-bound engineering pass to verify the initial TimingSkill against unchanged archived E1 development behavior.",
+    "known_closed_loop_episode_limit": 20,
+    "same_input_scope": "The archived E1 development public-candidate authority receipts for seeds 33000 and 33001.",
+    "new_physical_processes": 0,
+    "Qwen_generation_calls": 0,
+    "new_neural_training": 0,
+    "validation_or_final_generation": false,
+    "old_private_final_access": false,
+    "scientific_performance_claim": false
+  },
+  "F1_execution_authorized": false,
+  "F2_execution_authorized": false,
+  "conditions_before_execution": [
+    "A successful full real Torch gate for this exact v3 source root, at least 329 tests including the 12 registered F tests, with zero failures, errors or skips and matching test-source hashes.",
+    "An immutable runtime identity binding the reviewed study, cases, source manifest, archive, review, gate, actual model manifests and all frozen actor/CVAE files.",
+    "The actual held Slurm script and source/run-root arguments must match the reviewed launch; retain the exclusive launch claim and never reuse or overwrite the output root.",
+    "Charge every attempted episode and all allocations, including failures. This approval permits one at-most-20-case pass; it does not authorize an automatic retry. Any separately reviewed engineering correction remains within the study-wide maximum of three passes and 60 engineering episodes."
+  ],
+  "resolved_findings": [
+    "CLI source-root, study/case hash, exactly-20 unique case IDs and the actual actor manifest are checked before parity execution.",
+    "The review must bind study, cases and source-manifest hashes; imported source/test files must match the reviewed archive.",
+    "TimingSkill sees hard-legal extra candidates directly. The original E1 heuristic is represented by the initial skill rather than an immutable prefilter.",
+    "Original qualification, cooldown, one-CHECK, full-return, effective-measurement and initial/terminal-revisit execution and independent audits remain in use.",
+    "Actual completed records and parity-difference receipts are preserved before a gold-equivalence assertion can stop the pass.",
+    "Action identity excludes runtime timings, and an unobserved ungated actor counterfactual is reported as null rather than agreement."
+  ],
+  "review_method": {
+    "source_and_protocol_inspection": true,
+    "archive_and_relevant_source_hashes_checked": true,
+    "experimental_data_read_in_this_review": false,
+    "model_or_physics_execution_in_this_review": false,
+    "runtime_parity_result_claimed": false
+  },
+  "remaining_scope": "The F1/F2 study is not approved for execution by this review. Its implemented prompt, treatment, selection, numerical tie handling, cache, budget and stage-opening controls require a later integrated immutable-source review."
+}

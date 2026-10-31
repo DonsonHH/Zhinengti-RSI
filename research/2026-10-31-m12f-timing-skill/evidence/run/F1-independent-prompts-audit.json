@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "phase": "F1",
+  "audit_script_SHA256": "e730fd27b8581c9192e4707b554f64eeff23767c61b4686d740bf97a4ac349d8",
+  "model_calls_in_this_audit": 0,
+  "environment_episodes_in_this_audit": 0,
+  "global_charged_costs": {
+    "episodes": {
+      "reserved": 500,
+      "cap": 6000,
+      "reservation_receipts": 24,
+      "includes_F0": 20
+    },
+    "model_calls": {
+      "reserved": 18,
+      "cap": 75,
+      "reservation_receipts": 18,
+      "includes_F0": 0
+    },
+    "token_receipts": {
+      "attempt_starts": 18,
+      "input_tokens": 75531,
+      "known_output_tokens": 4192,
+      "unknown_output_calls": 0,
+      "output_cost_upper_bound": 4192
+    }
+  },
+  "phase_search_complete": true,
+  "scope": "Prompt/treatment, own-run feedback membership, source/model byte hashes and charged-counter reconstruction.",
+  "identity_SHA256": "5c70813a1f43c916a7752ae38788eeb1daba996af79f406e95ef6c911a6154e9",
+  "source_archive_SHA256": "036d9ae1e91c17ef2ce015531da052a7cc2570d6062b7b64a7f415ec7dacf141",
+  "model_files_hashed": 13,
+  "model_calls": 18,
+  "candidate_slots": 27,
+  "invalid_slots": 4,
+  "independent_parse_error_counts": {
+    "ValueError: One to six AND atoms": 3,
+    "JSONDecodeError: Expecting ',' delimiter: line 1 column 671 (char 670)": 1
+  },
+  "runtime_invalid_reason_counts": {
+    "ValueError: One to six AND predicates, depth two": 3,
+    "JSONDecodeError: Expecting ',' delimiter: line 1 column 671 (char 670)": 1
+  },
+  "proposal_groups": {
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9801/simple": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 0,
+      "behavior_changes_receipted_not_replayed": 3
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9801/prior": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 2,
+      "behavior_changes_receipted_not_replayed": 1
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9801/experienced": {
+      "slots": 3,
+      "valid": 1,
+      "invalid": 2,
+      "duplicates": 0,
+      "behavior_changes_receipted_not_replayed": 1
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9802/simple": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 0,
+      "behavior_changes_receipted_not_replayed": 3
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9802/prior": {
+      "slots": 3,
+      "valid": 2,
+      "invalid": 1,
+      "duplicates": 1,
+      "behavior_changes_receipted_not_replayed": 1
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9802/experienced": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 1,
+      "behavior_changes_receipted_not_replayed": 1
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9803/simple": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 0,
+      "behavior_changes_receipted_not_replayed": 3
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9803/prior": {
+      "slots": 3,
+      "valid": 2,
+      "invalid": 1,
+      "duplicates": 0,
+      "behavior_changes_receipted_not_replayed": 2
+    },
+    "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/generation-9803/experienced": {
+      "slots": 3,
+      "valid": 3,
+      "invalid": 0,
+      "duplicates": 1,
+      "behavior_changes_receipted_not_replayed": 2
+    }
+  },
+  "duplicate_slots": 5,
+  "input_tokens_receipted": 75531,
+  "output_tokens_receipted": 4192,
+  "exposed_cards_checked": 69,
+  "actually_exposed_professions": [
+    "control",
+    "cooling",
+    "electrical",
+    "thermal"
+  ],
+  "own_feedback_record_hashes_checked": 80,
+  "recorded_GPU_jobs": [
+    "130943"
+  ],
+  "captured_scheduler": {
+    "verified_from_captured_ledger": true,
+    "snapshot_SHA256": "03ff03dc4594b547ddd6fedc9eff527befc31a5b586341e0931323fea78a52b0",
+    "GPU_job_rows": 1,
+    "reported_GPU_seconds": 1279,
+    "reported_allocated_CPU_minutes": 115.93333333333334,
+    "scope": "Captured ledger joined to launch claims; no live scheduler query or independent same-job requeue census."
+  },
+  "per_repeat_prompt_gates": [
+    {
+      "generation_seed": 9801,
+      "prior_valid": 3,
+      "experienced_valid": 1,
+      "schema_gate": false,
+      "experienced_behavior_changes_receipted": 1
+    },
+    {
+      "generation_seed": 9802,
+      "prior_valid": 2,
+      "experienced_valid": 3,
+      "schema_gate": true,
+      "experienced_behavior_changes_receipted": 1
+    },
+    {
+      "generation_seed": 9803,
+      "prior_valid": 2,
+      "experienced_valid": 3,
+      "schema_gate": true,
+      "experienced_behavior_changes_receipted": 2
+    }
+  ],
+  "F2_closed_by_independent_schema_counts": true,
+  "F2_nonexecution": {
+    "executed": false,
+    "decision_SHA256": "8200b876c2e054407cb8dea11f8f7ff3b5444564e22a12e72a34cc18bc62861a",
+    "model_calls": 0,
+    "environment_episodes": 0,
+    "physical_processes": 0,
+    "scope": "Decision plus absence of recorded F2 execution artifacts within this run."
+  },
+  "not_independently_reconstructed": [
+    "Tokenizer rendering/counts beyond declared system/user framing and receipt limits; no tokenizer/model execution.",
+    "Exact diagnostic card ranking and token-trim ordering; checked exposed-card membership in allowed own-run pools.",
+    "Numeric acceptance decisions and model tensor versions in memory; handled by raw-result audit/frozen source checks.",
+    "Random-generator stream replay; checked frozen source, seed, slot and legal output.",
+    "Scheduler allocation census/GPU elapsed time or unrecorded setup retries; requires captured Slurm ledger."
+  ]
+}

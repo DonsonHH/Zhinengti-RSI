@@ -1,0 +1,1325 @@
+{
+  "scope": "Read-only M12Eknown-development review;notnewperformance",
+  "by_family": {
+    "healthy": {
+      "physical_processes": 2,
+      "offline_useful_physical": 0,
+      "public_both_noise_useful_physical": 0
+    },
+    "coldplate_fouling": {
+      "physical_processes": 4,
+      "offline_useful_physical": 3,
+      "public_both_noise_useful_physical": 2
+    },
+    "dc_contact_hotspot": {
+      "physical_processes": 4,
+      "offline_useful_physical": 4,
+      "public_both_noise_useful_physical": 0
+    },
+    "sensor_bias": {
+      "physical_processes": 4,
+      "offline_useful_physical": 4,
+      "public_both_noise_useful_physical": 0
+    },
+    "aux_feeder_loss+cdu_fouling": {
+      "physical_processes": 4,
+      "offline_useful_physical": 4,
+      "public_both_noise_useful_physical": 3
+    }
+  },
+  "offline_best_cases": 30,
+  "offline_best_before_injection": 22,
+  "prefault_physical_processes": 11,
+  "actual_gated_CHECK_count": 12,
+  "all_measurement_age_zero": true,
+  "CHECK_professions": {
+    "thermal": 8,
+    "electrical": 0,
+    "cooling": 4,
+    "control": 0
+  },
+  "actual_gated_CHECKs": [
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 64,
+        "baseline_next": 78,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.21866690220079973,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 69.373338044016,
+        "observed_unit": "degC",
+        "estimate_age_s": 15.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.23333333432674408,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 1035.0,
+        "tour_target_finish_s": 1165.0,
+        "lead_s": 130.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 1005.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 64,
+        "baseline_next": 78,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.15708595546690063,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 68.14171910933801,
+        "observed_unit": "degC",
+        "estimate_age_s": 15.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.23333333432674408,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 1035.0,
+        "tour_target_finish_s": 1165.0,
+        "lead_s": 130.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 1005.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 650,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 64,
+        "baseline_next": 78,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.3602301482114264,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 72.20460296422853,
+        "observed_unit": "degC",
+        "estimate_age_s": 25.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.23333333432674408,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 805.0,
+        "tour_target_finish_s": 935.0,
+        "lead_s": 130.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 775.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 650,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 64,
+        "baseline_next": 78,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.34733583475306273,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 71.94671669506126,
+        "observed_unit": "degC",
+        "estimate_age_s": 25.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.23333333432674408,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 805.0,
+        "tour_target_finish_s": 935.0,
+        "lead_s": 130.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 775.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 14,
+        "task": 152,
+        "baseline_next": 154,
+        "kind": "cooling",
+        "signal_name": "flow_deficit",
+        "signal": 0.673852636159767,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "observed_flow",
+        "observed_value": 10.958551425031828,
+        "observed_unit": "kg/s",
+        "estimate_age_s": null,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.8125,
+        "age_ratio": 0.14166666567325592,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 240.0,
+        "tour_target_finish_s": 405.0,
+        "lead_s": 165.0,
+        "shift_s": 75.0,
+        "already_alarm": false
+      },
+      "time_s": 180.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 14,
+        "task": 152,
+        "baseline_next": 154,
+        "kind": "cooling",
+        "signal_name": "flow_deficit",
+        "signal": 0.673852636159767,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "observed_flow",
+        "observed_value": 10.958551425031828,
+        "observed_unit": "kg/s",
+        "estimate_age_s": null,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.8125,
+        "age_ratio": 0.14166666567325592,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 240.0,
+        "tour_target_finish_s": 405.0,
+        "lead_s": 165.0,
+        "shift_s": 75.0,
+        "already_alarm": false
+      },
+      "time_s": 180.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 295,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 14,
+        "task": 152,
+        "baseline_next": 148,
+        "kind": "cooling",
+        "signal_name": "flow_deficit",
+        "signal": 0.7288261693996911,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "observed_flow",
+        "observed_value": 9.11144070817038,
+        "observed_unit": "kg/s",
+        "estimate_age_s": null,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.8125,
+        "age_ratio": 0.4000000059604645,
+        "eta_ratio": 0.07500000298023224,
+        "candidate_finish_s": 380.0,
+        "tour_target_finish_s": 405.0,
+        "lead_s": 25.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 335.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 295,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 14,
+        "task": 152,
+        "baseline_next": 148,
+        "kind": "cooling",
+        "signal_name": "flow_deficit",
+        "signal": 0.7288261693996911,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "observed_flow",
+        "observed_value": 9.11144070817038,
+        "observed_unit": "kg/s",
+        "estimate_age_s": null,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.8125,
+        "age_ratio": 0.4000000059604645,
+        "eta_ratio": 0.07500000298023224,
+        "candidate_finish_s": 380.0,
+        "tour_target_finish_s": 405.0,
+        "lead_s": 25.0,
+        "shift_s": 45.0,
+        "already_alarm": false
+      },
+      "time_s": 335.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 72,
+        "baseline_next": 66,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.1879693048084178,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 68.75938609616836,
+        "observed_unit": "degC",
+        "estimate_age_s": 5.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.4166666567325592,
+        "eta_ratio": 0.0833333358168602,
+        "candidate_finish_s": 270.0,
+        "tour_target_finish_s": 350.0,
+        "lead_s": 80.0,
+        "shift_s": 30.0,
+        "already_alarm": false
+      },
+      "time_s": 245.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 72,
+        "baseline_next": 66,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.17020758877187775,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 68.40415177543755,
+        "observed_unit": "degC",
+        "estimate_age_s": 5.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.4166666567325592,
+        "eta_ratio": 0.0833333358168602,
+        "candidate_finish_s": 270.0,
+        "tour_target_finish_s": 350.0,
+        "lead_s": 80.0,
+        "shift_s": 30.0,
+        "already_alarm": false
+      },
+      "time_s": 245.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 275,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 76,
+        "baseline_next": 84,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.10780635972763761,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 67.15612719455275,
+        "observed_unit": "degC",
+        "estimate_age_s": 10.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.28333333134651184,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 430.0,
+        "tour_target_finish_s": 545.0,
+        "lead_s": 115.0,
+        "shift_s": 35.0,
+        "already_alarm": false
+      },
+      "time_s": 400.0,
+      "global_pool": 1
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 275,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "public": {
+        "agent": 6,
+        "task": 76,
+        "baseline_next": 84,
+        "kind": "thermal",
+        "signal_name": "thermal_excess",
+        "signal": 0.09990167192068924,
+        "threshold": 0.05,
+        "available": true,
+        "signal_source": "history_assimilated_temperature",
+        "observed_value": 66.99803343841378,
+        "observed_unit": "degC",
+        "estimate_age_s": 10.0,
+        "measurement_age_s": 0.0,
+        "weight_scaled": 0.75,
+        "age_ratio": 0.28333333134651184,
+        "eta_ratio": 0.10000000149011612,
+        "candidate_finish_s": 430.0,
+        "tour_target_finish_s": 545.0,
+        "lead_s": 115.0,
+        "shift_s": 35.0,
+        "already_alarm": false
+      },
+      "time_s": 400.0,
+      "global_pool": 1
+    }
+  ],
+  "offline_best_timing_records": [
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -115.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.5,
+        "net_delay_gain_s": 113.5,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -115.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.5,
+        "net_delay_gain_s": 113.5,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 650,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "7e51f5cae1c88c2f8edc3c10fdd604238135e823386e8d67e907aa447737db42",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -125.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.0,
+        "net_delay_gain_s": 124.0,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 650,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "7e51f5cae1c88c2f8edc3c10fdd604238135e823386e8d67e907aa447737db42",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -125.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.0,
+        "net_delay_gain_s": 124.0,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 300,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -265.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 262.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 300,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -265.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 262.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 165,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "61d64043771f11b82fdb2e01da4d10977ea3a9f5deb7e962ff2720c4f5ebbb56",
+      "dispatch_time_s": 250.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -95.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.75,
+        "net_delay_gain_s": 90.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 165,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "61d64043771f11b82fdb2e01da4d10977ea3a9f5deb7e962ff2720c4f5ebbb56",
+      "dispatch_time_s": 250.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -95.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.75,
+        "net_delay_gain_s": 90.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 695,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+      "dispatch_time_s": 110.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -185.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.25,
+        "net_delay_gain_s": 180.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 695,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+      "dispatch_time_s": 110.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -185.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.25,
+        "net_delay_gain_s": 180.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 120,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "47ff8c55386026f8c02203ecbca6749cc78045a9d080469037a1071a7dfcb18d",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -225.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 222.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 120,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "47ff8c55386026f8c02203ecbca6749cc78045a9d080469037a1071a7dfcb18d",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -225.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 222.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -25.27536707773359,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 23.02536707773359,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -25.27536707773359,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 23.02536707773359,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 295,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "b75a8d36759de435b97afcfd254e6107e3d0312bcc28a88bc24a94888814f692",
+      "dispatch_time_s": 365.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -16.826779724435866,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.0,
+        "net_delay_gain_s": 14.826779724435866,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 295,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "b75a8d36759de435b97afcfd254e6107e3d0312bcc28a88bc24a94888814f692",
+      "dispatch_time_s": 365.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -16.826779724435866,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.0,
+        "net_delay_gain_s": 14.826779724435866,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 395,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+      "dispatch_time_s": 495.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -70.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.75,
+        "net_delay_gain_s": 68.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 395,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+      "dispatch_time_s": 495.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -70.0,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 1.75,
+        "net_delay_gain_s": 68.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 630,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -265.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 262.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 630,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -265.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 262.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 450,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "fdfc72c8ab19fd8489edf4b01f6782fa64a767f269504766397abae4c8be8bf1",
+      "dispatch_time_s": 525.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -140.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.75,
+        "net_delay_gain_s": 136.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 450,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "fdfc72c8ab19fd8489edf4b01f6782fa64a767f269504766397abae4c8be8bf1",
+      "dispatch_time_s": 525.0,
+      "before_injection": false,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -140.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.75,
+        "net_delay_gain_s": 136.25,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 130,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -205.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.25,
+        "net_delay_gain_s": 201.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 130,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -205.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.25,
+        "net_delay_gain_s": 201.75,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 800,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "969354259e494c89108215daba57e5746f9945670d2c5b491ad1d983fad34d28",
+      "dispatch_time_s": 755.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -80.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.5,
+        "net_delay_gain_s": 75.5,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 800,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "969354259e494c89108215daba57e5746f9945670d2c5b491ad1d983fad34d28",
+      "dispatch_time_s": 755.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": 0,
+        "weighted_wait_delta_s": -80.0,
+        "gained_confirmations": 0,
+        "lost_confirmations": 0,
+        "shift_cost_s": 4.5,
+        "net_delay_gain_s": 75.5,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -23.881943333923616,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 21.631943333923616,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+      "dispatch_time_s": 25.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -1,
+        "weighted_wait_delta_s": -23.881943333923616,
+        "gained_confirmations": 1,
+        "lost_confirmations": 0,
+        "shift_cost_s": 2.25,
+        "net_delay_gain_s": 21.631943333923616,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 275,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "f0642eb4332334f1d9a732d880dc2364c1b33d942c92027c27a3486ea1bced68",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -3,
+        "weighted_wait_delta_s": -8.60016143223875,
+        "gained_confirmations": 3,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.5,
+        "net_delay_gain_s": 5.10016143223875,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    },
+    {
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 275,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "f0642eb4332334f1d9a732d880dc2364c1b33d942c92027c27a3486ea1bced68",
+      "dispatch_time_s": 5.0,
+      "before_injection": true,
+      "actual": {
+        "missed_delta": -3,
+        "weighted_wait_delta_s": -8.60016143223875,
+        "gained_confirmations": 3,
+        "lost_confirmations": 0,
+        "shift_cost_s": 3.5,
+        "net_delay_gain_s": 5.10016143223875,
+        "net_beneficial": true,
+        "net_harmful": false
+      }
+    }
+  ],
+  "old_scores_changed": false,
+  "old_final_raw_accessed": false
+}

@@ -1,0 +1,2001 @@
+{
+  "baseline": "39d06ce5edb4dc7f7fff18bedc76909350a946d4",
+  "source_root": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6",
+  "bound_inputs": {
+    "study": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/M12F-Study-v1.json",
+    "cases": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/cases-v1.json",
+    "prompts": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/prompt-templates-v1.json",
+    "source_manifest": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/source-manifest-v6.json",
+    "source_archive": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6.tar.gz",
+    "review": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F-campaign-execution-review-v6.json",
+    "gate": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/gate-v6/full-tests.json",
+    "history": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/historical-identities.json",
+    "F0_complete": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F0/complete.json",
+    "F0_manifest": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/source-manifest-v3.json",
+    "F0_audit": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F0-independent-result-audit.json",
+    "actor_manifest": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-27-m11-scheduling/evidence/policy-weight-retrieval.json",
+    "CVAE_manifest": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-28-m111-coverage/frozen_estimator.json",
+    "CVAE": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt",
+    "Qwen_manifest": "/share/home/renly/renly-patrol-rsi/models/Qwen3-8B-b968826d/verified_manifest.json",
+    "actor0": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-0/selected.pt",
+    "actor1": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-1/selected.pt",
+    "actor2": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-2/selected.pt",
+    "initial_held_script": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1-search-v6-submitted.sbatch",
+    "initial_held_job": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1-search-v6-held-job.txt",
+    "resource_envelope": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/campaign-resource-envelope.json",
+    "tokenizer_profile": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/prompt-profile-v6/complete.json"
+  },
+  "artifacts": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/.github/workflows/cpu-checks.yml",
+      "sha256": "b5994d2018cd6e71d330d0372a4d10615a789f42d085243813a99641e2e18faf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/improve_pilot.sbatch",
+      "sha256": "1b917831b019228265cc5ddf2b7d868aedff9fc5c6afc5e76905a520ff4738c0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m10_estimation.sbatch",
+      "sha256": "8a64740553bfce5967b23ab2c552a76ef822b8a544022c0c5a9379870e7448bd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m10_evaluate.sbatch",
+      "sha256": "0ae25042a9efbd21480ab17413c4460485fa8b37530e60c25e0a308ed303e2da"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m111_startup.sbatch",
+      "sha256": "940307ed8d8bc50923f6ae9438a32a0eb03f0b49a1f33371bbb55b6a508504b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m11_scheduling.sbatch",
+      "sha256": "536fc3a8c9b7fab38e4c36f541d880fa4128577fa908713743e984e28d885804"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12_workflow.sbatch",
+      "sha256": "d7c9e495bca68d2ef60878248c29fe2db169ecd10d4b9c2ba113cde23234cebd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12b_improver.sbatch",
+      "sha256": "58db7395be085f0b0156616ed949fdc186dada47ec89a80a12c677593782e987"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1_opportunity.sbatch",
+      "sha256": "c00e82f3c357d16f087076d3d7baff3b2cac43b534c8cf84ff528ed3c74d2401"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b1_timing.sbatch",
+      "sha256": "45c2c9c747351b6fda03836cd6c8b9246d6065d25edc038b4368605532575527"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b2_confirm.sbatch",
+      "sha256": "7476b3d3e88878910393110c4a8e0e746741943ce5ef316d0af90690c750f685"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b31_audit.sbatch",
+      "sha256": "d673de58d56a0d9d7eadae5af2ed9aed8c507cf2d045e1b3391177711fdc1462"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b31_preflight.sbatch",
+      "sha256": "23c964a37b59ab956df29bb739ff21cd80ca008d9b0fa2c18c3177a78dfb02eb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b32_audit.sbatch",
+      "sha256": "131b53bfb431cda72359837e7e4449fe84b33e565837efb00f486311fac7d8e3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b32_formal.sbatch",
+      "sha256": "d59ccecb94f0e50f50d844fbc76215b54f688387f815e3bcde58c46695c10ef1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b32_gate.sbatch",
+      "sha256": "60e36151a2b36e4809616861cb01115138e622ed6c9f1220dbdcc34cbee8ea43"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4a_audit.sbatch",
+      "sha256": "e65b69fb0b4eedc863b80c6b78f21dace09bac9680b5d148b9e7238e77d0e2bc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4a_finish.sbatch",
+      "sha256": "ac9b9d6b9fdd2a22cb0262a73ec5227ea2f6d1a415b5a85c13774f0702f8ded2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4a_gate.sbatch",
+      "sha256": "35171fcab76178a3a851493d966a2f5db0899714146a09d17ccfe4ab38584100"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b0_data.sbatch",
+      "sha256": "385d16168d21b5eb0f10bfdb35712cefaa812eaac61526a4ad890d6400984bb9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b0_finish.sbatch",
+      "sha256": "df808ad75782235c1a2af6be3b048578d20ecfee865aacabad1e84b7ad3c6c61"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b0_gate.sbatch",
+      "sha256": "241e61964410d9df519f23d33f96dbea09073298dd3e78202af9d70e888854f1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1a_finish.sbatch",
+      "sha256": "605fd00d112d6ed954a084441ec801deec6aed2c8e30ce7d325a79bb4bb15a3b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1a_generate.sbatch",
+      "sha256": "c874b07b996e023f663df8c250289c3b879bbbb56d088e0935aa7778947f7830"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1a_package.sbatch",
+      "sha256": "2a7191d3c56c063c42321b12dda02318811014def1b0889c670f220310b0c767"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1a_recheck.sbatch",
+      "sha256": "b7fa2dffb994fe9979a5bc12f78ae206fd340d72d06d0e787a397fb2d0a6a925"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1b_action.sbatch",
+      "sha256": "3b0aebd9f0b629dd2a3e365009bf0e0fa7bee21ff5ed0daa70f5e95f6b88caa2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1b_alarm_audit.sbatch",
+      "sha256": "54bbbda1703bc7b463ed5427af782ea83c7a069052d2c742f19355c3b7023926"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1b_analysis.sbatch",
+      "sha256": "2a23785046c5835c3deca100481b0cd1ff798de3cda95b71fbd8e4c7a3b889b6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b1b_stage.sbatch",
+      "sha256": "6ba925a42555f7e1208e051ed5004732ea0530bfd04dc8fe30290afddad7154f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b2_interface.sbatch",
+      "sha256": "8780184fc2dc813f18f14409e2ccb2b5dd53d848545c4dbf95dd996a0999862e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b2_interface_repair.sbatch",
+      "sha256": "17fd032e98d4c9b4fde370545c096dbc5926f5bc515acf0ac5d9b9d32ec6d6d5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b4b2_stage.sbatch",
+      "sha256": "38fa71023b68954aea5b09a4d4bfed551d9cf5ef5538d964aa6847342238f907"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c1b_value.sbatch",
+      "sha256": "60886534e3f18c347ffa602fe0bfe18fd42d47e88444f07753d1c64afb45081a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12c_events.sbatch",
+      "sha256": "9b0e59463cbb2733dffed69d2a3a4dc2f3edd72f14a3a0b1ba51c10174595554"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_final_audit.sbatch",
+      "sha256": "ce2a46f720d46b246e9bb5cdb65f92d95e282ba3cfce99f5f9dfd9711c457714"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_finalize.sbatch",
+      "sha256": "ac085059c9aff2d056229a43a0efc659e9957916b6816319918cbfda198a5a6f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_guarded_final.sbatch",
+      "sha256": "4cccc597f5c0c93ec8733517d0d749257e3ec207728d5feb073de7d57bb2d1e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_mechanism.sbatch",
+      "sha256": "a181fac55a47d50bccf2a1ec914af0459824d873c9429e14a3a56225fa0b28b0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_meta_schema.sbatch",
+      "sha256": "8d8b3b045be1bd440b2014f34f09902b107b3f3975da7910fcee1057033d2b56"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_preflight.sbatch",
+      "sha256": "e53e4316a077268166b31d1e64a0a3c9bc17b37224671a5399dcb0323bb04b06"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_preflight_recovery.sbatch",
+      "sha256": "dbe37d02a418293349c65bc9257ab781f62b6602251a0d4d0ed23b08a0e45780"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_profile.sbatch",
+      "sha256": "c6983e9669dc17bd64e3daf88a5ac833396c6b07ee56416250e8f7d4c2132800"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_rsi_adapt.sbatch",
+      "sha256": "eaf0543873d9f9d920a2750e578a95ca2cb2c16ebaa6d361af73cb0bd4c2aa6a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_rsi_final.sbatch",
+      "sha256": "5ee70696359b1178b1c2e15e75f0fbcda0bfc80b92d399233eac3f145cce0374"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_rsi_seal.sbatch",
+      "sha256": "a0a57ab1638cac17cf0b29cf50df083090c3fcee7fe47ae6e6c785cdf4f54dc4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_run.sbatch",
+      "sha256": "bae82e7274a29a901c964b72c233f561f5aa2f7159ec13620ef07c2ddefbbcd2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_search_audit.sbatch",
+      "sha256": "96a73c57d8d37e1f78ce8c8ced5cdff83fbf58e509814beb772541a3a74fc626"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12d_stage.sbatch",
+      "sha256": "4be614d2ce45984ea204c00f797c4520b9045a345d120b0d7bc7db6f6d7efde5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12e_gate.sbatch",
+      "sha256": "97d9f0d3defd9b56508f697873ecf0aee3474cb6a269428eb1712afe8ffe38d5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12e_gate_v2.sbatch",
+      "sha256": "9637ad324553e2cb94e7788f0370e75a2dc7ceee24988cbd7e3b353e3e203094"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12e_schema.sbatch",
+      "sha256": "9136aa9be5adcd6ad7039b93b5742693333ba8df8a81472eea3cb1103cf9630d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12e_timing.sbatch",
+      "sha256": "29bb980833d56dcc384606346345c0c624435664a0322cfe47512f40f2e18f08"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12e_timing_audit.sbatch",
+      "sha256": "07601a4884c33fbc3de10f08e304a250fcf48a185a3ce598fee94f33de09f761"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12f_cpu.sbatch",
+      "sha256": "88a78423c0d8780563bc33412ce1bd8996227153369174ecc67b3ba1f4115fda"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12f_f0.sbatch",
+      "sha256": "e7c3e125df31f7fb9f15b80f9c4b561b520e6168da6ad928239a9febe6564426"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12f_gate.sbatch",
+      "sha256": "17836e22a2a34185ca2b788f0af00eddc15283678c297320dfddf3c4d35f3cb8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12f_gpu.sbatch",
+      "sha256": "ef1647520a9b281b5ef26e519cec36d2477ae0fa70e374d70a96f723fc2e428b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m12f_prompt_profile.sbatch",
+      "sha256": "132fccf0b87394b98f579fdf52563f632fb72fbe882d3d2c4f83b08eb3533ad5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m2_compare.sbatch",
+      "sha256": "35d96bee8b0b84e30bd309dd85a3aa67e538b7360c62706d949b2e27d9d119a2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m3_transfer.sbatch",
+      "sha256": "2c94c5ef52caa98af56a7469d0e419c034442eaccc7f388f7e8d00d9f1e667d6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m4_workflow.sbatch",
+      "sha256": "f3b18278d051a7971a7ea6de69482f1f4800b2f45328af087ad2bba713c52bd5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m5_attribution.sbatch",
+      "sha256": "6873f0ab1548049cb3bd991e96761037d0f377bed7f83c203e3706983af9369d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m6_dispatch.sbatch",
+      "sha256": "8091052ba98a28c9c9baf451ad22db247a4c08432179067c093f643d6a94edd3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m7_stress.sbatch",
+      "sha256": "8dbdba31ef4f3d26d2d2b031925a7b338ccf96544ff9a3c7ad33160943123848"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m8_representation.sbatch",
+      "sha256": "258731a68a3932c2f3ac2355462c5c51aabcc62ac742107add9480cf5b2cffb6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/m9_coupled.sbatch",
+      "sha256": "4ea45b9a25d4e849770391ad7c6eeefb5b6a12d2f7e76efab86da30c483c6d42"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/patrol_smoke.sbatch",
+      "sha256": "c45fc5fb7926a7609983359c0cf6296cb61455f042d214b25b205cc5a6a801b8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/cluster/train_baseline.sbatch",
+      "sha256": "fc024a92b8cc5f921fe7b2cae8e6888ef82633626706158a2615300ca09da5f9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/CURRENT_RESEARCH.md",
+      "sha256": "0f22d02df4ced887957656e7a952a940b81a678742ecdfed59d357446c28a73b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/README.md",
+      "sha256": "767414aabafcaecf68388de24be38e8a847519c885dd70bf8e3daa118895227e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-27-m11-scheduling/evidence/policy-weight-retrieval.json",
+      "sha256": "f87a64763f2fe7cab23c6e864652558aca58656c403f58e5f5a5c6a9f9318697"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-28-m111-coverage/frozen_estimator.json",
+      "sha256": "8653f5a8250c0d3c2900768d3f9e16e8742c5fa051fb98532c8f7fd684e803a0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--blind_0.json.gz",
+      "sha256": "f3fb84dc5fa32bb266860f388ec0d45c867925514676c1a8918f0387965ba6c0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--evidence_now.json.gz",
+      "sha256": "6694a1569f67e7ee1cdc3b1de1ea1d4db0c832d29f0ca2a78cf66e439d6c677d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead.json.gz",
+      "sha256": "5aa7098dde82bdf0b8ae1706c1dec23f6d38e4c4dfee1fc0672a15a0a2388977"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead_conservative.json.gz",
+      "sha256": "d560b5ef4cd13ebff599a9eeb42320e3c1402400505dccb825bf2b94deea685b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--lookahead_permuted.json.gz",
+      "sha256": "eb9d195dda47b82377315eb6d6f4f260a88449a68ac957bff24a357e8ecdd392"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/demo/test--aux_feeder_loss+cdu_fouling--180--8300--335--0.2--history--tour.json.gz",
+      "sha256": "d7b74ef5be37c16e940bdbfa11b9b704005e0d78667fbe054fa9ba633fcea194"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/failure-examples/test--aux_feeder_loss+cdu_fouling--180--8301--335--0.2--history--lookahead.json.gz",
+      "sha256": "fb6ba25e4c3c3a408d7c63b7e7ff076fbe0606a81751095e952e0138c712307e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/failure-examples/test--aux_feeder_loss+cdu_fouling--180--8301--335--0.2--history--tour.json.gz",
+      "sha256": "9af1a9c6b25ba328806b0482eb073037a295795e3948c08236b62829282bb324"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/failure-examples/test--aux_feeder_loss+cdu_fouling--180--8301--520--0.2--history--lookahead.json.gz",
+      "sha256": "f64f0512433d3965784aa48386f44868ab20340fa6f388bc939339cf5cbc9458"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/failure-examples/test--aux_feeder_loss+cdu_fouling--180--8301--520--0.2--history--tour.json.gz",
+      "sha256": "60c6c0c7ab64e3f4413554055a9b36d37d0d768c7d5fd17756069245f57f061d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b2-confirm/evidence/report/compact-index.json.gz",
+      "sha256": "afef1cd9709fd559d7f039bd1de0c7008ff3baf1de9585c0e04827bc2b468d5a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b31-interface/evidence/experiment-freeze.json",
+      "sha256": "e6b3071042becb49c290cc68c4b546acc37ed7d3f3444a911a130b857e503da2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b31-interface/\u6b63\u5f0f\u5b9e\u9a8c\u51bb\u7ed3\u65b9\u6848.json",
+      "sha256": "5018ee1cd7165cf9e501ebb4218fa9be825d1d76398313305cab08834cb56085"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b32-formal/evidence/explanatory-cases/development-positive.json.gz",
+      "sha256": "7ab5b0e66f14ab31e6ce3371d6e8842f29553780538b39b700a1d03795c3a76b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-29-m12c1b4a-information/evidence/raw-storage.json",
+      "sha256": "7989350c682339a4a9ec75e4fb28393279c222e44b651e3181763280e57a7d87"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b0-data/B4-B1\u51bb\u7ed3\u534f\u8bae-v1.json",
+      "sha256": "6585bb9f98d51316b85d27b0c4e2e7841aa9e4ed31346665622c5b70dd6baac3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b0-data/B4-B1\u51bb\u7ed3\u534f\u8bae.json",
+      "sha256": "d049c0d39663ce35824bfe61059a00c7c48f030d543386511e7bda8c65c77e5e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b0-data/B4-B1\u65b0\u6570\u636e\u6e05\u5355.json",
+      "sha256": "2580b46da58320e4349e149ab13b08f926d64b49ced57808cfc138cdc274b269"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b0-data/\u4efb\u52a1\u4e0e\u9a8c\u6536.md",
+      "sha256": "2eb5f71d50cb136186608847b4f756018fae8ced94f82c57814d5a6e7b64c4b2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/.gitattributes",
+      "sha256": "d4adadb4680dcea0967bfecd6e2f8ca214880cccd0ad5013c3ccd4efeee0cffb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/\u4e0b\u4e00\u9636\u6bb5\u8ba8\u8bba\u65b9\u6848.md",
+      "sha256": "5555e616fe0c04ecebdba468554e9aa461e7da52a6b33ace9354a87c2110a515"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/\u4efb\u52a1\u4e0e\u9a8c\u6536.md",
+      "sha256": "d1ef4f6e1f885b208c22fccfd3c439fc51d0ee91139416b3a46dcb966538923d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/\u590d\u73b0\u4e0e\u5c01\u5b58.md",
+      "sha256": "0819d0c177aa75133143810831be9ffa3d49fe217672fcf4da1740eaded9ec65"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/\u5b58\u50a8\u5bfc\u51fa\u4fee\u8ba2.md",
+      "sha256": "a4dbd53a6fd4ecc6af490f1aae5e1201428b298c3bc53efb5daae55bcf3bb985"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1a-fresh/\u72ec\u7acb\u4ee3\u7801\u5ba1\u67e5.md",
+      "sha256": "e21717c5e7663da2655ff6a5356905dde4a875f335c498141cb66e1b69db0868"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1b-limited/B4-B1b-Limited-v1-initial-draft.json",
+      "sha256": "2e8562deaac755bd4f775a7214e55c887a5fb73507121090ec1c1ce02beb888a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1b-limited/B4-B1b-Limited-v1.json",
+      "sha256": "45b2eec45461eb89d2d629aa6173ccf6ae9d05c0479fdeee91e676b13c7a9ef3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1b-limited/evidence/inherited-four-facts.json",
+      "sha256": "3afd62c0472f82a9842000bcd14884ddf1abe74f0403ccd73d2eb16ae5874857"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1b-limited/evidence/protocol-freeze.json",
+      "sha256": "7832e39e9ee24f06bd491d895426470aa29e0bf9096d1aca9f849ca6568d9a92"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b1b-limited/\u4efb\u52a1\u4e0e\u9a8c\u6536.md",
+      "sha256": "dc5560c45cfd366e0a5e778e69fb09aeeab74cf9e3df05566020afc0f478f670"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b2-alignment/B4-B2-development-v1.json",
+      "sha256": "1da63415c59a2647b0d4f7b7ae493fac5b09c5a2374bf0460ce66579e72b24a8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b2-alignment/evidence/protocol-review.json",
+      "sha256": "b41f9a70046427702684f01850b03987eda72e91b1fa47142a96360bc171c442"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b2-alignment/MultiAgent-Patrol-Paired-v1.json",
+      "sha256": "dbea4a9b83cbbe4475d3343492646328c6a1c737f22ff79a785c8f2fb17f914a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12c1b4b2-alignment/RSI-Controlled-Meta-v1.json",
+      "sha256": "3bd4e2478c50f152898ecf73d1359dbc246e5c3501425daa034b215328edbe76"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12d-formal/process-manifest.json",
+      "sha256": "9e9c39f5d7244c8cd549aed18fa4e3c0bc72ac9ad9ae04eafb2bb647a6f9456d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12d-formal/rsi-process-manifest.json",
+      "sha256": "c757a4c3f067640cb860c24700964c5acd57c9393a4bb2682643418455e503fb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-30-m12d-formal/\u6267\u884c\u8303\u56f4\u4e0e\u9a8c\u6536.md",
+      "sha256": "3c25ee9fb4e3677268f7f5a896217f84033abdbb267bff3da2ed2af2feec223e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/code-v1-manifest.json",
+      "sha256": "5d46397f92223a89c105af538385f221a650990d467a637a46bf708fc6ce306d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/E0-prompts.json",
+      "sha256": "9f1fa2c4eb10d858a74167df4e95ee67fbfb544e5b0f1fe97e9f0597712d1379"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/E0-Schema-v1.json",
+      "sha256": "1dee0c89a70ebb0f79c72795d03421d2b2265baf4d648019fbe9243884c80496"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/E1-Timing-v1.json",
+      "sha256": "4fc9b328400e9ca74c43ad7365306ae9beb95498bf952f5d8d8ec9b2f9ef9770"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-00--public-selections-release.json",
+      "sha256": "61ff33653bf25ed8b430b721666292c5f876ea789f3e7ea6e11e55ca8bcc2f2b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-01--public-selections-release.json",
+      "sha256": "04f6b9627a3711d1024ade6fdbff3a6911dd43cfe16241b9699ffd656ccaea03"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-02--public-selections-release.json",
+      "sha256": "c055556d2ba4d438b2be523d9d2e3ea7ac1d8833ff1b581f4414239a20d0d46c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-03--public-selections-release.json",
+      "sha256": "9d22630c6f4c671ed164af5f74359d95935ac404e2a51ec50a5388320b5e55e5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-04--public-selections-release.json",
+      "sha256": "36020903f919963fd2c44b129bfe6c9615f7ac7dfb6e3cdcac86b3f0ef758bf2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-05--public-selections-release.json",
+      "sha256": "ff49a8da6b99f3fec8da4c05453bbe6bc15583913980981dd257eb676fc915e7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-06--public-selections-release.json",
+      "sha256": "2537b7f1e5f28128f86ff6cc90bc2cd5ae089866bdd9fef324a1e614e7737c72"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-07--public-selections-release.json",
+      "sha256": "b381a2ffb6e09586988ce5834dee56c13a850e4741abd84a59ee24e8f7dc7b46"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-08--public-selections-release.json",
+      "sha256": "bab437cc7fb9164e25b09ad6f8658fa7063ae5078e696aba40b8bd103928e877"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-09--public-selections-release.json",
+      "sha256": "bc19be315a4919b9a0340e17f08085271bf90c99f0d24229d0ae920b60570ae7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-10--public-selections-release.json",
+      "sha256": "d09592c1237a29732feb6ec2f5113de9129f7f4ea9820937b1d1bef6ea17fe69"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-11--public-selections-release.json",
+      "sha256": "59e9c675813e597e16e4eaf787bcd32845608b8c97a3755b0c6bbbc392111c91"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-12--public-selections-release.json",
+      "sha256": "a65a41ff8191423ea0bf53b22db93aac496c72faaacadf110889b2face2b7c0e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-13--public-selections-release.json",
+      "sha256": "cb53ff51e34065fe305d66395a49ab4d538280b587c648ca38f1b5e6baa2f0e0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-14--public-selections-release.json",
+      "sha256": "dffa4ca9d68970c847a258b3cf98d7115db678cec8035e7066e3e86d8ad237af"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-15--public-selections-release.json",
+      "sha256": "a23706be54c5a67682f7d7600a259c15cd5a82c7b48a334aa230c97a2c1658cb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-16--public-selections-release.json",
+      "sha256": "e1054c2aaba2cd26ecab31fd5cf805a2f169e45f1d55714d4fbc271877c11517"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33000/public-release/condition-17--public-selections-release.json",
+      "sha256": "c2d53db53e0162ecab4559d6f1cae09e7d9bf518e4e917658542a1e1ab90a11a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-00--public-selections-release.json",
+      "sha256": "d80792ab8ee214442bb88c5c46a433c5521a198b2bb80023ca766cede1c18c4b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-01--public-selections-release.json",
+      "sha256": "8baef7a8ad5c481405ecc3371c7096a63586dd25b844c1506b90970b7387cf48"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-02--public-selections-release.json",
+      "sha256": "baf7a7054abc9de784660d18c4f0053d8e5e069c18f5ed05b02851c1d486b443"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-03--public-selections-release.json",
+      "sha256": "6403301f33b6e063ca55bb55b5ef626ae6703c724763d735b0c7568682911609"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-04--public-selections-release.json",
+      "sha256": "0e36689a8005079ec0ad684d8285fa57dba28d4438807e339f4570adae051544"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-05--public-selections-release.json",
+      "sha256": "c2067a1d3e3e11fad3a370b40afd976c3135109e89afbc443a1e0fb21b6fe2fb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-06--public-selections-release.json",
+      "sha256": "32f84aa173a0e1faeda7778d366f4f38fc359264089d2fd79157802aa65ee1ed"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-07--public-selections-release.json",
+      "sha256": "442eacecfa64c1625b6833f97fa6658bfc9f6ffdca102440c2e3f17c5118c3e5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-08--public-selections-release.json",
+      "sha256": "15d773c869ad3eee2174a0cd4e8fb98c322111b5f61c93a4dc564cf825527a88"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-09--public-selections-release.json",
+      "sha256": "77f5fe50bc6f953007d173741dccb81b5a566ffe86dce62432d6d7ee12c9dc17"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-10--public-selections-release.json",
+      "sha256": "683b8df90fe3ef7ab2e980e19d50636f6107d68835aca33c912e14b320c3c4f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-11--public-selections-release.json",
+      "sha256": "756cc85cc3523c877083cb78886ed8ae52d0ffc04f7333fb8e24b99ca1eeaea2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-12--public-selections-release.json",
+      "sha256": "7e4dfd1d7197daef61d0bec3d40e1087c995b2f0ff9138f4ff94584df2df0124"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-13--public-selections-release.json",
+      "sha256": "9eba2afb6ed2ceb45558af7c9c3fcd67217fb7c10e0475a5182585bc4d8806b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-14--public-selections-release.json",
+      "sha256": "7a27c448bf00ba3969e076e9fb34583461982d1c0d8f1eeece1f5eaf3384616c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-15--public-selections-release.json",
+      "sha256": "89a6fab1f2b2dc132c9c843c6b3f90e48aa57c3a12a1a97eb8deb9083e4db9b0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-16--public-selections-release.json",
+      "sha256": "2ef5a71731be6695f6ecd2571564f987895aa48cb7b5215490708b25ddf65c06"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/evidence/run/E1/seed-33001/public-release/condition-17--public-selections-release.json",
+      "sha256": "9147c54f2168b99833eaef4d62187239fa20aba1cae04fd8afd2f5f5da6ab2d2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12e-timing-schema/process-manifest.json",
+      "sha256": "c8772f81648af78617c0c34609a24628f6e55e5f3f1ce59929cd9c024f957b10"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/cases-v1.json",
+      "sha256": "a40998b00a9056af09cd0320959466b7f8b22a0bbf179ac4b6dcac433592f0fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/M12F-Study-v1.json",
+      "sha256": "05b2b575722736fd1f63b1fa55e12d5ad2dd026851e24f56aef19a71445c076f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/research/2026-10-31-m12f-timing-skill/prompt-templates-v1.json",
+      "sha256": "7cd000f2c4bb4971909be37a872a3d163eda683f394440ade75a44fcb7a21c12"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_causal_preflight.py",
+      "sha256": "c3dd3e0aa1b50555111a503c96faa5890651c3cc82e28adfaabaa55666c08cc8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_formal_study.py",
+      "sha256": "9eabb2e5ddee0d5d21a9d4b6bd7d2025c131f71352741fb0803e2cf42c0d0bcb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_fresh_counts.py",
+      "sha256": "a776a91662c7faab71452ed1517050301dafdf381d9f8789ce272fa68ec5a554"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_fresh_sources.py",
+      "sha256": "948701a89018605e058dd0a57f448423ac3dbc7b4d5ada50c4f52ac680dca1a5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_information.py",
+      "sha256": "31f1fc957293cac518cdbb9c2dc44005cfe9fb44619df29d0ade499b41314a0d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_limited_alarm_counts.py",
+      "sha256": "20d2c90190b830fab8c47477fbd7a6381d164ba30531d929d048df62e0128a69"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_limited_evidence.py",
+      "sha256": "00c0895cb98968b0e1ecb8b363f880dd796eed8453f239756bb25dec405e3fb9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m10.py",
+      "sha256": "d59e49d855c969c41d31850df533d28fb0e2c3f7ff285727168af683088e290b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m11.py",
+      "sha256": "ec94e7cde818ed7cf0e0387a8611f0aba0183cd096d0802d8a452623bc96877a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m111.py",
+      "sha256": "1c21b5fb9f67fb20d037ea8320df85db14fcd98d0c1995dee557ccab8fd0fcd8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12.py",
+      "sha256": "a007bc49c323ae0ddd3f3f9ffae4faedc0980f550f4d1a2a5ab933c22eb6bfeb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12b.py",
+      "sha256": "7f2f931bb7c2174badedcb82f7b12ddc9522addc03eaefbaa72c02f25fe875e6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12c.py",
+      "sha256": "464031d4bc23e5fc7dcb3341dc12566e25e97ccd34480045e2760a178e1dda49"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12c1.py",
+      "sha256": "7ebfb6388ca2e2ea2a5310d8fa4ac084fe91a7c0b8f2aeda68ace9ad71d03893"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12c1b.py",
+      "sha256": "4a1fe5d151110af07f850565a231369189bc34f9f1243f02573a32e06a0b4e46"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12c1b1.py",
+      "sha256": "04beee45a32e8ac9add1ee20adbed3ced04ca76a47039831872b3a12c90a067d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12c1b2.py",
+      "sha256": "dfe9888b9d97b6fe27a9c5091db3d8a83cb1e775f808f4b4972edb90326a3be4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12d_aggregates.py",
+      "sha256": "ba6a213d57e57a1e72eecab16df4cdd8498d6c14d1ad626c633b99e10e18345c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12d_rsi_final.py",
+      "sha256": "da3472a274b897f20d4075d4c9342fc9c6a03cf3b36d4a8f52ddfb238f573893"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12d_rsi_receipts.py",
+      "sha256": "e1ee0ba04848cd7d7991d20b55a91952d261ffe60088f6cf56c85061cac607de"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12e_schema.py",
+      "sha256": "a8a3a26e5734d26daafe2a241d1d7c55529390b216ca90e95c30193c0c2865e9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m12e_timing.py",
+      "sha256": "d47567b63b2f9eead18c83a15398c8394a6e547814a8dfe45e5197375c7a2457"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m2.py",
+      "sha256": "5a687dfc29611ec66db72f65991a807c0fb9f6d27314b2b6a058e15841ae8a62"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m3.py",
+      "sha256": "247f45883f17d31b4eebee01d48ad2fbeb433759ed03d4f6caae44636b632531"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m4.py",
+      "sha256": "c26143a12870cefa0f034fcf100a3205409935b5aeb5960e2837a9458e2aeac4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m5.py",
+      "sha256": "0a4d9fe5ebe174b20fc94ec8e34151da7fb233d75364dbe16fe5080393e0af0f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m6.py",
+      "sha256": "20248f0abe8b8dfe58844356d1381c34cf7f350056c3b2bd6769b12291d87b57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m7.py",
+      "sha256": "e919fa2b9daa891e219f6809869545713be20bf12f5a3cfccf584d584f208f50"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m8.py",
+      "sha256": "aa2dfe9aa113d2b1e8ce85708c1e2d8fd503a17ccb5ee535c7143abf82d45371"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_m9.py",
+      "sha256": "dd3a1507c9f658cbbcc7ec1b3feb62070362fe3fe4f8ae5e90f4bde14438975d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/audit_paper_source.py",
+      "sha256": "2b95c5859ae5d6e169518c1d95dafb2ecec1a68b7e6c4a272eaf37b23756162c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/b2_archived_interface_smoke.py",
+      "sha256": "60c348555b28771864b05ddd8e9048c9821add79d434d9c98e7e42a2d66289c9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/b2_meta_interface_smoke.py",
+      "sha256": "3a917842815f3d851c401fe595941fd59d5fa02597fb1bc7acd56763c3d0458f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/bind_formal_recovery.py",
+      "sha256": "0eff8b90aef60c499619263615de8e60eaf375cb0eed5064faaf26a5ed8a38b6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/build_b2_bundle.py",
+      "sha256": "46decbba33cadf81acde4d2fa5b441e5d8ceee2d6d9e6bee748aa1d3fcb7fb7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/build_limited_bundle.py",
+      "sha256": "49df82e83a1a5d6f2129e64410981aa83327f2170908d2ec966ef7cf47b612a0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/build_m12d_bundle.py",
+      "sha256": "6fbb8b442cc7eae4a5b4cb3c6cfae1feda176c260ac471f9e2c6e840343346c5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/build_m12e_bundle.py",
+      "sha256": "8ca578bdd12ce9b7d342dc403afa4d9feedc692a17b24c22fdaa3a0a969c8bec"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/build_opportunity_dataset.py",
+      "sha256": "167d7dd3c28e5401da5a24562970c156a1b2bfc1ba54f7d31a65bb635304a488"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/check_m5_checkpoints.py",
+      "sha256": "b627309625b5eaf6461bb9854903c436daa4e91b6c183adf89f95bf961fdcd7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/check_m6_checkpoints.py",
+      "sha256": "a28522c567ec309e2428e7a898583f300ecc03bdc90e860cc30186fad7fd4398"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/check_m8_checkpoints.py",
+      "sha256": "d86ee6a56dc6f4a034dcba43e66f21f518d30085ba23b548380df7c2b9152ad9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/check_m9_hotspot.mjs",
+      "sha256": "b2edc6141cb01f7595799b3aa2ddcf9a3bfdc9b71dd12b034a903afc96c05ab3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/consolidate_fresh_status.py",
+      "sha256": "ca134c34382ca8fde6384c328f3274a465ec95d9d1e7089e0bc99a63bdc2fb2f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/consolidate_information_status.py",
+      "sha256": "eb4262b3a5cb9e5488833e654352faa634d9ccbf0274e077e2635fd8203fa2d0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/consolidate_opportunity_status.py",
+      "sha256": "89ac7cdd74cdc3a3ee8279b7a1fa78ae8e07f2c82c4364ba877b80f025dce9b1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/consolidate_project_status.py",
+      "sha256": "c361e1619911fac7d5bb640565790119f828ee65ec54dd7a1e6e2c0e5def3a0b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_action_indexed.py",
+      "sha256": "60785c17b5a9d3cc57fde549aefc9b44a0421fe700b3ff0da06d595bd791d21f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_b2_actions.py",
+      "sha256": "ef2c8327b7d2e7eb002b6e585634a9d9cd3d51405bb0619890f0df53c9b02e84"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_b2_calibration.py",
+      "sha256": "8d0b6f7367420827b4a08ad00c08629040979cf7cc9d5579dee6d80cf2580af7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_limited_predictions.py",
+      "sha256": "0a2e4eec6da35e1c4347d83b2337c5a337ebfede0fd9a092941c8978aba141f5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m1.py",
+      "sha256": "995dbb9b241555b686f21e91ef9f87af7b867fc1cd0ac76bcd3bef219af6acaa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m11.py",
+      "sha256": "ed35b8bcdbfdeaa1fa3b78d84b402df0858a394f23bd5d39e02120fe4845ad57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m11_cycle_events.py",
+      "sha256": "7ad0d856095c738feccfffca34806cd3910e34ec8aa6ea7dcc15feb8fe2b91f1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12a.py",
+      "sha256": "fa150ae03c8e167ecd55a0d4d8b7851be1b258d9f52ce590aee495370b48b4a9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12b.py",
+      "sha256": "43d8707e46fab424e652a7a8996b21153d42090bb96f19347759de556b504894"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12c1b_deployment.py",
+      "sha256": "1820a15ae66a3e46c1903afd116bdbfa6f0eada69fd15cc453ac962a2c29752d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12c1b_quality.py",
+      "sha256": "95588269f9e4dfab5078f1c26c85bc4a59f2b4f30a2e76ea455cdb3d5f32db2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12d_mechanism.py",
+      "sha256": "881a6819820370caadb78b6ad494db16ad3d526e06f0175464e0a69db2fae07b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m12d_meta_schema.py",
+      "sha256": "a64b14f5b5802ac65878b0f63a4c7d0e293bfc424922d497bf674a32f21f6c71"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_m8_tail.py",
+      "sha256": "91e921a640fcdc7b665689a1c5122b3ba3bc216417f6e64a0846f4b406b5bb57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/diagnose_queue_cost.py",
+      "sha256": "eab8160de9db6e1fcb24e23f2e83dad346c1d1be49d1dcae8253d2b541a8b08b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/evaluate_limited_final.py",
+      "sha256": "e719ee4ce115eceed9beb865f32e0696912a05fd6b41d629b5b4452384ce677c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/explain_formal_study.py",
+      "sha256": "631a9710ff76dfa2febdec829be8d0384dab5596fc4a1fd62bc267608e548a7a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/finalize_fresh_acceptance.py",
+      "sha256": "968c4b404374ed770b8a53a2656a2d20616e8cb845956674779cca75a34b6cfc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/finalize_m12d_phase.py",
+      "sha256": "70406cd2b5c0561320b0620481e1e13349c500718668f912ace9d48045bac049"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/fit_limited_predictors.py",
+      "sha256": "be332daa182ae4286496481503ccc1598f5875618b58028a37e469fe6e576145"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/formal_recovery.py",
+      "sha256": "284fc03439ca12b7df4d98a2638ddfe3c3e2170afa52630a6c50dff2b7559c6b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/fresh_schedule_audit.py",
+      "sha256": "6746a5741b0fa16c27c5571c6cb8c161de8579afa1a3eeec690f429485fb39db"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/generate_fresh_opportunity.py",
+      "sha256": "7f75f63bca4069466308fb1ef2c2db98116036cd0991cc3a2217338be457d6be"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/inspect_information_candidate.py",
+      "sha256": "95061c4d91a7f45cd2d1dc1dbe4f49e131c503e6491f203d4303b69f1643404b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/ledger_m12d.py",
+      "sha256": "e5b37ebee56bd9e9f6713edeeef98e74c60067866c8b13116dbaebae991e8ed4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/m6_evidence_io.py",
+      "sha256": "62379c36091038bdae3399ca32e60f9b17d7f9a7f9ee237e916fff6bf01279e4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_formal_study.py",
+      "sha256": "57b6ccfcf77664f5c92b99b7661647df2f2842fce773ff015370f0f2abc78d0c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_fresh_evidence.py",
+      "sha256": "c8ade24d26099e2f13407bb39bc0b1ec77f1ceb705d840288eeeea44e99936d7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_information.py",
+      "sha256": "275ff87762bf4efb4bfa004a649b8d78a1ecb920377f68d4a5fba8434712ab72"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m10_evidence.py",
+      "sha256": "83f05c768563c0c365a7afb7228faef88496c55a2e2fc9e7b019760d162e63f3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m111.py",
+      "sha256": "41d70a5b49cbb03481df4e7e6cb966a77f63cfdbc0f5ba273f53e9917e1f12a3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m11_evidence.py",
+      "sha256": "f5ed11df805db3507d4001e11b15561b1d9171f839bb3d1142b2a0f20f77f1dc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12.py",
+      "sha256": "70ecbbed5e739ea37614754e7f953008b6c89be90d607a3237aa4aaaaaaa2e73"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12b.py",
+      "sha256": "b95c6a4de007da2563685c87b9f52dc83965c76ce4f65e3d556fb81b7a2ea778"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12c.py",
+      "sha256": "35d48b9850355b5bb9095cf3666fe8c6a524f157fb9f836ce7ffccdf2d378f77"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12c1.py",
+      "sha256": "dfa39f1ad705b51d0ac90cb7b497b450c00aed5c5e67d4e3f5490c22930eac8d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12c1b.py",
+      "sha256": "f891ad07fa99c5eb75974a159dad1ff5167bbf9d7ffef941a754c6fe4d4599cd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12c1b1.py",
+      "sha256": "31f492340a6eebb1d56c6d5f92acb6a6278f1a6ed4518cf73f4effe3a85b8b50"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12c1b2.py",
+      "sha256": "cf59dfe6f9bfa292528fcb1624367c4721186d187d1d7619386f3d739d9089b4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12d_results.py",
+      "sha256": "584f98ba25a7c173c65840b838b504ab48dec4567e6f174d866fc70149e9b24b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12e.py",
+      "sha256": "b1efd6489a1ea3bc4a821949a002cc42749baca51cfe611c512b6aead9eddf52"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m12f.py",
+      "sha256": "2fb906b711c55346c1535a34148adbd4dd828dd0735e36a7e098f88c7d4ef1c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m6_evidence.py",
+      "sha256": "b2c28bef2a6341a5ceaa9aa05564c2a296dd7ccbe0c5be0073445d4318e6e21b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m7_evidence.py",
+      "sha256": "601d25888df43be208311d727da0572af0f1f7680d74610468fcc2775452dabd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m8_evidence.py",
+      "sha256": "95cf82643468bdee81da58666a51bde2038d6b2b5cebd657c5b9ac2f69aac164"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_m9_evidence.py",
+      "sha256": "0c5f0461b06bfcfcdb2d1502cdc4fe7026913a1a9ced354d9c29be6e2696f7f7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/package_opportunity_data.py",
+      "sha256": "9870853e82e5ef6ff4acbdb80a1fdf1e176bd9b1c2e932fc6db4cd6895d098b7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/plot_trajectories.py",
+      "sha256": "3988b7271261568edfbdb1698db82ceee929df4c37f12c2ec03e2af5d343b899"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/plot_vae_validation.py",
+      "sha256": "8505c35cb8d67c1b07e43bd465914beaf4bdb8e6ae0de1a87cee98cfca169b81"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/preflight_causal_stopping.py",
+      "sha256": "532a986e0a15cfd041bfe67c801627cbf5852650bb57e0bdb8a120da608e9585"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/preflight_m12d_qwen.py",
+      "sha256": "d36ab0b4060f0ed1d499462278b186fd181f4c3a3a3c0001d8ead81ddf05476e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/prepare_limited_data.py",
+      "sha256": "90b6adebf1afc26cec21e7fa73f88b3844420a2fe52c6ce270c0af161878f24d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/prepare_m12e.py",
+      "sha256": "8965073faae173f94bee770d70e4b6c72157c65d3afcefd38af85b8b35b1a59a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/prepare_m12e2_designs.py",
+      "sha256": "575c81963358342d0da31669eb4e7b88f12c99888e04ac6ec8ac7422be7f660a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/prepare_m12f.py",
+      "sha256": "9cf528b55c5b57ed3cf28c10aadb5aa61056e72880cf98546ccdfb975664d10f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/profile_m12d_rsi.py",
+      "sha256": "583146622502ebb0fcae2391551e4669f2093cd06da669998aa807129e2f86a8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/read_opportunity_sample.py",
+      "sha256": "ea2e4ce0516d7aa5453eb761eeb70a7aa829a48c4b4a828676160b07fd700220"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/repair_m12_attribution.py",
+      "sha256": "a27c8984e2d0bf5d416b9b4c7d9d534e8aa1fcc048f98278ea2fb00c63000e84"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_action_indexed.py",
+      "sha256": "891ed03097984925c8895b58889429602f00dfb51759df72727c81c07da5ec7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_b2_alignment.py",
+      "sha256": "93b74781f4750b84818c13d1443a9eb721627ea4a7245ef2b7464c0a07217334"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_b2_usage.py",
+      "sha256": "6795f4a3dceee47447c2d9393c97c153da3f17e80272e5b1d0844d2bb33bc2b9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_baseline.py",
+      "sha256": "ef78b9a7854c3d877aafbdee4c45bc69b30e4d82ab99ed065e7c28a401ae6a2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_formal_study.py",
+      "sha256": "8a1d03e52bee653613d4360827f4a786d823c45a7a157b92442caa2a27f2514b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_fresh_opportunity.py",
+      "sha256": "b47a26893b80d06aef47dd531048794174d208fb86a7584884592226291dfed5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_improver.py",
+      "sha256": "3ec892fd9b62b60453ab6182c44424abcf8fddbad628e425e8a061396b724fec"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_information.py",
+      "sha256": "59b18e11d602c1fb8d27eb600810098c2a940d441499162e5e602eac572485b7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_limited_results.py",
+      "sha256": "8101dbe926110375225539bd320b99fdfe7aae176f70467d54d75f08ca62c35e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m10.py",
+      "sha256": "fcd85abbdd283bf78f687615253d09ab28c296886a6a20e9364651879ceeea57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m11.py",
+      "sha256": "8992d15a4fb70ad9ee1886dc576d682f08f294c3f1e02abbe3a6410758806b2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m111.py",
+      "sha256": "70860cc342a41d2cc9604b86edf3e01660d3bdeb9ea010fb3689b82045ef1af0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12.py",
+      "sha256": "3ab9ec9d548b8e97f469991e52175ab0913c53414316b99191ce8bf745bc6843"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12b.py",
+      "sha256": "37212063a1e193fc6c8b7efbcce00ed69d5ada062e7a2cb77d0b6da9ac5bbb49"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12c.py",
+      "sha256": "97d2b90a647f7b3407d9ab5d6e029c8605a3fff580252ac1318c5cb5419f81c0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12c1.py",
+      "sha256": "b10ed4dbe910ee071058da21f1a3c5f5fe6ff3a5542c9af4b5eee65a648cce9a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12c1b.py",
+      "sha256": "f1bb2a81ab52cbac0f67b5d5132c416d50789140f4af1a9b000b53ef305db112"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12c1b1.py",
+      "sha256": "708317a05d409611792d3129c5ff72c13279c3299d37c075afc94494f659b637"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12c1b2.py",
+      "sha256": "e0373fce983c8f340f97484c662bd0ade9b37b050161b931c2a2380ce1967c5b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12d.py",
+      "sha256": "e2638f9546771c3ce40260862164fa4018c46339fba70572f18ef1a64189fe72"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12d_rsi.py",
+      "sha256": "c19e4b25291f3097aaa4c6467984bdffc6390b35447efd1f2796629115081edb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m12e.py",
+      "sha256": "5d6e1296fab22c547628c6532f76eb86b4cca1060133cfbd1cdabc22634bac8e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m2.py",
+      "sha256": "c0e91d39f5a55d854738d865384d590cc3d029ba85771e640e4c42238f365f60"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m3.py",
+      "sha256": "3462818b7a1928b5a00672fabbdd4be8d4b388fbe1dc9402c6c785e335322724"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m4.py",
+      "sha256": "fecd84871cf8a0c5a50c6ed957976d1877c4b14bfb3c630b2a81948880fdaa7d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m5.py",
+      "sha256": "abfbc37c959eddc4cb7f8103b1dd5399bb16c952fba2dd418c92744d7a6c10c0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m6.py",
+      "sha256": "0271e4b33e943c5696edcaf2e2a158b38e6840cb7a03de54e1a14f00f3823212"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m7.py",
+      "sha256": "877770d00dfc300029de8b5bec3dcbb7e04bdb4960c70a5ea7084cf68727c261"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m8.py",
+      "sha256": "a15f091df29572154c6ca5c1f5ff8340c066403c19e37fa2c0530e9194c6cd9d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_m9.py",
+      "sha256": "ef0cb67e61d377b8aecc9a69c7dbaaf525348b266e7c08d0281e12f16da3479b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/report_opportunity_data.py",
+      "sha256": "08a4f77cfcde2ec77bdbe182c2243e7eb256fc596c27e41175f811931a3fe00a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/review_fresh_resources.py",
+      "sha256": "b0945fe86c85b5bf1d056ff0203bab5b711434bc92d0fe94afd4026d848b4746"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/review_information_resources.py",
+      "sha256": "671282fc883d579c00db1b7cf82755f16af9eaf10325ffd4a83571b40bc70493"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/review_opportunity_resources.py",
+      "sha256": "581e22d1573a2eb643b65e9514aeab1a0c35fe5dfe7730729c5ba91ced8b7123"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12d_paired.py",
+      "sha256": "1dfb6712f077b816faa1a0bedef8c1d49cf495879e501467c11626027efd64af"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12d_rsi.py",
+      "sha256": "b24980052558c2bf1db240b0e5551cc23c2c17bc546468b7365b3837e101c1e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12d_rsi_final.py",
+      "sha256": "7efa84303e95d0ae97f67969be2a09b1bb173cf97cee245124ee19b5dd2cbf8e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12e_schema.py",
+      "sha256": "0ae4cc33398df613b2e3967e63aa80d4adc1c8a25a94b5570b26f91cef4823c8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12e_timing.py",
+      "sha256": "f8d15a97a036729f328702d963d3917cdcd0a8bebc69afa2efc057b263ade548"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12f_campaign.py",
+      "sha256": "d5f6f8fd09d46e0a3f5555d7ba4ec54397dedd0eb863ede0b3fbee3612a980cb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/run_m12f_f0.py",
+      "sha256": "34b4fdc8bc6bd08659d5aa2d44f38d3045b554bf2654b8d3fd2dd0984446da13"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/seal_m12d_rsi.py",
+      "sha256": "968f2e60c043f38660d7b5144d713621479ab058067766f548b821b85f92c2d6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/select_formal_study.py",
+      "sha256": "2961d32bf521a09b82df7088b59b3460f1aab380188102014b30975701ee9d8f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/select_limited_predictors.py",
+      "sha256": "cc2bda2d649934dd7b3cf3788013db119f68e788abd0cdb9395495b345283d0c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/smoke_open_model.py",
+      "sha256": "14b52da46be2422471af5391d520a18862625ed0f2c90dc6f6be3611a40910db"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/stage_open_model.py",
+      "sha256": "98bdb857d4c676fffcd522a31f9eca1a2be2f1ab2006849002db674f11fc3890"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/submit_m12d_final.py",
+      "sha256": "b7910b678081b7f8aec0e9227686e43649a2e960e93eac50429a7f43bac5de4d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/summarize_m12c1b2.py",
+      "sha256": "3e1e3d4d248501b2334a183f63d716bdcf69af9f084ed1ac09a529ab8ca1b851"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/summarize_m5_supplement.py",
+      "sha256": "82696cd86b3c166ca2ab9d3f546c3012500e661e2b5b173a1ee6e89972b372b4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/summarize_m6_supplement.py",
+      "sha256": "9aad02f300d3538c48e08d1feedfb3cc28e5418004b455bf719b5a9917b6f52e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/summarize_m8_diagnostics.py",
+      "sha256": "38aa6dfbe16447e06eced2e4c544125c011e96810926df09ff45197fcb4cb29e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/test_causal_torch.py",
+      "sha256": "e4eaa505334fd6876d0ff7f4edd916300ac8170ff0113b40bf93992b5d5c7244"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/timing_skill_execution.py",
+      "sha256": "7f47265fbcb57f6a252c7a78a3930767145a29040c28715051fbc6e82da4e3a1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/timing_skill_runtime.py",
+      "sha256": "9ef4194e3370bb82ca0b39d261ea16a1a2771dd03939b71f2f737d45caf14e10"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_causal_stopping.py",
+      "sha256": "40d788025de0fa45b7459724dd07eb64e3e33bc6ad524f3ee308b447ef5178ab"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_formal_study.py",
+      "sha256": "a420477978e4b4f1b8ad00cbc1b807b1e705c105ccb6ca21c6c81d463da20939"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_fresh_delivery.py",
+      "sha256": "e61cabca35c6de857c041bf56bc9f18d5791040b8c6300fb473669025994f024"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_fresh_opportunity.py",
+      "sha256": "ec260da5fda01de2e7c367d8762c0ea9ec1d43c9825384624ff9be3a7165d204"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_information.py",
+      "sha256": "50305648425418cd2a4778dff596bd5297340b15a7361d026d4aa7602059f723"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_information_delivery.py",
+      "sha256": "9ae0492dcba544fbba1e9213a5d93a498f5e80a109a782357507fca6c8ae35b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m10_delivery.py",
+      "sha256": "5b30cadd34107c55a9739cf2aaf4b14b053c7c8cba4642115adb70abe66d5bde"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m111.py",
+      "sha256": "71b7e490974eb02885e4b4f00c6fe544c71e4eb17d5f8d47352c10d38910615f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m11_delivery.py",
+      "sha256": "69021edc971b5406933d8be4162b51a712e84845cec562d3c0bf74e8604ad26b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12.py",
+      "sha256": "77b2f321d70fc535d0ad05c0012ce18c4ee962f33281342cb4fd2e2ddc2cf34b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12b.py",
+      "sha256": "a3e8c89c5035645ea651380bca6a8a6f1c5fdfea0d69bd045377619236cb8a86"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12c.py",
+      "sha256": "8d99ef68b4b0167c44fa7096682a82800048ffd69c421c176ec6db59283cb3f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12c1.py",
+      "sha256": "84e4255f0c419536bfbbc215c85f8f28b69c394534446ef7ec4c03bef52784ff"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12c1b.py",
+      "sha256": "994151dc13def44539c74777a21c7c9f040fc2f5c5577da2b272233e191e5119"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12c1b1.py",
+      "sha256": "57ddd91c90d9eace7122aae86bf88c35cc36a74008464c3f24b6f5b0f815fb03"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m12c1b2.py",
+      "sha256": "69ea28e25531e7f5a07b896650ac0d0232168c0f41d46b083cf84e4935d09bf6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m6_delivery.py",
+      "sha256": "744171b2c2b8019014a64cc1a669559ce1fa5e51ff2d16be4746b93699b97ed4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m7_delivery.py",
+      "sha256": "0ba251a8edf6ec201f88c732a8a2e93d0a868fbd0dfded2386eb8e6058778f0c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m8_delivery.py",
+      "sha256": "0df343de88a94f695d5da662905e2b714fd128ddd3931d822ee6d99c53929fd6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_m9_delivery.py",
+      "sha256": "f9d4a30ca62de3a598d039ec9406e0e851015334c82711d05b82345456d600ad"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_opportunity_data.py",
+      "sha256": "8c4cf2fb9fc7c0cd943b7b7ec692fc30a58f06ce3253d6812c568518bda37d9a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_opportunity_delivery.py",
+      "sha256": "83683f273f757f298d02b80296c4333fbd358d7e950cc75b6ace6cb4a791cf0a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/scripts/verify_queue_diagnosis.py",
+      "sha256": "7952987552e3be71b73a22d54869d11b1fd3088df5fea1a1178c5a113968fdee"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/__init__.py",
+      "sha256": "11fd54e54b1212df954cd2b2598e4297816a8a7d8113aab42e570fda60e75cc9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/active_inspection.py",
+      "sha256": "63d486edc35cfd7541a7b0d40cb6539e12c62198119c290a40bfe32c1aef7cc8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/aisles.py",
+      "sha256": "8364706d4c46565ca3fa028f31b79ce8a276b78cbaa6dee496014e4f57316739"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/aligned_patrol.py",
+      "sha256": "5f7ff339477c4ea0f12e309b13fa8e4e8e5923671a7288eee89d9f26900189ff"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/b2_actions.py",
+      "sha256": "2dd1ebfa75419cb92fa98cbec22df880fbbd50919c105a0770294699a336913a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/b2_calibration.py",
+      "sha256": "77b42a771c8109d4f5cebee586ce80834d8245c177024f4b137a7f2795070732"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/causal_observation.py",
+      "sha256": "72070f5d6b1bf8ca81797048f034978466700100d81c8708fa097699f52d9350"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/causal_run.py",
+      "sha256": "bb0f607a5a741b19075480e659d61379ef745373b4c300efae0d58e0aedce656"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/coverage_plan.py",
+      "sha256": "21390989b7828655404b10d45c9ad252a48722438ac669fd7cb4b597d64403a2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/covered_inspection.py",
+      "sha256": "12fb05788590b47d908b0dc1e918b661a671b365c27fc363e97d17a1735e9082"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/deadline.py",
+      "sha256": "5c570a304a39e46dc229447c53a08790eeafd0d9caefe65b2a164bfd6f485ff7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/dispatch.py",
+      "sha256": "698a10d09e829679dda82d68cfa0f47607de60701d6d970f2caa4854062dedc6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/dispatch_model.py",
+      "sha256": "2c77dd513f2c874d2ed5283db6415e1f4fc6fe42d2060b9fdee7851f7060211f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/e_stage.py",
+      "sha256": "778a55d74fe765de602742a4228b571dbe87764712d697b9717a01ade3d98046"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/environment.py",
+      "sha256": "4d3d3f9f138c8c858527625d6860b7e10eb32171b599e9d685652151f381c950"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/estimation.py",
+      "sha256": "3f8afc4227134e26e03a0499e4db422a7d616635abe3cd3b882cd4c788dd29c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/estimation_data.py",
+      "sha256": "b72d134c40b4f544c3f78858c3c274b001899b1064231538fd663ce52acfcd85"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/estimation_model.py",
+      "sha256": "248fb23e9bb158743021bcea91d73231914ee22c40f87506a49e86ac027992bf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/event_evidence.py",
+      "sha256": "1f40694839fc5031c0aee0e7958143894862bc98fd0aa35bc63e16f2523d5ceb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/experiment.py",
+      "sha256": "8d7fa5125a76806d33829085d16364709409205c8c8f0f5701c03c96e984ea0a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/f_identity.py",
+      "sha256": "98c8cddbe05ef790d91accb7b8053844b0635b218e5ce1d4e493cb5660b9d955"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/facility.py",
+      "sha256": "df9e84214d8aa2b28c1d9ab7b8d7515d0863e62c697469ba7f85724a771cc102"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/facility_observation.py",
+      "sha256": "9637c0d2d1cdb83426035dd3fb2aaed0cb267783771d22ba024ccffda4f21a57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/facility_workflow.py",
+      "sha256": "ceb537a132f3a7f9fc72797d9427f98015eac188991b62ffe773292681584a11"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/formal_run.py",
+      "sha256": "c0339d144d109827b4bd17be4d276e4519ebd1c86dd04d8793b4fe8a4410a6f0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/formal_study.py",
+      "sha256": "e90cc055effcf4bee32eb1d29ebb4bc0517b2f01f577c27f901554a9c3b83feb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/fresh_opportunity.py",
+      "sha256": "0989b3b6a9658fcf0ed95e8457d2254c29a1060a0fd5d84e7ca004ccc7c51c5a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/frozen_selection.py",
+      "sha256": "5253d75100bf62378133717dcb439b3b7da3348fca1c3583f6754fabc7fbcfcf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/improve.py",
+      "sha256": "dc0d732eca8857fe0d1768fb66c8a015cbc23307977aef9f95acf73bcfd6bb9b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/improver_protocol.py",
+      "sha256": "0e92a3c3f7c8dbccdf719eba0de70be89ca8d8c74b2db50732f0c8f93bbd08dd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/improver_task.py",
+      "sha256": "ae0b9fe02f320dc7b91172ba1131ae4fbd2867b67e870201667fb7a7610a1457"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/information_audit.py",
+      "sha256": "af8a1e931ccf3eef9f15e8c6fafa7cf4007b7e032c58cb6791e89da8951d61ce"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/inspection_contracts.py",
+      "sha256": "803bef71270d6a66ce985ae4b881865b4b3fd741567c02c67641adfb187a08ef"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/inspection_metrics.py",
+      "sha256": "35d9a5831b8abccd80ed4a30d8ed7dbb8fe19fffb3913817e5ae932fe503379d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/inspection_model.py",
+      "sha256": "afee4776cf4d85b9b0e367ba8ef4f438dc89618ebd251a13a8d90abb42cd13a4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/inspection_timing.py",
+      "sha256": "2cbcf7cab7ca27bb3d7f58b557dcdfdbc061677acf7149ebcca2ab7343dd37bb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/inspection_value.py",
+      "sha256": "c13254c23eefc4ad6f8a17dc6352eb9503a2659c185e32adee1bcc92bb7e8adb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/limited_metrics.py",
+      "sha256": "39509e404ea2a1767e25e660dbc6f636a534f3dbc6a09942812918cd4ee16403"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/limited_model.py",
+      "sha256": "4a04c344749b02deba7681f1fc742b9bdcbc34524384c663b20484f2efd9d3b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/limited_prediction.py",
+      "sha256": "028eed5c653bd6d44bcf19962e43db33a0520e94f3aa3fd4374c7f902ce77e2d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m10.py",
+      "sha256": "270f8241e808c09decd42b385a3f6f9035c971676f1e35d7eba90a825d65b5f6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m11.py",
+      "sha256": "00a2fc2979e9321271aa76022ff9c206a1106253b07e98cf805d4ed602e829fd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m111.py",
+      "sha256": "f34abadb019b5bdbb30bb052a8768397695f28dfce9eab53bad45bfe935738b2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12.py",
+      "sha256": "8f2a73cbe0bc90c6ac01992e9b083e650fd0b5e4f74913cda1ff3d81c8133890"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12b.py",
+      "sha256": "69aface574736ad05cf9c76034379883a6e6852af7e00f45303082dbf1c4565f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12c.py",
+      "sha256": "8a79542c8267b1e4ebb3dadc68e1d1939e6e5630f9a7c18ae32f73a1c0c415c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12c1.py",
+      "sha256": "0399bdc83d108bfccf9cfe1edc8d4d8054cfdf7d27f72f70476dfdea0329f7cc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12c1b.py",
+      "sha256": "f87a548e5ce85cf0ddfe571744c5269674639defcb6d579ca1ed3d025915d4b2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12c1b1.py",
+      "sha256": "d08e3c5287e3dac26e7d67c3cb2ca949c57242de2fc39075408ca919f722c6f0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m12c1b2.py",
+      "sha256": "322339ae994e8cae9c0cea1c135ccbc0d25dbc8d658de9ed413c96a13944a764"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m2.py",
+      "sha256": "f3789666a9d3e31ef50653cb012a7790d04cc7f01d228754e154a5451ba72df9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m3.py",
+      "sha256": "9d502cd3639ddad79231c50f56f630075f15efdbb896d48c16ea35f9d824d01c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m4.py",
+      "sha256": "ba97d81331764e3faa152e32d020229d68a461143a7c9fb8ef49d546274868e6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m5.py",
+      "sha256": "6a02c28f1753ec7aa2706d4789c14c1f277b4a0320bc896eabc93399982d4419"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m6.py",
+      "sha256": "f3b79b93b8c0c902cac3ef56d1fb8d71e05e839b8144268e16b992ce903cfc24"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m7.py",
+      "sha256": "ec7a112cbffc52b58a6de4f9da43baa8e1575c45bced4dd66813afb68a5e21ac"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m8.py",
+      "sha256": "1d56564f9a7984b16a30f4143226f564f61cddcdc6e8bdfb7fc98a8e359d3c6d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/m9.py",
+      "sha256": "69ed5fb8277b36aa92ec55b8a3773c0a708df9eeb0cfb68dd86b49be7406de27"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/meta_schema.py",
+      "sha256": "8693b09f24286be102f2a05a2952ce30cb3419f58f688eb201ad898ba15b909e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/models.py",
+      "sha256": "2a4529a9bcf1578ff3ca47da84014fb0ff9573ee01b99a4f458bc8f5ead5ebed"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/opportunity_data.py",
+      "sha256": "9d2581c69180767e450e0ce538898c4d46e269c8a02ceffe71d8e854c7808c74"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/opportunity_probe.py",
+      "sha256": "b1b45e91afb2f53d8de6008b804531ad299b37ad08d94076562d769b696f37d1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/opportunity_run.py",
+      "sha256": "cd31308159837d60b381ab99e725dba6e7eeecda1b78a375e432ca4a07da4a17"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/paired_campaign.py",
+      "sha256": "ce2b7c1c322b317a157238db34938b29fad073d5a49091a02f2f67a78fa9ea7c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/patrol_timing.py",
+      "sha256": "b205077bf763e28de10ad9d04a11868dfdd84c7ef500a5179896eefbdb46ae2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/public_dispatch.py",
+      "sha256": "873924a0e0a6b4436dcf70ced42e80697c8458d708212124cee4b236f267b59f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/public_stopping.py",
+      "sha256": "e86c0c5e061ad6e02bb2127cf3bcd7f20ec08425548e9515ea0eeaaaf7bf258e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/queue_diagnostics.py",
+      "sha256": "c046c0c492c5279af1d90001d32635ebb6d50bcf1557579f137dcca4df558ae0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/queue_history.py",
+      "sha256": "acb9d9e8de47683862912ac8e94f71a93c264a9801e0b3748af7a612267f2b73"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/queue_oracle.py",
+      "sha256": "03dbd77ec7323238808f1e4f46a4beedcf261d7ec69f370f0f53c568f03b1d2f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/relation_model.py",
+      "sha256": "0ad85237eed38c3b6dd9a3f8dd5b0b029edf12fd378c9e47b07376ac8c1470fa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/relations.py",
+      "sha256": "410b97333ea295fcf8855bb5f31fdcbc94e8a3bce6c7d4d207fceb89d5b48d46"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/revisit.py",
+      "sha256": "bcc3ce0b817bd3b8c31f456d09b45ff29d20aa960142c147d59752e3388d1138"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/robust_timing.py",
+      "sha256": "efb51f01b746b143f5e999fbc386289dda66d1c5c0e4e36ecbe8176d1a81888f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/robust_timing_run.py",
+      "sha256": "97e406a1b574e376503bda640a21da3976849e5d133eb9493fd3e315a9562717"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/rsi_campaign.py",
+      "sha256": "5acbfd9572061488239e14a45609dbe3a44c08190e950c1eeb5298873919601a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/rsi_controlled.py",
+      "sha256": "cb1ed73334f87c734c087b1f448aad5778de4322a289673f51b3545efff8ccb8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/smoke.py",
+      "sha256": "0f64735c03d6c694331fa80268555a22b050e76aa3e5b21686c4f2510849b67e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/stress.py",
+      "sha256": "55fddca13b12f18f52464651f74dc28eafa1fa6adab2335704064c5b606190a3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_atlas.py",
+      "sha256": "bccb21baf98a1185db77f68093186ea8f638ca015cffe7f2e4bcc48f50d2f0d9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_learning.py",
+      "sha256": "3f3abef374001b4eec7312481c2fe77631c3c02dd33a7b848e0bcf27674339ab"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_run.py",
+      "sha256": "83e9b130cf0320bbf617a1d2f5c2b62aef43d34d0e754092c6ad9a07a6097129"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_skill.py",
+      "sha256": "0e21f584f9cefbc330f3b3f498df118e855feed0b3b8a5be31a713199087ad36"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_skill_control.py",
+      "sha256": "931cc17a1da7ec7e62c05a3be4878c500494d927197666a2b39b8422ded41318"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/timing_skill_features.py",
+      "sha256": "6f532356a6eb7a1b6c2bff215e9da1d1511485528a8b10b322af367702d15017"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/train.py",
+      "sha256": "d39c03fc8277a000f25c65f3d148efd45c9b8b7c664f5119e568e320cecdb1a0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/value_dataset.py",
+      "sha256": "69b17a54a5f55c1ed6ecc24b494c1274cce602b1c48750a6698da3152a34c377"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/value_learning.py",
+      "sha256": "6a051b17f1bbbcf1c692aad9140ffca148a6ad6649261f17873752f102339ed8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/value_run.py",
+      "sha256": "f75e0a69143ff6d07740f08197fe6d54d57de56ae99021cb71f7199f7b42360b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/versions.py",
+      "sha256": "d3658dce3013b3df069fd1757072991a4f2b6c965a1f2a031d68cbbede723f69"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/src/patrol_rsi/workflow.py",
+      "sha256": "5ada19d979a8c45bb2314440294f07277a28ff3a52330df7e068c75a1e7d5262"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_active_inspection.py",
+      "sha256": "271e1ff90ca203faf3432c3119c27a57136f9967fa51c1555425a16545780712"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_b2_alignment.py",
+      "sha256": "d0f6fdd603004c497361194f0efe73610f6aadab6d2eb212266f653d17d5d42e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_b2_calibration_torch.py",
+      "sha256": "86130bdb595425be4059aca3dbefe54f8e687c9fd9b22f16b8b7c04f15824027"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_causal_stopping.py",
+      "sha256": "6dddf2586e791cfa1030d86621b2221b995683429786af694d8f1ee80be5aa68"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_coverage_plan.py",
+      "sha256": "89071bd231f790b7768d79aec86662ef38068f9183c7b6760d80917c95af18d4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_deadline.py",
+      "sha256": "ab289e6706f8c6f6ad803965d1a21bbb2eb57ac2980b92c4eb7ba78e0f6660c8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_dispatch.py",
+      "sha256": "117a4cb3b51157fbbf82e6e77cd2ef13fd9499f3e578933e5f9e68f819069d31"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_environment.py",
+      "sha256": "f34d6e9fbb0211b5b85929fa9a064bbe0aaa6fe24f0e2849828b4424f7dc5ee0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_estimation.py",
+      "sha256": "8b0b5a22187af78085f63f4bd3d477bacd8f59be6b1b95207a29296c1054070e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_event_evidence.py",
+      "sha256": "eee76940b71e59ab5cee196fae45d5e7e43c2230a59f490e7d280a9f577175f8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_experiment.py",
+      "sha256": "2b101501329e1232cc18c5592c52ea94f31fcc61bd392942e52c11b16c804b6b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_facility.py",
+      "sha256": "b0213655672829e585beef3224282bfcdfe6f813e8983f99301dca4eda518821"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_facility_workflow.py",
+      "sha256": "8d5467b917f4e9508a1eba0f19bad687cd9190ab79211251a548d4d45ec154b7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_formal_study.py",
+      "sha256": "4ebed3fc6b6e088b3f3933d715aa866e6b293eeca3088e77a690e034c14c03f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_fresh_export_seal.py",
+      "sha256": "1cc6cba877808accc177322131368117d33cc835abe3423d97da12b7339ca360"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_fresh_opportunity.py",
+      "sha256": "dbfb7ccfa15822818d8ad31f187a27a0005e033d6576f281ee020e6ac7b53867"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_fresh_resources.py",
+      "sha256": "4db005a540da664aae7921c9d229a35e2eeca84d1934ffa8947d5ddf64747c77"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_improve.py",
+      "sha256": "089d711ea5e8cccf8caacf6cb2384fcaa12ea21ce434c584fb0ec4e222e02d12"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_improver_task.py",
+      "sha256": "09ce9560add744073f762e12233f1a338da52bbe123616e5e5ca218beb668432"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_information_audit.py",
+      "sha256": "835cfe68ced771e2b0679eae953ee75dee383ce0e627d032182081ea19783d7f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_inspection_timing.py",
+      "sha256": "9a63f69b75bd320767c9b3d791f77a47dfd62f4d09c3c6e9b48b741d50b9aab2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_inspection_value.py",
+      "sha256": "cafecc1225a57b8df60b09fb91fdc4eda112e3e5c671db602be64293ed81e319"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_limited_model_torch.py",
+      "sha256": "1c437b19563442d7707f198e3674be0f3ed7efe8166bc48c00769d877607f30f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_limited_prediction.py",
+      "sha256": "ae039a3d12e1acd2533cbfce937c406b76bf93f8116e5c2a07adb57364870256"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_m2.py",
+      "sha256": "cbff3fba5dcd8a205cacf60f3df096a673a2f5fa341f9e748386c0d61a8180ec"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_m3.py",
+      "sha256": "5f5515c370a2316cf077bfc41c2b5313b8950b632183eb14053b3012d85b6a5f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_m4.py",
+      "sha256": "ef0187d35a79a1245f174b8729f327fb62919ab9b3333cc4067afa017eec3472"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_m5.py",
+      "sha256": "37fefb4ce5f94c7401763e056fbe6acef0622592781c32e073ea6caa36cad433"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_meta_schema.py",
+      "sha256": "fe5e94a19bdc888300e0a3608197dc1b4bd57d9dd2630dc561e5235d6f16afe6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_neural.py",
+      "sha256": "bc673c99209426788f4c32e93e41459d1aa197b8306a166cec1db402f5d1a115"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_opportunity.py",
+      "sha256": "bd5949ba62ae31fda2e96a57b3f4e928fdaeb6e70518b4cec64daebbe73cf275"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_opportunity_data.py",
+      "sha256": "a69c9bf8ad77c4bf020d361339a9e9b0434ec3538fb83dcb4c31cb9f9fc52518"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_paired_campaign.py",
+      "sha256": "1269fa846cfbf0f010424fc908cd0634a9cae9bfc0181f9989ed28ac82ac3a53"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_patrol_timing.py",
+      "sha256": "ea80d5942701dc7c853666227c962c13751746576ac9d75c62d307cfca0795fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_queue_diagnostics.py",
+      "sha256": "19acb6b7959a3627fd4bea6ac58f8916b871bf1b0ed6d7af97dd016c892dae51"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_relations.py",
+      "sha256": "2056e48bb6f1d1313cff6eedcba93ce552ba8b4e22f28e70cf0ab0d270a08c2d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_revisit.py",
+      "sha256": "ea78b5ec58ceb700381f3625a22fdc2b18a6fa083075eeacd46fa2996286914f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_robust_timing.py",
+      "sha256": "9268f59e457f42ed0b1e4e1f29acd8296c338eeaf32dec0ca95fca1fab044bd5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_rsi_campaign.py",
+      "sha256": "0184ee45d2d9892185e4990b6d30f57ca1d82796c68090871031a61c6b98bd7f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_stress.py",
+      "sha256": "56aa3eab36855227af2307b4e96048a72cc0f27e9339374b1380cac4000f3734"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_timing_learning.py",
+      "sha256": "d76ac87d5038d4cfe1ca617ad59edc2019ca9eece0eea2d59b5c2a7aa940ece1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_timing_semantics.py",
+      "sha256": "481ce4dd42e5d73934c8251acc8711e2fc372a0d177ec39c0e6ee1e17b469463"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_timing_skill.py",
+      "sha256": "a9d86f0d1392b0a3d60d3024ac6f5a26617aed562fccfac70e43f837b73887a6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_timing_skill_features.py",
+      "sha256": "e2491e592989048e9961834abb41026f33dc151dbab911d648f950b4c9dde83f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_versions.py",
+      "sha256": "bd6d0a24f35e05a570791ccfd073e80c062926c4d6ba36c6672797cfe918d4db"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6/tests/test_workflow.py",
+      "sha256": "59b0fc95335823ca725db2711917e7d4ad268833788a45c403560ae982f5f833"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/source-manifest-v6.json",
+      "sha256": "62e9e78d8467032581703cb4c3522633c8b1bdb0c185cd9911fd359bd3719622"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6.tar.gz",
+      "sha256": "036d9ae1e91c17ef2ce015531da052a7cc2570d6062b7b64a7f415ec7dacf141"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F-campaign-execution-review-v6.json",
+      "sha256": "0ad3ef948dcb13f57bbaf4478ddd6a9cc93c4ada427c07be1bc2ad34d3d2b48c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/gate-v6/full-tests.json",
+      "sha256": "2b1297a0aa485ebc9a959d91724210f9aec41486f89ef42a8907204c111e843a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/historical-identities.json",
+      "sha256": "7a5b835844110703893805cb007a80b80a9c628f4995b7a9d7f3440ef1b62361"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F0/complete.json",
+      "sha256": "2dd5663b2f07f2579ddbf72e7259d8bf77f9d9c378203a9faf8643a5cb05b72e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/source-manifest-v3.json",
+      "sha256": "96da6a50957aa627f3eb40366ac74fff5af6efb62809dbbdf3e6762d772941cc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F0-independent-result-audit.json",
+      "sha256": "fd66948be5723ddd74a3e8794047eea54103d44b6d36855804a3dccc56ea55c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261028-m111/frozen-estimator.pt",
+      "sha256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/models/Qwen3-8B-b968826d/verified_manifest.json",
+      "sha256": "a1a327b7aee47f77c9348796bcb2d459d8792a8bc6644339b713668528af4361"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-0/selected.pt",
+      "sha256": "c7cee69fd196119d92bcba6e0682b8e2acec309e67faa5875e29936bbfef6691"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-1/selected.pt",
+      "sha256": "0dbb7fc64123a9cb01c83094b430866b74da57091e10e9c0ceec55a961b901ab"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-2/selected.pt",
+      "sha256": "a69125f186c6026116185ae61654e5f09fa8960e158f68e1f15c47c636d1157f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1-search-v6-submitted.sbatch",
+      "sha256": "ef1647520a9b281b5ef26e519cec36d2477ae0fa70e374d70a96f723fc2e428b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1-search-v6-held-job.txt",
+      "sha256": "508e99284fdd0cec9948c7ce1a604d1908302c6894443998a277486b41148738"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/campaign-resource-envelope.json",
+      "sha256": "82a3257f0f53d24ce4c0dc5c59e9b0fccd45827f0e118fee3501c9d028cbe61d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/prompt-profile-v6/complete.json",
+      "sha256": "4a69853b4e8d7d0c551aae6357711326f3cbd30fb9cb6cf449d15cccb1d1e7c1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F-campaign-independent-spec-review-v6.json",
+      "sha256": "23b481a3a1431db33a6cf6a5f590d04f43bf85a95e2c557d95be3cf583cbd5aa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F-campaign-independent-standards-review-v6.json",
+      "sha256": "1e1fbfae724d0aed0d5f8ba3802565fb5155cdf65e4dc40052d9525ec5d5e5a3"
+    }
+  ],
+  "initial_held_job_id": "130943",
+  "run_root": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f",
+  "created_unix": 1793454947.8998587
+}

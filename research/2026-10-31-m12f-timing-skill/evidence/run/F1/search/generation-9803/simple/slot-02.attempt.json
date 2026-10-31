@@ -1,0 +1,42 @@
+{
+  "slot": 2,
+  "generation_seed": 98030202,
+  "initial_parent": {
+    "schema_version": "timing-skill-v1",
+    "rules": [
+      {
+        "all": [
+          {
+            "field": "professional_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "professional_signal",
+            "op": "ge",
+            "value": "kind_threshold"
+          },
+          {
+            "field": "already_alarm",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "lead_s",
+            "op": "gt",
+            "value": 0
+          },
+          {
+            "field": "evidence_margin",
+            "op": "positive",
+            "value": 0.05
+          }
+        ]
+      }
+    ],
+    "default_action": "CONTINUE_TOUR"
+  },
+  "generator": "random_program",
+  "prior_only": false,
+  "one_opportunity_consumed": true
+}

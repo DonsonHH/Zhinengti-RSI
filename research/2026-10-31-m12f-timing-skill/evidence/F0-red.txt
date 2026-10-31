@@ -1,0 +1,21 @@
+test_timing_skill (unittest.loader._FailedTest.test_timing_skill) ... ERROR
+
+======================================================================
+ERROR: test_timing_skill (unittest.loader._FailedTest.test_timing_skill)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_timing_skill
+Traceback (most recent call last):
+  File "C:\Users\Donson\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Donson\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Donson\Documents\ChatGPT\Renly\tests\test_timing_skill.py", line 3, in <module>
+    from patrol_rsi.timing_skill import TimingSkill
+ModuleNotFoundError: No module named 'patrol_rsi.timing_skill'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

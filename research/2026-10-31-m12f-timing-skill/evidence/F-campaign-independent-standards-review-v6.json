@@ -1,0 +1,86 @@
+{
+  "review_axis": "standards_reliability_schema",
+  "baseline": "39d06ce5edb4dc7f7fff18bedc76909350a946d4",
+  "approved": true,
+  "approved_scopes": [
+    "F1_search",
+    "F1_validation",
+    "F1_final",
+    "F2_adapt",
+    "F2_validation",
+    "F2_final"
+  ],
+  "source_archive_SHA256": "036d9ae1e91c17ef2ce015531da052a7cc2570d6062b7b64a7f415ec7dacf141",
+  "source_snapshot": ".work/m12f/code-v6",
+  "reviewed_input_SHA256": {
+    "study": "05b2b575722736fd1f63b1fa55e12d5ad2dd026851e24f56aef19a71445c076f",
+    "cases": "a40998b00a9056af09cd0320959466b7f8b22a0bbf179ac4b6dcac433592f0fc",
+    "prompts": "7cd000f2c4bb4971909be37a872a3d163eda683f394440ade75a44fcb7a21c12",
+    "source_manifest": "62e9e78d8467032581703cb4c3522633c8b1bdb0c185cd9911fd359bd3719622",
+    "history": "7a5b835844110703893805cb007a80b80a9c628f4995b7a9d7f3440ef1b62361"
+  },
+  "blocking_findings": [],
+  "actual_gate": {
+    "receipt_path": "research/2026-10-31-m12f-timing-skill/evidence/run/gate-v6/full-tests.json",
+    "receipt_SHA256": "2b1297a0aa485ebc9a959d91724210f9aec41486f89ef42a8907204c111e843a",
+    "tests": 341,
+    "F_test_ids": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_root": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/code-v6",
+    "test_sources_match_reviewed_manifest": true
+  },
+  "tokenizer_profile": {
+    "receipt_path": "research/2026-10-31-m12f-timing-skill/evidence/run/prompt-profile-v6/complete.json",
+    "receipt_SHA256": "4a69853b4e8d7d0c551aae6357711326f3cbd30fb9cb6cf449d15cccb1d1e7c1",
+    "neural_inference": false,
+    "model_generation_calls": 0,
+    "empty_experienced_tokens": 5974,
+    "two_history_experienced_tokens_after_trim": 5921,
+    "all_four_professions_retained": true,
+    "prior_only_cards_empty": true
+  },
+  "verified": {
+    "all_archive_manifest_snapshot_members": 473,
+    "all_member_hashes_match": true,
+    "independent_lightweight_tests": {
+      "run": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "Torch_imported": false
+    },
+    "F0_validated_core_all4_hashes_unchanged": true,
+    "actual_F0_parity_candidates": 298152,
+    "actual_F0_charged_known_episodes": 20,
+    "F0_independent_audit_matches_completed_receipt": true,
+    "future_seed_groups_disjoint_from_historical_registry": true,
+    "strict_parser_and_paired_finite_metric_contracts": true,
+    "prior_only_public_experience_and_acceptance_feedback_isolated": true,
+    "global_attempt_reservations_and_terminal_failed_call_receipts": true,
+    "locked_generation_and_global_numeric_source_registry": true,
+    "evaluation_cache_inputs_defensively_copied_and_probe_contract_explicit": true,
+    "prefix3_snapshots_deep_copied": true,
+    "unchanged_meta_protocol_cannot_be_accepted_as_update": true,
+    "selection_and_validation_receipts_sealed_before_confirmation_and_rechecked": true,
+    "F2_final_exact_serialized_policy_lookup_and_four_seed_aggregation": true,
+    "F1_registered_final_claim_requires_same_claim_in_validation_and_final": true
+  },
+  "conditions": [
+    "Actual immutable campaign identity must bind this archive, manifest, study, cases, prompts, history, model weights/manifests, F0 proof/audit, this review and the passing v6 gate.",
+    "Each actual held Slurm batch must match reviewed wrapper bytes and retain its exclusive mode/trial/batch launch claim; no free retry or rescue allocation.",
+    "Honor all source/safety/resource stops and frozen caps:75 model calls,6000 episode reservations including20 F0,4 GPU allocations,21600 GPU seconds,2400 allocated CPU minutes,2 concurrent allocations and6GB new storage.",
+    "F1 confirmation must consume sealed three-repeat development mappings; final opening requires the registered validation gate. F2 requires the registered F1 mechanism and resource gates, separate reset partitions, and its own validation gate before final.",
+    "Preserve raw receipts, actual cache/attempt distinctions and negative results. This source approval does not certify task, experience, tool or meta gain."
+  ],
+  "review_activity": {
+    "SSH": false,
+    "jobs_submitted": false,
+    "model_generations": 0,
+    "new_physics": false,
+    "source_edits": false,
+    "only_write": "this review artifact"
+  },
+  "created_utc": "2026-10-31T13:49:29.306142+00:00"
+}

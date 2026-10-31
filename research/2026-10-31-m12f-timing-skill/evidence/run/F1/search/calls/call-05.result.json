@@ -1,0 +1,8 @@
+{
+  "raw_response": "{\n  \"diagnosis\": \"The initial skill is based on professional_signal and evidence_margin, but it lacks a rule that triggers CHECK when there's a high thermal_disagreement and a low inspection_age_ratio, which could indicate an urgent issue that needs early detection.\",\n  \"skill\": {\n    \"schema_version\": \"timing-skill-v1\",\n    \"rules\": [\n      {\n        \"all\": [\n          {\n            \"field\": \"professional_available\",\n            \"op\": \"eq\",\n            \"value\": true\n          },\n          {\n            \"field\": \"thermal_disagreement\",\n            \"op\": \"ge\",\n            \"value\": 0.1\n          },\n          {\n            \"field\": \"inspection_age_ratio\",\n            \"op\": \"lt\",\n            \"value\": 0.5\n          },\n          {\n            \"field\": \"lead_s\",\n            \"op\": \"gt\",\n            \"value\": 0\n          },\n          {\n            \"field\": \"evidence_margin\",\n            \"op\": \"positive\",\n            \"value\": 0.05\n          }\n        ]\n      }\n    ],\n    \"default_action\": \"CONTINUE_TOUR\"\n  },\n  \"expected_effect\": \"This skill introduces a new rule that triggers CHECK when there is a high thermal_disagreement and a low inspection_age_ratio, allowing for earlier detection of potential issues without unnecessary detours.\"\n}",
+  "input_tokens": 6002,
+  "output_tokens": 287,
+  "generation_s": 17.684298527427018,
+  "dropped_last_cards": 0,
+  "prompt_SHA256": "2d496b6dc783dbd7c08fde7972208e0a84380d43d8a97d837ee76901fbeebb1c"
+}

@@ -1,0 +1,8 @@
+{
+  "raw_response": "{\"diagnosis\": \"The proposed skill should focus on detecting anomalies in cooling systems by leveraging the pod_flow_deficit and professional_signal fields to trigger inspections earlier.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"pod_flow_deficit\", \"op\": \"gt\", \"value\": 0.5}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill triggers a CHECK earlier for cooling systems with significant pod_flow_deficit and sufficient professional_signal, improving anomaly detection without unnecessary detours.\"}",
+  "input_tokens": 5933,
+  "output_tokens": 220,
+  "generation_s": 14.335058245807886,
+  "dropped_last_cards": 1,
+  "prompt_SHA256": "f4202c41ff1d7b82d10d4985f3edf7ee2c08f2711054ec16f2eaed2bd714da46"
+}

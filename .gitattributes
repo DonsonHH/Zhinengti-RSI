@@ -11,3 +11,8 @@
 *.psv text eol=lf
 /.gitattributes text eol=lf
 /.gitignore text eol=lf
+
+# Hash-bound experiment receipts and deployed audit sources retain original bytes.
+/research/2026-10-31-m12f-timing-skill/** -text -whitespace
+/scripts/audit_m12f_actual.py -text whitespace=cr-at-eol
+/scripts/audit_m12f_prompts.py -text whitespace=cr-at-eol

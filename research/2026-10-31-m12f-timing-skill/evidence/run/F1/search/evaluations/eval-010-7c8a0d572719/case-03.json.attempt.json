@@ -1,0 +1,55 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "coldplate_fouling",
+    "duration_s": 180,
+    "fault_start_s": 885,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "professional_signal",
+              "op": "ge",
+              "value": "kind_threshold"
+            },
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "importance",
+              "op": "ge",
+              "value": 0.75
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0.1
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793455611.4794297
+}

@@ -1,0 +1,482 @@
+{
+  "protocol": "M12F-TimingSkill-Study-v1",
+  "baseline": "39d06ce5edb4dc7f7fff18bedc76909350a946d4",
+  "status": "frozen_for_independent_review_before_calls",
+  "cases_SHA256": "a40998b00a9056af09cd0320959466b7f8b22a0bbf179ac4b6dcac433592f0fc",
+  "goal": "Separately test taskincrement, causal-public-experience-plus-feedback treatment, and improver-method transfer; no PPO/prediction superiority universal prerequisite.",
+  "historical_boundaries": "M12D/M12E/oldE2 source/results/models/tests unchanged; oldE2NO-GO. Only knownE1development reread, never oldprivatefinal. No1280process rebuild/no newneuraltraining/no24callformatrerun.",
+  "safety_core": [
+    "originalM9physics",
+    "18heterogeneousqualifiedownedexecutors",
+    "route/service/access",
+    "oneglobalCHECK",
+    "fixed60scooldownstudycontract",
+    "originalfullreturn",
+    "originaleffectivequalifiedmeasurement",
+    "exactinitial-terminalrevisit",
+    "hiddenlabelsandfinalaccess"
+  ],
+  "skill_space": {
+    "language": "TimingSkill-v1",
+    "OR_rules_max": 3,
+    "AND_predicates_each_max": 6,
+    "depth": 2,
+    "numeric_domains": {
+      "professional_signal": [
+        0,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "inspection_age_ratio": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "direct_age_s": [
+        0,
+        30,
+        60,
+        120,
+        300,
+        600
+      ],
+      "direct_age_ratio": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "estimate_age_s": [
+        0,
+        15,
+        30,
+        60,
+        120
+      ],
+      "thermal_disagreement": [
+        0,
+        0.025,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "prior_disagreement": [
+        0,
+        0.025,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "pod_thermal_signal": [
+        0,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "pod_flow_deficit": [
+        0,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "pod_service_gap": [
+        0,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "lead_s": [
+        0,
+        15,
+        30,
+        60,
+        120,
+        300
+      ],
+      "shift_s": [
+        0,
+        5,
+        15,
+        30,
+        60,
+        120
+      ],
+      "completion_cost_s": [
+        0,
+        15,
+        30,
+        60,
+        120,
+        300
+      ],
+      "importance": [
+        0.25,
+        0.5,
+        0.75,
+        1
+      ]
+    },
+    "boolean_fields": [
+      "already_alarm",
+      "direct_available",
+      "direct_is_qualified",
+      "direct_reading_normal",
+      "estimate_available",
+      "ever_checked",
+      "professional_available",
+      "quota_available"
+    ],
+    "special_margin_coefficients": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.25,
+      1
+    ],
+    "default": "CONTINUE_TOUR",
+    "semantics": "Rules admit CHECK over raw hard-legal EXTRA candidates. No initialE1heuristic outsideSkill. AnyFALSE/unknown predicate blocksitsAND;None not0/normal. Sharedrotation firstadmittedagent, rankurgent unlessfrozenPPOtoolcontrast.",
+    "initial_skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "professional_signal",
+              "op": "ge",
+              "value": "kind_threshold"
+            },
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "lead_s",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0.05
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    },
+    "manual_information_skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "professional_signal",
+              "op": "ge",
+              "value": "kind_threshold"
+            },
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "lead_s",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0.05
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "direct_age_s",
+              "op": "ge",
+              "value": 120
+            },
+            {
+              "field": "inspection_age_ratio",
+              "op": "ge",
+              "value": 0.5
+            },
+            {
+              "field": "lead_s",
+              "op": "ge",
+              "value": 60
+            },
+            {
+              "field": "shift_s",
+              "op": "le",
+              "value": 30
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "direct_age_s",
+              "op": "is_missing",
+              "value": null
+            },
+            {
+              "field": "inspection_age_ratio",
+              "op": "ge",
+              "value": 0.5
+            },
+            {
+              "field": "lead_s",
+              "op": "ge",
+              "value": 60
+            },
+            {
+              "field": "shift_s",
+              "op": "le",
+              "value": 30
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    },
+    "not_editable": "No arbitrary code/taskIDs/absoluteclock/seed/faultphase/labels, no kernel/model/evaluator/budget modification; rankingtool fixedoutsidegeneratedskill.",
+    "known_alarm_semantics": "No compulsoryalarmveto in safetycore. If checking knownpublicalarm labelrecheck; evaluatorcountsfirstconfirmationperphysicalsegment once, publicnewalert/persistent/recovery separately. No firstdiscoverycreditfromduplicateknownconfirmation."
+  },
+  "F0": {
+    "semantic_regressions": "Actualobserver+measured_anomaly qualifiedpositive/recovery coupling; originalevaluate_episode repeatedalarm sameevent onlyonce.",
+    "same_input_parity": "InitialAST vsunchangedE1gate onallarchivedE1publiccandidateinputs andactualCHECKpublicsnapshots. Preserveold source, not rerunformat or infercausalnewgain.",
+    "closed_loop_parity": "Runinitialskillon20knowncases; canonicalactionhash andoriginalmetrics equalE1urgency (excludingdecisionCPU/inferencetime). Source/pureoutputrecorder mayaddmetadata, not semantic changes.",
+    "engineering_environment_cap": 60,
+    "new_physical_processes": 0,
+    "GPU": 0,
+    "LLM_calls": 0,
+    "cost_profile": "ActualinitialsameinterpreterCPUtime beforeGPUlaunch; profileuncertainty disclosed, no outcome-basedbudget adjustment.",
+    "engineering_correction_rule": "Atmost3bounded20-case engineering passes; onlyrestore exactarchivedE1behavior/sourceimplementation,never alterinitialAST/oldresults/casechoice. Allattempts chargedinsideF1globalcap,eachsnapshot/rootseparate,nosilentoverwrite. Not scientific performance retries."
+  },
+  "F1": {
+    "generation_repeats": [
+      9801,
+      9802,
+      9803
+    ],
+    "development": "known20cases,firstoriginalmanifestphaseperfamily; not independentnewtask evidence",
+    "independent_validation": "35020/35021,5physicalprocesses/seed2noises; allskillsselectedbeforegeneration",
+    "final": "35040..35043,onlyifF1validationgate below passes; one opening",
+    "groups": {
+      "simple_search": {
+        "slots": 3,
+        "model_calls": 0
+      },
+      "prior_only": {
+        "slots": 3,
+        "model_calls": 3
+      },
+      "experienced_fixed": {
+        "slots": 3,
+        "model_calls": 3
+      }
+    },
+    "references": [
+      "Tour",
+      "human_professional",
+      "initial_E1_skill",
+      "manual_information",
+      "simple3",
+      "prior3",
+      "experienced3",
+      "experienced3_PPOtool"
+    ],
+    "PPO_tool_control": "EXACTexperiencedselectedskill withPPOinsteadurgent. No additionalproposal or best-toolselection; secondarytoolcausalcontrast, never anentrygate.",
+    "treatment": "Sameinitialparent EVERYslot/bothLLMgroups; samecommon system/schema/featuresemantics/example, matchedgenerationseeds/order. Ownpast2proposalJSON/schema-errors allowedboth. PriorgetsNOtrajectory/metrics/selected-parent/acceptancebits. Experiencedgets causalpubliccards+allowedaccept/rejectbits. Contrast is combinedexperience+feedback package, not isolatedrawtrajectory effect.",
+    "seed_formula": {
+      "LLM_both_groups": "g*10000+100+s,s0..2",
+      "simple": "g*10000+200+s,s0..2"
+    },
+    "model_order": "For eachrepeat andslot: priorcall thenexperiencedcall; evaluation feedback onlytoexperienced nextprompt; no extra generationretry.",
+    "nominal_per_repeat_environment_caps": {
+      "development": 280,
+      "validation": 160,
+      "final": 320,
+      "total": 760
+    },
+    "all3_nominal_environment_cap": 2280,
+    "fixed_reference_identity": "initial_E1_skill IS exactTimingSkill.initial_e1/urgent, sharedstartbaseline, not a distinctlegacyexecutor. Tour=emptyTimingSkill/urgent;manualinformation=declaredAST/urgent;human usesoriginalhumanexecutor. Cacheincludes executor+ranker+skill+semantic_source+models+cases.",
+    "cache_scope": "Oneimmutableevaluatorcache perpartition,sharedallgroupsANDgenerationrepeats; searchhistory/cardsnotshared. Prioronlygetsownqueryneutralstatus, never cachedothergrouphistory. No cachecrosspartitions.",
+    "strict_actual_bound_including_F0": "Sharedfixedrefs give dev<=680unique,val<=320,final<=640;plusatmost60F0engineering=1700,within2280actualcap. No freeparityexecutions."
+  },
+  "F2": {
+    "entry": "F0allchecks AND explicitmechanism_gate AND actualresource/sourcechecks. NOT positiveF1/PPO/prediction prerequisite. A negativeF1validation closesF1final;independentpreplannedF2 maystillrunifmechanismgatepassed,startinginitialskillandnewpartitions,nobudgetextension/validationtuning.",
+    "generation_repeats": [
+      9901,
+      9902,
+      9903
+    ],
+    "partitions": "F2_meta36000/1;adapt36100/1;validation36120/1;final36140..43.5processes/seed2noise.",
+    "per_repeat": {
+      "fixed_experience_slots": 8,
+      "fixed_prefix3_saved": true,
+      "meta_protocol_attempts": 1,
+      "old_inner_slots": 2,
+      "new_inner_slots": 2,
+      "fresh_meta_slots": 3,
+      "prior_only_slots": 3,
+      "simple_slots": 8,
+      "model_call_cap": 19
+    },
+    "meta_sequence": "Runincumbent2first;proposeprotocolusingonlycompletedinitial/incumbentpubliccards+acceptbits;candidate2fromsameinitial/emptyhistory withmatchedseeds. Retainonlyifstrictlybetter fixedhierarchicaldevelopmentkey+safety. Invalidprotocol=incumbentclone,still2candidate slots,norepair/resample.",
+    "protocol_container": "ReuseControlledImprover/Improver;allowedwrite diagnostics1..3/order,memory,3fixedinstructiontemplates,generatorqwen_once/random_program,dedupexact_version/canonical_rule_order. Acceptancefixedstrict_improvement,failurefixedkeep_parent; rejectotherchanges. NewTimingSkillproposalwrapper,notoldPatrolProgramparser.",
+    "transfer": "Onlyschema-validatedretainedprotocol; taskskillinitialE1,experience/history/proposalarchive/outcomes/cache reset fornewadapt. Evaluationcacheemptyonceperpartition,sharedinsideold/new/searchgroups,never acrosspartitions.",
+    "references": [
+      "Tour",
+      "human_professional",
+      "initial_E1_skill",
+      "manual_information",
+      "simple8",
+      "prior3",
+      "fixed_experience3",
+      "fixed_experience8",
+      "meta3",
+      "meta3_PPOtool"
+    ],
+    "primary": "Meta fresh3 versusfixedprefix3, samefreshproposalopportunities; fullmeta preparation up to5calls+env separatelycharged. Fixed8secondarysame8callcapbutmorefreshopportunities;prior3/random8/strongmanualcontrols retained.",
+    "PPO_tool_control": "ExactfrozenmetaselectedskillwithPPO ranker; no reselection,secondarynot gate.",
+    "seed_formula": {
+      "old_new_inner": "g*10000+1000+s,s0..1 identical",
+      "protocol": "g*10000+2000",
+      "fixed8_meta3": "g*10000+3000+s,fixeds0..7,metas0..2",
+      "prior3": "g*10000+4000+s",
+      "simple8": "g*10000+5000+s"
+    },
+    "per_repeat_environment_caps": {
+      "meta": 100,
+      "adapt": 540,
+      "validation": 200,
+      "final": 400,
+      "total": 1240
+    },
+    "all3_environment_cap": 3720,
+    "all3_model_call_cap": 57,
+    "cache_identity": "Partition/repeat-scopedimmutableevaluationstore;exactsource/weights/noise/cases+executor+ranker+skill. InitialreferenceisSkillinitialnotlegacyE1alias; originalhumanmodeunique. SamePGdifferentranker/mode MUSTNOTcollide."
+  },
+  "mechanism_gate": {
+    "F0_pass": true,
+    "per_each_F1_repeat_prior_valid_min": 2,
+    "per_each_F1_repeat_experienced_valid_min": 2,
+    "out_of_slots": 3,
+    "per_each_F1_repeat_experienced_behavior_changed_min": 1,
+    "behavior": "Bothsame-inputpublicprobe decisiondifference and at least1actualcanonicalactiontrajectorySHA difference versusinitialonknowncases; excludeCPU/inferencetime/JSONexplanation. Syntax-onlydifference insufficient.",
+    "public_feedback": "Atleast1actionable causalsnapshot->lateractualqualifiedmeasurement card inEACH4professions; timestampsordered,existingchannels/provenance, promptforbiddenfieldszero. Eachprofession must also appear in at leastone actual F1 experienced-model prompt aftertokenclipping; available-but-neverexposed cards do not pass.",
+    "safety": "Allactualpoliciespass originalqualification/quota/fullreturn/initial-tail/externalmeasurement; anyruntime/source/safetyfailure stops, not a performancefailure."
+  },
+  "random_sampler": "np.default_rng(candidate_seed); rulescountuniform0..3;eachANDcountuniform1..6;fieldsfromsortedregisteredfields+evidence_margin;chooseoperator/valueuniformfromexactfielddomain,includingexplicitmissingness. AlwaysparsewithsameTimingSkillvalidator; duplicates/contradictions/no-opconsumeoriginalslot,noresampling. Professional-signal values also include the existing kind_threshold reference on each numeric comparison. No resampling.",
+  "experience_retrieval": "Whitelisted5diagnosticfamiliescoverage/professional_evidence/efficiency/thermal_disagreement/novelty;memorynone/recent/best_and_failures. Poolonlyowncompletedprogramruns+initialbaseline. Selectpublicobservedalert/normalcontrast perprofession,breaktiesbyknownmeasurementage/time/task;nothiddeneventeligibility. Atmost8cards/twoownpreviousprograms. Dropendcardsdeterministicallyiftokencap,neverschema/parent;recordtruncation. No hiddenlabels/scores/Oracle/onsets/scenarios/seeds/oldfinal inprompts. Initialbaseline publicviews are the current-task evidence for experienced methods. Protocolmemory chooses candidate-run feedback/cards (none/recent2/bestaccepted+rejected),separatefrom always-available ownlast2neutralproposal/schemahistory. Prior-only disablesALLrunviews andacceptbits. No selected-parent leak: parentalwaysinitial. Fixedcardorder: one available observed-alert(or normal if no alert) perprofession first, inthermal/electrical/cooling/controlorder, thennormalcontrasts. Dropendcards only; this protectsprofessioncoverageundertokenlimit,not performance selection.",
+  "public_feedback_limit": "Accept/rejectbit allowedexperienced/metaonly. No numericmiss/censoredwait/hiddenrankinglabel inprompt. Schemaerrorsownoutput allowedall; newalert,persistentrecheck,recovery andactualschedulecost arepublic.",
+  "evaluation": {
+    "unit": "Meanpairednoise/process,then equal5physicalprocesses/seed,then equalseeds. Waitwithincondition originalconsequenceweightedcensor; onlyeventbearingprocesses waitdefined; healthyretainedincost/miss/safety.3modelrepeats reuse2val/4finalseedgroups,not6/12independentenvironments.",
+    "inner_selection": "Samehierarchicalmacroasconfirmation. CandidateeligibleiffallCURRENT-PARTITIONseedmiss<=initialseedmiss andsafety;chooselexicographic(macro_miss,macro_wait,meanCHECK,meanwalk). Strictlybetterarchivegetsacceptedbit; initialparentremainsconstantinprompts.",
+    "strict_gain": "Forallconfirmationseedsmiss_candidate<=baseline AND (macro_misslower OR(samemiss AND relativewaitgain>=5%) OR(samemiss ANDsamewait ANDCHECKmean>=5%lower ANDwalknotincrease)). Cost-onlygainlabelledas such, never anomalyclaim.",
+    "nonregression": "Forallseedsmiss<=baseline AND(macro_misslower OR(samemiss ANDmacro_wait<=baselinewait)). No positivegainrequirement here.",
+    "F1_TaskGO": "Experienced3 strictgainversusTour,human_professional,initial_E1_skill,manual_information,simple3 inEVERY3repeat;allsource/safety/resourcegates.",
+    "F1_ExperienceGO": "Strictgainversusprior3 inEVERY3repeat ANDnonregressionversusTour/human/initial/manual inEVERYrepeat. Claimonlycombinedexperience+acceptancefeedbackeffect.",
+    "F1_final_open": "All3developmentselectedmappingsfrozen beforevalidationgeneration;validationTaskGO ORExperienceGO plusallsafety/source/resourcechecks ->onefinalopenforall8refs. OtherwiseF1finalsealed,reportnegative;no reselection.",
+    "F2_MetaGO": "Strictgainmeta3versusfixed3 inEVERY3repeat ANDnonregressionversusTour/human/initial/manual/simple8;allsource/safety/resourcechecks. Fixed8secondaryreported.",
+    "F2_final_open": "All3searches+validationexactly10policySpecsperrepeatsealed;MetaGOvalidationpass andsource/safety/resource ->onefinalopenforall10refs. Failurefinalsealed. No Tourmaskingperformance,reselectionorrerescore.",
+    "confirmation": "Finalmust independentlyrepeattherelevantGOformula;reporttask,experience,meta separately. No poolingevents/noise/modelrepeatsasindependentrooms. Smallpilotpointgatesnotpopulationguarantee.",
+    "numeric_ties": "Absolute1e-9 tolerance for metric equality, no-more-misses and lexicographic innerselection; relative5%gain permits1e-9 numeric tolerance. Undefinedwaits: bothNone=equal, onlyoneNone=no waitgain/nonregression. A zeroorundefined baselinewait cannot yieldrelativewaitgain; zeroCHECKbaseline cannotyieldrelativeCHECKgain. Cost-onlygainrequiresmiss/waittie,>=5%CHECKreduction andwalknonincrease."
+  },
+  "resources": {
+    "all_real_model_calls_cap": 75,
+    "F1_model_calls_cap": 18,
+    "F2_model_calls_cap": 57,
+    "input_per_call": 6144,
+    "output_per_call": 1024,
+    "per_call_timeout_s": 90,
+    "GPU_allocations_cap": 4,
+    "GPU_minutes_each_cap": 90,
+    "GPU_total_seconds_cap": 21600,
+    "GPU_soft_stop_s": 5280,
+    "GPU_type": "oneV100S32GB4gpu",
+    "CPU_each_GPU": 4,
+    "RAM_GPU_GB": 48,
+    "CPU_job_cores": 2,
+    "CPU_RAM_GB": 8,
+    "CPU_job_minutes_cap": 60,
+    "max_compute_allocations_parallel": 2,
+    "allocated_CPU_minutes_total_cap": 2400,
+    "all_environment_attempts_cap": 6000,
+    "new_storage_bytes_cap": 6000000000,
+    "accounting": "Chargebeforeallattempts;actual+cachehits+logicalreferences separately. AllSlurmstartup/modelverify/load/inference/env/auditincluded. Unknownfailedoutputtokenscharge1024upperbound,notzero. Runtime/source/safetyfailstops,norescueallocation/freecalls.",
+    "budget_revision": "Pre-execution conservative90minallocationenvelope fornewlongerAST/context+environmentloop; old4htextdraftnotexecuted. F0measuredCPUprofile stillrequired;neverextendaftertaskperformance.",
+    "allocation_schedule": "GPU F1 performsdevelopmentsearchonly;3F2GPU allocations performmeta+adaptonly. Independentvalidation/final use2core8GB CPUjobs<=60min: F1validation1job,F1final1conditionaljob,F2validation1job,F2final2conditional20casebatches. Totalmax2Slurmallocationsconcurrent;GPUworkers2spawnedCPUprocesseswithinits4cores. Allgate/staging/auditallocationscharged;no unbudgeted rescue."
+  },
+  "execution_gate": "No realcall/newconfirmationphysics until independent protocol/source review,fullrealTorchgate,newsource+weight+case+promptidentity andactualSlurmscript verifiedwhileheld. F0CPUknownparityscope separatelyreviewed. No new24callpreflight; firsttaskcallsarechargedsearchslots.",
+  "prompt_contract": {
+    "task_envelope_keys": [
+      "diagnosis",
+      "skill",
+      "expected_effect"
+    ],
+    "explanation_max_characters": 1500,
+    "parsing": "Strict whole JSON; no text extraction or repair",
+    "parent": "Initial E1 every slot, including candidate protocol and newtask adaptation",
+    "cards_max": 8,
+    "token_truncation": "Pop last experience card until input<=6144; do not truncate schema/parent. If still oversized stop without model generation; no retry.",
+    "meta": "Full ControlledImprover nested envelope, allowed diagnosis/retrieval/generator/dedup only; acceptance strict_improvement and failure keep_parent."
+  },
+  "generation": {
+    "model_id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "precision": "float16",
+    "attention": "eager",
+    "thinking": false,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "max_new_tokens": 1024,
+    "timeout_s": 90,
+    "verified_manifest_SHA256": "a1a327b7aee47f77c9348796bcb2d459d8792a8bc6644339b713668528af4361"
+  },
+  "dedup_semantics": "exact_version hashes full validatedskill JSON. canonical_rule_order removes duplicate identicalpredicates/rules preserving firstoccurrence/order,never reorders or changes thresholds. Duplicateconsumesslot;no proposalreplacement.",
+  "prompt_templates_SHA256": "7cd000f2c4bb4971909be37a872a3d163eda683f394440ade75a44fcb7a21c12"
+}

@@ -1,0 +1,842 @@
+{
+  "seed": 98010100,
+  "prompt": {
+    "task": "Propose ONE executable TimingSkill to improve inspection timing using only supplied causal public experience. A distinct skill is useful only if its actual CHECK/CONTINUE_TOUR behavior changes.",
+    "common_contract": "Known static layout,18 qualified owned executors,1800s; at most ONE additional check for the whole team. CONTINUE_TOUR continues mandatory work and preserves quota. External original legality,60s cooldown,fullreturn and exactrevisit are immutable. Do not invent observations or read future faults.",
+    "skill_schema": {
+      "keys": [
+        "schema_version",
+        "rules",
+        "default_action"
+      ],
+      "schema_version": "timing-skill-v1",
+      "default_action": "CONTINUE_TOUR",
+      "rules": "0..3 OR rules; each exactly {all:[1..6 AND predicates]}; CHECK iff any complete rule true; otherwise CONTINUE_TOUR",
+      "predicate_keys": [
+        "field",
+        "op",
+        "value"
+      ],
+      "boolean_fields": [
+        "already_alarm",
+        "direct_available",
+        "direct_is_qualified",
+        "direct_reading_normal",
+        "estimate_available",
+        "ever_checked",
+        "professional_available",
+        "quota_available"
+      ],
+      "boolean_ops": {
+        "eq": "literal true/false",
+        "is_missing": null
+      },
+      "kind": {
+        "eq": [
+          "thermal",
+          "electrical",
+          "cooling",
+          "control"
+        ],
+        "is_missing": null
+      },
+      "numeric_fields": {
+        "professional_signal": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1,
+            "kind_threshold"
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "inspection_age_ratio": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "direct_age_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            30,
+            60,
+            120,
+            300,
+            600
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "direct_age_ratio": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "estimate_age_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "thermal_disagreement": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.025,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "prior_disagreement": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.025,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_thermal_signal": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_flow_deficit": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "pod_service_gap": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "lead_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120,
+            300
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "shift_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            5,
+            15,
+            30,
+            60,
+            120
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "completion_cost_s": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0,
+            15,
+            30,
+            60,
+            120,
+            300
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        },
+        "importance": {
+          "op": [
+            "ge",
+            "gt",
+            "le",
+            "lt",
+            "is_missing"
+          ],
+          "thresholds": [
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "missing": "is_missing requires null; numeric comparison with missing is false"
+        }
+      },
+      "evidence_margin": {
+        "op": "positive",
+        "value": [
+          0,
+          0.01,
+          0.05,
+          0.1,
+          0.25,
+          1
+        ],
+        "meaning": "professional_signal*importance*lead_s > value*shift_s; missing terms=false"
+      },
+      "kind_threshold": ".5 for control, .05 otherwise; profession must be known"
+    },
+    "public_feature_meanings": {
+      "professional_signal": "Existing own-profession cue: thermal fused excess/qualified contact/observed flow/qualified verified bias; None when unavailable, not a probability.",
+      "direct_reading_normal": "Available direct channel is on its reference-normal side. Not hidden truth or a guarantee of normality; remote versus qualified explicitly separated.",
+      "direct_is_qualified": "Most recent direct reading is a qualified reference, not merely a remote/model value.",
+      "direct_age_s": "Age of actual direct reading; None means missing. Thermal may be remote or qualified; other roles retain their declared sources.",
+      "estimate_age_s": "Timestamped pure temperature-CVAE invocation age; None when timestamp unavailable. Legacy30s reconstruction only when explicitly requested for verified E1 tapes.",
+      "thermal_disagreement": "Thermal tool difference/20: target rack for thermal, maximum of existing observed/estimated thermal racks in the same public pod otherwise. Not cross-profession uncertainty probability.",
+      "prior_disagreement": "Pure existing temperature-CVAE prior mean versus causal nominal model/20; missing on old tapes without raw prior recorder. Not a fault probability.",
+      "pod_thermal_signal": "Maximum available fused temperature excess in public same-pod thermal tasks; a cross-system cue, not confirmation.",
+      "pod_flow_deficit": "Existing observed same-pod flow deficit; None when not observed.",
+      "pod_service_gap": "Existing per-rack public requested/delivered IT power aggregated over known8-rack pod. Service-gap proxy, not voltage/current or contact-hotspot confirmation.",
+      "inspection_age_ratio": "Public qualified-check age/deadline, including startup age; distinct from direct remote measurement age.",
+      "lead_s": "Earlier completion than continuing protected Tour, from public deterministic route/service model.",
+      "shift_s": "Additional public own-tour schedule shift from optional check, not empirical risk or a safety rule.",
+      "already_alarm": "Already measured public alarm, not hidden truth. Rechecking it is not a new physical-event discovery.",
+      "professional_available": "An actual own-profession cue exists; false makes professional_signal null.",
+      "ever_checked": "At least one qualified check completed.",
+      "quota_available": "True for candidates before the single additional opportunity is consumed.",
+      "estimate_available": "Temperature-CVAE tool output exists; timestamp can still be unknown.",
+      "importance": "Public normalized consequence importance, not a fault probability.",
+      "direct_available": "Actual direct channel exists, including remote readings where explicitly allowed."
+    },
+    "data": {
+      "initial_skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "proposal_history": [],
+      "diagnostics": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+      "experience_cards": [
+        {
+          "decision": {
+            "time_s": 180.0,
+            "task_public_id": "thermal:65",
+            "agent": 7,
+            "features": {
+              "kind": "thermal",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 165.0,
+              "direct_age_ratio": 0.55,
+              "estimate_available": true,
+              "estimate_age_s": 0.0,
+              "thermal_disagreement": 0.27666990701225913,
+              "prior_disagreement": 0.27666990701225913,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.673852636159767,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.550000011920929,
+              "importance": 1.0,
+              "lead_s": 35.0,
+              "shift_s": 60.0,
+              "completion_cost_s": 40.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CHECK",
+            "candidate_finish_s": 220.0,
+            "Tour_target_finish_s": 255.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 255.0,
+            "kind": "thermal",
+            "value": 65.95413445196758,
+            "field": "temperature_c",
+            "unit": "degC",
+            "qualified_role": "thermal",
+            "calibrated": true,
+            "observed_alarm": true,
+            "transition": "new_measured_alert"
+          },
+          "elapsed_to_actual_measurement_s": 75.0
+        },
+        {
+          "decision": {
+            "time_s": 645.0,
+            "task_public_id": "electrical:8",
+            "agent": 12,
+            "features": {
+              "kind": "electrical",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 240.0,
+              "direct_age_ratio": 0.4,
+              "estimate_available": true,
+              "estimate_age_s": 15.0,
+              "thermal_disagreement": 0.028858089839508595,
+              "prior_disagreement": 0.028858089839508595,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.4000000059604645,
+              "importance": 0.8125,
+              "lead_s": 25.0,
+              "shift_s": 45.0,
+              "completion_cost_s": 45.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 690.0,
+            "Tour_target_finish_s": 715.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 715.0,
+            "kind": "electrical",
+            "value": 65.78555912951401,
+            "field": "contact_temperature_c",
+            "unit": "degC",
+            "qualified_role": "electrical",
+            "calibrated": true,
+            "observed_alarm": true,
+            "transition": "new_measured_alert"
+          },
+          "elapsed_to_actual_measurement_s": 70.0
+        },
+        {
+          "decision": {
+            "time_s": 180.0,
+            "task_public_id": "cooling:8",
+            "agent": 14,
+            "features": {
+              "kind": "cooling",
+              "professional_available": true,
+              "professional_signal": 0.673852636159767,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": false,
+              "direct_is_qualified": false,
+              "direct_age_s": 0.0,
+              "direct_age_ratio": 0.0,
+              "estimate_available": true,
+              "estimate_age_s": 0.0,
+              "thermal_disagreement": 0.3687164204122901,
+              "prior_disagreement": 0.3687164204122901,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.673852636159767,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.14166666567325592,
+              "importance": 0.8125,
+              "lead_s": 165.0,
+              "shift_s": 75.0,
+              "completion_cost_s": 60.0
+            },
+            "skill_action": "CHECK",
+            "executed_action": "CHECK_THIS",
+            "team_action": "CHECK",
+            "candidate_finish_s": 240.0,
+            "Tour_target_finish_s": 405.0,
+            "matched_rule_index": 0,
+            "check_intent": "acquire_or_first_confirm"
+          },
+          "measurement": {
+            "time_s": 240.0,
+            "kind": "cooling",
+            "value": 12.774261825057367,
+            "field": "pod_flow_kg_s",
+            "unit": "kg/s",
+            "qualified_role": "cooling",
+            "calibrated": true,
+            "observed_alarm": true,
+            "transition": "new_measured_alert"
+          },
+          "elapsed_to_actual_measurement_s": 60.0
+        },
+        {
+          "decision": {
+            "time_s": 290.0,
+            "task_public_id": "control:9",
+            "agent": 17,
+            "features": {
+              "kind": "control",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 210.0,
+              "direct_age_ratio": 0.35,
+              "estimate_available": true,
+              "estimate_age_s": 20.0,
+              "thermal_disagreement": 0.03701725310134947,
+              "prior_disagreement": 0.7962139864380073,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.3499999940395355,
+              "importance": 0.6875,
+              "lead_s": 20.0,
+              "shift_s": 40.0,
+              "completion_cost_s": 40.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 330.0,
+            "Tour_target_finish_s": 350.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 350.0,
+            "kind": "control",
+            "value": -18.0,
+            "field": "controller_sensor_error_c",
+            "unit": "degC",
+            "qualified_role": "control",
+            "calibrated": true,
+            "observed_alarm": true,
+            "transition": "new_measured_alert"
+          },
+          "elapsed_to_actual_measurement_s": 60.0
+        },
+        {
+          "decision": {
+            "time_s": 255.0,
+            "task_public_id": "thermal:7",
+            "agent": 1,
+            "features": {
+              "kind": "thermal",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 205.0,
+              "direct_age_ratio": 0.6833333333333333,
+              "estimate_available": true,
+              "estimate_age_s": 15.0,
+              "thermal_disagreement": 0.017868618422772896,
+              "prior_disagreement": 0.017868618422772896,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.6833333373069763,
+              "importance": 0.5,
+              "lead_s": 15.0,
+              "shift_s": 25.0,
+              "completion_cost_s": 20.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 275.0,
+            "Tour_target_finish_s": 290.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 290.0,
+            "kind": "thermal",
+            "value": 50.69037503163998,
+            "field": "temperature_c",
+            "unit": "degC",
+            "qualified_role": "thermal",
+            "calibrated": true,
+            "observed_alarm": false,
+            "transition": "normal_check"
+          },
+          "elapsed_to_actual_measurement_s": 35.0
+        },
+        {
+          "decision": {
+            "time_s": 335.0,
+            "task_public_id": "electrical:8",
+            "agent": 12,
+            "features": {
+              "kind": "electrical",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 240.0,
+              "direct_age_ratio": 0.4,
+              "estimate_available": true,
+              "estimate_age_s": 5.0,
+              "thermal_disagreement": 0.02411352703291243,
+              "prior_disagreement": 0.02411352703291243,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.4000000059604645,
+              "importance": 0.8125,
+              "lead_s": 25.0,
+              "shift_s": 45.0,
+              "completion_cost_s": 45.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 380.0,
+            "Tour_target_finish_s": 405.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 405.0,
+            "kind": "electrical",
+            "value": 40.57815218221349,
+            "field": "contact_temperature_c",
+            "unit": "degC",
+            "qualified_role": "electrical",
+            "calibrated": true,
+            "observed_alarm": false,
+            "transition": "normal_check"
+          },
+          "elapsed_to_actual_measurement_s": 70.0
+        },
+        {
+          "decision": {
+            "time_s": 335.0,
+            "task_public_id": "cooling:9",
+            "agent": 15,
+            "features": {
+              "kind": "cooling",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 240.0,
+              "direct_age_ratio": 0.4,
+              "estimate_available": true,
+              "estimate_age_s": 5.0,
+              "thermal_disagreement": 0.003960665236176908,
+              "prior_disagreement": 0.02237263214863816,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.4000000059604645,
+              "importance": 0.78125,
+              "lead_s": 25.0,
+              "shift_s": 45.0,
+              "completion_cost_s": 45.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 380.0,
+            "Tour_target_finish_s": 405.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 405.0,
+            "kind": "cooling",
+            "value": 36.00000000036408,
+            "field": "pod_flow_kg_s",
+            "unit": "kg/s",
+            "qualified_role": "cooling",
+            "calibrated": true,
+            "observed_alarm": false,
+            "transition": "normal_check"
+          },
+          "elapsed_to_actual_measurement_s": 70.0
+        },
+        {
+          "decision": {
+            "time_s": 290.0,
+            "task_public_id": "control:8",
+            "agent": 16,
+            "features": {
+              "kind": "control",
+              "professional_available": true,
+              "professional_signal": 0.0,
+              "already_alarm": false,
+              "ever_checked": true,
+              "quota_available": true,
+              "direct_available": true,
+              "direct_reading_normal": true,
+              "direct_is_qualified": true,
+              "direct_age_s": 210.0,
+              "direct_age_ratio": 0.35,
+              "estimate_available": true,
+              "estimate_age_s": 20.0,
+              "thermal_disagreement": 0.03096548011452427,
+              "prior_disagreement": 0.03096548011452427,
+              "pod_thermal_signal": 0.0,
+              "pod_flow_deficit": 0.0,
+              "pod_service_gap": 0.0,
+              "inspection_age_ratio": 0.3499999940395355,
+              "importance": 0.8125,
+              "lead_s": 20.0,
+              "shift_s": 40.0,
+              "completion_cost_s": 40.0
+            },
+            "skill_action": "CONTINUE_TOUR",
+            "executed_action": "CONTINUE_TOUR",
+            "team_action": "CONTINUE_TOUR",
+            "candidate_finish_s": 330.0,
+            "Tour_target_finish_s": 350.0,
+            "matched_rule_index": null
+          },
+          "measurement": {
+            "time_s": 350.0,
+            "kind": "control",
+            "value": 0.0,
+            "field": "controller_sensor_error_c",
+            "unit": "degC",
+            "qualified_role": "control",
+            "calibrated": true,
+            "observed_alarm": false,
+            "transition": "normal_check"
+          },
+          "elapsed_to_actual_measurement_s": 60.0
+        }
+      ],
+      "acceptance_feedback": []
+    },
+    "output_envelope": {
+      "diagnosis": "short string,1..1500 chars",
+      "skill": "exact TimingSkill object",
+      "expected_effect": "short string,1..1500 chars"
+    },
+    "response_keys": [
+      "diagnosis",
+      "skill",
+      "expected_effect"
+    ],
+    "format_example": {
+      "diagnosis": "The initial reference is supplied in data.",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "expected_effect": "This is the initial reference only, not an improved answer."
+    }
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn exactly one JSON object with the requested response_keys. Follow the bounded typed schema. No text outside JSON. Use only supplied public evidence.<|im_end|>\n<|im_start|>user\n{\"task\": \"Propose ONE executable TimingSkill to improve inspection timing using only supplied causal public experience. A distinct skill is useful only if its actual CHECK/CONTINUE_TOUR behavior changes.\", \"common_contract\": \"Known static layout,18 qualified owned executors,1800s; at most ONE additional check for the whole team. CONTINUE_TOUR continues mandatory work and preserves quota. External original legality,60s cooldown,fullreturn and exactrevisit are immutable. Do not invent observations or read future faults.\", \"skill_schema\": {\"keys\": [\"schema_version\", \"rules\", \"default_action\"], \"schema_version\": \"timing-skill-v1\", \"default_action\": \"CONTINUE_TOUR\", \"rules\": \"0..3 OR rules; each exactly {all:[1..6 AND predicates]}; CHECK iff any complete rule true; otherwise CONTINUE_TOUR\", \"predicate_keys\": [\"field\", \"op\", \"value\"], \"boolean_fields\": [\"already_alarm\", \"direct_available\", \"direct_is_qualified\", \"direct_reading_normal\", \"estimate_available\", \"ever_checked\", \"professional_available\", \"quota_available\"], \"boolean_ops\": {\"eq\": \"literal true/false\", \"is_missing\": null}, \"kind\": {\"eq\": [\"thermal\", \"electrical\", \"cooling\", \"control\"], \"is_missing\": null}, \"numeric_fields\": {\"professional_signal\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1, \"kind_threshold\"], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"inspection_age_ratio\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"direct_age_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 30, 60, 120, 300, 600], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"direct_age_ratio\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"estimate_age_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"thermal_disagreement\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.025, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"prior_disagreement\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.025, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_thermal_signal\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_flow_deficit\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"pod_service_gap\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 0.05, 0.1, 0.25, 0.5, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"lead_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120, 300], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"shift_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 5, 15, 30, 60, 120], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"completion_cost_s\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0, 15, 30, 60, 120, 300], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}, \"importance\": {\"op\": [\"ge\", \"gt\", \"le\", \"lt\", \"is_missing\"], \"thresholds\": [0.25, 0.5, 0.75, 1], \"missing\": \"is_missing requires null; numeric comparison with missing is false\"}}, \"evidence_margin\": {\"op\": \"positive\", \"value\": [0, 0.01, 0.05, 0.1, 0.25, 1], \"meaning\": \"professional_signal*importance*lead_s > value*shift_s; missing terms=false\"}, \"kind_threshold\": \".5 for control, .05 otherwise; profession must be known\"}, \"public_feature_meanings\": {\"professional_signal\": \"Existing own-profession cue: thermal fused excess/qualified contact/observed flow/qualified verified bias; None when unavailable, not a probability.\", \"direct_reading_normal\": \"Available direct channel is on its reference-normal side. Not hidden truth or a guarantee of normality; remote versus qualified explicitly separated.\", \"direct_is_qualified\": \"Most recent direct reading is a qualified reference, not merely a remote/model value.\", \"direct_age_s\": \"Age of actual direct reading; None means missing. Thermal may be remote or qualified; other roles retain their declared sources.\", \"estimate_age_s\": \"Timestamped pure temperature-CVAE invocation age; None when timestamp unavailable. Legacy30s reconstruction only when explicitly requested for verified E1 tapes.\", \"thermal_disagreement\": \"Thermal tool difference/20: target rack for thermal, maximum of existing observed/estimated thermal racks in the same public pod otherwise. Not cross-profession uncertainty probability.\", \"prior_disagreement\": \"Pure existing temperature-CVAE prior mean versus causal nominal model/20; missing on old tapes without raw prior recorder. Not a fault probability.\", \"pod_thermal_signal\": \"Maximum available fused temperature excess in public same-pod thermal tasks; a cross-system cue, not confirmation.\", \"pod_flow_deficit\": \"Existing observed same-pod flow deficit; None when not observed.\", \"pod_service_gap\": \"Existing per-rack public requested/delivered IT power aggregated over known8-rack pod. Service-gap proxy, not voltage/current or contact-hotspot confirmation.\", \"inspection_age_ratio\": \"Public qualified-check age/deadline, including startup age; distinct from direct remote measurement age.\", \"lead_s\": \"Earlier completion than continuing protected Tour, from public deterministic route/service model.\", \"shift_s\": \"Additional public own-tour schedule shift from optional check, not empirical risk or a safety rule.\", \"already_alarm\": \"Already measured public alarm, not hidden truth. Rechecking it is not a new physical-event discovery.\", \"professional_available\": \"An actual own-profession cue exists; false makes professional_signal null.\", \"ever_checked\": \"At least one qualified check completed.\", \"quota_available\": \"True for candidates before the single additional opportunity is consumed.\", \"estimate_available\": \"Temperature-CVAE tool output exists; timestamp can still be unknown.\", \"importance\": \"Public normalized consequence importance, not a fault probability.\", \"direct_available\": \"Actual direct channel exists, including remote readings where explicitly allowed.\"}, \"data\": {\"initial_skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"proposal_history\": [], \"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\", \"experience_cards\": [{\"decision\": {\"time_s\": 180.0, \"task_public_id\": \"thermal:65\", \"agent\": 7, \"features\": {\"kind\": \"thermal\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 165.0, \"direct_age_ratio\": 0.55, \"estimate_available\": true, \"estimate_age_s\": 0.0, \"thermal_disagreement\": 0.27666990701225913, \"prior_disagreement\": 0.27666990701225913, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.673852636159767, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.550000011920929, \"importance\": 1.0, \"lead_s\": 35.0, \"shift_s\": 60.0, \"completion_cost_s\": 40.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CHECK\", \"candidate_finish_s\": 220.0, \"Tour_target_finish_s\": 255.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 255.0, \"kind\": \"thermal\", \"value\": 65.95413445196758, \"field\": \"temperature_c\", \"unit\": \"degC\", \"qualified_role\": \"thermal\", \"calibrated\": true, \"observed_alarm\": true, \"transition\": \"new_measured_alert\"}, \"elapsed_to_actual_measurement_s\": 75.0}, {\"decision\": {\"time_s\": 645.0, \"task_public_id\": \"electrical:8\", \"agent\": 12, \"features\": {\"kind\": \"electrical\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 240.0, \"direct_age_ratio\": 0.4, \"estimate_available\": true, \"estimate_age_s\": 15.0, \"thermal_disagreement\": 0.028858089839508595, \"prior_disagreement\": 0.028858089839508595, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.4000000059604645, \"importance\": 0.8125, \"lead_s\": 25.0, \"shift_s\": 45.0, \"completion_cost_s\": 45.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 690.0, \"Tour_target_finish_s\": 715.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 715.0, \"kind\": \"electrical\", \"value\": 65.78555912951401, \"field\": \"contact_temperature_c\", \"unit\": \"degC\", \"qualified_role\": \"electrical\", \"calibrated\": true, \"observed_alarm\": true, \"transition\": \"new_measured_alert\"}, \"elapsed_to_actual_measurement_s\": 70.0}, {\"decision\": {\"time_s\": 180.0, \"task_public_id\": \"cooling:8\", \"agent\": 14, \"features\": {\"kind\": \"cooling\", \"professional_available\": true, \"professional_signal\": 0.673852636159767, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": false, \"direct_is_qualified\": false, \"direct_age_s\": 0.0, \"direct_age_ratio\": 0.0, \"estimate_available\": true, \"estimate_age_s\": 0.0, \"thermal_disagreement\": 0.3687164204122901, \"prior_disagreement\": 0.3687164204122901, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.673852636159767, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.14166666567325592, \"importance\": 0.8125, \"lead_s\": 165.0, \"shift_s\": 75.0, \"completion_cost_s\": 60.0}, \"skill_action\": \"CHECK\", \"executed_action\": \"CHECK_THIS\", \"team_action\": \"CHECK\", \"candidate_finish_s\": 240.0, \"Tour_target_finish_s\": 405.0, \"matched_rule_index\": 0, \"check_intent\": \"acquire_or_first_confirm\"}, \"measurement\": {\"time_s\": 240.0, \"kind\": \"cooling\", \"value\": 12.774261825057367, \"field\": \"pod_flow_kg_s\", \"unit\": \"kg/s\", \"qualified_role\": \"cooling\", \"calibrated\": true, \"observed_alarm\": true, \"transition\": \"new_measured_alert\"}, \"elapsed_to_actual_measurement_s\": 60.0}, {\"decision\": {\"time_s\": 290.0, \"task_public_id\": \"control:9\", \"agent\": 17, \"features\": {\"kind\": \"control\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 210.0, \"direct_age_ratio\": 0.35, \"estimate_available\": true, \"estimate_age_s\": 20.0, \"thermal_disagreement\": 0.03701725310134947, \"prior_disagreement\": 0.7962139864380073, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.3499999940395355, \"importance\": 0.6875, \"lead_s\": 20.0, \"shift_s\": 40.0, \"completion_cost_s\": 40.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 330.0, \"Tour_target_finish_s\": 350.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 350.0, \"kind\": \"control\", \"value\": -18.0, \"field\": \"controller_sensor_error_c\", \"unit\": \"degC\", \"qualified_role\": \"control\", \"calibrated\": true, \"observed_alarm\": true, \"transition\": \"new_measured_alert\"}, \"elapsed_to_actual_measurement_s\": 60.0}, {\"decision\": {\"time_s\": 255.0, \"task_public_id\": \"thermal:7\", \"agent\": 1, \"features\": {\"kind\": \"thermal\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 205.0, \"direct_age_ratio\": 0.6833333333333333, \"estimate_available\": true, \"estimate_age_s\": 15.0, \"thermal_disagreement\": 0.017868618422772896, \"prior_disagreement\": 0.017868618422772896, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.6833333373069763, \"importance\": 0.5, \"lead_s\": 15.0, \"shift_s\": 25.0, \"completion_cost_s\": 20.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 275.0, \"Tour_target_finish_s\": 290.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 290.0, \"kind\": \"thermal\", \"value\": 50.69037503163998, \"field\": \"temperature_c\", \"unit\": \"degC\", \"qualified_role\": \"thermal\", \"calibrated\": true, \"observed_alarm\": false, \"transition\": \"normal_check\"}, \"elapsed_to_actual_measurement_s\": 35.0}, {\"decision\": {\"time_s\": 335.0, \"task_public_id\": \"electrical:8\", \"agent\": 12, \"features\": {\"kind\": \"electrical\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 240.0, \"direct_age_ratio\": 0.4, \"estimate_available\": true, \"estimate_age_s\": 5.0, \"thermal_disagreement\": 0.02411352703291243, \"prior_disagreement\": 0.02411352703291243, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.4000000059604645, \"importance\": 0.8125, \"lead_s\": 25.0, \"shift_s\": 45.0, \"completion_cost_s\": 45.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 380.0, \"Tour_target_finish_s\": 405.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 405.0, \"kind\": \"electrical\", \"value\": 40.57815218221349, \"field\": \"contact_temperature_c\", \"unit\": \"degC\", \"qualified_role\": \"electrical\", \"calibrated\": true, \"observed_alarm\": false, \"transition\": \"normal_check\"}, \"elapsed_to_actual_measurement_s\": 70.0}, {\"decision\": {\"time_s\": 335.0, \"task_public_id\": \"cooling:9\", \"agent\": 15, \"features\": {\"kind\": \"cooling\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 240.0, \"direct_age_ratio\": 0.4, \"estimate_available\": true, \"estimate_age_s\": 5.0, \"thermal_disagreement\": 0.003960665236176908, \"prior_disagreement\": 0.02237263214863816, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.4000000059604645, \"importance\": 0.78125, \"lead_s\": 25.0, \"shift_s\": 45.0, \"completion_cost_s\": 45.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 380.0, \"Tour_target_finish_s\": 405.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 405.0, \"kind\": \"cooling\", \"value\": 36.00000000036408, \"field\": \"pod_flow_kg_s\", \"unit\": \"kg/s\", \"qualified_role\": \"cooling\", \"calibrated\": true, \"observed_alarm\": false, \"transition\": \"normal_check\"}, \"elapsed_to_actual_measurement_s\": 70.0}, {\"decision\": {\"time_s\": 290.0, \"task_public_id\": \"control:8\", \"agent\": 16, \"features\": {\"kind\": \"control\", \"professional_available\": true, \"professional_signal\": 0.0, \"already_alarm\": false, \"ever_checked\": true, \"quota_available\": true, \"direct_available\": true, \"direct_reading_normal\": true, \"direct_is_qualified\": true, \"direct_age_s\": 210.0, \"direct_age_ratio\": 0.35, \"estimate_available\": true, \"estimate_age_s\": 20.0, \"thermal_disagreement\": 0.03096548011452427, \"prior_disagreement\": 0.03096548011452427, \"pod_thermal_signal\": 0.0, \"pod_flow_deficit\": 0.0, \"pod_service_gap\": 0.0, \"inspection_age_ratio\": 0.3499999940395355, \"importance\": 0.8125, \"lead_s\": 20.0, \"shift_s\": 40.0, \"completion_cost_s\": 40.0}, \"skill_action\": \"CONTINUE_TOUR\", \"executed_action\": \"CONTINUE_TOUR\", \"team_action\": \"CONTINUE_TOUR\", \"candidate_finish_s\": 330.0, \"Tour_target_finish_s\": 350.0, \"matched_rule_index\": null}, \"measurement\": {\"time_s\": 350.0, \"kind\": \"control\", \"value\": 0.0, \"field\": \"controller_sensor_error_c\", \"unit\": \"degC\", \"qualified_role\": \"control\", \"calibrated\": true, \"observed_alarm\": false, \"transition\": \"normal_check\"}, \"elapsed_to_actual_measurement_s\": 60.0}], \"acceptance_feedback\": []}, \"output_envelope\": {\"diagnosis\": \"short string,1..1500 chars\", \"skill\": \"exact TimingSkill object\", \"expected_effect\": \"short string,1..1500 chars\"}, \"response_keys\": [\"diagnosis\", \"skill\", \"expected_effect\"], \"format_example\": {\"diagnosis\": \"The initial reference is supplied in data.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This is the initial reference only, not an improved answer.\"}}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "input_tokens": 5974,
+  "dropped_last_cards": 0,
+  "reservation": {
+    "first": 1,
+    "amount": 1,
+    "purpose": "/share/home/renly/renly-patrol-rsi/runs/20261031-m12f/F1/search/calls/1",
+    "job_id": "130943",
+    "unix": 1793455321.7393038
+  },
+  "output_cap": 1024,
+  "unknown_output_charge_upper_bound": 1024,
+  "thinking": false
+}

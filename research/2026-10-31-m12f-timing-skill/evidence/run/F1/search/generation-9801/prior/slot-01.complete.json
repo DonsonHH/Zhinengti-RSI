@@ -1,0 +1,60 @@
+{
+  "slot": 1,
+  "generation_seed": 98010101,
+  "valid": true,
+  "accepted": false,
+  "reason": "duplicate_consumes_slot",
+  "source": "fixed_Qwen3-8B",
+  "generation": {
+    "raw_response": "{\"diagnosis\": \"The initial skill is based on professional availability, signal strength, and evidence margin, but lacks a specific focus on thermal disagreement, which could help detect anomalies earlier.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill introduces a focus on thermal disagreement, enabling earlier anomaly detection without unnecessary detours.\"}",
+    "input_tokens": 2499,
+    "output_tokens": 216,
+    "generation_s": 11.675343276001513,
+    "dropped_last_cards": 0,
+    "prompt_SHA256": "6f747083715f3a4692c0975619c9694d0336e9b781196fa71373fa8ca26a29ac"
+  },
+  "skill": {
+    "schema_version": "timing-skill-v1",
+    "rules": [
+      {
+        "all": [
+          {
+            "field": "professional_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "professional_signal",
+            "op": "ge",
+            "value": "kind_threshold"
+          },
+          {
+            "field": "already_alarm",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "lead_s",
+            "op": "gt",
+            "value": 0
+          },
+          {
+            "field": "evidence_margin",
+            "op": "positive",
+            "value": 0.05
+          },
+          {
+            "field": "thermal_disagreement",
+            "op": "gt",
+            "value": 0.05
+          }
+        ]
+      }
+    ],
+    "default_action": "CONTINUE_TOUR"
+  },
+  "candidate_id": "b149fdcf6c0b72b2",
+  "behavior": {
+    "behavior_changed": false
+  }
+}

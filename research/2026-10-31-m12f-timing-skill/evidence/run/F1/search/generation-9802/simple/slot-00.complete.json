@@ -1,0 +1,227 @@
+{
+  "slot": 0,
+  "generation_seed": 98020200,
+  "valid": true,
+  "accepted": false,
+  "reason": "no_strict_development_improvement",
+  "source": "simple_same_grammar_sampler",
+  "skill": {
+    "schema_version": "timing-skill-v1",
+    "rules": [
+      {
+        "all": [
+          {
+            "field": "direct_age_ratio",
+            "op": "ge",
+            "value": 1
+          },
+          {
+            "field": "direct_age_ratio",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "ever_checked",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "ever_checked",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "quota_available",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "direct_available",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      {
+        "all": [
+          {
+            "field": "importance",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "pod_thermal_signal",
+            "op": "le",
+            "value": 0.25
+          },
+          {
+            "field": "professional_available",
+            "op": "is_missing",
+            "value": null
+          }
+        ]
+      },
+      {
+        "all": [
+          {
+            "field": "pod_thermal_signal",
+            "op": "lt",
+            "value": 0.1
+          },
+          {
+            "field": "ever_checked",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "lead_s",
+            "op": "is_missing",
+            "value": null
+          },
+          {
+            "field": "already_alarm",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "pod_service_gap",
+            "op": "gt",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "default_action": "CONTINUE_TOUR"
+  },
+  "candidate_id": "e0e7076f2524bfd0",
+  "evaluation_key": "6b80051c91660c95f29887bb8aa96c3f698c0f95d40ccbe9dcfc54c6b9139d9e",
+  "statistics": {
+    "seeds": [
+      {
+        "seed": 33000,
+        "macro_missed_count": 0.6,
+        "macro_wait_s": 173.761144371397
+      },
+      {
+        "seed": 33001,
+        "macro_missed_count": 1.8,
+        "macro_wait_s": 177.50371202562908
+      }
+    ],
+    "macro_missed_count": 1.2,
+    "macro_wait_s": 175.63242819851303,
+    "mean_CHECK": 0.0,
+    "mean_walk_m": 11793.399999999992,
+    "conditions": 20,
+    "physical_processes": 10,
+    "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+    "process_event_identities": [
+      [
+        [
+          33000,
+          "aux_feeder_loss+cdu_fouling",
+          180,
+          95
+        ],
+        "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+        "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+      ],
+      [
+        [
+          33000,
+          "coldplate_fouling",
+          180,
+          885
+        ],
+        "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+        "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+      ],
+      [
+        [
+          33000,
+          "dc_contact_hotspot",
+          180,
+          300
+        ],
+        "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+        "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+      ],
+      [
+        [
+          33000,
+          "healthy",
+          900,
+          555
+        ],
+        "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+        "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      ],
+      [
+        [
+          33000,
+          "sensor_bias",
+          900,
+          695
+        ],
+        "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+        "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+      ],
+      [
+        [
+          33001,
+          "aux_feeder_loss+cdu_fouling",
+          180,
+          115
+        ],
+        "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+        "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+      ],
+      [
+        [
+          33001,
+          "coldplate_fouling",
+          180,
+          395
+        ],
+        "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+        "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+      ],
+      [
+        [
+          33001,
+          "dc_contact_hotspot",
+          180,
+          630
+        ],
+        "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+        "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+      ],
+      [
+        [
+          33001,
+          "healthy",
+          900,
+          535
+        ],
+        "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+        "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      ],
+      [
+        [
+          33001,
+          "sensor_bias",
+          900,
+          130
+        ],
+        "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+        "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+      ]
+    ]
+  },
+  "behavior": {
+    "same_input_rows": 130364,
+    "decision_differences": 6,
+    "actual_trajectory_differences": 6,
+    "behavior_changed": true
+  }
+}

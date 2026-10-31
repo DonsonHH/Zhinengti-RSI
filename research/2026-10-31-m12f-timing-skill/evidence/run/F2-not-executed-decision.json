@@ -1,0 +1,49 @@
+{
+  "decision": "NO-GO for conditionalF2",
+  "executed": false,
+  "reason": "Generationrepeat9801 experiencedvalid1/3 below registered2/3. Other repeats and exposedprofessions do not override per-repeat gate.",
+  "mechanism_gate": {
+    "passed": false,
+    "per_repeat": [
+      {
+        "generation_seed": 9801,
+        "prior_valid": 3,
+        "experienced_valid": 1,
+        "experienced_behavior_changed": 1
+      },
+      {
+        "generation_seed": 9802,
+        "prior_valid": 2,
+        "experienced_valid": 3,
+        "experienced_behavior_changed": 1
+      },
+      {
+        "generation_seed": 9803,
+        "prior_valid": 2,
+        "experienced_valid": 3,
+        "experienced_behavior_changed": 2
+      }
+    ],
+    "actual_qualified_feedback_professions": [
+      "control",
+      "cooling",
+      "electrical",
+      "thermal"
+    ],
+    "available_feedback_professions": [
+      "control",
+      "cooling",
+      "electrical",
+      "thermal"
+    ],
+    "not_a_positive_task_or_PPO_requirement": true
+  },
+  "F1_search_complete_SHA256": "a1b62f3e61e4a8ebb35894144fe417b79055564e4db6dcac7683fcadedb5f98a",
+  "F2_model_calls": 0,
+  "F2_environment_episodes": 0,
+  "F2_physical_processes": 0,
+  "F2_future_sources_ungenerated": true,
+  "not_a_PPO_or_positive_F1_prerequisite": true,
+  "not_evidence_against_RSI_principle": true,
+  "no_extra_candidates_or_prompt_repairs": true
+}

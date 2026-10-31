@@ -1,0 +1,54 @@
+{
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "dc_contact_hotspot",
+    "duration_s": 180,
+    "fault_start_s": 300,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "policy_spec": {
+    "executor": "timing-skill-v1",
+    "ranker": "urgency",
+    "skill": {
+      "schema_version": "timing-skill-v1",
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "direct_is_qualified",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "quota_available",
+              "op": "is_missing",
+              "value": null
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "pod_service_gap",
+              "op": "lt",
+              "value": 0.5
+            },
+            {
+              "field": "direct_is_qualified",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "default_action": "CONTINUE_TOUR"
+    }
+  },
+  "charged_actual_episode_attempt": true,
+  "unix": 1793455340.7141743
+}

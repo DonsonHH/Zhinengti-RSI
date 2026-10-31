@@ -1,0 +1,17 @@
+{
+  "slot": 0,
+  "generation_seed": 98010100,
+  "valid": false,
+  "accepted": false,
+  "reason": "invalid_schema",
+  "source": "fixed_Qwen3-8B",
+  "generation": {
+    "raw_response": "{\"diagnosis\": \"The initial skill fails to address the cooling task with high thermal disagreement and direct reading anomalies, which could benefit from a more nuanced rule set.\", \"skill\": {\"schema_version\": \"timing-skill-v1\", \"rules\": [{\"all\": [{\"field\": \"professional_available\", \"op\": \"eq\", \"value\": true}, {\"field\": \"professional_signal\", \"op\": \"ge\", \"value\": \"kind_threshold\"}, {\"field\": \"already_alarm\", \"op\": \"eq\", \"value\": false}, {\"field\": \"pod_flow_deficit\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"thermal_disagreement\", \"op\": \"gt\", \"value\": 0.05}, {\"field\": \"lead_s\", \"op\": \"gt\", \"value\": 0}, {\"field\": \"evidence_margin\", \"op\": \"positive\", \"value\": 0.05}]}], \"default_action\": \"CONTINUE_TOUR\"}, \"expected_effect\": \"This skill introduces a rule to check cooling tasks with high pod flow deficit and thermal disagreement, improving inspection timing for such critical cases.\"}",
+    "input_tokens": 5974,
+    "output_tokens": 241,
+    "generation_s": 15.174496074207127,
+    "dropped_last_cards": 0,
+    "prompt_SHA256": "417fff189bf3a3b6e6fcc025f7c2824a82d75a1f4fb0a441a0eb3f4d69f8d8e9"
+  },
+  "schema_error": "ValueError: One to six AND predicates, depth two"
+}
