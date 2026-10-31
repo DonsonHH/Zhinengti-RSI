@@ -1,0 +1,132 @@
+{
+  "candidate": {
+    "slot": 21,
+    "id": "C05",
+    "category": "professional_semantics",
+    "description": "Qualified recovery check after actual remote normal reading",
+    "patch": {
+      "schema_version": "timing-patch-v1",
+      "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "edits": [
+        {
+          "op": "add_rule",
+          "rule": {
+            "all": [
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "direct_reading_normal",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "direct_is_qualified",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "direct_age_s",
+                "op": "le",
+                "value": 60
+              },
+              {
+                "field": "lead_s",
+                "op": "ge",
+                "value": 60
+              },
+              {
+                "field": "shift_s",
+                "op": "le",
+                "value": 30
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "direct_reading_normal",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "direct_is_qualified",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "direct_age_s",
+                "op": "le",
+                "value": 60
+              },
+              {
+                "field": "lead_s",
+                "op": "ge",
+                "value": 60
+              },
+              {
+                "field": "shift_s",
+                "op": "le",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "eligible_local_mechanism": true
+  },
+  "screening": {
+    "rows": 130364,
+    "CHECK_rows": 6,
+    "parent_input_differences": 0,
+    "scope": "Finite archived parent inputs only; no universal/trajectory equivalence asserted; all20actualclosedloops stillrun."
+  },
+  "scheduled_actual_episodes": 20
+}

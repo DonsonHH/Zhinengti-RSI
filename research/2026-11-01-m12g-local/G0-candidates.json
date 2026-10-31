@@ -1,0 +1,2400 @@
+{
+  "baseline": "a5ab5880e33e3df3cd9aeffc3a90a63c40273c41",
+  "initial_skill": {
+    "schema_version": "timing-skill-v1",
+    "rules": [
+      {
+        "all": [
+          {
+            "field": "professional_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "professional_signal",
+            "op": "ge",
+            "value": "kind_threshold"
+          },
+          {
+            "field": "already_alarm",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "lead_s",
+            "op": "gt",
+            "value": 0
+          },
+          {
+            "field": "evidence_margin",
+            "op": "positive",
+            "value": 0.05
+          }
+        ]
+      }
+    ],
+    "default_action": "CONTINUE_TOUR"
+  },
+  "parent_view": {
+    "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+    "rules": {
+      "r0": {
+        "hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68",
+        "rule": {
+          "all": [
+            {
+              "field": "professional_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "professional_signal",
+              "op": "ge",
+              "value": "kind_threshold"
+            },
+            {
+              "field": "already_alarm",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "lead_s",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "field": "evidence_margin",
+              "op": "positive",
+              "value": 0.05
+            }
+          ]
+        }
+      }
+    },
+    "predicates": {
+      "r0.p0": {
+        "hash": "fe441c9d68efbcc66a0c55d659ba94e119627769f18e442a141d87004924c1d5",
+        "predicate": {
+          "field": "professional_available",
+          "op": "eq",
+          "value": true
+        }
+      },
+      "r0.p1": {
+        "hash": "3b0d3918c4c0b766b77f18189e8b3d2f0f89fcf6224ccb3bd17e446531a98b0c",
+        "predicate": {
+          "field": "professional_signal",
+          "op": "ge",
+          "value": "kind_threshold"
+        }
+      },
+      "r0.p2": {
+        "hash": "828d102e29143c468d36a23869822bb7987104439dcc997d8a18a268380181d1",
+        "predicate": {
+          "field": "already_alarm",
+          "op": "eq",
+          "value": false
+        }
+      },
+      "r0.p3": {
+        "hash": "c97b0902e9751e34038c890a4288feac860f9b2887b4b5e07340cde9706cb75c",
+        "predicate": {
+          "field": "lead_s",
+          "op": "gt",
+          "value": 0
+        }
+      },
+      "r0.p4": {
+        "hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+        "predicate": {
+          "field": "evidence_margin",
+          "op": "positive",
+          "value": 0.05
+        }
+      }
+    }
+  },
+  "policies": [
+    {
+      "slot": 1,
+      "id": "A01",
+      "category": "positive_evidence",
+      "description": "One margin coefficient change",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.01
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.01
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 2,
+      "id": "A02",
+      "category": "positive_evidence",
+      "description": "One margin coefficient change",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 3,
+      "id": "A03",
+      "category": "positive_evidence",
+      "description": "One margin coefficient change",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.25
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.25
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 4,
+      "id": "A04",
+      "category": "positive_evidence",
+      "description": "One professional threshold change",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p1",
+            "expected_hash": "3b0d3918c4c0b766b77f18189e8b3d2f0f89fcf6224ccb3bd17e446531a98b0c",
+            "value": 0.1
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": 0.1
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 5,
+      "id": "A05",
+      "category": "positive_evidence",
+      "description": "One professional threshold change",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p1",
+            "expected_hash": "3b0d3918c4c0b766b77f18189e8b3d2f0f89fcf6224ccb3bd17e446531a98b0c",
+            "value": 0.25
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": 0.25
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 6,
+      "id": "A06",
+      "category": "positive_evidence",
+      "description": "Remove margin only",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "delete_predicate",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d"
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 7,
+      "id": "A07",
+      "category": "positive_evidence",
+      "description": "Add one bounded condition",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_predicate",
+            "target": "r0",
+            "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68",
+            "predicate": {
+              "field": "shift_s",
+              "op": "le",
+              "value": 30
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 8,
+      "id": "A08",
+      "category": "positive_evidence",
+      "description": "Add one bounded condition",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_predicate",
+            "target": "r0",
+            "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68",
+            "predicate": {
+              "field": "direct_age_s",
+              "op": "le",
+              "value": 60
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 9,
+      "id": "B01",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_thermal_signal",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_thermal_signal",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 10,
+      "id": "B02",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_flow_deficit",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_flow_deficit",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 11,
+      "id": "B03",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 12,
+      "id": "B04",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 13,
+      "id": "B05",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_thermal_signal",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_thermal_signal",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 14,
+      "id": "B06",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_flow_deficit",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_flow_deficit",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 15,
+      "id": "B07",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 16,
+      "id": "B08",
+      "category": "independent_information",
+      "description": "Independent missing/stale information branch; no own positive cue/margin requirement",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "thermal_disagreement",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 17,
+      "id": "C01",
+      "category": "professional_semantics",
+      "description": "Persistent known-alarm recheck; no duplicate discovery credit",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 18,
+      "id": "C02",
+      "category": "professional_semantics",
+      "description": "Persistent known-alarm recheck; no duplicate discovery credit",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 19,
+      "id": "C03",
+      "category": "professional_semantics",
+      "description": "Persistent known-alarm recheck; no duplicate discovery credit",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 300
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 300
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 20,
+      "id": "C04",
+      "category": "professional_semantics",
+      "description": "Qualified recovery check after actual remote normal reading",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 30
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 30
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 21,
+      "id": "C05",
+      "category": "professional_semantics",
+      "description": "Qualified recovery check after actual remote normal reading",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 22,
+      "id": "C06",
+      "category": "professional_semantics",
+      "description": "Qualified recovery check after actual remote normal reading",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_reading_normal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "direct_is_qualified",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "le",
+                  "value": 60
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    },
+    {
+      "slot": 23,
+      "id": "H01",
+      "category": "bridge",
+      "description": "Original human trigger/rule order/baseline semantics, actual thermal rule action signal->urgency",
+      "patch": null,
+      "policy": {
+        "executor": "g-human-urgency-v1",
+        "ranker": "urgency",
+        "skill": null
+      },
+      "eligible_local_mechanism": false
+    },
+    {
+      "slot": 24,
+      "id": "H02",
+      "category": "bridge",
+      "description": "Thermal intention in extra-onlyTimingSkill; not claimed equivalent to H01",
+      "patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "delete_rule",
+            "target": "r0",
+            "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68"
+          },
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "kind",
+                  "op": "eq",
+                  "value": "thermal"
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": 0.05
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "kind",
+                  "op": "eq",
+                  "value": "thermal"
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": 0.05
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "eligible_local_mechanism": true
+    }
+  ],
+  "candidate_order_fixed_before_scores": true
+}

@@ -1,0 +1,1794 @@
+{
+  "source_commit": "a5ab5880e33e3df3cd9aeffc3a90a63c40273c41",
+  "scope": "Recomputed from uploaded M12-F metadata; no new neural/environment runs",
+  "baseline_development": {
+    "macro_missed_count": 1.0,
+    "macro_wait_s": 168.44275054182035,
+    "mean_CHECK": 0.3,
+    "seeds": [
+      {
+        "seed": 33000,
+        "macro_missed_count": 0.2,
+        "macro_wait_s": 160.87292613487725
+      },
+      {
+        "seed": 33001,
+        "macro_missed_count": 1.8,
+        "macro_wait_s": 176.01257494876344
+      }
+    ]
+  },
+  "groups": {
+    "simple": {
+      "slots": 9,
+      "valid": 9,
+      "duplicates": 0,
+      "evaluated_slot_references": 9,
+      "behavior_changes": 9,
+      "accepted": 0,
+      "all_one_OR_branch": false
+    },
+    "prior": {
+      "slots": 9,
+      "valid": 7,
+      "duplicates": 3,
+      "evaluated_slot_references": 4,
+      "behavior_changes": 4,
+      "accepted": 0,
+      "all_one_OR_branch": true
+    },
+    "experienced": {
+      "slots": 9,
+      "valid": 7,
+      "duplicates": 2,
+      "evaluated_slot_references": 5,
+      "behavior_changes": 4,
+      "accepted": 0,
+      "all_one_OR_branch": true
+    }
+  },
+  "candidate_entries": [
+    {
+      "generation_seed": 9801,
+      "group": "simple",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "18e64932334a3e2d",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "estimate_age_s",
+                "op": "ge",
+                "value": 120
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9801,
+      "group": "simple",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "5ae34b792a555f28",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 20,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "direct_is_qualified",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "quota_available",
+                "op": "is_missing",
+                "value": null
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "pod_service_gap",
+                "op": "lt",
+                "value": 0.5
+              },
+              {
+                "field": "direct_is_qualified",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 183.75742819851303,
+      "mean_CHECK": 1.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 15.31467765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9801,
+      "group": "simple",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "15e136bb39449454",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9801,
+      "group": "prior",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "b149fdcf6c0b72b2",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 4,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "gt",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.1,
+      "wait": 174.81331908025317,
+      "mean_CHECK": 0.1,
+      "delta_miss": 0.10000000000000009,
+      "delta_wait": 6.370568538432821,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9801,
+      "group": "prior",
+      "slot": 1,
+      "valid": true,
+      "reason": "duplicate_consumes_slot",
+      "candidate_id": "b149fdcf6c0b72b2",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "gt",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null
+    },
+    {
+      "generation_seed": 9801,
+      "group": "prior",
+      "slot": 2,
+      "valid": true,
+      "reason": "duplicate_consumes_slot",
+      "candidate_id": "b149fdcf6c0b72b2",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "gt",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null
+    },
+    {
+      "generation_seed": 9801,
+      "group": "experienced",
+      "slot": 0,
+      "valid": false,
+      "reason": "invalid_schema",
+      "candidate_id": null,
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": null,
+      "schema_error": "ValueError: One to six AND predicates, depth two"
+    },
+    {
+      "generation_seed": 9801,
+      "group": "experienced",
+      "slot": 1,
+      "valid": false,
+      "reason": "invalid_schema",
+      "candidate_id": null,
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": null,
+      "schema_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 671 (char 670)"
+    },
+    {
+      "generation_seed": 9801,
+      "group": "experienced",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "a303ce22f92cf19e",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 4,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "ge",
+                "value": 0.1
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "lt",
+                "value": 0.5
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.1,
+      "wait": 174.81331908025317,
+      "mean_CHECK": 0.1,
+      "delta_miss": 0.10000000000000009,
+      "delta_wait": 6.370568538432821,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9802,
+      "group": "simple",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "e0e7076f2524bfd0",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "direct_age_ratio",
+                "op": "ge",
+                "value": 1
+              },
+              {
+                "field": "direct_age_ratio",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "ever_checked",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "ever_checked",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "quota_available",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "direct_available",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "importance",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "pod_thermal_signal",
+                "op": "le",
+                "value": 0.25
+              },
+              {
+                "field": "professional_available",
+                "op": "is_missing",
+                "value": null
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "pod_thermal_signal",
+                "op": "lt",
+                "value": 0.1
+              },
+              {
+                "field": "ever_checked",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "lead_s",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "pod_service_gap",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9802,
+      "group": "simple",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "245f11906b58bd38",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "quota_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "estimate_age_s",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0
+              },
+              {
+                "field": "direct_age_ratio",
+                "op": "le",
+                "value": 0
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "ge",
+                "value": 0.25
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "direct_available",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "importance",
+                "op": "gt",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9802,
+      "group": "simple",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "15e136bb39449454",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9802,
+      "group": "prior",
+      "slot": 0,
+      "valid": false,
+      "reason": "invalid_schema",
+      "candidate_id": null,
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": null,
+      "schema_error": "ValueError: One to six AND predicates, depth two"
+    },
+    {
+      "generation_seed": 9802,
+      "group": "prior",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "e89b02e62439c4ac",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "gt",
+                "value": 0.75
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9802,
+      "group": "prior",
+      "slot": 2,
+      "valid": true,
+      "reason": "duplicate_consumes_slot",
+      "candidate_id": "e89b02e62439c4ac",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "gt",
+                "value": 0.75
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null
+    },
+    {
+      "generation_seed": 9802,
+      "group": "experienced",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "044696cfae371088",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": 0,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "importance",
+                "op": "ge",
+                "value": 0.75
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.1
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.0,
+      "wait": 168.44275054182035,
+      "mean_CHECK": 0.3,
+      "delta_miss": 0.0,
+      "delta_wait": 0.0,
+      "no_seed_miss_increase": true
+    },
+    {
+      "generation_seed": 9802,
+      "group": "experienced",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "0680d47a4e9a4f21",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 1,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.01
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.0,
+      "wait": 168.53574220207778,
+      "mean_CHECK": 0.3,
+      "delta_miss": 0.0,
+      "delta_wait": 0.09299166025743943,
+      "no_seed_miss_increase": true
+    },
+    {
+      "generation_seed": 9802,
+      "group": "experienced",
+      "slot": 2,
+      "valid": true,
+      "reason": "duplicate_consumes_slot",
+      "candidate_id": "044696cfae371088",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "importance",
+                "op": "ge",
+                "value": 0.75
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.1
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null
+    },
+    {
+      "generation_seed": 9803,
+      "group": "simple",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "15e136bb39449454",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "simple",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "8a4c64c1e0deaba4",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 20,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "direct_age_ratio",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "estimate_available",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 1.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "simple",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "8cdf557d8fde5774",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 120
+              },
+              {
+                "field": "prior_disagreement",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "direct_age_s",
+                "op": "lt",
+                "value": 300
+              },
+              {
+                "field": "direct_age_s",
+                "op": "gt",
+                "value": 60
+              },
+              {
+                "field": "prior_disagreement",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "direct_age_s",
+                "op": "is_missing",
+                "value": null
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "importance",
+                "op": "gt",
+                "value": 0.75
+              },
+              {
+                "field": "pod_thermal_signal",
+                "op": "le",
+                "value": 0.5
+              },
+              {
+                "field": "shift_s",
+                "op": "gt",
+                "value": 30
+              },
+              {
+                "field": "quota_available",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "field": "thermal_disagreement",
+                "op": "is_missing",
+                "value": null
+              },
+              {
+                "field": "estimate_age_s",
+                "op": "le",
+                "value": 0
+              },
+              {
+                "field": "pod_service_gap",
+                "op": "ge",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "prior",
+      "slot": 0,
+      "valid": false,
+      "reason": "invalid_schema",
+      "candidate_id": null,
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": null,
+      "schema_error": "ValueError: One to six AND predicates, depth two"
+    },
+    {
+      "generation_seed": 9803,
+      "group": "prior",
+      "slot": 1,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "e89b02e62439c4ac",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 6,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "inspection_age_ratio",
+                "op": "gt",
+                "value": 0.75
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.2,
+      "wait": 175.63242819851303,
+      "mean_CHECK": 0.0,
+      "delta_miss": 0.19999999999999996,
+      "delta_wait": 7.18967765669268,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "prior",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "c5905f6ba8c3c5fb",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 4,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "thermal_disagreement",
+                "op": "gt",
+                "value": 0.1
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.1,
+      "wait": 174.81331908025317,
+      "mean_CHECK": 0.1,
+      "delta_miss": 0.10000000000000009,
+      "delta_wait": 6.370568538432821,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "experienced",
+      "slot": 0,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "270c29d05eb4f222",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 4,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "pod_flow_deficit",
+                "op": "gt",
+                "value": 0.5
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.1,
+      "wait": 174.81331908025317,
+      "mean_CHECK": 0.1,
+      "delta_miss": 0.10000000000000009,
+      "delta_wait": 6.370568538432821,
+      "no_seed_miss_increase": false
+    },
+    {
+      "generation_seed": 9803,
+      "group": "experienced",
+      "slot": 1,
+      "valid": true,
+      "reason": "duplicate_consumes_slot",
+      "candidate_id": "270c29d05eb4f222",
+      "accepted": false,
+      "behavior_changed": false,
+      "actual_trajectory_differences": null,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "pod_flow_deficit",
+                "op": "gt",
+                "value": 0.5
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null
+    },
+    {
+      "generation_seed": 9803,
+      "group": "experienced",
+      "slot": 2,
+      "valid": true,
+      "reason": "no_strict_development_improvement",
+      "candidate_id": "17a5f2984ec859c7",
+      "accepted": false,
+      "behavior_changed": true,
+      "actual_trajectory_differences": 4,
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "pod_flow_deficit",
+                "op": "gt",
+                "value": 0.5
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      },
+      "schema_error": null,
+      "miss": 1.1,
+      "wait": 174.81331908025317,
+      "mean_CHECK": 0.1,
+      "delta_miss": 0.10000000000000009,
+      "delta_wait": 6.370568538432821,
+      "no_seed_miss_increase": false
+    }
+  ],
+  "experienced_prompt_cards": [
+    {
+      "call": 1,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": []
+    },
+    {
+      "call": 3,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": []
+    },
+    {
+      "call": 5,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": []
+    },
+    {
+      "call": 7,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": []
+    },
+    {
+      "call": 9,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": [
+        {
+          "candidate_id": "044696cfae371088",
+          "previous_proposal_offset": 1,
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "call": 11,
+      "cards": 7,
+      "alarms": 4,
+      "normal": 3,
+      "feedback": [
+        {
+          "candidate_id": "044696cfae371088",
+          "previous_proposal_offset": 2,
+          "accepted": false
+        },
+        {
+          "candidate_id": "0680d47a4e9a4f21",
+          "previous_proposal_offset": 1,
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "call": 13,
+      "cards": 8,
+      "alarms": 4,
+      "normal": 4,
+      "feedback": []
+    },
+    {
+      "call": 15,
+      "cards": 7,
+      "alarms": 4,
+      "normal": 3,
+      "feedback": [
+        {
+          "candidate_id": "270c29d05eb4f222",
+          "previous_proposal_offset": 1,
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "call": 17,
+      "cards": 7,
+      "alarms": 4,
+      "normal": 3,
+      "feedback": [
+        {
+          "candidate_id": "270c29d05eb4f222",
+          "previous_proposal_offset": 2,
+          "accepted": false
+        },
+        {
+          "candidate_id": "270c29d05eb4f222",
+          "previous_proposal_offset": 1,
+          "accepted": false
+        }
+      ]
+    }
+  ],
+  "all_evaluated_candidates_weakly_worse_in_miss_and_wait": true,
+  "card_occurrences": 69,
+  "unique_cards": 9,
+  "card_action_alarm_counts": {
+    "('CONTINUE_TOUR', True)": 27,
+    "('CHECK_THIS', True)": 9,
+    "('CONTINUE_TOUR', False)": 33
+  },
+  "dev_reference_summaries": [
+    {
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "statistics": {
+        "seeds": [
+          {
+            "seed": 33000,
+            "macro_missed_count": 0.2,
+            "macro_wait_s": 160.87292613487725
+          },
+          {
+            "seed": 33001,
+            "macro_missed_count": 1.8,
+            "macro_wait_s": 176.01257494876344
+          }
+        ],
+        "macro_missed_count": 1.0,
+        "macro_wait_s": 168.44275054182035,
+        "mean_CHECK": 0.3
+      }
+    },
+    {
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "statistics": {
+        "seeds": [
+          {
+            "seed": 33000,
+            "macro_missed_count": 0.6,
+            "macro_wait_s": 173.761144371397
+          },
+          {
+            "seed": 33001,
+            "macro_missed_count": 1.8,
+            "macro_wait_s": 177.50371202562908
+          }
+        ],
+        "macro_missed_count": 1.2,
+        "macro_wait_s": 175.63242819851303,
+        "mean_CHECK": 0.0
+      }
+    },
+    {
+      "policy": {
+        "executor": "original-human-v1",
+        "ranker": "rules",
+        "skill": null
+      },
+      "statistics": {
+        "seeds": [
+          {
+            "seed": 33000,
+            "macro_missed_count": 0.4,
+            "macro_wait_s": 162.511144371397
+          },
+          {
+            "seed": 33001,
+            "macro_missed_count": 1.8,
+            "macro_wait_s": 176.01257494876344
+          }
+        ],
+        "macro_missed_count": 1.1,
+        "macro_wait_s": 169.26185966008023,
+        "mean_CHECK": 0.2
+      }
+    },
+    {
+      "policy": {
+        "executor": "timing-skill-v1",
+        "ranker": "urgency",
+        "skill": {
+          "schema_version": "timing-skill-v1",
+          "rules": [
+            {
+              "all": [
+                {
+                  "field": "professional_available",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "professional_signal",
+                  "op": "ge",
+                  "value": "kind_threshold"
+                },
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "lead_s",
+                  "op": "gt",
+                  "value": 0
+                },
+                {
+                  "field": "evidence_margin",
+                  "op": "positive",
+                  "value": 0.05
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "is_missing",
+                  "value": null
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                }
+              ]
+            }
+          ],
+          "default_action": "CONTINUE_TOUR"
+        }
+      },
+      "statistics": {
+        "seeds": [
+          {
+            "seed": 33000,
+            "macro_missed_count": 0.2,
+            "macro_wait_s": 160.87292613487725
+          },
+          {
+            "seed": 33001,
+            "macro_missed_count": 1.8,
+            "macro_wait_s": 176.01257494876344
+          }
+        ],
+        "macro_missed_count": 1.0,
+        "macro_wait_s": 168.44275054182035,
+        "mean_CHECK": 0.3
+      }
+    }
+  ],
+  "actual_policy_count": 19,
+  "dev_action_signature_classes": 7,
+  "legal_model_structure": [
+    {
+      "candidate_id": "b149fdcf6c0b72b2",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "b149fdcf6c0b72b2",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "b149fdcf6c0b72b2",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "a303ce22f92cf19e",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "e89b02e62439c4ac",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "e89b02e62439c4ac",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "044696cfae371088",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "0680d47a4e9a4f21",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "044696cfae371088",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "e89b02e62439c4ac",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "c5905f6ba8c3c5fb",
+      "group": "prior",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "270c29d05eb4f222",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "270c29d05eb4f222",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    },
+    {
+      "candidate_id": "17a5f2984ec859c7",
+      "group": "experienced",
+      "branches": 1,
+      "every_branch_requires_positive_own_signal": true,
+      "any_missingness_predicate": false
+    }
+  ],
+  "feedback_limit": {
+    "occurrences": 69,
+    "distinct_card_content_count": 9,
+    "first_experienced_call_cards": 8,
+    "last_experienced_call_new_cards_relative_to_first": 1,
+    "caveat": "Distinctness is exact content after key-sorted JSON normalization; not a measurement of mutual information or a causal proof of retrieval failure."
+  },
+  "audit_limits": {
+    "private_raw_episodes_available": false,
+    "new_environment_rollouts": 0,
+    "new_LLM_calls": 0,
+    "new_training_runs": 0,
+    "archive_SHA_verified": true,
+    "local_existing_TimingSkill_unit_tests_passed": 7
+  }
+}

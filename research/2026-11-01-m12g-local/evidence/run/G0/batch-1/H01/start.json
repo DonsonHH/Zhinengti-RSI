@@ -1,0 +1,19 @@
+{
+  "candidate": {
+    "slot": 23,
+    "id": "H01",
+    "category": "bridge",
+    "description": "Original human trigger/rule order/baseline semantics, actual thermal rule action signal->urgency",
+    "patch": null,
+    "policy": {
+      "executor": "g-human-urgency-v1",
+      "ranker": "urgency",
+      "skill": null
+    },
+    "eligible_local_mechanism": false
+  },
+  "screening": {
+    "scope": "H01 original human rule executor, no TimingSkill shadow claim"
+  },
+  "scheduled_actual_episodes": 20
+}

@@ -1,0 +1,524 @@
+{
+  "source_record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-0/A02/case-19.json.gz",
+  "source_record_SHA256": "920879b00802e80ba8420e01408b019fc467143db49f29d4b989f4ed7c7aa037",
+  "feedback_contract": "g-difference-v1.1",
+  "cards_available": 1407,
+  "model_visible_sample": [
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "thermal:2",
+        "agent": 0,
+        "features": {
+          "kind": "thermal",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": null,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.01666666753590107,
+          "importance": 0.5,
+          "lead_s": 10.0,
+          "shift_s": 20.0,
+          "completion_cost_s": 15.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 20.0,
+        "Tour_target_finish_s": 30.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 30.0,
+        "kind": "thermal",
+        "value": 48.94333794458285,
+        "field": "temperature_c",
+        "unit": "degC",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 25.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "electrical:4",
+        "agent": 12,
+        "features": {
+          "kind": "electrical",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 20.0,
+          "shift_s": 50.0,
+          "completion_cost_s": 35.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 40.0,
+        "Tour_target_finish_s": 60.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 60.0,
+        "kind": "electrical",
+        "value": 38.36707502939572,
+        "field": "contact_temperature_c",
+        "unit": "degC",
+        "qualified_role": "electrical",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 55.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "cooling:4",
+        "agent": 14,
+        "features": {
+          "kind": "cooling",
+          "professional_available": true,
+          "professional_signal": 0.0,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": true,
+          "direct_reading_normal": true,
+          "direct_is_qualified": false,
+          "direct_age_s": 0.0,
+          "direct_age_ratio": 0.0,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 20.0,
+          "shift_s": 50.0,
+          "completion_cost_s": 35.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 40.0,
+        "Tour_target_finish_s": 60.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 60.0,
+        "kind": "cooling",
+        "value": 36.15204648971557,
+        "field": "pod_flow_kg_s",
+        "unit": "kg/s",
+        "qualified_role": "cooling",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 55.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "control:4",
+        "agent": 16,
+        "features": {
+          "kind": "control",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 15.0,
+          "shift_s": 45.0,
+          "completion_cost_s": 30.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 35.0,
+        "Tour_target_finish_s": 50.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 50.0,
+        "kind": "control",
+        "value": 0.0,
+        "field": "controller_sensor_error_c",
+        "unit": "degC",
+        "qualified_role": "control",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 45.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 245.0,
+        "task_public_id": "thermal:72",
+        "agent": 6,
+        "features": {
+          "kind": "thermal",
+          "professional_available": true,
+          "professional_signal": 0.17020758877187775,
+          "already_alarm": false,
+          "ever_checked": true,
+          "quota_available": true,
+          "direct_available": true,
+          "direct_reading_normal": false,
+          "direct_is_qualified": false,
+          "direct_age_s": 0.0,
+          "direct_age_ratio": 0.0,
+          "estimate_available": true,
+          "estimate_age_s": 5.0,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": 0.47080497036367464,
+          "pod_thermal_signal": 0.17020758877187775,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.04470122568423222,
+          "inspection_age_ratio": 0.4166666567325592,
+          "importance": 0.75,
+          "lead_s": 80.0,
+          "shift_s": 30.0,
+          "completion_cost_s": 25.0
+        },
+        "skill_action": "CHECK",
+        "executed_action": "CHECK_THIS",
+        "team_action": "CHECK",
+        "candidate_finish_s": 270.0,
+        "Tour_target_finish_s": 350.0,
+        "matched_rule_index": 0,
+        "check_intent": "acquire_or_first_confirm"
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CHECK",
+      "same_input_child_admission": "CHECK",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": {
+          "agent": 6,
+          "task_public_id": "thermal:72"
+        },
+        "child_team_choice": {
+          "agent": 6,
+          "task_public_id": "thermal:72"
+        }
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "selected_optional",
+      "actual_follow_up": {
+        "time_s": 270.0,
+        "kind": "thermal",
+        "value": 70.31528317644559,
+        "field": "temperature_c",
+        "unit": "degC",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": true,
+        "transition": "new_measured_alert"
+      },
+      "elapsed_to_actual_measurement_s": 25.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": {
+        "time_s": 270.0,
+        "kind": "thermal",
+        "value": 70.31528317644559,
+        "field": "temperature_c",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": true,
+        "transition": "new_measured_alert"
+      },
+      "follow_up_is_optional_completion": true,
+      "direct_optional_positive": true,
+      "is_direct_optional_positive_card": true,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "2367e62b83230385e4d4b088b2b427bc942a98d30ff3c6b37dbdf11a95610eb1",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "thermal:26",
+        "agent": 2,
+        "features": {
+          "kind": "thermal",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": null,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": null,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.01666666753590107,
+          "importance": 1.0,
+          "lead_s": 10.0,
+          "shift_s": 20.0,
+          "completion_cost_s": 15.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 20.0,
+        "Tour_target_finish_s": 30.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "86e10f486bc0a2a5631e1d163793d192f01b5d3f2a74ddb1eb05b67ce0a986a2",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "replace_threshold",
+            "target": "r0.p4",
+            "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+            "value": 0.1
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 30.0,
+        "kind": "thermal",
+        "value": 49.59832003510585,
+        "field": "temperature_c",
+        "unit": "degC",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 25.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    }
+  ],
+  "no_model_called": true,
+  "scope": "Public observations only; earlier CHECK decisions and their direct completions distinguished from later Tour followups."
+}

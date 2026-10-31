@@ -1,0 +1,132 @@
+"""Compact G first-goal report; reference old history without repacking it."""
+import argparse
+import csv
+import hashlib
+import json
+from pathlib import Path
+
+
+def read(p):return json.loads(p.read_bytes())
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--report',type=Path,required=True);p.add_argument('--summary',type=Path,required=True);a=p.parse_args()
+    root=Path(__file__).resolve().parents[1];stage=root/'research/2026-11-01-m12g-local';r=stage/'evidence/run'
+    G=read(r/'G0-complete.json');audit=read(r/'G0-independent-result-audit-v1.json');derived=read(r/'G1a-derived-feedback-v1.1/complete.json');draft=read(stage/'G1b-protocol-DRAFT.json')
+    assert G['complete'] and len(G['results'])==24 and audit['passed'] and audit['raw_records_checked']==480
+    assert not G['local_mechanism_supported'] and not(r/'G1a-precheck').exists() and draft['status']=='DRAFT_NOT_READY'
+    assert read(r/'G1a-precheck-not-executed.json')['real_model_calls']==0
+    jobs=list(csv.DictReader((r/'resource-sacct-final.psv').open(),delimiter='|'))
+    assert len(jobs)==4 and all(j['State']=='COMPLETED' and j['ExitCode']=='0:0' and 'gres/gpu=' not in j['AllocTRES'] for j in jobs)
+    cpu=sum(int(j['ElapsedRaw'])*int(j['AllocCPUS'])/60 for j in jobs);assert cpu<=360
+    old=read(root/'research/2026-10-31-m12f-timing-skill/evidence/run/F1/search/complete.json')
+    human=next(v['statistics'] for v in old['evaluation_ledger']['results'] if v['policy']['executor']=='original-human-v1')
+    original_evidence=read(stage/'evidence/deployed-sidecar-SHA256.json')
+    archived=stage/'source/derive-feedback-deployed-v1.py'
+    assert sha(archived)==original_evidence['derive_m12g_feedback.py']
+    assert sha(root/'src/patrol_rsi/g_feedback_results.py')==derived['feedback_module_SHA256']==original_evidence['g_feedback_results.py']
+    assert sha(r/'G0-complete.json')==derived['source_G0_SHA256']
+    inventory=read(r/'actual-inventory.json');assert inventory['storage_bytes_after_audit_before_export']<=2000000000
+    report='''# M12-G 第一目标结果：空间检验、接口与下一步
+
+本目标 T0—T5 已完成。24 个固定策略、480 次真实开发评价及针对性审计均结束，没有候选达到预登记改善门。补丁与差异反馈接口已实现；六次合成模型预检因 G0 门关闭而未执行。G1b 草案已具体化但未就绪，G2 未启动。
+
+## 1. 这次解决了什么
+
+先检查“当前技能空间里有没有值得模型去发现的改进”。所有候选按用户计划预先指定，不是大模型生成。8 个局部门修改、8 个独立信息获取分支、6 个复核／恢复分支，加2个人工桥接，共24个；每个都实际执行20条已使用的F开发条件。
+
+没有新增物理过程或新的确认数据，没有训练模型。旧F0等价核验与341项全套检查没有重跑；本期做了29项新接口／继承时机接口集成检查，零失败和跳过。固定CVAE仍参与状态估计；本期“大模型调用为0”不表示没有CVAE推理。排序固定urgency，PPO权重保留且未用于新的排序决策。
+
+这里的480是实际执行次数，不是480个独立机房。它们复用两个已知种子、10个物理过程、两档噪声的20个开发条件。没有新的独立泛化结论。
+
+## 2. 24个策略的实际结果
+
+同一开发条件下，初始E1宏漏检1.0段／过程，宏加权删失等待168.442751秒，每回合平均CHECK0.3次。宏漏检不是百分比；漏检、等待和成本按原噪声—过程—种子层级评价，没有为了通过放宽门。
+
+|策略|类别|宏漏检|宏等待秒|平均CHECK|与E1不同轨迹条件数／20|通过改善门|
+|---|---|---:|---:|---:|---:|---|
+'''
+    labels={'positive_evidence':'阳性门局部修改','independent_information':'信息获取分支','professional_semantics':'复核／恢复分支','bridge':'人工桥接'}
+    for result in G['results']:
+        c=result['candidate'];s=result['statistics']
+        report+=f"|{c['id']}|{labels[c['category']]}|{s['macro_missed_count']:.3f}|{s['macro_wait_s']:.6f}|{s['mean_CHECK']:.2f}|{result['actual_trajectory_differences_vs_initial']}|否|\n"
+    report+='''
+18 个策略在全部20个条件中的完整动作与E1相同；6个改变了轨迹，但都没有更好的主结果。A01/A06等待略差约0.093秒；收紧A05/A07也未改善。
+
+B/C的14个分支在父轨迹公开输入上没有扩大准入集合，实际子轨迹也未增加准入或改变团队选择。这说明这些固定配方没有带来额外行动；它不能直接证明每个新增分支从未为真，因为它们可能只命中了父分支已覆盖的状态。更不能据此说整个技能空间无解或公开信息在理论上无用。
+
+## 3. 人工桥接说明了什么
+
+H01真正把人工热规则的signal排序换成urgency，触发、规则优先级与baseline参与保留；不是仅切换一个对signal规则无效的actor参数。H02用TimingSkill表达热触发意图，允许的额外任务和门语义与H01仍有静态差别。
+
+'''
+    report+=f"原人工规则在本批开发条件为宏漏检{human['macro_missed_count']:.3f}、等待{human['macro_wait_s']:.6f}秒；H01/H02均为1.100、169.354851秒。两桥接策略的实际动作在这20个条件中相同，但不是普遍语义等价证明。\n\n"
+    report+='''人工在旧F验证中优于E1，不代表它在这批开发条件也更好；本次没有读取旧验证逐行记录来选择阈值或改判结果。桥接结果尚未给出“必须新增排序算子才能找到有效策略”的充分证据。
+
+## 4. 接口已做与尚未做
+
+- 已实现1—2项有类型局部编辑，完整父内容和原节点哈希、稳定ID、原子失败与回退，不自动选阈值／裁剪／补条件。
+- 23个TimingSkill策略（含H02）用该接口生成并真实执行；H01是独立人工排序桥接。
+- 已记录子策略当前公开输入上的父／子准入与团队影子差异、第一记录差异、真实父／子动作差异和首次CHECK。影子选择不等于父策略在另一条路径上的实测结果。
+- 已从真实G0记录构建差异反馈样本，区分直接CHECK完成测量与更晚的Tour读数。
+- 尚未进行六次合成大模型输出预检；不能宣称模型已掌握新接口，也不能宣称差异反馈提高了提案效率。
+
+'''
+    t=derived['totals']
+    report+=f"本次处理{t['cards']:,}张卡，其中{t['earlier_CHECK_decision_cards']}张关联早先CHECK决策，{t['same_CHECK_completion_cards']}张是直接完成，{t['later_Tour_followup_cards']}张是更晚的Tour测量。全部480回合实际额外检查136次，其中H01的4次没有TimingSkill卡。因此卡片张数不能当独立检查数。\n\n"
+    report+='''220秒正常、255秒阳性的合成回归已验证：255秒值不会回填成220秒真值。本期实际数据中“直接正常、后来阳性”计数为0，不将这个合成例子写成实测发现。接口契约见研究目录中的interface-and-feedback-contract.md。
+
+## 5. 下一步该做什么，哪些还不知道
+
+建议下一目标先做**公开分支条件共现与新增准入窗口诊断**，使用已经保存的开发记录，0次新模型调用、0次新策略闭环，不增加第25个候选。只选这一个问题，不同时扩大模型、数据、额度或算子。
+
+具体输出两张表：一张统计B/C新分支自身命中、与父分支重叠、父未命中而新分支命中的数量；另一张对应可用额度、几何可行性、年龄／新鲜度、公开线索和代价条件。需说明父probe缺少时间／任务ID时能证明的只是有限输入集合共现；因果卡有时间但不是完整决策台账，缺的证据标未知，不补造。
+
+由此区分“条件未共同满足”“只覆盖原来已能查的状态”和“有准入变化却未形成实际派单”。本轮已证明新增准入没有出现，尚未证明是哪一个条件造成，也不能直接归因于NN质量、表达空间或信息不足。
+
+如果真实目标需要先诊断、再根据结果改变第二次行动，当前全队一次额外额度的确限制这种研究。但K=2或跨人员接管属于另一个研究问题，先与导师确认工程依据，并在同K内比较算法，不能将额外资源收益归给AI。本期没有开展这些变更。
+
+当前G1b不启动。草案已给出S/Q0/Q1/Q2四组、同E1起点、同补丁域、相同信息权限、36次正式调用、三次重复、五个强参照及每阶段40条未来确认清单。G0最佳参照为空，接口真实模型预检未执行，所以草案明确DRAFT_NOT_READY；80条未来验证／最终规格只是登记，未生成物理过程。种子还需未来正式冻结时复查全局登记。
+
+真正未决的是：如何形成有任务价值的独立信息获取动作，现有公开量何时足够，以及单次额度和固定所属是否贴近导师的实际目标。当前结果没有证明RSI无效，论文的新机制和独立收益仍待建立。
+
+## 6. 费用和证据
+
+'''
+    report+=f"4个Slurm分配全部COMPLETED、退出码0：接口检查131030、两个G0批次131031/131032、汇总／后处理／审计131033。总分配CPU {cpu:.6f}核分钟，GPU 0秒，大模型调用0，真实闭环480次，新物理过程0。新远端目录审计后、导出前大小约{inventory['storage_bytes_after_audit_before_export']/1e9:.3f}GB；没有复制原模型。全部在第一目标360核分钟／480回合／6次条件调用上限内。\n\n"
+    report+='''本次审计复用SHA固定的F独立核验函数，检查全部480条记录哈希、留存异常窗口／实际测量的评分算术、647460张卡的准入和事件关联、轨迹首差、分层指标、24槽与费用。每条真实运行也已执行原先独立的资格／路径／返回检查。没有重生成物理过程、重跑神经策略、重读旧最终标签或再次执行341项全套检查。
+
+独立审计不重新构造完整候选团队影子池和最早影子差异（没有保存全部池台账）；这些由封存代码与记录保证。保留物理窗口与路径几何真值依赖继承的逐回合审计，范围明确，不把收据检查夸成第二遍全物理重放。
+
+Gv1和原始G0结果不改。公开反馈v1.1实际后处理脚本已按部署原字节归档；交付工具后续补强了入口／结束哈希锁定，该新增护栏未回填成旧运行能力，也没有因此重复480次评价。
+
+主要入口：
+
+- [完整24策略与G0决定](../research/2026-11-01-m12g-local/evidence/run/G0-complete.json)
+- [针对性独立审计](../research/2026-11-01-m12g-local/evidence/run/G0-independent-result-audit-v1.json)
+- [补丁与反馈契约](../research/2026-11-01-m12g-local/interface-and-feedback-contract.md)
+- [G1b具体草案，未就绪](../research/2026-11-01-m12g-local/G1b-protocol-DRAFT.json)
+
+本期JSON汇总引用旧M12-F全量历史的路径和SHA，不再次解压重打包82MB旧历史。原始大记录保留在集群，当前统计与样本可复核，模型／完整轨迹的外部下载范围仍有依赖。
+'''
+    with a.report.open('x',encoding='utf8',newline='\n') as f:f.write(report)
+    stage_files={}
+    for file in sorted(stage.glob('*.json')):stage_files[file.name]={'sha256':sha(file),'content':read(file)}
+    costs={'allocations':jobs,'allocated_CPU_core_minutes':cpu,'GPU_seconds':0,'large_model_calls':0,'actual_environment_episodes':480,'new_physical_processes':0,'storage_snapshot':inventory}
+    value={'stage':'M12-G T0-T5','bounded_goal_complete':True,'scope':'G0actualplusG1ainterfaces; syntheticprechecknotexecuted; noG1b/G2/newconfirmation',
+        'report_markdown':report,'actual_results':G,'costs':costs,'independent_audit':audit,'derived_feedback_summary':derived,
+        'protocols_and_cases':stage_files,'future_G1b_status':'DRAFT_NOT_READY','current_public_guard_revision':'Postprocessingentry/endhashguard strengthenedafterarchiveddeployedv1; noreplayofG0.',
+        'interface_and_feedback_contract':(stage/'interface-and-feedback-contract.md').read_text(encoding='utf8'),
+        'shadow_count_units':{'admission_differences':'Candidate rows','team_choice_differences':'Candidate rows atchangedteamdecisions, NOTdistincttimestamps'},
+        'feedback_exposure_scope':'Derived model_visible_sample is PREPARED ONLY, not actually shown to anymodel in this goal; modelcalls0.',
+        'previous_full_history':{'path':'reports/2026-10-31-M12-F-项目全量汇总.json','sha256':sha(root/'reports/2026-10-31-M12-F-项目全量汇总.json'),'not_repacked':True},
+        'source_and_interface_files':{str(file.relative_to(root)):{'sha256':sha(file),'content':file.read_bytes().decode('utf8')} for file in [root/'src/patrol_rsi/g_timing_patch.py',root/'src/patrol_rsi/g_feedback.py',root/'src/patrol_rsi/g_feedback_results.py',root/'scripts/derive_m12g_feedback.py',archived]},
+        'source_archive':{'path':'research/2026-11-01-m12g-local/source/code-v1.tar.gz','sha256':sha(stage/'source/code-v1.tar.gz')},
+        'next_target':'Read-only public branch co-occurrence/new-admission diagnosis on used development data; 0newLLMcalls,0newpolicyepisodes; newprotocolrequiredforanynewsearch.'}
+    with a.summary.open('x',encoding='utf8',newline='\n') as f:json.dump(value,f,ensure_ascii=False,indent=2,allow_nan=False);f.write('\n')
+    assert read(a.summary)['report_markdown']==a.report.read_text(encoding='utf8')
+    print('G_DELIVERY',a.report,a.summary,a.summary.stat().st_size,sha(a.summary),flush=True)
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,211 @@
+{
+  "case_id": "known-33001-15",
+  "specification": {
+    "phase": "development",
+    "seed": 33001,
+    "scenario": "aux_feeder_loss+cdu_fouling",
+    "duration_s": 180,
+    "fault_start_s": 115,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "process_fingerprint": "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+  "event_eligibility_SHA256": "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125",
+  "metrics": {
+    "anomaly_segments": 9,
+    "confirmed_segments": 1,
+    "missed_segments": 8,
+    "miss_rate": 0.8888888888888888,
+    "consequence_weighted_censored_delay_s": 105.5381663591728,
+    "detected_only_mean_delay_s": 30.0,
+    "false_measured_confirmations": 0,
+    "completed_inspections": 1424,
+    "final_professional_coverage": 1.0,
+    "mean_overdue_fraction": 0.0,
+    "maximum_inspection_age_s": 305.0,
+    "travel_m": 11799.699999999993,
+    "service_s": 16650.0,
+    "idle_s": 3860.299999999998,
+    "history_estimator_inference_s": 0.04465762618929148,
+    "public_return": -0.25654248135803703,
+    "invalid_assignments": 0,
+    "duplicate_reservations": 0,
+    "unserved_IT_kwh": 4.334251639145166,
+    "selected_detours": 1,
+    "decision_CPU_seconds": 1.311076800338924,
+    "estimator_calls": 60,
+    "tasks_violating_exact_gap": 0,
+    "maximum_exact_gap_ratio": 0.9,
+    "maximum_exact_gap_s": 310.0
+  },
+  "usage": {
+    "dispatches": 1424,
+    "tool_counts": {
+      "common_budget_return_tour": 1214,
+      "return_tour": 209,
+      "urgency": 1
+    },
+    "actual_PPO_dispatches": 0,
+    "PPO_multichoice_dispatches": 0,
+    "total_actor_scoring_calls": 0,
+    "exclusive_shadow_actor_scoring_calls": 0,
+    "global_optional_checks": 1,
+    "estimator_calls": 60,
+    "PPO_single_legal_candidate_dispatches": 0,
+    "actual_PPO_multichoice_takeover_rate": 0.0,
+    "rule_selected_dispatches": 1,
+    "forced_return_Tour_dispatches": 1214,
+    "ordinary_return_Tour_dispatches": 209,
+    "legacy_scoring_call_estimate": 1424
+  },
+  "audit": {
+    "passed": true,
+    "independent_path_qualification_measurement_checks": 1424,
+    "independent_full_return_certificates": 1424,
+    "selected_plan_count": 1424,
+    "initial_terminal_revisit_verified": true,
+    "physical_process_unchanged": true
+  },
+  "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-0/A01/case-19.json.gz",
+  "record_SHA256": "d7ffb1217ae4c77543c12d43f133fcb87003ae58ac87cdbfb84c27bbe02629ef",
+  "action_SHA256": "51341e659ca7b4a09e8230cc2d39bdd1a1e7f47483c3fd0602922e66f026484a",
+  "shadow_counts": {
+    "candidate_rows": 1320,
+    "admission_differences": 1,
+    "team_choice_differences": 48,
+    "first_difference": {
+      "time_s": 245.0,
+      "agent": 16,
+      "task_public_id": "control:4",
+      "features": {
+        "kind": "control",
+        "professional_available": true,
+        "professional_signal": 0.0,
+        "already_alarm": false,
+        "ever_checked": true,
+        "quota_available": true,
+        "direct_available": true,
+        "direct_reading_normal": true,
+        "direct_is_qualified": true,
+        "direct_age_s": 195.0,
+        "direct_age_ratio": 0.325,
+        "estimate_available": true,
+        "estimate_age_s": 5.0,
+        "thermal_disagreement": 0.02318125883379949,
+        "prior_disagreement": 0.027181692649314824,
+        "pod_thermal_signal": 0.0,
+        "pod_flow_deficit": 0.0,
+        "pod_service_gap": 0.0,
+        "inspection_age_ratio": 0.32499998807907104,
+        "importance": 0.84375,
+        "lead_s": 20.0,
+        "shift_s": 40.0,
+        "completion_cost_s": 55.0
+      },
+      "parent_admission": "CONTINUE_TOUR",
+      "child_admission": "CONTINUE_TOUR",
+      "parent_team_choice": {
+        "agent": 6,
+        "task_public_id": "thermal:72"
+      },
+      "child_team_choice": {
+        "agent": 6,
+        "task_public_id": "thermal:76"
+      },
+      "recorded_before_execution": true
+    }
+  },
+  "difference_cards": 1406,
+  "first_actual_difference": {
+    "time_s": 245.0,
+    "actual_parent_choices": {
+      "16": 160,
+      "17": 161,
+      "0": 2,
+      "3": 27,
+      "4": 40,
+      "6": 72,
+      "9": 91,
+      "10": 104
+    },
+    "actual_child_choices": {
+      "16": 160,
+      "17": 161,
+      "0": 2,
+      "3": 27,
+      "4": 40,
+      "6": 76,
+      "9": 91,
+      "10": 104
+    },
+    "scope": "Separate real paired runs; not unobserved shadow outcome"
+  },
+  "first_CHECK": {
+    "task": 76,
+    "cursor_after": 1,
+    "agent": 6,
+    "clock_s": 245.0,
+    "position": [
+      0.0,
+      23.0
+    ],
+    "baseline_next": 66,
+    "protection_enabled": true,
+    "certificate": {
+      "ok": true,
+      "candidate": 76,
+      "clock_s": 245.0,
+      "cursor_before": 1,
+      "cursor_after": 1,
+      "candidate_finish_s": 275.0,
+      "candidate_due_s": 385.0,
+      "fallback_order": [
+        66,
+        68,
+        70,
+        76,
+        78,
+        72,
+        74,
+        80,
+        82,
+        84,
+        86,
+        64
+      ],
+      "fallback_completion_s": [
+        300.0,
+        320.0,
+        335.0,
+        355.0,
+        370.0,
+        390.0,
+        405.0,
+        425.0,
+        440.0,
+        460.0,
+        475.0,
+        515.0
+      ],
+      "fallback_due_s": [
+        330.0,
+        350.0,
+        365.0,
+        575.0,
+        400.0,
+        420.0,
+        435.0,
+        455.0,
+        470.0,
+        490.0,
+        505.0,
+        545.0
+      ],
+      "repeating_cycle_s": 230.0,
+      "minimum_projected_slack_s": 30.0
+    }
+  }
+}

@@ -1,0 +1,819 @@
+{
+  "protocol": "M12G-G1b-four-group-DRAFT-v1",
+  "status": "DRAFT_NOT_READY",
+  "execution_authorized_by_this_file": false,
+  "G1b_calls_or_data_generated": false,
+  "G2_included": false,
+  "readiness": {
+    "G0_local_mechanism_supported": false,
+    "G1a_precheck_executed": false,
+    "G1a_interface_passed": null,
+    "G0_receipt_SHA256": "37a0665284729931a22ce8e5d16403e396f2cfde7ca2ac34b8fee37f5a80d60e",
+    "precheck_receipt_SHA256": null,
+    "reason": "Usable local mechanism plus typed interface needed; not a PPO/all-predictors prerequisite."
+  },
+  "common_parent": "InitialE1 every slot; ownneutralprevious2patches allgroups; no winner-parent leakage to Q0",
+  "groups": {
+    "S": "Same1-2edit language; fixed stratifiedoperation/path/value sampler, no model",
+    "Q0": "FixedQwen with no run observations or acceptancebits",
+    "Q1": "FixedQwen with F-style representative retrieval",
+    "Q2": "FixedQwen with decision-difference public feedback package"
+  },
+  "proposal_budget": {
+    "repeats": [
+      38101,
+      38102,
+      38103
+    ],
+    "slots_per_group": 4,
+    "groups": 4,
+    "total_slots": 48,
+    "actual_LLM_calls_cap": 36
+  },
+  "feedback_contract": {
+    "access": "Q1/Q2 same initial+ownrecent2completedrun public records and acceptancebits; no hidden scores/events/oracle/seed/scenario in prompts",
+    "card_limit": 8,
+    "input_token_cap": 6144,
+    "output_token_cap": 1024,
+    "initial_Q1_Q2_identical": true,
+    "Q2": "fourprofessioncoverage then up to4public differences/positiveCHECKobservations/normalcontrasts; shadows not parentcounterfactualoutcomes",
+    "mechanism_claim": "Decisiondifferencefeedback package vsF-stylepackage; doesnotisolatepure retrievalordering alone"
+  },
+  "strong_references": [
+    "Tour",
+    "original_human_professional",
+    "initial_E1",
+    "fixed_information",
+    "G0_best_local_reference"
+  ],
+  "G0_reference": null,
+  "G0_reference_is_not_secret_Q2_parent": true,
+  "development": {
+    "known_seeds": [
+      33000,
+      33001
+    ],
+    "conditions": 20,
+    "multiple_design_reuse_disclosed": true,
+    "selection": "allseedmiss<=initial + strict lexicographic macro miss/wait/CHECK/walk,abs1e-9"
+  },
+  "future_manifest": [
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 225,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 225,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 310,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 310,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 420,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 420,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 580,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 580,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 235,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38020,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 235,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 390,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 390,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 805,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 805,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 385,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 385,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 415,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 415,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 725,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38021,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 725,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 865,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 865,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 160,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 160,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 575,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 575,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 850,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 850,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 795,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38022,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 795,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 440,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 440,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 460,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 460,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 880,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 880,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 410,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 410,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 490,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "validation",
+      "seed": 38023,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 490,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 250,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 250,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 880,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 880,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 650,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 650,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 720,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 720,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38040,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 355,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 355,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 155,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 155,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 100,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 100,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 290,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 290,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 250,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38041,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 250,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 845,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 845,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 775,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 775,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 640,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 640,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 670,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 670,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38042,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 815,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "healthy",
+      "duration_s": 900,
+      "fault_start_s": 815,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "coldplate_fouling",
+      "duration_s": 180,
+      "fault_start_s": 195,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 655,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "dc_contact_hotspot",
+      "duration_s": 180,
+      "fault_start_s": 655,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 500,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "sensor_bias",
+      "duration_s": 900,
+      "fault_start_s": 500,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 240,
+      "noise_c": 0.2,
+      "status": "proposed_not_generated"
+    },
+    {
+      "phase": "final",
+      "seed": 38043,
+      "scenario": "aux_feeder_loss+cdu_fouling",
+      "duration_s": 180,
+      "fault_start_s": 240,
+      "noise_c": 1.0,
+      "status": "proposed_not_generated"
+    }
+  ],
+  "future_identity_scope": {
+    "checked_against": [
+      "research\\2026-10-31-m12f-timing-skill\\evidence\\historical-identities.json",
+      "research\\2026-10-31-m12f-timing-skill\\cases-v1.json"
+    ],
+    "historical_registry_SHA256": "7a5b835844110703893805cb007a80b80a9c628f4995b7a9d7f3440ef1b62361",
+    "scope": "Known historical identities and allFreservedcases; recheck global history/reservations at future actualfreeze; no claiming complete global reservation census."
+  },
+  "confirmatory_claims": {
+    "feedback": "Q2strictgainQ1 ineach3repeat +strongreference nonregression",
+    "experience": "Q2strictgainQ0 ineach3repeat +strongreference nonregression",
+    "task": "Q2strictgainS andALL5strongreferences ineach3repeat"
+  },
+  "strict_gain": "Everyseedmissnoincrease AND fewermacroMiss OR sameMiss>=5%relativewaitgain OR samemiss/wait>=5%CHECKreduction&walknoincrease;1e-9tol,zero/undefineddenominatornotgain;cost-onlylabelseparate",
+  "final_open": "All3selectedmappings/source/models frozenbeforevalidationgeneration; anyclaimvalidates ->onefinalopen; finalmustrepeatSAMEclaim, no reselection",
+  "analysis_unit": "Noise->physicalprocess->seed macro;3modelrepeats reuse4confirmationseeds, not12independentrooms. Seedclustered summaries/uncertainty with smallsample limitations.",
+  "environment_caps": {
+    "G1b_development": 1060,
+    "validation": 680,
+    "final": 680,
+    "G1b_total": 2420,
+    "prior_G0": 480,
+    "combined_G0_G1_cap": 2900
+  },
+  "resource_planning_envelope": {
+    "combined_G0_G1_CPU_core_minutes": 900,
+    "combined_GPU_seconds": 7200,
+    "combined_storage_bytes": 2000000000,
+    "parallel_allocations": 2,
+    "status": "Future schedulemustsubtractactualfirstgoalspending andverifyfitsbefore anynewcalls/data; not a newallocation"
+  },
+  "mandatory_future_work_before_start": [
+    "Freeze stratifiedSsampling andmatchedgenseed schedule; no extra samplinguntilpositive",
+    "Bindactualpatch/feedbacksourceandnewregistry checkedmanifest, source/model hashes and resourceledger",
+    "Predeclare allactual17policyidentities/cache scope andsameclaim validation/final gate",
+    "Validate interface treatment controls and pilot eventcoverage scope without openingfinal"
+  ]
+}

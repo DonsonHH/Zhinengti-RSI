@@ -42,5 +42,9 @@ jobs:
           python -m unittest discover -s tests -p test_timing_semantics.py -v
           python -m unittest discover -s tests -p test_timing_skill_features.py -v
           python -m unittest discover -s tests -p test_timing_learning.py -v
+          python -m unittest discover -s tests -p test_g_timing_patch.py -v
+          python -m unittest discover -s tests -p test_g_bridge.py -v
+          python -m unittest discover -s tests -p test_g_feedback.py -v
+          python -m unittest discover -s tests -p test_g_feedback_results.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts

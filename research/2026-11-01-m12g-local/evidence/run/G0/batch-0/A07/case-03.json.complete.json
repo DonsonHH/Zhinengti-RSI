@@ -1,0 +1,142 @@
+{
+  "case_id": "known-33000-03",
+  "specification": {
+    "phase": "development",
+    "seed": 33000,
+    "scenario": "coldplate_fouling",
+    "duration_s": 180,
+    "fault_start_s": 885,
+    "noise_c": 1.0,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "process_fingerprint": "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+  "event_eligibility_SHA256": "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01",
+  "metrics": {
+    "anomaly_segments": 1,
+    "confirmed_segments": 0,
+    "missed_segments": 1,
+    "miss_rate": 1.0,
+    "consequence_weighted_censored_delay_s": 120.0,
+    "detected_only_mean_delay_s": null,
+    "false_measured_confirmations": 0,
+    "completed_inspections": 1426,
+    "final_professional_coverage": 1.0,
+    "mean_overdue_fraction": 0.0,
+    "maximum_inspection_age_s": 305.0,
+    "travel_m": 11793.399999999992,
+    "service_s": 16670.0,
+    "idle_s": 3846.599999999998,
+    "history_estimator_inference_s": 0.04527225065976381,
+    "public_return": -0.2532508684678705,
+    "invalid_assignments": 0,
+    "duplicate_reservations": 0,
+    "unserved_IT_kwh": 0.926481084668913,
+    "selected_detours": 0,
+    "decision_CPU_seconds": 6.559523510746658,
+    "estimator_calls": 60,
+    "tasks_violating_exact_gap": 0,
+    "maximum_exact_gap_ratio": 0.8,
+    "maximum_exact_gap_s": 310.0
+  },
+  "usage": {
+    "dispatches": 1426,
+    "tool_counts": {
+      "return_tour": 1426
+    },
+    "actual_PPO_dispatches": 0,
+    "PPO_multichoice_dispatches": 0,
+    "total_actor_scoring_calls": 0,
+    "exclusive_shadow_actor_scoring_calls": 0,
+    "global_optional_checks": 0,
+    "estimator_calls": 60,
+    "PPO_single_legal_candidate_dispatches": 0,
+    "actual_PPO_multichoice_takeover_rate": 0.0,
+    "rule_selected_dispatches": 0,
+    "forced_return_Tour_dispatches": 0,
+    "ordinary_return_Tour_dispatches": 1426,
+    "legacy_scoring_call_estimate": 1426
+  },
+  "audit": {
+    "passed": true,
+    "independent_path_qualification_measurement_checks": 1426,
+    "independent_full_return_certificates": 1426,
+    "selected_plan_count": 1426,
+    "initial_terminal_revisit_verified": true,
+    "physical_process_unchanged": true
+  },
+  "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-0/A07/case-03.json.gz",
+  "record_SHA256": "66e3cf166d21526d0b7c2dc6238a0a600cc1b1679f406089a221c040d040f122",
+  "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+  "shadow_counts": {
+    "candidate_rows": 8282,
+    "admission_differences": 5,
+    "team_choice_differences": 112,
+    "first_difference": {
+      "time_s": 1005.0,
+      "agent": 2,
+      "task_public_id": "thermal:58",
+      "features": {
+        "kind": "thermal",
+        "professional_available": true,
+        "professional_signal": 0.0,
+        "already_alarm": false,
+        "ever_checked": true,
+        "quota_available": true,
+        "direct_available": true,
+        "direct_reading_normal": true,
+        "direct_is_qualified": true,
+        "direct_age_s": 195.0,
+        "direct_age_ratio": 0.65,
+        "estimate_available": true,
+        "estimate_age_s": 15.0,
+        "thermal_disagreement": 0.0025559693584732202,
+        "prior_disagreement": 0.0025559693584732202,
+        "pod_thermal_signal": 0.0,
+        "pod_flow_deficit": 0.0,
+        "pod_service_gap": 0.0,
+        "inspection_age_ratio": 0.6499999761581421,
+        "importance": 0.75,
+        "lead_s": 15.0,
+        "shift_s": 15.0,
+        "completion_cost_s": 25.0
+      },
+      "parent_admission": "CONTINUE_TOUR",
+      "child_admission": "CONTINUE_TOUR",
+      "parent_team_choice": {
+        "agent": 6,
+        "task_public_id": "thermal:64"
+      },
+      "child_team_choice": null,
+      "recorded_before_execution": true
+    }
+  },
+  "difference_cards": 1408,
+  "first_actual_difference": {
+    "time_s": 1005.0,
+    "actual_parent_choices": {
+      "2": 56,
+      "4": 32,
+      "5": 43,
+      "6": 64,
+      "8": 120,
+      "10": 96,
+      "11": 107,
+      "0": 14
+    },
+    "actual_child_choices": {
+      "2": 56,
+      "4": 32,
+      "5": 43,
+      "6": 78,
+      "8": 120,
+      "10": 96,
+      "11": 107,
+      "0": 14
+    },
+    "scope": "Separate real paired runs; not unobserved shadow outcome"
+  },
+  "first_CHECK": null
+}

@@ -1,0 +1,580 @@
+{
+  "source_record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/B07/case-17.json.gz",
+  "source_record_SHA256": "52283e435e4fc2c203dba4aa87db89ebc57b7130c64e07285905bb300fe41f18",
+  "feedback_contract": "g-difference-v1.1",
+  "cards_available": 1408,
+  "model_visible_sample": [
+    {
+      "trajectory_id": "70c677f8e0e5fb87eed2f6a3e9378a72ab07daa8a5e0d5235356125cfe28dc76",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "thermal:2",
+        "agent": 0,
+        "features": {
+          "kind": "thermal",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": null,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.01666666753590107,
+          "importance": 0.5,
+          "lead_s": 10.0,
+          "shift_s": 20.0,
+          "completion_cost_s": 15.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 20.0,
+        "Tour_target_finish_s": 30.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "198a783b7f6c5974e23a8b7cff413180fe76387601d393c974e8043177f89137",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 30.0,
+        "kind": "thermal",
+        "value": 48.94333794458285,
+        "field": "temperature_c",
+        "unit": "degC",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 25.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "70c677f8e0e5fb87eed2f6a3e9378a72ab07daa8a5e0d5235356125cfe28dc76",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "electrical:4",
+        "agent": 12,
+        "features": {
+          "kind": "electrical",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 20.0,
+          "shift_s": 50.0,
+          "completion_cost_s": 35.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 40.0,
+        "Tour_target_finish_s": 60.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "198a783b7f6c5974e23a8b7cff413180fe76387601d393c974e8043177f89137",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 60.0,
+        "kind": "electrical",
+        "value": 38.36707502939572,
+        "field": "contact_temperature_c",
+        "unit": "degC",
+        "qualified_role": "electrical",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 55.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "70c677f8e0e5fb87eed2f6a3e9378a72ab07daa8a5e0d5235356125cfe28dc76",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "cooling:4",
+        "agent": 14,
+        "features": {
+          "kind": "cooling",
+          "professional_available": true,
+          "professional_signal": 0.0,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": true,
+          "direct_reading_normal": true,
+          "direct_is_qualified": false,
+          "direct_age_s": 0.0,
+          "direct_age_ratio": 0.0,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 20.0,
+          "shift_s": 50.0,
+          "completion_cost_s": 35.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 40.0,
+        "Tour_target_finish_s": 60.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "198a783b7f6c5974e23a8b7cff413180fe76387601d393c974e8043177f89137",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 60.0,
+        "kind": "cooling",
+        "value": 36.15204648971557,
+        "field": "pod_flow_kg_s",
+        "unit": "kg/s",
+        "qualified_role": "cooling",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 55.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "70c677f8e0e5fb87eed2f6a3e9378a72ab07daa8a5e0d5235356125cfe28dc76",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "control:4",
+        "agent": 16,
+        "features": {
+          "kind": "control",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": 0.0,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": 0.0,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.008333333767950535,
+          "importance": 0.84375,
+          "lead_s": 15.0,
+          "shift_s": 45.0,
+          "completion_cost_s": 30.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 35.0,
+        "Tour_target_finish_s": 50.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "198a783b7f6c5974e23a8b7cff413180fe76387601d393c974e8043177f89137",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 50.0,
+        "kind": "control",
+        "value": 0.0,
+        "field": "controller_sensor_error_c",
+        "unit": "degC",
+        "qualified_role": "control",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 45.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    },
+    {
+      "trajectory_id": "70c677f8e0e5fb87eed2f6a3e9378a72ab07daa8a5e0d5235356125cfe28dc76",
+      "decision": {
+        "time_s": 5.0,
+        "task_public_id": "thermal:26",
+        "agent": 2,
+        "features": {
+          "kind": "thermal",
+          "professional_available": false,
+          "professional_signal": null,
+          "already_alarm": false,
+          "ever_checked": false,
+          "quota_available": true,
+          "direct_available": false,
+          "direct_reading_normal": null,
+          "direct_is_qualified": null,
+          "direct_age_s": null,
+          "direct_age_ratio": null,
+          "estimate_available": false,
+          "estimate_age_s": null,
+          "thermal_disagreement": null,
+          "prior_disagreement": null,
+          "pod_thermal_signal": 0.0,
+          "pod_flow_deficit": null,
+          "pod_service_gap": 0.0,
+          "inspection_age_ratio": 0.01666666753590107,
+          "importance": 1.0,
+          "lead_s": 10.0,
+          "shift_s": 20.0,
+          "completion_cost_s": 15.0
+        },
+        "skill_action": "CONTINUE_TOUR",
+        "executed_action": "CONTINUE_TOUR",
+        "team_action": "CONTINUE_TOUR",
+        "candidate_finish_s": 20.0,
+        "Tour_target_finish_s": 30.0,
+        "matched_rule_index": null
+      },
+      "parent_skill_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "child_skill_id": "198a783b7f6c5974e23a8b7cff413180fe76387601d393c974e8043177f89137",
+      "applied_patch": {
+        "schema_version": "timing-patch-v1",
+        "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+        "edits": [
+          {
+            "op": "add_rule",
+            "rule": {
+              "all": [
+                {
+                  "field": "already_alarm",
+                  "op": "eq",
+                  "value": false
+                },
+                {
+                  "field": "direct_age_s",
+                  "op": "ge",
+                  "value": 120
+                },
+                {
+                  "field": "inspection_age_ratio",
+                  "op": "ge",
+                  "value": 0.5
+                },
+                {
+                  "field": "lead_s",
+                  "op": "ge",
+                  "value": 60
+                },
+                {
+                  "field": "shift_s",
+                  "op": "le",
+                  "value": 30
+                },
+                {
+                  "field": "pod_service_gap",
+                  "op": "ge",
+                  "value": 0.05
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "same_input_parent_admission": "CONTINUE_TOUR",
+      "same_input_child_admission": "CONTINUE_TOUR",
+      "parent_team_choice_is_shadow": true,
+      "same_state_team_choices": {
+        "parent_team_choice": null,
+        "child_team_choice": null
+      },
+      "admission_differs": false,
+      "team_choice_differs": false,
+      "public_effect": "declined",
+      "actual_follow_up": {
+        "time_s": 30.0,
+        "kind": "thermal",
+        "value": 49.59832003510585,
+        "field": "temperature_c",
+        "unit": "degC",
+        "qualified_role": "thermal",
+        "calibrated": true,
+        "observed_alarm": false,
+        "transition": "normal_check"
+      },
+      "elapsed_to_actual_measurement_s": 25.0,
+      "counterfactual_measurement": "unobserved",
+      "earlier_temperature_truth": "unobserved",
+      "feedback_contract": "g-difference-v1.1",
+      "direct_optional_measurement": null,
+      "follow_up_is_optional_completion": false,
+      "direct_optional_positive": false,
+      "is_direct_optional_positive_card": false,
+      "result_scope": "direct_optional_measurement is that CHECK completion; actual_follow_up may be a later Tour reading, not earlier truth or a counterfactual."
+    }
+  ],
+  "no_model_called": true,
+  "scope": "Public observations only; earlier CHECK decisions and their direct completions distinguished from later Tour followups."
+}

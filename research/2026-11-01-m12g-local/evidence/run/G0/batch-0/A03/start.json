@@ -1,0 +1,67 @@
+{
+  "candidate": {
+    "slot": 3,
+    "id": "A03",
+    "category": "positive_evidence",
+    "description": "One margin coefficient change",
+    "patch": {
+      "schema_version": "timing-patch-v1",
+      "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "edits": [
+        {
+          "op": "replace_threshold",
+          "target": "r0.p4",
+          "expected_hash": "8946779de7e67d6d2ebb8a12af9a9f8f588766b22298ff4b88013a3a50b5107d",
+          "value": 0.25
+        }
+      ]
+    },
+    "policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.25
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "eligible_local_mechanism": true
+  },
+  "screening": {
+    "rows": 130364,
+    "CHECK_rows": 6,
+    "parent_input_differences": 0,
+    "scope": "Finite archived parent inputs only; no universal/trajectory equivalence asserted; all20actualclosedloops stillrun."
+  },
+  "scheduled_actual_episodes": 20
+}

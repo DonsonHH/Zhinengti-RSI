@@ -1,0 +1,82 @@
+{
+  "case_id": "known-33001-10",
+  "specification": {
+    "phase": "development",
+    "seed": 33001,
+    "scenario": "sensor_bias",
+    "duration_s": 900,
+    "fault_start_s": 130,
+    "noise_c": 0.2,
+    "estimator": "history",
+    "control": "feedback",
+    "resources": "provisioned",
+    "variant": "open"
+  },
+  "process_fingerprint": "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+  "event_eligibility_SHA256": "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592",
+  "metrics": {
+    "anomaly_segments": 1,
+    "confirmed_segments": 1,
+    "missed_segments": 0,
+    "miss_rate": 0.0,
+    "consequence_weighted_censored_delay_s": 220.0,
+    "detected_only_mean_delay_s": 220.0,
+    "false_measured_confirmations": 0,
+    "completed_inspections": 1426,
+    "final_professional_coverage": 1.0,
+    "mean_overdue_fraction": 0.0,
+    "maximum_inspection_age_s": 305.0,
+    "travel_m": 11793.399999999992,
+    "service_s": 16670.0,
+    "idle_s": 3846.599999999998,
+    "history_estimator_inference_s": 0.038944647647440434,
+    "public_return": -0.2536145328282829,
+    "invalid_assignments": 0,
+    "duplicate_reservations": 0,
+    "unserved_IT_kwh": 0.0,
+    "selected_detours": 0,
+    "decision_CPU_seconds": 5.989752469584346,
+    "estimator_calls": 60,
+    "tasks_violating_exact_gap": 0,
+    "maximum_exact_gap_ratio": 0.8,
+    "maximum_exact_gap_s": 310.0
+  },
+  "usage": {
+    "dispatches": 1426,
+    "tool_counts": {
+      "return_tour": 1426
+    },
+    "actual_PPO_dispatches": 0,
+    "PPO_multichoice_dispatches": 0,
+    "total_actor_scoring_calls": 0,
+    "exclusive_shadow_actor_scoring_calls": 0,
+    "global_optional_checks": 0,
+    "estimator_calls": 60,
+    "PPO_single_legal_candidate_dispatches": 0,
+    "actual_PPO_multichoice_takeover_rate": 0.0,
+    "rule_selected_dispatches": 0,
+    "forced_return_Tour_dispatches": 0,
+    "ordinary_return_Tour_dispatches": 1426,
+    "legacy_scoring_call_estimate": 1426
+  },
+  "audit": {
+    "passed": true,
+    "independent_path_qualification_measurement_checks": 1426,
+    "independent_full_return_certificates": 1426,
+    "selected_plan_count": 1426,
+    "initial_terminal_revisit_verified": true,
+    "physical_process_unchanged": true
+  },
+  "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-0/B04/case-16.json.gz",
+  "record_SHA256": "19f93b32c62ecc25484de6d4d3f1d4f4dc04922deff56644ee73aa0bcf94e6ea",
+  "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+  "shadow_counts": {
+    "candidate_rows": 8282,
+    "admission_differences": 0,
+    "team_choice_differences": 0,
+    "first_difference": null
+  },
+  "difference_cards": 1408,
+  "first_actual_difference": null,
+  "first_CHECK": null
+}

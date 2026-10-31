@@ -1,0 +1,47 @@
+{
+  "baseline": "a5ab5880e33e3df3cd9aeffc3a90a63c40273c41",
+  "scope": "T0-T5 only; no G1b/G2/newconfirmation",
+  "candidates_SHA256": "9060603d930f6d819ecc09693ad8bf9753d05d33d9d25b888063a2ab1bd8e04e",
+  "cases_SHA256": "95db02ff8115b59d81d4e58d39ed232c7f86c7dfce18e5f4c158739f3a0ee664",
+  "resources": {
+    "CPU_partition": "cu",
+    "CPU_cores": 2,
+    "CPU_RAM_GB": 8,
+    "G0_jobs": 2,
+    "G0_minutes_each": 45,
+    "gate_jobs": 1,
+    "gate_minutes": 15,
+    "audit_jobs": 1,
+    "audit_minutes": 20,
+    "conditional_GPU_jobs": 1,
+    "GPU_partition": "4gpu",
+    "GPU_GRES": "gpu:V100S:1",
+    "GPU_CPU_cores": 4,
+    "GPU_RAM_GB": 48,
+    "GPU_minutes": 15,
+    "total_allocated_CPU_core_minutes_cap": 360,
+    "total_GPU_seconds_cap": 900,
+    "parallel_allocations_cap": 2,
+    "new_storage_bytes_cap": 2000000000,
+    "environment_attempts_cap": 480,
+    "model_calls_cap": 6,
+    "max_reserved_CPU_minutes_initial_schedule": 310,
+    "freeze_basis": "Live2026-11-01snapshot; Fmaxepisode9.472s;240cases/twoCPUworkers fits45min. Allsetup/failure/audit costs counted."
+  },
+  "execution": "All24policies real20-case closedloops, no result-based pruning/replacement; observational screening is diagnostics only.",
+  "screening": "From archived initial public probe; report finite-probe scope only. No universal never-trigger claim; no synthetic continuation after divergence.",
+  "reference_authority": {
+    "F_search_complete_SHA256": "a1b62f3e61e4a8ebb35894144fe417b79055564e4db6dcac7683fcadedb5f98a",
+    "F_manifest_SHA256": "62e9e78d8467032581703cb4c3522633c8b1bdb0c185cd9911fd359bd3719622"
+  },
+  "inherit_core": [
+    "src/patrol_rsi/timing_skill.py",
+    "src/patrol_rsi/timing_skill_features.py",
+    "src/patrol_rsi/timing_skill_control.py",
+    "scripts/timing_skill_execution.py"
+  ],
+  "gain_gate": "Original strict_gain against initialE1: eachseed no moremiss; fewermacroMiss OR sameMiss>=5%waitgain OR samemiss/wait>=5%CHECKless andwalknotincrease; abs1e-9. H01alone cannotopen localpatchmodelprecheck.",
+  "precheck": "Only if a compilableTimingSkill has G0strictgain and compiler/feedback tests+publicboundary pass. Exactlysix synthetic1-2edit prompts, no realdata/evaluationlabels. >=5/6rawvalidcompiled; no repairs/retries.",
+  "report": "All24slots, roles, metrics, shadow/actualtrajectory distinctions, completecosts, G1b executableDRAFT only; finalsets remainunopened.",
+  "prompts_SHA256": "ae0bdda12461424f2f42454797736d852c0e6c4a4e1883f865bb027d413e55b9"
+}

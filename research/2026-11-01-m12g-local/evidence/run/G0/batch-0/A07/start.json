@@ -1,0 +1,76 @@
+{
+  "candidate": {
+    "slot": 7,
+    "id": "A07",
+    "category": "positive_evidence",
+    "description": "Add one bounded condition",
+    "patch": {
+      "schema_version": "timing-patch-v1",
+      "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "edits": [
+        {
+          "op": "add_predicate",
+          "target": "r0",
+          "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68",
+          "predicate": {
+            "field": "shift_s",
+            "op": "le",
+            "value": 30
+          }
+        }
+      ]
+    },
+    "policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "professional_available",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": "kind_threshold"
+              },
+              {
+                "field": "already_alarm",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "field": "evidence_margin",
+                "op": "positive",
+                "value": 0.05
+              },
+              {
+                "field": "shift_s",
+                "op": "le",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "eligible_local_mechanism": true
+  },
+  "screening": {
+    "rows": 130364,
+    "CHECK_rows": 2,
+    "parent_input_differences": 4,
+    "scope": "Finite archived parent inputs only; no universal/trajectory equivalence asserted; all20actualclosedloops stillrun."
+  },
+  "scheduled_actual_episodes": 20
+}

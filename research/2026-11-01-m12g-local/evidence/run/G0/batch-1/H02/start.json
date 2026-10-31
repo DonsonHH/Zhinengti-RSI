@@ -1,0 +1,78 @@
+{
+  "candidate": {
+    "slot": 24,
+    "id": "H02",
+    "category": "bridge",
+    "description": "Thermal intention in extra-onlyTimingSkill; not claimed equivalent to H01",
+    "patch": {
+      "schema_version": "timing-patch-v1",
+      "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "edits": [
+        {
+          "op": "delete_rule",
+          "target": "r0",
+          "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68"
+        },
+        {
+          "op": "add_rule",
+          "rule": {
+            "all": [
+              {
+                "field": "kind",
+                "op": "eq",
+                "value": "thermal"
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": 0.05
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "kind",
+                "op": "eq",
+                "value": "thermal"
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": 0.05
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "eligible_local_mechanism": true
+  },
+  "screening": {
+    "rows": 130364,
+    "CHECK_rows": 5,
+    "parent_input_differences": 3,
+    "scope": "Finite archived parent inputs only; no universal/trajectory equivalence asserted; all20actualclosedloops stillrun."
+  },
+  "scheduled_actual_episodes": 20
+}

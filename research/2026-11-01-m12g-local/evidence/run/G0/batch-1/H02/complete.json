@@ -1,0 +1,2302 @@
+{
+  "candidate": {
+    "slot": 24,
+    "id": "H02",
+    "category": "bridge",
+    "description": "Thermal intention in extra-onlyTimingSkill; not claimed equivalent to H01",
+    "patch": {
+      "schema_version": "timing-patch-v1",
+      "parent_id": "4e43f3f0c6c841942437f34ea5f0e293213b6ac24dfa097e8db0854b68f9a07b",
+      "edits": [
+        {
+          "op": "delete_rule",
+          "target": "r0",
+          "expected_hash": "c668178b4b188cc46b8ebaf17d0db9933c0d375b6e503592be87a0ff9723eb68"
+        },
+        {
+          "op": "add_rule",
+          "rule": {
+            "all": [
+              {
+                "field": "kind",
+                "op": "eq",
+                "value": "thermal"
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": 0.05
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "policy": {
+      "executor": "timing-skill-v1",
+      "ranker": "urgency",
+      "skill": {
+        "schema_version": "timing-skill-v1",
+        "rules": [
+          {
+            "all": [
+              {
+                "field": "kind",
+                "op": "eq",
+                "value": "thermal"
+              },
+              {
+                "field": "professional_signal",
+                "op": "ge",
+                "value": 0.05
+              },
+              {
+                "field": "lead_s",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "default_action": "CONTINUE_TOUR"
+      }
+    },
+    "eligible_local_mechanism": true
+  },
+  "screening": {
+    "rows": 130364,
+    "CHECK_rows": 5,
+    "parent_input_differences": 3,
+    "scope": "Finite archived parent inputs only; no universal/trajectory equivalence asserted; all20actualclosedloops stillrun."
+  },
+  "statistics": {
+    "seeds": [
+      {
+        "seed": 33000,
+        "macro_missed_count": 0.4,
+        "macro_wait_s": 162.511144371397
+      },
+      {
+        "seed": 33001,
+        "macro_missed_count": 1.8,
+        "macro_wait_s": 176.19855826927832
+      }
+    ],
+    "macro_missed_count": 1.1,
+    "macro_wait_s": 169.35485132033767,
+    "mean_CHECK": 0.2,
+    "mean_walk_m": 11795.269999999993,
+    "conditions": 20,
+    "physical_processes": 10,
+    "cohort_SHA256": "1666b82363918badb4363790570cf7d289d09f48d82563d3c3a0fe236bbbe69a",
+    "process_event_identities": [
+      [
+        [
+          33000,
+          "aux_feeder_loss+cdu_fouling",
+          180,
+          95
+        ],
+        "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+        "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4"
+      ],
+      [
+        [
+          33000,
+          "coldplate_fouling",
+          180,
+          885
+        ],
+        "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+        "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01"
+      ],
+      [
+        [
+          33000,
+          "dc_contact_hotspot",
+          180,
+          300
+        ],
+        "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+        "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687"
+      ],
+      [
+        [
+          33000,
+          "healthy",
+          900,
+          555
+        ],
+        "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+        "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      ],
+      [
+        [
+          33000,
+          "sensor_bias",
+          900,
+          695
+        ],
+        "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+        "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462"
+      ],
+      [
+        [
+          33001,
+          "aux_feeder_loss+cdu_fouling",
+          180,
+          115
+        ],
+        "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+        "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125"
+      ],
+      [
+        [
+          33001,
+          "coldplate_fouling",
+          180,
+          395
+        ],
+        "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+        "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550"
+      ],
+      [
+        [
+          33001,
+          "dc_contact_hotspot",
+          180,
+          630
+        ],
+        "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+        "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17"
+      ],
+      [
+        [
+          33001,
+          "healthy",
+          900,
+          535
+        ],
+        "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+        "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      ],
+      [
+        [
+          33001,
+          "sensor_bias",
+          900,
+          130
+        ],
+        "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+        "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592"
+      ]
+    ]
+  },
+  "gain_vs_initial": false,
+  "eligible_local_mechanism": true,
+  "actual_trajectory_differences_vs_initial": 3,
+  "rows": [
+    {
+      "case_id": "known-33000-00",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "healthy",
+        "duration_s": 900,
+        "fault_start_s": 555,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+      "event_eligibility_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metrics": {
+        "anomaly_segments": 0,
+        "confirmed_segments": 0,
+        "missed_segments": 0,
+        "miss_rate": null,
+        "consequence_weighted_censored_delay_s": null,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03860832471400499,
+        "public_return": -0.25288252525252547,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.947654533199966,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-00.json.gz",
+      "record_SHA256": "d3208d74f1d3930a792097dd6d7e0a2f093831cde3cb2e35f9fae1ca4d18bb9c",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-01",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "healthy",
+        "duration_s": 900,
+        "fault_start_s": 555,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98108d9d60df03f0958c80d849dfe0d17cb8730a789c7e614b0c15928e08551f",
+      "event_eligibility_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metrics": {
+        "anomaly_segments": 0,
+        "confirmed_segments": 0,
+        "missed_segments": 0,
+        "miss_rate": null,
+        "consequence_weighted_censored_delay_s": null,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04054865799844265,
+        "public_return": -0.25288252525252547,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 6.0540960896760225,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-01.json.gz",
+      "record_SHA256": "58034ced82fc3191d7845f6802f6b5e01ee8116469d63816c21bcfb46ec55518",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-02",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+      "event_eligibility_SHA256": "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 75.0,
+        "detected_only_mean_delay_s": 75.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1424,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11804.499999999993,
+        "service_s": 16650.0,
+        "idle_s": 3855.499999999998,
+        "history_estimator_inference_s": 0.0377110606059432,
+        "public_return": -0.2565766562170471,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.926481084668913,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 3.4469863204285502,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.9166666666666666,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1424,
+        "tool_counts": {
+          "common_budget_return_tour": 612,
+          "return_tour": 811,
+          "urgency": 1
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 1,
+        "forced_return_Tour_dispatches": 612,
+        "ordinary_return_Tour_dispatches": 811,
+        "legacy_scoring_call_estimate": 1424
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1424,
+        "independent_full_return_certificates": 1424,
+        "selected_plan_count": 1424,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-02.json.gz",
+      "record_SHA256": "b4975cbe05afbf80a95ef787d6a1cc4945290642c393c6c4fcdb4e5035a3dbcc",
+      "action_SHA256": "269802dcd7b63dcab34cefc8bd404155ca346bf109d2a0fb0e8ff511e6d46422",
+      "shadow_counts": {
+        "candidate_rows": 4810,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1406,
+      "first_actual_difference": null,
+      "first_CHECK": {
+        "task": 64,
+        "cursor_after": 5,
+        "agent": 6,
+        "clock_s": 1005.0,
+        "position": [
+          12.0,
+          26.5
+        ],
+        "baseline_next": 78,
+        "protection_enabled": true,
+        "certificate": {
+          "ok": true,
+          "candidate": 64,
+          "clock_s": 1005.0,
+          "cursor_before": 5,
+          "cursor_after": 5,
+          "candidate_finish_s": 1035.0,
+          "candidate_due_s": 1235.0,
+          "fallback_order": [
+            78,
+            72,
+            74,
+            80,
+            82,
+            84,
+            86,
+            64,
+            66,
+            68,
+            70,
+            76
+          ],
+          "fallback_completion_s": [
+            1065.0,
+            1085.0,
+            1100.0,
+            1120.0,
+            1135.0,
+            1155.0,
+            1170.0,
+            1210.0,
+            1225.0,
+            1245.0,
+            1260.0,
+            1280.0
+          ],
+          "fallback_due_s": [
+            1090.0,
+            1110.0,
+            1125.0,
+            1145.0,
+            1160.0,
+            1180.0,
+            1195.0,
+            1335.0,
+            1250.0,
+            1270.0,
+            1285.0,
+            1305.0
+          ],
+          "repeating_cycle_s": 230.0,
+          "minimum_projected_slack_s": 25.0
+        }
+      }
+    },
+    {
+      "case_id": "known-33000-03",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 885,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8368529298f7ea5af72867d39803b6819621570ecede695f2091d2af969a9a20",
+      "event_eligibility_SHA256": "1f72d5d853782ccb0c09606b50df14c0d63f70e061ddec1d46555c2c2c730d01",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 75.0,
+        "detected_only_mean_delay_s": 75.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1424,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11804.499999999993,
+        "service_s": 16650.0,
+        "idle_s": 3855.499999999998,
+        "history_estimator_inference_s": 0.03915061801671982,
+        "public_return": -0.2565692418907047,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.926481084668913,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 3.461509609594941,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.9166666666666666,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1424,
+        "tool_counts": {
+          "common_budget_return_tour": 612,
+          "return_tour": 811,
+          "urgency": 1
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 1,
+        "forced_return_Tour_dispatches": 612,
+        "ordinary_return_Tour_dispatches": 811,
+        "legacy_scoring_call_estimate": 1424
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1424,
+        "independent_full_return_certificates": 1424,
+        "selected_plan_count": 1424,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-03.json.gz",
+      "record_SHA256": "37d779ee1149d7fdb8ebaf16566311cf219222d25c450f5ad763d4978af2c7b8",
+      "action_SHA256": "269802dcd7b63dcab34cefc8bd404155ca346bf109d2a0fb0e8ff511e6d46422",
+      "shadow_counts": {
+        "candidate_rows": 4810,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1406,
+      "first_actual_difference": null,
+      "first_CHECK": {
+        "task": 64,
+        "cursor_after": 5,
+        "agent": 6,
+        "clock_s": 1005.0,
+        "position": [
+          12.0,
+          26.5
+        ],
+        "baseline_next": 78,
+        "protection_enabled": true,
+        "certificate": {
+          "ok": true,
+          "candidate": 64,
+          "clock_s": 1005.0,
+          "cursor_before": 5,
+          "cursor_after": 5,
+          "candidate_finish_s": 1035.0,
+          "candidate_due_s": 1235.0,
+          "fallback_order": [
+            78,
+            72,
+            74,
+            80,
+            82,
+            84,
+            86,
+            64,
+            66,
+            68,
+            70,
+            76
+          ],
+          "fallback_completion_s": [
+            1065.0,
+            1085.0,
+            1100.0,
+            1120.0,
+            1135.0,
+            1155.0,
+            1170.0,
+            1210.0,
+            1225.0,
+            1245.0,
+            1260.0,
+            1280.0
+          ],
+          "fallback_due_s": [
+            1090.0,
+            1110.0,
+            1125.0,
+            1145.0,
+            1160.0,
+            1180.0,
+            1195.0,
+            1335.0,
+            1250.0,
+            1270.0,
+            1285.0,
+            1305.0
+          ],
+          "repeating_cycle_s": 230.0,
+          "minimum_projected_slack_s": 25.0
+        }
+      }
+    },
+    {
+      "case_id": "known-33000-06",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 300,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+      "event_eligibility_SHA256": "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 295.0,
+        "detected_only_mean_delay_s": 295.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03942321054637432,
+        "public_return": -0.2511104462006635,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 6.102119538933039,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-04.json.gz",
+      "record_SHA256": "436f161fc8b2f5b721a036d4d6643930197d0b0964d996bdc178196f255a0607",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-07",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 300,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "cf3b494172106e52dd8aba737b7cc39ee073d5fe70f5172144163f56bb2edcee",
+      "event_eligibility_SHA256": "8e28bf835e4f9d76e48ad2d23eb453d83e16e5ed638eb89855226074df577687",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 295.0,
+        "detected_only_mean_delay_s": 295.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03980401810258627,
+        "public_return": -0.2511104462006635,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 6.274034911766648,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-05.json.gz",
+      "record_SHA256": "96dc94790f459d0a70a51bbe9ab5d5cdfb859a0b81d12d41d1b5f2f5ba664512",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-10",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 695,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+      "event_eligibility_SHA256": "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 195.0,
+        "detected_only_mean_delay_s": 195.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03812005650252104,
+        "public_return": -0.2536145328282822,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.790134627372026,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-06.json.gz",
+      "record_SHA256": "f258ea429f62b73018eb4fb0d0542a57fd2473b2441620ba7bb8a38cfd10c551",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-11",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 695,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "37946cf635e1ced7945a2c72543eead1ad2fe0ac78c0f817f9a72c4973ae7ae7",
+      "event_eligibility_SHA256": "1388758cfc598af2e4921aa4c539dfc85bd790ad44fff70e8f329377a8fc8462",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 195.0,
+        "detected_only_mean_delay_s": 195.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04075727425515652,
+        "public_return": -0.2536145328282822,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.971111526712775,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-07.json.gz",
+      "record_SHA256": "d465f603f559a0420d0057c8782f6d8d131111b00366d6f7884131a8eb183a4c",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-14",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+      "event_eligibility_SHA256": "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4",
+      "metrics": {
+        "anomaly_segments": 7,
+        "confirmed_segments": 5,
+        "missed_segments": 2,
+        "miss_rate": 0.2857142857142857,
+        "consequence_weighted_censored_delay_s": 85.04457748558804,
+        "detected_only_mean_delay_s": 60.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03762202616780996,
+        "public_return": -0.24799801580033384,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 2.7621519857350716,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.779411835595965,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-08.json.gz",
+      "record_SHA256": "810ac7a54dbf3074dd2ae68f65faa6094379dc77b1204c5f755c9b9d7049f5a1",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 3,
+        "team_choice_differences": 154,
+        "first_difference": {
+          "time_s": 180.0,
+          "agent": 1,
+          "task_public_id": "thermal:1",
+          "features": {
+            "kind": "thermal",
+            "professional_available": true,
+            "professional_signal": 0.0,
+            "already_alarm": false,
+            "ever_checked": true,
+            "quota_available": true,
+            "direct_available": true,
+            "direct_reading_normal": true,
+            "direct_is_qualified": true,
+            "direct_age_s": 165.0,
+            "direct_age_ratio": 0.55,
+            "estimate_available": true,
+            "estimate_age_s": 0.0,
+            "thermal_disagreement": 0.0010028567494501316,
+            "prior_disagreement": 0.0010028567494501316,
+            "pod_thermal_signal": 0.0,
+            "pod_flow_deficit": 0.0,
+            "pod_service_gap": 0.0,
+            "inspection_age_ratio": 0.550000011920929,
+            "importance": 0.5,
+            "lead_s": 35.0,
+            "shift_s": 60.0,
+            "completion_cost_s": 40.0
+          },
+          "parent_admission": "CONTINUE_TOUR",
+          "child_admission": "CONTINUE_TOUR",
+          "parent_team_choice": {
+            "agent": 14,
+            "task_public_id": "cooling:8"
+          },
+          "child_team_choice": null,
+          "recorded_before_execution": true
+        }
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": {
+        "time_s": 180.0,
+        "actual_parent_choices": {
+          "1": 23,
+          "2": 48,
+          "5": 39,
+          "7": 87,
+          "8": 112,
+          "11": 103,
+          "12": 138,
+          "13": 139,
+          "14": 152,
+          "15": 155
+        },
+        "actual_child_choices": {
+          "1": 23,
+          "2": 48,
+          "5": 39,
+          "7": 87,
+          "8": 112,
+          "11": 103,
+          "12": 138,
+          "13": 139,
+          "14": 154,
+          "15": 155
+        },
+        "scope": "Separate real paired runs; not unobserved shadow outcome"
+      },
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33000-15",
+      "specification": {
+        "phase": "development",
+        "seed": 33000,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 95,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2b4352de5529c46886e46d763f98132cfb00b86567f207a628b60728c61e29e9",
+      "event_eligibility_SHA256": "2513ba79aacbdfb0225a4825933ca645d4d90627d1fbded8c9c37b38c78207e4",
+      "metrics": {
+        "anomaly_segments": 7,
+        "confirmed_segments": 5,
+        "missed_segments": 2,
+        "miss_rate": 0.2857142857142857,
+        "consequence_weighted_censored_delay_s": 85.04457748558804,
+        "detected_only_mean_delay_s": 60.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04079508036375046,
+        "public_return": -0.24799768839539135,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 2.7621519857350716,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.958651033230126,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-09.json.gz",
+      "record_SHA256": "85f33fa748fb7ca5ea52bcfeca64388a2bc2f814a6ea331f3e4d4962778f3f16",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 3,
+        "team_choice_differences": 154,
+        "first_difference": {
+          "time_s": 180.0,
+          "agent": 1,
+          "task_public_id": "thermal:1",
+          "features": {
+            "kind": "thermal",
+            "professional_available": true,
+            "professional_signal": 0.0,
+            "already_alarm": false,
+            "ever_checked": true,
+            "quota_available": true,
+            "direct_available": true,
+            "direct_reading_normal": true,
+            "direct_is_qualified": true,
+            "direct_age_s": 165.0,
+            "direct_age_ratio": 0.55,
+            "estimate_available": true,
+            "estimate_age_s": 0.0,
+            "thermal_disagreement": 0.0010078158558954442,
+            "prior_disagreement": 0.0010078158558954442,
+            "pod_thermal_signal": 0.0,
+            "pod_flow_deficit": 0.0,
+            "pod_service_gap": 0.0,
+            "inspection_age_ratio": 0.550000011920929,
+            "importance": 0.5,
+            "lead_s": 35.0,
+            "shift_s": 60.0,
+            "completion_cost_s": 40.0
+          },
+          "parent_admission": "CONTINUE_TOUR",
+          "child_admission": "CONTINUE_TOUR",
+          "parent_team_choice": {
+            "agent": 14,
+            "task_public_id": "cooling:8"
+          },
+          "child_team_choice": null,
+          "recorded_before_execution": true
+        }
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": {
+        "time_s": 180.0,
+        "actual_parent_choices": {
+          "1": 23,
+          "2": 48,
+          "5": 39,
+          "7": 87,
+          "8": 112,
+          "11": 103,
+          "12": 138,
+          "13": 139,
+          "14": 152,
+          "15": 155
+        },
+        "actual_child_choices": {
+          "1": 23,
+          "2": 48,
+          "5": 39,
+          "7": 87,
+          "8": 112,
+          "11": 103,
+          "12": 138,
+          "13": 139,
+          "14": 154,
+          "15": 155
+        },
+        "scope": "Separate real paired runs; not unobserved shadow outcome"
+      },
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-00",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "healthy",
+        "duration_s": 900,
+        "fault_start_s": 535,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+      "event_eligibility_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metrics": {
+        "anomaly_segments": 0,
+        "confirmed_segments": 0,
+        "missed_segments": 0,
+        "miss_rate": null,
+        "consequence_weighted_censored_delay_s": null,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03894606698304415,
+        "public_return": -0.25288252525252547,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.766844084486365,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-10.json.gz",
+      "record_SHA256": "04167140d4fd936c9a6cb1d3059d7381d75797db207054154c5835e9edd3a6c0",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-01",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "healthy",
+        "duration_s": 900,
+        "fault_start_s": 535,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "26a1ffc42ed2e2752e78dbefa889f0c05da55464c5eb6f7ce4de46dfe252111e",
+      "event_eligibility_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metrics": {
+        "anomaly_segments": 0,
+        "confirmed_segments": 0,
+        "missed_segments": 0,
+        "miss_rate": null,
+        "consequence_weighted_censored_delay_s": null,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04097817838191986,
+        "public_return": -0.25288252525252547,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.956620287150145,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-11.json.gz",
+      "record_SHA256": "59c15c1ca20a386d24bd8b304fe752c73e98b1782432f35d9db8d5c1e93b226f",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-02",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 395,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+      "event_eligibility_SHA256": "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 105.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03767811134457588,
+        "public_return": -0.2529514679936902,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.7415919533759538,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.7853024723008275,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-12.json.gz",
+      "record_SHA256": "f27c7464e530b18edbccd8af2b68e7e9170097858738587248da3a22580c1d27",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-03",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 395,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "98197480ec90b6cdcc532c06ca17b503b2cb5ef2f947208fe14bcb084cd11210",
+      "event_eligibility_SHA256": "3c9866c6c24c2a88ac413605e8bbb393d29cb9136b55b07b6bcea7dc14c19550",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 105.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.04214205965399742,
+        "public_return": -0.2529514679936902,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.7415919533759538,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.938208078034222,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-13.json.gz",
+      "record_SHA256": "2fc196c60f651427b92fb6eaf79efdb54bd5dc807346b3b59051377522f697a6",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-06",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 630,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+      "event_eligibility_SHA256": "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 275.0,
+        "detected_only_mean_delay_s": 275.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.037273832596838474,
+        "public_return": -0.2510858144858722,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.832896730862558,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-14.json.gz",
+      "record_SHA256": "9ae9dde14df3889913ce1ad20d9db309f94ce9cf631ffa0965a61f4a81db94ac",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-07",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "dc_contact_hotspot",
+        "duration_s": 180,
+        "fault_start_s": 630,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "d4e71afeddb90e628e5453a1c336ddd16e3542e9f58af863654595af02ed02dc",
+      "event_eligibility_SHA256": "b6f11dfbce5d41b390f6e8a370f27500f00afafe156c22600a67f6cfaa13fc17",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 275.0,
+        "detected_only_mean_delay_s": 275.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.040205356664955616,
+        "public_return": -0.2510858144858722,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.926413898356259,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-15.json.gz",
+      "record_SHA256": "9d97b7d0fa2f9c13a2ea5957fe2cbf51a2c4f93b270561e3b6ae73a0b12680af",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-10",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 130,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+      "event_eligibility_SHA256": "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 220.0,
+        "detected_only_mean_delay_s": 220.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03940505534410477,
+        "public_return": -0.2536145328282829,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.765196779742837,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-16.json.gz",
+      "record_SHA256": "127776cd17e16a99eef55582c71d704d254da74e1befacee60874bbac6c71776",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-11",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "sensor_bias",
+        "duration_s": 900,
+        "fault_start_s": 130,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "8eb83883f3ae44482bae3f9b6e2a54228d72d7c393812d85bc9c9709664133b3",
+      "event_eligibility_SHA256": "239a34e2c71de7db951c25f00e21824f81bacb34036707fb9cc3137eec880592",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 1,
+        "missed_segments": 0,
+        "miss_rate": 0.0,
+        "consequence_weighted_censored_delay_s": 220.0,
+        "detected_only_mean_delay_s": 220.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03970754332840443,
+        "public_return": -0.2536145328282829,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.0,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 5.8677997048944235,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426,
+        "legacy_scoring_call_estimate": 1426
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-17.json.gz",
+      "record_SHA256": "6d97943706ddf0782b6107e2413a01eeb5d3e321c0ac17e0bf64b3352ea36954",
+      "action_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "shadow_counts": {
+        "candidate_rows": 8282,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1408,
+      "first_actual_difference": null,
+      "first_CHECK": null
+    },
+    {
+      "case_id": "known-33001-14",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+      "event_eligibility_SHA256": "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125",
+      "metrics": {
+        "anomaly_segments": 9,
+        "confirmed_segments": 1,
+        "missed_segments": 8,
+        "miss_rate": 0.8888888888888888,
+        "consequence_weighted_censored_delay_s": 104.05029979505382,
+        "detected_only_mean_delay_s": 65.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1425,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11802.299999999992,
+        "service_s": 16660.0,
+        "idle_s": 3847.699999999998,
+        "history_estimator_inference_s": 0.03783728275448084,
+        "public_return": -0.2549387051378675,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 4.334251639145166,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.1424809359014034,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8666666666666667,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1425,
+        "tool_counts": {
+          "common_budget_return_tour": 1215,
+          "return_tour": 209,
+          "urgency": 1
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 1,
+        "forced_return_Tour_dispatches": 1215,
+        "ordinary_return_Tour_dispatches": 209,
+        "legacy_scoring_call_estimate": 1425
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1425,
+        "independent_full_return_certificates": 1425,
+        "selected_plan_count": 1425,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-18.json.gz",
+      "record_SHA256": "d98d2da91b27af495442121e00b5841b62ba2d07f2e5d25c5ba6c043fd706374",
+      "action_SHA256": "e788aebfcd5b78c938b10d9f71f3c2508e6c11311d2a482abac72073bea81e2e",
+      "shadow_counts": {
+        "candidate_rows": 1320,
+        "admission_differences": 0,
+        "team_choice_differences": 0,
+        "first_difference": null
+      },
+      "difference_cards": 1407,
+      "first_actual_difference": null,
+      "first_CHECK": {
+        "task": 72,
+        "cursor_after": 1,
+        "agent": 6,
+        "clock_s": 245.0,
+        "position": [
+          0.0,
+          23.0
+        ],
+        "baseline_next": 66,
+        "protection_enabled": true,
+        "certificate": {
+          "ok": true,
+          "candidate": 72,
+          "clock_s": 245.0,
+          "cursor_before": 1,
+          "cursor_after": 1,
+          "candidate_finish_s": 270.0,
+          "candidate_due_s": 420.0,
+          "fallback_order": [
+            66,
+            68,
+            70,
+            76,
+            78,
+            72,
+            74,
+            80,
+            82,
+            84,
+            86,
+            64
+          ],
+          "fallback_completion_s": [
+            290.0,
+            310.0,
+            325.0,
+            345.0,
+            360.0,
+            380.0,
+            395.0,
+            415.0,
+            430.0,
+            450.0,
+            465.0,
+            505.0
+          ],
+          "fallback_due_s": [
+            330.0,
+            350.0,
+            365.0,
+            385.0,
+            400.0,
+            570.0,
+            435.0,
+            455.0,
+            470.0,
+            490.0,
+            505.0,
+            545.0
+          ],
+          "repeating_cycle_s": 230.0,
+          "minimum_projected_slack_s": 40.0
+        }
+      }
+    },
+    {
+      "case_id": "known-33001-15",
+      "specification": {
+        "phase": "development",
+        "seed": 33001,
+        "scenario": "aux_feeder_loss+cdu_fouling",
+        "duration_s": 180,
+        "fault_start_s": 115,
+        "noise_c": 1.0,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "e40b69b08032714ce5e1f94e7695c87609fb5452585f5bd76f0a214e82e24b9c",
+      "event_eligibility_SHA256": "be6bd282515e37a9870062c107498c406c2e327fd4f19e92f59219e701501125",
+      "metrics": {
+        "anomaly_segments": 9,
+        "confirmed_segments": 1,
+        "missed_segments": 8,
+        "miss_rate": 0.8888888888888888,
+        "consequence_weighted_censored_delay_s": 105.5381663591728,
+        "detected_only_mean_delay_s": 30.0,
+        "false_measured_confirmations": 0,
+        "completed_inspections": 1424,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11799.699999999993,
+        "service_s": 16650.0,
+        "idle_s": 3860.299999999998,
+        "history_estimator_inference_s": 0.03952155075967312,
+        "public_return": -0.25654248135803703,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 4.334251639145166,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 1.153077038936317,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.9,
+        "maximum_exact_gap_s": 310.0
+      },
+      "usage": {
+        "dispatches": 1424,
+        "tool_counts": {
+          "common_budget_return_tour": 1214,
+          "return_tour": 209,
+          "urgency": 1
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 0,
+        "exclusive_shadow_actor_scoring_calls": 0,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 1,
+        "forced_return_Tour_dispatches": 1214,
+        "ordinary_return_Tour_dispatches": 209,
+        "legacy_scoring_call_estimate": 1424
+      },
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1424,
+        "independent_full_return_certificates": 1424,
+        "selected_plan_count": 1424,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true
+      },
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261101-m12g/G0/batch-1/H02/case-19.json.gz",
+      "record_SHA256": "ab7d7297fdd0bd434b22f64bc3ef68f5b75a9bad6be34d2b4a64da039df5a1a1",
+      "action_SHA256": "51341e659ca7b4a09e8230cc2d39bdd1a1e7f47483c3fd0602922e66f026484a",
+      "shadow_counts": {
+        "candidate_rows": 1320,
+        "admission_differences": 1,
+        "team_choice_differences": 48,
+        "first_difference": {
+          "time_s": 245.0,
+          "agent": 16,
+          "task_public_id": "control:4",
+          "features": {
+            "kind": "control",
+            "professional_available": true,
+            "professional_signal": 0.0,
+            "already_alarm": false,
+            "ever_checked": true,
+            "quota_available": true,
+            "direct_available": true,
+            "direct_reading_normal": true,
+            "direct_is_qualified": true,
+            "direct_age_s": 195.0,
+            "direct_age_ratio": 0.325,
+            "estimate_available": true,
+            "estimate_age_s": 5.0,
+            "thermal_disagreement": 0.02318125883379949,
+            "prior_disagreement": 0.027181692649314824,
+            "pod_thermal_signal": 0.0,
+            "pod_flow_deficit": 0.0,
+            "pod_service_gap": 0.0,
+            "inspection_age_ratio": 0.32499998807907104,
+            "importance": 0.84375,
+            "lead_s": 20.0,
+            "shift_s": 40.0,
+            "completion_cost_s": 55.0
+          },
+          "parent_admission": "CONTINUE_TOUR",
+          "child_admission": "CONTINUE_TOUR",
+          "parent_team_choice": {
+            "agent": 6,
+            "task_public_id": "thermal:72"
+          },
+          "child_team_choice": {
+            "agent": 6,
+            "task_public_id": "thermal:76"
+          },
+          "recorded_before_execution": true
+        }
+      },
+      "difference_cards": 1406,
+      "first_actual_difference": {
+        "time_s": 245.0,
+        "actual_parent_choices": {
+          "16": 160,
+          "17": 161,
+          "0": 2,
+          "3": 27,
+          "4": 40,
+          "6": 72,
+          "9": 91,
+          "10": 104
+        },
+        "actual_child_choices": {
+          "16": 160,
+          "17": 161,
+          "0": 2,
+          "3": 27,
+          "4": 40,
+          "6": 76,
+          "9": 91,
+          "10": 104
+        },
+        "scope": "Separate real paired runs; not unobserved shadow outcome"
+      },
+      "first_CHECK": {
+        "task": 76,
+        "cursor_after": 1,
+        "agent": 6,
+        "clock_s": 245.0,
+        "position": [
+          0.0,
+          23.0
+        ],
+        "baseline_next": 66,
+        "protection_enabled": true,
+        "certificate": {
+          "ok": true,
+          "candidate": 76,
+          "clock_s": 245.0,
+          "cursor_before": 1,
+          "cursor_after": 1,
+          "candidate_finish_s": 275.0,
+          "candidate_due_s": 385.0,
+          "fallback_order": [
+            66,
+            68,
+            70,
+            76,
+            78,
+            72,
+            74,
+            80,
+            82,
+            84,
+            86,
+            64
+          ],
+          "fallback_completion_s": [
+            300.0,
+            320.0,
+            335.0,
+            355.0,
+            370.0,
+            390.0,
+            405.0,
+            425.0,
+            440.0,
+            460.0,
+            475.0,
+            515.0
+          ],
+          "fallback_due_s": [
+            330.0,
+            350.0,
+            365.0,
+            575.0,
+            400.0,
+            420.0,
+            435.0,
+            455.0,
+            470.0,
+            490.0,
+            505.0,
+            545.0
+          ],
+          "repeating_cycle_s": 230.0,
+          "minimum_projected_slack_s": 30.0
+        }
+      }
+    }
+  ],
+  "wall_s": 75.8558676475659,
+  "identity_SHA256": "b59a67cfbc95ae0a2025d5f06da9a952799dad0a8b506006e58fad2da58ad3a1"
+}
