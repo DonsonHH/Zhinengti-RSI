@@ -1,0 +1,146 @@
+{
+  "phase": "meta_round1",
+  "program": {
+    "refresh_s": 60,
+    "cooldown_s": 30,
+    "fallback": "tour",
+    "rules": [
+      {
+        "signal": "thermal_excess",
+        "threshold": 0.5,
+        "action": "urgency"
+      },
+      {
+        "signal": "contact_heat",
+        "threshold": 0.5,
+        "action": "signal"
+      },
+      {
+        "signal": "verified_sensor_bias",
+        "threshold": 0.5,
+        "action": "return_tour"
+      }
+    ]
+  },
+  "result": {
+    "validator": {
+      "cases": 36,
+      "anomaly_segments": 80,
+      "missed_segments": 38,
+      "weighted_censored_delay_s": 109.53823088504014,
+      "violating_tasks": 0,
+      "coverage": 1.0,
+      "mean_travel_m": 11793.399999999989,
+      "scope": "Development-only annotated evaluator; not raw labels supplied to the language model"
+    },
+    "public": {
+      "coverage": {
+        "coverage": 1.0,
+        "violating_tasks": 0.0,
+        "weighted_age_ratio": 0.3035791276063225,
+        "first_alert_tasks": 1.2222222222222223
+      },
+      "efficiency": {
+        "travel_m": 11793.399999999989,
+        "service_s": 16667.777777777777,
+        "extra_checks": 0.05555555555555555,
+        "estimator_calls": 30.0,
+        "dispatches": 1425.888888888889,
+        "different_from_actor": 1208.0555555555557
+      },
+      "professional_evidence": {
+        "thermal": {
+          "checks": 1132.0,
+          "distinct_checked_tasks": 128.0,
+          "distinct_measured_alarm_tasks": 0.7777777777777778,
+          "new_measured_alerts": 0.7777777777777778,
+          "persistent_rechecks": 0.0,
+          "recovery_confirmations": 0.7777777777777778,
+          "measurement_field": "temperature_c",
+          "unit": "degC",
+          "mean_measured_value": 51.13154967174018,
+          "largest_public_completion_gap_s": 240.0
+        },
+        "electrical": {
+          "checks": 93.88888888888889,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.2222222222222222,
+          "new_measured_alerts": 0.2222222222222222,
+          "persistent_rechecks": 0.4444444444444444,
+          "recovery_confirmations": 0.1111111111111111,
+          "measurement_field": "contact_temperature_c",
+          "unit": "degC",
+          "mean_measured_value": 42.506426850964935,
+          "largest_public_completion_gap_s": 314.1666666666667
+        },
+        "cooling": {
+          "checks": 94.0,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.0,
+          "new_measured_alerts": 0.0,
+          "persistent_rechecks": 0.0,
+          "recovery_confirmations": 0.0,
+          "measurement_field": "pod_flow_kg_s",
+          "unit": "kg/s",
+          "mean_measured_value": 36.12610777586732,
+          "largest_public_completion_gap_s": 310.0
+        },
+        "control": {
+          "checks": 106.0,
+          "distinct_checked_tasks": 16.0,
+          "distinct_measured_alarm_tasks": 0.2222222222222222,
+          "new_measured_alerts": 0.2222222222222222,
+          "persistent_rechecks": 0.5555555555555556,
+          "recovery_confirmations": 0.1111111111111111,
+          "measurement_field": "controller_sensor_error_c",
+          "unit": "degC",
+          "mean_measured_value": -0.1320754716981132,
+          "largest_public_completion_gap_s": 270.0
+        }
+      },
+      "thermal_disagreement": {
+        "meaning": "TemperatureCVAE versus nominal temperature; thermal units only, not other professions",
+        "mean_abs_difference_degC": 0.2638150266917858,
+        "peak_abs_difference_degC": 6.521257888518478
+      }
+    },
+    "case_ids": [
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/aa8d5c8930ccaf6294e38bc5.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3e86fc90ad67492491ef9836.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f6797546ad0538a571e9b5f3.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2a1a355728e8e7fdbd8b94f5.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/08ef708a5e339a757e62a99d.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4a6c41208eff1e12e0f66b61.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/50b9a21fd81b018d51e7b300.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ace3bdc585185a4e243d57d0.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/16a2b80b40f09e446a1330cd.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d5491b7d6837368a7240a180.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a6db3e874f7e08d4b11ae2d6.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/87ed513a7ec6cf67e562b5d4.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0a6431b6bc6384f5f40f9ec3.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/08d721365432927bc56c3f86.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5365dbbd9204565d0ec9411e.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9d5db52da43694e71d3b7ffa.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5aedf65b1feca85651079495.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ac2f6b6f5e3e859fe81c9c8f.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/276e2d086acc78a918d68415.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/da6918fc833bdee39bdab968.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0e485812b3e17faaef39e0f4.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/501983c7012c172e6ef74e86.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bd2da0ab86e68e2fe1f6b7fd.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a52e3069dd2c5394e785326e.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/80e93c20e2e18583aad6c842.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/59a670b3404a560522a7ef83.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3d528b9f89ef3b81938a8b66.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2fe08961e911de7886fc7616.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6a6652f5083928b688f0c173.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/055c4b879bb45c45f2f2c023.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/79add946b22ec5bcada8aede.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fad921f8bc0dffbb01fa61cc.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/162491d642876c9da21fac9b.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3b8a3a74eb75e46852a3db84.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/29a18b7707b9a30a27866698.json.gz",
+      "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/11df9f887f49a9eeb376dc17.json.gz"
+    ]
+  }
+}

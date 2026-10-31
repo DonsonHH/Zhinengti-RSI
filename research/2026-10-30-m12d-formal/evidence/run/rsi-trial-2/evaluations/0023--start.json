@@ -1,0 +1,21 @@
+{
+  "phase": "fresh_task_validation",
+  "program": {
+    "refresh_s": 30,
+    "cooldown_s": 60,
+    "fallback": "tour",
+    "rules": [
+      {
+        "signal": "thermal_excess",
+        "threshold": 0.05,
+        "action": "signal"
+      },
+      {
+        "signal": "age",
+        "threshold": 0.75,
+        "action": "return_tour"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

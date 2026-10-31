@@ -1,0 +1,589 @@
+{
+  "complete": true,
+  "phase": "smoke",
+  "seed": 30990,
+  "conditions": 1,
+  "formal_episodes": 0,
+  "engineering_episodes": 5,
+  "audit_replays": 5,
+  "processes": {
+    "30990--coldplate_fouling--180--335": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a"
+  },
+  "rows": [
+    {
+      "case": "engineering-30990--Tour",
+      "arm": "Tour",
+      "seed": 30990,
+      "physical_key": "30990--coldplate_fouling--180--335",
+      "noise_c": 0.2,
+      "phase": "smoke",
+      "specification": {
+        "phase": "smoke",
+        "seed": 30990,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a",
+      "source_trace_file_SHA256": "bf5e7fbaf103acc9c864f7bd68ae11815e66cbb4e88876ae433dc539dade8faa",
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/smoke/seed-30990/cases/engineering-30990--Tour.json.gz",
+      "record_SHA256": "8527ea16a71474b611d2a37911728382ba968940f59bc9393d72784ffe12319c",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 80.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 1,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03957340121269226,
+        "public_return": -0.2517882153094841,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.4896861231057288,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.909263932146132,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "by_role": {
+        "thermal": {
+          "segments": 1,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 235.0
+        },
+        "electrical": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "cooling": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "control": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 265.0
+        }
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "public_telemetry_sequence_SHA256": "db267d0d230ca68f89b0744c8c965eeb6bb093c6f54793cb2e25f0ea27c34f0e",
+      "inspection_events_SHA256": "71e27f8878a29f03c8dd1e926a1b0f64103272d44d315a23c253f6d83dfe7f79",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true,
+        "independent_full_episode_replay_passed": true
+      }
+    },
+    {
+      "case": "engineering-30990--frozen_PPO",
+      "arm": "frozen_PPO",
+      "seed": 30990,
+      "physical_key": "30990--coldplate_fouling--180--335",
+      "noise_c": 0.2,
+      "phase": "smoke",
+      "specification": {
+        "phase": "smoke",
+        "seed": 30990,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a",
+      "source_trace_file_SHA256": "bf5e7fbaf103acc9c864f7bd68ae11815e66cbb4e88876ae433dc539dade8faa",
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/smoke/seed-30990/cases/engineering-30990--frozen_PPO.json.gz",
+      "record_SHA256": "2faad25169b72477a4b527e7719232b9aa888ca78dd9e88f93ea9d0e76bbd959",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 80.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 1,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.03882384113967419,
+        "public_return": -0.2530749324812037,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.4896861231057288,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.8982689548283815,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8833333333333333,
+        "maximum_exact_gap_s": 310.0
+      },
+      "by_role": {
+        "thermal": {
+          "segments": 1,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 260.0
+        },
+        "electrical": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "cooling": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "control": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 265.0
+        }
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0007027406886858749,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 1422,
+        "ordinary_return_Tour_dispatches": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "public_telemetry_sequence_SHA256": "db267d0d230ca68f89b0744c8c965eeb6bb093c6f54793cb2e25f0ea27c34f0e",
+      "inspection_events_SHA256": "11afb18deff484880d321e5a4c198cc802dbbeae771c42100f12739521659b3b",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1423,
+        "independent_full_return_certificates": 1423,
+        "selected_plan_count": 1423,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true,
+        "independent_full_episode_replay_passed": true
+      }
+    },
+    {
+      "case": "engineering-30990--human_professional",
+      "arm": "human_professional",
+      "seed": 30990,
+      "physical_key": "30990--coldplate_fouling--180--335",
+      "noise_c": 0.2,
+      "phase": "smoke",
+      "specification": {
+        "phase": "smoke",
+        "seed": 30990,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a",
+      "source_trace_file_SHA256": "bf5e7fbaf103acc9c864f7bd68ae11815e66cbb4e88876ae433dc539dade8faa",
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/smoke/seed-30990/cases/engineering-30990--human_professional.json.gz",
+      "record_SHA256": "4a326bd464ac532be439bb7053d153b2f85e9ba8bdd493ecaa4da0635ad561c6",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 80.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 1,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.03836956899613142,
+        "public_return": -0.2517882153094841,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.4896861231057288,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 0.9696465898305178,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "by_role": {
+        "thermal": {
+          "segments": 1,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 235.0
+        },
+        "electrical": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "cooling": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "control": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 265.0
+        }
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 78,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "public_telemetry_sequence_SHA256": "db267d0d230ca68f89b0744c8c965eeb6bb093c6f54793cb2e25f0ea27c34f0e",
+      "inspection_events_SHA256": "71e27f8878a29f03c8dd1e926a1b0f64103272d44d315a23c253f6d83dfe7f79",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true,
+        "independent_full_episode_replay_passed": true
+      }
+    },
+    {
+      "case": "engineering-30990--fixed_improver_retained",
+      "arm": "fixed_improver_retained",
+      "seed": 30990,
+      "physical_key": "30990--coldplate_fouling--180--335",
+      "noise_c": 0.2,
+      "phase": "smoke",
+      "specification": {
+        "phase": "smoke",
+        "seed": 30990,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a",
+      "source_trace_file_SHA256": "bf5e7fbaf103acc9c864f7bd68ae11815e66cbb4e88876ae433dc539dade8faa",
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/smoke/seed-30990/cases/engineering-30990--fixed_improver_retained.json.gz",
+      "record_SHA256": "5f0faffd1dea6c1cf7b68b4d3fcc667ff579b2f125e9bd0c8259fd65f14c1e43",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 80.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 1,
+        "completed_inspections": 1426,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11793.399999999992,
+        "service_s": 16670.0,
+        "idle_s": 3846.599999999998,
+        "history_estimator_inference_s": 0.0391378290951252,
+        "public_return": -0.2517882153094841,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.4896861231057288,
+        "selected_detours": 0,
+        "decision_CPU_seconds": 1.1698119957000017,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8,
+        "maximum_exact_gap_s": 310.0
+      },
+      "by_role": {
+        "thermal": {
+          "segments": 1,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 235.0
+        },
+        "electrical": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "cooling": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "control": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 265.0
+        }
+      },
+      "usage": {
+        "dispatches": 1426,
+        "tool_counts": {
+          "return_tour": 1426
+        },
+        "actual_PPO_dispatches": 0,
+        "PPO_multichoice_dispatches": 0,
+        "total_actor_scoring_calls": 1426,
+        "exclusive_shadow_actor_scoring_calls": 1426,
+        "global_optional_checks": 0,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 0,
+        "ordinary_return_Tour_dispatches": 1426
+      },
+      "action_log_SHA256": "dd47cea3bd87655440a3c83b767554a6765ce698a30009ff350a8b2152557ae3",
+      "public_telemetry_sequence_SHA256": "db267d0d230ca68f89b0744c8c965eeb6bb093c6f54793cb2e25f0ea27c34f0e",
+      "inspection_events_SHA256": "71e27f8878a29f03c8dd1e926a1b0f64103272d44d315a23c253f6d83dfe7f79",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1426,
+        "independent_full_return_certificates": 1426,
+        "selected_plan_count": 1426,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true,
+        "independent_full_episode_replay_passed": true
+      }
+    },
+    {
+      "case": "engineering-30990--revised_PPO_evidence",
+      "arm": "revised_PPO_evidence",
+      "seed": 30990,
+      "physical_key": "30990--coldplate_fouling--180--335",
+      "noise_c": 0.2,
+      "phase": "smoke",
+      "specification": {
+        "phase": "smoke",
+        "seed": 30990,
+        "scenario": "coldplate_fouling",
+        "duration_s": 180,
+        "fault_start_s": 335,
+        "noise_c": 0.2,
+        "estimator": "history",
+        "control": "feedback",
+        "resources": "provisioned",
+        "variant": "open"
+      },
+      "process_fingerprint": "2cf1f57c91a78f13315197a42dadcb24237b66d77bbd1209b565640476de887a",
+      "source_trace_file_SHA256": "bf5e7fbaf103acc9c864f7bd68ae11815e66cbb4e88876ae433dc539dade8faa",
+      "record_path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/smoke/seed-30990/cases/engineering-30990--revised_PPO_evidence.json.gz",
+      "record_SHA256": "8ee4e72177266e2729e4765a4a51901f1b592807651415fce4ca4f8cbe5a3da1",
+      "metrics": {
+        "anomaly_segments": 1,
+        "confirmed_segments": 0,
+        "missed_segments": 1,
+        "miss_rate": 1.0,
+        "consequence_weighted_censored_delay_s": 80.0,
+        "detected_only_mean_delay_s": null,
+        "false_measured_confirmations": 1,
+        "completed_inspections": 1423,
+        "final_professional_coverage": 1.0,
+        "mean_overdue_fraction": 0.0,
+        "maximum_inspection_age_s": 305.0,
+        "travel_m": 11819.099999999991,
+        "service_s": 16640.0,
+        "idle_s": 3850.899999999998,
+        "history_estimator_inference_s": 0.03757116384804249,
+        "public_return": -0.2530749324812037,
+        "invalid_assignments": 0,
+        "duplicate_reservations": 0,
+        "unserved_IT_kwh": 0.4896861231057288,
+        "selected_detours": 1,
+        "decision_CPU_seconds": 0.9977032383903861,
+        "estimator_calls": 60,
+        "tasks_violating_exact_gap": 0,
+        "maximum_exact_gap_ratio": 0.8833333333333333,
+        "maximum_exact_gap_s": 310.0
+      },
+      "by_role": {
+        "thermal": {
+          "segments": 1,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 260.0
+        },
+        "electrical": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "cooling": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 305.0
+        },
+        "control": {
+          "segments": 0,
+          "confirmed": 0,
+          "final_coverage": 1.0,
+          "mean_overdue_fraction": 0.0,
+          "maximum_inspection_age_s": 265.0
+        }
+      },
+      "usage": {
+        "dispatches": 1423,
+        "tool_counts": {
+          "common_budget_return_tour": 1422,
+          "ppo": 1
+        },
+        "actual_PPO_dispatches": 1,
+        "PPO_multichoice_dispatches": 1,
+        "total_actor_scoring_calls": 1423,
+        "exclusive_shadow_actor_scoring_calls": 1422,
+        "global_optional_checks": 1,
+        "estimator_calls": 60,
+        "PPO_single_legal_candidate_dispatches": 0,
+        "actual_PPO_multichoice_takeover_rate": 0.0007027406886858749,
+        "rule_selected_dispatches": 0,
+        "forced_return_Tour_dispatches": 1422,
+        "ordinary_return_Tour_dispatches": 0
+      },
+      "action_log_SHA256": "3ef3d5fbd24b3552cdb98fee091d262ef392e0ab064e4eca33fcc5e8bc518259",
+      "public_telemetry_sequence_SHA256": "db267d0d230ca68f89b0744c8c965eeb6bb093c6f54793cb2e25f0ea27c34f0e",
+      "inspection_events_SHA256": "11afb18deff484880d321e5a4c198cc802dbbeae771c42100f12739521659b3b",
+      "audit": {
+        "passed": true,
+        "independent_path_qualification_measurement_checks": 1423,
+        "independent_full_return_certificates": 1423,
+        "selected_plan_count": 1423,
+        "initial_terminal_revisit_verified": true,
+        "physical_process_unchanged": true,
+        "independent_full_episode_replay_passed": true
+      }
+    }
+  ],
+  "models": {
+    "0": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-0/selected.pt",
+      "sha256": "c7cee69fd196119d92bcba6e0682b8e2acec309e67faa5875e29936bbfef6691",
+      "parameters_sha256": "25e49a60cbeb297209e5bb3b74556cd9427bd7845631b55a64534652d24d563a"
+    },
+    "1": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-1/selected.pt",
+      "sha256": "0dbb7fc64123a9cb01c83094b430866b74da57091e10e9c0ceec55a961b901ab",
+      "parameters_sha256": "e50dcab2da79586bcfa008c7a1a7bc04e1a4c0ba53cee12a595ac9ee514db677"
+    },
+    "2": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261027-m11/policies-v2/history-seed-2/selected.pt",
+      "sha256": "a69125f186c6026116185ae61654e5f09fa8960e158f68e1f15c47c636d1157f",
+      "parameters_sha256": "a6221e8911dc321e9815885a5e916b1ed970c7bf164274b1c0c4d60d4ce2d8a8"
+    }
+  },
+  "CVAE_SHA256": "2dc8399ee79fed254fb4b12f39b95b65a98d2ec6f942155c158c31d76df21caa",
+  "protocol_SHA256": "dbea4a9b83cbbe4475d3343492646328c6a1c737f22ff79a785c8f2fb17f914a",
+  "wall_s": 23.660604601725936,
+  "execution_identity_SHA256": "7fd59dbec3f9055673f27320b8601b10d05d36fdad9a209703b8ec08eaf5f6b6",
+  "final_access": false,
+  "job_id": "130886"
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "fresh_task_adapt",
+  "program": {
+    "refresh_s": 120,
+    "cooldown_s": 30,
+    "fallback": "ppo",
+    "rules": [
+      {
+        "signal": "age",
+        "threshold": 0.75,
+        "action": "ppo"
+      },
+      {
+        "signal": "age",
+        "threshold": 0.5,
+        "action": "urgency"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

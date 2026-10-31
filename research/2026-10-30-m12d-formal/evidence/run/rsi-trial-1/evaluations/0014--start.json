@@ -1,0 +1,16 @@
+{
+  "phase": "fresh_task_adapt",
+  "program": {
+    "refresh_s": 60,
+    "cooldown_s": 60,
+    "fallback": "ppo",
+    "rules": [
+      {
+        "signal": "flow_deficit",
+        "threshold": 0.5,
+        "action": "urgency"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

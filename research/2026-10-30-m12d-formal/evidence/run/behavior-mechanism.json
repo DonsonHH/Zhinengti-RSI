@@ -1,0 +1,189 @@
+{
+  "rows": [
+    {
+      "phase": "development",
+      "arm": "Tour",
+      "conditions": 36,
+      "conditions_without_extra": 36,
+      "extra_dispatch_time_histogram_s": {},
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {},
+      "extra_rule_index_counts": {},
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "development",
+      "arm": "frozen_PPO",
+      "conditions": 36,
+      "conditions_without_extra": 0,
+      "extra_dispatch_time_histogram_s": {
+        "5.0": 36
+      },
+      "extra_before_injection_conditions": 36,
+      "extra_selection_tools": {
+        "ppo": 36
+      },
+      "extra_rule_index_counts": {
+        "None": 36
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "development",
+      "arm": "human_professional",
+      "conditions": 36,
+      "conditions_without_extra": 25,
+      "extra_dispatch_time_histogram_s": {
+        "420.0": 1,
+        "435.0": 2,
+        "475.0": 2,
+        "775.0": 2,
+        "825.0": 2,
+        "860.0": 1,
+        "880.0": 1
+      },
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {
+        "signal": 11
+      },
+      "extra_rule_index_counts": {
+        "0": 11
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "development",
+      "arm": "fixed_improver_retained",
+      "conditions": 36,
+      "conditions_without_extra": 25,
+      "extra_dispatch_time_histogram_s": {
+        "420.0": 1,
+        "435.0": 2,
+        "475.0": 2,
+        "775.0": 2,
+        "800.0": 4
+      },
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {
+        "urgency": 7,
+        "signal": 4
+      },
+      "extra_rule_index_counts": {
+        "1": 7,
+        "0": 4
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "development",
+      "arm": "revised_PPO_evidence",
+      "conditions": 36,
+      "conditions_without_extra": 0,
+      "extra_dispatch_time_histogram_s": {
+        "5.0": 36
+      },
+      "extra_before_injection_conditions": 36,
+      "extra_selection_tools": {
+        "ppo": 36
+      },
+      "extra_rule_index_counts": {
+        "None": 36
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "validation",
+      "arm": "Tour",
+      "conditions": 36,
+      "conditions_without_extra": 36,
+      "extra_dispatch_time_histogram_s": {},
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {},
+      "extra_rule_index_counts": {},
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "validation",
+      "arm": "frozen_PPO",
+      "conditions": 36,
+      "conditions_without_extra": 0,
+      "extra_dispatch_time_histogram_s": {
+        "5.0": 36
+      },
+      "extra_before_injection_conditions": 36,
+      "extra_selection_tools": {
+        "ppo": 36
+      },
+      "extra_rule_index_counts": {
+        "None": 36
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "validation",
+      "arm": "human_professional",
+      "conditions": 36,
+      "conditions_without_extra": 26,
+      "extra_dispatch_time_histogram_s": {
+        "410.0": 1,
+        "425.0": 1,
+        "450.0": 2,
+        "845.0": 4,
+        "885.0": 2
+      },
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {
+        "signal": 10
+      },
+      "extra_rule_index_counts": {
+        "0": 10
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "validation",
+      "arm": "fixed_improver_retained",
+      "conditions": 36,
+      "conditions_without_extra": 24,
+      "extra_dispatch_time_histogram_s": {
+        "370.0": 2,
+        "410.0": 1,
+        "425.0": 1,
+        "450.0": 2,
+        "835.0": 4,
+        "845.0": 2
+      },
+      "extra_before_injection_conditions": 0,
+      "extra_selection_tools": {
+        "urgency": 6,
+        "signal": 6
+      },
+      "extra_rule_index_counts": {
+        "1": 6,
+        "0": 6
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    },
+    {
+      "phase": "validation",
+      "arm": "revised_PPO_evidence",
+      "conditions": 36,
+      "conditions_without_extra": 0,
+      "extra_dispatch_time_histogram_s": {
+        "5.0": 36
+      },
+      "extra_before_injection_conditions": 36,
+      "extra_selection_tools": {
+        "ppo": 36
+      },
+      "extra_rule_index_counts": {
+        "None": 36
+      },
+      "interpretation": "Actualposthoc behavior counts. Injection time is evaluator-only comparison,never a policyfeature. Timingassociation doesnot alone identify a causal fix."
+    }
+  ],
+  "new_episodes": 0,
+  "new_model_calls": 0,
+  "new_candidates": 0,
+  "final_data_access": false
+}

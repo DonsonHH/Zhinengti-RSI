@@ -1,0 +1,480 @@
+{
+  "status": "completed_bounded_M12D_execution",
+  "baseline": "d533f9950419117cec181669663149b14e916757",
+  "scientific_decisions": {
+    "five_arm": "NO-GO_stop_final_sealed",
+    "RSI": "NO-GO_no_independent_RSI_increment"
+  },
+  "requirements": [
+    {
+      "requirement": "1_goal_and_protocol_exact_bytes",
+      "status": "verified",
+      "evidence": "CONTEXT.md;目标与导师要求;原论文与当前贡献对照;two frozenSHAchecks"
+    },
+    {
+      "requirement": "2_five_arms_common_executor_and_attribution",
+      "status": "verified",
+      "evidence": "360actualrows;288Torch;common1CHECK;byrolemetrics;actual/shadow/single/multiPPO counts"
+    },
+    {
+      "requirement": "3_independent_sources_and_pre_execution_gates",
+      "status": "verified",
+      "evidence": "process-manifest;historicalnumericseedregistry;execution-identity;smoke4negativeaudits;allphasefingerprints"
+    },
+    {
+      "requirement": "4_five_arm_dev_validation_stop",
+      "status": "verified",
+      "evidence": "180dev+180val;360replays;independentmacroaudit;NO-GO;no3104x sources/seal/jobs"
+    },
+    {
+      "requirement": "5_one_actual_Qwen_preflight",
+      "status": "verified",
+      "evidence": "qwen-preflight actual172/28valid;failedstartupbeforegeneration;101GPUseconds;fixed13modelhashes"
+    },
+    {
+      "requirement": "6_separate_RSI_launch_approval",
+      "status": "verified",
+      "evidence": "rsi-launch-review;actual293Torch;immutableidentity;firstrepeatresourcebeforeother2"
+    },
+    {
+      "requirement": "6_real_bounded_search_transfer_and_all_costs",
+      "status": "verified",
+      "evidence": "3searchaudits;78formalLLMcalls;37taskslots/repeat;protocolonlyreset;fullledger"
+    },
+    {
+      "requirement": "6_validated_mappings_and_one_shot_final",
+      "status": "verified",
+      "evidence": "3nominal/actualmappingseals;globalresource/source seal;heldSlurmscriptverification;3atomicclaims;independentfinalaudit"
+    },
+    {
+      "requirement": "7_task_and_meta_gain_separately",
+      "status": "verified",
+      "evidence": "all6groupsvalidation/final;3repeatmeta3vsfixed3pairedmetrics;4physicalseedvalues;frozenNO-GO"
+    },
+    {
+      "requirement": "7_tool_contribution_and_negative_evidence",
+      "status": "verified",
+      "evidence": "PPOearlycheckmechanism;commonCVAEcausalnotidentified;latestmatrix;hypothesesvsproofseparated"
+    },
+    {
+      "requirement": "7_history_preservation_and_single_document",
+      "status": "verified",
+      "evidence": "6813oldfilehashes;exactpriorJSONnested;humanreadablefullreport;privatefinalrowsnotexported"
+    }
+  ],
+  "engineering_tests_are_not_scientific_gain": true,
+  "five_arm_final_not_executed_due_to_validation_failure": true,
+  "RSI_final_independent_audit_scope": "Independent raw record/hash, metric arithmetic, program mapping and existing route/event/certificate audits; no second neural execution.",
+  "RSI_neural_execution_second_replay": false,
+  "standalone_final_runner_requires_authorized_guarded_entry": true,
+  "protected_originals": {
+    "baseline": "d533f9950419117cec181669663149b14e916757",
+    "old_tracked_files_checked": 6813,
+    "unchanged_old_files": 6811,
+    "allowed_navigation_and_CI_changes": [
+      {
+        "path": ".github/workflows/cpu-checks.yml",
+        "before_SHA256": "b5994d2018cd6e71d330d0372a4d10615a789f42d085243813a99641e2e18faf",
+        "after_SHA256": "9804f71e6887ca079f7dc6aa3b89d5d1a03a3c51690f23295e4b5f70f799d222"
+      },
+      {
+        "path": "CURRENT_RESEARCH.md",
+        "before_SHA256": "0f22d02df4ced887957656e7a952a940b81a678742ecdfed59d357446c28a73b",
+        "after_SHA256": "5d494fde6566965d0458cf9790c1f4022649ad84730f4956a74f0c792ed2c9e6"
+      }
+    ],
+    "historical_experiment_or_model_changes": 0,
+    "formal_and_RSI_executed_source_unchanged": true
+  },
+  "actual_Torch_293": {
+    "tests": 293,
+    "skipped": 0,
+    "errors": 0,
+    "failures": 0,
+    "success": true,
+    "torch": "2.6.0+cu124"
+  },
+  "formal_Torch_288": {
+    "tests": 288,
+    "skipped": 0,
+    "errors": 0,
+    "failures": 0,
+    "success": true,
+    "torch": "2.6.0+cu124"
+  },
+  "lightweight_CPU_72": {
+    "success": true,
+    "tests": 72,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.742841999999655,
+    "scope": "All lightweight frozen B3/B4/B2 contracts plus M12D grouped gates, immutable identity, final seals and RSI mapping tests; no Torch available locally."
+  },
+  "resources": {
+    "within_caps": true,
+    "all_formal_jobs_completed_exit0": true,
+    "known_setup_failures_preserved": [
+      "130883",
+      "130890",
+      "130911"
+    ],
+    "failure_reasons": {
+      "130883": "Missing transformers before any generation",
+      "130890": "Profile import path failed before generation or new physics",
+      "130911": "Final audit completed record checks but compute-node sacct has no accounting route; recovered with hashed live mu01 accounting receipt, no experiment rerun"
+    },
+    "allocation_count": 29,
+    "max_concurrent_allocations": 2,
+    "max_concurrent_CPU_only_allocations": 2,
+    "Slurm_batch_memory_receipts": [
+      {
+        "JobID": "130882.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "622308K",
+        "AveRSS": "622308K",
+        "MaxVMSize": "4309880K"
+      },
+      {
+        "JobID": "130883.batch",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "MaxRSS": "424928K",
+        "AveRSS": "424928K",
+        "MaxVMSize": "3998460K"
+      },
+      {
+        "JobID": "130884.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "604.50M",
+        "AveRSS": "604.50M",
+        "MaxVMSize": "4307672K"
+      },
+      {
+        "JobID": "130885.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1938580K",
+        "AveRSS": "1938580K",
+        "MaxVMSize": "27376004K"
+      },
+      {
+        "JobID": "130886.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1180K",
+        "AveRSS": "1180K",
+        "MaxVMSize": "129668K"
+      },
+      {
+        "JobID": "130887.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "443476K",
+        "AveRSS": "443476K",
+        "MaxVMSize": "3823388K"
+      },
+      {
+        "JobID": "130888.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "439048K",
+        "AveRSS": "439048K",
+        "MaxVMSize": "3818200K"
+      },
+      {
+        "JobID": "130889.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130890.batch",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130891.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130892.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "440048K",
+        "AveRSS": "440048K",
+        "MaxVMSize": "3819132K"
+      },
+      {
+        "JobID": "130893.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "442832K",
+        "AveRSS": "442832K",
+        "MaxVMSize": "3823680K"
+      },
+      {
+        "JobID": "130894.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1180K",
+        "AveRSS": "1180K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130895.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "622544K",
+        "AveRSS": "622544K",
+        "MaxVMSize": "4310204K"
+      },
+      {
+        "JobID": "130896.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "624472K",
+        "AveRSS": "624472K",
+        "MaxVMSize": "4311064K"
+      },
+      {
+        "JobID": "130897.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "2923536K",
+        "AveRSS": "2923536K",
+        "MaxVMSize": "38969868K"
+      },
+      {
+        "JobID": "130898.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1172K",
+        "AveRSS": "1172K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130899.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130900.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "2974036K",
+        "AveRSS": "2974036K",
+        "MaxVMSize": "39044004K"
+      },
+      {
+        "JobID": "130901.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "3331664K",
+        "AveRSS": "3331664K",
+        "MaxVMSize": "39395428K"
+      },
+      {
+        "JobID": "130902.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1172K",
+        "AveRSS": "1172K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130903.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130904.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130905.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1402168K",
+        "AveRSS": "1402168K",
+        "MaxVMSize": "8379500K"
+      },
+      {
+        "JobID": "130906.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1069256K",
+        "AveRSS": "1069256K",
+        "MaxVMSize": "8047936K"
+      },
+      {
+        "JobID": "130908.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "876144K",
+        "AveRSS": "876144K",
+        "MaxVMSize": "7853884K"
+      },
+      {
+        "JobID": "130910.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "1176K",
+        "AveRSS": "1176K",
+        "MaxVMSize": "129664K"
+      },
+      {
+        "JobID": "130911.batch",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "MaxRSS": "58744K",
+        "AveRSS": "58744K",
+        "MaxVMSize": "497.50M"
+      },
+      {
+        "JobID": "130919.batch",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "MaxRSS": "57952K",
+        "AveRSS": "57952K",
+        "MaxVMSize": "508168K"
+      }
+    ],
+    "memory_scope": "Slurm sampled MaxRSS/AveRSS per batch step; not stage-specific total RAM or CUDA peak memory.",
+    "allocated_CPU_minutes_inclusive_all_M12D": 439.5666666666667,
+    "five_arm_allocated_CPU_minutes_including_regression_and_audit": 62.53333333333334,
+    "formal_GPU_allocations": 3,
+    "formal_GPU_seconds": 4083,
+    "preflight_GPU_seconds_including_failed_startup": 101,
+    "actual_formal_model_calls": 78,
+    "separate_actual_preflight_model_calls": 1,
+    "input_tokens": 154994,
+    "output_tokens": 13041,
+    "actual_environment_attempts": 4068,
+    "trials": [
+      {
+        "trial": 0,
+        "environment_attempts": 1440,
+        "model_calls": 26
+      },
+      {
+        "trial": 1,
+        "environment_attempts": 1404,
+        "model_calls": 26
+      },
+      {
+        "trial": 2,
+        "environment_attempts": 1224,
+        "model_calls": 26
+      }
+    ],
+    "source_storage_bytes_all_run_files": 1416035455,
+    "remaining_reserved_environment_episodes": 0,
+    "remaining_reserved_CPU_minutes": 0,
+    "remaining_reserved_storage_bytes": 0,
+    "independent_search_audits": [
+      {
+        "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-0/independent-search-audit.json",
+        "sha256": "fc2559b60d52e4b91722a045b3dc804c1a07108639f0d91447fb8854ba0a1726"
+      },
+      {
+        "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/independent-search-audit.json",
+        "sha256": "2c7a65bad870d33ed157a527ecfff1778163a81691d56790b21f11f18c33e414"
+      },
+      {
+        "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-2/independent-search-audit.json",
+        "sha256": "ac44779168be9436eac01427135e4acd08064974cb758df5df1c67f15f5e4bd2"
+      }
+    ],
+    "guarded_final_wrapper": {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/m12d_guarded_final.sbatch",
+      "sha256": "4cccc597f5c0c93ec8733517d0d749257e3ec207728d5feb073de7d57bb2d1e8"
+    },
+    "five_arm_final_generated": false,
+    "before_RSI_final": false,
+    "cost_definition": "ElapsedRaw times allocated CPUs; one GPU per formal allocation. All failed setup, regression, profiling and auditing allocations included in conservative CPU total."
+  },
+  "storage_after_public_export": {
+    "bytes_all_run_files_after_public_export": 1438174176,
+    "source_storage_cap_bytes": 4000000000,
+    "within_cap": true,
+    "source_arrays_and_raw_final_records_still_private": true,
+    "scope": "Final lightweight directory inventory after ledger and public archive; no experiment or model call."
+  },
+  "checked_utc": "2026-10-31T07:00:38.711224+00:00",
+  "independent_final_delivery_review": {
+    "approved_for_evidence_delivery": true,
+    "baseline": "d533f9950419117cec181669663149b14e916757",
+    "checked_utc": "2026-10-31T06:58:32.804559+00:00",
+    "spec_axis": {
+      "reviewer": "m12d_final_spec",
+      "approved": true,
+      "findings_remaining_blocking": 0,
+      "scope": "Frozen requirements, actual3search/validation/final receipts, matched3 six-check NO-GO, source/history, call/episode/GPU/CPU arithmetic; no positive scientific approval.",
+      "nonblocking_note_closed": "Per-search development-only accepted distinct program calls/token cost added; independent useful-program cost remains null/unestablished."
+    },
+    "standards_axis": {
+      "reviewer": "m12d_final_standards",
+      "approved": true,
+      "findings_remaining_blocking": 0,
+      "independently_verified": {
+        "published_inventory_files": 497,
+        "baseline_files": 6813,
+        "unchanged_baseline_files": 6811,
+        "published_json_private_boundary_checks": 445,
+        "Slurm_allocations": 29
+      },
+      "scope": "Source hashes/archives; validation macro arithmetic; final aggregate and privateSHA/seal/claim/actualSlurmspool joins; report/ledger/privacy. Does not claim independent neural replay of private final."
+    },
+    "closed_findings": [
+      "Original frozen final executor reusable: authorized external atomic one-shot claim; held-job actual Slurm bytes SHA verified before release; all3claims/accounting join.",
+      "Resource gate uses <=26 and <=78 caps rather than requiring exactly caps; all real repeats in fact used26.",
+      "Final audit rehashes all sealed inputs and adaptation/search hashes; package requires completed independent final audit.",
+      "Compute-node Slurm accounting connection failure preserved; live mu01 accounting captured with SHA and checked in final audit; no environment/model rerun.",
+      "Bundler refuses private final original/index/rows; reporter cross-checks audited aggregates/release hashes.",
+      "Actual6meta outputs all invalid: report distinguishes interface failure from effect of legal new meta protocols.",
+      "Cost per accepted distinct task program separated from meta-update denominator and independent usefulness."
+    ],
+    "reviewed_delivery_hashes": {
+      "scripts/audit_m12d_rsi_final.py": "da3472a274b897f20d4075d4c9342fc9c6a03cf3b36d4a8f52ddfb238f573893",
+      "scripts/submit_m12d_final.py": "b7910b678081b7f8aec0e9227686e43649a2e960e93eac50429a7f43bac5de4d",
+      "scripts/package_m12d_results.py": "584f98ba25a7c173c65840b838b504ab48dec4567e6f174d866fc70149e9b24b",
+      "scripts/report_m12d_rsi.py": "c19e4b25291f3097aaa4c6467984bdffc6390b35447efd1f2796629115081edb",
+      "scripts/build_m12d_bundle.py": "ec3b1b67f70e03178ed03689cf7af5a65fdaa45f7bfcb8520a307117d3ea2bdd",
+      "scripts/ledger_m12d.py": "e5b37ebee56bd9e9f6713edeeef98e74c60067866c8b13116dbaebae991e8ed4",
+      "cluster/m12d_guarded_final.sbatch": "4cccc597f5c0c93ec8733517d0d749257e3ec207728d5feb073de7d57bb2d1e8",
+      "reports/2026-10-30-M12-D-完整进度与瓶颈.md": "6bfb086cbc5c091ede45a7245e9a2fada95c090d8ae13342f766324b34e611ad"
+    },
+    "scientific_decision": "NO-GO: no independent RSI increment; six invalid meta proposals so no legal new meta protocol effect tested.",
+    "raw_final_rows_exported": false,
+    "old_experimental_results_changed": 0,
+    "post_review_delivery_corrections": [
+      {
+        "path": "scripts/build_m12d_bundle.py",
+        "reason": "Actual audit schema uses status=passed; corrected verifier field and confirmed all10phase-arm arithmetic checks plus NO-GO gate. No evidence or scientific metric changed.",
+        "after_SHA256": "6fbb8b442cc7eae4a5b4cb3c6cfae1feda176c260ac471f9e2c6e840343346c5"
+      }
+    ]
+  }
+}

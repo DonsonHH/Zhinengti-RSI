@@ -34,5 +34,7 @@ jobs:
           python -m unittest discover -s tests -p test_fresh_export_seal.py -v
           python -m unittest discover -s tests -p test_limited_prediction.py -v
           python -m unittest discover -s tests -p test_b2_alignment.py -v
+          python -m unittest discover -s tests -p test_paired_campaign.py -v
+          python -m unittest discover -s tests -p test_rsi_campaign.py -v
       - name: Compile package and scripts
         run: python -m compileall -q src scripts

@@ -1,0 +1,87 @@
+{
+  "number": 13,
+  "seed": 91013000,
+  "input_tokens": 539,
+  "prompt": {
+    "task": "Propose one controlled improver protocol, not a task program. Only public meta feedback is supplied.",
+    "common_execution_contract": "Alltaskprograms use common atmostONEglobaloptionalCHECK thenTour/1800s;qualification/cooldown/complete-return/tail fixed. No protocol canchangequota or atomictools.",
+    "current_protocol": {
+      "protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "prior_feedback": [],
+    "protocol_schema": {
+      "protocol": {
+        "diagnostics": [
+          "coverage",
+          "professional_evidence",
+          "efficiency"
+        ],
+        "memory": "recent",
+        "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+      },
+      "generator": "qwen_once",
+      "dedup": "exact_version",
+      "acceptance": "strict_improvement",
+      "failure_fallback": "keep_parent"
+    },
+    "allowed_diagnostics": [
+      "coverage",
+      "professional_evidence",
+      "efficiency",
+      "thermal_disagreement",
+      "novelty"
+    ],
+    "allowed_memory": [
+      "none",
+      "recent",
+      "best_and_failures"
+    ],
+    "instruction_templates": [
+      "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.",
+      "Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.",
+      "Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow."
+    ],
+    "allowed_generators": [
+      "qwen_once",
+      "random_program"
+    ],
+    "allowed_dedup": [
+      "exact_version",
+      "canonical_rule_order"
+    ],
+    "allowed_acceptance": [
+      "strict_improvement",
+      "keep_parent"
+    ],
+    "allowed_failure_fallback": [
+      "keep_parent",
+      "safe_tour"
+    ],
+    "response_keys": [
+      "diagnosis",
+      "protocol",
+      "expected_effect"
+    ],
+    "output_envelope": {
+      "diagnosis": "short string",
+      "protocol": "ControlledImprover object with exact schema",
+      "expected_effect": "short string"
+    }
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn exactly one JSON object using the response_keys requested. Follow the exact response schema. No source code or explanations outside JSON.<|im_end|>\n<|im_start|>user\n{\"task\": \"Propose one controlled improver protocol, not a task program. Only public meta feedback is supplied.\", \"common_execution_contract\": \"Alltaskprograms use common atmostONEglobaloptionalCHECK thenTour/1800s;qualification/cooldown/complete-return/tail fixed. No protocol canchangequota or atomictools.\", \"current_protocol\": {\"protocol\": {\"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"memory\": \"recent\", \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}, \"prior_feedback\": [], \"protocol_schema\": {\"protocol\": {\"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"memory\": \"recent\", \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"}, \"generator\": \"qwen_once\", \"dedup\": \"exact_version\", \"acceptance\": \"strict_improvement\", \"failure_fallback\": \"keep_parent\"}, \"allowed_diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\", \"thermal_disagreement\", \"novelty\"], \"allowed_memory\": [\"none\", \"recent\", \"best_and_failures\"], \"instruction_templates\": [\"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\", \"Compare public successes with failures and propose one distinct typed workflow; preserve the protected tour.\", \"Analyze public measurement age, professional evidence and duplicate proposals before proposing one bounded workflow.\"], \"allowed_generators\": [\"qwen_once\", \"random_program\"], \"allowed_dedup\": [\"exact_version\", \"canonical_rule_order\"], \"allowed_acceptance\": [\"strict_improvement\", \"keep_parent\"], \"allowed_failure_fallback\": [\"keep_parent\", \"safe_tour\"], \"response_keys\": [\"diagnosis\", \"protocol\", \"expected_effect\"], \"output_envelope\": {\"diagnosis\": \"short string\", \"protocol\": \"ControlledImprover object with exact schema\", \"expected_effect\": \"short string\"}}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "thinking": false,
+  "output_cap": 768,
+  "attempted": true
+}

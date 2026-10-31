@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/code-v1/scripts/preflight_m12d_qwen.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/code-v1/scripts/preflight_m12d_qwen.py", line 25, in main
+    caller=ModelCaller(a.model,'cuda');load_s=time.perf_counter()-start
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/code-v1/src/patrol_rsi/m4.py", line 164, in __init__
+    from transformers import AutoTokenizer,AutoModelForCausalLM
+ModuleNotFoundError: No module named 'transformers'

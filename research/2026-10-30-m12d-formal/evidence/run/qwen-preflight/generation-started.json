@@ -1,0 +1,50 @@
+{
+  "actual_generation_attempt": 1,
+  "prompt": {
+    "task": "Format preflight only. Return ONE workflow object, no explanation. Use only the exact keys and legal domains.",
+    "workflow_keys": [
+      "refresh_s",
+      "cooldown_s",
+      "fallback",
+      "rules"
+    ],
+    "legal_example": {
+      "refresh_s": 30,
+      "cooldown_s": 60,
+      "fallback": "tour",
+      "rules": []
+    },
+    "allowed_refresh_s": [
+      30,
+      60,
+      120
+    ],
+    "allowed_cooldown_s": [
+      0,
+      30,
+      60,
+      120
+    ],
+    "allowed_fallback": [
+      "tour",
+      "ppo"
+    ],
+    "rules": "Use an empty list for this non-task format preflight."
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn JSON only. Do not think aloud. No markdown.<|im_end|>\n<|im_start|>user\n{\"task\": \"Format preflight only. Return ONE workflow object, no explanation. Use only the exact keys and legal domains.\", \"workflow_keys\": [\"refresh_s\", \"cooldown_s\", \"fallback\", \"rules\"], \"legal_example\": {\"refresh_s\": 30, \"cooldown_s\": 60, \"fallback\": \"tour\", \"rules\": []}, \"allowed_refresh_s\": [30, 60, 120], \"allowed_cooldown_s\": [0, 30, 60, 120], \"allowed_fallback\": [\"tour\", \"ppo\"], \"rules\": \"Use an empty list for this non-task format preflight.\"}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "input_tokens": 172,
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "files_verified": 13,
+    "manifest_sha256": "a1a327b7aee47f77c9348796bcb2d459d8792a8bc6644339b713668528af4361"
+  },
+  "thinking": false,
+  "parameters": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20
+  },
+  "max_new_tokens": 128,
+  "source_rsi_SHA256": "3bd4e2478c50f152898ecf73d1359dbc246e5c3501425daa034b215328edbe76"
+}

@@ -1,0 +1,26 @@
+{
+  "phase": "fresh_task_validation",
+  "program": {
+    "refresh_s": 120,
+    "cooldown_s": 30,
+    "fallback": "tour",
+    "rules": [
+      {
+        "signal": "flow_deficit",
+        "threshold": 0.5,
+        "action": "signal"
+      },
+      {
+        "signal": "flow_deficit",
+        "threshold": 0.05,
+        "action": "urgency"
+      },
+      {
+        "signal": "verified_sensor_bias",
+        "threshold": 0.5,
+        "action": "urgency"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

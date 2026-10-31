@@ -1,0 +1,27 @@
+{
+  "approved": true,
+  "scope": "Engineering smoke now;formalphase only after actual288Torch andfullsmoke4negativeaudits succeed",
+  "paired_SHA256": "dbea4a9b83cbbe4475d3343492646328c6a1c737f22ff79a785c8f2fb17f914a",
+  "RSI_SHA256": "3bd4e2478c50f152898ecf73d1359dbc246e5c3501425daa034b215328edbe76",
+  "spec_review": "Independent m12d_execution_review_retry conditionally approved current core after explicit identitycoverage/root/start-complete/phase/finalbinding fixes.",
+  "standards_review": "Independentm12d_runtime_review approvedsamecoreconditionalactual288Torch andsmoke;288actualpassed130884,smoke5episodes/replays+4negativechecks passed130886.",
+  "reviewed_core_SHA256": {
+    "src/patrol_rsi/paired_campaign.py": "ce2b7c1c322b317a157238db34938b29fad073d5a49091a02f2f67a78fa9ea7c",
+    "scripts/run_m12d_paired.py": "1dfb6712f077b816faa1a0bedef8c1d49cf495879e501467c11626027efd64af",
+    "scripts/finalize_m12d_phase.py": "70406cd2b5c0561320b0620481e1e13349c500718668f912ace9d48045bac049",
+    "tests/test_paired_campaign.py": "1269fa846cfbf0f010424fc908cd0634a9cae9bfc0181f9989ed28ac82ac3a53"
+  },
+  "conditions": [
+    "Actualcurrent288Torchzeroerrorsfailures/skips",
+    "Fivefullsmokeepisodesand5replays plus4injectedfailuresrejected",
+    "Historicalmetadataidentitysealedbeforeformal",
+    "No finalsourceuntilformalvalidationpassed"
+  ],
+  "already_formal_episodes": 0,
+  "scientific_gain_approval": false,
+  "created_utc": "2026-10-30T14:17:35.656862+00:00",
+  "actual_launch_conditions_satisfied": true,
+  "actual_gate_job": "130884",
+  "actual_smoke_job": "130886",
+  "note": "Thislocaldeliveryannotation doesnot replace the immutable remote pre-executionreview receipt boundinexecutionidentity."
+}

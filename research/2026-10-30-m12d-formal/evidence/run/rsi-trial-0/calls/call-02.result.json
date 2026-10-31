@@ -1,0 +1,6 @@
+{
+  "input_tokens": 2240,
+  "output_tokens": 169,
+  "generation_s": 9.190087221562862,
+  "raw_response": "{\"diagnosis\": \"The current workflow has sufficient coverage and evidence but lacks specific anomaly detection for thermal disagreement and verified sensor bias, which could enable earlier confirmation of issues.\", \"workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"thermal_disagreement\", \"threshold\": 0.25, \"action\": \"return_tour\"}]}, \"expected_effect\": \"Early confirmation of thermal disagreement and sensor bias anomalies without unnecessary detours, with a return to the protected tour when extra checking lacks evidence.\"}"
+}

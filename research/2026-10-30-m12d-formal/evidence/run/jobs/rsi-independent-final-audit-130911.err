@@ -1,0 +1,16 @@
+sacct: error: slurm_persist_conn_open_without_init: failed to open persistent connection to host:localhost:6819: Connection refused
+sacct: error: Sending PersistInit msg: Connection refused
+sacct: error: Problem talking to the database: Connection refused
+Traceback (most recent call last):
+  File "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/audit_m12d_rsi_final.py", line 117, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/audit_m12d_rsi_final.py", line 103, in main
+    accounting=subprocess.check_output(['sacct','-X','-j',','.join(sorted(claimed_jobs)),'--format=JobID,State,ExitCode,ElapsedRaw,AllocCPUS','-P'],text=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/software/anaconda3/envs/py3.11-pytorch/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['sacct', '-X', '-j', '130905,130906,130908', '--format=JobID,State,ExitCode,ElapsedRaw,AllocCPUS', '-P']' returned non-zero exit status 1.

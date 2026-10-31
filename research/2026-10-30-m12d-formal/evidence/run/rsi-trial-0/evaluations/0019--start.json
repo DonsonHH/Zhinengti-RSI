@@ -1,0 +1,16 @@
+{
+  "phase": "fresh_task_adapt",
+  "program": {
+    "refresh_s": 60,
+    "cooldown_s": 120,
+    "fallback": "tour",
+    "rules": [
+      {
+        "signal": "thermal_excess",
+        "threshold": 0.05,
+        "action": "return_tour"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

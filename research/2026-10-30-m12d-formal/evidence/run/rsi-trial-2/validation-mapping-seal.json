@@ -1,0 +1,382 @@
+{
+  "models": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "files_verified": 13,
+    "manifest_sha256": "a1a327b7aee47f77c9348796bcb2d459d8792a8bc6644339b713668528af4361"
+  },
+  "programs": {
+    "Tour": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "validation_gate": {
+        "retain": true
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      }
+    },
+    "human_fixed": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": -0.05555555555555558,
+        "macro_wait_delta_s": -6.166213584310242
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      }
+    },
+    "random_search": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 0,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "ppo"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": -0.11111111111111116,
+        "macro_wait_delta_s": -2.999031208642208
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 0,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "contact_heat",
+            "threshold": 0.05,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "ppo"
+          }
+        ]
+      }
+    },
+    "fixed3": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": 0.0,
+        "macro_wait_delta_s": -2.8125
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      }
+    },
+    "fixed13": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": 0.0,
+        "macro_wait_delta_s": -2.8125
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      }
+    },
+    "controlled_meta": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": 0.0,
+        "macro_wait_delta_s": -2.8125
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "return_tour"
+          }
+        ]
+      }
+    }
+  },
+  "validation": {
+    "Tour": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 106.51076528151154
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 109.22744840433171
+        }
+      ],
+      "macro_missed_count": 1.1111111111111112,
+      "macro_wait_s": 107.86910684292162,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 40
+    },
+    "human_fixed": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 95.65972620316106
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.2222222222222223,
+          "macro_wait_s": 107.74606031406171
+        }
+      ],
+      "macro_missed_count": 1.0555555555555556,
+      "macro_wait_s": 101.70289325861138,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 38
+    },
+    "random_search": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.6666666666666666,
+          "macro_wait_s": 100.51270286422712
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 109.22744840433171
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 104.87007563427942,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 36
+    },
+    "fixed3": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 100.88576528151154
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 109.22744840433171
+        }
+      ],
+      "macro_missed_count": 1.1111111111111112,
+      "macro_wait_s": 105.05660684292162,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 40
+    },
+    "fixed13": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 100.88576528151154
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 109.22744840433171
+        }
+      ],
+      "macro_missed_count": 1.1111111111111112,
+      "macro_wait_s": 105.05660684292162,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 40
+    },
+    "controlled_meta": {
+      "seeds": [
+        {
+          "seed": 32120,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 100.88576528151154
+        },
+        {
+          "seed": 32121,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 109.22744840433171
+        }
+      ],
+      "macro_missed_count": 1.1111111111111112,
+      "macro_wait_s": 105.05660684292162,
+      "conditions": 36,
+      "missed_noise_repeated_sum": 40
+    }
+  },
+  "execution_identity_SHA256": "5aebadd02b0937bdefa608ddcd52812e20c4f185cff28525bbc93c51dbc40a1b",
+  "model_calls": 26,
+  "RSI_protocol_SHA256": "3bd4e2478c50f152898ecf73d1359dbc246e5c3501425daa034b215328edbe76",
+  "final_sources_opened": false,
+  "sealed_unix": 1793374648.5230665
+}

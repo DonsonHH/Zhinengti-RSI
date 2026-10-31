@@ -1,0 +1,26 @@
+{
+  "phase": "fresh_task_adapt",
+  "program": {
+    "refresh_s": 120,
+    "cooldown_s": 120,
+    "fallback": "ppo",
+    "rules": [
+      {
+        "signal": "flow_deficit",
+        "threshold": 0.5,
+        "action": "ppo"
+      },
+      {
+        "signal": "verified_sensor_bias",
+        "threshold": 0.5,
+        "action": "ppo"
+      },
+      {
+        "signal": "contact_heat",
+        "threshold": 0.5,
+        "action": "ppo"
+      }
+    ]
+  },
+  "episode_attempts_charged": 36
+}

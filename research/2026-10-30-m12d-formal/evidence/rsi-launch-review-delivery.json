@@ -1,0 +1,36 @@
+{
+  "approved": true,
+  "status": "LIMITED_GO_bounded_RSI_only_afteractual293Torch",
+  "RSI_SHA256": "3bd4e2478c50f152898ecf73d1359dbc246e5c3501425daa034b215328edbe76",
+  "paired_SHA256": "dbea4a9b83cbbe4475d3343492646328c6a1c737f22ff79a785c8f2fb17f914a",
+  "five_arm_verdict": "NO-GO;no finalsourceorTourreplacement. This isnotuniversalgateforseparatelyfrozenRSIworkflowsearch.",
+  "actual_preflight_SHA256": "eb0d5ab9ad737e51543b8450a011155e8a2ea88b05187b9fceb2435165f37fdd",
+  "actual_five_arm_validation_SHA256": "6438687404d8bcaf6feeced0805a3b73b8e2a795a720b558ba4de4734fc11e89",
+  "measured_profile_SHA256": "e7b00227d4aab76d60a7913782150ff6d73a2a55fbd7dd905c08c9bcafc343a1",
+  "independent_runtime_review": "m12d_runtime_review conditionallyLIMITEDGO:source/method no remainingblockers,firstrepeatmeasuredreviewrequired,norescueallocation and no completionguarantee.",
+  "independent_spec_review": "m12d_execution_review_retry conditionally approved after bindings/mapping/fatalstop fixes;actual293gatepassed beforefirstformalRSI.",
+  "source_archive_SHA256": "3b88e67e2332db28393b08cbc5f60c4dccb144a29bacb67989988bb3782f27e7",
+  "conditions": [
+    "Actual293Torchpasszeroerrorsfailures/skips beforelaunch",
+    "Immutableidentitycontainsallactualsource/args/models/preflight/cost/validation/review",
+    "FirstrepeatcompleteandSlurmmeasured beforeother2launch",
+    "No morethan3GPUformalallocations or3GPUhours",
+    "Soft3420/hard3600seconds perallocation;anyruntime/source/model/budgetboundaryfailure stopswholecampaign, norescueorreplacement",
+    "NoRSIfinalsourcebeforeall3sixgroupmappingsvalidatedsealed"
+  ],
+  "frozen_caps": {
+    "formal_model_calls": 78,
+    "separate_preflight_actual_calls": 1,
+    "environment_episode_attempts": 6480,
+    "GPU_allocations": 3,
+    "GPU_seconds": 10800,
+    "CPU_allocated_minutes": 2400
+  },
+  "profile_is_not_runtime_guarantee": true,
+  "scientific_positive_claim": false,
+  "created_utc": "2026-10-30T14:50:46.504223+00:00",
+  "actual_gate_job": "130896",
+  "actual_gate_tests": 293,
+  "actual_first_repeat_job": "130897",
+  "note": "Deliveryannotation only;original remote launchreview SHA remains immutable and separatelyretained."
+}

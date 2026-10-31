@@ -1,0 +1,625 @@
+{
+  "within_caps": true,
+  "all_formal_jobs_completed_exit0": true,
+  "known_setup_failures_preserved": [
+    "130883",
+    "130890",
+    "130911"
+  ],
+  "failure_reasons": {
+    "130883": "Missing transformers before any generation",
+    "130890": "Profile import path failed before generation or new physics",
+    "130911": "Final audit completed record checks but compute-node sacct has no accounting route; recovered with hashed live mu01 accounting receipt, no experiment rerun"
+  },
+  "allocation_count": 29,
+  "jobs": [
+    {
+      "JobID": "130882",
+      "JobName": "rsi-m12d",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "82",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:05:40",
+      "End": "2026-10-30T22:07:02"
+    },
+    {
+      "JobID": "130883",
+      "JobName": "rsi-m12d-qwen-preflight",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "ElapsedRaw": "40",
+      "AllocCPUS": "4",
+      "AllocTRES": "billing=4,cpu=4,gres/gpu=1,node=1",
+      "Start": "2026-10-30T22:05:40",
+      "End": "2026-10-30T22:06:20"
+    },
+    {
+      "JobID": "130884",
+      "JobName": "rsi-m12d",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "84",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:16:14",
+      "End": "2026-10-30T22:17:38"
+    },
+    {
+      "JobID": "130885",
+      "JobName": "rsi-m12d-qwen-startup-recovery",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "61",
+      "AllocCPUS": "4",
+      "AllocTRES": "billing=4,cpu=4,gres/gpu=1,node=1",
+      "Start": "2026-10-30T22:16:14",
+      "End": "2026-10-30T22:17:15"
+    },
+    {
+      "JobID": "130886",
+      "JobName": "rsi-m12d-phase",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "26",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:18:49",
+      "End": "2026-10-30T22:19:15"
+    },
+    {
+      "JobID": "130887",
+      "JobName": "rsi-m12d-phase",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "416",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:19:40",
+      "End": "2026-10-30T22:26:36"
+    },
+    {
+      "JobID": "130888",
+      "JobName": "rsi-m12d-phase",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "415",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:19:40",
+      "End": "2026-10-30T22:26:35"
+    },
+    {
+      "JobID": "130889",
+      "JobName": "rsi-m12d-phase-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "0",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:26:39",
+      "End": "2026-10-30T22:26:39"
+    },
+    {
+      "JobID": "130890",
+      "JobName": "rsi-m12d-cost-profile",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "ElapsedRaw": "3",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:27:51",
+      "End": "2026-10-30T22:27:54"
+    },
+    {
+      "JobID": "130891",
+      "JobName": "rsi-m12d-cost-profile",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "14",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:28:42",
+      "End": "2026-10-30T22:28:56"
+    },
+    {
+      "JobID": "130892",
+      "JobName": "rsi-m12d-phase",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "414",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:28:56",
+      "End": "2026-10-30T22:35:50"
+    },
+    {
+      "JobID": "130893",
+      "JobName": "rsi-m12d-phase",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "417",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:28:56",
+      "End": "2026-10-30T22:35:53"
+    },
+    {
+      "JobID": "130894",
+      "JobName": "rsi-m12d-phase-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:37:17",
+      "End": "2026-10-30T22:37:18"
+    },
+    {
+      "JobID": "130895",
+      "JobName": "rsi-m12d",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "82",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:48:21",
+      "End": "2026-10-30T22:49:43"
+    },
+    {
+      "JobID": "130896",
+      "JobName": "rsi-m12d",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "82",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T22:49:33",
+      "End": "2026-10-30T22:50:55"
+    },
+    {
+      "JobID": "130897",
+      "JobName": "rsi-m12d-controlled-adapt",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1480",
+      "AllocCPUS": "4",
+      "AllocTRES": "billing=4,cpu=4,gres/gpu=1,node=1",
+      "Start": "2026-10-30T22:51:15",
+      "End": "2026-10-30T23:15:55"
+    },
+    {
+      "JobID": "130898",
+      "JobName": "rsi-m12d-behavior-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "21",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:03:55",
+      "End": "2026-10-30T23:04:16"
+    },
+    {
+      "JobID": "130899",
+      "JobName": "rsi-m12d-search-receipt-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:15:56",
+      "End": "2026-10-30T23:15:57"
+    },
+    {
+      "JobID": "130900",
+      "JobName": "rsi-m12d-controlled-adapt",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1389",
+      "AllocCPUS": "4",
+      "AllocTRES": "billing=4,cpu=4,gres/gpu=1,node=1",
+      "Start": "2026-10-30T23:17:15",
+      "End": "2026-10-30T23:40:24"
+    },
+    {
+      "JobID": "130901",
+      "JobName": "rsi-m12d-controlled-adapt",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1214",
+      "AllocCPUS": "4",
+      "AllocTRES": "billing=4,cpu=4,gres/gpu=1,node=1",
+      "Start": "2026-10-30T23:17:15",
+      "End": "2026-10-30T23:37:29"
+    },
+    {
+      "JobID": "130902",
+      "JobName": "rsi-m12d-search-receipt-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:38:02",
+      "End": "2026-10-30T23:38:03"
+    },
+    {
+      "JobID": "130903",
+      "JobName": "rsi-m12d-search-receipt-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:40:43",
+      "End": "2026-10-30T23:40:44"
+    },
+    {
+      "JobID": "130904",
+      "JobName": "rsi-m12d-final-mapping-seal",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "2",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:41:08",
+      "End": "2026-10-30T23:41:10"
+    },
+    {
+      "JobID": "130905",
+      "JobName": "rsi-m12d-guarded-final",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "948",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:43:28",
+      "End": "2026-10-30T23:59:16"
+    },
+    {
+      "JobID": "130906",
+      "JobName": "rsi-m12d-guarded-final",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "951",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-30T23:43:28",
+      "End": "2026-10-30T23:59:19"
+    },
+    {
+      "JobID": "130908",
+      "JobName": "rsi-m12d-guarded-final",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "739",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-31T00:00:18",
+      "End": "2026-10-31T00:12:37"
+    },
+    {
+      "JobID": "130910",
+      "JobName": "rsi-m12d-meta-schema-diagnosis",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "1",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-31T00:07:31",
+      "End": "2026-10-31T00:07:32"
+    },
+    {
+      "JobID": "130911",
+      "JobName": "rsi-m12d-independent-final-audit",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "ElapsedRaw": "59",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-31T00:12:37",
+      "End": "2026-10-31T00:13:36"
+    },
+    {
+      "JobID": "130919",
+      "JobName": "rsi-m12d-independent-final-audit",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "59",
+      "AllocCPUS": "2",
+      "AllocTRES": "billing=2,cpu=2,node=1",
+      "Start": "2026-10-31T14:47:16",
+      "End": "2026-10-31T14:48:15"
+    }
+  ],
+  "max_concurrent_allocations": 2,
+  "max_concurrent_CPU_only_allocations": 2,
+  "Slurm_batch_memory_receipts": [
+    {
+      "JobID": "130882.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "622308K",
+      "AveRSS": "622308K",
+      "MaxVMSize": "4309880K"
+    },
+    {
+      "JobID": "130883.batch",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "MaxRSS": "424928K",
+      "AveRSS": "424928K",
+      "MaxVMSize": "3998460K"
+    },
+    {
+      "JobID": "130884.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "604.50M",
+      "AveRSS": "604.50M",
+      "MaxVMSize": "4307672K"
+    },
+    {
+      "JobID": "130885.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1938580K",
+      "AveRSS": "1938580K",
+      "MaxVMSize": "27376004K"
+    },
+    {
+      "JobID": "130886.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1180K",
+      "AveRSS": "1180K",
+      "MaxVMSize": "129668K"
+    },
+    {
+      "JobID": "130887.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "443476K",
+      "AveRSS": "443476K",
+      "MaxVMSize": "3823388K"
+    },
+    {
+      "JobID": "130888.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "439048K",
+      "AveRSS": "439048K",
+      "MaxVMSize": "3818200K"
+    },
+    {
+      "JobID": "130889.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130890.batch",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130891.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130892.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "440048K",
+      "AveRSS": "440048K",
+      "MaxVMSize": "3819132K"
+    },
+    {
+      "JobID": "130893.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "442832K",
+      "AveRSS": "442832K",
+      "MaxVMSize": "3823680K"
+    },
+    {
+      "JobID": "130894.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1180K",
+      "AveRSS": "1180K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130895.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "622544K",
+      "AveRSS": "622544K",
+      "MaxVMSize": "4310204K"
+    },
+    {
+      "JobID": "130896.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "624472K",
+      "AveRSS": "624472K",
+      "MaxVMSize": "4311064K"
+    },
+    {
+      "JobID": "130897.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "2923536K",
+      "AveRSS": "2923536K",
+      "MaxVMSize": "38969868K"
+    },
+    {
+      "JobID": "130898.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1172K",
+      "AveRSS": "1172K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130899.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130900.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "2974036K",
+      "AveRSS": "2974036K",
+      "MaxVMSize": "39044004K"
+    },
+    {
+      "JobID": "130901.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "3331664K",
+      "AveRSS": "3331664K",
+      "MaxVMSize": "39395428K"
+    },
+    {
+      "JobID": "130902.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1172K",
+      "AveRSS": "1172K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130903.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130904.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130905.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1402168K",
+      "AveRSS": "1402168K",
+      "MaxVMSize": "8379500K"
+    },
+    {
+      "JobID": "130906.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1069256K",
+      "AveRSS": "1069256K",
+      "MaxVMSize": "8047936K"
+    },
+    {
+      "JobID": "130908.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "876144K",
+      "AveRSS": "876144K",
+      "MaxVMSize": "7853884K"
+    },
+    {
+      "JobID": "130910.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "1176K",
+      "AveRSS": "1176K",
+      "MaxVMSize": "129664K"
+    },
+    {
+      "JobID": "130911.batch",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "MaxRSS": "58744K",
+      "AveRSS": "58744K",
+      "MaxVMSize": "497.50M"
+    },
+    {
+      "JobID": "130919.batch",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "MaxRSS": "57952K",
+      "AveRSS": "57952K",
+      "MaxVMSize": "508168K"
+    }
+  ],
+  "memory_scope": "Slurm sampled MaxRSS/AveRSS per batch step; not stage-specific total RAM or CUDA peak memory.",
+  "allocated_CPU_minutes_inclusive_all_M12D": 439.5666666666667,
+  "five_arm_allocated_CPU_minutes_including_regression_and_audit": 62.53333333333334,
+  "formal_GPU_allocations": 3,
+  "formal_GPU_seconds": 4083,
+  "preflight_GPU_seconds_including_failed_startup": 101,
+  "actual_formal_model_calls": 78,
+  "separate_actual_preflight_model_calls": 1,
+  "input_tokens": 154994,
+  "output_tokens": 13041,
+  "actual_environment_attempts": 4068,
+  "trials": [
+    {
+      "trial": 0,
+      "environment_attempts": 1440,
+      "model_calls": 26
+    },
+    {
+      "trial": 1,
+      "environment_attempts": 1404,
+      "model_calls": 26
+    },
+    {
+      "trial": 2,
+      "environment_attempts": 1224,
+      "model_calls": 26
+    }
+  ],
+  "source_storage_bytes_all_run_files": 1416035455,
+  "remaining_reserved_environment_episodes": 0,
+  "remaining_reserved_CPU_minutes": 0,
+  "remaining_reserved_storage_bytes": 0,
+  "independent_search_audits": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-0/independent-search-audit.json",
+      "sha256": "fc2559b60d52e4b91722a045b3dc804c1a07108639f0d91447fb8854ba0a1726"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/independent-search-audit.json",
+      "sha256": "2c7a65bad870d33ed157a527ecfff1778163a81691d56790b21f11f18c33e414"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-2/independent-search-audit.json",
+      "sha256": "ac44779168be9436eac01427135e4acd08064974cb758df5df1c67f15f5e4bd2"
+    }
+  ],
+  "guarded_final_wrapper": {
+    "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/m12d_guarded_final.sbatch",
+    "sha256": "4cccc597f5c0c93ec8733517d0d749257e3ec207728d5feb073de7d57bb2d1e8"
+  },
+  "five_arm_final_generated": false,
+  "before_RSI_final": false,
+  "cost_definition": "ElapsedRaw times allocated CPUs; one GPU per formal allocation. All failed setup, regression, profiling and auditing allocations included in conservative CPU total."
+}

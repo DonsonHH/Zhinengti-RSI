@@ -1,0 +1,6 @@
+{
+  "input_tokens": 2246,
+  "output_tokens": 183,
+  "generation_s": 9.863668291829526,
+  "raw_response": "{\"diagnosis\": \"The thermal system shows a significant excess with a mean temperature above 51°C, indicating potential overheating issues. The electrical system has a high contact temperature, and there are some sensor bias concerns in the control system.\", \"workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"verified_sensor_bias\", \"threshold\": 0.5, \"action\": \"urgency\"}]}, \"expected_effect\": \"This workflow prioritizes urgent checks for thermal excess and contact heat, while also addressing sensor bias to ensure early anomaly detection and prevent unnecessary detours.\"}"
+}

@@ -1,0 +1,2129 @@
+{
+  "complete": true,
+  "trial": 1,
+  "actual_program_mappings": {
+    "Tour": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      },
+      "validation_gate": {
+        "retain": true
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": []
+      }
+    },
+    "human_fixed": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": -0.05555555555555558,
+        "macro_wait_delta_s": -6.166213584310242
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "signal"
+          },
+          {
+            "signal": "age",
+            "threshold": 0.75,
+            "action": "return_tour"
+          }
+        ]
+      }
+    },
+    "random_search": {
+      "nominal_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "ppo"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.5,
+            "action": "urgency"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "ppo"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": -0.05555555555555558,
+        "macro_wait_delta_s": -6.166213584310242
+      },
+      "actual_program": {
+        "refresh_s": 30,
+        "cooldown_s": 60,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.05,
+            "action": "ppo"
+          },
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.5,
+            "action": "urgency"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "ppo"
+          }
+        ]
+      }
+    },
+    "fixed3": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": 0.0,
+        "macro_wait_delta_s": -2.8125
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "return_tour"
+          }
+        ]
+      }
+    },
+    "fixed13": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "thermal_disagreement",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": -0.22222222222222232,
+        "macro_wait_delta_s": -9.335722129739864
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "thermal_disagreement",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "flow_deficit",
+            "threshold": 0.25,
+            "action": "signal"
+          }
+        ]
+      }
+    },
+    "controlled_meta": {
+      "nominal_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "return_tour"
+          }
+        ]
+      },
+      "validation_gate": {
+        "retain": true,
+        "no_seed_miss_increase": true,
+        "macro_missed_delta": 0.0,
+        "macro_wait_delta_s": -2.8125
+      },
+      "actual_program": {
+        "refresh_s": 60,
+        "cooldown_s": 30,
+        "fallback": "tour",
+        "rules": [
+          {
+            "signal": "thermal_excess",
+            "threshold": 0.25,
+            "action": "urgency"
+          },
+          {
+            "signal": "contact_heat",
+            "threshold": 0.25,
+            "action": "signal"
+          },
+          {
+            "signal": "verified_sensor_bias",
+            "threshold": 0.5,
+            "action": "return_tour"
+          }
+        ]
+      }
+    }
+  },
+  "statistics": {
+    "Tour": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 0.7777777777777778,
+          "macro_wait_s": 126.76749278594791
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 1.0,
+          "macro_wait_s": 116.97583470472833
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.3333333333333333,
+          "macro_wait_s": 117.85863901595945
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.1111111111111112,
+          "macro_wait_s": 104.02471863778901
+        }
+      ],
+      "macro_missed_count": 1.0555555555555554,
+      "macro_wait_s": 116.40667128610617,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 76
+    },
+    "human_fixed": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 1.0,
+          "macro_wait_s": 119.3695610941815
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 116.70558520539879
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.1666666666666667,
+          "macro_wait_s": 117.14225820981521
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.0,
+          "macro_wait_s": 102.14200088769321
+        }
+      ],
+      "macro_missed_count": 1.0138888888888888,
+      "macro_wait_s": 113.83985134927218,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 73
+    },
+    "random_search": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 1.0,
+          "macro_wait_s": 119.3695610941815
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 0.8888888888888888,
+          "macro_wait_s": 116.70558520539879
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.1666666666666667,
+          "macro_wait_s": 117.14225820981521
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.0,
+          "macro_wait_s": 102.14200088769321
+        }
+      ],
+      "macro_missed_count": 1.0138888888888888,
+      "macro_wait_s": 113.83985134927218,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 73
+    },
+    "fixed3": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 0.7777777777777778,
+          "macro_wait_s": 122.07999278594791
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 0.9444444444444444,
+          "macro_wait_s": 116.93079312150674
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.2222222222222223,
+          "macro_wait_s": 117.50977193874641
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.0555555555555556,
+          "macro_wait_s": 103.98203296336249
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 115.12564770239089,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 72
+    },
+    "fixed13": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 0.5555555555555556,
+          "macro_wait_s": 117.34463811336147
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 1.1111111111111112,
+          "macro_wait_s": 118.09997615926801
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.1111111111111112,
+          "macro_wait_s": 106.10856598819137
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.1111111111111112,
+          "macro_wait_s": 104.02471863778901
+        }
+      ],
+      "macro_missed_count": 0.9722222222222222,
+      "macro_wait_s": 111.39447472465247,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 70
+    },
+    "controlled_meta": {
+      "seeds": [
+        {
+          "seed": 32140,
+          "macro_missed_count": 0.7777777777777778,
+          "macro_wait_s": 122.07999278594791
+        },
+        {
+          "seed": 32141,
+          "macro_missed_count": 0.9444444444444444,
+          "macro_wait_s": 116.93079312150674
+        },
+        {
+          "seed": 32142,
+          "macro_missed_count": 1.2222222222222223,
+          "macro_wait_s": 117.50977193874641
+        },
+        {
+          "seed": 32143,
+          "macro_missed_count": 1.0555555555555556,
+          "macro_wait_s": 103.98203296336249
+        }
+      ],
+      "macro_missed_count": 1.0,
+      "macro_wait_s": 115.12564770239089,
+      "conditions": 72,
+      "missed_noise_repeated_sum": 72
+    }
+  },
+  "final_cost": {
+    "requests": 6,
+    "cache_hits": 1,
+    "attempted_episodes": 360,
+    "successful_episodes": 360,
+    "cap": 432
+  },
+  "seal_SHA256": "3907dd01e6161f82c862e9b74a299af8f54a20860299e9208fd2f1493df8746d",
+  "real_LLM_calls": 0,
+  "final_selected_replacements": 0,
+  "costs": {
+    "Tour": {
+      "conditions": 72,
+      "mean_travel_m": 11793.399999999992,
+      "mean_service_s": 16670.0,
+      "mean_idle_s": 3846.5999999999976,
+      "mean_extra_checks": 0.0,
+      "actual_PPO_dispatches": 0,
+      "actual_PPO_multichoice_dispatches": 0,
+      "total_dispatches": 102672,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102672,
+      "rule_selected_dispatches": 0,
+      "forced_return_Tour_dispatches": 0,
+      "maximum_exact_gap_ratio": 0.8,
+      "maximum_exact_gap_s": 310.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 4320,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0
+    },
+    "human_fixed": {
+      "conditions": 72,
+      "mean_travel_m": 11796.412499999993,
+      "mean_service_s": 16668.333333333332,
+      "mean_idle_s": 3845.254166666665,
+      "mean_extra_checks": 0.25,
+      "actual_PPO_dispatches": 0,
+      "actual_PPO_multichoice_dispatches": 0,
+      "total_dispatches": 102660,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102660,
+      "rule_selected_dispatches": 4408,
+      "forced_return_Tour_dispatches": 19247,
+      "maximum_exact_gap_ratio": 0.9666666666666667,
+      "maximum_exact_gap_s": 310.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 4320,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0
+    },
+    "random_search": {
+      "conditions": 72,
+      "mean_travel_m": 11802.412499999993,
+      "mean_service_s": 16666.666666666668,
+      "mean_idle_s": 3840.9208333333318,
+      "mean_extra_checks": 0.4722222222222222,
+      "actual_PPO_dispatches": 34,
+      "actual_PPO_multichoice_dispatches": 34,
+      "total_dispatches": 102652,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102618,
+      "rule_selected_dispatches": 34,
+      "forced_return_Tour_dispatches": 34891,
+      "maximum_exact_gap_ratio": 0.9666666666666667,
+      "maximum_exact_gap_s": 360.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 4320,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0003312161477613685
+    },
+    "fixed3": {
+      "conditions": 72,
+      "mean_travel_m": 11794.969444444436,
+      "mean_service_s": 16663.75,
+      "mean_idle_s": 3851.2805555555533,
+      "mean_extra_checks": 0.375,
+      "actual_PPO_dispatches": 0,
+      "actual_PPO_multichoice_dispatches": 0,
+      "total_dispatches": 102647,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102647,
+      "rule_selected_dispatches": 391,
+      "forced_return_Tour_dispatches": 25295,
+      "maximum_exact_gap_ratio": 0.9166666666666666,
+      "maximum_exact_gap_s": 385.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 2160,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0
+    },
+    "fixed13": {
+      "conditions": 72,
+      "mean_travel_m": 11798.511111111104,
+      "mean_service_s": 16664.722222222223,
+      "mean_idle_s": 3846.7666666666646,
+      "mean_extra_checks": 0.4444444444444444,
+      "actual_PPO_dispatches": 0,
+      "actual_PPO_multichoice_dispatches": 0,
+      "total_dispatches": 102646,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102646,
+      "rule_selected_dispatches": 32,
+      "forced_return_Tour_dispatches": 33735,
+      "maximum_exact_gap_ratio": 0.9666666666666667,
+      "maximum_exact_gap_s": 405.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 2160,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0
+    },
+    "controlled_meta": {
+      "conditions": 72,
+      "mean_travel_m": 11794.969444444436,
+      "mean_service_s": 16663.75,
+      "mean_idle_s": 3851.2805555555533,
+      "mean_extra_checks": 0.375,
+      "actual_PPO_dispatches": 0,
+      "actual_PPO_multichoice_dispatches": 0,
+      "total_dispatches": 102647,
+      "PPO_single_legal_candidate_dispatches": 0,
+      "exclusive_shadow_actor_scoring_calls": 102647,
+      "rule_selected_dispatches": 391,
+      "forced_return_Tour_dispatches": 25295,
+      "maximum_exact_gap_ratio": 0.9166666666666666,
+      "maximum_exact_gap_s": 385.0,
+      "revisit_violating_task_count": 0,
+      "CVAE_calls": 2160,
+      "all_independent_audits_passed": true,
+      "actual_PPO_multichoice_takeover_rate": 0.0
+    }
+  },
+  "professional_confirmation": {
+    "Tour": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 60
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 4
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    },
+    "human_fixed": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 63
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 4
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    },
+    "random_search": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 63
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 4
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    },
+    "fixed3": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 64
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 4
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    },
+    "fixed13": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 60
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 10
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    },
+    "controlled_meta": {
+      "thermal": {
+        "segments_noise_repeated": 124,
+        "confirmed_noise_repeated": 64
+      },
+      "electrical": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      },
+      "cooling": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 4
+      },
+      "control": {
+        "segments_noise_repeated": 16,
+        "confirmed_noise_repeated": 16
+      }
+    }
+  },
+  "private_final_original_SHA256": "c3fa54f4413aa084021e16ecb3e538dbc940acdc4814f5e0fc0d7df2b4e33ef0",
+  "final_raw_rows_exported": false,
+  "final_private_record_inventory": [
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7705885a91970fea92f38bc6.json.gz",
+      "sha256": "1a618e011f9169107a49376a24a49718ceddce36cf9fca7c83ef70bb4b0e8b56"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d50fef9a109c0882dbf84d68.json.gz",
+      "sha256": "ac2a2397718f9ffce7f1f4771d16ad0e6178d4789d186a976eb032e558091e24"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/09b2853ea057d4a18eb8b91b.json.gz",
+      "sha256": "69b88a0de915e79da177f9a2983f7b08ce71ffd42323c8faf7764d661dd0e14f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4cd6e9ccda8156f6964da34a.json.gz",
+      "sha256": "0d0b6df874f0f60cf00ef17cde4b57b809acb8615318135315c6d80703220be0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/36a5d046a22c0da67138bc92.json.gz",
+      "sha256": "dd553d0fbca40550f70eca8cc412d7e2446ab7b8b58fb0ca81eb859b995e02ef"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c3101ebcbc4ef4624e75b005.json.gz",
+      "sha256": "41f0f9bc72a3ccfbb2616d084b65d2ade3efc247ce078a1c004eb5cf78731688"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ed34d126e16e95500a0346e2.json.gz",
+      "sha256": "cf351b1a2786c04e314ee22827cb2c7a4f66596eb434d6e327544440d72aaf53"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6d5ea98eb7e94fb0600bffe0.json.gz",
+      "sha256": "1a942fff4e54a15573ae034f810639724e594e8ce1cf7b92e45c138208f5f29f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/06e5a0255dac6cfa0530b67c.json.gz",
+      "sha256": "09e3a1d6fb7cc2dd74031cc42d9264fd7858705053271a67a887a75a3293d07b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7ae685bf76a64971218d7734.json.gz",
+      "sha256": "0f81e6767775928e8792dbd133b06ff2cfc2d2fb62da42deaaf95f93dd738ed8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/64b0336f7d41506f9aaf5241.json.gz",
+      "sha256": "206eef0dc5228bd89f595541a32a125e03395309600cb31ee9237a2e692e1943"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/eb4a77c7e003ce4a02585167.json.gz",
+      "sha256": "8ec6e2775b25d2dfe52edfb2f78c2009b60e24a6d62dbfee9aee25e70062bcda"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/96c35764e730a6a662158f7c.json.gz",
+      "sha256": "ee1d001bd45dd4317aea1b07b3a97f6cf343280c12ca60b58e5534a88b96b05d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/636bed2f89f13cbf17b5165d.json.gz",
+      "sha256": "fe5013b4476c82a1c9844ecaf633be3a5d0a73519efb00ca2ab99c15bbade581"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fb9514cca33631cf740eb4df.json.gz",
+      "sha256": "2bf57a2957e4cc841d71d6e2cae5e3be1166f56361c2921f7da3c5cb0a5b6a08"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c366f3347e761313e5fd4d8b.json.gz",
+      "sha256": "20f87b0e124236bc1646d8b182271d9e0910d6123ab55781d49c06bea63e4bf9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a587b510dd5d14247f24502e.json.gz",
+      "sha256": "22d8d397a0787eeacd0c0e6def5494ee3b4d50cfe259ec2b14e7c81986a8d490"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f8ee1afd93417605122cca21.json.gz",
+      "sha256": "16e601089b9719800458f8c40b422ad00ed2c30cf467e221112fc66b8635c030"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9fcc56ef07cd9bc9eeb8b377.json.gz",
+      "sha256": "21f0442eb81fb3c5659ef1a9f3a231dd8a8548b0be3558f02e59607b5340a117"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1b7e6b774fc5809bcbd70267.json.gz",
+      "sha256": "26dcf8b2b9401b61f2a278ed5bb77d71bcd9b9e30bcb717051ae1a8ff8a1a982"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b081329b453693defffb8272.json.gz",
+      "sha256": "6f068d3087a86931d2d1faa3d9136290a969ff6cef1cddba85c8b6555bb261b1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/18413b184e97053a285125b0.json.gz",
+      "sha256": "bfdd220ee32d6fcda35adbc7c03c512bb1337421fb55b147d638d4365b2cd5d9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8cfa358f137a32064ad89f11.json.gz",
+      "sha256": "a159950a23164b095386a3dc3023cf36c7c8a14598ab83a7ec78f545cc44567b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a781bf01347968951c2849d0.json.gz",
+      "sha256": "96fdaf3975eaad7d21a8bc37be8e63ebfd3ff1e6b616fa5995261a1bfd500f3e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6bbb20ca50b3c9ee645454de.json.gz",
+      "sha256": "e0dcdcdaa65ff572b43870595e2104495fb299c463464c881bc9f86763950cc5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8134ecc5fb887f89f9a9ac69.json.gz",
+      "sha256": "41422bd13c1850895901a9727fdcacd99a5aeb06865a7f0ab4cb49846dee4999"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/334a3610cac04ce2c457f064.json.gz",
+      "sha256": "46533b78a1ac3d06a01715694941c27261d938c7dee9550f7fa7087b8d4df4eb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2ca174cb8bc99a1b28c2018a.json.gz",
+      "sha256": "f1edc1e6c1d25f6c4f2fda17656eb426c7afc8a1a30f99ca7a43af9c7e18eac6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c1169c5994ca16d4d7b6cce4.json.gz",
+      "sha256": "2ef1a6868d77483297115b07b5d806bb79b9ddaeade79afc4c6454437fbd76c2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4e1ddb1e6a8fcb357dd68c9e.json.gz",
+      "sha256": "2162702ec4f58361801babb722512e0ef62f7180802b34d463453afd618f2633"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1a21da8036eea100cfe49e9f.json.gz",
+      "sha256": "9c63bb8eb78c1d59c6570b9c3e81bc25e22e596c68da7a00d38c3801c2dbd11c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/eeb1d1661fd35df81e9fbfc5.json.gz",
+      "sha256": "bf2b3e582d71fc72715b05d07c724263c14471c6d350f6f216e41457cd414c8f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1cade4beb9e366c59b35f85c.json.gz",
+      "sha256": "bf1f2f6517f3ad0a75d0e7b77b04cc1b04959a8b93edd718bdb1e787075d804a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/faffaaffc79c4888f74b3463.json.gz",
+      "sha256": "72353721d82287fe887f72cb7fef46a87f423a9cfb62f5bade2723c0f38b93c0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/deb3a67d5b5b496fa0b52014.json.gz",
+      "sha256": "4a122870c2cf8c9fa86953327ebc3133b24e5968cc48a99a44c34f44346dd032"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c6a7ae2cc04f067ec6a82425.json.gz",
+      "sha256": "8b1fdd00c69517525c6c0465d868ef646310d1196a85a0151ffed4a11b1990d1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/cab74995eccae4172a9679f2.json.gz",
+      "sha256": "23d69c1923c4481f97be8e13204fd0e772956b90bc278077fc9bd8a8ff38e50a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c99b470a1afb83ff1c5b1455.json.gz",
+      "sha256": "c0651b2543e06f7615eb2404c5470f5d04f172808e99416a22159e2d21e88448"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0ed8f5f6f044d91b237c4b9c.json.gz",
+      "sha256": "a473639277b7903c173bfb6b93bac00922adb12353931194212ffe4e4d88f464"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b293097c40837d3c5eee7a16.json.gz",
+      "sha256": "10fbbd331ca1a2a270461fe457535205b01a061387a8bf7afdcaa48e7459f91a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/dd2b507813062e56923b2436.json.gz",
+      "sha256": "62a4997b90490eef09204a23c3d4777dcff53c5feb0d25dcbfc0e4f3f929f85a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/38e0e76b4cd2d6a993e45dd8.json.gz",
+      "sha256": "cd7d1df5f8347a9e5916e7534f92f566fdce8d71dd0036c6e23cc09b278c9119"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/168440799d8f536c6170a7b8.json.gz",
+      "sha256": "4e83478222b5b8410647881cede5ab5afa1930f9d17b81819aeab0ae05553937"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/81f4691db3076e0360b98838.json.gz",
+      "sha256": "19f39d3f45b101168ecc39760055679052b3b76ce8b08342b7495d0fe0f8dc48"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7b3fccc6f058ee7cf3d2e24b.json.gz",
+      "sha256": "719cdf579e50b7882440f7565a6eaaceaedc1aa0951f02d6e70fed5c72eb03f3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6aaac46c7e9ee18e94d15f89.json.gz",
+      "sha256": "b52441ebd5e73e2e20c5268ed05022e2c6082147d6d03d8878c41d76f2c88956"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/48569954c71fabb766ebb55a.json.gz",
+      "sha256": "403d17fc53c62d73cb1a79c6c30f6b1d6249da3b21780ae9c354726de50cdb37"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/326a39f61d72d47106d9bc46.json.gz",
+      "sha256": "16a72900e52eb4a647ab6783429a39963431b561934c27582ecda331d2e6a747"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f50ac166c21a6b1f769e0807.json.gz",
+      "sha256": "c1c9872b580409da5fe1fccac2c6bdd7de1c0c227c70470932a7b6cc048100fa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/47977292515184bd9d92b071.json.gz",
+      "sha256": "20726a604bbb898cb3b9ca675990c3b58c57acbbc08b796eb215aae0fc1470a7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8111646c7c9b9138b3014d3d.json.gz",
+      "sha256": "c77cb2ad7939b5de7e17ae8958637299da5023cd282cb3fb0ea4651a1ea8fc3d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e98010e12ebca732aa49dd74.json.gz",
+      "sha256": "a9a54a6cf09ec6a76113c95af86f9b944e94c514f366354b6ac21c438a5e5a53"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/de037e1fe2db1ee105da1da9.json.gz",
+      "sha256": "d8d76f328af64bfea66effce7753c12e460fcd35516a546892152d1f5e64debe"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b93df2f8bcee2cb3eee62462.json.gz",
+      "sha256": "6da42cfbdf7910d1cd057e9a4b8247077d403bbbf8bfbcaafe199601053f7385"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/92e4074b8c98424f01d33481.json.gz",
+      "sha256": "f5670027507dd0cff788ad69f3c7b11a55a0dbd4f991ca17730d093f162a82f1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/99dc758727aba000d5cc7a9d.json.gz",
+      "sha256": "7c43678c89e6138882b8c237911c831848f03636984da4f81d5b4549f718a3e2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6bf287cf41d45971dc03fdf1.json.gz",
+      "sha256": "80bfd5658987d330323fbe1f8f3d6e16de728886992c0589443e564646dbffed"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bcbfc542fbabf929ec96c204.json.gz",
+      "sha256": "c46c05286e42cfd166b152dec2599c9f7ba5430b7814eee81b86def499a4b0e4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/56e60292d31d5cebc25fe50e.json.gz",
+      "sha256": "9106ec4ee64225570425191b23da1f5e10897a8c1d7d9569b03821be526ca767"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a4cb3aaf360ef07f40d4d8f6.json.gz",
+      "sha256": "a57a7224c43a825d22a2167a9b58eea015694ab02229b461806cc9cc22925e90"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d40b58e259a65d83d594259d.json.gz",
+      "sha256": "3011ddfa6dd71e18e3b73560bb8c2e8290e18a7c4e19a90d5651f23c0c1de5bb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2b998134a9792320d340ce01.json.gz",
+      "sha256": "9b515bcbc78cb086d13843f999947a1781bf5a64211fc919af5542c9f57d97e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a336a68d229b67b55fc27da0.json.gz",
+      "sha256": "7b4306d86a73984938d399006e536ae33487273dcee796197cacba550bf8ab2e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/81e40902b1004697352bfd22.json.gz",
+      "sha256": "1d718a695aff8a352765f62bb08873ff1d198f41eea602386b41213967c68c9e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2e58259a38d2595c657c1126.json.gz",
+      "sha256": "3a54059d4b32e00c09f33e1f01f2fe5cda39e30b232d50b0e49e9dedaba0cc44"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1b99f8fa634e424b3afe98ac.json.gz",
+      "sha256": "adc4f32533d995da38c546b7939ff2aea352b2fee6a4e8c40fca4d2f5f626653"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f2dc54e9150f72c80f2a4ea4.json.gz",
+      "sha256": "53104f972dd15cff460b897362b88c78ca434354b7226aecffca5234a7db8d21"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d9258f80026ad56a4fbb134b.json.gz",
+      "sha256": "f03b7f89091fd262ba74d41ef052def1107078a65027e461e8b5b15229327c15"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9c4faa0a89930aefde5975d4.json.gz",
+      "sha256": "d7f983862bb6be702fcdfe576c2c22e31427e9bbbbe01e1c3828fca732f6d070"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b15559e89362f52833dc8de3.json.gz",
+      "sha256": "8d0d87af713a2835ca70283cd8fd4b0fc3868ec3f53ffd9e7f276fc2f1d79c2f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4e7df188d7e56fa161d9fa94.json.gz",
+      "sha256": "0b5343bf482511bfc838c3bc96d24477ef27bce78c486d49bf0cdd756618027f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b704b5944a61898368731b0b.json.gz",
+      "sha256": "6ff4b3529e8d274b31246fd3d9f600885b21fd2bae9681f31054151944235170"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f09ac092a54035ecfd39283d.json.gz",
+      "sha256": "5e19c8078fdb9a285a04ec3f298dc1303aadbd6f4e63148dea783de4abcfd93f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/34fdaa906442eb1ad26fe654.json.gz",
+      "sha256": "6177c71605015aff061f64b10eb8a39c7f5bf53b4f3d49ebf18e5af4d6416d96"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e1e01336f56c1c839078e324.json.gz",
+      "sha256": "1e9a435ee4de51667f34b8e74dddb6ceb616e229be2769993b52075232f09ce1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9816d78e9363c29ebd290167.json.gz",
+      "sha256": "988e3b15569afe48180288a5b146d104ed8149f25625ef3dee81757257a9b390"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f8e32413a7c83c060a7415a0.json.gz",
+      "sha256": "68afe5b1c5f1c520b7922992bce6f90e7e95650f0e6942844af80bec3075ccc0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b2cdafc044e0c77cae9390a0.json.gz",
+      "sha256": "057d4ae4106d9b63c9600547b166837fdf5b4eae6176c33d91aa252926b44462"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3a691ce56701aefd67b28a68.json.gz",
+      "sha256": "617ad4637b2c2121a848c649a81e6e4cfeb178c1f2acf04db08b58fe30ba5637"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a87f4620cf8af1b694c959e4.json.gz",
+      "sha256": "be2db1e5fb53cfeb0ed535ab12301279ecca929dc737940e3fb3da26f9334c42"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/31b3a66a8a2ea82708c44ee9.json.gz",
+      "sha256": "20790bf69d7749c53306dcb5d9e0395bc291f8893026860a63cf3e092b7fb366"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2d9fb2b290a582c61db22728.json.gz",
+      "sha256": "c7f8354f2fb285fc26ff7cfaf0b3675a7750d4502a719191e0078fc0b8087985"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/77538c38331153a713bd967b.json.gz",
+      "sha256": "f7bee7f8bb494eb31ddf90a9be385f41459f8eea3330d6918e558fc1f0f761f3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/04770793b32d6b39aeddfa98.json.gz",
+      "sha256": "579eea4ca4219127a376976c79afbba566d844ff317dab51115c2faee99eff9c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d603c5cb2389eea825495f69.json.gz",
+      "sha256": "47e642f4040e07d8997dc66d17107d77dd2f5d72229ee0db67fe249a73c06151"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/58688f1487daa96793c57a20.json.gz",
+      "sha256": "3211951685a67c62eae324d43ff974c6251276943dba8dc5a8b46114fab6a9a0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6dc55fc18c0406c3f5d62106.json.gz",
+      "sha256": "0cb494a6acd2c4c0b30b12c51d243617e3dfc42d51c911f00cc899f6857899b7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/97a89f43c4f9278726cb7afb.json.gz",
+      "sha256": "83cfbb77faada0f87765dfd055e404d13325f112657fef186d231201ff0820ae"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2076cf4a5541a5d09e9e3dc4.json.gz",
+      "sha256": "2238c4f703f9e6bd29993d4331b5e0ff72642270b127d5e9c4a3ca4c991243bc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8bfc0740ab0f7e9bbf114bc4.json.gz",
+      "sha256": "aef542954640892ad2989e0659e19e634bd430b8f84ebab733702ec902c6c037"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9a3c1126d0407578bc6b77f2.json.gz",
+      "sha256": "cd986dbaac2033def61cff567ae8bf9d6ef1dcb395b73772bf6d9b57cd08ea82"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/543ba9fa46e0780e176eb86b.json.gz",
+      "sha256": "5c112d4633e5e61f292b3d3d24058f4df3ba942c327a90970fa5742e9767fe7c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8a04377521a783c33342de2f.json.gz",
+      "sha256": "25f83dfd5c3d984add7524bf6668b2863b6600a4e4ad0618987006f73306b6f9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/01c0f7c59aa1f67293b2ad2d.json.gz",
+      "sha256": "ac1f5ffa7da97732acca50e5da2bc89a796a1f47fc5235a75b8f20c6e83d917f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5eefa06af8d3c951b8c60458.json.gz",
+      "sha256": "3697891972a9265350d2fa3fab4779e4fd866c3deb652108bf2dea40daf9d7b6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7523127032a4e747e41ec6c3.json.gz",
+      "sha256": "7adb79817721e035f3ae4dcbbf91be9effc98fe013942df64a77293a1408a09e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/147e5e4cf6c8ac92294162e7.json.gz",
+      "sha256": "e90d76a7c49ce31b5b1005c11b6982bc14dbf3aa54634b3890ce7d2fb8b0d67b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d9e3d1b05b66950ab07efc4f.json.gz",
+      "sha256": "6833f20ddad5e1f125408bdbdb958ded48d30f70ca09e12731402622b93fb26e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/842d2d6a193a0f8aa0b1f889.json.gz",
+      "sha256": "3868e8462b54b5608a29ddd0b6645345e595cfdf5ac80bcc0a0986b947868461"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9c202544f5c186a880f513c2.json.gz",
+      "sha256": "e8f1b6515e0d46a4132c6a2cd048c5ce0e4a457534c15cc25c89d5f83f9ebcac"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fec2b81422aca6bd5869077e.json.gz",
+      "sha256": "f141e82bad883aea030760c2777c8de41f09637b4da52ef33072969a0b0f08cc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d41ea985c79ba2db1649fb5d.json.gz",
+      "sha256": "7c7a4dacbc0add073576021596ce4de8a17e136591bdea2609a29555aafcf128"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/aa566a5cd6203a6eb1298809.json.gz",
+      "sha256": "31f21e8d6db99be8f975079ba5f7da1f3e72af2d95ad98ffe37417c7803c7ec0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/812705c8af866ed9ef322ba1.json.gz",
+      "sha256": "9e4f84174b628ddcd3c96ed689041a18aae7b8000616fb845d0327e43046f58f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/66e93811d3ee997de2b2f58b.json.gz",
+      "sha256": "e6d2cd38e54e75665c3e44478033aeba5ccaeb6edd695d633ce2a8aa365284c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/78d6643fbb85c5ffe913a157.json.gz",
+      "sha256": "367fcdfc24913fb35ae0237abf06a2f3cf82c0aac2c06a41c258f700125161f9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/01b00998b9f753dd2fdd7871.json.gz",
+      "sha256": "cd7c823a600efbbb175d09e8fcba471429015e769572a46af90624e6ef1ed996"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c1f806e4864f0ec7002cc829.json.gz",
+      "sha256": "7b0649427ffa6b69b40d23fefd84e778d58364a203793a44a5778fe5cd2e9496"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9714f4b3dd41821139b0b358.json.gz",
+      "sha256": "7ef22c07055c42869840da0727187411079da4b9c39e61feba645e563f584e89"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/672b9fb9152664417401d389.json.gz",
+      "sha256": "028e68a21523e0f94ecc53f543af58de9592f8873ed81d9096885464193f4030"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8e1d7ad12d57482aa2c41985.json.gz",
+      "sha256": "88e5d7fba65a185638c666b8b301ecd3fd70f175fe74f9ed5da88132f8089c83"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d3f9a42bf02033a9660cc8a0.json.gz",
+      "sha256": "a5a1c144ba974d1a6c16f26a0bb4a855505b5a0cd186908528d29e74d14f9a84"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bce3335eec458d029c6e7bf6.json.gz",
+      "sha256": "bd6ec1d0ef515f42e2e806989e85a39c281215cd7726209ae5380c286f198c07"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c8cb5cccef0a6a3916b37f2c.json.gz",
+      "sha256": "7e77ab7154ddb59b666c7f9b7f29ab5c0b6b528ca557fcd42c2376c7a7eb2e4a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bf0f7ddeb53ff96ef3d3c4dd.json.gz",
+      "sha256": "09e6991aeb22b37893e525ed1f0f237b7ba8cfd88febad9ee68bf3644441cd83"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/953a7a649992d6823bee4c9d.json.gz",
+      "sha256": "88ef7b6ee4941e3583bf8d091eb49dc66759de089f5ee3aa0d8152c84b0332eb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/59351b32ad78dc0c364ab7e4.json.gz",
+      "sha256": "8be1deb516d2e23b36b44e6c9780a9d6cf46a1389f436e3d90c1997c882a3189"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/98bec0ff175956fd406adc56.json.gz",
+      "sha256": "09a6d6c0a15a5373ac33e917df97cc30862fe755949453551de9f1fc046abc4d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fb138c026292f0e1a678c425.json.gz",
+      "sha256": "4400081f68a5690c14a4d4d4d7382fa2a19611b3e75cf80e67bcd766f8082d62"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d4de8462532040c92c1deca9.json.gz",
+      "sha256": "cbdf127633dbf2a2e31cf2b93f47736ccfb9abab044da78f907753f008433c62"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/468300c2add3d8e7e667c62c.json.gz",
+      "sha256": "23c06fd612fdcc598b38b6a8f6db049d607c6f7e16eec7453c3c539fca514a61"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/631a451238f6e13a088613cb.json.gz",
+      "sha256": "068a76d2d9b5211626a74deb576433a165933dadd2dcf0d446b229d66e2a2b74"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/23d729f572f01d4ced3fe2e7.json.gz",
+      "sha256": "5481f610d9d2a129f81669b391fb413f587e19560ef55659dd1a5594e0df15ee"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/70fd0d032c0693ad7fe6cb28.json.gz",
+      "sha256": "6f2a187a7942af514215ba673d9ce45914bc2b666e48eb9c5d812db12fb01706"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0677d162cb987246ad00bfbc.json.gz",
+      "sha256": "1627ed18656df8f3be96791ad4f77f17883adfb929b3a2c2b3264ccc06b90e5e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/70809d144750b082c79c93a3.json.gz",
+      "sha256": "2364425f3f86067f4fb59166ef6ac141f5e7431f04e587a1a66503c52b98c589"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/882b0f75243fdf6d0130cf05.json.gz",
+      "sha256": "693d0e49569050e405a658efbd4d2d754e27f544360fefb2893ed4328b31a68f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/841810512e3871f2e7bf781a.json.gz",
+      "sha256": "b7ac355db17c5de97d48c963ea7b81243afae814cdefc74fb0778d3124180f68"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c08a14b8fcbc671b38d5628b.json.gz",
+      "sha256": "256a3ec03e321ac7bbd5b874178668a25db6f52f797d053fa529edd3e5b47fbf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4d4939002da829872f27fb26.json.gz",
+      "sha256": "68851a1a588aff9ead66ba99198e753a70f791ee270c2ff95564ebb3a0ef4b9a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/036a11a7f4344c90b961d079.json.gz",
+      "sha256": "757e2d62da0b67f4a137eefe446bc19361912c71d641695e25aa2d726cd2de55"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b5e6de870d0bf5640f08e3fe.json.gz",
+      "sha256": "dc64b19377f3304d897dcf4d3db6ea5eb4dd585c0f927026203a69da091732a5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b52271085f02d1e332b161f1.json.gz",
+      "sha256": "a5f289ced19bb3900800b063a0a645ec6e8367ee91e69a2ec2867498c10beebd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/493d5fd6b323956270dac5a6.json.gz",
+      "sha256": "134b1062bc8c350b37247d81081685304b9b20210acc17d3a632cba6be8d1c62"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/43fed36801644fcb22b6b6c1.json.gz",
+      "sha256": "b961eca8bcfa72ffdd605b159ce85b0d7eeebe889c78c7a184ea765d56bc04e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3f17d239da37b6067142bcf0.json.gz",
+      "sha256": "3bfcf1a2992b43fa7ac84ed364a49d824e8da9f657006562c3b07bc8a3da2e5a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/46f914e234e9b5c9c65c7d34.json.gz",
+      "sha256": "e00440b6202cbf1a88a0df596693f55a13796e3bc1647e3a6c566c5a92c1e20a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/17964c54ff916245ce035f50.json.gz",
+      "sha256": "d037fe4f2581d2e45a18aee111a388e2ceca3a5805d1f44a5ae6069824ac340e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e5eb7e2406916d612e0e2e0f.json.gz",
+      "sha256": "823f51016d6d8ac9b91d7e424d44598499be0327a50ef3f3c3f2733a2160d308"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/632253e7cd11466133a68398.json.gz",
+      "sha256": "e914e3372c0b95664107f02393fc14580dd9cbbb0a72c6359fd953297a114cd5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c28f94776f112d854d1493b2.json.gz",
+      "sha256": "e63288aceb07f2b48d8e3ede5355fa32ee9fda87afb9d2ab2d6e5e061a9bbbb8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8868f640b89c6cc8cbf2fc74.json.gz",
+      "sha256": "ed684d7d2a621db52cb735a5772a17ac06afe0b94a0afa0c479b9901fb0465d5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/287106aa6b65f6a6db9a6739.json.gz",
+      "sha256": "1aa1e7d3297ca515ef8a9160f98e3cb4790badee6dff38c5afa802c9e01d2e75"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7b3151bd653e2be27f0df299.json.gz",
+      "sha256": "a3b628988909a263545be384f524c020866afae4ee5d37969e19d70d82c21d2c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e89578856e8754774cd05448.json.gz",
+      "sha256": "60a29a2f550c14ee543e93ca8add3eff4f416facf03b47c5d945ed0195eb77db"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7113033a8b13f7a351726afb.json.gz",
+      "sha256": "c2feda4595fc524f3e70205dc07e735ca743f7771bd28a8d03469f197b439735"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8ee7f7af56609a12775c13b0.json.gz",
+      "sha256": "7531675ed9c15a7c910e477475bb526abc75150da784d8850c47feac354a5677"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d340aadd66074c24dd284d59.json.gz",
+      "sha256": "b4cc6ea7fc1b603a4a7bcab24760fd59bcfd3c2f87e140ad01a5a89ff3fcabc1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5f9fefc4b8d4c4ac4929c8d2.json.gz",
+      "sha256": "6697dc06527b66c19799a0fb50ce5ec1ed0d13be447433fa47a797a93c9af969"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4187e319d2a640a7fdec301b.json.gz",
+      "sha256": "81e4d4ee80d312eb43beefd98e72520361088292e28c72ccaf24379cadd23462"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/368fd5f69b951dfcacad79df.json.gz",
+      "sha256": "8470832c9f0b01e6bd2dda5794113e70ce2fcc67321b1a56fc19667bd7ac96c7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ad96a5005d6d7ab2b7423df1.json.gz",
+      "sha256": "8c3028ce356e28baa7a5c6c1ea9f4fb18b44f3b1e036c7ba47f80253e8edd1f1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8e5b79185beefe5fa61c5d40.json.gz",
+      "sha256": "c8de4c54710d5d641fb9319389ffe933b9564d9db675585c22b4acf1bbd149e3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7130870ff6626bfddd34d3e4.json.gz",
+      "sha256": "2365f2960d5ad67919392484aae551ecf22c9bc7050ef78a1599812d8ca6b02a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ec38d2e66cc5f50d5ae291b3.json.gz",
+      "sha256": "fe63bc25527a821dac7336a2aa829986851fb3a5b276bc7a7dfa1e0a5dad0207"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9eb4b133ae52238ddfe2d13c.json.gz",
+      "sha256": "c5c157332131c59ef68919a4b1f6dee5edf7421801ec58fa6b60af04a3b2ab1d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c2dc05ed5d61dcff7cf9ca4b.json.gz",
+      "sha256": "1cb6fcbaa47a4234624448b55e3eb47edba84d47a7ae5b5974c95d272cd123f8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a3c79e63afe8355062a3d609.json.gz",
+      "sha256": "1d5faa96426685bb9a9788f5f872980a149de3bb045c6da3ac1288e60e359c5f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f8aa493a82565d87de0b5727.json.gz",
+      "sha256": "9d305a9a05f56118a1bfa1e6dad71834f48d7a5461437186da35bc84a88c8981"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/cf4a895d590d4e3c655d6a96.json.gz",
+      "sha256": "ee48ef6c52bc783852d1a76e07b0e2b60341b17d6975a447df64a67e157bb72f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c72c918566a64bfa18cfdb26.json.gz",
+      "sha256": "b6f9fbd61585761ebafeb729aedda9440da47ac864267eb66dfb838eb3d20ba8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/da4ce727af856f56ce1df445.json.gz",
+      "sha256": "ed39b16ae69e355e7fbeced8568ab4c6133d54eb2bbb87e6202c25a6c76af598"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/93500c9835d1c09517f64d17.json.gz",
+      "sha256": "cc82874e2a823288e2391134dd98766681ae6f0c3b66cbff7c27f51dfb10b610"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b1cd3ecd5e578fbea95428b7.json.gz",
+      "sha256": "dc9a82e29af622661d97a1dd35d3f0c92e7956701493b2bb88bf1732836e7016"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/836486d9fe6311f54b7b49dd.json.gz",
+      "sha256": "4465a5cdf67d3c13197da872d468e1f59dda5012c082f84c74835553591ea8c9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/96f5dc75d11a24b6dbaa93ef.json.gz",
+      "sha256": "abfc30ed84b4a47f7f9a03585fccb8b38d2f70784cfa37dc62c8f7bee4696a87"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b9bc5cdfebde32c4878c2143.json.gz",
+      "sha256": "df8a140aa7bf2765ab8ebe71efa1c2ea63d39f53596a6f18bd9c0feb76d408b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f21c7c7f737059c1df37fbca.json.gz",
+      "sha256": "9559b697dce2eb5f3f58d7e3780da954444ad0bde35ac58f8b6b68f0f2d08f59"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8c7e8c44da9386914adbf25d.json.gz",
+      "sha256": "f678234a5684db2357d9c235c582a8eb5aaff9efae27a3ce5dfc7a50f0aa9e10"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/25f91f76290751fd880b8599.json.gz",
+      "sha256": "542eb2e6ccad72560240fee8d8da26a049c8e8e7d1e2f3b8bf5eb6e1fe4c8b9f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/300810477f1079762a9e38ca.json.gz",
+      "sha256": "750a085ffd019e46fc4c75b98a4cac1e878c0a987fd4da77c53b7e42184ee206"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5ec5e6f5e306009f64b13ca6.json.gz",
+      "sha256": "328f6ed8d320f61ae487cb150f7f182614ac58f18dd22cac8fcba20514cb64d8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/051b123b506afa20322e9671.json.gz",
+      "sha256": "32233554f4a1ca26d17b95d5b5749cbbd20954a0ddfb2d84535157bc6bae2ab4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ffce9ae82c52deb10afce432.json.gz",
+      "sha256": "e2767d7c9d9aac461be8528c11ee431b68487611dc13fc379ae1b798e165c62d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f596b581e8dd005a12df99e9.json.gz",
+      "sha256": "d2cda63cee089a1e7549e383ae39dc7fef1628a65e3fa532c66648a7dbd9bedf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ac1666aff653cefc13ec7d6a.json.gz",
+      "sha256": "88784758f6cc74c17fe07bcc1e138e39b87721df9f01beef00cb464d6122ed1c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/82b1bbcff4f390c56a2c2b72.json.gz",
+      "sha256": "63cc953363ed20ba5674d2f42e01d11982731ec82251fba5c6e3615f1bbbb49d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3aab6154e83994d069bcf081.json.gz",
+      "sha256": "454b7cbefecfd06b435fa4d5741102affdbe99253ba10f01979201b5f2b2828a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/716f8496e49ce7e002d5401d.json.gz",
+      "sha256": "6910f54ab485965b28f43c84f65bde30cf638d03762adec15402a56bfada4e44"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1f80ffee18013a635b5757c5.json.gz",
+      "sha256": "58556bf443b41fe8bde5671e1b8e6b21285104a01c252889d2353215792197d6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8d46f158f4e933aa6dfb7afe.json.gz",
+      "sha256": "ab66d397b3b96d43ca5a9cb2a7234bef1bc49bfee92b08a8d57f5f63e8a4250b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9a97a2cd5c2f42abee01e6a2.json.gz",
+      "sha256": "44c6584fd8d4f60989f62269d35f46fb344f25df6a547734bc039ce135275a59"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/600a99a47d8b2a529f7fec9d.json.gz",
+      "sha256": "3318bf23b10552bf0925b658bc79dcb5df6fe79e856c72a4bdfefa1759155cc1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c34a81433b106b515131714e.json.gz",
+      "sha256": "7decdc10bd9c1b4994ac5703572119ead74662b55a3479390552d21b814061b4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c287201e7bef0cb0779218c9.json.gz",
+      "sha256": "4f26cfc9484a81b0d97eea6081169b02ceffc94a6aab5bf66e42e7b7ec201b82"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e71c7205fda6b8d033da8d3b.json.gz",
+      "sha256": "d9067e167bb4c7371d9f84965606697ba67577bd29a52c6ce2faa130adbaa753"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ba490e6051adf9ddc9606c0b.json.gz",
+      "sha256": "b412d516dadb2b9523c95b21ab89e733fdb22755075accecae7d8b793c8ad72f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5a008d020a94292a04373739.json.gz",
+      "sha256": "2197d2968150d3a44e1649bec68fe9d99fa07bcd1d8a3adc949306ccdfca3a97"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6387256c6e1bae8bad8d6122.json.gz",
+      "sha256": "41d3a733fee2c02a3505c8fdeac0606cfe56c87cb090924d353a02555d27c341"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5463160c29fdc486dabf3a6d.json.gz",
+      "sha256": "cd688704f95ae2bdfc2b0dc5beced825da9fc387d8baa194010cae98d92c8112"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9f4fa0d973d8e9dc73028678.json.gz",
+      "sha256": "87ca0235b076a40e4cda3f5312253ae0b3e87639459212e52044911a102513e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/78c9eb6590de79c8ddf6d3c3.json.gz",
+      "sha256": "2d568df592ae0660625fa7d55c9facc0785a99ecfd199cfbe16295c83d29a8f9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f49b0ed2fc94fb3841a26f78.json.gz",
+      "sha256": "6b40e1d4eb10d6ee8e70529ee303c827579f3236df06e2e071d1bd99586b25e7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/28ac6a3407d01fb8811546ce.json.gz",
+      "sha256": "c77be4d346c58631814cd611aca546b653e849ca9fd9c65e480f2753e750c693"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3f4c089f47e4521880efb363.json.gz",
+      "sha256": "9bc9510a6740a0ecbcc184d20ab874e506b8d5a66da4ca708e98035e4636d250"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b2403c86ea07fa73ea59c262.json.gz",
+      "sha256": "569fdd1ffd0a6718b952f7d1d994c0c25626b30aa3c70017df3f2ce83ee4130d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bf4fecaa94e67f3f1144ed82.json.gz",
+      "sha256": "478e2f19fbd872d851848e190bd9dc3c43880bd4bba760ae38ab62f1484a3865"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8bdd6395fb93dd5d31ea24b3.json.gz",
+      "sha256": "84f7323700c662ea9e71a64f7ef5843105224306e8afdb0764353e2c34dea4c6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f2c97d285ed6a19ce113c548.json.gz",
+      "sha256": "20a1db3831fc7f259283c70db4e3129e18918f5f96aa5977e7277a26ffb166ad"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ae0b0c53840f71395ecc968e.json.gz",
+      "sha256": "a047723407e0c560f993f9abe188996432690650bca97a712f228ba4bdb17ff3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3ea9bb1727455f18d3a10b22.json.gz",
+      "sha256": "72cb0c5b50e350827314eb4ae859121420d17aea09a948f9d86e31c9981b01fc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1b58be9ffc7bd67e2b5f2628.json.gz",
+      "sha256": "2c0e72ebf9f1bc39ec8e7f61e8e7a71457fde7438616c8c3faddaff80411b008"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ff48cc9f24a3fde6c8758829.json.gz",
+      "sha256": "977a6a6b38ade6c1ef1f50590848969ea4a4e177e7a0e85b707787af96102801"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/14d16d9cc6e2eac42b1aa658.json.gz",
+      "sha256": "cce662bed038d2c9173300e4f9d916e68feb405cc47d6fdab96227565b72aa22"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a2f743f91a8f8e98e33cf605.json.gz",
+      "sha256": "ba86cc5dab6a6bc0d9b138295b66cad8849b251f418ba5f0fcd673838ae196f2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/afd95b29eec37645818e6385.json.gz",
+      "sha256": "bae32518d3a4a94296a17a3e11648831131a00aec56f0fa5d18c33ae7a9cab1e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/894294c8a3e5022d81812d32.json.gz",
+      "sha256": "69b7dffd3b936502a8e0e14bd719b62c575cb9f3ee5f8683df5a3d26efec150e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5e7b73d3abe3e207dd845ff6.json.gz",
+      "sha256": "8f0404ce920b485c6c16063f0fade75350006fa4b253a825b72e585c49f34524"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e0cb6d613e089c94798cbebb.json.gz",
+      "sha256": "7bb1f74b63d30d48252eb808074cdd5ce922feaaa1422da3e15b62c872925a01"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a7a4e6b51761fa8e91347986.json.gz",
+      "sha256": "6376e5a8f0a642d94feed2c49ed1dd6c0ab699741aaba579e6e8fb7862dbadcd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9534f2b35e184b156796e5a9.json.gz",
+      "sha256": "1caaff88ab25c4de7b788c93b601bbed278464f91dacf549f4a7c5fa7a7f4fe4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2b6636e2f3554174c0248b52.json.gz",
+      "sha256": "c980bb148f3dbec0aacd5ef14dab0f03357abe2660a1fcd304f85a754a4734a1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/da942e9407e78df7a7efb50a.json.gz",
+      "sha256": "447b2686e39d513ea6a311044aae05abfc6ee4668a6984a28403eb63dd6350fa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/71004e976f55db413febf4d9.json.gz",
+      "sha256": "a0a88324ec388de86cd43c80b5ccfca143ec87a976ec071d58bf90fc3884cb74"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ff70eefe78abe8535d708803.json.gz",
+      "sha256": "9626d2cbb2e50b4cd9f46bf84eb795f9ea59c49e8cb40f6c6ecad6e2341ec61e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d7f917e46afbc473154b2558.json.gz",
+      "sha256": "c1022b0c1cf5fc6aa891da2092bf1788a39661e0f6a3481248ba65f7e7d314c3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/88a847d82236361c59c95fca.json.gz",
+      "sha256": "fc15144fd23423671dc039632d62f7242e58f6386a009d23fc28c041f9ee71fe"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/557381db00ea819e191e4c0f.json.gz",
+      "sha256": "4af1f7ef0ae1373f437cce10edda3030e7355854b7b1157306ca784259cd18e4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/21783be0710b46b21f48b2e4.json.gz",
+      "sha256": "fedbf6d4ac45d0a7cf912568fe083601842ee70216c0e3f2cd48adbcf403a0cd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c4f1f576404a49b63c67dce6.json.gz",
+      "sha256": "71e26fa4e1c431fa9d0c311fc028c8ae6e92c38f3fa904be2e45dde4a2591aa0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2b396a479ab7c2240af3e7b5.json.gz",
+      "sha256": "88341de8ec00f527e6c58f85877b1b7dc590b4b26b287d54b879d2b3a3db09c8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2f96032cfd728a9d771ac2df.json.gz",
+      "sha256": "f32eab492d576e2d6e8df7dbb6245fdd2c8310e5766dd9b569e1940955fb833a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/50ba9df7b0b624a9675d4891.json.gz",
+      "sha256": "c1ce85f510378b8adc5d221a8f430efeb4ec8360fbdd21a402eeb4b387ee3473"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b809e2b4f3f36d029eb5c984.json.gz",
+      "sha256": "5f0b239791ac87d0d5cb865f7acdec418ef97dceaa18ce41caf8aca5f39cbe4f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3ab5e9ec3561c02dc9b42aae.json.gz",
+      "sha256": "bc7966255f6a22ee6ee45ac4774c603bd5064406d7199337d6644255c5ff3e30"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a998cb7c177336b5a5e7ba53.json.gz",
+      "sha256": "f68dacaaab6ab88c69809e88f16fdb344cbb4cf861bb19915d32c626aac5f73b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c68aade3dc9e5e64a8db48c9.json.gz",
+      "sha256": "557f4fa7f3f6eb4fb75900938683e88840145e897b9b05ffcb6dd60d37d1c640"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f637a84a14c57c62bfba25b9.json.gz",
+      "sha256": "748648df4ba3212c3b93b5d6506bc0d89dc8ac4e8cad6c8fbbd1acedb23da9a7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/86897093ad981ab0393a0599.json.gz",
+      "sha256": "e6f7337b8a9f601c755dc91afe40dfb716ff356c12c4beb744393a50dc83f20e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/22de3233ed46cef9a1c39f05.json.gz",
+      "sha256": "c091adebe3c30d0c8f74f8ee5f0eb717702bf9c3f70df67522ae8523caf26718"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d5b337fb30fcbf15a264b4eb.json.gz",
+      "sha256": "b445243a0761a2d37857e092b204ca0cb70f1a32785468a4d4105e9859b5169b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7f2101f3d29c909a5b965202.json.gz",
+      "sha256": "880b1a8b90fa2f06ed4dc67b040abe5925871575c5bcd8d349b5213d3b6e22e8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/feacc2aa1cd3a33e3b0a9961.json.gz",
+      "sha256": "c121432fff1bc7fe582cd5ea1d83fa156adca8739da50ceb3e0380f86e4f676d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1ba61f5890b27e8387d6220b.json.gz",
+      "sha256": "d7f4e36f6586628b41b63a7ade4bda62f04df17d4e3a5652d3ecd47726d0e015"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3f7dbabbd7cbe97d00b9eac5.json.gz",
+      "sha256": "22fbb51706885627f17bf5dcf91ba8e858947fe8453a47df8942f87cc85cceba"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6383f79018e90591686b3028.json.gz",
+      "sha256": "fb39e6d6b044de0df1e13c29141a45e4cabaa955057f86363eed5ce665465fb2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f4544ff4f9bc893bb6f3104e.json.gz",
+      "sha256": "d6862c1393a15ca558e076c384923ff6ee2ec8f04f056a79da1e4b6867883666"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2c41abec478efe46d0e932df.json.gz",
+      "sha256": "ac4faf9ab34213689500a660c6652a9620bc01b892a6fa82a925bf5008cf4359"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/793059c0d94ea15293366ff4.json.gz",
+      "sha256": "b06cb333ee3baaad455f80b19cf410459889263777dca0660f5847faefe48064"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8bbd630bd7ed179415b373f5.json.gz",
+      "sha256": "3d512b8347d61c8cc29a7fe39d65a982d0eea1b2fabcb68d41947018b6f07fe5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a20318d9c73ee96bd1048cfc.json.gz",
+      "sha256": "4309901a7a7f3770b00b419917d86bee1073ba9f6228fd2c71d567ff8ecea42c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/863b10ea77014211425a8aa4.json.gz",
+      "sha256": "e94381bcf24e22bd8339953b4b399037fdd08cc813e567906a0dc357dbf8e91e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c3975d91d8dce3d19371434a.json.gz",
+      "sha256": "2925acc7ac9df8ff0f96e1ea20b370a898e629f7a4b276f8d0d7546c450b7dcd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1b878be8845f3b6b33db3674.json.gz",
+      "sha256": "d6b2243a257eb73fbb39e9f3597cc2e6a70dbba6737325c8ff479a778307f89c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9bcd2790dc2353321389943c.json.gz",
+      "sha256": "00d9dfe83b6f8936fa01c66cd2f4019989758c1d09007e1738dffbac1fdbd795"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b6a13e95e42debbf383fed18.json.gz",
+      "sha256": "4b6af580f583b688edc5868caa24a00608025331dd89df684356db2e3df0e266"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b745b903d7c0284310dd8980.json.gz",
+      "sha256": "423a1c95e26480bd044cc95eb75b1eb549bb37afd2d9051c980f3c07bb3341bb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/85ac3589caeeec51d4139149.json.gz",
+      "sha256": "4ada95ab228b78be13b1a1d93d7455f213c0fb2faec48cdd9c0aaf58d62fa2bb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/460305c0c7a540d3afbec2f4.json.gz",
+      "sha256": "8ef971d44e9e69ce9fb6c6e1cb3ab3e6a4ac04281c0ebc11fe76353c419519f3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8d499e98964e9916a0910c6f.json.gz",
+      "sha256": "6e3070400c1d0801d426517ba71910344b8650edc14ae8c08d282a75315512de"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ab5f2f56d0ffd888f745360d.json.gz",
+      "sha256": "d52eb7813607a7d74928143753267acf29211c486785c69455a3e078def68fc8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/083289961acbf023a2c6e03b.json.gz",
+      "sha256": "4a6b86077a78720566ef73b58af6afa625c69c962e1d7874e9f43d16e17e3d3c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1a5db23e9673fb79833cd072.json.gz",
+      "sha256": "dcf6d68e6615882471633252f822551c8d62ebde1415ca5e7164fa8fd9c0d38e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7c46dc1ea547d0fcfbb3eff4.json.gz",
+      "sha256": "4e7408fa935913cb062a213cf66adef2d64284fd75d5b9995f6fe470059f7c14"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/904eea99ff6e0c85d1955980.json.gz",
+      "sha256": "33caa6e1de9006dfdba6381752cc7bc6092cbff5077ee5f2bd017bcb96d781c8"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/71b60a0c0e0f8c9ef631b227.json.gz",
+      "sha256": "b4fd8caeef8361a0a2159e7991df2482883728fe04d4af199fe2db708a3d46a9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c9371c8c42e788c00f5810c6.json.gz",
+      "sha256": "56c072e35eedc5dce2fb7005ebefa2ff38a3cd12606a39773a664b5898145a83"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/673795919184198fe0512263.json.gz",
+      "sha256": "e8bab2e139379bff4ab4a649c4979fe5b6867afd8a01512127dbc06619754518"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/37a2d4b52ea1e619d565a9fa.json.gz",
+      "sha256": "bebef7fe1440e71df914bcba1e3a8323f1283314b0ea3c646e9bec85532673ac"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a441a9c83d48fab16177643c.json.gz",
+      "sha256": "2df076e50cadef1330df72ed840a5afe323257d03096fe50abeef25c6729da38"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/004aa6f5cd20fff7bfbc6e87.json.gz",
+      "sha256": "71467bd4bb8b48905a05ad2f9ea8f1a8bf192fd519f9bd2a03c8bc81b644f180"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/159aa22ab2f832eef4cb451e.json.gz",
+      "sha256": "67363e96aed35c8279b74aeaaae8684e4b600b3f17c5578efbf5b451b3e2103f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8690af451957e8fb3fc7e771.json.gz",
+      "sha256": "378d62662624eb8325d1e0c757ef3069c7e8ef26054cd5bd65963f1830308f17"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ddad9aa25c28df8bd9f2b5b5.json.gz",
+      "sha256": "2456917ec43e099e62fcabb294cc6b8eafd738b8565bbd6d396532a9f0e43ed1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1b7bae98cd9b901466b9defe.json.gz",
+      "sha256": "d8a48981d66dc53f867d4eee8807c6a76b4ce1a2fe9885a825f2df8a15e4840a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8365894ed61ba2fe30d298be.json.gz",
+      "sha256": "f73998488b3fe1bf4b5f1498cd1a82b328ac79182a2855332e7fc9e6d8531b57"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5f531dd41132e934414c36e0.json.gz",
+      "sha256": "d074018a1250155ddeff0c98026fd0c03d6dfa4f5009df7c605c236fb7d4e6fa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1265c8574c1db5ee6f9cc101.json.gz",
+      "sha256": "17841ef055f04328cc5109a31a49b397dc2656770de39ef43a2b0460d3250479"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a1ad90db8a37cf8b8d344bd1.json.gz",
+      "sha256": "9c45f6b5d725e25b65c4a09590a8d3ccc4aadb95d10a76ce88d61d5fa6afd372"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c481d47dba3dafa46e46d23c.json.gz",
+      "sha256": "72e27a16304f8dfe57eb813a5276e200e565271bc9f0cbd34d06706ca68dc153"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/460c70997804f0b3307ed708.json.gz",
+      "sha256": "2286b4df5803fe1adb356903583ea6abc21d5a8188eff9911b2ca77594dc953b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9465d03510a5e57171d3329a.json.gz",
+      "sha256": "7e2446de83dd36917eceadb1d907e1a3f3bd1312c627639bd64829f3e1923ed2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/75ae1a285a710550992d8d64.json.gz",
+      "sha256": "cfd2e5bc0b7bb802fda2d1c44db2e4a02ad6c7d7a86bc2e01de8fe1fdb9b65fb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/67a63ec7977767a5225651d1.json.gz",
+      "sha256": "eac8e4a48cee89b0cbf7ecff10d2292d62f3b95443efa1f86e047301324df28f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bed732e11174cf870ac0a249.json.gz",
+      "sha256": "268406c55ed15f2da68e27e3ad009d985b2fd3ecbb828be027663b633b52a371"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/56fdd18310130a727a80a18c.json.gz",
+      "sha256": "cc72025102e391554b9ecc9b98317d119f38bdfc0f9eda6a1c80afdc101b48b2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c6a8453023fc25506099923b.json.gz",
+      "sha256": "22846a28316ea62935243a4b61250a270fa3ef47fe6e74a7ba5e755faecfc4b5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f21b045f36a289f476978c62.json.gz",
+      "sha256": "c4ba95a9385581405f85e586b10b75cc4a271a3aaa0e947cbc0efedbd3b6ba81"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d463858162671a3efa127a62.json.gz",
+      "sha256": "27fea8ebc90e2de94b8d6ec2823167e26f129fd62e2b830c9653db7b0d6ffd2f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a8bfd00987bee657055f36b1.json.gz",
+      "sha256": "fc5c00ddafd55504b5bf132aed93943e287e8f47bc4681fcdfb088569294d985"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c6cd3bf582efbb2b054d0069.json.gz",
+      "sha256": "e9d1cc06416c9b353c53da8040ddd629285abb4b5545b30d136a6497d5487160"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fabb9b77c1e56b9782424441.json.gz",
+      "sha256": "8f826bd9acdb8a4c9cc89e7961050c3196001e2c008e22ef10cb2bd77a8fa9d4"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0ba5c2ed7a021d79e0d6439e.json.gz",
+      "sha256": "a4ef010aab7fc809ad6e1c94be6e3a69d7830c59d10d657c58eac43bb18d10ae"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ca0aa9617f92a90031756ece.json.gz",
+      "sha256": "254a7247cb0ce3d4917922b35dc6036cd36ecd0ca4313ca0f6c203a527c724cf"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d6ce31888a9e6922d652376a.json.gz",
+      "sha256": "a7eb81c81a3d4577fe3692f343051c841a9d3f045c4a5afc2c19992f7e653515"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c0f13ceea47eb9438f7df2b9.json.gz",
+      "sha256": "2d5de658180c54e2ea424fbd90ccd857cc549ce79af6d409681a305ccad55f7b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b9d47c8bbd85cc860ce80043.json.gz",
+      "sha256": "edb16ec350347c4f9cd61869164a2593a0bd8a6fada19d0a4e391e676310ece6"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e9c14f5310de3f3e411112e2.json.gz",
+      "sha256": "848d05ff2108eb3240ca1b29d6b67ed2230a3e6ae9fee43f4d83095e8c97156a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1691638d75bc93cdb9328fbd.json.gz",
+      "sha256": "da2a5dccdcc47441ae84531cccc8f9e233a37ffacdcbd7dcdc936b9e6ebac3c9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bb5cb7195774cbe9aa19394e.json.gz",
+      "sha256": "f31564b13cdb016a1bfe17170e0134a014e961ed6096bac040878f62716e5854"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a7f7992a269f3b1742e2d52c.json.gz",
+      "sha256": "1981fa4c719647a5e5c9fd61ba202b4ad334c94013d1f25d5826a06f0fba3b31"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/88cac97a964a763d9bd27287.json.gz",
+      "sha256": "4960a7630ca0fb1a11bc89bc12c28537c59f7a620e18bba50cfc2fceae9ce3ee"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bf42661c8be47baed7942a81.json.gz",
+      "sha256": "743cc7e2c978ad2417b2150f202e6e473741934f7cf39180a99beaeb2aef36ec"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/96cd9c6f1777ee49618333c6.json.gz",
+      "sha256": "dc1f99cda09ffb8037c86cf866856b3390ec3d8c90d8395ca9605ff90ebf63c5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d168781af0921a2b95c7520a.json.gz",
+      "sha256": "d71de4f40a61ae9750ef85dc7a8ac121ed5ec2ee65739aec9028957b15c97d69"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b6318265a54f4bda6652c32a.json.gz",
+      "sha256": "648a489898a011f0a2a7d42cc993e4c67dbd2799b8b5f5fdc87070170f4bd744"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/16957d37d0db36ac45ba71ef.json.gz",
+      "sha256": "5cd49f516ca446bf33c244616fc4ef984ba2650e90e062f8592403365c397d92"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/bc942d12b33a2ab05c4f60ef.json.gz",
+      "sha256": "2c0514107113cc022e6c9af5a37b8e4aec2c3fc0fc56465db634abfda12ca2e9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3f335bf52e3a91f01b0bab3a.json.gz",
+      "sha256": "b94349c66a05251be6b761a90b131d34e502c9acba75995e9fba5ba6394b23cc"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/30832f850709dece3edfb818.json.gz",
+      "sha256": "ee15246b9a23993a71a8a88dbb2a63d37f1482422621d82cd1eb8a3900a8a272"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/de30ef82df7646818c048300.json.gz",
+      "sha256": "57a212bb7a31598e84d0ae957731bc14d8935d5d180cb51792179a646eb6c54b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/df070bd0ad4353841452b937.json.gz",
+      "sha256": "fb406089d193e50ec61dd6e1122a8c7a7f3deb8a61c5ac70cd6d65421291f3f3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d7ecb289ebc68c3c4ec5350c.json.gz",
+      "sha256": "878e9bbf129452dceaefcc34293f8ad8aeff116eb50b25d43edb4929dade227d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/517c395b19e173e7afd49f2a.json.gz",
+      "sha256": "afa8c726eb9a57050792ff9cb826a1ce4e4663922f68f7a0cc77f03fcda4ec12"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/03ab4d88ffcb5ac71801c101.json.gz",
+      "sha256": "104a79915185a399a79f249df7d66fec74e0301f9fc06d6ca5b0617efe85b178"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d648f3342113b96801853718.json.gz",
+      "sha256": "04eda27c0cff39059af154f309f96cf2e0698719d9dc148e70fe02df472a874d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/274961487e400de9e6a805d9.json.gz",
+      "sha256": "220813ca0c048f9ba8ea762ed013721883b85a3eab6d49d79e7bc29d9ba69836"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/93626c6f6e09f5c2708bfefc.json.gz",
+      "sha256": "5263e72d2b341b2d5d79804258f040e42b0d2347e2acd2d5c18408621204ea00"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b1139d37070a51533b7acb35.json.gz",
+      "sha256": "f08de8958e18367a1b00a34fb851894f54bb3ee4e33eb2cd4af6a04bb87fbcc5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/33985010c0a12a5f00eba3eb.json.gz",
+      "sha256": "765c744ccc47e54f5f6006d5d49a57041a8e37042c6de5b3214229c432ad4a9c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/adc81f61393f7ba284a5a04f.json.gz",
+      "sha256": "aa8f29bdd333936acf32e0f867eeba46f94fffd6bbc38ce1841c646d19f6350f"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1afcad3667fc66d2c063e0b1.json.gz",
+      "sha256": "2f74d1ce59468393a611ce79cbb1d9010b000d38cf8f8270b419f60784b723bd"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/8873b0b5fb978f02e651e9b8.json.gz",
+      "sha256": "031f0c86f8bd380f3c644912bcda0353c41c549be9b4edc4735c33e28ccca7ba"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7e2200ff2d6eb087456f5ec3.json.gz",
+      "sha256": "9ee2c92b932ebf1f986d660d117cdc3bcab558eed2c6c877be5dbf53bde28bf0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f1d1b5ef94ef39cdc9df729c.json.gz",
+      "sha256": "99cd91c661e70c6d15b847b2523c3017b976a4a53b7291b4f23283505f2f0fa5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2161f849bc978fccfbf274dd.json.gz",
+      "sha256": "742b996c49d21e801f1f2a2780ea825e21729acce82c285e62969cbdad117e2d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9bb718dbcfc5ebb5d80cac4e.json.gz",
+      "sha256": "3595758581c6d1f6da0d8a197175d44a03227ab4e00286a36053e94084507b6d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/18beae7659335efda26e600f.json.gz",
+      "sha256": "471d878c797df339d20c49e79c207ad1febaf06523350134c9a32bb4d2bba8a5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/a0ac47678d21272ea9954fca.json.gz",
+      "sha256": "83e9cec0b4ef2b8c860a4c7d5b28693d8dba14e96f77dafe10aad755a5ed42a1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d8e311cc9571dc218fffc91d.json.gz",
+      "sha256": "84c6b9b6e51abc8a02702b2df1d1b27593c775cf68567d1b9c99873f58ec4a53"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/227adce8fa8d2798e7008d36.json.gz",
+      "sha256": "527686465f7e5093b6c63059999d9c2af526a63a39576e73c649f16c53f34b56"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/40a8c09b5ace3ea1c45aec0b.json.gz",
+      "sha256": "8e6db3b87941066ca4c2b066ccd13583ee5aac3e6db8509e9e9049bab79fa758"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/787f8f0ea0f8e6b5a50ea615.json.gz",
+      "sha256": "dc1ddf247e1ccb24c56177d4fac0a7156db3e074b92a41d5c814cc321fe7a96c"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/1287bec21d9b1e69561a87fd.json.gz",
+      "sha256": "a27d2a412defc7b285d95f5af869439ddc8d27dfc84981614f0f2f1fb84b039b"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/4108a5bfc1b80b8eef461555.json.gz",
+      "sha256": "a8910a71ade07dcd43c9e53f2db9a170e492b869d0cd9f2a1769ad70ea39e3d0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/68c61b8272ca68b8bba148ea.json.gz",
+      "sha256": "a56c76f759e9c86dc48dfd41bd1832020c11887c167bae4a3be2eeb2a0e8abdb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/992a93c8adb5a5ddf96798d3.json.gz",
+      "sha256": "01c54573116c5c8ec4c46c9225fffc539e3239c5acadfb40949a7c257ca46349"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2ca8dd7c00afce1e08fc63e8.json.gz",
+      "sha256": "54e0c863902ceca520fc53f609d3d79efeabb3aa2d5b5f5019deb95ae18bedd7"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6ad27d95d235002f89ee585b.json.gz",
+      "sha256": "3d49a4b38e3e62654200cfb78bc8a135c228bd7b4312d354aa6756a667a5acc2"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/fceb64023e7001dab95ac1f4.json.gz",
+      "sha256": "66b9818e070f480910b4e959682dc2369c9b8f92167131f9db61891679c3d3ee"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5d094c1cd39ac65b180ec3cb.json.gz",
+      "sha256": "e1944d6ceafb1a5bb5c0fa26c706f1cd9112dfc5f6ab639d9a069fd41626ad67"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/9f9138eaae424354d96b6cbb.json.gz",
+      "sha256": "f8960694b333183d7ad0ea0cc9e64903aca81f5ef5e79c1044eaf9066b769b24"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/f6979e8e5a98283d2fa98118.json.gz",
+      "sha256": "5233835993b3b861733a647c6b8c2274d85f3ebb45627c5535f3ae0b2e1d1b72"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ed4efd189f3b2dd28df6a0a2.json.gz",
+      "sha256": "7bd798a673f1c1e9ad655e7e870f1427a850412de21d3a123afc2665d8257e4d"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/dac3f84b2d6ad5c5f59e0326.json.gz",
+      "sha256": "dc559c3eba62b4ea870c8a07b7c492351b8cc578137ecb3d0b5e9ff32a2a12ea"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7b544482658f039b79becbf7.json.gz",
+      "sha256": "2af073241a3462c663e229ce6012b7a1afa856c6b9d747a513b56b85e2a50151"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3affaff5c9a0e81de5d38b78.json.gz",
+      "sha256": "7852719b743c5272da40213f8fe7e957f72d3979e33336d0713bba8e1a2ae362"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d37df7a75bcdb5a74f9a8182.json.gz",
+      "sha256": "114c7540251b75769f4b68fbce3ba1ebd9efa138dd158f8bc08c702215098e32"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/3c7fd3c3252f3f27c993264c.json.gz",
+      "sha256": "c26151836607258418d8ba1b8d9e9ab7e68ccba4620261bbf7a3ac2a5f1c8973"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/6426857b064a9fbb709ab0b1.json.gz",
+      "sha256": "e5bbf0de33561a9c5dc24799644f740c7c02a5e5ac29b6967e17848af1b1dafa"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/ee2add567dc970668f0c695a.json.gz",
+      "sha256": "dbe2b8582c2052ca134ee4d4822dfe4efeae6bdc87857addb1402d71c0ca33e3"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/5c9638fdfc130cc794e8d423.json.gz",
+      "sha256": "6e5e94c7a0f1273867959d4e4a76867bc54c94076348bb996267b927b5e24cfe"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/76636ae7eecbf112d37b2ce7.json.gz",
+      "sha256": "2ff17e6f0c43fb8785e9725b312d9b9e1d56d4ba38b5a5bff668768f68df2d83"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/41bec476c604a52d86dcf779.json.gz",
+      "sha256": "a1cc66050bc194ff676c572e6d9fddec8e4d4c519e59deb51123502bd8cc96a1"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/c615c3a3dbe0594769443772.json.gz",
+      "sha256": "dddff7b05191f4d96627c02dca2ff9275a5582655891a0cbe45c2fe842f28c98"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/42597185e8bf79ee01f6c5f9.json.gz",
+      "sha256": "329c5ab991cf2288abbcaf19963729f0d6523b78f643d08e1f72334fe23fcc29"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/b1de42cf4002fd1499288229.json.gz",
+      "sha256": "bf03be9c7e9d90affa7aaedb3be4495688e5cd1b0d9b66d00968f7b076ae742e"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7ad8b9984f145e48a5ed278c.json.gz",
+      "sha256": "6c56fd14c2c829aedc220ca2af2c22c0f93a80d789df7e8a62545ca0d2ee1e83"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/d55e1eea5a4295b0000461c0.json.gz",
+      "sha256": "6fa56f4a138beea129d20f1f1a93d6630f5e10f95adcee42b11c98947b3b83ef"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/7744cdde74c36a9d4d866fdf.json.gz",
+      "sha256": "8cccb8ee8dc13e3b19a799ef21d59cec4562f4dd1e58c7fcfec2e8bcfbc2b67a"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/134f8c37423eb5e0dc44e1f2.json.gz",
+      "sha256": "713e5247828406b62659a7760be2d23153be5837f3e92aeaf87dc40e2e32d9a9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/18ad3d333622552163ef5c14.json.gz",
+      "sha256": "b88d6a73f949b836293c3dde6a3c872bc702c09c63140cddf57a9d439894edbb"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/2640bf9c536f660a2031421f.json.gz",
+      "sha256": "8edd535b6cddd3b68c9dafea8db75f0dbd057c9c385b643e5f8a5b6d9192fe24"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e3a96f2fb4f2cd7176f95ccc.json.gz",
+      "sha256": "c4d77f087c7dde3c15c1886350b8fc7bb8d44e291163ec0f813b90e438d5a3f9"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/70928dd6bc8fd75f0d817df7.json.gz",
+      "sha256": "1666e133db35140d00c265012d2566bfb4610760daef2f66bb97938793648b61"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0a31ffaeffbf8672fdd6e3ba.json.gz",
+      "sha256": "f5db4e569022328e0c24647c9910d56d9aa5fde6c38d5de1bcac933b2ec80051"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e0d8220c2169723689d9de64.json.gz",
+      "sha256": "3b307d3f60260b2cb33a88a1d9770a29ed8f6e16d7b18a385108d86f539a86d5"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/e7a3357a515c8b0b453d8179.json.gz",
+      "sha256": "13c301603e0398c714edad4fdcd37025e0d95e487348943b69ef220678ccf629"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/0b2221fb8ddcd6d97966a009.json.gz",
+      "sha256": "89e0438fd1dfea738243008cc513550a1b19110888141bc7e2ed9d3f26a8b0d0"
+    },
+    {
+      "path": "/share/home/renly/renly-patrol-rsi/runs/20261030-m12d/rsi-trial-1/cases/580c63ed553137e3d9064408.json.gz",
+      "sha256": "0ed4746f7bb23d5ef8e5ee6b72e25590ab4579af59cb723c91c0c129965acbf0"
+    }
+  ]
+}

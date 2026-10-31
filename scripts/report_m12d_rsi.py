@@ -1,0 +1,280 @@
+"""Explain actual M12D outcomes and the frozen RSI decision from released data."""
+import argparse
+import hashlib
+import json
+import statistics
+from pathlib import Path
+
+from patrol_rsi.rsi_controlled import ControlledImprover
+
+GROUPS=('Tour','human_fixed','random_search','fixed3','fixed13','controlled_meta')
+NAMES={'Tour':'固定巡回','human_fixed':'人工专业规则','random_search':'随机搜索13候选','fixed3':'固定改进器前3候选','fixed13':'固定改进器13候选','controlled_meta':'元改进器迁移后3候选'}
+ARM_NAMES={'Tour':'固定巡回','frozen_PPO':'冻结PPO','human_professional':'人工专业规则','fixed_improver_retained':'历史保留流程','revised_PPO_evidence':'修订PPO候选'}
+
+
+def read(p):return json.loads(p.read_bytes())
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+
+
+def compare(candidate,base):
+    old={v['seed']:v for v in base['seeds']}
+    paired=[{'seed':v['seed'],'missed_delta':v['macro_missed_count']-old[v['seed']]['macro_missed_count'],
+        'wait_delta_s':v['macro_wait_s']-old[v['seed']]['macro_wait_s']} for v in candidate['seeds']]
+    miss=candidate['macro_missed_count']-base['macro_missed_count'];wait=candidate['macro_wait_s']-base['macro_wait_s']
+    gain=-wait/base['macro_wait_s'] if wait else 0.0
+    return {'per_seed':paired,'macro_missed_delta':miss,'macro_wait_delta_s':wait,'relative_wait_gain':gain,
+        'no_seed_miss_increase':all(v['missed_delta']<=0 for v in paired),
+        'frozen_primary_pass':bool(all(v['missed_delta']<=0 for v in paired) and (miss<0 or gain>=.05)),
+        'descriptive_lexicographic_outcome':'win' if (miss,wait)<(0,0) else 'loss' if (miss,wait)>(0,0) else 'tie'}
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--stage',type=Path,required=True);a=p.parse_args();s=a.stage;r=s/'evidence/run';repo=s.parents[1]
+    release=read(r/'trial-summary.json');trials=release['trials'];assert len(trials)==3 and all(v['final_complete'] for v in trials)
+    final_audit=read(r/'rsi-independent-final-audit.json');assert final_audit['passed']
+    audited={v['trial']:v for v in final_audit['trial_summaries']}
+    private={v['path']:v['sha256'] for v in final_audit['private_final_receipts']}
+    for item in trials:
+        i=item['trial'];released=read(r/f'rsi-trial-{i}-final-release.json')
+        assert item['final_statistics']==audited[i]['final_statistics']==released['statistics']
+        assert released['private_final_original_SHA256']==private[next(p for p in private if p.endswith(f'/rsi-trial-{i}/final-complete.json'))]
+    formal=read(s/'evidence/m12d-summary.json');ledger=read(r/'resource-ledger.json');storage=read(r/'storage-after-export.json')
+    assert storage['within_cap'] and storage['bytes_all_run_files_after_public_export']<4_000_000_000
+    comparisons=[];task_comparisons=[];costs=[];fallbacks=[];all_checks=[];schema_diagnosis=[];accepted_program_costs=[]
+    for item in trials:
+        i=item['trial'];ad=read(r/f'rsi-trial-{i}/adapt-validation-complete.json');audit=read(r/f'rsi-trial-{i}/independent-search-audit.json')
+        for phase,key in (('validation','validation_statistics'),('final','final_statistics')):
+            stats=item[key]
+            for group in ('random_search','fixed3','fixed13','controlled_meta'):
+                for base in ('Tour','human_fixed'):
+                    task_comparisons.append({'trial':i,'phase':phase,'candidate':group,'baseline':base,**compare(stats[group],stats[base])})
+            for base in ('Tour','human_fixed','random_search','fixed3','fixed13'):
+                value=compare(stats['controlled_meta'],stats[base]);comparisons.append({'trial':i,'phase':phase,'candidate':'controlled_meta','baseline':base,**value})
+                if base=='fixed3':all_checks.append(value['frozen_primary_pass'])
+        for group,row in ad['programs'].items():fallbacks.append({'trial':i,'group':group,'nominal_program':row['nominal_program'],
+            'actual_program':row['actual_program'],'fallback_to_Tour':not row['validation_gate']['retain'],'validation_gate':row['validation_gate']})
+        fixed=ad['model_call_receipts'][:13];meta=ad['model_call_receipts'][13:];prep=meta[:-3];fresh=meta[-3:]
+        searches=[('fixed13',ad['direct']),('random13',ad['random']),('meta_fresh3',ad['transfer'])]
+        for number,entry in enumerate(ad['meta_rounds']):
+            searches.extend([(f'meta_round{number}_incumbent2',entry['incumbent']),(f'meta_round{number}_candidate2',entry['candidate'])])
+        for label,value in searches:
+            unique={v['candidate_id'] for v in value['history'] if v['accepted']};n=len(unique);c=value['costs']
+            accepted_program_costs.append({'trial':i,'search':label,'accepted_distinct_development_programs':n,
+                'accepted_program_ids':sorted(unique),'model_calls_charged':c['model_calls'],'input_tokens_charged':c['input_tokens'],'output_tokens_charged':c['output_tokens'],
+                'model_calls_per_accepted_development_distinct_program':c['model_calls']/n if n else None,
+                'input_tokens_per_accepted_development_distinct_program':c['input_tokens']/n if n else None,
+                'output_tokens_per_accepted_development_distinct_program':c['output_tokens']/n if n else None,
+                'usefulness_definition':'Strictly retained by frozen annotated development selector only; not independent usefulness or causal experience benefit.',
+                'environment_cost_scope':'Shared per-partition immutable cache; actual episodes and cache references reported separately, not allocated arbitrarily to a search.'})
+        prefix_unique={v['candidate_id'] for v in ad['direct']['history'][:3] if v['accepted']};n=len(prefix_unique)
+        accepted_program_costs.append({'trial':i,'search':'fixed_prefix3','accepted_distinct_development_programs':n,'accepted_program_ids':sorted(prefix_unique),
+            'model_calls_charged':3,'input_tokens_charged':sum(v['input_tokens'] for v in fixed[:3]),'output_tokens_charged':sum(v['output_tokens'] for v in fixed[:3]),
+            'model_calls_per_accepted_development_distinct_program':3/n if n else None,
+            'input_tokens_per_accepted_development_distinct_program':sum(v['input_tokens'] for v in fixed[:3])/n if n else None,
+            'output_tokens_per_accepted_development_distinct_program':sum(v['output_tokens'] for v in fixed[:3])/n if n else None,
+            'usefulness_definition':'Saved prefix of actual fixed13 search; no extra sampling; development retention only.',
+            'environment_cost_scope':'Shares original fixed13 evaluation/cache costs; not an extra independent experiment.'})
+        meta_number=0
+        for call in meta:
+            if not call['prompt'].get('task','').startswith('Propose one controlled improver protocol'):continue
+            raw=call['raw_response'];envelope=json.loads(raw[raw.index('{'):raw.rindex('}')+1]);proposal=envelope['protocol']
+            try:ControlledImprover.from_dict(proposal);valid=True;reason=None
+            except (ValueError,TypeError,KeyError) as e:valid=False;reason=type(e).__name__+': '+str(e)
+            assert valid==ad['meta_rounds'][meta_number]['protocol_proposal_valid'];meta_number+=1
+            diagnostics=proposal.get('diagnostics',proposal.get('protocol',{}).get('diagnostics',[]))
+            schema_diagnosis.append({'trial':i,'call_number':call['number'],'actual_schema_valid':valid,'reproduced_parser_error':reason,
+                'inner_protocol_nesting_missing':'protocol' not in proposal,'proposed_diagnostics_count':len(diagnostics),
+                'allowed_diagnostics_count':[1,3],'diagnostic_count_exceeds_bound':len(diagnostics)>3,
+                'raw_response_SHA256':hashlib.sha256(raw.encode('utf-8')).hexdigest(),'raw_response_unchanged':True})
+        assert meta_number==2
+        costs.append({'trial':i,'actual_model_calls':len(ad['model_call_receipts']),'fixed_search_model_calls':len(fixed),'meta_preparation_and_transfer_model_calls':len(meta),
+            'meta_preparation_model_calls':len(prep),'meta_fresh_transfer_model_calls':len(fresh),
+            'meta_preparation_input_tokens':sum(v['input_tokens'] for v in prep),'meta_preparation_output_tokens':sum(v['output_tokens'] for v in prep),
+            'meta_fresh_transfer_input_tokens':sum(v['input_tokens'] for v in fresh),'meta_fresh_transfer_output_tokens':sum(v['output_tokens'] for v in fresh),
+            'meta_preparation_generation_seconds':sum(v['generation_s'] for v in prep),'meta_fresh_transfer_generation_seconds':sum(v['generation_s'] for v in fresh),
+            'meta_preparation_environment_costs':{k:v for k,v in ad['costs'].items() if k.startswith('meta')},
+            'fresh_adaptation_all_groups_environment_costs':ad['costs']['fresh_task_adapt'],
+            'validation_all_groups_environment_costs':ad['costs']['fresh_task_validation'],
+            'stage_GPU_allocation_and_RSS_split':'Not separately sampled per stage; full Slurm allocation and peakRSS recorded. generation_seconds is pure model generation wall time, not GPU allocation cost.',
+            'input_tokens':ad['allcalls_input_tokens'],'output_tokens':ad['allcalls_output_tokens'],
+            'fixed_input_tokens':sum(v['input_tokens'] for v in fixed),'fixed_output_tokens':sum(v['output_tokens'] for v in fixed),
+            'meta_input_tokens':sum(v['input_tokens'] for v in meta),'meta_output_tokens':sum(v['output_tokens'] for v in meta),
+            'environment_attempts_including_final':item['environment_attempts'],'search_counts':audit['counts'],
+            'accepted_meta_updates':audit['meta_updates_accepted'],'cost_per_accepted_meta_update':None if not audit['meta_updates_accepted'] else len(meta)/audit['meta_updates_accepted']})
+    primary=[v for v in comparisons if v['baseline']=='fixed3']
+    seed_differences=[]
+    for seed in (32140,32141,32142,32143):
+        rows=[v for c in primary if c['phase']=='final' for v in c['per_seed'] if v['seed']==seed]
+        assert len(rows)==3
+        seed_differences.append({'seed':seed,'generation_repeats_averaged':3,'mean_meta_minus_fixed3_missed':statistics.mean(v['missed_delta'] for v in rows),
+            'mean_meta_minus_fixed3_wait_s':statistics.mean(v['wait_delta_s'] for v in rows)})
+    result={'stage':'M12-D','scientific_decision':'GO_for_larger_independent_confirmation' if all(all_checks) else 'NO-GO_no_independent_RSI_increment',
+        'all_six_primary_repeat_phase_checks_passed':all(all_checks),'five_arm_decision':formal['five_arm_gate']['status'],
+        'primary_meta3_vs_fixed3':primary,'meta_vs_all_references':comparisons,'four_final_seed_paired_differences':seed_differences,
+        'task_workflow_vs_Tour_and_human':task_comparisons,
+        'costs':costs,'meta_schema_diagnosis':schema_diagnosis,'nominal_and_actual_final_programs':fallbacks,'all_trial_statistics':trials,
+        'development_accepted_distinct_program_costs':accepted_program_costs,
+        'cost_per_independently_useful_distinct_program':None,
+        'independent_usefulness_denominator':'Not separately preregistered or established; do not substitute development acceptance counts for independent utility.',
+        'statistical_units':{'generation_repeats':3,'independent_final_physical_seed_groups':4,'unique_final_physical_processes':36,'not_independent_environments':12},
+        'resource_receipt':ledger,'storage_after_public_export':storage,'final_audit':final_audit,'weights_retrained':False,
+        'scope':'Bounded synthetic instance/onset transfer at fixed layout; all six meta protocol proposals were invalid and incumbent retained, so no legal new meta protocol effect tested. Task adaptation and improver transfer evaluated separately. No site reliability, universal RSI impossibility, or CVAE causal gain claim.'}
+    write(s/'evidence/rsi-results.json',result)
+    matrix=formal['evidence_matrix']
+    matrix[-1]={'question':'Task skills and meta-improver transfer','evidence':f"78 actual formal Qwen calls; 3 completed search/validation/final repeats; all six meta proposals invalid; {sum(v['accepted_meta_updates'] for v in costs)} accepted meta updates. No legal new protocol effect tested; all 6 primary point comparisons evaluated.",
+        'verdict':result['scientific_decision']}
+    formal['RSI_actual_results']='evidence/rsi-results.json';write(s/'evidence/m12d-summary.json',formal)
+    lines=['# Zhinengti-RSI：当前进度、实际结果、瓶颈与下一步','',
+        '核对时间：2026年10月31日；M12-D于10月30日启动，基于 d533f9950419117cec181669663149b14e916757。正文解释当前状态；文末给出证据入口。前序报告中的“下一步”属于当时计划，当前状态以本文为准。','',
+        '## 1. 先把结论说清楚','',
+        '**项目已经从“有一个科研想法”推进到“完成可重复的仿真实验”。本轮修订PPO未超过强巡回；受控元改进没有满足独立收益门槛。任务流程的描述性结果需要另看，不能把这两项负结论扩大到全部AI方法。**','',
+        '本轮完成两项独立实验。第一项比较五种巡检方法：学习策略和修订候选没有在验证集上超过固定巡回，按事先约定停止，最终测试未生成。第二项实际运行开源Qwen改进器：三次搜索、独立验证和一次性最终测试全部完成，比较固定改进器与可更新改进器。后者是否更好，使用预先冻结的指标判断。','',
+        f"本轮RSI判定为 **未通过：未证明独立递归增量**（记录标记：{result['scientific_decision']}）。三次重复共接受 {sum(v['accepted_meta_updates'] for v in costs)} 次元改进器更新。接口可运行、模型能输出合法程序、程序发生变化，都不能替代新任务上的实际收益。",'',
+        f"这里还有一个关键边界：{len(schema_diagnosis)}次元协议提案中，{sum(v['actual_schema_valid'] for v in schema_diagnosis)}次通过了实际语法校验。六份输出都把应嵌套的配置写成扁平字段，且都提出4或5个诊断项，超过1至3个的上限。系统按协议保留旧改进器，没有免费修复或重试。因此，本轮尚不能判断一个合法的新元协议是否有用；它首先暴露了元提案接口的可靠性问题。",'',
+        '这里的NO-GO表示“当前候选／协议没有得到继续扩大确认所要求的证据”。它不是项目取消，也不证明AI无法用于巡检。下一步应找清限制并设计一个新的、范围更小的可证伪实验，不能不断追加候选直到碰到好结果。','',
+        '## 2. 这个项目到底在做什么','',
+        '导师最初希望系统结合设备特征和专家经验，决定“谁去哪里、检查什么、何时再查”，让巡检随风险变化，减少长期盲区和无意义重复。后续明确的研究要求是在既有状态估计与多执行者巡检论文基础上嵌入RSI思想。','',
+        '可以把系统想成一支有电气、冷却、温度和控制专业的巡检队。传统方案按既定路线走；AI方案利用已有测量决定是否临时加查；外层改进器阅读已经发生的巡检记录，提出一条更好的处理流程。再上一层尝试改进“怎样分析记录、怎样提出修改”这个方法本身。','',
+        '项目要分开回答两个问题：**任务流程能否变好？产生好流程的方法能否变好，并带到新任务？** 第二个问题才对应本项目的受控递归改进。一次任务得分提高，不自动意味着改进器变强。','',
+        '原参考论文研究水域多船巡检，使用变分状态估计和共享Dueling DDQL学习。当前机房版本改用了专业任务模型和PPO策略，属于方法思想的适配；不能称为原算法的原样复现，也不能直接与原水域成绩比较。','',
+        '## 3. 三种AI各自负责什么','',
+        '|组件|新手可以怎样理解|本项目实际做的事|当前证据边界|','|---|---|---|---|',
+        '|CVAE状态估计|根据部分测量补全未直接看到的温度|使用已冻结的温度估计模型，记录每次调用|温度重建精度不等于异常概率；本轮五组共用模型，不能单独归因其收益|',
+        '|PPO策略|给当前合法的下一步行动打分|只在真正交给它选择时算决策；其他时候的评分单列为影子计算|本轮确有实际选择，但未改善主要异常指标|',
+        '|Qwen3-8B改进器|看巡检经验、提出流程修改的分析员|固定开源权重、非思考模式，输出有限规则语言的程序或改进协议|不修改模型权重，不直接操纵设备；输出经外部验证后才保留|','',
+        '18名“执行者”是仿真中占用位置、工时和专业资格的移动人员，不是18个独立大模型。软件改进器与移动执行者是两个概念。当前主要是集中调度、固定任务所属关系和共享预留协调，还没有证明开放式多LLM协作的收益。','',
+        '实际信息流如下：','',
+        '```text','部分现场测量 → 温度状态估计／公开专业线索 → 合法动作筛选 → 规则或PPO选行动',
+        '     ↑                                                  ↓','     └──────────── 移动、检查、得到新测量 ──────────────────┘',
+        '完成记录 → 固定或可更新改进器 → 候选流程 → 独立评价 → 保留／拒绝',
+        '元层比较旧／新改进方法 → 只把获准协议带到新任务，清空程序和经验历史','```','',
+        '## 4. 已经完成到哪一步','',
+        '|阶段|已经完成的工作|现在应怎样理解|','|---|---|---|',
+        '|前期场景与文献|明确专业检查、风险线索、持续重访；绑定原巡检论文|形成研究问题，没有因此证明创新性或现场效果|',
+        '|仿真与执行基础|建立温度、电气、冷却、控制的合成场景、专业资格、移动与服务工时、返回检查|已经有能运行和审计的实验平台，仍需真实参数校准|',
+        '|M10／M11|训练并冻结温度估计与共享PPO，核查实际调用及覆盖|模型确实存在，任务收益须与强巡回比较|',
+        '|M12-B历史实验|执行固定改进器、元协议更新和重置后测试|固定流程有小幅描述性改善，历史元更新没有胜过固定改进器|',
+        '|B3.2正式闭环|768条正式记录及重放，新候选的开发收益未在验证重复|NO-GO保留，不将旧最终集拿来优化新候选|',
+        '|B4数据与受限预测|新数据覆盖审计、七个可用专业—视野单元的固定模型比较|完整观测改善排序，但宏Brier相对改善仅0.2425%，未到5%门槛；CVAE增量未获支持|',
+        '|B4-B2对齐|核对原论文与贡献；42次校准消融＋14次重放；开发行动机会诊断；冻结两套协议|回到“任务收益与改进能力”的主线，停止把所有预测指标通过当作共同前提|',
+        '|本轮M12-D五臂|180开发＋180验证，逐条独立重放；严格按验证门停止|修订候选未胜过Tour；最终360条未运行|',
+        '|本轮M12-D RSI|一次真实预检＋78次正式调用；三次搜索、验证、封存和最终测试；收据独立复算|已完成真实有界实验，科学结论看下文，不用工程测试数量代替收益|','',
+        '## 5. 看懂指标，只需要几个词','',
+        '|词语|含义与例子|','|---|---|',
+        '|固定巡回Tour|大家按已安排的专业路线持续巡检。它是经过设计的强基线，不是随机乱走|',
+        '|有效确认|有对应资格的执行者在异常仍存在时完成所需测量；到达位置、模型提示都不算确认|',
+        '|漏检数|没有在异常结束前完成有效确认的异常段数量。本报告宏漏检数是每物理过程的平均数，0.61不表示61%的漏检率|',
+        '|后果加权删失等待|较严重事件权重更高；发现晚有代价；未发现也按异常结束截尾计等待。只平均成功发现的事件会把漏检隐藏掉|',
+        '|重访要求|每个专业任务要在规定间隔内再次有效检查。不能为了多发现一个热点而长期不查其他设备|',
+        '|独立验证／最终测试|开发时用来选方案，验证时决定能否保留，最终测试只检查事先锁定的方案。看到最终结果后不能继续调参再算同一次测试|',
+        '|Brier概率误差|衡量预测概率与实际结果的差距，越小越好。把异常排在前面，不代表给出的概率已经准确|',
+        '|元更新|改变诊断工具顺序、记忆检索、提案等有限协议；与修改一条具体巡检规则分开统计|','',
+        '所有主统计都先配对平均两档噪声，再平均物理过程，再平均种子。健康过程仍计工时、安全和零漏检；没有异常的过程不产生等待。噪声重复和生成重复都不增加独立环境数量。','',
+        '## 6. 五臂实验的实际结果','',
+        '各方法使用相同18人、专业资格、路线时限、物理故障与观测噪声，且每个1800秒回合全队最多一次额外补查。下面保留开发和验证的全部结果；漏检和等待均越小越好。','',
+        '|阶段|方法|宏漏检数|宏等待秒|平均额外补查|平均移动米|','|---|---|---:|---:|---:|---:|']
+    for v in formal['comparisons']:lines.append(f"|{'开发' if v['phase']=='development' else '验证'}|{ARM_NAMES[v['arm']]}|{v['macro_missed_count']:.6f}|{v['macro_wait_s']:.3f}|{v['mean_optional_checks']:.3f}|{v['mean_travel_m']:.2f}|")
+    lines+=['','修订候选与Tour在验证漏检和等待上完全相同，因此没有达到“少漏检，或同漏检下等待降低至少5%”的要求。虽然固定保留流程略微降低等待，这也不能当成修订候选通过。五组没有替换、加组或重新选参数。','',
+        '完整有效确认、工时、精确重访与实际工具调用在集中JSON中保留。所有已执行回合的专业资格、额度、完整返回和初始／末尾重访审计均通过；这证明执行合法，不证明策略更好。','',
+        '## 7. 为什么学习策略调用了，却没有收益','',
+        '记录显示，冻结PPO和修订候选在全部72个开发／验证条件中，都在第5秒使用了唯一补查额度；含故障条件的故障开始时刻为335或705秒。随后它们持续返回固定巡回。这是本轮观察到的具体行为：模型确实选过行动，但它把稀缺的自由决策机会过早花掉了。','',
+        '不能仅凭这一观察断言“只要推迟补查就一定成功”，因为推迟也可能失去其他机会。它提示下一轮应研究“何时值得保留额度、何时依据专业证据出手”，并通过新协议和新数据验证。当前结果不会通过事后加额度、改故障时刻或强行等待来修饰。','',
+        '五臂共用同一个CVAE，所以不能从这项设计识别CVAE的独立因果贡献。记录到调用次数只说明用了工具；要证明工具有用，必须在同任务、同预算下单独比较有无该工具。原B4概率分支没有通过的结论仍保留。','',
+        '## 8. RSI怎样做公平比较','',
+        '每次重复有人工固定、随机搜索13候选、固定Qwen搜索13候选、可更新改进器四组。额外保存固定Qwen前三次候选的结果，形成fixed3。主比较是“fixed3与经过元开发后再提3个候选的meta3”，两边新任务提案机会相同；元开发多用的调用、环境评价和GPU时间另外列账。','',
+        '元开发两轮分别从同一个默认巡回和空历史开始，旧／新协议用相同任务和生成种子，各提两个任务候选；新协议严格更好才保留。迁移时仅保留协议，具体任务程序、经验、候选档案和缓存分数全部清空。三个生成重复共享后续物理任务，所以是3次生成重复和4组最终环境种子，不能说成12个独立环境。','',
+        '每个候选槽都计费：非法输出、重复程序和无效修改也消耗机会，不免费重试。安全、数据划分或资源失败会停止活动；性能不达标的组按冻结规则在最终测试执行Tour，并同时公开名义程序与回退情况。不能把回退后的成绩归给原候选。','',
+        '## 9. RSI实际比较结果','',
+        '|重复|阶段|meta3漏检−fixed3|meta3等待−fixed3（秒）|等待相对改善|该项冻结门是否通过|','|---|---|---:|---:|---:|---|']
+    for v in primary:lines.append(f"|{v['trial']}|{'验证' if v['phase']=='validation' else '最终'}|{v['macro_missed_delta']:.6f}|{v['macro_wait_delta_s']:.6f}|{100*v['relative_wait_gain']:.3f}%|{'通过' if v['frozen_primary_pass'] else '未通过'}|")
+    lines+=['','冻结要求三次重复在验证和最终比较中都满足各种子不增加漏检，并且少漏检或等待降低至少5%。只要其中一项没有通过，就不能宣称独立递归增量。元更新接受次数只用于解释过程，不替代这项判断。','',
+        '|最终方法|三个生成重复的平均宏漏检数*|平均宏等待秒*|','|---|---:|---:|']
+    for group in GROUPS:lines.append(f"|{NAMES[group]}|{statistics.mean(v['final_statistics'][group]['macro_missed_count'] for v in trials):.6f}|{statistics.mean(v['final_statistics'][group]['macro_wait_s'] for v in trials):.3f}|")
+    lines+=['','说明：这张平均表用于概览；正式判断仍保留每个生成重复、每个物理种子的配对差值，不能用平均结果掩盖某次退步。JSON包含六组完整验证与最终统计，以及所有名义／实际程序与回退标记。','',
+        '|最终物理种子|跨三个生成重复平均的漏检差（meta−fixed3）|平均等待差秒|','|---|---:|---:|']
+    for v in seed_differences:lines.append(f"|{v['seed']}|{v['mean_meta_minus_fixed3_missed']:.6f}|{v['mean_meta_minus_fixed3_wait_s']:.6f}|")
+    lines+=['','最终成绩是封存后实际执行程序的成绩。各组验证未通过而回退Tour的情况如下：','',
+        '|方法|发生Tour回退的生成重复编号|','|---|---|']
+    for group in GROUPS:
+        ids=[str(v['trial']) for v in fallbacks if v['group']==group and v['fallback_to_Tour']]
+        lines.append(f"|{NAMES[group]}|{','.join(ids) if ids else '无'}|")
+    lines+=['','任务层结果还要看强基线：','',
+        '|最终候选−基线|宏漏检差的三重复平均|宏等待差秒的三重复平均|有任一种子漏检退步的重复数／3|','|---|---:|---:|---:|']
+    for group in ('random_search','fixed3','fixed13','controlled_meta'):
+        for base in ('Tour','human_fixed'):
+            rows=[v for v in task_comparisons if v['phase']=='final' and v['candidate']==group and v['baseline']==base]
+            lines.append(f"|{NAMES[group]}−{NAMES[base]}|{statistics.mean(v['macro_missed_delta'] for v in rows):.6f}|{statistics.mean(v['macro_wait_delta_s'] for v in rows):.6f}|{sum(not v['no_seed_miss_increase'] for v in rows)}/3|")
+    lines+=['','这项任务层对照与“meta3能否超过fixed3”分别回答问题。若任务流程改变带来描述性改善，也不能据此说CVAE、PPO或递归元更新各自有效；还须核对每次重复、人工规则和随机搜索的代价与结果。完整配对值均保存在JSON。']
+    fixed_tour=[v for v in task_comparisons if v['phase']=='final' and v['candidate']=='fixed3' and v['baseline']=='Tour']
+    lines+=[f"\n固定Qwen前三候选相对Tour平均每过程少漏{abs(statistics.mean(v['macro_missed_delta'] for v in fixed_tour)):.6f}，等待减少{abs(statistics.mean(v['macro_wait_delta_s'] for v in fixed_tour)):.3f}秒，约{100*statistics.mean(v['relative_wait_gain'] for v in fixed_tour):.2f}%。这是当前有限任务上的描述性改善。随机搜索的平均漏检最低，人工规则的平均等待最低；Qwen流程在每个生成重复中都存在至少一个种子比人工规则漏得更多，不能据此宣称优于强基线或证明经验反馈本身有效。"]
+    lines+=['','## 10. 实际花了多少资源','',
+        '|重复|正式模型调用|输入tokens|输出tokens|实际环境评价（含最终）|接受元更新数|','|---|---:|---:|---:|---:|---:|']
+    for v in costs:lines.append(f"|{v['trial']}|{v['actual_model_calls']}|{v['input_tokens']}|{v['output_tokens']}|{v['environment_attempts_including_final']}|{v['accepted_meta_updates']}|")
+    lines+=['','每个重复的元侧13次调用进一步分为10次元开发准备和3次新任务提案。JSON分别列出两部分tokens、生成耗时、两轮元开发实际环境评价及缓存引用。新任务总评价成本另列。没有按阶段独立采样GPU占用／峰值内存，因此不推算精确阶段GPU成本；总分配GPU时间和Slurm内存峰值照实保留。','']
+    lines += ['',f"正式GPU共3个分配，累计{ledger['formal_GPU_seconds']}秒（{ledger['formal_GPU_seconds']/3600:.3f} GPU小时），上限3小时。唯一真实预检单列：输入172、输出28tokens；包含一次生成前启动失败，累计GPU101秒，没有第二次预检生成。",'',
+        f"全部M12-D准备、失败启动、回归、执行和审计合计{ledger['allocated_CPU_minutes_inclusive_all_M12D']:.2f}分配CPU分钟；包含发布包的完整新运行目录约{storage['bytes_all_run_files_after_public_export']/1e9:.3f}GB。成本按真实Slurm分配记录计，不以模型纯推理时间代替占用时间。正式环境评价{ledger['actual_environment_attempts']}次，上限6480；缓存命中与实际执行分开计数。",'',
+        'Slurm采样的每个作业批步骤MaxRSS／AveRSS在JSON和原始内存账本中保留。它们表示系统采样的进程内存，不等于按研究阶段拆分的总RAM，也不等于GPU显存峰值。','',
+        '一个“分配CPU分钟”可以理解为一个CPU核分配一分钟。例如4核占用10分钟就是40核分钟；即使程序没有把核用满，也照分配量计费。1 GPU小时表示一张GPU占用一小时，与模型在其中实际生成了多少秒分开报告。','',
+        '元更新没有被保留时，“每次有效元更新的成本”没有可定义的有限值，JSON记为null；不能因为分母为零就写成零成本。固定前三候选虽没有额外调用，但前缀只用于匹配比较；完整固定13候选的全部真实成本仍计入总账。','',
+        'JSON还按每条搜索列出“开发阶段被严格保留的不同程序数”，以及每保留一个程序消耗的调用和tokens。这与“接受元更新数”是两个分母，也不等于独立有用程序数。随机搜索虽不用LLM，仍有环境评价成本；独立有用程序的单位成本尚未建立定义，记为null。','',
+        '## 11. 当前瓶颈：已经知道什么，还不知道什么','',
+        '|瓶颈|已观察到的证据|目前不能确定的部分|怎样进一步区分|','|---|---|---|---|',
+        '|动作自由度很窄|固定所属任务、强返回约束、全队仅一次补查；PPO在第5秒消耗机会|差结果究竟主要来自候选能力，还是权限不匹配|在新开发任务中先审计可改变结果的合法决策窗口；必要时另立额度／协作协议|',
+        '|信息不一定支持行动|公开温度／专业线索可用，历史B4排序与概率表现不同|哪些信息在决定时刻真正能预测“现在检查有收益”|限定一个专业和一个动作，用实际完成时刻定义信息价值，再验证闭环净收益|',
+        '|开发选择与最终目标不完全一致|内层沿用冻结的合并事件排序；独立确认用过程／种子宏统计|内层更好的程序为何未必独立更好、代价有多大|先做新的开发代理一致性诊断；不能事后改本轮选择器|',
+        '|元提案没有进入合法更新空间|6次元协议输出全部结构错误，诊断数也全部超限；实际沿用旧协议。真实预检只检查了任务程序，没有检查元协议输出|目前无法评价一个合法元协议的增量，也不能据此说元更新本身无效|下一轮先把完整嵌套示例和1至3项约束明确化，用新的单独预算验证格式可靠性，再做正式比较|',
+        '|CVAE／PPO与任务增益未形成证据链|工具确有调用，但本轮学习策略未胜Tour；CVAE被五组共同固定|状态估计与学习在哪类任务上具有独立价值|新协议中做必要的部署／训练消融，区分估计、动作选择和人工规则贡献|',
+        '|样本独立性有限|大量回合复用同一组物理任务；最终只有4个物理种子组|能否泛化到其他布局、负载与故障组合|当前只作实例／起点时刻迁移结论；独立扩大确认需先有稳定增量|',
+        '|真实现场尚未校准|现阶段是合成多专业机房模型，无现场部署结果|阈值、严重度、检查耗时与专家规程是否真实|向导师获取匿名布局、检查规程、测温／流量等少量记录，先做参数与任务定义核对|','',
+        '这些问题不是“程序还没写完”。目前最难的是让AI可以改变的决策、它能看到的信息和评价目标真正对应起来。继续堆大模型调用或继续降低温度预测误差，未必解决这一核心错位。','',
+        '## 12. 我目前还不能替你下结论的事','',
+        '第一，尚不知道哪一种更宽的协作动作空间既贴近机房工作，又留下足够的可学习机会。跨人员接管、更多补查和更复杂交接都可能有效，也都会改变原实验边界，不能直接选最容易提高分数的一种。','',
+        '第二，已确认本轮所有元提案都在语法层被拒绝。仍不知道合法的诊断／记忆／提案更新能否带来收益，因为本轮没有一个合法新协议进入比较。当前提示虽然提供了嵌套模板，却没有让模型可靠遵守层级和诊断数量；不能把这个接口失败解释成递归改进原理已经被否定。','',
+        '第三，尚不能承诺现在的组合已达到论文发表要求。领域换成机房、使用CVAE/PPO/Qwen、写了返回检查器，都不足以单独证明新颖性。需要一个明确机制、强基线、真实执行差异和独立增量；若做负结果论文，也需要更系统地解释失败何时发生、为什么发生。','',
+        '第四，不能把B-PID图像重建当成真实温度测量，也不能把GW供电规模当成算力指标。目前没有这些材料替代现场专业证据的验证。','',
+        '## 13. 下一轮建议，只推进一个明确问题','',
+        '建议先研究：**在专业线索不完整、补查机会有限时，怎样学习或改进“保留额度与触发有效补查”的决策，使收益在新任务上稳定重复？** 先让任务层有可验证的改进空间，再研究改进器自身怎样提高找到好程序的效率。原状态估计、多执行者和RSI主线都保留，概率预测只在确需它的技能中使用。','',
+        '1. 先核对元提案接口：利用已有六份回复复现错误，把嵌套层级和诊断数量写成明确的JSON结构约束，补充完整示例，并为元协议单独设计格式预检。任何新的真实模型预检都先单列新协议与预算，不修复本轮回复后重算成绩。',
+        '2. 整理本轮既有收据：将提案分成非法、重复、无改善、被保留但验证未改善等类型；归类PPO过早出手和人工规则触发时刻。只分析当前已公开的开发／验证资料，不用旧最终逐行记录选新参数。',
+        '3. 与导师确认一个现实约束：当前“18人固定所有权＋全队一次补查”是否有工程意义。若需要扩大任务接管或额度，写成新协议；若继续一次额度，则把何时出手作为清晰研究对象。',
+        '4. 在全新开发种子上做最小机会核验：先证明当前可观测信息下存在合法、可重复的净收益空间。若强人工规则也无法稳定改善，暂缓昂贵元搜索。',
+        '5. 冻结一个方法改动和匹配基线，单独比较任务层改进，再比较元层迁移；所有准备、搜索与执行成本一起记录。只在新验证通过后一次性打开新最终集。','',
+        '以上是下一轮方案，不是本轮已运行的实验。本轮不会继续训练、追加模型调用或使用已看过的最终结果挑新方案。','',
+        '## 14. 论文证据矩阵','',
+        '|想回答的问题|本轮已经支持的结论|仍缺少的证据|','|---|---|---|',
+        '|部分观测下能否完成专业持续巡检|相同资格、工时、重访与返回核下，实际回合和审计完成|真实现场参数、规程与传感器校准|',
+        '|冻结PPO是否优于强巡回|本轮没有主要指标增量；观察到第5秒过早消耗补查额度|更合理的决策窗口与独立学习收益|',
+        '|CVAE是否带来独立任务收益|确有调用，但五组共同使用，当前对照不能识别其贡献|匹配预算的工具干预与必要的独立训练消融|',
+        '|经验驱动任务流程是否更好|已真实生成、筛选并在新任务评价；结果与人工／随机基线逐组列出|稳定跨种子优势及经验本身的因果价值，不能只与Tour比较|',
+        '|元改进器能否提高找好流程的效率|6次元提案全部非法，matched3比较未出现递归增量；总成本完整保留|首先需要合法新协议，之后才有条件评价元更新效果|',
+        '|是否足以称为现场可用或普遍RSI|当前仅是固定布局的合成实例／起点时刻实验|未知布局、真实数据与更充分的独立确认|','',
+        '## 15. 给导师可以这样汇报','',
+        '> 我们已在统一专业巡检约束下完成五臂比较及真实开源模型实验。修订PPO没有超过强巡回；其明确行为是过早消耗唯一补查额度。元侧6次提案全部因结构和诊断数量不合法被拒绝，因此尚未测试到有效元协议的独立价值。下一轮先修清并单独验证元提案接口，再把“何时保留资源、何时依据专业证据补查”做成稳定的任务收益，最后检验改进方法的迁移效率。','',
+        '## 16. 怎样复核，以及已修正的问题','',
+        '五臂360条主要回合全部独立执行重放；RSI使用独立路线、资格、事件与返回证书核查，并对搜索接受、迁移重置、原始记录哈希和最终宏统计独立复算。**RSI没有再完整执行第二遍神经策略回放**，不能把两种审计范围混写。','',
+        '正式源通过293项真实Torch回归；本地72项轻量CPU检查通过。测试证明相应接口和检查逻辑工作，不证明科研方法成功。失败启动与修复均保留：预检首次因缺transformers在生成前退出，改用已存在模型环境后仅生成一次；计时试跑首次因导入路径失败，未新增模型调用或物理过程。独立最终审计首次在查询Slurm账本时因计算节点无数据库路由退出，改为从登录节点捕获真实账本并绑定哈希后复核，实验回合没有重跑。','',
+        '最终执行的独立审查发现底层可复用脚本没有自行拒绝再次调用。为保留已经绑定的实验源码，正式入口在外部加上永久原子启动记录；每个作业先hold，读取Slurm实际脚本并核对封存哈希，再release。三个最终作业的提交、启动和成本ID相互核对。此保护约束正式入口；单独绕过入口调用底层脚本仍不属于支持的复现方式。','',
+        '旧B3.2、B1b、B2报告与模型保持原样。最终逐事件记录和物理数组继续存于受限集群，只公开冻结的种子／组聚合、审计与来源哈希；集中JSON不会增加最终逐样本材料。','',
+        '- [单文件完整JSON（包含本文与此前完整历史）](2026-10-30-M12-D-项目全量汇总.json)',
+        '- [五臂详细结果与工具调用](../research/2026-10-30-m12d-formal/五臂正式结果与证据矩阵.md)',
+        '- [本轮RSI完整统计、成本与正式决定](../research/2026-10-30-m12d-formal/evidence/rsi-results.json)',
+        '- [五臂独立宏统计复算](../research/2026-10-30-m12d-formal/evidence/independent-aggregate-audit.json)',
+        '- [RSI最终独立审计](../research/2026-10-30-m12d-formal/evidence/run/rsi-independent-final-audit.json)',
+        '- [实际Slurm资源总账](../research/2026-10-30-m12d-formal/evidence/run/resource-ledger.json)',
+        '- [原论文、当前代码与贡献边界](../research/2026-10-30-m12c1b4b2-alignment/原论文与当前贡献对照.md)',
+        '- [五臂冻结协议](../research/2026-10-30-m12c1b4b2-alignment/MultiAgent-Patrol-Paired-v1.json)；[RSI冻结协议](../research/2026-10-30-m12c1b4b2-alignment/RSI-Controlled-Meta-v1.json)','']
+    report=repo/'reports/2026-10-30-M12-D-完整进度与瓶颈.md';report.write_text('\n'.join(lines),encoding='utf-8',newline='\n')
+    old=s/'五臂正式结果与证据矩阵.md';text=old.read_text(encoding='utf-8')
+    text=text.split('\n## 论文证据矩阵\n',1)[0]
+    text+='\n## 论文证据矩阵\n\n|问题|实际证据|当前结论|\n|---|---|---|\n'
+    text+='|修订巡检是否更好|360条开发／验证回合及360条冻结权重重放；修订候选验证指标与Tour相同|NO-GO，最终集保持未生成|\n'
+    text+='|PPO是否有独立收益|实际与影子评分分开计数；全部72条件的补查在5秒时执行|当前任务没有异常确认增量；过早使用额度是已观察行为|\n'
+    text+='|CVAE是否有独立贡献|五组共同使用同一冻结CVAE，记录调用和行为|本对照不能识别因果贡献，不能把调用次数当收益|\n'
+    text+='|真实开源模型是否运行|一次真实预检及78次正式调用，固定权重与生成参数|真实调用已完成；格式和运行成功不能替代任务收益|\n'
+    text+='|任务流程及改进器是否变好|三次独立搜索／验证／最终比较；六次元提案全部语法不合法，实际沿用旧协议|任务层逐组报告；meta3与fixed3相同，尚未测试合法新元协议的效果|\n'
+    text+='\n## 已完成的RSI结果\n\n三次真实搜索、独立验证和最终测试均已完成。完整统计与冻结判定见[evidence/rsi-results.json](evidence/rsi-results.json)。任务流程收益与元改进器收益分别比较，不能以调用成功或接受次数代替。\n'
+    old.write_text(text,encoding='utf-8',newline='\n')
+    print('M12D_ACTUAL_RSI_DECISION',result['scientific_decision'],len(all_checks),flush=True)
+
+
+if __name__=='__main__':main()

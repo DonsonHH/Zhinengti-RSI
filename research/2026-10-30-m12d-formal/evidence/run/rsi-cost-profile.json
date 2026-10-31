@@ -1,0 +1,46 @@
+{
+  "scope": "Engineering timings on alreadycompleted smokeprocess. NotnewRSI adaptation or taskgain. Generation extrapolation is uncertain,not a runtime guarantee.",
+  "rows": [
+    {
+      "arm": "Tour",
+      "single_episode_wall_s": 1.8042508009821177,
+      "independent_audit_wall_s": 0.3007315471768379,
+      "same_executor": true
+    },
+    {
+      "arm": "frozen_PPO",
+      "single_episode_wall_s": 1.908616904169321,
+      "independent_audit_wall_s": 0.2961678868159652,
+      "same_executor": true
+    },
+    {
+      "arm": "human_professional",
+      "single_episode_wall_s": 1.8366745635867119,
+      "independent_audit_wall_s": 0.2966102920472622,
+      "same_executor": true
+    },
+    {
+      "arm": "fixed_improver_retained",
+      "single_episode_wall_s": 2.020441146567464,
+      "independent_audit_wall_s": 0.29741648864001036,
+      "same_executor": true
+    },
+    {
+      "arm": "revised_PPO_evidence",
+      "single_episode_wall_s": 1.8609000854194164,
+      "independent_audit_wall_s": 0.29903210420161486,
+      "same_executor": true
+    }
+  ],
+  "one_trial_max_nonfinal_environment_episode_cap": 1728,
+  "proposed_CPU_workers": 2,
+  "max_measured_episode_plus_audit_s": 2.3178576352074742,
+  "conservative_linear_768token_generation_s": 47.4283880506243,
+  "formal_model_call_cap_per_trial": 26,
+  "projected_trial_GPU_reservation_s": 3411.544338574899,
+  "frozen_one_allocation_limit_s": 3600,
+  "projected_within_one_allocation": true,
+  "real_model_generations": 0,
+  "new_physical_processes": 0,
+  "profile_engineering_episodes": 5
+}

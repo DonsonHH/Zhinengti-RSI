@@ -1,0 +1,6 @@
+{
+  "input_tokens": 2242,
+  "output_tokens": 256,
+  "generation_s": 13.444920629262924,
+  "raw_response": "{\"diagnosis\": \"The thermal system shows a significant excess with a mean temperature of 51.02°C, indicating a potential overheating issue. The cooling system has a mean flow rate of 36.0996 kg/s, which is within normal range but with some gaps in data collection. The electrical system has a mean contact temperature of 42.43°C, which is slightly elevated. The control system has a mean sensor error of -0.15°C, suggesting minor discrepancies. These anomalies suggest a need for targeted checks on thermal and electrical systems.\", \"workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"verified_sensor_bias\", \"threshold\": 0.5, \"action\": \"urgency\"}]}, \"expected_effect\": \"This patrol program will prioritize urgent checks on thermal excess and contact heat, while also addressing sensor bias to ensure early detection of anomalies without unnecessary detours.\"}"
+}

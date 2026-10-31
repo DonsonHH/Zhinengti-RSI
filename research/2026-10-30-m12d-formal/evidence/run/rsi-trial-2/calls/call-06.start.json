@@ -1,0 +1,287 @@
+{
+  "number": 6,
+  "seed": 91038006,
+  "input_tokens": 2239,
+  "prompt": {
+    "task": "propose_patrol_program",
+    "current_workflow": {
+      "refresh_s": 60,
+      "cooldown_s": 30,
+      "fallback": "tour",
+      "rules": [
+        {
+          "signal": "thermal_excess",
+          "threshold": 0.25,
+          "action": "signal"
+        },
+        {
+          "signal": "contact_heat",
+          "threshold": 0.25,
+          "action": "urgency"
+        },
+        {
+          "signal": "flow_deficit",
+          "threshold": 0.25,
+          "action": "return_tour"
+        }
+      ]
+    },
+    "improver_protocol": {
+      "diagnostics": [
+        "coverage",
+        "professional_evidence",
+        "efficiency"
+      ],
+      "memory": "recent",
+      "instruction": "Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence."
+    },
+    "public_diagnostics": [
+      {
+        "tool": "coverage",
+        "result": {
+          "coverage": 1.0,
+          "violating_tasks": 0.0,
+          "weighted_age_ratio": 0.3041519577720547,
+          "first_alert_tasks": 1.5555555555555556
+        }
+      },
+      {
+        "tool": "professional_evidence",
+        "result": {
+          "control": {
+            "checks": 106.0,
+            "distinct_checked_tasks": 16.0,
+            "distinct_measured_alarm_tasks": 0.2222222222222222,
+            "new_measured_alerts": 0.2222222222222222,
+            "persistent_rechecks": 0.5555555555555556,
+            "recovery_confirmations": 0.2222222222222222,
+            "measurement_field": "controller_sensor_error_c",
+            "unit": "degC",
+            "mean_measured_value": -0.1320754716981132,
+            "largest_public_completion_gap_s": 270.0
+          },
+          "cooling": {
+            "checks": 94.0,
+            "distinct_checked_tasks": 16.0,
+            "distinct_measured_alarm_tasks": 0.1111111111111111,
+            "new_measured_alerts": 0.1111111111111111,
+            "persistent_rechecks": 0.0,
+            "recovery_confirmations": 0.1111111111111111,
+            "measurement_field": "pod_flow_kg_s",
+            "unit": "kg/s",
+            "mean_measured_value": 36.09955389741744,
+            "largest_public_completion_gap_s": 310.0
+          },
+          "electrical": {
+            "checks": 93.88888888888889,
+            "distinct_checked_tasks": 16.0,
+            "distinct_measured_alarm_tasks": 0.2222222222222222,
+            "new_measured_alerts": 0.2222222222222222,
+            "persistent_rechecks": 0.3888888888888889,
+            "recovery_confirmations": 0.2222222222222222,
+            "measurement_field": "contact_temperature_c",
+            "unit": "degC",
+            "mean_measured_value": 42.46019472803771,
+            "largest_public_completion_gap_s": 315.0
+          },
+          "thermal": {
+            "checks": 1131.9444444444443,
+            "distinct_checked_tasks": 128.0,
+            "distinct_measured_alarm_tasks": 1.0,
+            "new_measured_alerts": 1.0,
+            "persistent_rechecks": 0.1111111111111111,
+            "recovery_confirmations": 1.0,
+            "measurement_field": "temperature_c",
+            "unit": "degC",
+            "mean_measured_value": 51.02539289730512,
+            "largest_public_completion_gap_s": 240.0
+          }
+        }
+      },
+      {
+        "tool": "efficiency",
+        "result": {
+          "travel_m": 11794.633333333324,
+          "service_s": 16667.222222222223,
+          "extra_checks": 0.3333333333333333,
+          "estimator_calls": 30.0,
+          "dispatches": 1425.8333333333333,
+          "different_from_actor": 1210.4444444444443
+        }
+      }
+    ],
+    "retrieved_candidates": [
+      {
+        "candidate_id": "ab88ba2209b352a5",
+        "workflow": {
+          "refresh_s": 60,
+          "cooldown_s": 30,
+          "fallback": "tour",
+          "rules": [
+            {
+              "signal": "thermal_excess",
+              "threshold": 0.25,
+              "action": "signal"
+            },
+            {
+              "signal": "contact_heat",
+              "threshold": 0.25,
+              "action": "urgency"
+            },
+            {
+              "signal": "flow_deficit",
+              "threshold": 0.25,
+              "action": "return_tour"
+            }
+          ]
+        },
+        "accepted": false,
+        "reason": "duplicate"
+      },
+      {
+        "candidate_id": "ab88ba2209b352a5",
+        "workflow": {
+          "refresh_s": 60,
+          "cooldown_s": 30,
+          "fallback": "tour",
+          "rules": [
+            {
+              "signal": "thermal_excess",
+              "threshold": 0.25,
+              "action": "signal"
+            },
+            {
+              "signal": "contact_heat",
+              "threshold": 0.25,
+              "action": "urgency"
+            },
+            {
+              "signal": "flow_deficit",
+              "threshold": 0.25,
+              "action": "return_tour"
+            }
+          ]
+        },
+        "accepted": false,
+        "reason": "duplicate"
+      }
+    ],
+    "response_keys": [
+      "diagnosis",
+      "workflow",
+      "expected_effect"
+    ],
+    "response_types": {
+      "diagnosis": "ONE explanatory string, never a list",
+      "workflow": "object",
+      "expected_effect": "ONE string"
+    },
+    "maximum_rule_count": 3,
+    "rule_count_policy": "Choose at most three conditions, not one per profession. Four rules is invalid.",
+    "workflow_keys": [
+      "refresh_s",
+      "cooldown_s",
+      "fallback",
+      "rules"
+    ],
+    "domains": {
+      "refresh_s": [
+        30,
+        60,
+        120
+      ],
+      "cooldown_s": [
+        0,
+        30,
+        60,
+        120
+      ],
+      "fallback": [
+        "tour",
+        "ppo"
+      ],
+      "rules": "0..3 ordered rules; each has exactly signal, threshold, action",
+      "signal": [
+        "age",
+        "thermal_excess",
+        "thermal_disagreement",
+        "contact_heat",
+        "flow_deficit",
+        "verified_sensor_bias"
+      ],
+      "threshold": "ONE NUMBER from the signal threshold domain",
+      "threshold_domains": {
+        "age": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "thermal_excess": [
+          0.05,
+          0.25,
+          0.5
+        ],
+        "thermal_disagreement": [
+          0.05,
+          0.25,
+          0.5
+        ],
+        "contact_heat": [
+          0.05,
+          0.25,
+          0.5
+        ],
+        "flow_deficit": [
+          0.05,
+          0.25,
+          0.5
+        ],
+        "verified_sensor_bias": [
+          0.5
+        ]
+      },
+      "action": [
+        "signal",
+        "urgency",
+        "ppo",
+        "return_tour"
+      ]
+    },
+    "semantics": {
+      "signal_profession": {
+        "age": "all",
+        "thermal_excess": "thermal",
+        "thermal_disagreement": "thermal",
+        "contact_heat": "electrical",
+        "flow_deficit": "cooling",
+        "verified_sensor_bias": "control"
+      },
+      "thermal_excess": "max(estimatedTemp-65,0)/20; degC scale; thermal only",
+      "thermal_disagreement": "abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty",
+      "contact_heat": "max(measuredContactTemp-60,0)/30; electrical only, not supply availability",
+      "flow_deficit": "max(1-measuredFlow/33.6,0); cooling only",
+      "verified_sensor_bias": "Previously valid reference comparison above1degC; control only",
+      "age": "Known task age/public revisit period",
+      "rules": "First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.",
+      "signal_action": "Typed signal times public asset weight divided by completion cost",
+      "fallback": "tour returns to baseline; ppo uses the frozen trained actor if no rule matches.",
+      "tool_use": "refresh_s changes actual CVAE calls; cooldown applies only to optional detours."
+    },
+    "constraints": [
+      "Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.",
+      "No changes to hidden evaluator, weights, data, costs or budgets; no source code.",
+      "Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.",
+      "Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters."
+    ],
+    "output_envelope": {
+      "diagnosis": "short string",
+      "workflow": "PatrolProgram with exactly workflow_keys above",
+      "expected_effect": "short string"
+    },
+    "common_execution_contract": "All task groups share AT MOST ONE optional CHECK across the whole team per1800s episode, then compulsoryTour. Originaltwo-per-owned-round/cooldown/qualification/fullreturn remainadditionalhardmasks. No extra atmissiontail ifnextTouritemcannotfinish. ScoringPPOafterglobalbudgetis shadowonly."
+  },
+  "rendered_prompt": "<|im_start|>system\nReturn exactly one JSON object using the response_keys requested. Follow the exact response schema. No source code or explanations outside JSON.<|im_end|>\n<|im_start|>user\n{\"task\": \"propose_patrol_program\", \"current_workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"flow_deficit\", \"threshold\": 0.25, \"action\": \"return_tour\"}]}, \"improver_protocol\": {\"diagnostics\": [\"coverage\", \"professional_evidence\", \"efficiency\"], \"memory\": \"recent\", \"instruction\": \"Use typed measured evidence to propose one distinct program that may confirm anomalies earlier without unnecessary detours. Return to the protected tour when extra checking lacks evidence.\"}, \"public_diagnostics\": [{\"tool\": \"coverage\", \"result\": {\"coverage\": 1.0, \"violating_tasks\": 0.0, \"weighted_age_ratio\": 0.3041519577720547, \"first_alert_tasks\": 1.5555555555555556}}, {\"tool\": \"professional_evidence\", \"result\": {\"control\": {\"checks\": 106.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.2222222222222222, \"new_measured_alerts\": 0.2222222222222222, \"persistent_rechecks\": 0.5555555555555556, \"recovery_confirmations\": 0.2222222222222222, \"measurement_field\": \"controller_sensor_error_c\", \"unit\": \"degC\", \"mean_measured_value\": -0.1320754716981132, \"largest_public_completion_gap_s\": 270.0}, \"cooling\": {\"checks\": 94.0, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.1111111111111111, \"new_measured_alerts\": 0.1111111111111111, \"persistent_rechecks\": 0.0, \"recovery_confirmations\": 0.1111111111111111, \"measurement_field\": \"pod_flow_kg_s\", \"unit\": \"kg/s\", \"mean_measured_value\": 36.09955389741744, \"largest_public_completion_gap_s\": 310.0}, \"electrical\": {\"checks\": 93.88888888888889, \"distinct_checked_tasks\": 16.0, \"distinct_measured_alarm_tasks\": 0.2222222222222222, \"new_measured_alerts\": 0.2222222222222222, \"persistent_rechecks\": 0.3888888888888889, \"recovery_confirmations\": 0.2222222222222222, \"measurement_field\": \"contact_temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 42.46019472803771, \"largest_public_completion_gap_s\": 315.0}, \"thermal\": {\"checks\": 1131.9444444444443, \"distinct_checked_tasks\": 128.0, \"distinct_measured_alarm_tasks\": 1.0, \"new_measured_alerts\": 1.0, \"persistent_rechecks\": 0.1111111111111111, \"recovery_confirmations\": 1.0, \"measurement_field\": \"temperature_c\", \"unit\": \"degC\", \"mean_measured_value\": 51.02539289730512, \"largest_public_completion_gap_s\": 240.0}}}, {\"tool\": \"efficiency\", \"result\": {\"travel_m\": 11794.633333333324, \"service_s\": 16667.222222222223, \"extra_checks\": 0.3333333333333333, \"estimator_calls\": 30.0, \"dispatches\": 1425.8333333333333, \"different_from_actor\": 1210.4444444444443}}], \"retrieved_candidates\": [{\"candidate_id\": \"ab88ba2209b352a5\", \"workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"flow_deficit\", \"threshold\": 0.25, \"action\": \"return_tour\"}]}, \"accepted\": false, \"reason\": \"duplicate\"}, {\"candidate_id\": \"ab88ba2209b352a5\", \"workflow\": {\"refresh_s\": 60, \"cooldown_s\": 30, \"fallback\": \"tour\", \"rules\": [{\"signal\": \"thermal_excess\", \"threshold\": 0.25, \"action\": \"signal\"}, {\"signal\": \"contact_heat\", \"threshold\": 0.25, \"action\": \"urgency\"}, {\"signal\": \"flow_deficit\", \"threshold\": 0.25, \"action\": \"return_tour\"}]}, \"accepted\": false, \"reason\": \"duplicate\"}], \"response_keys\": [\"diagnosis\", \"workflow\", \"expected_effect\"], \"response_types\": {\"diagnosis\": \"ONE explanatory string, never a list\", \"workflow\": \"object\", \"expected_effect\": \"ONE string\"}, \"maximum_rule_count\": 3, \"rule_count_policy\": \"Choose at most three conditions, not one per profession. Four rules is invalid.\", \"workflow_keys\": [\"refresh_s\", \"cooldown_s\", \"fallback\", \"rules\"], \"domains\": {\"refresh_s\": [30, 60, 120], \"cooldown_s\": [0, 30, 60, 120], \"fallback\": [\"tour\", \"ppo\"], \"rules\": \"0..3 ordered rules; each has exactly signal, threshold, action\", \"signal\": [\"age\", \"thermal_excess\", \"thermal_disagreement\", \"contact_heat\", \"flow_deficit\", \"verified_sensor_bias\"], \"threshold\": \"ONE NUMBER from the signal threshold domain\", \"threshold_domains\": {\"age\": [0.25, 0.5, 0.75], \"thermal_excess\": [0.05, 0.25, 0.5], \"thermal_disagreement\": [0.05, 0.25, 0.5], \"contact_heat\": [0.05, 0.25, 0.5], \"flow_deficit\": [0.05, 0.25, 0.5], \"verified_sensor_bias\": [0.5]}, \"action\": [\"signal\", \"urgency\", \"ppo\", \"return_tour\"]}, \"semantics\": {\"signal_profession\": {\"age\": \"all\", \"thermal_excess\": \"thermal\", \"thermal_disagreement\": \"thermal\", \"contact_heat\": \"electrical\", \"flow_deficit\": \"cooling\", \"verified_sensor_bias\": \"control\"}, \"thermal_excess\": \"max(estimatedTemp-65,0)/20; degC scale; thermal only\", \"thermal_disagreement\": \"abs(history-nominalTemp)/20; thermal only, not calibrated uncertainty\", \"contact_heat\": \"max(measuredContactTemp-60,0)/30; electrical only, not supply availability\", \"flow_deficit\": \"max(1-measuredFlow/33.6,0); cooling only\", \"verified_sensor_bias\": \"Previously valid reference comparison above1degC; control only\", \"age\": \"Known task age/public revisit period\", \"rules\": \"First rule with a qualifying candidate; return_tour selects next tour item; other actions rank qualifying candidates.\", \"signal_action\": \"Typed signal times public asset weight divided by completion cost\", \"fallback\": \"tour returns to baseline; ppo uses the frozen trained actor if no rule matches.\", \"tool_use\": \"refresh_s changes actual CVAE calls; cooldown applies only to optional detours.\"}, \"constraints\": [\"Fixed qualification, complete return certificate, two detours per owned round and measured-task semantics.\", \"No changes to hidden evaluator, weights, data, costs or budgets; no source code.\", \"Raw truth, onset and test results are not provided. Development accept/rollback feedback is available.\", \"Do not repeat the current workflow. Return JSON only; diagnosis and expected_effect1..500characters.\"], \"output_envelope\": {\"diagnosis\": \"short string\", \"workflow\": \"PatrolProgram with exactly workflow_keys above\", \"expected_effect\": \"short string\"}, \"common_execution_contract\": \"All task groups share AT MOST ONE optional CHECK across the whole team per1800s episode, then compulsoryTour. Originaltwo-per-owned-round/cooldown/qualification/fullreturn remainadditionalhardmasks. No extra atmissiontail ifnextTouritemcannotfinish. ScoringPPOafterglobalbudgetis shadowonly.\"}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "thinking": false,
+  "output_cap": 768,
+  "attempted": true
+}
